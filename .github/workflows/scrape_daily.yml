@@ -1,0 +1,63 @@
+name: Daily Alensa Price Scraper and Page Deploy
+
+on:
+  schedule:
+    # Uruchomienie codziennie o 08:00 czasu UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Pozwala ręcznie uruchomić skrypt
+
+# Uprawnienia potrzebne do pushowania kodu z powrotem do GitHuba i publikacji Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scrape-and-save:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pobieranie repozytorium
+      uses: actions/checkout@v4
+      
+    - name: Konfiguracja Pythona 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Instalacja zaleznosci
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4
+        
+    - name: Uruchomienie skryptu
+      run: python scraper.py
+        
+    - name: Zapisz zmiany w historii cen
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add public/history.json
+        git commit -m "Automatyczna aktualizacja cen: $(date +'%Y-%m-%d')" || echo "Brak zmian cen dzisiaj"
+        git push origin main || echo "Pominiecie pusha jezeli nic nie zmieniono"
+
+  deploy-pages:
+    needs: scrape-and-save
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pobieranie zaktualizowanego repozytorium
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Wgraj folder publiczny jako artefakt
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+          
+      - name: Wdrozenie do GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
