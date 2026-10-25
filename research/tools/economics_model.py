@@ -16,20 +16,20 @@ INPUTS = [
     # --- revenue per session -------------------------------------------------
     ("page_rpm_us", "Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",
      "USD / 1000 odsłon", {"conservative": 4.0, "base": 9.0, "optimistic": 18.0},
-     "ZAŁOŻENIE skalibrowane do raportowanych zakresów (E-ADS-*); nie pochodzi z danych healthscorer.com"),
+     "ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-05, vendorskie i self-reported); nie pochodzi z danych healthscorer.com"),
     ("non_us_rpm_factor", "RPM ruchu spoza USA jako ułamek RPM USA", "ułamek",
-     {"conservative": 0.20, "base": 0.25, "optimistic": 0.35}, "ZAŁOŻENIE (E-ADS-*)"),
+     {"conservative": 0.20, "base": 0.25, "optimistic": 0.35}, "ZAŁOŻENIE (E-ADS-06: tier-1 vs reszta świata)"),
     ("us_share", "Udział sesji z USA wśród sesji ludzi", "ułamek",
      {"conservative": 0.60, "base": 0.75, "optimistic": 0.85}, "ZAŁOŻENIE (serwis anglojęzyczny, treści USA)"),
     ("pages_per_session", "Odsłony na sesję (narzędzie + metodologia/wyniki)", "odsłony / sesję",
-     {"conservative": 1.15, "base": 1.4, "optimistic": 2.0}, "ZAŁOŻENIE; interaktywne przeliczenia nie generują odsłon"),
+     {"conservative": 1.1, "base": 1.3, "optimistic": 1.6}, "ZAŁOŻENIE oparte na E-ADS-09 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"),
     ("adblock_loss", "Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)", "ułamek",
-     {"conservative": 0.25, "base": 0.18, "optimistic": 0.12}, "ZAŁOŻENIE (E-ADS-*)"),
+     {"conservative": 0.28, "base": 0.20, "optimistic": 0.15}, "ZAŁOŻENIE oparte na E-ADS-07 (adblock w USA 19-33% zależnie od metody) + GPC/RDP"),
     ("human_share", "Udział sesji ludzi w sesjach zarejestrowanych (po filtrach GA4)", "ułamek",
      {"conservative": 0.85, "base": 0.92, "optimistic": 0.97}, "ZAŁOŻENIE; boty/agenci AI nie są monetyzowani"),
     # --- traffic structure ---------------------------------------------------
     ("ai_share_of_sessions", "Udział ruchu z asystentów AI w sesjach ludzi", "ułamek",
-     {"conservative": 0.10, "base": 0.20, "optimistic": 0.35}, "HIPOTEZA właściciela; do pomiaru w pilotażu"),
+     {"conservative": 0.02, "base": 0.10, "optimistic": 0.30}, "HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"),
     ("ai_rpm_factor", "RPM sesji z AI względem średniej (mobile, aplikacje, zaangażowanie)", "mnożnik",
      {"conservative": 0.8, "base": 1.0, "optimistic": 1.15}, "HIPOTEZA; brak danych pierwotnych o RPM ruchu AI"),
     # --- costs (monthly, cash) -----------------------------------------------
@@ -75,6 +75,7 @@ _m = sum(SEASONALITY.values()) / 12
 SEASONALITY = {k: v / _m for k, v in SEASONALITY.items()}
 
 TARGETS = [1000, 3000, 10000]
+PREMIUM_UPLIFT = {"conservative": 1.2, "base": 1.5, "optimistic": 2.0}  # HYPOTHESIS
 
 
 def p(key, s):
@@ -118,7 +119,7 @@ def main():
         add(["input", f"{k}: {label}", unit, *[vals[s] for s in SCEN], "założenie" if "ZAŁOŻENIE" in basis or "HIPOTEZA" in basis or "ILUSTRACJA" in basis else "plan", basis])
     for mth, v in SEASONALITY.items():
         add(["input", f"seasonality_{mth}: mnożnik RPM w miesiącu", "mnożnik", round(v, 3), round(v, 3), round(v, 3), "założenie",
-             "ZAŁOŻENIE; średnia roczna = 1.0; kształt (szczyt Q4, spadek w styczniu) zgodny z raportami branżowymi (E-ADS-*)"])
+             "ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"])
 
     rpm = {s: session_rpm(s) for s in SCEN}
     add(["output", "Przychód reklamowy na 1000 zarejestrowanych sesji (średnia roczna)", "USD / 1000 sesji",
@@ -141,6 +142,14 @@ def main():
             add(["required_traffic", f"Średnio sesji/mies. NA NARZĘDZIE dla {t} USD przy {n} narzędziach z ruchem", "sesje / narzędzie / mies.",
                  *[int(round(req[s] / n, -1)) for s in SCEN], "wynik", "ilustruje, że katalog nie zastępuje ruchu na narzędzie"])
 
+    for t in TARGETS:
+        add(["required_traffic", f"W tym sesje z asystentów AI/mies. dla {t} USD (przy udziale ai_share_of_sessions)", "sesje AI / mies.",
+             *[int(round(t / rpm[s] * 1000 * p("ai_share_of_sessions", s), -2)) for s in SCEN], "wynik",
+             "porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14)"])
+    for t in TARGETS:
+        add(["sensitivity", f"WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla {t} USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view", "sesje / mies.",
+             *[int(round(t / (rpm[s] * PREMIUM_UPLIFT[s]) * 1000, -3)) for s in SCEN], "hipoteza",
+             f"mnożnik przychodu na sesję {PREMIUM_UPLIFT}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-08/12)"])
     for tools in (5, 15, 50):
         fixed = {s: monthly_fixed_cash(s, tools) for s in SCEN}
         add(["costs", f"Stałe koszty gotówkowe/mies. przy {tools} narzędziach (z utrzymaniem eksperckim)", "USD / mies.",
