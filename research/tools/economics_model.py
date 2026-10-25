@@ -268,7 +268,7 @@ def main():
         add(["sensitivity", f"WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla {t} USD", "sesje AI / mies.",
              *[int(round(t / rpm[s] * 1000 * p("human_share", s) * OWNER_AI_SHARE[s], -2)) for s in SCEN], "hipoteza",
              "obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"])
-    add(["sensitivity", "WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (mediana vendorska) we wszystkich scenariuszach", "USD / 1000 sesji zarejestrowanych",
+    add(["sensitivity", "WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (jedyna znaleziona mediana vendorska, nieprzypisana do źródła pierwotnego; pewność niska) we wszystkich scenariuszach", "USD / 1000 sesji zarejestrowanych",
          *[round(rpm[s] * 2.4 / p("page_rpm_us", s), 2) for s in SCEN], "wrażliwość", "E-ADS-11"])
 
     for tools in (5, 15, 25, 50):

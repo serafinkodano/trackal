@@ -89,7 +89,7 @@ sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 10000 USD po przejściu 
 sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 1000 USD,sesje AI / mies.,83200,31400,13900,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
 sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 3000 USD,sesje AI / mies.,249700,94300,41700,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
 sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 10000 USD,sesje AI / mies.,832200,314400,138900,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
-sensitivity,"WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (mediana vendorska) we wszystkich scenariuszach",USD / 1000 sesji zarejestrowanych,1.02,1.76,2.79,wrażliwość,E-ADS-11
+sensitivity,"WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (jedyna znaleziona mediana vendorska, nieprzypisana do źródła pierwotnego; pewność niska) we wszystkich scenariuszach",USD / 1000 sesji zarejestrowanych,1.02,1.76,2.79,wrażliwość,E-ADS-11
 costs,Stałe koszty gotówkowe/mies. przy 5 narzędziach (z utrzymaniem eksperckim),USD / mies.,1712,639,288,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
 costs,Czas właściciela na utrzymanie przy 5 narzędziach,h / mies.,17.0,12.0,9.0,wynik,część stała + h/narzędzie × narzędzia
 breakeven,Próg rentowności gotówkowej przy 5 narzędziach,sesje zarejestrowane / mies.,1676200,109200,13700,wynik,koszty stałe / przychód na sesję

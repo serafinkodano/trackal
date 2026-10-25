@@ -4,7 +4,7 @@ Badanie z 2026-10-25, poprawione po recenzji adwersaryjnej (fala 3). Start: `exe
 
 | Plik | Zawartość |
 |---|---|
-| `executive-summary.md` | werdykt, najważniejsze dowody, ryzyka, rekomendacja zakresu, ekonomika, strategie alternatywne, pierwszy eksperyment (bramka G0), granice pewności, warunek przerwania |
+| `executive-summary.md` | werdykt, pozycjonowanie, domena, najważniejsze dowody, ryzyka, rekomendacja zakresu (5 pilotów), trzy obalone założenia (§4a), trzy największe niewiadome (§4b), ekonomika, strategie alternatywne, pierwszy eksperyment (bramka G0), granice pewności, warunek przerwania |
 | `market-and-distribution.md` | etap A (teza biznesowa, lejek marki w asystentach), popyt w USA, dystrybucja przez asystentów AI platforma po platformie, etap B (ocena 35 rodzin z kartami uzasadnień) |
 | `product-opportunities.csv` | długa lista: 96 wierszy, 95 odrębnych pomysłów (RENO-01 jest gałęzią RENO-02), wszystkie wymagane pola, status, kalibracja i poziom weryfikacji |
 | `competitor-audit.csv` | rejestr konkurencji: 1106 wierszy z fal 1, 2 i 2b (data, kwerenda, URL, konkurent, sprawdzone funkcje, ograniczenia dostępu, wniosek, pewność, podstawa dowodu i kolumny kontrolne opisane niżej) |
