@@ -17,7 +17,7 @@ LV = {'low': 'niska', 'medium': 'średnia', 'high': 'wysoka'}
 RANK = {'niska': 0, 'średnia': 1, 'wysoka': 2}
 STATUS4 = ['pilot', 'zbadać', 'później', 'odrzucić']
 TYPE = {'direct': 'bezpośredni', 'partial': 'częściowy', 'substitute': 'substytut',
-        'probably_direct_unverified': 'prawdopodobnie bezpośredni (niezweryfikowany)'}
+        'probably_direct_unverified': 'sporny (do ręcznej weryfikacji; wiedza modelu)'}
 EVK = {'direct': 'bezpośredni', 'indirect': 'pośredni', 'estimate': 'estymacja', 'hypothesis': 'hipoteza'}
 
 ll = json.load(open('raw/longlist.json'))
@@ -119,10 +119,10 @@ def url_match(name, url):
 def classify(concl, comp):
     c = (concl or '').strip().lower()
     head = c[:80]
-    if re.search(r'nie konkurent|sygnał popytu|źródło (danych|reguł)|regulacj', (comp or '').lower() + ' ' + head):
+    if re.search(r'nie konkurent(?! bezpośredni)|sygnał popytu|źródło (danych|reguł)|regulacj', (comp or '').lower() + ' ' + head):
         return 'nie-konkurent'
     if re.search(r'^(prawie|prawdopodobnie|możliwy)[^.]{0,30}(bezpośredni|direct)', head):
-        return 'prawdopodobnie bezpośredni (niezweryfikowany)'
+        return 'sporny (do ręcznej weryfikacji; wiedza modelu)'
     if re.search(r'^\W*(direct|bezpośredni)', head):
         return 'bezpośredni'
     if re.search(r'^\W*(partial|częściowy|częściowa)', head):
@@ -143,7 +143,7 @@ def row_type(comp, concl):
     t = ((comp or '') + ' | ' + (concl or '')[:120]).lower()
     if re.search(r'sygnał popytu|\(sygnał', t):
         return 'sygnał_popytu'
-    if re.search(r'nie konkurent|regulacja|źródło danych|źródło reguł|ustawa|\bsb \d', t):
+    if re.search(r'nie konkurent(?! bezpośredni)|regulacja|źródło danych|źródło reguł|ustawa|\bsb \d', t):
         return 'źródło_reguł_lub_danych'
     if re.search(r'^\W*\(?brak (konkurenta|narzędzia|wyników)|^\W*nie znaleziono|brak narzędzia w wynikach', (comp or '').lower()):
         return 'brak_wyniku'
@@ -194,6 +194,28 @@ TEXT_SUBS = [
     ('SERP jest zatłoczony', 'wyniki wyszukiwania (search-summary) są zatłoczone'),
     ('solidny popyt', 'dobrą ocenę popytu (4/5, sygnały pośrednie)'),
     ('ekspert 11–17 h (nie jest tani)', 'ekspert 24–36 h wg agenta fali 2b (nie jest tani)'),
+    (', a popyt wyraźny dzięki lock-in w 2026', ', a ocena popytu 4 opiera się na sygnałach pośrednich (popyt online niezmierzony); wpływ lock-in stóp w 2026 na wagę decyzji to hipoteza'),
+    ('duży i powtarzalny popyt na decyzję', 'częsta decyzja (skala zdarzeń: originations HELOC/home equity; nie pomiar popytu online)'),
+    ('realny popyt i wysoka reużywalność silnika', 'ocena popytu 4 na sygnałach pośrednich (popyt niezmierzony) i wysoka reużywalność silnika'),
+    ('dobry popyt (4)', 'dobra ocena popytu (4, sygnały pośrednie)'),
+    ('Pokazuje realny popyt', 'Sygnał pośredni (pojedynczy wątek z forum), nie pomiar popytu'),
+    ('bezpośredni sygnał popytu na dylemat kolejności', 'pośredni sygnał (anegdota z forum) dylematu kolejności'),
+    ('Żadnego narzędzia łączącego dach, PV i sprzedaż.', 'W streszczeniach nie widać narzędzia łączącego dach, PV i sprzedaż (niezweryfikowane).'),
+    ('Częściowy/bliski bezpośredniemu dla rdzenia', 'Częściowy (możliwy bezpośredni — do ręcznej weryfikacji) dla rdzenia'),
+    ('potencjalnie bliski bezpośredniemu', 'możliwy bezpośredni (do ręcznej weryfikacji)'),
+    ('Częściowy, bliski bezpośredniemu', 'Częściowy (możliwy bezpośredni — do ręcznej weryfikacji)'),
+    ('CarCalcPro już łączy rollover, LTV i moment wyjścia z underwater', 'według streszczeń wyszukiwarki CarCalcPro łączy już rollover, LTV i moment wyjścia z underwater (niezweryfikowane)'),
+    (', rozważając monetyzację afiliacyjną lub lead-gen zamiast AdSense', '; w modelu bazowym (AdSense) produkt się nie broni (wąska publiczność B2B), a afiliacja lub lead-gen do 3PL to tylko ewentualny dodatek albo osobna decyzja poza modelem bazowym'),
+    ('z monetyzacją afiliacyjną (finansowanie zapasów, 3PL, SaaS)', 'z ewentualną afiliacją jako dodatkiem (finansowanie zapasów, 3PL, SaaS; poza modelem bazowym)'),
+    ('Budować tylko, jeśli ręczna weryfikacja nie znajdzie zegara §121 + 4 wariantów w jednym narzędziu.',
+     'Budować tylko po własnym pomiarze popytu i SERP (jak G0, kroki 2–3) i jeśli ręczna weryfikacja (TrueHomeCosts, Bellhaven, TeamzLab i kandydaci z karty) nie znajdzie narzędzia pokrywającego ≥ 3 kluczowe zależności: zegar §121, recapture, wartość niskiej stopy, warianty najmu i sprzedaży.'),
+    ('Budować tylko, jeśli ręczna weryfikacja potwierdzi, że nikt nie rozbija „kary za utratę niskiej stopy” i finansowania HELOC/cash-out w jednym modelu.',
+     'Budować tylko po własnym pomiarze popytu i SERP (jak G0, kroki 2–3) i jeśli ręczna weryfikacja (BusinessCaseGuy, Dr. Brian Jones, TrueHomeCosts, FinHome, AgentCalc i pozostali kandydaci z karty) nie znajdzie narzędzia pokrywającego ≥ 3 kluczowe zależności z karty HOME-04: kara za utratę niskiej stopy, finansowanie remontu HELOC vs cash-out, ponowna wycena podatku od nieruchomości, basis/§121, przekroczenia budżetu, scenariusz spadku stóp i refinansu.'),
+    ('Dane Edmunds: Q1 2026 30,9%/7 183 USD; Q3 2026 29,1%/7 107 USD.',
+     'Dane Edmunds: Q2 2026 29,6%/6 884 USD (potwierdzone, E-REV-07); Q1 2026 30,9%/7 183 USD; Q3 2026 29,1%/7 107 USD (wg agenta, jedno niepotwierdzone źródło, E-DEM-14).'),
+    ('(RothHelper, QuantCalc ACA Bridge Optimizer, a także CoastIQ, ThunderHarbor i acaoptimizer)',
+     '(konkurenci bezpośredni: RothHelper, QuantCalc ACA Bridge Optimizer; częściowi, pewność niska: CoastIQ, ThunderHarbor, acaoptimizer)'),
+    ('OverlineIQ, top1031, Resideline częściowo pokrywają', 'OverlineIQ (sporny), top1031 i Resideline (częściowi) pokrywają fragmenty'),
     ('Popyt jest realny i rosnący', 'Sygnały popytu są pośrednie (zdarzenia, podaż treści); wolumenów nie zmierzono'),
     ('Popyt istnieje i jest widoczny na forach', 'Pytania pojawiają się na forach (anegdotycznie); wolumenów nie zmierzono'),
     ('Profil jest mocny w popycie', 'Ocena popytu jest wysoka, ale opiera się na sygnałach pośrednich'),
@@ -242,7 +264,7 @@ for f in sorted(glob.glob('raw/*.json')):
         else:
             conf = cap(conf, 'niska')
             if klas == 'bezpośredni':
-                klas = 'prawdopodobnie bezpośredni (niezweryfikowany)'
+                klas = 'sporny (do ręcznej weryfikacji; wiedza modelu)'
         if um.startswith('nie'):
             conf = cap(conf, 'niska')
             notes.append('URL nie należy do konkurenta (wzmianka lub artykuł); strona narzędzia nieustalona')
@@ -294,13 +316,15 @@ for r in reg:
     finals = r['produkt_ID_final'].split(';')
     if not r['etap'].startswith('fala 1') or len(finals) < 2 or r['typ_wiersza'] != 'konkurent':
         split.append(r); continue
-    per = {}
-    for seg in re.split(r';', r['wniosek']):
+    per, current = {}, None
+    for seg in re.split(r'[;.]', r['wniosek']):
         k = classify(seg, r['konkurent'])
+        if k != 'niezweryfikowany':
+            current = k            # klasyfikacja obowiązuje do następnego określenia w tym samym wniosku
         for t in TID.findall(seg):
             f = temp2final.get((r['agent_zrodlowy'], t)) or temp2final.get(('*', t))
-            if f and k != 'niezweryfikowany':
-                per.setdefault(f, k)
+            if f and current:
+                per.setdefault(f, current)
     if not per:
         split.append(r); continue
     for f in finals:
@@ -354,7 +378,7 @@ for (p, k), idx in by_pu.items():
             out[i]['zastapiony_przez_nowsza_fale'] = f"tak – dla {p} obowiązuje ocena z etapu „{out[newest[0]]['etap']}”"
             nsup += 1
 
-CONTESTED = {'ENER-03', 'RENT-01'}
+CONTESTED = {'ENER-03': 'home energy planner', 'RENT-01': 'overlineiq'}
 for r in out:
     if not r['etap'].startswith('fala 1') or r['typ_wiersza'] != 'konkurent':
         continue
@@ -362,8 +386,10 @@ for r in out:
         continue
     notes_ = []
     for pid in r['produkt_ID_final'].split(';'):
-        if pid in CONTESTED:
+        if pid in CONTESTED and CONTESTED[pid] in r['konkurent'].lower():
             notes_.append(f'nie – dla {pid} klasyfikacja sporna (fala 1: bezpośredni, fala 2: częściowy); rozstrzyga ręczna weryfikacja (K-03)')
+        elif pid in CONTESTED:
+            notes_.append(f'nie – brak oceny w nowszej fali; dla {pid} zakres do ręcznej weryfikacji (K-03)' + ('; bezpośredni dla rdzenia hold/sell seeda H (RENT-02)' if 'biggerpockets' in r['konkurent'].lower() else ''))
         elif pid in audits and not cal.get(pid, {}).get('direct'):
             notes_.append(f"tak – dla {pid} w audycie fali 2{' i próbie obalenia fali 2b' if pid in refutes else ''} nie potwierdzono konkurenta bezpośredniego; obowiązuje ocena nowszej fali")
     if notes_:
@@ -441,7 +467,7 @@ TEXT_FIX = [
     ('BIZ-15', 'uzasadnienie_statusu', 'Ciekawy jako tryb silnika R1 (ten sam model gotówki)', 'Ciekawy jako tryb silnika BIZ-04 (inny model popytu – newsvendor – ten sam model gotówki)'),
 ]
 AUTO_RE = re.compile(r'\(30\.9% trade-in z negative equity, średnio \$7,183\)')
-AUTO_NEW = '(Edmunds: 29,1% wymian z ujemnym kapitałem w Q3 2026, średnio 7 107 USD; Q1 2026: 30,9% i 7 183 USD [E-DEM-14])'
+AUTO_NEW = '(Edmunds: Q2 2026 29,6% wymian z ujemnym kapitałem, średnio 6 884 USD — potwierdzone [E-REV-07]; Q3 2026 29,1% i 7 107 USD wg agenta, niepotwierdzone [E-DEM-14]; Q1 2026 30,9% i 7 183 USD)'
 
 
 def comp_str(cs):
@@ -483,6 +509,8 @@ for x in ll:
     status, qual = norm_status(raw_status)
     if fid == 'RENO-01':
         status, qual = 'później', 'przełącznik PV jest w MVP RENO-02; pełna ekonomika PV później'
+    if fid == 'INS-06':
+        status, qual = 'później', 'gałąź ENER-03 (nie odrębny); zamiennik seeda F; wraca razem z ENER-03'
     note = fs.get('note', '')
     if note in ('osobna domena, jeśli w ogóle', 'poza domeną', 'poza zakresem startowym domeny'):
         note = ''
@@ -532,7 +560,9 @@ for x in ll:
         if fid == 'ENER-03':
             direct = 'sporny: Home Energy Planner — w fali 1 bezpośredni, w fali 2 częściowy; do ręcznej weryfikacji'
         elif fid == 'RENT-01':
-            direct = 'sporny: OverlineIQ — w fali 1 (seed H) bezpośredni, w audycie fali 2 częściowy; BiggerPockets Sell vs Keep (bezpośredni dla ogólnego rdzenia hold/sell seeda H) w audycie RENT-01 się nie pojawił; do ręcznej weryfikacji'
+            direct = 'sporny: OverlineIQ — w fali 1 (seed H) bezpośredni, w audycie fali 2 częściowy; do ręcznej weryfikacji. BiggerPockets Sell vs Keep jest bezpośredni dla rdzenia hold/sell seeda H; dla zakresu RENT-01 (1031, step-up, sprzedaż ratalna) niezweryfikowany'
+        elif fid == 'RET-03':
+            direct = f'tak: RothHelper, QuantCalc ACA Bridge Optimizer ({scope}; pewność średnia)'
         elif c and c['direct']:
             direct = f'tak ({scope}; pewność średnia)'
         else:
@@ -576,6 +606,13 @@ for x in ll:
     }
     if fid == 'BIZ-15':
         row['uwagi_scalenia_i_bliskie_duplikaty'] = NEAR['BIZ-15']
+    if fid in ('RENO-05', 'CARE-05', 'CARE-08', 'JOB-04'):
+        row['uwagi_scalenia_i_bliskie_duplikaty'] = (row['uwagi_scalenia_i_bliskie_duplikaty'] + ' Odrębna decyzja (inne warianty lub wynik); „moduł” w uzasadnieniu to rekomendowana forma budowy, nie scalenie.').strip()
+    TAGS = {'ENER-03': (r'(Home Energy Planner[^;\[]*)\[częściowy\]', r'\1[sporny: fala 1 bezpośredni, fala 2 częściowy; do ręcznej weryfikacji]'),
+            'RENT-01': (r'(OverlineIQ[^;\[]*)\[częściowy\]', r'\1[sporny: fala 1 bezpośredni, fala 2 częściowy]'),
+            'RENT-02': (r'(BiggerPockets[^;\[]*Sell vs\. Keep[^;\[]*)\[częściowy\]', r'\1[częściowy dla wariantu capex RENT-02; bezpośredni dla rdzenia hold/sell seeda H]')}
+    if fid in TAGS:
+        row['najblizsza_konkurencja'] = re.sub(TAGS[fid][0], TAGS[fid][1], row['najblizsza_konkurencja'])
     if fid == 'FIN-03':
         row['najblizsza_konkurencja'] = re.sub(r'Federal Student Aid[^;]*', 'StudentAid.gov Loan Simulator [prawdopodobnie częściowy lub bezpośredni – wiedza modelu, niezweryfikowane]', row['najblizsza_konkurencja'])
         row['uwagi_scalenia_i_bliskie_duplikaty'] = ''
@@ -603,6 +640,12 @@ for row in rows:
             row[k] = f"{(v or '').strip().rstrip('.')} — ocena koncepcyjna agenta; nie badano w tej sesji (brak danych)."
             nfill += 1
 
+TEMP_ID = re.compile(r'(?<![\w-])(T-S\d-R\d|S\d-R\d|G\d-\d\d)(?![\w-])')
+for row in rows:
+    for k in list(row):
+        if k in ('ID', 'scalone_z_pomyslow_agentow') or not isinstance(row[k], str):
+            continue
+        row[k] = TEMP_ID.sub(lambda m: temp2final.get(('*', m.group(1)), m.group(1)), row[k])
 apply_subs(rows, cards_fix=True)
 with open(f'{OUT}/product-opportunities.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)

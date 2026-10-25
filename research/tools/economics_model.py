@@ -65,7 +65,7 @@ INPUTS = [
     ("owner_hourly_value", "Wycena godziny właściciela (koszt alternatywny)", "USD / h",
      {"conservative": 50, "base": 40, "optimistic": 30}, "ZAŁOŻENIE"),
     ("owner_hours_new_tool", "Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika)", "h / narzędzie",
-     {"conservative": 53, "base": 45, "optimistic": 37}, "SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 30-70 h/produkt)"),
+     {"conservative": 53, "base": 45, "optimistic": 37}, "SZACUNEK; tabela pilotażu (architecture-and-validation.md §3): produkty 2-5 30-60 h, średnio ok. 34-49 h; 53 h w scen. kons. to zapas ponad średnią z kart"),
     ("owner_hours_reno02", "Czas właściciela na RENO-02 (pierwszy symulator; buduje moduły wspólne: dach, ubezpieczenie, sprzedaż, finansowanie)", "h",
      {"conservative": 70, "base": 60, "optimistic": 50}, "SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 50-70 h)"),
     ("start_month", "Miesiąc kalendarzowy pierwszego miesiąca ilustracji (start po G0)", "nr miesiąca",
@@ -78,7 +78,7 @@ INPUTS = [
      {"conservative": 1500, "base": 600, "optimistic": 200}, "ZAŁOŻENIE"),
     # --- portfolio & traffic trajectory ----------------------------------------
     ("max_tools", "Docelowa liczba symulatorów w horyzoncie 36 mies. (limit planu)", "szt.",
-     {"conservative": 5, "base": 15, "optimistic": 30}, "PLAN ilustracyjny; w praktyce zależny od reguł §4.3"),
+     {"conservative": 5, "base": 15, "optimistic": 30}, "PLAN ilustracyjny; w praktyce zależny od reguł architecture-and-validation.md §4.3"),
     ("share_tools_with_traffic", "Udział narzędzi osiągających istotny ruch", "ułamek",
      {"conservative": 0.2, "base": 0.35, "optimistic": 0.5}, "ZAŁOŻENIE (rozkład potęgowy, nie liniowy)"),
     ("sessions_top_tool_mature", "Sesje/mies. najlepszego narzędzia po 12 mies. od publikacji", "sesje / mies.",
@@ -328,7 +328,7 @@ def main():
     add(["launch", "Koszty stałe testu po publikacji (1 narzędzie, z utrzymaniem eksperckim)", "USD / mies.",
          *[round(fixed_cash(s, 1)) for s in SCEN], "wynik", "fixed_cash(1)"])
     add(["launch", "Czas właściciela na test opcji: silnik + RENO-02 (bez G0 i bez utrzymania po publikacji)", "h",
-         *[round(p('owner_hours_engine', s) + p('owner_hours_reno02', s)) for s in SCEN], "wynik", "owner_hours_engine + owner_hours_reno02; G0 dodaje 15-25 h"])
+         *[round(p('owner_hours_engine', s) + p('owner_hours_reno02', s)) for s in SCEN], "wynik", "owner_hours_engine + owner_hours_reno02; G0 dodaje ok. 25-35 h (panel 10-15 h, krok 4 ok. 6-10 h, kroki 1a-3 ok. 5-10 h)"])
     add(["launch", "Czas właściciela na uruchomienie silnika + 5 symulatorów", "h", *[round(launch_hours[s]) for s in SCEN], "wynik", "silnik + RENO-02 + 4 × narzędzie"])
     add(["launch", "Wycena czasu uruchomienia", "USD", *[int(round(launch_hours[s] * p('owner_hourly_value', s), -1)) for s in SCEN], "wynik", "h × stawka właściciela"])
 

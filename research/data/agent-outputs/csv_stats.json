@@ -1,38 +1,38 @@
 {
- "register_rows": 1159,
+ "register_rows": 1192,
  "unmapped_rows": 0,
  "unmapped_examples": [],
  "basis": {
-  "search-summary – opis w wyniku wyszukiwania": 946,
+  "search-summary – opis w wyniku wyszukiwania": 949,
   "notatka fali 1 – niepotwierdzona w fali 2": 13,
   "wyszukiwanie wykonane – brak w wynikach; wiedza modelu": 6,
-  "wiedza modelu – bez wyszukiwania": 194
+  "wiedza modelu – bez wyszukiwania": 224
  },
  "types": {
-  "konkurent": 1105,
+  "konkurent": 1142,
   "sygnał_popytu": 18,
-  "źródło_reguł_lub_danych": 35,
+  "źródło_reguł_lub_danych": 31,
   "brak_wyniku": 1
  },
  "klas": {
-  "częściowy": 643,
-  "substytut": 343,
-  "nie-konkurent": 54,
+  "częściowy": 648,
+  "substytut": 351,
+  "nie-konkurent": 51,
   "niezweryfikowany": 41,
-  "bezpośredni": 28,
-  "niezweryfikowany (wniosek dotyczy innego zakresu)": 34,
-  "prawdopodobnie bezpośredni (niezweryfikowany)": 10,
+  "bezpośredni": 26,
+  "niezweryfikowany (wniosek dotyczy innego zakresu)": 57,
+  "sporny (do ręcznej weryfikacji; wiedza modelu)": 12,
   "sporny (częściowy lub bezpośredni)": 6
  },
  "url_mismatch": 67,
- "conflict_groups": 30,
+ "conflict_groups": 32,
  "superseded": 83,
- "rule9": 265,
+ "rule9": 280,
  "product_rows": 96,
  "distinct": 92,
  "status": {
-  "zbadać": 28,
-  "później": 38,
+  "zbadać": 27,
+  "później": 39,
   "odrzucić": 25,
   "pilot": 5
  },

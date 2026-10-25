@@ -22,13 +22,13 @@ input,expert_hours_upkeep_tool_year: Godziny eksperta na utrzymanie narzędzia r
 input,owner_maint_hours_fixed: Czas właściciela na utrzymanie: część stała,h / mies.,12,8,6,założenie,ZAŁOŻENIE
 input,owner_maint_hours_per_tool: Czas właściciela na utrzymanie: na każde żywe narzędzie,h / narzędzie / mies.,1.0,0.8,0.6,założenie,ZAŁOŻENIE
 input,owner_hourly_value: Wycena godziny właściciela (koszt alternatywny),USD / h,50,40,30,założenie,ZAŁOŻENIE
-input,owner_hours_new_tool: Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika),h / narzędzie,53,45,37,szacunek,SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 30-70 h/produkt)
+input,owner_hours_new_tool: Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika),h / narzędzie,53,45,37,szacunek,"SZACUNEK; tabela pilotażu (architecture-and-validation.md §3): produkty 2-5 30-60 h, średnio ok. 34-49 h; 53 h w scen. kons. to zapas ponad średnią z kart"
 input,"owner_hours_reno02: Czas właściciela na RENO-02 (pierwszy symulator; buduje moduły wspólne: dach, ubezpieczenie, sprzedaż, finansowanie)",h,70,60,50,szacunek,SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 50-70 h)
 input,start_month: Miesiąc kalendarzowy pierwszego miesiąca ilustracji (start po G0),nr miesiąca,11,11,11,plan,"PLAN: G0 pod koniec X 2026, budowa od XI 2026; wyznacza sezonowość RPM w trajektorii"
 input,"owner_hours_engine: Jednorazowa budowa silnika, CI, szablonów, analityki",h,220,155,90,szacunek,SZACUNEK (architecture-and-validation.md §3: 90-220 h)
 input,owner_build_hours_month: Godziny właściciela dostępne na budowę (po utrzymaniu),h / mies.,40,60,80,założenie,ZAŁOŻENIE o dostępności (ok. 10/15/20 h tygodniowo); wyznacza harmonogram
 input,"one_time_legal: Polityka prywatności, regulamin, CMP, audyt dostępności (jednorazowo)",USD,1500,600,200,założenie,ZAŁOŻENIE
-input,max_tools: Docelowa liczba symulatorów w horyzoncie 36 mies. (limit planu),szt.,5,15,30,plan,PLAN ilustracyjny; w praktyce zależny od reguł §4.3
+input,max_tools: Docelowa liczba symulatorów w horyzoncie 36 mies. (limit planu),szt.,5,15,30,plan,PLAN ilustracyjny; w praktyce zależny od reguł architecture-and-validation.md §4.3
 input,share_tools_with_traffic: Udział narzędzi osiągających istotny ruch,ułamek,0.2,0.35,0.5,założenie,"ZAŁOŻENIE (rozkład potęgowy, nie liniowy)"
 input,sessions_top_tool_mature: Sesje/mies. najlepszego narzędzia po 12 mies. od publikacji,sesje / mies.,3000,15000,60000,ilustracja,"ILUSTRACJA, nie prognoza; brak wolumenów (K-04)"
 input,zipf_s: Wykładnik rozkładu ruchu między narzędziami z ruchem (Zipf),bezwymiarowy,1.2,1.0,0.9,założenie,ZAŁOŻENIE
@@ -127,7 +127,7 @@ launch,Gotówkowy koszt uruchomienia 5 symulatorów (prawo/CMP + eksperci; bez k
 launch,Miesiąc publikacji RENO-02 od startu budowy (silnik + RENO-02 przy dostępności owner_build_hours_month),mies.,8,4,2,wynik,"z symulacji harmonogramu; przy 15 h/tydz. (ok. 65 h/mies.) w bazie ok. 3,3-3,6 mies."
 launch,Gotówkowy koszt testu opcji do publikacji RENO-02 (prawo/CMP + ekspert RENO-02 + koszty stałe do miesiąca publikacji),USD,12950,5870,2990,wynik,skumulowany wynik gotówkowy z symulacji w miesiącu publikacji (przychód 0)
 launch,"Koszty stałe testu po publikacji (1 narzędzie, z utrzymaniem eksperckim)",USD / mies.,712,289,163,wynik,fixed_cash(1)
-launch,Czas właściciela na test opcji: silnik + RENO-02 (bez G0 i bez utrzymania po publikacji),h,290,215,140,wynik,owner_hours_engine + owner_hours_reno02; G0 dodaje 15-25 h
+launch,Czas właściciela na test opcji: silnik + RENO-02 (bez G0 i bez utrzymania po publikacji),h,290,215,140,wynik,"owner_hours_engine + owner_hours_reno02; G0 dodaje ok. 25-35 h (panel 10-15 h, krok 4 ok. 6-10 h, kroki 1a-3 ok. 5-10 h)"
 launch,Czas właściciela na uruchomienie silnika + 5 symulatorów,h,502,395,288,wynik,silnik + RENO-02 + 4 × narzędzie
 launch,Wycena czasu uruchomienia,USD,25100,15800,8640,wynik,h × stawka właściciela
 trajectory,ILUSTRACJA: żywe narzędzia w mies. 6,szt.,0,4,10,ilustracja,harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)
