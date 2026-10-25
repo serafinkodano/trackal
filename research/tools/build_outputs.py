@@ -119,7 +119,7 @@ def url_match(name, url):
 def classify(concl, comp):
     c = (concl or '').strip().lower()
     head = c[:80]
-    if re.search(r'nie konkurent(?! bezpośredni)|sygnał popytu|źródło (danych|reguł)|regulacj', (comp or '').lower() + ' ' + head):
+    if re.search(r'nie konkurent(?! bezpo)|sygnał popytu|źródło (danych|reguł)|regulacj', (comp or '').lower() + ' ' + head):
         return 'nie-konkurent'
     if re.search(r'^(prawie|prawdopodobnie|możliwy)[^.]{0,30}(bezpośredni|direct)', head):
         return 'sporny (do ręcznej weryfikacji; wiedza modelu)'
@@ -143,7 +143,7 @@ def row_type(comp, concl):
     t = ((comp or '') + ' | ' + (concl or '')[:120]).lower()
     if re.search(r'sygnał popytu|\(sygnał', t):
         return 'sygnał_popytu'
-    if re.search(r'nie konkurent(?! bezpośredni)|regulacja|źródło danych|źródło reguł|ustawa|\bsb \d', t):
+    if re.search(r'nie konkurent(?! bezpo)|regulacja|źródło danych|źródło reguł|ustawa|\bsb \d', t):
         return 'źródło_reguł_lub_danych'
     if re.search(r'^\W*\(?brak (konkurenta|narzędzia|wyników)|^\W*nie znaleziono|brak narzędzia w wynikach', (comp or '').lower()):
         return 'brak_wyniku'
@@ -193,6 +193,7 @@ TEXT_SUBS = [
     ('SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL)', 'w wynikach wyszukiwania (search-summary) dominują domeny o wysokim autorytecie (YMYL); pełnego SERP nie badano (K-05)'),
     ('SERP jest zatłoczony', 'wyniki wyszukiwania (search-summary) są zatłoczone'),
     ('solidny popyt', 'dobrą ocenę popytu (4/5, sygnały pośrednie)'),
+    ('ewentualnie jako gałąź RENO-02.', 'jako odrębna decyzja korzystająca z modułu PV RENO-02.'),
     ('ekspert 11–17 h (nie jest tani)', 'ekspert 24–36 h wg agenta fali 2b (nie jest tani)'),
     (', a popyt wyraźny dzięki lock-in w 2026', ', a ocena popytu 4 opiera się na sygnałach pośrednich (popyt online niezmierzony); wpływ lock-in stóp w 2026 na wagę decyzji to hipoteza'),
     ('duży i powtarzalny popyt na decyzję', 'częsta decyzja (skala zdarzeń: originations HELOC/home equity; nie pomiar popytu online)'),
@@ -445,7 +446,8 @@ NEAR = {
     'BIZ-15': 'Inny model popytu (newsvendor, jednorazowy zakup sezonowy) i inne warianty niż BIZ-04; wspólny silnik gotówki — odrębny pomysł.',
     'RENO-01': 'Scalony z RENO-02 po audycie: przełącznik PV (demontaż/ponowny montaż) jest w MVP RENO-02, pełna ekonomika PV odroczona. Nie liczy się do odrębnych pomysłów.',
 }
-OUTSIDE = {'HLTH-02': 'poza zakresem startowym domeny (zdrowie)', 'HLTH-01': 'poza zakresem startowym domeny (zdrowie)',
+OUTSIDE = {'INS-09': 'poza zakresem startowym domeny (ubezpieczenie zwierząt)', 'LIFE-03': 'poza zakresem startowym domeny (opieka nad dziećmi i praca)',
+           'FIN-06': 'poza zakresem startowym domeny (oddłużanie i upadłość konsumencka)', 'HLTH-02': 'poza zakresem startowym domeny (zdrowie)', 'HLTH-01': 'poza zakresem startowym domeny (zdrowie)',
            'LIFE-04': 'poza zakresem startowym domeny (finansowanie studiów)', 'FIN-03': 'poza zakresem startowym domeny (kredyty studenckie)'}
 NOT_DISTINCT = {'RENO-01': 'nie (gałąź RENO-02)', 'INS-06': 'nie (gałąź ENER-03)', 'CARE-07': 'nie (moduł CARE-01)', 'BIZ-06': 'nie (wariant BIZ-05)'}
 DOMAIN_NOTE = {
