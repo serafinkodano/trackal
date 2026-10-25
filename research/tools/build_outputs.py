@@ -485,6 +485,10 @@ for x in ll:
     note = fs.get('note', '')
     if note in ('osobna domena, jeśli w ogóle', 'poza domeną', 'poza zakresem startowym domeny'):
         note = ''
+    if fid == 'ENER-01':
+        note = 'odrębna decyzja (forma własności PV); korzysta z modułu PV RENO-02'
+    if fid == 'INS-01':
+        note = 'odrębna decyzja (czy zgłaszać szkodę); próg „zgłosić szkodę” wchodzi też jako moduł RENO-02'
     if fid == 'RENT-02':
         note = 'wariant capex seeda H (rdzeń hold/sell seeda H odrzucony)'
     if fid == 'ENER-03':
