@@ -127,10 +127,14 @@ def classify(concl, comp):
         return 'częściowy'
     if re.search(r'^\W*(substitute|substytut)', head):
         return 'substytut'
+    if re.search(r'(częściow\w*|partial)\s+lub\s+(bezpośredni|direct)|(bezpośredni\w*|direct)\s+lub\s+(częściow|partial)', head):
+        return 'sporny (częściowy lub bezpośredni)'
+    hits = []
     for pat, v in [(r'bezpośredni|direct', 'bezpośredni'), (r'częściow|partial', 'częściowy'), (r'substytut|substitute', 'substytut')]:
-        if re.search(pat, head):
-            return v
-    return 'niezweryfikowany'
+        m = re.search(pat, head)
+        if m:
+            hits.append((m.start(), v))
+    return min(hits)[1] if hits else 'niezweryfikowany'
 
 
 def row_type(comp, concl):

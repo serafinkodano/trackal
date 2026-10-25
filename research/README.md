@@ -33,7 +33,7 @@ Badanie z 2026-10-25, poprawione po recenzji adwersaryjnej (fala 3). Start: `exe
 
 - `produkt_ID_agenta` — identyfikator użyty przez agenta (np. „Seed B”, „G2-01, G2-03”); `produkt_ID_final` — ID z `product-opportunities.csv` (lista rozdzielona „;”). Wierszy bez przypisania: 0.
 - `typ_wiersza` — `konkurent` / `sygnał_popytu` / `źródło_reguł_lub_danych` / `brak_wyniku`. Liczniki konkurentów licz tylko z `konkurent`.
-- `klasyfikacja (automatyczna z wniosku)` — `bezpośredni` / `prawdopodobnie bezpośredni (niezweryfikowany)` / `częściowy` / `substytut` / `niezweryfikowany` / `nie-konkurent`; wyprowadzona z pierwszych słów wniosku agenta, więc przy decyzjach czytaj też `wniosek`.
+- `klasyfikacja (automatyczna z wniosku)` — `bezpośredni` / `prawdopodobnie bezpośredni (niezweryfikowany)` (wiersze z wiedzy modelu) / `sporny (częściowy lub bezpośredni)` / `częściowy` / `substytut` / `niezweryfikowany` / `nie-konkurent`; wyprowadzona z pierwszego określenia we wniosku agenta, więc przy decyzjach czytaj też `wniosek` (np. wiersze „DIRECT dla G6-03; PARTIAL dla G6-02” dotyczą dwóch produktów naraz).
 - `podstawa_dowodu` — `search-summary – opis w wyniku wyszukiwania`; `wyszukiwanie wykonane – brak w wynikach; wiedza modelu`; `wiedza modelu – bez wyszukiwania`; `notatka fali 1 – niepotwierdzona w fali 2`. Pewność wierszy z wiedzy modelu lub z URL innego podmiotu jest ograniczona do „niska”, a wierszy search-summary do „średnia” (żadnej strony nie otwarto).
 - `url_zgodny_z_nazwa_konkurenta` — „nie” oznacza, że URL to wzmianka lub artykuł innego serwisu, a strona narzędzia jest nieustalona.
 - `uwaga_reguly_9` — wniosek mówi o braku funkcji, choć strony nie otwarto; czytać jako „niezweryfikowane”, nie „brak”.

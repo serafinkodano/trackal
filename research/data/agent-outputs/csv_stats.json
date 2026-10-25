@@ -15,12 +15,13 @@
   "brak_wyniku": 1
  },
  "klas": {
-  "częściowy": 635,
-  "substytut": 334,
+  "częściowy": 636,
+  "substytut": 337,
   "nie-konkurent": 54,
   "niezweryfikowany": 41,
-  "bezpośredni": 27,
-  "prawdopodobnie bezpośredni (niezweryfikowany)": 15
+  "bezpośredni": 19,
+  "prawdopodobnie bezpośredni (niezweryfikowany)": 13,
+  "sporny (częściowy lub bezpośredni)": 6
  },
  "url_mismatch": 66,
  "conflict_groups": 16,
