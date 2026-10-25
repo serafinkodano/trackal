@@ -1,94 +1,155 @@
 section,metric,unit,conservative,base,optimistic,type,basis_or_formula
-input,"page_rpm_us: Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",USD / 1000 odsłon,4.0,9.0,18.0,założenie,"ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-11, E-ADS-12, E-ADS-28; vendorskie i self-reported); nie pochodzi z danych healthscorer.com"
+input,"page_rpm_us: Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",USD / 1000 odsłon,2.4,8.0,18.0,założenie,"ZAŁOŻENIE; brak danych pierwotnych dla stron-narzędzi. Zakresy vendorskie bez metodologii (E-ADS-11; mediana ok. 2,4 USD z 75 stawek). Most CPM→RPM niżej jako test spójności. Rozstrzygnie pilotaż (K-06, krok 1b G0)"
 input,non_us_rpm_factor: RPM ruchu spoza USA jako ułamek RPM USA,ułamek,0.2,0.25,0.35,założenie,ZAŁOŻENIE (E-ADS-16: tier-1 vs reszta świata)
 input,us_share: Udział sesji z USA wśród sesji ludzi,ułamek,0.6,0.75,0.85,założenie,"ZAŁOŻENIE (serwis anglojęzyczny, treści USA)"
-input,pages_per_session: Odsłony na sesję (narzędzie + metodologia/wyniki),odsłony / sesję,1.1,1.3,1.6,założenie,"ZAŁOŻENIE oparte na E-ADS-26 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"
-input,"adblock_loss: Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)",ułamek,0.28,0.2,0.15,założenie,"ZAŁOŻENIE oparte na E-ADS-17, E-ADS-19 (adblock w USA 19-33% zależnie od metody) + GPC/RDP"
-input,human_share: Udział sesji ludzi w sesjach zarejestrowanych (po filtrach GA4),ułamek,0.85,0.92,0.97,założenie,ZAŁOŻENIE; boty/agenci AI nie są monetyzowani
-input,ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi,ułamek,0.02,0.1,0.3,założenie,"HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02, E-VER-C5), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"
+input,pages_per_session: Odsłony na sesję (narzędzie + metodologia/wyniki),odsłony / sesję,1.1,1.3,1.6,założenie,"ZAŁOŻENIE: publicznych benchmarków dla stron-narzędzi nie znaleziono; analogia do landing pages 1-1,5 PV/sesję (E-ADS-26); AdSense nie odświeża reklam po przeliczeniu (E-VER-C7)"
+input,adblock_rate: Udział odsłon z zablokowanymi reklamami (adblock),ułamek,0.25,0.2,0.15,założenie,ZAŁOŻENIE (E-ADS-17: 19-33% zależnie od metody; ankieta vs pomiar)
+input,"rdp_share: Udział odsłon z USA w trybie reklam niespersonalizowanych (GPC/RDP, stanowe prawo prywatności)",ułamek,0.15,0.1,0.05,założenie,ZAŁOŻENIE; skala nieznana (E-ADS-19)
+input,rdp_rpm_factor: RPM reklam niespersonalizowanych względem personalizowanych,ułamek,0.6,0.7,0.8,założenie,ZAŁOŻENIE (E-ADS-35: testy bezciasteczkowe -30% do -36% CPM)
+input,unfilled_rate: Udział niewypełnionych wyświetleń,ułamek,0.05,0.03,0.02,założenie,ZAŁOŻENIE
+input,human_share: Udział sesji ludzi w sesjach zarejestrowanych (po filtrach GA4),ułamek,0.85,0.92,0.97,założenie,"ZAŁOŻENIE; boty i agenci AI nie są monetyzowani (E-ADS-22, E-ADS-23)"
+input,ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi,ułamek,0.003,0.01,0.05,założenie,"ZAŁOŻENIE zgodne z benchmarkami 0,1-1% (E-AI-02, E-VER-C5); obserwacja właściciela (10-30%) tylko jako wrażliwość niżej"
 input,"ai_rpm_factor: RPM sesji z AI względem średniej (mobile, aplikacje, zaangażowanie)",mnożnik,0.8,1.0,1.15,założenie,HIPOTEZA; brak danych pierwotnych o RPM ruchu AI
 input,cost_domain: Domena,USD / mies.,2,1.5,1.5,założenie,ZAŁOŻENIE (~18-24 USD/rok)
 input,cost_vps_cdn: VPS + CDN + kopie,USD / mies.,60,30,30,założenie,ZAŁOŻENIE
 input,cost_ai_tools: Claude Code / API LLM (część przypisana projektowi),USD / mies.,200,120,100,założenie,ZAŁOŻENIE (subskrypcja + API)
-input,cost_data: Płatne dane / API,USD / mies.,50,0,0,założenie,"ZAŁOŻENIE: start na danych publicznych (NREL, EIA, FRED itp.)"
+input,cost_data: Płatne dane / API,USD / mies.,50,0,0,założenie,"ZAŁOŻENIE: start na danych publicznych (NREL, EIA, FRED itp.; licencje do sprawdzenia, E-REG3-11, E-REG3-12)"
 input,cost_seo_ai_monitoring: Narzędzia SEO / monitoring AI,USD / mies.,150,50,0,założenie,ZAŁOŻENIE; start na GSC/Bing WMT
-input,expert_hourly: Stawka eksperta (EA/CPA/CFP/fachowiec),USD / h,250,175,125,założenie,ZAŁOŻENIE (do potwierdzenia ofertą)
-input,"expert_hours_new_tool: Godziny eksperta na nowy symulator (średnio, mix poziomów ryzyka)",h / narzędzie,18,13,9,założenie,"ZAŁOŻENIE skalibrowane do szacunków agentów fali 2b dla 5 produktów pilotażowych (łącznie ~55-90 h; agent P&C, dekarz, CPA/EA, inżynier energetyczny, specjalista F&I)"
+input,expert_hourly: Stawka eksperta (EA/CPA/CFP/fachowiec),USD / h,250,175,125,założenie,"ZAŁOŻENIE (do potwierdzenia ofertą, K-07)"
+input,expert_hours_new_tool: Godziny eksperta na nowy symulator,h / narzędzie,18,14,11,szacunek,SZACUNEK agentów fali 2b dla 5 produktów pilotażowych (łącznie ok. 55-90 h); Z-16
 input,expert_hours_upkeep_tool_year: Godziny eksperta na utrzymanie narzędzia rocznie,h / narzędzie / rok,4,2,1,założenie,ZAŁOŻENIE
-input,owner_hours_month: Czas właściciela na utrzymanie (bez budowy nowych narzędzi),h / mies.,30,20,12,założenie,ZAŁOŻENIE
+input,owner_maint_hours_fixed: Czas właściciela na utrzymanie: część stała,h / mies.,12,8,6,założenie,ZAŁOŻENIE
+input,owner_maint_hours_per_tool: Czas właściciela na utrzymanie: na każde żywe narzędzie,h / narzędzie / mies.,1.0,0.8,0.6,założenie,ZAŁOŻENIE
 input,owner_hourly_value: Wycena godziny właściciela (koszt alternatywny),USD / h,50,40,30,założenie,ZAŁOŻENIE
-input,owner_hours_new_tool: Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika),h / narzędzie,60,35,20,założenie,ZAŁOŻENIE
-input,"owner_hours_engine: Jednorazowa budowa silnika, CI, szablonów, analityki",h,220,140,90,założenie,ZAŁOŻENIE
-input,"one_time_legal: Polityka prywatności, regulamin, audyt dostępności (jednorazowo)",USD,1500,600,200,założenie,ZAŁOŻENIE
-input,tools_live_m12: Liczba symulatorów po 12 mies.,szt.,10,15,25,plan,PLAN
+input,owner_hours_new_tool: Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika),h / narzędzie,53,45,37,szacunek,SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 30-70 h/produkt)
+input,"owner_hours_engine: Jednorazowa budowa silnika, CI, szablonów, analityki",h,220,155,90,szacunek,SZACUNEK (architecture-and-validation.md §3: 90-220 h)
+input,owner_build_hours_month: Godziny właściciela dostępne na budowę (po utrzymaniu),h / mies.,40,60,80,założenie,ZAŁOŻENIE o dostępności (ok. 10/15/20 h tygodniowo); wyznacza harmonogram
+input,"one_time_legal: Polityka prywatności, regulamin, CMP, audyt dostępności (jednorazowo)",USD,1500,600,200,założenie,ZAŁOŻENIE
+input,max_tools: Docelowa liczba symulatorów w horyzoncie 36 mies. (limit planu),szt.,5,15,30,plan,PLAN ilustracyjny; w praktyce zależny od reguł §4.3
 input,share_tools_with_traffic: Udział narzędzi osiągających istotny ruch,ułamek,0.2,0.35,0.5,założenie,"ZAŁOŻENIE (rozkład potęgowy, nie liniowy)"
-input,sessions_top_tool_m12: Sesje/mies. najlepszego narzędzia w mies. 12,sesje / mies.,3000,15000,60000,założenie,"ILUSTRACJA, nie prognoza"
-input,zipf_s: Wykładnik rozkładu ruchu między narzędziami z ruchem (Zipf),-,1.2,1.0,0.9,założenie,ZAŁOŻENIE
-input,seasonality_Jan: mnożnik RPM w miesiącu,mnożnik,0.754,0.754,0.754,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Feb: mnożnik RPM w miesiącu,mnożnik,0.854,0.854,0.854,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Mar: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Apr: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_May: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Jun: mnożnik RPM w miesiącu,mnożnik,0.975,0.975,0.975,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Jul: mnożnik RPM w miesiącu,mnożnik,0.925,0.925,0.925,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Aug: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Sep: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Oct: mnożnik RPM w miesiącu,mnożnik,1.055,1.055,1.055,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Nov: mnożnik RPM w miesiącu,mnożnik,1.206,1.206,1.206,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-input,seasonality_Dec: mnożnik RPM w miesiącu,mnożnik,1.357,1.357,1.357,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
-output,Przychód reklamowy na 1000 zarejestrowanych sesji (średnia roczna),USD / 1000 sesji,1.82,7.0,22.39,wynik,pages_per_session × page_rpm_us × (us_share + (1-us_share)×non_us_rpm_factor) × (1-adblock_loss) × mix_AI × human_share
-output,Przychód na 1000 sesji w styczniu (najsłabszy miesiąc),USD / 1000 sesji,1.37,5.27,16.88,wynik,× mnożnik sezonowy
-output,Przychód na 1000 sesji w grudniu (najsilniejszy miesiąc),USD / 1000 sesji,2.47,9.49,30.38,wynik,× mnożnik sezonowy
-required_traffic,Sesje/mies. potrzebne dla 1000 USD przychodu reklamowego (średnio w roku),sesje / mies.,548000,143000,45000,wynik,1000 / (przychód na 1000 sesji) × 1000
-required_traffic,Sesje/mies. potrzebne dla 1000 USD w styczniu,sesje / mies.,727000,190000,59000,wynik,uwzględnia sezonowy dołek
-required_traffic,Sesje/dzień dla 1000 USD/mies.,sesje / dzień,18040,4700,1470,wynik,/ 30.4
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,54830,14290,4470,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,21930,5720,1790,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,5480,1430,450,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Sesje/mies. potrzebne dla 3000 USD przychodu reklamowego (średnio w roku),sesje / mies.,1645000,429000,134000,wynik,3000 / (przychód na 1000 sesji) × 1000
-required_traffic,Sesje/mies. potrzebne dla 3000 USD w styczniu,sesje / mies.,2182000,569000,178000,wynik,uwzględnia sezonowy dołek
-required_traffic,Sesje/dzień dla 3000 USD/mies.,sesje / dzień,54110,14100,4410,wynik,/ 30.4
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,164490,42880,13400,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,65800,17150,5360,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,16450,4290,1340,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Sesje/mies. potrzebne dla 10000 USD przychodu reklamowego (średnio w roku),sesje / mies.,5483000,1429000,447000,wynik,10000 / (przychód na 1000 sesji) × 1000
-required_traffic,Sesje/mies. potrzebne dla 10000 USD w styczniu,sesje / mies.,7274000,1896000,592000,wynik,uwzględnia sezonowy dołek
-required_traffic,Sesje/dzień dla 10000 USD/mies.,sesje / dzień,180370,47020,14690,wynik,/ 30.4
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,548310,142930,44650,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,219320,57170,17860,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,54830,14290,4470,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,W tym sesje z wyszukiwarek i innych źródeł (nie-AI)/mies. dla 1000 USD,sesje / mies.,537300,128600,31300,wynik,sesje łączne × (1 - ai_share_of_sessions); w praktyce głównie Google organic
-required_traffic,W tym sesje z asystentów AI/mies. dla 1000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,11000,14300,13400,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
-required_traffic,W tym sesje z wyszukiwarek i innych źródeł (nie-AI)/mies. dla 3000 USD,sesje / mies.,1612000,385900,93800,wynik,sesje łączne × (1 - ai_share_of_sessions); w praktyce głównie Google organic
-required_traffic,W tym sesje z asystentów AI/mies. dla 3000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,32900,42900,40200,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
-required_traffic,W tym sesje z wyszukiwarek i innych źródeł (nie-AI)/mies. dla 10000 USD,sesje / mies.,5373500,1286300,312600,wynik,sesje łączne × (1 - ai_share_of_sessions); w praktyce głównie Google organic
-required_traffic,W tym sesje z asystentów AI/mies. dla 10000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,109700,142900,134000,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 1000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,457000,95000,22000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 3000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,1371000,286000,67000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 10000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,4569000,953000,223000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+input,sessions_top_tool_mature: Sesje/mies. najlepszego narzędzia po 12 mies. od publikacji,sesje / mies.,3000,15000,60000,ilustracja,"ILUSTRACJA, nie prognoza; brak wolumenów (K-04)"
+input,zipf_s: Wykładnik rozkładu ruchu między narzędziami z ruchem (Zipf),bezwymiarowy,1.2,1.0,0.9,założenie,ZAŁOŻENIE
+input,"ramp_months: Czas dojścia narzędzia do ruchu dojrzałego (liniowo, potem płasko)",mies.,12,12,9,założenie,ZAŁOŻENIE; bez sezonowości popytu (zob. uwaga przy sezonowości)
+input,bridge_slots_per_page: Most CPM→RPM: sloty reklamowe dopuszczalne politykami na stronie-symulatorze,szt. / odsłonę,2.0,2.5,3.0,założenie,"ZAŁOŻENIE (E-ADS-02, E-ADS-03: brak reklam przy elementach interaktywnych)"
+input,bridge_viewable_filled: Most CPM→RPM: udział slotów widocznych i wypełnionych,ułamek,0.6,0.7,0.8,założenie,ZAŁOŻENIE
+input,"bridge_net_ecpm_us: Most CPM→RPM: eCPM netto dla wydawcy (USA, finanse/dom)",USD / 1000 wyświetleń,2.0,4.5,7.5,założenie,"ZAŁOŻENIE; Search CPC reklamodawców (3,44 USD) i CPC GDN (0,86 USD) to inna warstwa (E-ADS-15)"
+input,seasonality_Jan: mnożnik RPM reklam w miesiącu,mnożnik,0.754,0.754,0.754,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Feb: mnożnik RPM reklam w miesiącu,mnożnik,0.854,0.854,0.854,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Mar: mnożnik RPM reklam w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Apr: mnożnik RPM reklam w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_May: mnożnik RPM reklam w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Jun: mnożnik RPM reklam w miesiącu,mnożnik,0.975,0.975,0.975,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Jul: mnożnik RPM reklam w miesiącu,mnożnik,0.925,0.925,0.925,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Aug: mnożnik RPM reklam w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Sep: mnożnik RPM reklam w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Oct: mnożnik RPM reklam w miesiącu,mnożnik,1.055,1.055,1.055,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Nov: mnożnik RPM reklam w miesiącu,mnożnik,1.206,1.206,1.206,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+input,seasonality_Dec: mnożnik RPM reklam w miesiącu,mnożnik,1.357,1.357,1.357,założenie,"ZAŁOŻENIE; średnia roczna = 1,0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20). Sezonowości POPYTU (awarie HVAC, sezon burz, wiosenna sprzedaż domów) nie modelowano"
+output,"Udział odsłon monetyzowanych (adblock, brak wypełnienia, RDP)",ułamek,0.67,0.753,0.825,wynik,(1-adblock)×(1-unfilled)×(1-rdp_share×(1-rdp_rpm_factor))
+output,Przychód reklamowy na 1000 sesji LUDZI (średnia roczna),USD / 1000 sesji ludzi,1.2,6.36,21.6,wynik,pages_per_session × page_rpm_us × (us_share + (1-us_share)×non_us_rpm_factor) × monetyzacja × mix_AI
+output,Przychód reklamowy na 1000 sesji ZAREJESTROWANYCH (z botami; średnia roczna),USD / 1000 sesji,1.02,5.85,20.95,wynik,× human_share; jednostka używana w progach ruchu poniżej
+output,Przychód na 1000 sesji w styczniu (najsłabszy miesiąc),USD / 1000 sesji,0.77,4.41,15.79,wynik,× mnożnik sezonowy
+output,Przychód na 1000 sesji w grudniu (najsilniejszy miesiąc),USD / 1000 sesji,1.39,7.94,28.42,wynik,"× mnożnik sezonowy; odczyty z XI-XII dzielić przez 1,2-1,36 przed porównaniem z rokiem"
+rpm_bridge,Most CPM→RPM: page RPM z założeń o slotach i eCPM (test spójności z page_rpm_us),USD / 1000 odsłon,2.4,7.88,18.0,wynik,sloty × widoczne/wypełnione × eCPM netto; wszystkie składniki to założenia
+rpm_bridge,"Warstwa reklamodawcy (NIE przychód wydawcy): CPC Search / CPC Display, Finance & Insurance",USD / klik,3.44 / 0.86,3.44 / 0.86,3.44 / 0.86,dane vendorskie,Promodo (E-ADS-15); relacja ~4:1 orientacyjna; nie przeliczać na RPM strony
+rpm_bridge,Kontekst odgórny: Omni Calculator - przychód / 1000 wizyt (szacunek na szacunkach),USD / 1000 wizyt,15,20,30,estymacja,"ok. 4,2-5 mln USD/rok (Growjo, nieaudytowane) / (14-23 mln wizyt/mies. × 12) (E-POR-02, E-POR2-05, E-VER-C4); globalny, szeroki katalog, wiele odsłon/sesję - nie benchmark dla nowej domeny; różnicy 2-4× wobec bazy nie rozstrzygnięto"
+required_traffic,Sesje/mies. potrzebne dla 1000 USD przychodu reklamowego (średnio w roku),sesje zarejestrowane / mies.,979000,171000,48000,wynik,1000 / (przychód na 1000 sesji) × 1000
+required_traffic,Sesje/mies. potrzebne dla 1000 USD w styczniu,sesje / mies.,1299000,227000,63000,wynik,uwzględnia sezonowy dołek RPM
+required_traffic,Sesje/dzień dla 1000 USD/mies.,sesje / dzień,32210,5620,1570,wynik,"/ 30,4"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,97910,17090,4770,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,39160,6840,1910,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 1000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,9790,1710,480,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,W tym sesje ludzi z wyszukiwarek i innych źródeł (nie-AI) dla 1000 USD,sesje / mies.,829700,155600,44000,wynik,sesje ludzi × (1 - ai_share); w praktyce głównie Google organic
+required_traffic,W tym sesje ludzi z asystentów AI dla 1000 USD,sesje AI / mies.,2500,1570,2320,wynik,"sesje ludzi × ai_share; porównanie: Omni Calculator ok. 4-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini (E-AI-14, E-VER-C4)"
+required_traffic,W tym sesje botów (niemonetyzowane) dla 1000 USD,sesje / mies.,146900,13700,1400,wynik,sesje zarejestrowane × (1 - human_share)
+required_traffic,Sesje/mies. potrzebne dla 3000 USD przychodu reklamowego (średnio w roku),sesje zarejestrowane / mies.,2937000,513000,143000,wynik,3000 / (przychód na 1000 sesji) × 1000
+required_traffic,Sesje/mies. potrzebne dla 3000 USD w styczniu,sesje / mies.,3897000,680000,190000,wynik,uwzględnia sezonowy dołek RPM
+required_traffic,Sesje/dzień dla 3000 USD/mies.,sesje / dzień,96620,16860,4710,wynik,"/ 30,4"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,293720,51270,14320,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,117490,20510,5730,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 3000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,29370,5130,1430,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,W tym sesje ludzi z wyszukiwarek i innych źródeł (nie-AI) dla 3000 USD,sesje / mies.,2489200,466900,132000,wynik,sesje ludzi × (1 - ai_share); w praktyce głównie Google organic
+required_traffic,W tym sesje ludzi z asystentów AI dla 3000 USD,sesje AI / mies.,7490,4720,6950,wynik,"sesje ludzi × ai_share; porównanie: Omni Calculator ok. 4-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini (E-AI-14, E-VER-C4)"
+required_traffic,W tym sesje botów (niemonetyzowane) dla 3000 USD,sesje / mies.,440600,41000,4300,wynik,sesje zarejestrowane × (1 - human_share)
+required_traffic,Sesje/mies. potrzebne dla 10000 USD przychodu reklamowego (średnio w roku),sesje zarejestrowane / mies.,9791000,1709000,477000,wynik,10000 / (przychód na 1000 sesji) × 1000
+required_traffic,Sesje/mies. potrzebne dla 10000 USD w styczniu,sesje / mies.,12989000,2267000,633000,wynik,uwzględnia sezonowy dołek RPM
+required_traffic,Sesje/dzień dla 10000 USD/mies.,sesje / dzień,322060,56210,15700,wynik,"/ 30,4"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,979080,170890,47740,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,391630,68360,19100,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,97910,17090,4770,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
+required_traffic,W tym sesje ludzi z wyszukiwarek i innych źródeł (nie-AI) dla 10000 USD,sesje / mies.,8297200,1556500,439900,wynik,sesje ludzi × (1 - ai_share); w praktyce głównie Google organic
+required_traffic,W tym sesje ludzi z asystentów AI dla 10000 USD,sesje AI / mies.,24970,15720,23150,wynik,"sesje ludzi × ai_share; porównanie: Omni Calculator ok. 4-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini (E-AI-14, E-VER-C4)"
+required_traffic,W tym sesje botów (niemonetyzowane) dla 10000 USD,sesje / mies.,1468600,136700,14300,wynik,sesje zarejestrowane × (1 - human_share)
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 1000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,816000,114000,24000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 3000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,2448000,342000,72000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 10000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,8159000,1139000,239000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 1000 USD,sesje AI / mies.,83200,31400,13900,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
+sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 3000 USD,sesje AI / mies.,249700,94300,41700,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
+sensitivity,WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla 10000 USD,sesje AI / mies.,832200,314400,138900,hipoteza,"obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"
+sensitivity,"WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (mediana vendorska) we wszystkich scenariuszach",USD / 1000 sesji,1.02,1.76,2.79,wrażliwość,E-ADS-11
 costs,Stałe koszty gotówkowe/mies. przy 5 narzędziach (z utrzymaniem eksperckim),USD / mies.,879,347,184,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
-breakeven,Próg rentowności gotówkowej przy 5 narzędziach,sesje / mies.,481800,49600,8200,wynik,koszty stałe / przychód na sesję
-breakeven,Próg rentowności z wyceną czasu właściciela przy 5 narzędziach,sesje / mies.,1304300,164000,24300,wynik,(koszty stałe + godziny właściciela × stawka) / przychód na sesję
+costs,Czas właściciela na utrzymanie przy 5 narzędziach,h / mies.,17.0,12.0,9.0,wynik,część stała + h/narzędzie × narzędzia
+breakeven,Próg rentowności gotówkowej przy 5 narzędziach,sesje / mies.,860300,59400,8800,wynik,koszty stałe / przychód na sesję
+breakeven,Próg rentowności z wyceną czasu właściciela przy 5 narzędziach,sesje / mies.,1692500,141400,21700,wynik,(koszty stałe + utrzymanie × stawka) / przychód na sesję
 costs,Stałe koszty gotówkowe/mies. przy 15 narzędziach (z utrzymaniem eksperckim),USD / mies.,1712,639,288,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
-breakeven,Próg rentowności gotówkowej przy 15 narzędziach,sesje / mies.,938700,91300,12800,wynik,koszty stałe / przychód na sesję
-breakeven,Próg rentowności z wyceną czasu właściciela przy 15 narzędziach,sesje / mies.,1761200,205700,28900,wynik,(koszty stałe + godziny właściciela × stawka) / przychód na sesję
+costs,Czas właściciela na utrzymanie przy 15 narzędziach,h / mies.,27.0,20.0,15.0,wynik,część stała + h/narzędzie × narzędzia
+breakeven,Próg rentowności gotówkowej przy 15 narzędziach,sesje / mies.,1676200,109200,13700,wynik,koszty stałe / przychód na sesję
+breakeven,Próg rentowności z wyceną czasu właściciela przy 15 narzędziach,sesje / mies.,2997900,245900,35200,wynik,(koszty stałe + utrzymanie × stawka) / przychód na sesję
+costs,Stałe koszty gotówkowe/mies. przy 25 narzędziach (z utrzymaniem eksperckim),USD / mies.,2545,931,392,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
+costs,Czas właściciela na utrzymanie przy 25 narzędziach,h / mies.,37.0,28.0,21.0,wynik,część stała + h/narzędzie × narzędzia
+breakeven,Próg rentowności gotówkowej przy 25 narzędziach,sesje / mies.,2492100,159000,18700,wynik,koszty stałe / przychód na sesję
+breakeven,Próg rentowności z wyceną czasu właściciela przy 25 narzędziach,sesje / mies.,4303400,350400,48800,wynik,(koszty stałe + utrzymanie × stawka) / przychód na sesję
 costs,Stałe koszty gotówkowe/mies. przy 50 narzędziach (z utrzymaniem eksperckim),USD / mies.,4629,1660,652,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
-breakeven,Próg rentowności gotówkowej przy 50 narzędziach,sesje / mies.,2538000,237200,29100,wynik,koszty stałe / przychód na sesję
-breakeven,Próg rentowności z wyceną czasu właściciela przy 50 narzędziach,sesje / mies.,3360400,351600,45200,wynik,(koszty stałe + godziny właściciela × stawka) / przychód na sesję
+costs,Czas właściciela na utrzymanie przy 50 narzędziach,h / mies.,62.0,48.0,36.0,wynik,część stała + h/narzędzie × narzędzia
+breakeven,Próg rentowności gotówkowej przy 50 narzędziach,sesje / mies.,4531800,283700,31100,wynik,koszty stałe / przychód na sesję
+breakeven,Próg rentowności z wyceną czasu właściciela przy 50 narzędziach,sesje / mies.,7566900,611800,82700,wynik,(koszty stałe + utrzymanie × stawka) / przychód na sesję
+breakeven,Próg rentowności gotówkowej przy 5 narzędziach z amortyzacją gotówki uruchomienia w 24 mies.,sesje / mies.,1839400,150900,22800,wynik,(koszty stałe + gotówka uruchomienia/24) / przychód na sesję
+breakeven,Próg rentowności gotówkowej przy 15 narzędziach z amortyzacją gotówki uruchomienia w 24 mies.,sesje / mies.,2655300,200700,27800,wynik,(koszty stałe + gotówka uruchomienia/24) / przychód na sesję
+unit_economics,Koszt budowy jednego nowego narzędzia: gotówka (ekspert),USD,4500,2450,1375,wynik,expert_hours_new_tool × expert_hourly
+unit_economics,Koszt budowy jednego nowego narzędzia: czas właściciela (wycena),USD,2650,1800,1110,wynik,owner_hours_new_tool × owner_hourly_value
+unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie),sesje / narzędzie / mies.,265200,22400,3200,wynik,"porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"
+unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.,sesje / narzędzie / mies.,373300,35200,5400,wynik,reguła dodawania narzędzi w §4.3 architecture-and-validation.md opiera się na tym progu
 operating_profit,Zysk operacyjny gotówkowy przy 1000 USD przychodu i 25 narzędziach,USD / mies.,-1545,69,608,wynik,przychód - koszty stałe (25 narzędzi)
-operating_profit,Zysk po wycenie czasu właściciela przy 1000 USD i 25 narzędziach,USD / mies.,-3045,-731,248,wynik,j.w. - czas właściciela
+operating_profit,Marża operacyjna gotówkowa przy 1000 USD i 25 narzędziach,%,-155,7,61,wynik,zysk gotówkowy / przychód
+operating_profit,Zysk po wycenie czasu właściciela przy 1000 USD i 25 narzędziach,USD / mies.,-3395,-1051,-22,wynik,j.w. - utrzymanie × stawka właściciela
 operating_profit,Zysk operacyjny gotówkowy przy 3000 USD przychodu i 25 narzędziach,USD / mies.,455,2069,2608,wynik,przychód - koszty stałe (25 narzędzi)
-operating_profit,Zysk po wycenie czasu właściciela przy 3000 USD i 25 narzędziach,USD / mies.,-1045,1269,2248,wynik,j.w. - czas właściciela
+operating_profit,Marża operacyjna gotówkowa przy 3000 USD i 25 narzędziach,%,15,69,87,wynik,zysk gotówkowy / przychód
+operating_profit,Zysk po wycenie czasu właściciela przy 3000 USD i 25 narzędziach,USD / mies.,-1395,949,1978,wynik,j.w. - utrzymanie × stawka właściciela
 operating_profit,Zysk operacyjny gotówkowy przy 10000 USD przychodu i 25 narzędziach,USD / mies.,7455,9069,9608,wynik,przychód - koszty stałe (25 narzędzi)
-operating_profit,Zysk po wycenie czasu właściciela przy 10000 USD i 25 narzędziach,USD / mies.,5955,8269,9248,wynik,j.w. - czas właściciela
-launch,Gotówkowy koszt uruchomienia 5 symulatorów (prawo + eksperci + 3 mies. kosztów stałych),USD,26640.0,13020.0,6380.0,wynik,jednorazowe
-launch,Czas właściciela na uruchomienie silnika + 5 symulatorów,h,520,315,190,wynik,silnik + 5 × narzędzie
-launch,Wycena czasu uruchomienia,USD,26000,12600,5700,wynik,h × stawka właściciela
-illustration_m12,ILUSTRACJA: łączne sesje/mies. w mies. 12 (rozkład Zipfa między narzędziami z ruchem),sesje / mies.,4300,34200,206600,ilustracja,suma top/r^s dla narzędzi z ruchem; NIE jest prognozą
-illustration_m12,ILUSTRACJA: przychód reklamowy/mies. w mies. 12,USD / mies.,8,240,4627,ilustracja,sesje × przychód na sesję
-illustration_m12,ILUSTRACJA: narzędzia z ruchem / bez istotnego ruchu,szt.,2 / 8,5 / 10,12 / 13,ilustracja,share_tools_with_traffic
-illustration_m12,ILUSTRACJA: wynik gotówkowy/mies. w mies. 12,USD / mies.,-1287,-399,4235,ilustracja,przychód - koszty stałe
-illustration_m12,ILUSTRACJA: wynik po wycenie czasu właściciela w mies. 12,USD / mies.,-2787,-1199,3875,ilustracja,j.w. - czas właściciela
-addon_separate,DODATEK (poza modelem bazowym): udział sesji kończących się kwalifikowaną konwersją u partnera (lead/wniosek),ułamek,0.002,0.005,0.01,założenie,ZAŁOŻENIE; nie ratuje modelu bazowego; wymaga zgód (TCPA - niezbadane) i neutralności rekomendacji
+operating_profit,Marża operacyjna gotówkowa przy 10000 USD i 25 narzędziach,%,75,91,96,wynik,zysk gotówkowy / przychód
+operating_profit,Zysk po wycenie czasu właściciela przy 10000 USD i 25 narzędziach,USD / mies.,5605,7949,8978,wynik,j.w. - utrzymanie × stawka właściciela
+launch,Gotówkowy koszt uruchomienia 5 symulatorów (prawo/CMP + eksperci),USD,24000,12850,7080,wynik,jednorazowe; przy finansowaniu etapowym wydatek na produkty 2-5 następuje dopiero po ich bramkach
+launch,"Gotówkowy koszt testu opcji: silnik minimalny + 1 symulator (RENO-02), z 3 mies. kosztów stałych",USD,7640,3740,2000,wynik,prawo/CMP + ekspert RENO-02 + 3 mies. kosztów stałych
+launch,Czas właściciela na test opcji: silnik + 1 symulator (RENO-02),h,273,200,127,wynik,owner_hours_engine + owner_hours_new_tool
+launch,Czas właściciela na uruchomienie silnika + 5 symulatorów,h,485,380,275,wynik,silnik + 5 × narzędzie
+launch,Wycena czasu uruchomienia,USD,24250,15200,8250,wynik,h × stawka właściciela
+trajectory,ILUSTRACJA: żywe narzędzia w mies. 6,szt.,0,4,10,ilustracja,harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)
+trajectory,ILUSTRACJA: sesje/mies. w mies. 6,sesje / mies.,0,3100,44300,ilustracja,Zipf × rampa; NIE prognoza
+trajectory,ILUSTRACJA: przychód reklamowy w mies. 6,USD / mies.,0,18,904,ilustracja,sesje × przychód na sesję × sezonowość (mies. 1 = styczeń)
+trajectory,ILUSTRACJA: wynik gotówkowy w mies. 6 (z kosztem ekspertów nowych narzędzi),USD / mies.,-462,-2750,-2082,ilustracja,przychód - koszty stałe - gotówka na ekspertów narzędzi uruchomionych w tym miesiącu
+trajectory,ILUSTRACJA: żywe narzędzia w mies. 12,szt.,4,12,23,ilustracja,harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)
+trajectory,ILUSTRACJA: sesje/mies. w mies. 12,sesje / mies.,1200,16700,154400,ilustracja,Zipf × rampa; NIE prognoza
+trajectory,ILUSTRACJA: przychód reklamowy w mies. 12,USD / mies.,2,132,4387,ilustracja,sesje × przychód na sesję × sezonowość (mies. 1 = styczeń)
+trajectory,ILUSTRACJA: wynik gotówkowy w mies. 12 (z kosztem ekspertów nowych narzędzi),USD / mies.,-794,-2869,1266,ilustracja,przychód - koszty stałe - gotówka na ekspertów narzędzi uruchomionych w tym miesiącu
+trajectory,ILUSTRACJA: żywe narzędzia w mies. 24,szt.,5,15,30,ilustracja,harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)
+trajectory,ILUSTRACJA: sesje/mies. w mies. 24,sesje / mies.,3000,36300,223400,ilustracja,Zipf × rampa; NIE prognoza
+trajectory,ILUSTRACJA: przychód reklamowy w mies. 24,USD / mies.,4,288,6349,ilustracja,sesje × przychód na sesję × sezonowość (mies. 1 = styczeń)
+trajectory,ILUSTRACJA: wynik gotówkowy w mies. 24 (z kosztem ekspertów nowych narzędzi),USD / mies.,-875,-351,5905,ilustracja,przychód - koszty stałe - gotówka na ekspertów narzędzi uruchomionych w tym miesiącu
+trajectory,ILUSTRACJA: żywe narzędzia w mies. 36,szt.,5,15,30,ilustracja,harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)
+trajectory,ILUSTRACJA: sesje/mies. w mies. 36,sesje / mies.,3000,36800,223400,ilustracja,Zipf × rampa; NIE prognoza
+trajectory,ILUSTRACJA: przychód reklamowy w mies. 36,USD / mies.,4,292,6349,ilustracja,sesje × przychód na sesję × sezonowość (mies. 1 = styczeń)
+trajectory,ILUSTRACJA: wynik gotówkowy w mies. 36 (z kosztem ekspertów nowych narzędzi),USD / mies.,-875,-347,5905,ilustracja,przychód - koszty stałe - gotówka na ekspertów narzędzi uruchomionych w tym miesiącu
+trajectory,ILUSTRACJA: skumulowany wynik gotówkowy po 12 mies.,USD,-26300,-33700,-17600,ilustracja,suma miesięcy
+trajectory,ILUSTRACJA: skumulowany wynik z wyceną czasu właściciela po 12 mies.,USD,-58200,-68300,-50900,ilustracja,suma miesięcy; czas budowy i utrzymania × stawka
+trajectory,ILUSTRACJA: skumulowany wynik gotówkowy po 24 mies.,USD,-41300,-46500,19600,ilustracja,suma miesięcy
+trajectory,ILUSTRACJA: skumulowany wynik z wyceną czasu właściciela po 24 mies.,USD,-83700,-95000,-29500,ilustracja,suma miesięcy; czas budowy i utrzymania × stawka
+trajectory,ILUSTRACJA: skumulowany wynik gotówkowy po 36 mies.,USD,-51800,-51600,70500,ilustracja,suma miesięcy
+trajectory,ILUSTRACJA: skumulowany wynik z wyceną czasu właściciela po 36 mies.,USD,-104400,-109700,12700,ilustracja,suma miesięcy; czas budowy i utrzymania × stawka
+trajectory,ILUSTRACJA: maksymalne skumulowane zaangażowanie (gotówka),USD,-51800,-51600,-19200,ilustracja,najniższy punkt skumulowanego wyniku w 36 mies.
+trajectory,ILUSTRACJA: miesiąc zwrotu (gotówka); 0 = brak zwrotu w 36 mies.,mies.,0,0,21,ilustracja,"pierwszy miesiąc, w którym skumulowany wynik ≥ 0"
+trajectory,ILUSTRACJA: maksymalne skumulowane zaangażowanie (gotówka + czas właściciela),USD,-104400,-109700,-61500,ilustracja,najniższy punkt skumulowanego wyniku w 36 mies.
+trajectory,ILUSTRACJA: miesiąc zwrotu (gotówka + czas właściciela); 0 = brak zwrotu w 36 mies.,mies.,0,0,34,ilustracja,"pierwszy miesiąc, w którym skumulowany wynik ≥ 0"
+addon_separate,DODATEK (poza modelem bazowym): udział sesji kończących się kwalifikowaną konwersją u partnera (lead/wniosek),ułamek,0.002,0.005,0.01,założenie,ZAŁOŻENIE bez źródła; poza bazą z powodu ograniczenia właściciela
 addon_separate,DODATEK: wypłata dla wydawcy za konwersję (po marży sieci),USD,10,25,50,założenie,"ZAŁOŻENIE; ceny płacone przez kupujących leady: solar 25-250, ubezp. auto 8-80, home 6-18, refi 40-200 USD (E-ADS-33); wydawca dostaje mniej"
-addon_separate,DODATEK: przychód z lead-gen/afiliacji na 1000 sesji,USD / 1000 sesji,20.0,125.0,500.0,wynik,"udział × wypłata × 1000; ILUSTRACJA rzędu wielkości: nawet ostrożny lead-gen może przewyższyć display - potwierdza to model biznesowy NerdWallet/SmartAsset (E-POR2-06, E-POR2-07)"
+addon_separate,DODATEK: przychód z lead-gen/afiliacji na 1000 sesji (hipoteza),USD / 1000 sesji,20.0,125.0,500.0,hipoteza,"udział × wypłata × 1000; wynik własnych założeń. Niezależnie od tego NerdWallet i SmartAsset raportują przychody głównie z partnerów i leadów (E-POR2-06, E-POR2-07)"
+addon_separate,"DODATEK: próg rentowności gotówkowej przy 5 narzędziach, gdyby dodać lead-gen",sesje / mies.,41800,2700,400,hipoteza,"poza modelem bazowym z powodu ograniczenia właściciela; liczbowo zmienia ekonomikę, ale wymaga zgód (TCPA) i rodzi konflikt z neutralnością"

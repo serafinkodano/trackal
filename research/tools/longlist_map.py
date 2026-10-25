@@ -18,9 +18,8 @@ FAM = {
 MAP = [
     # FIN
     ('FIN-01', 'FIN', 'family_G1:G1-01', [], None, ''),
-    ('FIN-02', 'FIN', 'family_G1:G1-02', [], None, ''),
+    ('FIN-02', 'FIN', 'family_G1:G1-02', ['family_G5:G5-10', 'topup_T-S4:T-S4-R1'], None, 'Po recenzji scalono CARE-02 (finansowanie aging in place: HECM/HELOC/downsizing) jako preset 62+.'),
     ('FIN-03', 'FIN', 'family_G1:G1-03', [], 'odrzucić', 'Oficjalny StudentAid.gov Loan Simulator jako konkurent bezpośredni + wysoka zmienność reguł 2026-2028.'),
-    ('FIN-04', 'FIN', 'family_G1:G1-04', [], None, ''),
     ('FIN-05', 'FIN', 'family_G1:G1-05', [], None, ''),
     ('FIN-06', 'FIN', 'family_G1:G1-06', [], None, ''),
     ('FIN-07', 'FIN', 'family_G1:G1-07', [], None, ''),
@@ -29,11 +28,10 @@ MAP = [
     # INS
     ('INS-01', 'INS', 'family_G1:G1-10', ['seed_S2:S2-R2'], None, 'Połączono z zamiennikiem seeda B (S2-R2).'),
     ('INS-02', 'INS', 'family_G1:G1-11', ['family_G1:G1-13'], None, 'Seed B w wersji ogólnej; wchłania „Emergency Fund Sizing” (G1-13) jako moduł rezerwy.'),
-    ('INS-03', 'INS', 'family_G1:G1-12', ['seed_S2:S2-R1'], None, 'Połączono z zamiennikiem seeda B (S2-R1, renewal shock).'),
+    ('INS-03', 'INS', 'family_G1:G1-12', ['seed_S2:S2-R1', 'family_G7:G7-08'], None, 'Połączono z zamiennikiem seeda B (S2-R1, renewal shock). Po recenzji scalono INS-07 (Kalifornia, FAIR Plan, wildfire) jako preset stanowy.'),
     ('INS-04', 'INS', 'seed_S2:S2-R3', ['topup_T-S2:T-S2-R2'], None, 'Zamiennik seeda C (powódź + NFIP + sprzedaż); wejście przez szok przy odnowieniu polisy (T-S2-R2).'),
     ('INS-05', 'INS', 'seed_S2:S2-R4', ['topup_T-S2:T-S2-R3'], None, 'Wariant po zdarzeniu (seed C).'),
     ('INS-06', 'INS', 'seed_S1:S2-R2', ['topup_T-S1:T-S2-R1'], None, 'Zamiennik seeda F (piwnica/pompa).'),
-    ('INS-07', 'INS', 'family_G7:G7-08', [], None, ''),
     ('INS-08', 'INS', 'family_G1:G1-16', [], None, ''),
     ('INS-09', 'INS', 'family_G7:G7-09', [], None, ''),
     ('INS-10', 'INS', 'family_G2:G2-15', [], None, ''),
@@ -80,14 +78,13 @@ MAP = [
     ('JOB-07', 'JOB', 'family_G4:G4-08', [], None, ''),
     ('JOB-08', 'JOB', 'family_G4:G4-09', [], None, ''),
     ('JOB-09', 'JOB', 'family_G4:G4-10', [], None, ''),
-    ('JOB-10', 'JOB', 'family_G7:G7-13', [], None, ''),
     ('JOB-11', 'JOB', 'family_G7:G7-11', [], None, ''),
     # RET
     ('RET-01', 'RET', 'family_G4:G4-11', [], None, ''),
     ('RET-02', 'RET', 'family_G4:G4-12', [], None, ''),
     ('RET-03', 'RET', 'family_G7:G7-02', ['family_G4:G4-13', 'family_G1:G1-14'], None, 'Połączono trzy ujęcia klifu ACA/MAGI (wcześniejsza emerytura, samozatrudnieni).'),
     ('RET-04', 'RET', 'family_G4:G4-14', [], None, ''),
-    ('RET-05', 'RET', 'family_G4:G4-15', ['family_G2:G2-09', 'topup_T-S4:T-S4-R3'], None, 'HECM for Purchase jako wariant.'),
+    ('RET-05', 'RET', 'family_G4:G4-15', ['family_G2:G2-09', 'topup_T-S4:T-S4-R3', 'family_G7:G7-13'], None, 'HECM for Purchase jako wariant. Po recenzji scalono JOB-10 (relokacja międzystanowa): para stanów to parametr, nie odrębny produkt.'),
     ('RET-06', 'RET', 'family_G4:G4-16', ['family_G7:G7-04'], None, ''),
     # RENT
     ('RENT-01', 'RENT', 'seed_S4:S4-R3', ['family_G5:G5-02'], None, 'Seed H przeformułowany na plan wyjścia (sprzedaż / 1031 / step-up / sprzedaż ratalna) z modułem capex.'),
@@ -98,7 +95,6 @@ MAP = [
     ('RENT-06', 'RENT', 'family_G5:G5-08', [], None, ''),
     # CARE
     ('CARE-01', 'CARE', 'family_G5:G5-09', [], None, 'Seed G w postaci zmodyfikowanej.'),
-    ('CARE-02', 'CARE', 'family_G5:G5-10', ['topup_T-S4:T-S4-R1'], None, ''),
     ('CARE-03', 'CARE', 'family_G5:G5-11', ['topup_T-S4:T-S4-R2'], None, ''),
     ('CARE-04', 'CARE', 'family_G5:G5-12', ['seed_S4:S4-R1'], None, ''),
     ('CARE-05', 'CARE', 'family_G5:G5-13', [], None, ''),
@@ -130,6 +126,6 @@ MAP = [
     ('LIFE-01', 'LIFE', 'family_G7:G7-05', ['family_G5:G5-05', 'family_G2:G2-10'], None, ''),
     ('LIFE-02', 'LIFE', 'family_G7:G7-06', [], None, ''),
     ('LIFE-03', 'LIFE', 'family_G7:G7-12', [], None, ''),
-    ('LIFE-04', 'LIFE', 'family_G7:G7-14', [], None, ''),
+    ('LIFE-04', 'LIFE', 'family_G7:G7-14', ['family_G1:G1-04'], None, 'Po recenzji scalono FIN-04 (luka finansowania studiów magisterskich po 2026) - ta sama decyzja finansowania studiów przy nowych limitach.'),
     ('LIFE-05', 'LIFE', 'family_G7:G7-16', [], None, ''),
 ]

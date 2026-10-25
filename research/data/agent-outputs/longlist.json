@@ -138,6 +138,78 @@
     "features_claimed": "Według search-summary: porównanie opłat, limitów i częściowych wykupów.",
     "paid": "bezpłatne",
     "notes": "Serwis afiliacyjny."
+   },
+   {
+    "name": "NRMLA reverse mortgage calculator and lender calculators (np. Finance of America, Longbridge, Mutual of Omaha Mortgage – niezweryfikowane)",
+    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
+    "type": "partial",
+    "features_claimed": "Szacunek dostępnego principal limit HECM (wiedza modelu)",
+    "notes": "Lead-gen; porównania z HELOC i downsizingiem niezweryfikowane",
+    "paid": "free"
+   },
+   {
+    "name": "Bank HELOC calculators",
+    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
+    "type": "partial",
+    "features_claimed": "Limit i rata HELOC (wiedza modelu)",
+    "notes": "",
+    "paid": "free"
+   },
+   {
+    "name": "HUD-approved HECM counselors / financial advisors",
+    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
+    "type": "substitute",
+    "features_claimed": "Obowiązkowe poradnictwo przed HECM, porównanie opcji (wiedza modelu)",
+    "notes": "",
+    "paid": "zwykle niski koszt lub bezpłatne"
+   },
+   {
+    "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+    "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+    "type": "partial",
+    "features_claimed": "Break-even z godzinami opieki, kosztem adaptacji i redukcją pracy rodziny.",
+    "notes": "Finansowanie i wyczerpanie aktywów niezweryfikowane.",
+    "paid": "darmowy"
+   },
+   {
+    "name": "SeniorCareCalc",
+    "url": "https://seniorcarecalc.org/",
+    "type": "partial",
+    "features_claimed": "Punkt przecięcia w godzinach, mediany CareScout 2025 wg stanów.",
+    "notes": "Bez finansowania (niezweryfikowane).",
+    "paid": "darmowy"
+   },
+   {
+    "name": "ParentCareCalc",
+    "url": "https://parentcarecalc.com/",
+    "type": "partial",
+    "features_claimed": "Uwzględnia nieodpłatną opiekę rodzinną, dane wg stanów.",
+    "notes": "",
+    "paid": "darmowy"
+   },
+   {
+    "name": "PayingForSeniorCare – Affordability Calculator",
+    "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+    "type": "partial",
+    "features_claimed": "Przystępność home care vs assisted living.",
+    "notes": "",
+    "paid": "darmowy"
+   },
+   {
+    "name": "MyLifeSite – projekcje CCRC dla doradców",
+    "url": "https://mylifesite.net/blog/post/overview-of-senior-living-cost-calculators-for-consumers",
+    "type": "substitute",
+    "features_claimed": "Szczegółowe projekcje finansowe dla personelu CCRC i planistów.",
+    "notes": "Dostęp konsumencki niezweryfikowany.",
+    "paid": "niezweryfikowane"
+   },
+   {
+    "name": "NRMLA reverse mortgage calculator (via NCOA)",
+    "url": "https://www.ncoa.org/article/a-guide-to-reverse-mortgages-for-older-adults/",
+    "type": "partial",
+    "features_claimed": "Szacunek kosztów i kwoty z HECM.",
+    "notes": "Nie modeluje decyzji zostać czy się przenieść.",
+    "paid": "darmowy"
    }
   ],
   "already_solved": "Wybór dostawcy HEI i koszt przy wyjściu rozwiązuje heireview.com (na podstawie deklaracji). Porównania HEI vs HELOC z przykładami liczbowymi są w wielu artykułach (walletgrower, banksdoneright, homeequity101, financebuzz, mortgage-info).",
@@ -157,9 +229,11 @@
   "family_code": "FIN",
   "family_pl": "Finansowanie i zadłużenie",
   "merged_from": [
-   "family_G1:G1-02"
+   "family_G1:G1-02",
+   "family_G5:G5-10",
+   "topup_T-S4:T-S4-R1"
   ],
-  "merge_note": ""
+  "merge_note": "Po recenzji scalono CARE-02 (finansowanie aging in place: HECM/HELOC/downsizing) jako preset 62+."
  },
  {
   "temp_id": "G1-03",
@@ -245,67 +319,6 @@
    "family_G1:G1-03"
   ],
   "merge_note": "Oficjalny StudentAid.gov Loan Simulator jako konkurent bezpośredni + wysoka zmienność reguł 2026-2028."
- },
- {
-  "temp_id": "G1-04",
-  "name_en": "Grad School Funding Gap Simulator (post-Grad PLUS era: federal caps vs private loans vs employer aid vs deferral)",
-  "family": "Finansowanie i dług",
-  "user_and_moment": "Kandydat na studia magisterskie lub zawodowe (MBA, prawo, medycyna, pielęgniarstwo) na rok 2027/28, któremu nowe limity federalne nie pokrywają kosztu. Moment: list przyjęcia i pakiet finansowy (kalendarz to hipoteza).",
-  "sample_prompt_en": "Grad PLUS is gone for new borrowers. My MBA costs $160k and federal loans only cover part of it. Should I take private loans with a cosigner, go part-time while working, or defer a year and save? What salary do I need for it to pay off?",
-  "decision_problem": "Jak sfinansować lukę i czy program ma sens finansowy przy nowych limitach i nowym planie spłaty.",
-  "combined_domains": "Limity pożyczek federalnych od 1.07.2026 (dokładne kwoty i likwidacja Grad PLUS to hipoteza / niezweryfikowane w sesji; potwierdzone tylko, że nowi kredytobiorcy mają wyłącznie Tiered Standard lub RAP). Do tego: pożyczki prywatne (scoring, cosigner, stopa stała lub zmienna), dochód utracony w trakcie studiów vs studia part-time, tuition assistance od pracodawcy (limit zwolnienia podatkowego do weryfikacji), opłacalność (wymagany wzrost pensji), spłata części federalnej w RAP.",
-  "variants_compared": "Kredyt federalny plus prywatny; part-time z pracą; odroczenie o rok i oszczędzanie; tańszy program; sponsoring pracodawcy z obowiązkiem odpracowania.",
-  "key_dependencies": "Wysokość luki, stopy prywatne (zależne od scoringu cosignera), wzrost pensji po studiach, czas trwania programu, RAP (procent AGI), ryzyko nieukończenia.",
-  "main_outputs": "Łączny koszt finansowania każdego wariantu, rata na tle dochodu po studiach, wzrost pensji potrzebny do zwrotu, NPV programu, wrażliwość na stopę i pensję.",
-  "reason_external_site": "Reguły są nowe i modele mogą ich nie znać. Narzędzie łączy kilka źródeł finansowania z rachunkiem opłacalności. Asystent policzy przybliżenie, ale reguły federalne wymagają aktualnych danych.",
-  "data_sources": "Przepisy ED (limity, RAP); koszty programów (IPEDS, College Scorecard – hipoteza); wynagrodzenia (BLS OES – hipoteza); stopy prywatne jako wejście użytkownika.",
-  "user_data": "Koszt programu, oszczędności, obecna i oczekiwana pensja, scoring lub cosigner, długość programu.",
-  "nearest_competition": [
-   {
-    "name": "Kalkulatory prywatnych kredytów studenckich lenderów (np. SoFi, Sallie Mae)",
-    "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
-    "type": "partial",
-    "features_claimed": "Hipoteza / niezweryfikowane: rata i koszt kredytu prywatnego.",
-    "paid": "bezpłatne",
-    "notes": "Stronnicze."
-   },
-   {
-    "name": "College Scorecard / narzędzia opłacalności studiów",
-    "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
-    "type": "partial",
-    "features_claimed": "Hipoteza: koszty i zarobki absolwentów.",
-    "paid": "bezpłatne",
-    "notes": "Bez modelu finansowania (hipoteza)."
-   },
-   {
-    "name": "Asystent AI",
-    "url": "brak URL – kategoria substytutu",
-    "type": "substitute",
-    "features_claimed": "Hipoteza: przybliżony rachunek opłacalności w czacie.",
-    "paid": "freemium",
-    "notes": "Ryzyko nieaktualnych reguł."
-   }
-  ],
-  "already_solved": "Hipoteza: fragmenty rozwiązują kalkulatory pożyczek prywatnych lenderów i narzędzia opłacalności uczelni. W sesji tego nie zbadano.",
-  "gap": "Hipoteza / niezweryfikowane: wyszukiwania konkurencji nie wykonano, więc nie można wnioskować o luce.",
-  "impl_difficulty": "medium",
-  "maintenance_burden": "medium",
-  "content_risk": "medium",
-  "demand_evidence": "Pośrednie: od 1.07.2026 nowi kredytobiorcy mają tylko Tiered Standard lub RAP, a Parent PLUS nie kwalifikuje się do RAP (search-summary: sofi.com, qz.com). To zmiana systemowa. Likwidacja Grad PLUS i limity kwot to hipoteza z wiedzy modelu (ustawa z 2025), wymaga weryfikacji. Liczba dotkniętych osób niezweryfikowana.",
-  "ad_environment": "Lenderzy prywatnych kredytów studenckich, programy studiów online. Temat o wysokiej wartości (hipoteza).",
-  "ai_self_solve_risk": "medium",
-  "confidence": "low",
-  "status": "zbadać",
-  "status_reason": "Nowe zdarzenie decyzyjne, powtarzające się co rok, z silnym komponentem komercyjnym; łączy finansowanie z rachunkiem opłacalności. Wymaga weryfikacji reguł i konkurencji (lenderzy mają mocne narzędzia).",
-  "verification_level": "koncepcyjny",
-  "_src": "family_G1",
-  "final_id": "FIN-04",
-  "family_code": "FIN",
-  "family_pl": "Finansowanie i zadłużenie",
-  "merged_from": [
-   "family_G1:G1-04"
-  ],
-  "merge_note": ""
  },
  {
   "temp_id": "G1-05",
@@ -804,6 +817,27 @@
     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
     "type": "partial",
     "features_claimed": "Break-even zmiany deductible (search-summary)."
+   },
+   {
+    "name": "California Department of Insurance – Safer from Wildfires (informacje)",
+    "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+    "type": "substitute",
+    "features_claimed": "Wiedza modelu: lista działań kwalifikujących do rabatów; brak modelu payback (niezweryfikowane).",
+    "paid": "darmowe"
+   },
+   {
+    "name": "Brokerzy ubezpieczeniowi w Kalifornii",
+    "url": "n/d",
+    "type": "substitute",
+    "features_claimed": "Indywidualne oferty.",
+    "paid": "prowizja"
+   },
+   {
+    "name": "Asystenci AI",
+    "url": "n/d",
+    "type": "substitute",
+    "features_claimed": "Ogólne zasady (hipoteza).",
+    "paid": "darmowe/płatne"
    }
   ],
   "already_solved": "Hipoteza: rozproszone źródła informacji i agenci. Nie zweryfikowano.",
@@ -824,9 +858,10 @@
   "family_pl": "Ubezpieczenia, udziały własne, rezerwy i katastrofy",
   "merged_from": [
    "family_G1:G1-12",
-   "seed_S2:S2-R1"
+   "seed_S2:S2-R1",
+   "family_G7:G7-08"
   ],
-  "merge_note": "Połączono z zamiennikiem seeda B (S2-R1, renewal shock)."
+  "merge_note": "Połączono z zamiennikiem seeda B (S2-R1, renewal shock). Po recenzji scalono INS-07 (Kalifornia, FAIR Plan, wildfire) jako preset stanowy."
  },
  {
   "temp_id": "S2-R3",
@@ -1027,64 +1062,6 @@
    "topup_T-S1:T-S2-R1"
   ],
   "merge_note": "Zamiennik seeda F (piwnica/pompa)."
- },
- {
-  "temp_id": "G7-08",
-  "name_en": "Wildfire Hardening vs Insurance Path Simulator (California FAIR Plan exit)",
-  "family": "Disaster hardening & catastrophe insurance (FORTIFIED roof, wind mitigation, wildfire, flood)",
-  "user_and_moment": "Właściciel domu w strefie WUI w Kalifornii, po odmowie odnowienia, na FAIR Plan + DIC, który rozważa hardening, żeby wrócić do ubezpieczyciela dopuszczonego.",
-  "sample_prompt_en": "My insurer dropped me and I'm on the California FAIR Plan. If I do ember-resistant vents, a Class A roof and Zone 0 clearing, can I get back to a regular insurer and does it pay off?",
-  "decision_problem": "Pakiet hardeningu (Zone 0, otwory wentylacyjne, dach, okna) wobec pozostania na FAIR Plan + DIC, zmiany ubezpieczyciela lub sprzedaży domu.",
-  "combined_domains": "Koszty hardeningu, rabaty (Safer from Wildfires — wiedza modelu, niezweryfikowane), dostępność ubezpieczycieli, składki FAIR + DIC, ryzyko szkody, wartość domu.",
-  "variants_compared": "(A) brak zmian, FAIR + DIC; (B) minimalny pakiet; (C) pełny pakiet i próba powrotu do ubezpieczyciela; (D) sprzedaż.",
-  "key_dependencies": "Zachowanie ubezpieczycieli (wiedza modelu: reformy rynku w Kalifornii — niezweryfikowane), których nie da się wiarygodnie zamodelować; lokalne ryzyko pożarowe.",
-  "main_outputs": "Koszt pakietu, różnica składek przy założonej akceptacji, payback, wrażliwość na prawdopodobieństwo powrotu do rynku.",
-  "reason_external_site": "Lokalne i zmienne dane. Model byłby zbyt zależny od założeń o akceptacji przez ubezpieczyciela.",
-  "data_sources": "California Department of Insurance, FAIR Plan, wyceny wykonawców — wiedza modelu, niezweryfikowane.",
-  "user_data": "Lokalizacja, składki, wyceny prac, oferta ubezpieczyciela.",
-  "nearest_competition": [
-   {
-    "name": "California Department of Insurance – Safer from Wildfires (informacje)",
-    "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
-    "type": "substitute",
-    "features_claimed": "Wiedza modelu: lista działań kwalifikujących do rabatów; brak modelu payback (niezweryfikowane).",
-    "paid": "darmowe"
-   },
-   {
-    "name": "Brokerzy ubezpieczeniowi w Kalifornii",
-    "url": "n/d",
-    "type": "substitute",
-    "features_claimed": "Indywidualne oferty.",
-    "paid": "prowizja"
-   },
-   {
-    "name": "Asystenci AI",
-    "url": "n/d",
-    "type": "substitute",
-    "features_claimed": "Ogólne zasady (hipoteza).",
-    "paid": "darmowe/płatne"
-   }
-  ],
-  "already_solved": "Hipoteza: informacje regulacyjne są dostępne; modelu nie zweryfikowano.",
-  "gap": "Hipoteza: payback hardeningu z ryzykiem dostępności ubezpieczenia. Kluczowa zmienna (akceptacja przez ubezpieczyciela) nie jest modelowalna z danych publicznych.",
-  "impl_difficulty": "high",
-  "maintenance_burden": "high",
-  "content_risk": "high",
-  "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
-  "ad_environment": "Wykonawcy, ubezpieczenia (hipoteza).",
-  "ai_self_solve_risk": "medium",
-  "confidence": "low",
-  "status": "później",
-  "status_reason": "Duża zmienność regulacyjna, jeden stan, wynik zależny od zmiennej spoza modelu (akceptacja ubezpieczyciela), wysoki koszt utrzymania. Wrócić po uruchomieniu wspólnego silnika home capex (G7-07).",
-  "verification_level": "koncepcyjny",
-  "_src": "family_G7",
-  "final_id": "INS-07",
-  "family_code": "INS",
-  "family_pl": "Ubezpieczenia, udziały własne, rezerwy i katastrofy",
-  "merged_from": [
-   "family_G7:G7-08"
-  ],
-  "merge_note": ""
  },
  {
   "temp_id": "G1-16",
@@ -4259,57 +4236,6 @@
   "merge_note": ""
  },
  {
-  "temp_id": "G7-13",
-  "name_en": "Multi-State Relocation Tax, Housing & Insurance Simulator",
-  "family": "Interstate relocation for taxes & cost of living",
-  "user_and_moment": "Emeryt lub pracownik zdalny rozważający przeprowadzkę do 2–4 stanów (np. z NJ do FL, NC lub TN), w fazie planowania na 6–18 miesięcy przed decyzją.",
-  "sample_prompt_en": "We're retiring next year with pensions and Social Security. Would moving from New Jersey to Florida or North Carolina actually save us money once you count property taxes, home insurance and selling costs?",
-  "decision_problem": "Pozostanie w stanie obecnym lub przeprowadzka do jednego z 2–3 stanów, z timingiem sprzedaży i zakupu domu oraz rokiem przejściowym rezydencji.",
-  "combined_domains": "Podatki stanowe według typu dochodu (SS, emerytury, zyski), podatek od nieruchomości, ubezpieczenie domu (rosnące w FL i LA — hipoteza), sales tax, koszty transakcyjne, koszty życia, stanowy podatek od spadków.",
-  "variants_compared": "(A) zostać; (B) stan X; (C) stan Y; z wariantem wynajmu przed zakupem.",
-  "key_dependencies": "Mix dochodów, wartość domu, koszty ubezpieczeń, reguły rezydencji.",
-  "main_outputs": "Różnica kosztów w ciągu 10 lat z kosztami przeprowadzki, break-even, wrażliwość na ubezpieczenie i ceny domów.",
-  "reason_external_site": "Model wieloletni; asystent chętnie da szacunek ogólny.",
-  "data_sources": "Podatki 50 stanów i lokalne, podatki od nieruchomości per hrabstwo, koszty ubezpieczeń i życia — bardzo kosztowne w utrzymaniu.",
-  "user_data": "Dochody według typu, wartość domu, budżet na nowy dom, stany do porównania.",
-  "nearest_competition": [
-   {
-    "name": "SmartAsset / NerdWallet – kalkulatory kosztów życia i podatków stanowych",
-    "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
-    "type": "partial",
-    "features_claimed": "Wiedza modelu: porównanie kosztów życia i podatków między lokalizacjami; integracja kosztów transakcyjnych i ubezpieczeń niezweryfikowana.",
-    "paid": "darmowe"
-   },
-   {
-    "name": "Asystenci AI",
-    "url": "n/d",
-    "type": "substitute",
-    "features_claimed": "Szacunkowe porównanie stanów (hipoteza).",
-    "paid": "darmowe/płatne"
-   }
-  ],
-  "already_solved": "Hipoteza: porównania kosztów życia i podatków stanowych są powszechne.",
-  "gap": "Hipoteza: integracja typu dochodu, ubezpieczeń domu, kosztów transakcyjnych i roku przejściowego. Niezweryfikowane.",
-  "impl_difficulty": "high",
-  "maintenance_burden": "high",
-  "content_risk": "medium",
-  "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
-  "ad_environment": "Przeprowadzki, nieruchomości, kredyt hipoteczny, ubezpieczenia (hipoteza).",
-  "ai_self_solve_risk": "medium",
-  "confidence": "low",
-  "status": "później",
-  "status_reason": "Gęsta konkurencja częściowa i najwyższy koszt danych. Pary stanów to cienkie warianty, nie odrębne produkty.",
-  "verification_level": "koncepcyjny",
-  "_src": "family_G7",
-  "final_id": "JOB-10",
-  "family_code": "JOB",
-  "family_pl": "Praca, relokacja, świadczenia, samozatrudnienie",
-  "merged_from": [
-   "family_G7:G7-13"
-  ],
-  "merge_note": ""
- },
- {
   "temp_id": "G7-11",
   "name_en": "Freelancer Entity, Retirement & Health Stack Optimizer",
   "family": "Freelancer / 1099 entity, retirement account & health coverage stack",
@@ -4814,6 +4740,20 @@
     "features_claimed": "Mogą modelować sprzedaż domu, podatki i IRMAA.",
     "notes": "Do sprawdzenia przed decyzją.",
     "paid": "płatne (hipoteza)"
+   },
+   {
+    "name": "SmartAsset / NerdWallet – kalkulatory kosztów życia i podatków stanowych",
+    "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+    "type": "partial",
+    "features_claimed": "Wiedza modelu: porównanie kosztów życia i podatków między lokalizacjami; integracja kosztów transakcyjnych i ubezpieczeń niezweryfikowana.",
+    "paid": "darmowe"
+   },
+   {
+    "name": "Asystenci AI",
+    "url": "n/d",
+    "type": "substitute",
+    "features_claimed": "Szacunkowe porównanie stanów (hipoteza).",
+    "paid": "darmowe/płatne"
    }
   ],
   "already_solved": "Częściowo: planery prawdopodobnie modelują sprzedaż domu, a przewodniki opisują podatki stanowe. Integracji nie zweryfikowano.",
@@ -4835,9 +4775,10 @@
   "merged_from": [
    "family_G4:G4-15",
    "family_G2:G2-09",
-   "topup_T-S4:T-S4-R3"
+   "topup_T-S4:T-S4-R3",
+   "family_G7:G7-13"
   ],
-  "merge_note": "HECM for Purchase jako wariant."
+  "merge_note": "HECM for Purchase jako wariant. Po recenzji scalono JOB-10 (relokacja międzystanowa): para stanów to parametr, nie odrębny produkt."
  },
  {
   "temp_id": "G4-16",
@@ -5446,116 +5387,6 @@
    "family_G5:G5-09"
   ],
   "merge_note": "Seed G w postaci zmodyfikowanej."
- },
- {
-  "temp_id": "G5-10",
-  "name_en": "Paying for Aging in Place: Reverse Mortgage vs HELOC vs Cash-Out Refi vs Downsize",
-  "family": "Home adaptation for aging & financial side of care",
-  "user_and_moment": "Właściciele domu 62+ z dużym kapitałem w domu i ograniczonymi oszczędnościami, którzy potrzebują środków na modyfikacje lub opiekę. Moment: po wycenie remontu lub po rozpoczęciu płatnej opieki.",
-  "sample_prompt_en": "We're 70 and 73 with a paid-off house worth $550k. We need about $60k for a bathroom remodel and stairlift and maybe $2,000 a month for home care later. Should we get a reverse mortgage line of credit, a HELOC, or sell and downsize?",
-  "decision_problem": "Wybór źródła finansowania z kapitału w domu przy niepewnym czasie pozostania w domu.",
-  "combined_domains": "Mechanika HECM (wiek najmłodszego kredytobiorcy, expected rate, PLF, MIP, wzrost linii kredytowej, tenure/term, wymagalność przy opuszczeniu domu na ponad 12 miesięcy, non-borrowing spouse; wiedza modelu), HELOC (kwalifikacja dochodowa, raty, zmienna stopa, ryzyko zamrożenia), cash-out refi, downsizing (koszty transakcyjne, §121), kapitał dla spadkobierców, prawdopodobieństwo przeprowadzki do opieki.",
-  "variants_compared": "A) HECM line of credit; B) HECM tenure; C) HELOC; D) cash-out refi; E) sprzedaż i downsizing; F) oszczędności i odroczenie.",
-  "key_dependencies": "Prawdopodobieństwo przeprowadzki do opieki w ciągu N lat decyduje o tym, czy koszty początkowe HECM się zwrócą. Ścieżka stóp. Wzrost linii HECM. Zdolność do obsługi rat HELOC. Kapitał pozostały przy wyprowadzce. Ochrona małżonka.",
-  "main_outputs": "Dostępne środki per rok per opcja, całkowity koszt finansowania, kapitał pozostały w horyzoncie i przy wyprowadzce, stress test cash flow, wrażliwość na stopy, ceny domu i moment przeprowadzki; granica: obowiązkowe poradnictwo HUD dla HECM.",
-  "reason_external_site": "Kalkulatory reverse mortgage pokazują zwykle tylko dostępny limit, a kalkulatory HELOC tylko ratę. Porównanie w czasie z ryzykiem przeprowadzki wymaga modelu (hipoteza).",
-  "data_sources": "HUD: tabele PLF, limit HECM (rocznie, 150% conforming loan limit), MIP; FRED (stopy, CMT/SOFR); IRS Pub 523. Źródła z wiedzy modelu, niezweryfikowane.",
-  "user_data": "Wiek obojga, wartość domu, saldo kredytu, dochody, potrzeby gotówkowe w czasie, plan pozostania, stan zdrowia (orientacyjnie), priorytet spadkowy.",
-  "nearest_competition": [
-   {
-    "name": "NRMLA reverse mortgage calculator and lender calculators (np. Finance of America, Longbridge, Mutual of Omaha Mortgage – niezweryfikowane)",
-    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
-    "type": "partial",
-    "features_claimed": "Szacunek dostępnego principal limit HECM (wiedza modelu)",
-    "notes": "Lead-gen; porównania z HELOC i downsizingiem niezweryfikowane",
-    "paid": "free"
-   },
-   {
-    "name": "Bank HELOC calculators",
-    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
-    "type": "partial",
-    "features_claimed": "Limit i rata HELOC (wiedza modelu)",
-    "notes": "",
-    "paid": "free"
-   },
-   {
-    "name": "HUD-approved HECM counselors / financial advisors",
-    "url": "niezweryfikowane – brak wyników wyszukiwania w tej sesji (limit WebSearch)",
-    "type": "substitute",
-    "features_claimed": "Obowiązkowe poradnictwo przed HECM, porównanie opcji (wiedza modelu)",
-    "notes": "",
-    "paid": "zwykle niski koszt lub bezpłatne"
-   },
-   {
-    "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
-    "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
-    "type": "partial",
-    "features_claimed": "Break-even z godzinami opieki, kosztem adaptacji i redukcją pracy rodziny.",
-    "notes": "Finansowanie i wyczerpanie aktywów niezweryfikowane.",
-    "paid": "darmowy"
-   },
-   {
-    "name": "SeniorCareCalc",
-    "url": "https://seniorcarecalc.org/",
-    "type": "partial",
-    "features_claimed": "Punkt przecięcia w godzinach, mediany CareScout 2025 wg stanów.",
-    "notes": "Bez finansowania (niezweryfikowane).",
-    "paid": "darmowy"
-   },
-   {
-    "name": "ParentCareCalc",
-    "url": "https://parentcarecalc.com/",
-    "type": "partial",
-    "features_claimed": "Uwzględnia nieodpłatną opiekę rodzinną, dane wg stanów.",
-    "notes": "",
-    "paid": "darmowy"
-   },
-   {
-    "name": "PayingForSeniorCare – Affordability Calculator",
-    "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
-    "type": "partial",
-    "features_claimed": "Przystępność home care vs assisted living.",
-    "notes": "",
-    "paid": "darmowy"
-   },
-   {
-    "name": "MyLifeSite – projekcje CCRC dla doradców",
-    "url": "https://mylifesite.net/blog/post/overview-of-senior-living-cost-calculators-for-consumers",
-    "type": "substitute",
-    "features_claimed": "Szczegółowe projekcje finansowe dla personelu CCRC i planistów.",
-    "notes": "Dostęp konsumencki niezweryfikowany.",
-    "paid": "niezweryfikowane"
-   },
-   {
-    "name": "NRMLA reverse mortgage calculator (via NCOA)",
-    "url": "https://www.ncoa.org/article/a-guide-to-reverse-mortgages-for-older-adults/",
-    "type": "partial",
-    "features_claimed": "Szacunek kosztów i kwoty z HECM.",
-    "notes": "Nie modeluje decyzji zostać czy się przenieść.",
-    "paid": "darmowy"
-   }
-  ],
-  "already_solved": "Według wiedzy modelu porównania 'reverse mortgage vs HELOC' istnieją jako artykuły, a kalkulatory są jednoopcyjne. Pełne porównanie w czasie jest niezweryfikowane.",
-  "gap": "Hipoteza: porównanie opcji w czasie z prawdopodobieństwem przeprowadzki do opieki i kapitałem dla spadkobierców. Do weryfikacji wyszukiwaniami 'reverse mortgage vs HELOC calculator', 'HECM line of credit growth vs HELOC comparison tool'.",
-  "impl_difficulty": "high",
-  "maintenance_burden": "medium",
-  "content_risk": "high",
-  "demand_evidence": "Pośrednie, z wiedzy modelu: wolumen HECM stosunkowo niski (rzędu kilkudziesięciu tysięcy rocznie; niezweryfikowane), ale silne zainteresowanie tematem wśród seniorów z kapitałem w domu. Brak wolumenów.",
-  "ad_environment": "Kredytodawcy reverse mortgage i HELOC, wykonawcy modyfikacji, agenci dla seniorów (hipoteza).",
-  "ai_self_solve_risk": "medium",
-  "confidence": "low",
-  "status": "zbadać",
-  "status_reason": "Wysoka komercyjność i realna złożoność (dobry kandydat na moduł G5-09), ale wysokie ryzyko błędu i regulacyjne. Wymaga weryfikacji konkurencji (brak wyszukiwań) i przeglądu eksperta.",
-  "verification_level": "koncepcyjny",
-  "_src": "family_G5",
-  "final_id": "CARE-02",
-  "family_code": "CARE",
-  "family_pl": "Starzenie się, adaptacja domu i koszty opieki",
-  "merged_from": [
-   "family_G5:G5-10",
-   "topup_T-S4:T-S4-R1"
-  ],
-  "merge_note": ""
  },
  {
   "temp_id": "G5-11",
@@ -7699,6 +7530,30 @@
     "type": "partial",
     "features_claimed": "Hipoteza: porównanie ofert, strategie FAFSA, pożyczki prywatne.",
     "paid": "płatne / darmowe lead-gen"
+   },
+   {
+    "name": "Kalkulatory prywatnych kredytów studenckich lenderów (np. SoFi, Sallie Mae)",
+    "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+    "type": "partial",
+    "features_claimed": "Hipoteza / niezweryfikowane: rata i koszt kredytu prywatnego.",
+    "paid": "bezpłatne",
+    "notes": "Stronnicze."
+   },
+   {
+    "name": "College Scorecard / narzędzia opłacalności studiów",
+    "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+    "type": "partial",
+    "features_claimed": "Hipoteza: koszty i zarobki absolwentów.",
+    "paid": "bezpłatne",
+    "notes": "Bez modelu finansowania (hipoteza)."
+   },
+   {
+    "name": "Asystent AI",
+    "url": "brak URL – kategoria substytutu",
+    "type": "substitute",
+    "features_claimed": "Hipoteza: przybliżony rachunek opłacalności w czacie.",
+    "paid": "freemium",
+    "notes": "Ryzyko nieaktualnych reguł."
    }
   ],
   "already_solved": "Hipoteza: koszt netto, dane o zarobkach i symulacja spłaty są dostępne osobno, w tym w narzędziach rządowych.",
@@ -7718,9 +7573,10 @@
   "family_code": "LIFE",
   "family_pl": "Zdarzenia życiowe: spadek, rozwód, dzieci, edukacja (obszar nieoczywisty)",
   "merged_from": [
-   "family_G7:G7-14"
+   "family_G7:G7-14",
+   "family_G1:G1-04"
   ],
-  "merge_note": ""
+  "merge_note": "Po recenzji scalono FIN-04 (luka finansowania studiów magisterskich po 2026) - ta sama decyzja finansowania studiów przy nowych limitach."
  },
  {
   "temp_id": "G7-16",

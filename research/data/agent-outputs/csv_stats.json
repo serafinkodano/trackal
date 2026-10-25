@@ -1,0 +1,49 @@
+{
+ "register_rows": 1106,
+ "unmapped_rows": 0,
+ "unmapped_examples": [],
+ "basis": {
+  "search-summary – opis w wyniku wyszukiwania": 935,
+  "notatka fali 1 – niepotwierdzona w fali 2": 13,
+  "wyszukiwanie wykonane – brak w wynikach; wiedza modelu": 5,
+  "wiedza modelu – bez wyszukiwania": 153
+ },
+ "types": {
+  "konkurent": 1052,
+  "sygnał_popytu": 18,
+  "źródło_reguł_lub_danych": 35,
+  "brak_wyniku": 1
+ },
+ "klas": {
+  "częściowy": 635,
+  "substytut": 334,
+  "nie-konkurent": 54,
+  "niezweryfikowany": 41,
+  "bezpośredni": 27,
+  "prawdopodobnie bezpośredni (niezweryfikowany)": 15
+ },
+ "url_mismatch": 66,
+ "conflict_groups": 16,
+ "superseded": 83,
+ "rule9": 260,
+ "product_rows": 96,
+ "distinct": 95,
+ "status": {
+  "zbadać": 28,
+  "później": 38,
+  "odrzucić": 25,
+  "pilot": 5
+ },
+ "status_distinct": {
+  "zbadać": 28,
+  "później": 37,
+  "odrzucić": 25,
+  "pilot": 5
+ },
+ "verification": {
+  "audyt fali 2": 25,
+  "wstępnie sprawdzony w wyszukiwarce": 30,
+  "koncepcyjny": 41
+ },
+ "placeholders_filled": 14
+}
