@@ -1,0 +1,148 @@
+{
+ "id": "FIN-01",
+ "demand_evidence": [
+  {
+   "claim_pl": "ICE Mortgage Monitor (sierpień 2026): tappable equity wynosi 11,7 bln USD. Należy do 47,5 mln posiadaczy kredytów hipotecznych, średnio ok. 212 tys. USD na kredytobiorcę. Łączny equity w Q2 2026 to 18 bln USD, rekord wszech czasów.",
+   "url": "https://mortgagetech.ice.com/resources/data-reports/august-2026-mortgage-monitor",
+   "kind": "direct",
+   "measures_pl": "Populację gospodarstw z dostępnym kapitałem (zasób, potencjał). NIE jest to miesięczny popyt ani liczba osób podejmujących decyzję."
+  },
+  {
+   "claim_pl": "ICE (czerwiec 2026): w Q1 2026 54% wypłat equity przeszło przez drugie hipoteki (second liens). Blisko dwie trzecie originacji second-lien w Q1 pochodziło od kredytobiorców z rocznika 2020–2022, którzy chcą zachować niską stopę pierwszej hipoteki. To dokładnie segment FIN-01.",
+   "url": "https://mortgagetech.ice.com/publicdocs/mortgage/IMT-ICE-Mortgage_Monitor_June_2026_xfsrgggme.pdf",
+   "kind": "direct",
+   "measures_pl": "Strukturę transakcji (udział instrumentów, rocznik kredytobiorców). Potwierdza zachowanie segmentu 'keep-the-low-rate', ale nie liczbę wyszukiwań."
+  },
+  {
+   "claim_pl": "ICE: w Q1 2026 wypłaty equity osiągnęły najwyższy poziom dla pierwszego kwartału od 2021 r. (tytuł komunikatu).",
+   "url": "https://ir.theice.com/press/news-details/2026/ICE-Mortgage-Monitor-Home-Equity-Withdrawals-Reach-Highest-First-Quarter-Level-Since-2021/default.aspx",
+   "kind": "direct",
+   "measures_pl": "Trend wolumenu transakcji wypłaty equity (wartościowo), r/r."
+  },
+  {
+   "claim_pl": "TransUnion: originacje home equity wzrosły o 5,8% r/r do 560 tys. Motorem był wzrost HELOC o 16,8%, a wolumen HELOAN spadł. Podsumowanie wiąże wzrost z zachowaniem niskiej stopy pierwszej hipoteki. Uwaga: kwartał (prawdopodobnie Q1 2026) i przypisanie do konkretnego URL wymagają weryfikacji, bo podsumowanie łączyło kilka źródeł.",
+   "url": "https://newsroom.transunion.com/q2-2026-ciir",
+   "kind": "direct",
+   "measures_pl": "Kwartalną liczbę zawartych transakcji (originacji). To nie są wyszukiwania ani osoby rozważające decyzję."
+  },
+  {
+   "claim_pl": "TransUnion: w Q4 2025 HELOC-i rosły najszybciej, +20% r/r do 322 tys. originacji. Przypisanie do URL jest niepewne: liczba pochodzi z podsumowania wielu wyników TransUnion i HELN.",
+   "url": "https://newsroom.transunion.com/k-shaped-q1-2026-ciir",
+   "kind": "direct",
+   "measures_pl": "Kwartalną liczbę originacji HELOC."
+  },
+  {
+   "claim_pl": "Szacunek własny: 560 tys. originacji kwartalnie × 4 ≈ 2,2 mln transakcji home equity rocznie, czyli ok. 185 tys. zamkniętych transakcji miesięcznie. Liczba osób, które rozważają decyzję (w tym rezygnujące i wybierające personal loan lub odkładanie), jest prawdopodobnie wielokrotnie większa. To NIE jest wolumen słów kluczowych.",
+   "url": "https://newsroom.transunion.com/q2-2026-ciir",
+   "kind": "estimate",
+   "measures_pl": "Rząd wielkości miesięcznego strumienia decyzji transakcyjnych. Ekstrapolacja z danych kwartalnych, a nie pomiar popytu wyszukiwania."
+  },
+  {
+   "claim_pl": "HousingWire: 'Second Liens Surge as Tappable Home Equity Hits $11.7T'. Prasa branżowa relacjonuje wzrost drugich hipotek.",
+   "url": "https://www.housingwire.com/articles/second-liens-home-equity-product/",
+   "kind": "indirect",
+   "measures_pl": "Pokrycie tematu przez wydawców branżowych, czyli istotność tematu, nie popyt konsumencki."
+  },
+  {
+   "claim_pl": "Wydawcy konsumenccy i pożyczkodawcy publikują w 2026 r. treści dokładnie o tym dylemacie. Przykłady: Lower.com ('HELOC vs. Cash-Out Refinance When You Have A Low Mortgage Rate'), The Mortgage Reports ('...in a High-Rate Market'), Better Banks (maj 2026), jd.mortgage ('Keep Your Low Rate'), Wise Money Life ('Ultimate 2026 Comparison' trzech produktów).",
+   "url": "https://www.lower.com/mortgages/heloc-vs-cash-out-when-you-have-a-low-mortgage-rate",
+   "kind": "indirect",
+   "measures_pl": "Podaż treści. Inwestycje wydawców sugerują oczekiwany ruch z wyszukiwarki, ale nie mierzą wolumenu."
+  },
+  {
+   "claim_pl": "The Mortgage Reports: '2026 Home Equity Gap Index: $11 Trillion in Home Equity Is Going Untapped'. Wydawca konsumencki aktywnie promuje temat korzystania z equity.",
+   "url": "https://themortgagereports.com/132532/home-equity-gap-index",
+   "kind": "indirect",
+   "measures_pl": "Aktywność wydawców i kampanie treściowe wokół equity."
+  },
+  {
+   "claim_pl": "The Mortgage Reports, osobny artykuł 'HELOC vs. Cash-Out Refinance in a High-Rate Market'. Dylemat jest ujmowany w kontekście wysokich stóp.",
+   "url": "https://themortgagereports.com/135022/heloc-vs-cash-out-refinance-high-rate-market",
+   "kind": "indirect",
+   "measures_pl": "Pokrycie tematu przez wydawców."
+  },
+  {
+   "claim_pl": "Harvard JCHS LIRA (według podsumowania): wydatki na remonty i naprawy w Q2 2026 wyniosły 517 mld USD, +2,2% r/r. Prognoza: spowolnienie do +0,5% r/r do Q2 2027 (ok. 519 mld USD). Przypisanie tej liczby do konkretnego URL jest niepewne.",
+   "url": "https://www.kitchenbathdesign.com/remodeling-growth-set-to-downshift-as-2026-unwinds/",
+   "kind": "indirect",
+   "measures_pl": "Skalę potrzeby, która generuje decyzję (remonty), w ujęciu wartościowym. Nie mierzy liczby osób finansujących remont z equity."
+  },
+  {
+   "claim_pl": "Zmiana otoczenia stóp: Fed podniósł stopy o 25 pb 16 września 2026 r. (pierwsza podwyżka od lipca 2023), a prime wzrósł do 7,00%. Kolejne posiedzenie FOMC: 27–28 października 2026. To podważa założenie z briefu ('stopy spadają w okolice 6%').",
+   "url": "https://primerates.com/primerate/fed-prime-rate/",
+   "kind": "indirect",
+   "measures_pl": "Wyzwalacz i kontekst stóp. HELOC jest zmienny i oparty o prime, więc zmiany prime natychmiast zmieniają kalkulację."
+  },
+  {
+   "claim_pl": "Średni HELOC to 7,34% (zmienny) według krajowej ankiety Bankrate, przytoczonej przez LendEDU w październiku 2026. Według ICE średnia stopa wprowadzająca HELOC spadła w marcu 2026 do 6,6%, najniżej od końca 2022. Teaser rate to istotny parametr modelu.",
+   "url": "https://lendedu.com/blog/current-heloc-rates/",
+   "kind": "indirect",
+   "measures_pl": "Poziom stóp produktowych jako wejście do modelu, nie popyt."
+  },
+  {
+   "claim_pl": "TransUnion / MBA Newslink (sierpień 2026): originacje hipotek rosną dzięki aktywności refinansowej. Fale ofert refinansowania to wyzwalacz pytań 'czy robić cash-out'.",
+   "url": "https://newslink.mba.org/mba-newslinks/2026/august/mba-newslink-monday-august-10-2026/transunion-mortgage-originations-up-amid-refinancing-activity/",
+   "kind": "indirect",
+   "measures_pl": "Aktywność refinansową, czyli wyzwalacz ofert cash-out trafiających do segmentu."
+  },
+  {
+   "claim_pl": "Hipoteza: podsegment z kredytem 2,5–3,5% z lat 2020–2021, który potrzebuje 30–150 tys. USD w ciągu 24 miesięcy, to mały ułamek z 47,5 mln posiadaczy equity. Udziału kredytów poniżej 4% nie zmierzono w tej fali, a wyszukiwanie tej liczby nic nie zwróciło.",
+   "url": "https://mortgagetech.ice.com/resources/data-reports/august-2026-mortgage-monitor",
+   "kind": "hypothesis",
+   "measures_pl": "Wielkość segmentu docelowego. Do weryfikacji danymi ICE McDash lub FHFA NMDB o rozkładzie stóp."
+  },
+  {
+   "claim_pl": "Hipoteza: wrześniowa podwyżka Fed i niepewność przed FOMC 27–28.10.2026 zwiększają liczbę pytań typu 'stała (HEL) czy zmienna (HELOC)' oraz 'czy czekać z refinansowaniem'. To podnosi wartość scenariuszy ścieżki prime. Wolumenu nie zmierzono, trzeba to sprawdzić w Google Trends/GSC.",
+   "url": "https://www.wealthsignalnyc.com/stories/fomc-october-2026-meeting-what-is-decided/",
+   "kind": "hypothesis",
+   "measures_pl": "Wyzwalacz popytu na analizę scenariuszową, niezweryfikowany."
+  }
+ ],
+ "forum_question_examples": [
+  {
+   "paraphrase_en": "[NO FORUM THREAD FOUND - reddit.com is blocked for the search tool; a Bogleheads query returned no threads. This is a publisher page framing the same user question, NOT a forum post:] I have a very low mortgage rate - should I use a HELOC or a cash-out refinance to get cash?",
+   "url": "https://www.lower.com/mortgages/heloc-vs-cash-out-when-you-have-a-low-mortgage-rate"
+  },
+  {
+   "paraphrase_en": "[NOT a forum post - lender page title used as question framing:] How do I tap equity for a project without giving up my low rate - HELOC or cash-out refi?",
+   "url": "https://jd.mortgage/heloc-vs-cash-out-refinance-2/"
+  },
+  {
+   "paraphrase_en": "[NOT a forum post - bank blog framing, May 2026:] With rates where they are right now, which makes more sense: a HELOC or a cash-out refinance?",
+   "url": "https://www.betterbanks.com/personal/resources/blog/blog/2026/05/08/heloc-vs.-cash-out-refinance--which-option-makes-more-sense-right-now"
+  }
+ ],
+ "seasonality_or_triggers_pl": "Wyzwalacze potwierdzone w wynikach wyszukiwania (search-summary):\n(1) Decyzje FOMC i zmiany prime. 16.09.2026 była podwyżka, prime wzrósł do 7,00%. Następne posiedzenie FOMC to 27–28.10.2026. Każda zmiana prime natychmiast zmienia ratę HELOC i odwraca narrację 'stopy spadają', na której opiera się wariant F.\n(2) Fale refinansowania i oferty cash-out. MBA/TransUnion raportowały w sierpniu 2026 wzrost originacji dzięki refinansowaniu.\n(3) Kwartalne raporty ICE Mortgage Monitor i TransUnion CIIR uruchamiają cykle publikacji w mediach ('second liens surge', 'tappable equity record').\n(4) Wydatki remontowe utrzymują się na wysokim poziomie (LIRA: 517 mld USD w Q2 2026), ale wzrost spowalnia do ok. 0,5% r/r do Q2 2027.\n\nWyzwalacze hipotetyczne (niezweryfikowane w tej fali, do sprawdzenia w Google Trends i GSC):\n- Sezon remontowy wiosna–lato: wyceny wykonawców od lutego do maja.\n- Wymiana dachów po sezonie gradowym (wiosna) i huraganowym (sierpień–październik), także pod presją ubezpieczycieli.\n- Terminy czesnego (sierpień–wrzesień i styczeń).\n- Konsolidacja kart po świętach (styczeń) i w sezonie podatkowym (luty–kwiecień), kiedy pojawiają się pytania o odliczenie odsetek.\n- Koniec teaser rate HELOC (6–12 miesięcy po otwarciu linii) i koniec okresu draw (szok raty).\n- Decyzja o sprzedaży lub przeprowadzce.\n\nNie mamy danych o miesięcznym rozkładzie wyszukiwań. Nie podaję wolumenów.",
+ "prompts_no_tool_request": [
+  "We locked a 2.875% 30-year in 2021 and still owe about $310k on a house worth maybe $640k in Colorado. Roofer quoted $38k and we want to redo the kitchen next spring for around $55k. Is a HELOC or a home equity loan smarter, or should we just refinance the whole thing?",
+  "Got a letter from my lender saying I can cash out $100k with a refi at 5.99%. My current rate is 2.65% on $240k and I'm in Texas. I also have about $45k in credit card debt at 24%. Am I crazy to even consider giving up my rate?",
+  "Teacher in Ohio here. 3.25% mortgage, $190k left, house worth about $350k. My daughter starts college next fall and we'll need roughly $30k a year for four years. Is it a bad idea to use home equity for tuition, and if so which kind?",
+  "My wife and I will probably sell in about 4 years when I retire. We need $70k now to finish the basement and maybe $25k next year for landscaping. Our mortgage is 3.0% with $260k owed in Florida. What's the cheapest way to borrow this once you count closing costs and paying it all off when we sell?"
+ ],
+ "prompts_calculator_request": [
+  "Can you build me a calculator that compares a cash-out refi, a HELOC, and a fixed home equity loan for borrowing $80k? I want to be able to change my current rate, remaining balance, years left on the loan, closing costs, and how many years until I sell, and see the total cost of each option.",
+  "Is there a tool that shows my blended rate if I keep my 3.1% first mortgage and add a $90k HELOC at prime plus 0.5%, and also shows what happens to my monthly payment when the 10-year draw period ends?",
+  "Make me an interactive calculator: I'll draw from a HELOC in three chunks ($20k in January, $40k in May, $25k in September) for a remodel. Show the interest-only payments month by month, then the jump when it switches to principal and interest, with prime staying at 7%, dropping to 5.5%, or rising to 8.5%.",
+  "I need a break-even calculator. At what cash-out refi rate does refinancing my whole $275k balance plus $60k cash beat keeping my 3.375% loan and taking a 15-year home equity loan at 8%? Let me slide the number of years I stay in the house. I'm in New York, so include whatever extra closing taxes apply."
+ ],
+ "prompts_scenario_comparison": [
+  "Compare these for a $120k need over the next 18 months. 30-year mortgage at 2.99% with $350k left, home worth about $780k in California, we might move in 5 to 7 years: (a) cash-out refi at 6.1% with 3% closing costs, (b) HELOC at prime + 0.25% drawn in stages, (c) 20-year home equity loan at 7.9%, (d) $30k personal loan plus $25k from savings now and delay the rest. Which is cheapest if we sell in year 5 vs year 7?",
+  "Scenario check: take a $60k HELOC now and refinance it into something fixed later if rates drop below 6%, versus locking a home equity loan at 7.75% today. What if rates go up instead of down? My mortgage is 3.25% with $210k left, we're in Georgia.",
+  "Which is cheaper over 10 years: phasing a $95k renovation over three years and paying cash as I save about $2,500 a month, or doing it all now with a home equity loan at 8.1%? Assume construction costs rise 4% a year. I have a 2.5% mortgage in Michigan and $40k in a high-yield savings account at 4%.",
+  "Roof is urgent ($22k), the kitchen ($65k) can wait a year. Compare: a personal loan for the roof now plus a HELOC for the kitchen next year, versus one $90k home equity loan now, versus a cash-out refi. 3.5% mortgage, $180k left, house worth $410k in North Carolina, and my bank caps combined loan-to-value at 85%."
+ ],
+ "ai_self_solve_assessment_pl": "Ocena ryzyka:\n- WYSOKIE dla warstwy jakościowej.\n- WYSOKIE (podniesione ze średniego) dla prostej jednookresowej warstwy ilościowej.\n- ŚREDNIE dla pełnej symulacji wielookresowej.\n\nDowody (search-summary):\n(1) ChatGPT Intelligent UI ogłoszono 7.10.2026 razem z GPT-6. Darmowi użytkownicy dostali funkcję 8.10.2026. Model sam decyduje, czy odpowiedzieć tekstem, czy zbudować działający kalkulator. Recenzent na darmowym koncie uzyskał działający kalkulator hipoteczny z presetami, suwakami stopy i okresu oraz wynikiem na żywo (yellow.com/news/chatgpt-intelligent-ui-charts-calculators-answers; xenospectrum.com/en/chatgpt-intelligent-ui-interactive-answers/). Komentatorzy wprost wskazują zagrożenie dla stron z kalkulatorami i ryzyko halucynacji.\n(2) Google generative UI w AI Mode pokazano m.in. jako kalkulator hipoteczny do porównywania warunków kredytu. Według Search Engine Journal funkcja trafia już do AI Overviews (searchenginejournal.com/google-expands-generative-ui-beyond-ai-mode-into-ai-overviews/586452/).\n(3) W tej fali samo podsumowanie wyszukiwarki, bez pytania, dało gotową regułę: przy stopie poniżej 4% HELOC jest zdecydowanie preferowany, a cash-out ma sens od ok. 6,5%, bo reprycuje całe saldo i kosztuje 2–3% zamknięcia. Fala wave-1 dostała analogiczną rekomendację HEL dla przykładowego promptu.\n\nWniosek: odpowiedź 'zachowaj 3% i weź drugą hipotekę' oraz prosty kalkulator raty i blended rate są już skomodytyzowane w AI.\n\nGdzie AI najczęściej się pomyli lub coś pominie:\n- porównuje ratę zamiast kosztu netto w horyzoncie sprzedaży (z saldem do spłaty),\n- nie zrównuje okresów (cash-out resetuje amortyzację do 30 lat),\n- nie modeluje harmonogramu wypłat i okresu interest-only z szokiem raty po draw,\n- nie liczy ścieżki prime: aktualnie zakłada spadki, choć Fed podniósł stopy we wrześniu 2026,\n- pomija limit LTV 80% dla cash-out vs wyższe CLTV dla HELOC,\n- pomija opłaty za wcześniejsze zamknięcie HELOC przy szybkiej sprzedaży,\n- pomija stanowe koszty i ograniczenia (TX, NY, FL),\n- pomija koszt alternatywny oszczędności.\n\nWygenerowany widget jest jednorazowy. Nie ma przetestowanych golden cases, trwałego linku ani spójnej metodologii między sesjami.\n\nRyzyko dystrybucyjne jest wysokie: AI Overviews i AI Mode przejmą kliknięcia z zapytań 'heloc vs cash out refi'. Szansa leży w byciu cytowanym źródłem. Pomogą w tym worked examples z liczbami, tabele break-even i jawna metodologia, a także zapytania długiego ogona z konkretnymi parametrami, na które AI odpowiada mniej pewnie. Rekomendacja: produkt musi wygrywać głębią (wielookresowość, ścieżki stóp, ograniczenia), weryfikowalnością i udostępnialnymi scenariuszami, a nie samym porównaniem.",
+ "missing_dependencies_ai_likely_ignores_pl": "1. Horyzont i saldo przy sprzedaży. Koszt netto = suma rat + opłaty + saldo pozostałe w roku sprzedaży − dług początkowy. Porównywanie samej raty myli, bo cash-out resetuje amortyzację do 30 lat, a krótszy HEL buduje equity szybciej.\n2. Koszty zamknięcia cash-out liczone od CAŁEJ nowej kwoty (2–5%, plus punkty). Rozłożenie tych kosztów na lata posiadania decyduje o break-even.\n3. HELOC: odsetki tylko od wypłaconej kwoty według harmonogramu wypłat. Draw period interest-only (zwykle 10 lat), potem 20 lat amortyzacji, czyli szok raty. Teaser rate na 6–12 miesięcy (ICE: średnio 6,6% w marcu 2026). Zmienna stopa prime + marża z capami i floorami. Opłata roczna i opłata za wcześniejsze zamknięcie (często przy zamknięciu w ciągu 2–3 lat, ważne przy sprzedaży). Możliwość zamrożenia linii przy spadku wartości domu. Naliczanie dzienne (actual/365).\n4. Ścieżka prime. Fed podniósł stopy 16.09.2026, prime wynosi 7,00%. Scenariusz 'HELOC teraz, refinansowanie później' (F) zakłada spadek, który nie jest pewny. Refinansowanie w przyszłości wymaga ponownej kwalifikacji, wyceny i kosztów.\n5. Limity LTV/CLTV. Konwencjonalny cash-out na dom główny ma typowo max 80% LTV (reguła Fannie Mae, do weryfikacji eksperckiej). HELOC/HEL ma często 80–90% CLTV, zależnie od kredytora. Wymogi DTI i scoringu. Wartość domu i wycena.\n6. Różnice stanowe (do weryfikacji eksperckiej):\n   - Teksas, Art. XVI §50(a)(6): limit 80% CLTV, ograniczenia częstotliwości i okresy oczekiwania.\n   - Nowy Jork: mortgage recording tax od nowej kwoty hipoteki, uderza w cash-out i HEL.\n   - Floryda: documentary stamp tax i intangible tax od nowych hipotek.\n7. Podatki: odsetki od home equity są odliczalne tylko przy wykorzystaniu na zakup, budowę lub istotne ulepszenie domu zabezpieczającego kredyt, i tylko przy rozliczeniu z itemizacją. Czesne i konsolidacja kart się nie kwalifikują, a większość podatników bierze standard deduction. Wymaga weryfikacji CPA lub IRS Pub. 936.\n8. Koszt alternatywny oszczędności (HYSA vs stopa kredytu) i bufor awaryjny w wariantach D/E. Personal loan: stała stopa, 3–7 lat, origination fee, wysoka rata, zależność od scoringu.\n9. Etapowanie (E): inflacja kosztów budowy, ryzyko szkód przy odkładaniu dachu (oraz problemy z ubezpieczeniem starego dachu, hipoteza), mobilizacja wykonawcy wielokrotnie.\n10. Przepływy miesięczne vs koszt całkowity. Rata maksymalna (peak payment) a budżet. PMI przy cash-out powyżej 80% (w praktyce blokada). Escrow nie zmienia porównania, ale bywa mieszany w racie.\n11. Spójność metryk: blended rate jest myląca przy różnych okresach i harmonogramach wypłat. Właściwe porównanie to koszt netto w horyzoncie, ewentualnie NPV.",
+ "mvp_scope_pl": "MVP: pojedyncza strona symulatora z jawną metodologią.\n\nWejścia:\n- obecna hipoteka (saldo, stopa, pozostały okres, opcjonalnie rata P&I),\n- wartość domu,\n- potrzeba kapitału jako 1–4 wypłaty z datami (lump sum lub harmonogram),\n- rok planowanej sprzedaży lub 'zostaję', z suwakiem 1–15 lat,\n- stan (MVP: wyłącznie ostrzeżenia tekstowe dla TX/NY/FL, bez wyliczeń),\n- parametry każdego wariantu z rozsądnymi, edytowalnymi wartościami domyślnymi i datą aktualizacji.\n\nWarianty w MVP:\n- A) cash-out refi całego salda: nowa stopa, okres, koszty zamknięcia % lub $, finansowane albo płacone gotówką.\n- B) HELOC: prime + marża, teaser, draw IO 10 lat, amortyzacja 20 lat, opłata roczna, wypłaty według harmonogramu.\n- C) home equity loan: stała stopa, 10/15/20 lat, opłaty.\n- D) personal loan na część plus oszczędności: stopa, okres, origination fee, oprocentowanie oszczędności jako koszt alternatywny.\n- F-lite: HELOC teraz, a w miesiącu N saldo HELOC zamienione na stały HEL (lub cash-out) po stopie R z kosztem K.\n\nŚcieżki prime: 3 deterministyczne, edytowalne (płaska / spadek / wzrost, np. ±150 pb w 24 miesiące). Wszystkie warianty liczone na tych samych ścieżkach.\n\nWyjścia:\n(1) tabela kosztu netto w horyzoncie sprzedaży dla każdego wariantu i każdej ścieżki prime (odsetki + opłaty, z saldem przy sprzedaży), plus różnica względem najtańszego,\n(2) wykres miesięcznej łącznej raty w czasie z zaznaczonym końcem teasera i końcem draw (szok raty),\n(3) break-even: stopa cash-out, przy której A = C, oraz rok sprzedaży, przy którym A zaczyna wygrywać,\n(4) prosta wrażliwość, czyli tornado dla 4 zmiennych: stopa cash-out, prime, rok sprzedaży, koszty zamknięcia,\n(5) kontrola ograniczeń: LTV cash-out vs 80%, CLTV drugiej hipoteki vs limit użytkownika (domyślnie 85%), z flagą 'niedostępne',\n(6) link do scenariusza zapisany w parametrach URL (bez kont) i przycisk 'kopiuj podsumowanie'.\n\nTreść wokół: 3–5 worked examples z liczbami (np. 3,1%, 280 tys., 80 tys., sprzedaż za 5 lat), metodologia, słownik, disclaimery YMYL ('educational, not advice'). Bez formularzy leadowych w MVP (AdSense, zgodność).\n\nUzasadnienie zakresu: konkurenci (Better, Figure, NetRate, Teamzlab, kalkulatory blended rate) pokrywają jednookresowe porównanie. Luka i zarazem przewaga nad widgetami AI to harmonogram wypłat, horyzont sprzedaży, ścieżki prime, szok raty i ograniczenia CLTV/LTV w jednym widoku.",
+ "deferred_features_pl": "Świadomie odłożone (v1.1+):\n(1) Pełny wariant E, czyli etapowanie projektu: inflacja kosztów budowy, akumulacja oszczędności, ryzyko szkód. Wymaga wielu założeń.\n(2) Moduł podatkowy (odliczalność odsetek według przeznaczenia, itemized vs standard deduction). Wysokie ryzyko błędu, wymaga CPA.\n(3) Wyliczenia stanowe (NY mortgage recording tax, FL doc stamps/intangible tax, reguły TX 50(a)(6) jako twarde ograniczenia, a nie tylko ostrzeżenia).\n(4) Stochastyczne ścieżki prime (Monte Carlo) i rozkłady wyników.\n(5) Live rates przez API i stawki zależne od scoringu.\n(6) Dodatkowe instrumenty: FHA/VA cash-out, ARM cash-out, home equity investments/shared-appreciation (Hometap, Unlock), karta 0% APR, pożyczka z 401(k), finansowanie przez wykonawcę.\n(7) NPV/dyskontowanie i inflacja ogólna jako tryb zaawansowany.\n(8) Konta użytkowników, zapisywanie wielu scenariuszy, eksport PDF/CSV.\n(9) Wariant 'HELOC fixed-rate lock option' (zamrażanie części salda).\n(10) Personalizacja pod DTI, kwalifikację i prequal. Integracje leadowe z pożyczkodawcami (konflikt z neutralnością i YMYL, później ewentualnie poza AdSense).\n(11) Wersje językowe i inne rynki.",
+ "data_sources_and_tests_pl": "Źródła danych (domyślne wartości z datą aktualizacji, zawsze edytowalne):\n- Prime rate z bieżących źródeł. Wyniki wyszukiwania pokazują 7,00% po podwyżce z 16.09.2026 (primerates.com). Docelowo seria Bank Prime Loan Rate z Fed H.15/FRED, do potwierdzenia.\n- Średnie stopy HELOC i HEL: Bankrate przez LendEDU (HELOC 7,34%, październik 2026), ICE McDash Home Equity (intro HELOC 6,6%, marzec 2026, raport czerwcowy).\n- Stopy 30-letnie i cash-out: Freddie Mac PMMS plus narzut cash-out. Nie zweryfikowano w tej fali. Dla kontrastu źródło ze stycznia 2026 podawało cash-out ok. 6,25%, HELOC 7,25%, HEL 7,56%.\n- Struktura rynku: ICE Mortgage Monitor (czerwiec i sierpień 2026), TransUnion CIIR.\n- Reguły produktowe: Fannie Mae Selling Guide (max LTV cash-out), broszura CFPB o HELOC i Reg Z (ujawnienia HELOC), IRS Pub. 936. Wymienione z wiedzy domenowej, bez URL z tej fali, do weryfikacji.\n\nTesty obliczeń:\n(a) Funkcje referencyjne: Excel/Sheets PMT, IPMT, PPMT, CUMIPMT, FV (saldo).\n(b) Narzędzia referencyjne do porównania krzyżowego (z audytu): Better.com HELOC vs cash-out, Figure, MortgageCalculator.org 'should-i-use-heloc', NetRate second-lien comparison, Refi.com blended rate.\n(c) Golden cases. Wartości policzyłem sam w Pythonie (standardowa annuita miesięczna); przed użyciem trzeba je potwierdzić w Excelu:\n- G1: 300 000 USD, 6%, 360 mies. → rata 1798,65.\n- G2: 80 000 USD, 8%, 180 mies. → 764,52.\n- G3: HELOC IO, 80 000 USD przy 7,5% → 500,00/mies.\n- G4: po draw 80 000 USD, 7,5%, 240 mies. → 644,47 (szok raty +144,47).\n- G5 (przykładowy prompt): obecny kredyt 280 000 USD, 3,1%, 300 mies. pozostało → rata 1342,40, saldo po 60 mies. 239 878,53. Cash-out 360 000 USD przy 6%/360 → rata 2158,38, saldo po 60 mies. 334 995,68. HEL 80 000 USD, 7,75%/180 → rata 753,02, saldo po 60 mies. 62 746,16. Blended rate (salda początkowe) ok. 4,133%. Koszt netto 5 lat (odsetki + opłaty): A przy 3% kosztów zamknięcia ok. 115,3 tys. USD, A+C (zachowanie 3,1% + HEL, opłaty 2 tys.) ok. 70,4 tys. USD.\n\nNiezmienniki i testy właściwości:\n- suma spłat kapitału = kwota kredytu,\n- saldo(n) zgodne z formułą zamkniętą,\n- przy stopie nowej = starej i kosztach 0 cash-out bez wypłaty = baseline,\n- HELOC z jedną wypłatą w t0 i płaską prime daje ratę IO = saldo × r/12,\n- monotoniczność: wyższa prime → wyższy koszt B; dłuższy horyzont → mniejsza przewaga względna wariantów z niskimi kosztami zamknięcia,\n- break-even rozwiązany bisekcją daje |A−C| < 1 USD,\n- przypadki brzegowe: sprzedaż w roku 0–1, wypłata po końcu draw (błąd), CLTV powyżej limitu (flaga), stopa 0%.\n\nKonwencja naliczania: miesięczna 30/360 vs dzienna actual/365 dla HELOC, tolerancja raty ±1 USD i kosztu całkowitego ±0,1%.\n\nCel: 20–30 golden cases w CI, z czego min. 5 sprawdzonych ręcznie przez eksperta.",
+ "expert_review_pl": "Wszystkie godziny to SZACUNEK.\n(1) Licencjonowany loan officer (NMLS) z praktyką HELOC/HEL i cash-out, ok. 6–10 h: domyślne parametry i konwencje (draw/repay, teaser, opłaty, early-closure fee, limity LTV/CLTV, kwalifikacja), realizm wariantu F, ostrzeżenia stanowe TX/NY/FL, przegląd 5+ golden cases.\n(2) CFP lub CPA, ok. 3–5 h: ramy kosztu netto i kosztu alternatywnego oszczędności, treść o odliczalności odsetek (nawet jeśli moduł podatkowy jest odłożony, tekst musi być poprawny), interpretacja wyników dla użytkownika.\n(3) Recenzent matematyki finansowej (aktuariusz lub quant dev), ok. 4–6 h: formuły amortyzacji, IO i salda, naliczanie dzienne vs miesięczne, break-even i wrażliwość, przegląd zestawu testów.\n(4) Compliance lub prawnik ds. consumer finance, ok. 2–4 h: disclaimery YMYL, unikanie sformułowań będących poradą lub reklamą kredytu (TILA/Reg Z trigger terms, UDAAP), zgodność z polityką AdSense dla treści finansowych.\n\nŁącznie ok. 15–25 h (szacunek) przed publikacją oraz ok. 2–4 h kwartalnie (szacunek) na aktualizację domyślnych stóp i reguł.",
+ "queries_run": [
+  "[WebSearch extended] 2026 tappable home equity ICE Mortgage Monitor HELOC originations TransUnion share of mortgages below 4% rate lock-in",
+  "[WebSearch extended] reddit HELOC vs cash out refi keep 3% mortgage need money for roof kitchen (no Reddit threads returned)",
+  "[WebSearch extended, allowed_domains=reddit.com] HELOC or home equity loan or cash out refinance low rate mortgage renovation (FAILED: API error 400 - reddit.com not accessible to the search user agent)",
+  "[WebSearch extended] ChatGPT Intelligent UI October 2026 interactive calculators in answers; Google AI Mode generative UI mortgage calculator",
+  "[WebSearch extended] bogleheads forum HELOC vs home equity loan vs cash-out refinance keep 2.75% mortgage (no Bogleheads threads returned)",
+  "[WebSearch extended] TransUnion 2026 HELOC originations growth; prime rate October 2026 Fed cut HELOC rates; LIRA remodeling spending 2026"
+ ]
+}

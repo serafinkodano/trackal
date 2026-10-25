@@ -13,7 +13,7 @@ input,cost_ai_tools: Claude Code / API LLM (część przypisana projektowi),USD 
 input,cost_data: Płatne dane / API,USD / mies.,50,0,0,założenie,"ZAŁOŻENIE: start na danych publicznych (NREL, EIA, FRED itp.)"
 input,cost_seo_ai_monitoring: Narzędzia SEO / monitoring AI,USD / mies.,150,50,0,założenie,ZAŁOŻENIE; start na GSC/Bing WMT
 input,expert_hourly: Stawka eksperta (EA/CPA/CFP/fachowiec),USD / h,250,175,125,założenie,ZAŁOŻENIE (do potwierdzenia ofertą)
-input,"expert_hours_new_tool: Godziny eksperta na nowy symulator (średnio, mix poziomów ryzyka)",h / narzędzie,8,5,3,założenie,ZAŁOŻENIE
+input,"expert_hours_new_tool: Godziny eksperta na nowy symulator (średnio, mix poziomów ryzyka)",h / narzędzie,18,13,9,założenie,"ZAŁOŻENIE skalibrowane do szacunków agentów fali 2b dla 5 produktów pilotażowych (łącznie ~55-90 h; agent P&C, dekarz, CPA/EA, inżynier energetyczny, specjalista F&I)"
 input,expert_hours_upkeep_tool_year: Godziny eksperta na utrzymanie narzędzia rocznie,h / narzędzie / rok,4,2,1,założenie,ZAŁOŻENIE
 input,owner_hours_month: Czas właściciela na utrzymanie (bez budowy nowych narzędzi),h / mies.,30,20,12,założenie,ZAŁOŻENIE
 input,owner_hourly_value: Wycena godziny właściciela (koszt alternatywny),USD / h,50,40,30,założenie,ZAŁOŻENIE
@@ -81,7 +81,7 @@ operating_profit,Zysk operacyjny gotówkowy przy 3000 USD przychodu i 25 narzęd
 operating_profit,Zysk po wycenie czasu właściciela przy 3000 USD i 25 narzędziach,USD / mies.,-1045,1269,2248,wynik,j.w. - czas właściciela
 operating_profit,Zysk operacyjny gotówkowy przy 10000 USD przychodu i 25 narzędziach,USD / mies.,7455,9069,9608,wynik,przychód - koszty stałe (25 narzędzi)
 operating_profit,Zysk po wycenie czasu właściciela przy 10000 USD i 25 narzędziach,USD / mies.,5955,8269,9248,wynik,j.w. - czas właściciela
-launch,Gotówkowy koszt uruchomienia 5 symulatorów (prawo + eksperci + 3 mies. kosztów stałych),USD,14140.0,6020.0,2630.0,wynik,jednorazowe
+launch,Gotówkowy koszt uruchomienia 5 symulatorów (prawo + eksperci + 3 mies. kosztów stałych),USD,26640.0,13020.0,6380.0,wynik,jednorazowe
 launch,Czas właściciela na uruchomienie silnika + 5 symulatorów,h,520,315,190,wynik,silnik + 5 × narzędzie
 launch,Wycena czasu uruchomienia,USD,26000,12600,5700,wynik,h × stawka właściciela
 illustration_m12,ILUSTRACJA: łączne sesje/mies. w mies. 12 (rozkład Zipfa między narzędziami z ruchem),sesje / mies.,4300,34200,206600,ilustracja,suma top/r^s dla narzędzi z ruchem; NIE jest prognozą

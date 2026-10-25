@@ -1,0 +1,462 @@
+{
+ "CARE-01": {
+  "agent": 3.5500000000000003,
+  "cal": 3.45,
+  "adj": {
+   "reliability": 2
+  },
+  "note": "Kalibracja: wiarygodność 3→2 — Medicaid, HECM i trajektoria zdrowia to wysokie ryzyko merytoryczne i drogi przegląd ekspercki.",
+  "status": "później",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 3,
+   "ad_potential": 4,
+   "feasibility": 4,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "BIZ-01": {
+  "agent": 2.75,
+  "cal": 2.75,
+  "adj": {},
+  "note": "",
+  "status": "później (osobna domena)",
+  "scores": {
+   "demand": 3,
+   "gap": 3,
+   "ai_distribution": 3,
+   "ad_potential": 2,
+   "feasibility": 2,
+   "reliability": 3,
+   "shared_engine": 3
+  },
+  "direct": false,
+  "rec": "później"
+ },
+ "HOME-04": {
+  "agent": 3.7,
+  "cal": 3.5,
+  "adj": {
+   "gap": 2
+  },
+  "note": "Kalibracja: luka 3→2 — wieloletnie porównania „zostać/remontować vs przeprowadzić się” istnieją u kilku konkurentów częściowych (BusinessCaseGuy, AgentCalc); wyróżnikiem jest tylko lock-in stopy i finansowanie.",
+  "status": "pilot",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 3,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "RET-03": {
+  "agent": 2.85,
+  "cal": 2.85,
+  "adj": {},
+  "note": "",
+  "status": "odrzucić",
+  "scores": {
+   "demand": 3,
+   "gap": 2,
+   "ai_distribution": 3,
+   "ad_potential": 4,
+   "feasibility": 2,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": true,
+  "rec": "odrzucić"
+ },
+ "INS-03": {
+  "agent": 3.45,
+  "cal": 3.45,
+  "adj": {},
+  "note": "",
+  "status": "zbadać",
+  "scores": {
+   "demand": 4,
+   "gap": 4,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 2,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "HOME-02": {
+  "agent": 3.8000000000000003,
+  "cal": 3.6,
+  "adj": {
+   "gap": 2
+  },
+  "note": "Kalibracja: luka 3→2 — kategoria „rent vs sell” ma 15+ darmowych kalkulatorów i płatny BiggerPockets Keep or Sell; część może już modelować zegar §121.",
+  "status": "pilot",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 3,
+   "ad_potential": 5,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "LIFE-01": {
+  "agent": 3.6,
+  "cal": 3.6,
+  "adj": {},
+  "note": "",
+  "status": "zbadać",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 3,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 2,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "HLTH-02": {
+  "agent": 3.0500000000000003,
+  "cal": 3.0500000000000003,
+  "adj": {},
+  "note": "",
+  "status": "zbadać (test na healthscorer.com)",
+  "scores": {
+   "demand": 3,
+   "gap": 4,
+   "ai_distribution": 2,
+   "ad_potential": 3,
+   "feasibility": 3,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "AUTO-03": {
+  "agent": 3.2,
+  "cal": 3.2,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 4,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "BIZ-04": {
+  "agent": 2.9000000000000004,
+  "cal": 2.9000000000000004,
+  "adj": {},
+  "note": "",
+  "status": "później (osobna domena)",
+  "scores": {
+   "demand": 3,
+   "gap": 3,
+   "ai_distribution": 2,
+   "ad_potential": 2,
+   "feasibility": 4,
+   "reliability": 4,
+   "shared_engine": 3
+  },
+  "direct": false,
+  "rec": "później"
+ },
+ "AUTO-01": {
+  "agent": 3.3000000000000003,
+  "cal": 3.3000000000000003,
+  "adj": {},
+  "note": "",
+  "status": "pilot",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "HOME-03": {
+  "agent": 3.3000000000000003,
+  "cal": 3.3000000000000003,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "INS-01": {
+  "agent": 3.35,
+  "cal": 3.35,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "RENO-02": {
+  "agent": 3.75,
+  "cal": 3.75,
+  "adj": {},
+  "note": "",
+  "status": "pilot",
+  "scores": {
+   "demand": 4,
+   "gap": 4,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "ENER-01": {
+  "agent": 2.9000000000000004,
+  "cal": 2.9000000000000004,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 3,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "później"
+ },
+ "RENT-01": {
+  "agent": 3.35,
+  "cal": 3.35,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 3,
+   "gap": 4,
+   "ai_distribution": 3,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "ENER-03": {
+  "agent": 3.4000000000000004,
+  "cal": 3.2,
+  "adj": {
+   "gap": 2
+  },
+  "note": "Kalibracja: luka 3→2 — agent seedów sklasyfikował Home Energy Planner jako konkurenta bezpośredniego (audytor: częściowy); do ręcznej weryfikacji.",
+  "status": "później",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "RENO-03": {
+  "agent": 3.7,
+  "cal": 3.7,
+  "adj": {},
+  "note": "",
+  "status": "pilot",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 3,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "JOB-02": {
+  "agent": 2.95,
+  "cal": 2.95,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 3,
+   "gap": 3,
+   "ai_distribution": 2,
+   "ad_potential": 3,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 3
+  },
+  "direct": false,
+  "rec": "później"
+ },
+ "FIN-02": {
+  "agent": 3.25,
+  "cal": 3.25,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 3,
+   "gap": 4,
+   "ai_distribution": 3,
+   "ad_potential": 4,
+   "feasibility": 2,
+   "reliability": 2,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "RENO-04": {
+  "agent": 3.6500000000000004,
+  "cal": 3.6500000000000004,
+  "adj": {},
+  "note": "",
+  "status": "zbadać",
+  "scores": {
+   "demand": 3,
+   "gap": 4,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "HOME-01": {
+  "agent": 3.0500000000000003,
+  "cal": 3.0500000000000003,
+  "adj": {},
+  "note": "",
+  "status": "później",
+  "scores": {
+   "demand": 3,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "RENO-01": {
+  "agent": 3.5500000000000003,
+  "cal": 3.5500000000000003,
+  "adj": {},
+  "note": "Scalony z RENO-02 jako opcjonalna gałąź PV (wspólny silnik i moment decyzji; rynek PV kurczy się po 25D).",
+  "status": "pilot (jako gałąź RENO-02)",
+  "scores": {
+   "demand": 3,
+   "gap": 4,
+   "ai_distribution": 2,
+   "ad_potential": 5,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "FIN-01": {
+  "agent": 3.5,
+  "cal": 3.3000000000000003,
+  "adj": {
+   "gap": 2
+  },
+  "note": "Kalibracja: luka 3→2 — audyt znalazł co najmniej 6 darmowych kalkulatorów porównujących HELOC / home equity loan / cash-out.",
+  "status": "zbadać",
+  "scores": {
+   "demand": 4,
+   "gap": 2,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 4,
+   "reliability": 3,
+   "shared_engine": 5
+  },
+  "direct": false,
+  "rec": "zbadać"
+ },
+ "AUTO-02": {
+  "agent": 3.3000000000000003,
+  "cal": 3.3000000000000003,
+  "adj": {},
+  "note": "",
+  "status": "zbadać",
+  "scores": {
+   "demand": 4,
+   "gap": 3,
+   "ai_distribution": 2,
+   "ad_potential": 4,
+   "feasibility": 3,
+   "reliability": 3,
+   "shared_engine": 4
+  },
+  "direct": false,
+  "rec": "zbadać"
+ }
+}

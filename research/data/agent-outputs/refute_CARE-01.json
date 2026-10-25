@@ -1,0 +1,110 @@
+{
+ "id": "CARE-01",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+   "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytania 3 i 7): kalkulator break-even porównujący aging in place z assisted living, uwzględniający modyfikacje domu, opiekę domową i nadzór 24/7. Tylko 2 warianty. Summary nie wspomina o runway oszczędności, sprzedaży domu, trajektorii potrzeb ani wariantach mieszkanie dostępne/55+/rodzina/CCRC. Nadal najbliższy funkcjonalnie, ale niepełny.",
+   "what_to_check_manually_pl": "Czy ma oś czasu wieloletnią, rok wyczerpania oszczędności, wpływ sprzedaży domu, eskalację godzin opieki i amortyzację capex modyfikacji na oczekiwany czas w domu. Czy 24/7 automatycznie wymusza placówkę."
+  },
+  {
+   "name": "Caring List – Senior Care Cost Calculator",
+   "url": "https://caringlist.com/tools/care-cost-calculator",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytanie 3): wg summary szacuje koszty per stan, porównuje pozostanie w domu z przeprowadzką i liczy savings runway. Nowy wobec poprzedniego audytu. Kolejne zapytanie (4) nie potwierdziło strony ani funkcji home equity. Łączy 2 z kilku kluczowych zależności, brak dowodów na sprzedaż domu, modyfikacje, trajektorię i wiele wariantów.",
+   "what_to_check_manually_pl": "Najważniejszy do ręcznej weryfikacji: czy runway liczony jest per wariant, czy jest pole kapitału z domu/sprzedaży, eskalacja potrzeb w czasie, memory care, małżonek, modyfikacje domu. Jeśli tak, klasyfikacja może wzrosnąć do probably_direct."
+  },
+  {
+   "name": "RetirementBudget.org – Assisted Living Cost Calculator 2026",
+   "url": "https://www.retirementbudget.org/calculators/assisted-living-cost-calculator",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytanie 6): roczna tabela kosztu, dochodu, luki i pozostałych oszczędności, liczba lat do wyczerpania, porównanie assisted living z opieką domową i domem opieki, inflacja 3%/rok. Brak wzmianki o sprzedaży domu, modyfikacjach, rosnących godzinach opieki i wariancie dostępnego mieszkania.",
+   "what_to_check_manually_pl": "Czy runway jest liczony osobno dla home care i AL (a nie tylko dla AL). Czy przyjmuje wpływy ze sprzedaży domu i rosnące godziny opieki."
+  },
+  {
+   "name": "ParentCareCalc – Assisted Living vs Home Care Cost Calculator 2026 (by state)",
+   "url": "https://parentcarecalc.com/",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytanie 3): sam tytuł wyniku. Porównanie AL z home care per stan. Brak opisu funkcji. Nowy wobec poprzedniego audytu.",
+   "what_to_check_manually_pl": "Zakres: tylko porównanie miesięczne/break-even, czy także runway, kapitał z domu, trajektoria i warianty."
+  },
+  {
+   "name": "SeniorCareCostCalc – Free Senior Care Cost Calculator 2026 / Assisted Living Cost Calculator",
+   "url": "https://seniorcarecostcalc.com/",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytania 3 i 6): tytuły i ogólna wzmianka o kalkulatorach kosztu opieki, podstrona https://seniorcarecostcalc.com/tools/assisted-living-cost-calculator. Brak opisu integracji wariantów. Nowy wobec poprzedniego audytu.",
+   "what_to_check_manually_pl": "Czy ma moduł porównania stay vs move z runway i sprzedażą domu, czy tylko osobne kalkulatory per typ opieki."
+  },
+  {
+   "name": "'Sell or Rent Mom's House for Care?' 5-minute calculator (Dallas-Fort Worth, komunikat prasowy maj 2026)",
+   "url": "https://news.marketersmedia.com/sell-or-rent-momandx27s-house-for-care-5-minute-calculator-tool-released/89191780",
+   "classification": "partial",
+   "evidence_pl": "search-summary (zapytanie 3): regionalny kalkulator porównujący sprzedaż, wynajem albo zatrzymanie domu na sfinansowanie opieki. Pokrywa zależność 'sprzedaż domu odblokowuje kapitał', której brakowało u innych. Nie pokrywa break-even godzin, wariantów opieki ani trajektorii. URL to komunikat prasowy, nie samo narzędzie.",
+   "what_to_check_manually_pl": "Gdzie jest samo narzędzie (prawdopodobnie strona agenta nieruchomości). Czy łączy wynik ze scenariuszem kosztu opieki i runway."
+  },
+  {
+   "name": "Kitces – 'The 6-Figure Decision: CCRCs And Other Later-Life Housing' (Housing & Care Matrix + wzmiankowany kalkulator dla doradców)",
+   "url": "https://www.kitces.com/blog/continuing-care-retirement-communities-ccrc-housing-care-decision-strategies-options-later-life-retirement-community-planning/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytanie 7): artykuł dla doradców z macierzą porównawczą aging in place / rental lub 55+ / CCRC / ALF oraz wzmianka o kalkulatorze modelującym typy kontraktów CCRC, zwroty, lata w poziomach opieki i LTCI. Nazwy i dostępności kalkulatora nie udało się ustalić (zapytanie 8 też go nie znalazło). Macierz koncepcyjnie pokrywa warianty A/C/D/F, ale jest to framework, nie symulator konsumencki.",
+   "what_to_check_manually_pl": "Nazwa i dostępność kalkulatora wspomnianego w artykule (możliwe narzędzie dla doradców). Czy obejmuje aging in place z rosnącą opieką i kapitałem z domu. To potencjalnie najgroźniejszy płatny konkurent B2B."
+  },
+  {
+   "name": "myLifeSite – 'Crunch the Numbers' (Broadmead) / Comparing Life Plan Communities on Price",
+   "url": "https://www.broadmead.org/crunch-the-numbers.html",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytanie 2): artykuły myLifeSite o aging at home vs life plan community, przewodnik PDF https://www.stoneridgelcs.com/wp-content/uploads/4528c8f8-comparing-life-plan-retirement-communities-on-price.pdf. Samego kalkulatora myLifeSite wyniki nie pokazały.",
+   "what_to_check_manually_pl": "Czy myLifeSite ma narzędzie 'home vs CCRC' z projekcją wieloletnią i kosztem opieki domowej. Zakres prawdopodobnie tylko CCRC (wariant F)."
+  },
+  {
+   "name": "CareYaya – Home Care vs CCRC Cost guide",
+   "url": "https://www.careyaya.org/home-care-costs/home-care-vs-continuing-care-retirement-community",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytania 2 i 7): poradnik zalecający pełne porównanie ścieżki domowej: mieszkanie + utrzymanie + modyfikacje + transport + obecne i przyszłe godziny opieki + obciążenie rodziny. Ostrzega przed porównywaniem dzisiejszych godzin z opłatą CCRC. Opisuje tę samą logikę co CARE-01, ale bez narzędzia.",
+   "what_to_check_manually_pl": "Czy na stronie jest interaktywny kalkulator, czy tylko tekst."
+  },
+  {
+   "name": "Watermark Communities / Friendship Village / Masonicare / The Pines at Davidson – arkusze 'stay at home vs senior living'",
+   "url": "https://www.watermarkcommunities.com/plan/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytania 1 i 2): drukowane arkusze operatorów senior living, np. https://www.friendshipvillageaz.com/wp-content/uploads/2025/06/FVT-Comparison_Guide-1.pdf i https://thepinesatdavidson.org/comparing-the-cost-of-senior-living/ (tygodniowe godziny opieki wg typu × stawka stanowa + koszty domu vs CCRC). Statyczne, sprzedażowe, bez projekcji i runway.",
+   "what_to_check_manually_pl": "Czy któryś arkusz jest wersją XLSX z formułami i horyzontem wieloletnim."
+  },
+  {
+   "name": "Caring.com – Budget Calculator",
+   "url": "https://www.caring.com/budget-calculator",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytanie 4): analizuje oszczędności, świadczenia i ubezpieczenia, porównuje budżet z lokalnymi kosztami i podaje listę placówek (lead-gen). Nie porównuje ścieżek domowych z placówką w czasie.",
+   "what_to_check_manually_pl": "Czy uwzględnia kapitał z domu i opcję home care."
+  },
+  {
+   "name": "Affordable Home Care – Home Care vs Assisted Living: A Decision Framework for Michigan Families",
+   "url": "https://affordablehomecare.org/guides/home-care-vs-assisted-living",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytanie 6): framework decyzyjny z progiem ok. 12 h/dzień (oraz 40–50 h/tydz. w innym miejscu). Zaleca wliczenie wpływów ze sprzedaży domu i bufora na eskalację potrzeb. Tekst regionalny, nie symulator.",
+   "what_to_check_manually_pl": "Czy zawiera interaktywne narzędzie."
+  },
+  {
+   "name": "Mercer Advisors – Lifecare contracts: time, cost and long-term care",
+   "url": "https://www.merceradvisors.com/insights/personal-finance/lifecare-contracts-time-cost-and-long-term-care/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary (zapytanie 8): model wartości pieniądza w czasie dla kontraktów LifeCare (dyskonto 5%, inflacja opłat 3%). Dotyczy tylko CCRC.",
+   "what_to_check_manually_pl": "Czy jest dostępny jako narzędzie/arkusz, czy tylko jako przykład w artykule."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Próba obalenia tezy poprzedniego audytora nie powiodła się, mimo innych sformułowań: arkusz/template, CCRC/myLifeSite, Reddit i język naturalny rodziny, aplikacje AI 2026, projekcja wieloletnia ze sprzedażą domu, software dla doradców.\n\nNowe kandydatury wobec poprzedniego audytu: Caring List, ParentCareCalc, SeniorCareCostCalc, regionalny kalkulator 'Sell or Rent Mom's House for Care', macierz Kitces, arkusze Watermark, Friendship Village i Pines at Davidson. Wszystkie są partial albo substitute.\n\nRynek pozostaje rozdrobniony na części:\n- break-even godzin: Riggins, seniorcarecalc, ParentCareCalc;\n- runway rok po roku: RetirementBudget.org, Caring List, The Care Compass;\n- sprzedaż domu: tylko regionalny kalkulator DFW, bez modelu opieki;\n- CCRC: myLifeSite, Mercer, kalkulator wzmiankowany u Kitces;\n- logika pełnego porównania jako tekst: CareYaya, Affordable Home Care, Kitces.\n\nŻaden wynik nie łączy w jednej osi czasu kilku wariantów: zostaje z małą/dużą adaptacją, dostępne mieszkanie, AL/memory care, rodzina, CCRC. Żaden nie łączy też eskalacji godzin opieki, wymuszenia placówki przy 24/7, amortyzacji capex modyfikacji, kapitału ze sprzedaży domu, roku wyczerpania oszczędności i małżonka. Luka ma charakter integracyjny.\n\nRyzyka, które mogą obalić wniosek:\n(1) Caring List: summary sugeruje porównanie stay vs move z runway. Nie zweryfikowano, czy ma kapitał z domu i trajektorię potrzeb.\n(2) Niezidentyfikowany kalkulator dla doradców wspomniany u Kitces, potencjalny płatny konkurent B2B.\n(3) Ogólne planery emerytalne (np. typu Boldin/ProjectionLab), które pozwalają ręcznie zamodelować sprzedaż domu i koszty LTC. Tej kategorii nie przeszukano w tej sesji, więc pozostaje niezweryfikowana.\n\nAI self-solve: wyszukiwarka sama podała 4-krokowy przepis na roczny model runway z dwoma ścieżkami (zapytanie 6). Potwierdza to wysokie ryzyko samodzielnego rozwiązania przez asystenta dla wersji uproszczonej.\n\nZakres: 8 wyszukiwań (4 standard, 4 extended), wyniki US, angielski, dowody wyłącznie z search-summary, strony nieotwierane. Pewność: średnia.",
+ "search_scope_pl": "8 wywołań WebSearch (limit wyczerpany): 4 standard, 4 extended, wyniki US, język angielski. WebFetch niedostępny, więc żadnej strony nie otwarto, a dowody to wyłącznie search-summary.\n\nKąty wyszukiwania:\n- arkusze/szablony Excel;\n- CCRC vs pozostanie w domu (myLifeSite);\n- rekomendacje Reddit i naturalne sformułowanie rodziny (zwrócone wyniki to kalkulatory, nie wątki Reddit);\n- weryfikacja Caring List (nieudana);\n- aplikacje AI/planery 2026;\n- projekcja wieloletnia z rosnącymi potrzebami i sprzedażą domu;\n- software/planery aging in place dla doradców;\n- kalkulator CCRC dla doradców z latami w poziomach opieki.\n\nNie przeszukano osobno: ogólnych planerów emerytalnych (Boldin, ProjectionLab itp.), app store (iOS/Android), Etsy jako sklepu z szablonami ani platform B2B dla doradców poza Kitces.",
+ "confidence": "medium",
+ "queries_run": [
+  "aging in place vs assisted living spreadsheet template Excel cost comparison elderly parent",
+  "myLifeSite financial comparison staying at home vs CCRC calculator",
+  "reddit tool to decide whether parent should stay home with caregivers or move to assisted living, how long will savings last, sell house",
+  "caringlist.com senior care cost calculator savings runway home equity compare home care assisted living memory care",
+  "AI senior care planning app 2026 compare aging at home vs senior living scenarios family caregiver financial plan",
+  "calculator multi-year projection rising care needs sell home proceeds fund assisted living vs stay home with home care, when will money run out",
+  "\"aging in place\" planning software or planner tool compares housing options home modification, in-home care, assisted living, CCRC with cost projections for clients or families",
+  "advisor calculator CCRC contract types entrance fee refund years in each care level vs aging in place long-term care insurance comparison tool"
+ ]
+}

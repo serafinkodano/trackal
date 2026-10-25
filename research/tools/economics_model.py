@@ -44,7 +44,7 @@ INPUTS = [
     ("expert_hourly", "Stawka eksperta (EA/CPA/CFP/fachowiec)", "USD / h",
      {"conservative": 250, "base": 175, "optimistic": 125}, "ZAŁOŻENIE (do potwierdzenia ofertą)"),
     ("expert_hours_new_tool", "Godziny eksperta na nowy symulator (średnio, mix poziomów ryzyka)", "h / narzędzie",
-     {"conservative": 8, "base": 5, "optimistic": 3}, "ZAŁOŻENIE"),
+     {"conservative": 18, "base": 13, "optimistic": 9}, "ZAŁOŻENIE skalibrowane do szacunków agentów fali 2b dla 5 produktów pilotażowych (łącznie ~55-90 h; agent P&C, dekarz, CPA/EA, inżynier energetyczny, specjalista F&I)"),
     ("expert_hours_upkeep_tool_year", "Godziny eksperta na utrzymanie narzędzia rocznie", "h / narzędzie / rok",
      {"conservative": 4, "base": 2, "optimistic": 1}, "ZAŁOŻENIE"),
     ("owner_hours_month", "Czas właściciela na utrzymanie (bez budowy nowych narzędzi)", "h / mies.",

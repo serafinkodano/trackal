@@ -1,0 +1,835 @@
+{
+ "seeds": [
+  {
+   "seed_id": "D",
+   "restated_problem_pl": "Właściciel samochodu spalinowego z kredytem, w którym saldo do spłaty (payoff) przewyższa wartość odkupu lub sprzedaży (negative equity, 'upside down'), rozważa przejście na EV. Warianty decyzji: (1) zatrzymać obecne auto i spłacać do wyjścia na dodatnie equity (lub do końca kredytu), (2) wymienić teraz na EV i przenieść ujemny kapitał do nowego kredytu, (3) wymienić teraz, ale dopłacić lukę gotówką, (4) sprzedać prywatnie i pokryć lukę pożyczką, (5) wziąć EV w leasing z wliczonym negative equity, (6) odczekać N miesięcy i dopiero wtedy wymienić. Do tego wybór: nowy czy używany EV. Ograniczenia: maksymalna rata miesięczna, gotówka na wkład i instalację ładowarki, dostęp do ładowania w domu (właściciel czy najemca, wydolność instalacji elektrycznej), horyzont posiadania auta. Oczekiwany wynik: porównanie wariantów w horyzoncie 3–7 lat (koszt netto, wartość netto majątku samochodowego, rata, łączne odsetki), miesiąc wyjścia z negative equity, punkt break-even, w którym oszczędności na energii pokrywają dodatkowe odsetki od przeniesionego długu, oraz analiza wrażliwości (APR, deprecjacja EV, ceny prądu i benzyny, przebieg, składka ubezpieczenia, koszt naprawy starego auta).",
+   "integration_check_pl": "Sprawdzenie, czy moduły naprawdę na siebie wpływają. REALNE sprzężenia: (a) negative equity → kwota nowego kredytu → rata i odsetki → LTV nowego kredytu → potrzeba gap insurance i ewentualnie wyższe APR albo odmowa przy wysokim LTV (to drugie to hipoteza, niezweryfikowane); (b) czas: equity(t) = wartość auta(t) − saldo(t). Czekanie zmienia jednocześnie saldo (amortyzacja) i wartość auta (deprecjacja), więc wariant 'poczekaj' to prawdziwy problem sekwencji zdarzeń i właśnie tu leży rdzeń wartości; (c) dostęp do ładowania w domu → koszt na milę (search-summary: ok. $0.046/mi przy ładowaniu w domu wobec $0.10–0.14/mi na publicznym DC fast; evratio.com, electvehicles.com) → break-even. Koszt instalacji ładowarki zależy od instalacji elektrycznej (hipoteza: wymiana panelu) i od tego, czy użytkownik jest właścicielem, czy najemcą; (d) szybka deprecjacja EV → ryzyko ponownego negative equity na nowym aucie (spirala rolloverów). SŁABE lub SKLEJONE: ubezpieczenie (search-summary: EV droższe o $100–400 rocznie albo o 15–25%) i serwis to addytywne pozycje TCO, które nie zmieniają pozostałych modułów (wyjątek: gap insurance). Wniosek: integracja jest częściowo realna, z 2–3 rzeczywistymi sprzężeniami (equity × czas, LTV × finansowanie, ładowanie × przebieg). Reszta to sklejone pozycje TCO. Element 'EV' nie jest potrzebny do rdzenia: ten sam problem występuje przy przejściu na hybrydę albo na tańsze auto spalinowe.",
+   "competitors": [
+    {
+     "name": "Coltura EV savings calculator",
+     "url": "https://coltura.org/?p=6032",
+     "type": "partial",
+     "features_claimed": "Porównuje koszt posiadania EV z dalszą jazdą obecnym autem spalinowym; uwzględnia zachęty, cenę EV i miesięczną ratę (search-summary)",
+     "paid": "bezpłatny (search-summary)",
+     "notes": "Najbliższe ujęcie keep-vs-EV. Brak dowodu, że modeluje payoff kredytu lub negative equity: niezweryfikowana."
+    },
+    {
+     "name": "GeneralStaff EV Calculator",
+     "url": "https://generalstaff.org/Tech/EV_Calculator.htm",
+     "type": "partial",
+     "features_claimed": "Ujmuje wybór jako 'zatrzymaj spłacone auto spalinowe na kilka lat' wobec 'raty za nowe EV' (search-summary)",
+     "paid": "bezpłatny (search-summary)",
+     "notes": "Zakłada spłacone auto, więc wariant negative equity jest prawdopodobnie poza zakresem (niezweryfikowana)."
+    },
+    {
+     "name": "NPR / KUNC: 'At what point does it make sense to ditch a gas car for an EV'",
+     "url": "https://www.kunc.org/npr-news/2026-06-01/at-what-point-does-it-make-sense-to-ditch-a-gas-car-for-an-electric-vehicle",
+     "type": "substitute",
+     "features_claimed": "Przykład liczbowy (Jeep 2016 vs Chevy EV 2025) z odjęciem trade-in od ceny EV; wzmianka o narzędziu DOE TCO obejmującym paliwo, opony, serwis, rejestrację, ubezpieczenie i ratę (search-summary)",
+     "paid": "bezpłatny",
+     "notes": "Artykuł, nie narzędzie; jednocześnie dowód, że pytanie jest zadawane (2026-06-01). Narzędzia DOE nie zweryfikowano, a jego URL nie pojawił się w wynikach."
+    },
+    {
+     "name": "Central Hudson EV Savings Calculator",
+     "url": "https://centralhudson.com/en/my-energy/save-energy-money/energy-calculators/ev-calculator/",
+     "type": "partial",
+     "features_claimed": "Kalkulator zakładu energetycznego; lokalne stawki za prąd i koszty ładowania (search-summary)",
+     "paid": "bezpłatny",
+     "notes": "Moduł energii; finansowanie i negative equity niezweryfikowane."
+    },
+    {
+     "name": "Georgia Power EV savings calculator",
+     "url": "https://georgiapower.com/residential/save-money-and-energy/products-programs/electric-vehicles/ev-savings-calc.html",
+     "type": "partial",
+     "features_claimed": "Kalkulator oszczędności EV od zakładu energetycznego (tytuł wyniku)",
+     "paid": "bezpłatny",
+     "notes": "Funkcje poza tytułem niezweryfikowane."
+    },
+    {
+     "name": "The Zebra – Gas vs Hybrid vs Electric Cars: Calculator and Guide",
+     "url": "https://www.thezebra.com/resources/driving/gas-car-vs-hybrid-car-vs-electric-car/",
+     "type": "partial",
+     "features_claimed": "Kalkulator i poradnik porównujący auta spalinowe, hybrydy i EV (tytuł wyniku); serwis ubezpieczeniowy",
+     "paid": "bezpłatny",
+     "notes": "Moduł ubezpieczenia prawdopodobny; szczegóły niezweryfikowane."
+    },
+    {
+     "name": "Calculory EV Total Cost of Ownership Calculator",
+     "url": "https://calculory.com/calculators/sustainability/ev-total-cost-of-ownership-calculator",
+     "type": "partial",
+     "features_claimed": "EV vs gas TCO 2026; użytkownik wpisuje stawkę za prąd, cenę benzyny, przebieg, ubezpieczenie i okres posiadania (search-summary)",
+     "paid": "bezpłatny (search-summary)",
+     "notes": "Brak dowodu modelowania negative equity."
+    },
+    {
+     "name": "EVRatio EV TCO Calculator 2026",
+     "url": "https://evratio.com/ev-total-cost-of-ownership-calculator/",
+     "type": "partial",
+     "features_claimed": "TCO EV vs gas; ładowanie w domu vs DC fast; założenia rezydualne (search-summary)",
+     "paid": "bezpłatny (search-summary)",
+     "notes": "Finansowanie i trade-in niezweryfikowane."
+    },
+    {
+     "name": "Desk2Deal EV vs Gas (demo oprogramowania dealerskiego)",
+     "url": "https://desk2deal.com/demo/ev-vs-gas",
+     "type": "partial",
+     "features_claimed": "Kalkulator EV vs gas w demie oprogramowania dla dealerów (tytuł wyniku)",
+     "paid": "demo B2B; model płatności niezweryfikowany",
+     "notes": "Pokazuje, że dealerzy mają takie narzędzia w procesie sprzedaży; integracja z trade-in niezweryfikowana."
+    },
+    {
+     "name": "evgascalc.com",
+     "url": "https://evgascalc.com/",
+     "type": "partial",
+     "features_claimed": "EV vs gas cost i zachęty stanowe (tytuł wyniku)",
+     "paid": "bezpłatny",
+     "notes": "Śledzenie zachęt stanowych; negative equity niezweryfikowane."
+    },
+    {
+     "name": "ElectVehicles EV vs Gas vs Hybrid TCO Calculator",
+     "url": "https://www.electvehicles.com/2026/09/ev-vs-gas-vs-hybrid-tco-calculator.html",
+     "type": "partial",
+     "features_claimed": "TCO EV vs gas vs hybryda (tytuł wyniku; w tytule '2027')",
+     "paid": "bezpłatny",
+     "notes": "Strona blogowa; jakość i zakres niezweryfikowane."
+    },
+    {
+     "name": "Bankrate Negative Equity Auto Loan Calculator",
+     "url": "https://www.bankrate.com/loans/auto-loans/negative-equity-auto-loan-calculator",
+     "type": "partial",
+     "features_claimed": "Wejścia: kwota rolloveru, łączna kwota kredytu na nowe auto, okres (36–84 mies.), APR (search-summary)",
+     "paid": "bezpłatny",
+     "notes": "Liczy koszt rolloveru; brak dowodu na wariant 'poczekaj', TCO i porównanie napędów (niezweryfikowana)."
+    },
+    {
+     "name": "Caribou negative equity rollover calculator",
+     "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+     "type": "partial",
+     "features_claimed": "Rachunek rolloveru dla $5k/$10k/$15k; ok. $20/mies. na każde $1 000 negative equity; statystyka 30.9% trade-inów z negative equity w Q1 2026 (search-summary)",
+     "paid": "bezpłatny; narzędzie lead-gen refinansowania",
+     "notes": "Kanał lead-gen kredytodawcy; brak modułu EV/TCO (niezweryfikowane)."
+    },
+    {
+     "name": "AEVA EV payback calculator (Australia)",
+     "url": "https://aeva.asn.au/ev-payback-calculator/",
+     "type": "partial",
+     "features_claimed": "Lata do zwrotu nowego EV zależnie od kosztu auta i przebiegu (search-summary)",
+     "paid": "bezpłatny",
+     "notes": "Rynek australijski; nie konkuruje w SERP USA, ale pokazuje gotowy wzorzec 'payback'."
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie: (1) Caribou podaje, że 30.9% trade-inów przy zakupie nowego auta miało negative equity w Q1 2026 (search-summary, caribou.com). To rozpowszechnienie sytuacji, NIE popyt na narzędzie; (2) NPR/KUNC (2026-06-01) odpowiada na pytanie słuchacza 'At what point does it make sense to ditch a gas car for an electric vehicle?'. To anegdotyczny dowód, że pytanie keep-vs-EV pada; (3) w dwóch zapytaniach pojawiło się co najmniej 10 kalkulatorów EV vs gas z '2026' lub '2027' w tytule. Wydawcy najwyraźniej widzą tu popyt, ale to także sygnał zatłoczenia SEO (liczba wyników ≠ konkurencja ≠ popyt). Brak danych o wolumenach, zarówno w Google, jak i w promptach LLM. Hipoteza / niezweryfikowane: po wygaśnięciu federalnego kredytu na EV popyt na nowe EV w USA osłabł, co zmniejsza segment 'underwater i rozważa EV'. Przecięcie obu warunków (negative equity ∩ zamiar zakupu EV) jest węższe niż każdy z nich osobno.",
+   "ai_risk_pl": "Ryzyko, że użytkownik rozwiąże to sam w asystencie AI, jest średnio-wysokie (dla rdzenia finansowego wysokie). Wszystkie kluczowe dane (payoff, oferta trade-in, APR, przebieg) użytkownik zna i może wkleić do ChatGPT, Claude czy Gemini; te z narzędziem do kodu policzą amortyzację i TCO. Przewagi strony: aktualne lokalne ceny energii i paliwa, krzywe deprecjacji, stanowe zasady podatku od sprzedaży przy trade-in, wykres miesiąca wyjścia z negative equity, jawna analiza wrażliwości. Nie przenoszę reguł Google na asystentów: nie ma danych, czy ChatGPT, Perplexity czy Copilot odsyłałyby do takiego narzędzia, zamiast odpowiadać same (hipoteza / niezweryfikowane).",
+   "maintenance_pl": "Zmiany 2025–2026 (wiedza z treningu, NIEZWERYFIKOWANE w tej sesji z powodu limitu wyszukiwań; hipoteza / niezweryfikowane): ustawa OBBBA (lipiec 2025) zakończyła kredyty 30D/25E/45W dla pojazdów nabytych po 2025-09-30 oraz kredyt 30C na ładowarki dla instalacji oddanych po 2026-06-30. Wprowadziła też odliczenie odsetek od kredytu na nowy pojazd montowany w USA (do $10 000 rocznie, lata 2025–2028, z progami dochodowymi). To sprzężenie finansowanie × wybór auta × dochód, ale tymczasowe. Search-summary potwierdza jedynie, że część kalkulatorów wciąż zakłada kredyt $7,500, który 'may no longer apply', co sugeruje, że konkurenci słabo aktualizują dane. Dane do automatyzacji: ceny benzyny i prądu (EIA) oraz oprocentowanie kredytów auto (Fed/FRED); dostępność API to hipoteza. Dane trudne: składki ubezpieczeń (brak publicznego źródła), deprecjacja i wartości rezydualne (dane KBB/Edmunds są płatne, hipoteza), stanowe zachęty EV (często się zmieniają; evgascalc.com specjalizuje się w ich śledzeniu), stanowe zasady opodatkowania trade-in. Ogólnie utrzymanie średnie.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Zmodyfikować, nie zachowywać w obecnej postaci. (1) Moduły EV TCO, ładowarki, energii i ubezpieczenia są gęsto obsłużone przez zakłady energetyczne, ubezpieczycieli, dealerów i niszowe strony z 2026 roku. To konkurenci częściowi, a same moduły są w dużej mierze addytywne. (2) Realny i słabiej obsłużony rdzeń to dynamika negative equity w czasie (zatrzymaj / wymień teraz / poczekaj / dopłać lukę / sprzedaj prywatnie). Bankrate i Caribou liczą koszt rolloveru, Coltura i GeneralStaff porównują keep-vs-EV, ale w badanym, wąskim zakresie nie znaleziono bezpośredniego konkurenta łączącego te elementy z wariantem 'poczekaj N miesięcy'. (3) Przywiązanie do EV zawęża rynek i wiąże produkt z niestabilną polityką zachęt. Rekomendacja: przebudować na niezależny od napędu 'Underwater Car Loan Exit Planner' (S3-R1), w którym EV, hybryda lub benzyna to tylko parametr, a ładowarka i ubezpieczenie to opcjonalne wejścia. Pewność niska z powodu niewykonanych wyszukiwań.",
+   "search_scope_pl": "Wykonano tylko 3 wyszukiwania dla tego seeda (wymagane co najmniej 10): 'keep my car or buy an EV calculator' (standard), 'EV total cost of ownership calculator home charger electricity insurance comparison gas car' (extended), 'negative equity trade-in calculator roll over new car loan' (standard). Pięć kolejnych zapytań zablokował współdzielony limit 200 wyszukiwań na turę: Reddit 'upside down on car loan want to buy EV', status federalnego kredytu EV, odliczenie odsetek z OBBBA, 'repair or replace car calculator', 'DOE AFDC vehicle cost calculator'. WebFetch nie był używany. NIE sprawdzono: narzędzi DOE AFDC i fueleconomy.gov (wspomniane tylko w podsumowaniu NPR), Edmunds True Cost to Own, KBB, CarEdge, narzędzi dealerów i banków kaptywnych, forów i Reddita, płatnych aplikacji ani arkuszy. Odrzucono 2 wyniki wyglądające na spam (aegro.com.br, podstrona policy-wizard.fas.harvard.edu). Wszystkie dowody mają status search-summary. Pewność: niska.",
+   "confidence": "low"
+  },
+  {
+   "seed_id": "E",
+   "restated_problem_pl": "Pracownik w USA z niezawestowanymi RSU lub opcjami (a często także z rocznym bonusem, niezawestowanym matchem 401k, ESPP) dostaje ofertę pracy w innym mieście. Nowy pracodawca proponuje sign-on bonus (często jako 'make-whole') z klauzulą zwrotu (clawback: pełny lub pro rata przy odejściu w ciągu 12–24 miesięcy) oraz pakiet relokacyjny (lump sum lub managed, często z umową zwrotu). Pracownik ma dom, który musiałby sprzedać lub wynająć. Warianty: (1) zostać; (2) przyjąć ofertę, przenieść się od razu i sprzedać dom; (3) przyjąć z późniejszą datą startu, żeby złapać najbliższy vest lub bonus; (4) przyjąć i wynająć dom zamiast go sprzedawać; (5) negocjować wyższy make-whole, dodatkowy grant equity albo pracę zdalną; (6) przyjąć i przejść okres podwójnego mieszkania do czasu sprzedaży. Ograniczenia: gotówka na okres przejściowy, najpóźniejsza data startu akceptowana przez nowego pracodawcę, ryzyko zwolnienia w nowej firmie w okresie clawback. Oczekiwany wynik: wartość netto po podatkach w horyzoncie 1–4 lat dla każdego wariantu, ekspozycja na clawback w czasie, wymagana kwota make-whole, przepływy gotówki w miesiącach przeprowadzki, wrażliwość na kurs akcji, cenę domu, stopy hipoteczne i datę startu.",
+   "integration_check_pl": "Integracja jest REALNA i silna, to nie są sklejone kalkulatory. (a) Data startu ↔ daty vestingu ↔ początek okna clawback ↔ data zamknięcia sprzedaży domu: to prawdziwa sekwencja zdarzeń. (b) Sprzedaż domu ↔ wyłączenie z §121 (2 z 5 lat; częściowe wyłączenie przy zmianie pracy; wiedza z treningu, niezweryfikowane) ↔ podatek od zysku. (c) Sprzedaż ↔ utrata niskooprocentowanego kredytu ↔ koszt mieszkania w nowym mieście po bieżących stopach (efekt 'lock-in'; skala w 2026 to hipoteza). (d) Sign-on wypłacany jest netto po potrąceniach, a zwrot zwykle brutto (mechanizm claim-of-right; niezweryfikowane) ↔ prawdopodobieństwo odejścia lub zwolnienia. (e) Stan zamieszkania ↔ opodatkowanie vestów i bonusu (alokacja między stanami; niezweryfikowane). Słabość nie leży w integracji, tylko w: zbyt wielu modułach na jeden przypadek, dużej zmienności klauzul umownych (każda oferta jest inna), wysokim udziale danych podatkowo-prawnych i bardzo wąskim przecięciu warunków (niezawestowane equity ∩ własny dom ∩ relokacja).",
+   "competitors": [
+    {
+     "name": "AllocateAI Comp Comparison (2026)",
+     "url": "https://allocateai.io/calculators/comp-comparison",
+     "type": "partial",
+     "features_claimed": "Porównanie ofert w horyzoncie 4 lat; uwzględnia relokację i sign-on (sign-on w latach 1–2, relokacja w roku 1); zakłada płaski kurs akcji, brak awansów i refresherów (search-summary)",
+     "paid": "niezweryfikowane",
+     "notes": "Najbliższy znaleziony. Brak dowodu, że modeluje utracone equity u obecnego pracodawcy, clawback i sprzedaż domu (niezweryfikowana)."
+    },
+    {
+     "name": "SheCodes Job Offer Comparison Calculator",
+     "url": "https://tools.shecodes.io/career-tools/offer",
+     "type": "partial",
+     "features_claimed": "Do 3 ofert; sign-on i vesting equity; sumy po roku 1 i po 4 latach; equity wyceniane wartością grantu; bez podatków (search-summary)",
+     "paid": "bezpłatny (search-summary)",
+     "notes": "Brak podatków i utraconego equity."
+    },
+    {
+     "name": "Salario Job Offer Comparison Calculator 2026",
+     "url": "https://salario.io/job-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Sign-on, equity, koszty dojazdu; formuła rocznego total comp z sign-on rozłożonym na 2 lata (search-summary)",
+     "paid": "niezweryfikowane",
+     "notes": "Model uproszczony; clawback niezweryfikowany."
+    },
+    {
+     "name": "LoopCV Job Offer Comparison",
+     "url": "https://www.loopcv.pro/tools/job-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Do 3 ofert, ważona karta oceny czynników niefinansowych, wynik do pobrania (search-summary i tytuł)",
+     "paid": "niezweryfikowane",
+     "notes": "Bardziej scoring niż symulacja."
+    },
+    {
+     "name": "Offerjudge",
+     "url": "https://offerjudge.com/",
+     "type": "partial",
+     "features_claimed": "Ocena do 4 ofert; zaleca wpisać wartość vestującą w typowym roku, a nie nagłówkowy grant (search-summary)",
+     "paid": "niezweryfikowane",
+     "notes": "Utracone equity i clawback niezweryfikowane."
+    },
+    {
+     "name": "SheetsResume Job Offer Comparison",
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "type": "partial",
+     "features_claimed": "Take-home pay i total comp (tytuł wyniku)",
+     "paid": "niezweryfikowane",
+     "notes": "Szczegóły niezweryfikowane."
+    },
+    {
+     "name": "AgentCalc Job Offer Comparison Calculator",
+     "url": "https://agentcalc.com/job-offer-comparison-calculator",
+     "type": "partial",
+     "features_claimed": "Pensja, bonus, koszty dojazdu (tytuł wyniku)",
+     "paid": "bezpłatny (prawdopodobnie)",
+     "notes": "Zakres wąski."
+    },
+    {
+     "name": "SmartTaxCalc Salary Offer Comparison (Indie)",
+     "url": "https://smarttaxcalc.in/tools/salary-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Base, RSU, koszt życia w mieście, take-home; dyskontuje equity i bonusy narażone na clawback; uwaga: sign-on ma zwykle 1–2 letni clawback (search-summary)",
+     "paid": "niezweryfikowane",
+     "notes": "Rynek indyjski. Pokazuje, że koncepcja dyskontowania clawback już istnieje."
+    },
+    {
+     "name": "Secfi (treści + Stock Option Tax Calculator)",
+     "url": "https://secfi.com/learn/should-i-stay-in-my-underpaid-job-and-wait-for-the-ipo-or-quit",
+     "type": "partial",
+     "features_claimed": "Artykuł 'stay or quit and wait for IPO'; okno 90 dni na wykonanie opcji; kalkulator podatku od opcji (search-summary)",
+     "paid": "kalkulator prawdopodobnie bezpłatny, usługi płatne (niezweryfikowane)",
+     "notes": "Rozwiązuje fragment dotyczący opcji, bez relokacji i domu."
+    },
+    {
+     "name": "Compound Planning – equity modeling",
+     "url": "https://manual.compoundplanning.com/chapters/decide-equity-worth-investment",
+     "type": "partial",
+     "features_claimed": "Narzędzie modelujące niezawestowane equity w różnych scenariuszach wyceny (search-summary)",
+     "paid": "prawdopodobnie platforma doradcza; dostęp i płatność niezweryfikowane",
+     "notes": "Substytut doradczy dla zamożnych posiadaczy equity."
+    },
+    {
+     "name": "Carta – What happens to equity when you leave",
+     "url": "https://carta.com/blog/what-to-know-about-equity-when-leaving-company/",
+     "type": "substitute",
+     "features_claimed": "Porada, by dopasować datę odejścia do harmonogramu vestingu; odesłanie do kalkulatora AMT (search-summary)",
+     "paid": "bezpłatny (treść)",
+     "notes": "Treść, nie symulator."
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie: w jednym zapytaniu pojawiło się co najmniej 9 darmowych kalkulatorów 'job offer comparison' (SheCodes, AllocateAI, Salario, LoopCV, Offerjudge, SheetsResume, AgentCalc, SmartTaxCalc, Singapur). Kategoria 'compare job offers' jest więc rozpoznawalna i zatłoczona (liczba narzędzi ≠ popyt). Treści Secfi ('should I stay in my underpaid job and wait for the IPO or quit'), Carta, Forge i Fool Wealth pokazują, że wydawcy z branży equity inwestują w temat 'stay vs go z niezawestowanym equity', co pośrednio wskazuje na popyt. Brak danych o wolumenie dla pełnej kombinacji. Hipoteza: przecięcie (niezawestowane equity) ∩ (własny dom) ∩ (relokacja dla pracy) to mały ułamek rynku pracy, a każdy z tych elementów jest wyszukiwany osobno. Hipoteza / niezweryfikowane: mandaty powrotu do biura (RTO) w latach 2025–2026 mogą zwiększać liczbę wymuszonych relokacji.",
+   "ai_risk_pl": "Średnie. Asystent AI policzy utracone equity wobec sign-on i zbuduje tabelę na 4 lata. Częściej myli się w datach, w zasadach clawback (brutto vs netto), w częściowym wyłączeniu z §121 i w opodatkowaniu między stanami. Grupa docelowa (pracownicy tech z RSU) intensywnie korzysta z asystentów AI i doradców, więc skłonność do rozwiązania tego samodzielnie w czacie jest wysoka. Przewaga narzędzia: silnik kalendarza zdarzeń i jawne reguły. Nie ma danych, czy asystenci odsyłaliby do takiego narzędzia (hipoteza).",
+   "maintenance_pl": "Utrzymanie średnio-wysokie, z ryzykiem treści YMYL. Co roku: federalne progi podatkowe, stawka supplemental withholding (22%/37%), tabele podatków stanowych. Zmiany 2025–2026 (wiedza z treningu, NIEZWERYFIKOWANE w tej sesji; hipoteza / niezweryfikowane): OBBBA na stałe utrzymała brak odliczenia kosztów przeprowadzki dla większości pracowników cywilnych, więc pakiet relokacyjny jest opodatkowanym dochodem. Kalifornijska ustawa AB 692 (od 2026-01-01) ogranicza klauzule 'stay-or-pay', z wyjątkami dla sign-on bonusów spełniających określone warunki; inne stany mogą wprowadzać podobne przepisy, więc moduł clawback wymagałby śledzenia prawa stanowego. Kwoty z §121 są stałe od lat, ale pojawiają się propozycje legislacyjne (hipoteza). Stopy hipoteczne (FRED/PMMS) da się automatyzować (dostępność to hipoteza). Klauzul umownych użytkownika nie da się zautomatyzować: wymagają ręcznego wpisania i interpretacji.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Zmodyfikować przez podział na węższe narzędzia. Seed ma realną integrację, a w badanym zakresie nie znaleziono bezpośredniego konkurenta, który łączy utratę niezawestowanego equity u obecnego pracodawcy, clawback i sprzedaż domu. Podsumowanie wyników wprost stwierdza, że znalezione kalkulatory ofert nie modelują utraconego niezawestowanego equity. Mimo to: (1) przecięcie warunków jest bardzo wąskie, co osłabia model 'wielu nowych użytkowników z konkretnym zadaniem'; (2) wynik zależy od klauzul umownych i prawa stanowego, więc ryzyko błędu i treści quasi-prawnych jest wysokie; (3) moduł porównania ofert jest zatłoczony (co najmniej 9 darmowych narzędzi). Lepsze są dwa węższe symulatory z szerszą bazą użytkowników, które zachowują realne sprzężenia: S3-R3 (data rezygnacji + make-whole + clawback, dla każdego zmieniającego pracę z vestingiem lub bonusem, bez wymogu relokacji) oraz S3-R4 (relokujący się właściciel domu: sprzedać, wynająć czy trzymać, z oknem §121 i efektem rate lock-in). Pewność niska.",
+   "search_scope_pl": "Wykonano tylko 2 wyszukiwania dla tego seeda (wymagane co najmniej 10): 'job offer comparison calculator unvested RSU sign-on bonus relocation' (extended) i 'should I leave my job unvested equity calculator' (standard). Dalsze zapytania zablokował współdzielony limit wyszukiwań na turę. NIE sprawdzono: kalkulatorów clawback i repayment, kalkulatorów relokacji i kosztów życia, Levels.fyi, usług negocjacji wynagrodzeń i płatnych platform equity, oprogramowania doradców do planowania scenariuszy, arkuszy polecanych na Reddicie (r/cscareerquestions, r/financialplanning), kalkulatorów 'sell vs rent' ani przepisów stanowych (AB 692). Funkcje narzędzi znane są tylko z podsumowań wyników (search-summary); wszystko poza nimi ma status niezweryfikowane. Pewność: niska.",
+   "confidence": "low"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "S3-R1",
+   "name_en": "Underwater Car Loan Exit Planner (Keep, Trade Now, Wait, or Pay the Gap)",
+   "family": "Auto & household finance",
+   "user_and_moment": "Kierowca w USA z kredytem auto, w którym payoff przewyższa wartość auta. Moment: po otrzymaniu oferty trade-in od dealera, po wycenie poważnej naprawy starego auta albo przy chęci przejścia na EV, hybrydę lub tańsze auto.",
+   "sample_prompt_en": "I owe $24,000 on my 2022 SUV but the dealer only offers $17,500 on trade-in. Should I roll the $6,500 into a loan for a new EV or hybrid, keep paying until I'm not upside down, or sell it privately and cover the gap?",
+   "decision_problem": "Kiedy i jak wyjść z negative equity, żeby zminimalizować łączny koszt mobilności i zmaksymalizować wartość netto w horyzoncie 3–7 lat, przy limicie raty miesięcznej i dostępnej gotówki.",
+   "combined_domains": "Amortyzacja kredytu auto; deprecjacja starego i nowego pojazdu; trade-in vs sprzedaż prywatna; stanowe zasady podatku od sprzedaży przy trade-in (hipoteza / niezweryfikowane: w wielu stanach podatek liczy się od różnicy między ceną a wartością trade-in, co może zniwelować przewagę sprzedaży prywatnej); finansowanie nowego auta (APR zależne od zdolności kredytowej, LTV, okres 36–84 mies.); gap insurance; koszt energii lub paliwa na milę (ładowanie w domu vs publiczne); ryzyko napraw starzejącego się auta; opcjonalnie odliczenie odsetek od kredytu na nowe auto montowane w USA w latach 2025–2028 (OBBBA, niezweryfikowane).",
+   "variants_compared": "(1) Zatrzymać i spłacać do dodatniego equity, potem wymienić; (2) wymienić teraz z rolloverem (auto nowe lub używane; EV, hybryda lub benzyna); (3) wymienić teraz i dopłacić lukę gotówką; (4) sprzedać prywatnie i wziąć pożyczkę na lukę; (5) zrefinansować obecny kredyt i zostać przy aucie; (6) poczekać N miesięcy i wtedy wymienić; (7) leasing z wliczonym negative equity.",
+   "key_dependencies": "equity(t) = wartość(t) − saldo(t), a upływ czasu zmienia oba składniki. Kwota nowego kredytu = cena + podatki i opłaty − wkład − trade-in + negative equity, co wyznacza ratę, odsetki i LTV, a LTV wpływa na gap insurance i APR. Podatek od sprzedaży zależy od trade-in i od stanu, co trzeba zestawić z wyższą ceną przy sprzedaży prywatnej. Koszt na milę zależy od dostępu do ładowania w domu i od przebiegu. Ryzyko napraw rośnie z wiekiem i przebiegiem starego auta.",
+   "main_outputs": "Wykres wartości netto i skumulowanego kosztu dla każdego wariantu miesiąc po miesiącu; miesiąc wyjścia z negative equity; łączne odsetki; rata na tle budżetu; break-even (np. przy jakim przebiegu lub cenie paliwa rollover się opłaca); wykres tornado wrażliwości (deprecjacja, APR, przebieg, ceny energii, koszt napraw); jawna lista założeń i ograniczeń.",
+   "reason_external_site": "Potrzebny jest silnik szeregów czasowych z tabelami stanowymi, krzywymi deprecjacji i wizualizacją momentu wyjścia z negative equity. Czat AI liczy jednorazowo i mało przejrzyście, bez stałych tabel stanowych. Strona z jawną metodologią może być cytowana (hipoteza).",
+   "data_sources": "Dane użytkownika (payoff, APR, oferta trade-in, szacunek sprzedaży prywatnej); oprocentowanie kredytów auto z Fed/FRED (dostępność API to hipoteza); ceny paliwa i prądu z EIA (dostępność API to hipoteza); jednorazowo zestawiona tabela stanowych zasad podatku przy trade-in z corocznym przeglądem; ogólne krzywe deprecjacji wg segmentu podane jako jawne założenie (bez płatnych danych).",
+   "user_data": "Payoff, APR, pozostały okres kredytu, oferta trade-in, szacunek sprzedaży prywatnej, stan, przedział zdolności kredytowej, roczny przebieg, maksymalna rata, dostępna gotówka, horyzont; opcjonalnie koszt planowanej naprawy i dostęp do ładowania.",
+   "nearest_competition": [
+    {
+     "name": "Bankrate Negative Equity Auto Loan Calculator",
+     "url": "https://www.bankrate.com/loans/auto-loans/negative-equity-auto-loan-calculator",
+     "type": "partial",
+     "features_claimed": "Kwota rolloveru, łączna kwota kredytu, okres, APR (search-summary)",
+     "paid": "bezpłatny"
+    },
+    {
+     "name": "Caribou negative equity rollover calculator",
+     "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+     "type": "partial",
+     "features_claimed": "Rachunek rolloveru dla $5k/$10k/$15k; ok. $20/mies. na $1 000 (search-summary)",
+     "paid": "bezpłatny; lead-gen refinansowania"
+    },
+    {
+     "name": "Coltura EV savings calculator",
+     "url": "https://coltura.org/?p=6032",
+     "type": "partial",
+     "features_claimed": "Obecne auto spalinowe vs EV, z zachętami i ratą (search-summary)",
+     "paid": "bezpłatny"
+    },
+    {
+     "name": "GeneralStaff EV Calculator",
+     "url": "https://generalstaff.org/Tech/EV_Calculator.htm",
+     "type": "partial",
+     "features_claimed": "Spłacone auto spalinowe vs rata za EV (search-summary)",
+     "paid": "bezpłatny"
+    }
+   ],
+   "already_solved": "Koszt rolloveru (wzrost raty, odsetki) liczą Bankrate i Caribou (reguła ok. $20/mies. na każde $1 000; search-summary). Porównanie keep-vs-EV oferują Coltura i GeneralStaff. EV TCO obsługuje wiele narzędzi (Calculory, EVRatio, The Zebra, zakłady energetyczne).",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (3 wyszukiwania; pewność niska) dla narzędzia, które łączy trajektorię equity w czasie z wariantem 'poczekaj', stanowy efekt podatkowy trade-in wobec sprzedaży prywatnej oraz wybór docelowego napędu. Ta luka może zniknąć po pełnym przeszukaniu (Edmunds, KBB, CarEdge, banki kaptywne, Reddit).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie: 30.9% trade-inów przy zakupie nowego auta miało negative equity w Q1 2026 (Caribou, search-summary). To rozpowszechnienie sytuacji, nie popyt na narzędzie. Dedykowane kalkulatory rolloveru u Bankrate i Caribou sugerują, że wydawcy finansowi widzą popyt. Brak danych o wolumenach w Google i w promptach LLM.",
+   "ad_environment": "Kredyty auto, refinansowanie, ubezpieczenia auto, dealerzy. Hipoteza: reklamodawcy o wysokich stawkach, ale AdSense nie gwarantuje, że ich reklamy się wyświetlą. Silna konkurencja wydawców finansowych w SERP (Bankrate, kredytodawcy). Brak danych RPM.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Szerszy rynek niż seed D i mniejsza zależność od polityki wobec EV; realne sprzężenia czasu i podatku stanowego. Wysokie ryzyko, że użytkownik rozwiąże to sam w AI, a w SERP są silni wydawcy finansowi. Następny krok: pełny audyt konkurencji (Edmunds, KBB, CarEdge, Reddit, narzędzia dealerów) i test promptów w asystentach.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S3-R2",
+   "name_en": "Lease-End Decision Simulator: Return, Buy Out, Buy & Sell, or Extend",
+   "family": "Auto & household finance",
+   "user_and_moment": "Leasingobiorca w USA na 30–90 dni przed końcem leasingu. Szczególnie EV leasingowane w latach 2023–2025, kiedy wartości rezydualne mogły przewyższyć dzisiejsze ceny używanych EV (hipoteza / niezweryfikowane).",
+   "sample_prompt_en": "My EV lease ends in March. The buyout is $27,800 but similar cars sell for about $20,000, and I'm 4,000 miles over my allowance. Should I return it, buy it out and keep it, or lease something new?",
+   "decision_problem": "Jak zakończyć leasing, żeby zminimalizować łączny koszt mobilności w kolejnych N latach.",
+   "combined_domains": "Umowa leasingu (residual, purchase option fee, disposition fee, nadprzebieg, zużycie); rynek aut używanych; stanowy podatek od wykupu; finansowanie wykupu; koszt auta zastępczego (nowy leasing lub zakup); przy zatrzymaniu auta gwarancja baterii i ryzyko napraw.",
+   "variants_compared": "(1) Zwrot i nowy leasing; (2) zwrot i zakup auta używanego; (3) wykup i zatrzymanie (gotówka lub kredyt); (4) wykup i sprzedaż, gdy equity jest dodatnie (hipoteza: część lessorów ogranicza wykup przez strony trzecie); (5) przedłużenie z miesiąca na miesiąc.",
+   "key_dependencies": "Wykup eliminuje opłaty za nadprzebieg i zużycie; equity leasingu = wartość rynkowa − cena wykupu; podatek od wykupu zależy od stanu; koszt auta zastępczego zależy od stóp procentowych i rynku; opłata dyspozycyjna bywa znoszona przy lojalności (hipoteza).",
+   "main_outputs": "Koszt netto każdego wariantu w horyzoncie; próg wartości rynkowej, od którego wykup się opłaca; wrażliwość na wartość rynkową, przebieg i APR.",
+   "reason_external_site": "Formularz odpowiadający polom z wyciągu leasingowego, stanowa tabela podatku i jasny próg decyzyjny.",
+   "data_sources": "Wyciąg leasingowy użytkownika; tabela stanowego podatku od wykupu (zestawiona raz, przegląd co roku); stopy procentowe z FRED (hipoteza); wyceny wpisane przez użytkownika.",
+   "user_data": "Residual i cena wykupu, opłaty, przebieg wobec limitu, stan, wycena rynkowa, plan na kolejne auto, horyzont.",
+   "nearest_competition": [],
+   "already_solved": "Niezweryfikowane w tej sesji, bo wyszukiwania zablokował limit. Hipoteza: proste kalkulatory lease buyout istnieją u wydawców finansowych i lessorów, więc problem może być w dużej części rozwiązany.",
+   "gap": "Nieznana, bo tego nie badano. Potencjalna luka dotyczy jedynie porównania wariantów z uwzględnieniem kosztu auta zastępczego i progu decyzyjnego.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "W tej sesji nie zebrano dowodów. Hipoteza / niezweryfikowane: w latach 2026–2028 przypada fala zakończeń leasingów EV zawartych w latach 2023–2025.",
+   "ad_environment": "Finansowanie aut, dealerzy, ubezpieczenia (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Decyzja prostsza i bliższa zwykłemu kalkulatorowi; prawdopodobnie częściowo już rozwiązana. Warto wrócić, jeśli dane potwierdzą falę zakończeń leasingów EV z residualami powyżej cen rynkowych.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "S3-R3",
+   "name_en": "Resignation Timing & Make-Whole Planner (Vests, Bonuses, Clawbacks)",
+   "family": "Career & compensation",
+   "user_and_moment": "Pracownik w USA z niezawestowanym equity, rocznym bonusem albo matchem 401k z vestingiem, który ma na stole ofertę. Moment: negocjacja daty startu i sign-on przed złożeniem wypowiedzenia.",
+   "sample_prompt_en": "My RSUs vest quarterly (next on Feb 15), my annual bonus pays March 1 only if I'm still employed, and the new company offers a $40k sign-on with a 12-month prorated clawback. When should I resign, and how big a sign-on should I ask for to be made whole?",
+   "decision_problem": "Wybór daty rezygnacji i startu oraz kwoty do negocjacji, które maksymalizują wartość netto i minimalizują ekspozycję na clawback, przy ograniczeniu, jakim jest najpóźniejsza akceptowalna data startu.",
+   "combined_domains": "Harmonogramy vestingu (RSU, ISO/NSO z 90-dniowym oknem na wykonanie opcji, wg Secfi w search-summary; ESPP); zasady wypłaty bonusów; vesting matchu 401(k); wypłata niewykorzystanego PTO zależna od prawa stanowego (hipoteza: różni się między stanami); warunki zwrotu sign-on i relokacji (pro rata czy cliff; brutto czy netto); podatki (supplemental withholding wobec faktycznej stawki); przerwa w ubezpieczeniu zdrowotnym i COBRA.",
+   "variants_compared": "(1) Rezygnacja teraz; (2) po najbliższym veście; (3) po wypłacie bonusu; (4) opóźniony start; (5) żądanie make-whole w formie sign-on; (6) żądanie dodatkowego grantu equity; (7) zostać.",
+   "key_dependencies": "Każdy dzień opóźnienia dodaje wartość vestów i bonusu, ale zwiększa ryzyko utraty oferty. Okno clawback zaczyna się w dniu rozpoczęcia pracy. Zwrot bywa liczony brutto, choć wypłata była netto (niezweryfikowane). Wykonanie opcji w ciągu 90 dni wymaga gotówki, co wiąże się z terminem wypłaty sign-on. Wypłata PTO zależy od stanu.",
+   "main_outputs": "Oś czasu wartości zagrożonej w zależności od daty odejścia; optymalne okno rezygnacji i startu; wymagany make-whole przed podatkiem i po nim, dla przedziału kursu akcji; krzywa ekspozycji na clawback; zapotrzebowanie na gotówkę na wykonanie opcji; lista założeń i ostrzeżeń (to nie jest porada prawna).",
+   "reason_external_site": "Silnik kalendarza zdarzeń z jawnymi regułami; asystenci AI często mylą daty i zasady zwrotu. Szeroka baza użytkowników: każdy zmieniający pracę z vestingiem lub bonusem, bez wymogu relokacji.",
+   "data_sources": "Dane użytkownika (harmonogram vestingu, warunki oferty); stawka supplemental withholding IRS (co roku); tabela stanowych zasad wypłaty PTO (zestawiona raz, przegląd co roku); tabela informacyjnych flag o stanowych przepisach stay-or-pay, np. kalifornijska AB 692 (niezweryfikowane).",
+   "user_data": "Daty i wielkości vestów, kurs akcji, warunki bonusu, match 401k, warunki sign-on i clawback, stan, najpóźniejsza data startu.",
+   "nearest_competition": [
+    {
+     "name": "AllocateAI Comp Comparison",
+     "url": "https://allocateai.io/calculators/comp-comparison",
+     "type": "partial",
+     "features_claimed": "Porównanie na 4 lata z sign-on i relokacją, przy płaskim kursie akcji (search-summary)",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "SheCodes Offer Calculator",
+     "url": "https://tools.shecodes.io/career-tools/offer",
+     "type": "partial",
+     "features_claimed": "Sign-on i vesting, sumy po roku 1 i po 4 latach, bez podatków (search-summary)",
+     "paid": "bezpłatny"
+    },
+    {
+     "name": "SmartTaxCalc Salary Offer Comparison",
+     "url": "https://smarttaxcalc.in/tools/salary-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Dyskontuje bonusy narażone na clawback (search-summary)",
+     "paid": "niezweryfikowane",
+     "notes": "Rynek indyjski"
+    },
+    {
+     "name": "Secfi",
+     "url": "https://secfi.com/learn/should-i-stay-in-my-underpaid-job-and-wait-for-the-ipo-or-quit",
+     "type": "partial",
+     "features_claimed": "Okno 90 dni na wykonanie opcji, kalkulator podatku od opcji (search-summary)",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Carta – leaving company guide",
+     "url": "https://carta.com/blog/what-to-know-about-equity-when-leaving-company/",
+     "type": "substitute",
+     "features_claimed": "Porada: zaplanuj datę odejścia wokół vestingu (search-summary)",
+     "paid": "bezpłatny"
+    }
+   ],
+   "already_solved": "Porównania ofert z sumą po roku i po 4 latach (SheCodes, AllocateAI, Salario, LoopCV, Offerjudge); podatki od opcji (Secfi); porady, by planować odejście wokół vestingu (Carta); dyskontowanie bonusów z clawback (SmartTaxCalc, rynek indyjski).",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (2 wyszukiwania; pewność niska) dla narzędzia, które liczy utraconą wartość w zależności od daty rezygnacji, wymagany make-whole i ekspozycję na clawback. Nie sprawdzono Levels.fyi, platform equity ani usług negocjacyjnych.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie: co najmniej 9 darmowych kalkulatorów porównania ofert (zatłoczona kategoria sugeruje, że wydawcy widzą popyt); treści Carta, Secfi, Forge i Fool Wealth o equity przy odejściu z pracy. Brak danych o wolumenach i promptach.",
+   "ad_environment": "Kariera, finanse osobiste, wealth management skierowany do posiadaczy equity. Hipoteza: wartościowi reklamodawcy, ale niewielka skala ruchu; brak danych RPM.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Zachowuje najmocniejsze sprzężenia seeda E (sekwencja zdarzeń, clawback), ma szerszą bazę niż pełny pakiet relokacyjny i niski koszt utrzymania. Ryzyka: samodzielne rozwiązanie w AI, nisza tech, treści quasi-prawne. Następny krok: audyt Levels.fyi i platform equity oraz test promptów.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S3-R4",
+   "name_en": "Relocating Homeowner: Sell, Rent Out, or Hold?",
+   "family": "Housing & relocation",
+   "user_and_moment": "Właściciel domu z niskooprocentowanym kredytem, który przeprowadza się z powodu pracy (nowa praca, transfer, mandat RTO). Moment: po przyjęciu oferty, przed wystawieniem domu na sprzedaż.",
+   "sample_prompt_en": "I'm moving from Denver to Austin for a new job. I have a 2.9% mortgage and about $180k in equity. Should I sell now, rent the house out, or hold it — and how long can I rent it before I lose the capital gains exclusion?",
+   "decision_problem": "Co zrobić ze starym domem i jak zamieszkać w nowym mieście, żeby zmaksymalizować wartość netto i zachować bezpieczeństwo gotówkowe w horyzoncie 3–7 lat.",
+   "combined_domains": "Koszty sprzedaży; §121 (2 z 5 lat, czyli okno wynajmu ok. 3 lat; częściowe wyłączenie przy zmianie pracy; wiedza z treningu, niezweryfikowane); depreciation recapture przy wynajmie; przychód z najmu, pustostany, zarządca; ubezpieczenie właściciela wynajmowanej nieruchomości; zachowanie niskiej stopy wobec nowego kredytu po bieżących stopach; wynajem czy zakup w nowym mieście; opodatkowanie pakietu relokacyjnego; podatki stanowe.",
+   "variants_compared": "(1) Sprzedać teraz i kupić; (2) sprzedać teraz i wynajmować; (3) wynająć stary dom i wynajmować w nowym mieście; (4) wynająć stary dom i kupić nowy, jeśli pozwala zdolność kredytowa (hipoteza: zasady wliczania przychodu z najmu do DTI); (5) trzymać dom pusty i sprzedać później; (6) wynajmować i sprzedać przed końcem okna §121.",
+   "key_dependencies": "Termin wynikający z §121 ogranicza długość wynajmu; depreciation recapture nie jest objęte wyłączeniem; gotówka ze sprzedaży staje się wkładem w nowym mieście; zdolność do drugiego kredytu zależy od udokumentowanego przychodu z najmu; różnica stóp decyduje o wartości zachowania starego kredytu.",
+   "main_outputs": "Wartość netto rok po roku dla każdego wariantu; data graniczna §121; gotówka dostępna na wkład; miesięczny cash-flow; czynsz break-even; wrażliwość na wzrost cen, czynsz, pustostany i stopy.",
+   "reason_external_site": "Model wielookresowy z regułami podatkowymi zależnymi od czasu i z jawnymi założeniami; trudno go wiarygodnie odtworzyć w jednej rozmowie z AI (hipoteza).",
+   "data_sources": "Stopy hipoteczne z FRED/PMMS (dostępność API to hipoteza); HUD Fair Market Rents (hipoteza); zasady IRS §121 (stałe); tabele podatków stanowych; dane użytkownika.",
+   "user_data": "Saldo i oprocentowanie kredytu, wartość domu, data zakupu i okres zamieszkania, przewidywany czynsz, koszty, miasto docelowe, budżet, horyzont.",
+   "nearest_competition": [],
+   "already_solved": "Niezweryfikowane w tej sesji. Hipoteza: kalkulatory 'rent vs sell' istnieją na portalach nieruchomości i u brokerów, więc część problemu może być już rozwiązana.",
+   "gap": "Nieznana. Hipotetyczna luka leży w połączeniu okna §121, efektu rate lock-in i decyzji mieszkaniowej w nowym mieście. Wymaga audytu.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "W tej sesji nie zebrano dowodów, bo wyszukiwania zablokował limit. Hipoteza: efekt lock-in i relokacje związane z RTO są szeroko omawiane.",
+   "ad_environment": "Nieruchomości, kredyty hipoteczne, firmy zarządzające najmem, ubezpieczenia. Hipoteza: reklamodawcy o wysokich stawkach.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Szersza baza niż seed E (każdy relokujący się właściciel domu), realne sprzężenia czasowe (§121) i finansowe (lock-in). Konkurencja i popyt nie zostały zbadane; pomysł może pokrywać się z innymi pomysłami mieszkaniowymi zespołu.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://coltura.org/?p=6032",
+   "competitor": "Coltura EV savings calculator",
+   "related_idea": "Seed D; S3-R1",
+   "features_checked": "Obecne auto spalinowe vs EV; zachęty; cena EV; rata miesięczna (search-summary)",
+   "access_limits": "Tylko search-summary; strony nie otwierano (WebFetch zablokowany); negative equity i trade-in niezweryfikowane",
+   "conclusion": "PARTIAL: ujęcie keep-vs-EV z ratą; modelowanie payoff i negative equity niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://generalstaff.org/Tech/EV_Calculator.htm",
+   "competitor": "GeneralStaff EV Calculator",
+   "related_idea": "Seed D; S3-R1",
+   "features_checked": "Spłacone auto spalinowe vs rata za EV (search-summary)",
+   "access_limits": "Tylko search-summary; pozostałe funkcje niezweryfikowane",
+   "conclusion": "PARTIAL: zakłada spłacone auto, więc wariant negative equity jest prawdopodobnie poza zakresem",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://www.kunc.org/npr-news/2026-06-01/at-what-point-does-it-make-sense-to-ditch-a-gas-car-for-an-electric-vehicle",
+   "competitor": "NPR/KUNC article (2026-06-01)",
+   "related_idea": "Seed D",
+   "features_checked": "Przykład liczbowy Jeep 2016 vs Chevy EV 2025 z odjęciem trade-in; wzmianka o narzędziu DOE TCO (paliwo, opony, serwis, rejestracja, ubezpieczenie, rata) (search-summary)",
+   "access_limits": "Tylko search-summary; narzędzia DOE nie zweryfikowano, a jego URL nie pojawił się w wynikach",
+   "conclusion": "SUBSTITUTE (treść) i dowód, że pytanie keep-vs-EV jest zadawane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://centralhudson.com/en/my-energy/save-energy-money/energy-calculators/ev-calculator/",
+   "competitor": "Central Hudson EV Savings Calculator",
+   "related_idea": "Seed D",
+   "features_checked": "Lokalne stawki za prąd, koszty ładowania (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL (zakład energetyczny): tylko moduł energii",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://georgiapower.com/residential/save-money-and-energy/products-programs/electric-vehicles/ev-savings-calc.html",
+   "competitor": "Georgia Power EV savings calculator",
+   "related_idea": "Seed D",
+   "features_checked": "Tylko tytuł wyniku (kalkulator oszczędności EV)",
+   "access_limits": "Tylko tytuł; funkcje niezweryfikowane",
+   "conclusion": "PARTIAL (zakład energetyczny)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://aeva.asn.au/ev-payback-calculator/",
+   "competitor": "AEVA EV payback calculator (Australia)",
+   "related_idea": "Seed D",
+   "features_checked": "Lata do zwrotu zależne od kosztu auta i przebiegu (search-summary)",
+   "access_limits": "Tylko search-summary; rynek AU",
+   "conclusion": "PARTIAL, poza rynkiem USA",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep my car or buy an EV calculator",
+   "url": "https://www.kia.com/uk/about/news/the-benefits-of-using-kia-ev-cost-calculator/",
+   "competitor": "Kia EV Cost Calculator (UK)",
+   "related_idea": "Seed D",
+   "features_checked": "Lokalne stawki za prąd i koszty ładowania (search-summary)",
+   "access_limits": "Tylko search-summary; rynek UK; narzędzie producenta",
+   "conclusion": "SUBSTITUTE/PARTIAL, poza rynkiem USA",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://www.thezebra.com/resources/driving/gas-car-vs-hybrid-car-vs-electric-car/",
+   "competitor": "The Zebra gas vs hybrid vs electric calculator",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: kalkulator i poradnik porównujący napędy",
+   "access_limits": "Tylko tytuł i search-summary; funkcje niezweryfikowane",
+   "conclusion": "PARTIAL (serwis ubezpieczeniowy): porównanie napędów, bez dowodu na moduł negative equity",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://calculory.com/calculators/sustainability/ev-total-cost-of-ownership-calculator",
+   "competitor": "Calculory EV TCO Calculator",
+   "related_idea": "Seed D",
+   "features_checked": "Stawka za prąd, cena benzyny, przebieg, ubezpieczenie, okres posiadania (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL: EV TCO bez dowodu na finansowanie z negative equity",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://evratio.com/ev-total-cost-of-ownership-calculator/",
+   "competitor": "EVRatio EV TCO Calculator 2026",
+   "related_idea": "Seed D",
+   "features_checked": "Ładowanie w domu vs DC fast; koszt na milę; założenia rezydualne (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL: EV TCO",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://desk2deal.com/demo/ev-vs-gas",
+   "competitor": "Desk2Deal EV vs Gas (demo oprogramowania dealerskiego)",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: darmowy kalkulator EV vs gas w demie",
+   "access_limits": "Tylko tytuł; model B2B i płatność niezweryfikowane",
+   "conclusion": "PARTIAL: narzędzie w procesie sprzedaży dealera; integracja z trade-in niezweryfikowana",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://driveauthority.com/electric-car-total-cost-of-ownership-calculator-guide/",
+   "competitor": "DriveAuthority EV TCO guide",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: poradnik kalkulatora TCO 2026",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://evgascalc.com/",
+   "competitor": "evgascalc.com",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: koszt EV vs gas i zachęty stanowe",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "PARTIAL: energia i zachęty stanowe",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://www.electvehicles.com/2026/08/ev-total-cost-of-ownership-calculator.html",
+   "competitor": "ElectVehicles EV TCO Calculator",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł i search-summary: TCO, użytkownik wpisuje własne dane",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL: EV TCO (blog)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://www.electvehicles.com/2026/09/ev-vs-gas-vs-hybrid-tco-calculator.html",
+   "competitor": "ElectVehicles EV vs Gas vs Hybrid TCO",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: TCO EV vs gas vs hybryda",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "PARTIAL",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EV total cost of ownership calculator home charger electricity insurance comparison gas car",
+   "url": "https://carvision.com/blog/electric-vs-gas-which-car-is-really-cheaper-to-own",
+   "competitor": "Carvision blog",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: rzeczywisty koszt EV vs gas",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "SUBSTITUTE (treść dealera)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://www.bankrate.com/loans/auto-loans/negative-equity-auto-loan-calculator",
+   "competitor": "Bankrate Negative Equity Auto Loan Calculator",
+   "related_idea": "Seed D; S3-R1",
+   "features_checked": "Kwota rolloveru, łączna kwota kredytu, okres 36–84 mies., APR (search-summary)",
+   "access_limits": "Tylko search-summary; wariant 'poczekaj' i TCO niezweryfikowane",
+   "conclusion": "PARTIAL: koszt rolloveru, bez porównania wariantów w czasie",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+   "competitor": "Caribou negative equity rollover calculator",
+   "related_idea": "Seed D; S3-R1",
+   "features_checked": "Scenariusze $5k/$10k/$15k; ok. $20/mies. na $1 000; statystyka 30.9% trade-inów z negative equity w Q1 2026 (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL: lead-gen refinansowania; brak dowodu na moduł EV/TCO",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://www.chase.com/personal/auto/education/selling/how-to-trade-in-a-car-with-negative-equity",
+   "competitor": "Chase – trade in with negative equity",
+   "related_idea": "Seed D",
+   "features_checked": "Kiedy rollover ma sens (niższe APR, tańsze auto) (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść banku)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://getjerry.com/advice/trading-in-a-vehicle-with-negative-equity",
+   "competitor": "Jerry – trading in with negative equity",
+   "related_idea": "Seed D",
+   "features_checked": "Przykład zamiany na tańsze auto (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://roadloans.com/?p=28718",
+   "competitor": "Road Loans – trade in with negative equity",
+   "related_idea": "Seed D",
+   "features_checked": "Porada: payoff vs wyceny NADA/Edmunds/KBB; ryzyko dłuższego okresu (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść kredytodawcy)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://chryslercapital.com/blog/how-to-trade-in-a-car-with-negative-equity",
+   "competitor": "Chrysler Capital blog",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: jak wymienić auto z negative equity",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "SUBSTITUTE (treść banku kaptywnego)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity trade-in calculator roll over new car loan",
+   "url": "https://www.daleearnhardtjrchevy.com/finance/car-buying-tips/negative-equity/",
+   "competitor": "Dale Earnhardt Jr. Chevrolet – negative equity",
+   "related_idea": "Seed D",
+   "features_checked": "Tytuł: porady dealera",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "SUBSTITUTE (treść dealera)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://allocateai.io/calculators/comp-comparison",
+   "competitor": "AllocateAI Comp Comparison",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "Porównanie na 4 lata; sign-on w latach 1–2; relokacja w roku 1; płaski kurs akcji (search-summary)",
+   "access_limits": "Tylko search-summary; utracone equity, clawback i dom niezweryfikowane",
+   "conclusion": "PARTIAL: najbliższy znaleziony",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://tools.shecodes.io/career-tools/offer",
+   "competitor": "SheCodes Offer Calculator",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "Do 3 ofert; sign-on; vesting; sumy po roku 1 i po 4 latach; bez podatków (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://salario.io/job-offer-comparison/",
+   "competitor": "Salario Job Offer Comparison",
+   "related_idea": "Seed E",
+   "features_checked": "Sign-on rozłożony na 2 lata, equity, dojazd (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://www.loopcv.pro/tools/job-offer-comparison/",
+   "competitor": "LoopCV Job Offer Comparison",
+   "related_idea": "Seed E",
+   "features_checked": "Do 3 ofert, ważony scoring czynników niefinansowych (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL (scoring)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://smarttaxcalc.in/tools/salary-offer-comparison/",
+   "competitor": "SmartTaxCalc Salary Offer Comparison (Indie)",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "RSU, koszt życia, take-home; dyskonto bonusów z clawback (search-summary)",
+   "access_limits": "Tylko search-summary; rynek IN",
+   "conclusion": "PARTIAL, poza rynkiem USA; koncepcja dyskontowania clawback już istnieje",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://offerjudge.com/",
+   "competitor": "Offerjudge",
+   "related_idea": "Seed E",
+   "features_checked": "Do 4 ofert; wartość vestująca w typowym roku (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://sheetsresume.com/job-offer-comparison",
+   "competitor": "SheetsResume Job Offer Comparison",
+   "related_idea": "Seed E",
+   "features_checked": "Tytuł: take-home pay i total comp",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "PARTIAL",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://agentcalc.com/job-offer-comparison-calculator",
+   "competitor": "AgentCalc Job Offer Comparison",
+   "related_idea": "Seed E",
+   "features_checked": "Tytuł: pensja, bonus, koszty dojazdu",
+   "access_limits": "Tylko tytuł",
+   "conclusion": "PARTIAL",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator unvested RSU sign-on bonus relocation",
+   "url": "https://sgfinancecalculators.com/career/job-offer-comparison-calculator/",
+   "competitor": "SG Finance Calculators Job Offer Comparison (Singapur)",
+   "related_idea": "Seed E",
+   "features_checked": "Tytuł: porównanie ofert, Singapur 2026",
+   "access_limits": "Tylko tytuł; rynek SG",
+   "conclusion": "PARTIAL, poza rynkiem USA",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I leave my job unvested equity calculator",
+   "url": "https://secfi.com/learn/should-i-stay-in-my-underpaid-job-and-wait-for-the-ipo-or-quit",
+   "competitor": "Secfi (treść + Stock Option Tax Calculator)",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "90-dniowe okno na wykonanie opcji; kalkulator podatku od opcji (search-summary)",
+   "access_limits": "Tylko search-summary; płatność usług niezweryfikowana",
+   "conclusion": "PARTIAL: fragment dotyczący opcji",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I leave my job unvested equity calculator",
+   "url": "https://manual.compoundplanning.com/chapters/decide-equity-worth-investment",
+   "competitor": "Compound Planning equity modeling",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "Modelowanie niezawestowanego equity w scenariuszach wyceny (search-summary)",
+   "access_limits": "Tylko search-summary; prawdopodobnie platforma doradcza za logowaniem, niezweryfikowane",
+   "conclusion": "PARTIAL / substytut doradczy",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I leave my job unvested equity calculator",
+   "url": "https://carta.com/blog/what-to-know-about-equity-when-leaving-company/",
+   "competitor": "Carta – equity when leaving company",
+   "related_idea": "Seed E; S3-R3",
+   "features_checked": "Planowanie daty odejścia wokół vestingu; odesłanie do kalkulatora AMT (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I leave my job unvested equity calculator",
+   "url": "https://www.forgeglobal.com/blog/employee-equity-if-leaving-startup-before-ipo/",
+   "competitor": "Forge Global – equity when leaving before IPO",
+   "related_idea": "Seed E",
+   "features_checked": "Ryzyko wykonania opcji (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I leave my job unvested equity calculator",
+   "url": "https://foolwealth.com/insights/managing-stock-options-and-other-equity-compensation-when-leaving-your-job",
+   "competitor": "Fool Wealth – equity when leaving job",
+   "related_idea": "Seed E",
+   "features_checked": "Utrata niezawestowanych RSU, opcji i ESPP przy odejściu (search-summary)",
+   "access_limits": "Tylko search-summary",
+   "conclusion": "SUBSTITUTE (treść doradcy)",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "keep my car or buy an EV calculator (standard)",
+  "EV total cost of ownership calculator home charger electricity insurance comparison gas car (extended)",
+  "negative equity trade-in calculator roll over new car loan (standard)",
+  "job offer comparison calculator unvested RSU sign-on bonus relocation (extended)",
+  "should I leave my job unvested equity calculator (standard)",
+  "[NIE WYKONANO – wyczerpany współdzielony limit 200 wyszukiwań na turę] upside down on car loan want to buy EV reddit trade in",
+  "[NIE WYKONANO – limit] federal EV tax credit ended September 30 2025 used EV credit leasing 2026",
+  "[NIE WYKONANO – limit] car loan interest deduction One Big Beautiful Bill new vehicle assembled in US 2025 2028",
+  "[NIE WYKONANO – limit] repair or replace car calculator keep old car vs buy new",
+  "[NIE WYKONANO – limit] DOE AFDC vehicle cost calculator compare current vehicle"
+ ]
+}

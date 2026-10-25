@@ -1,0 +1,385 @@
+{
+ "id": "FIN-01",
+ "competitors": [
+  {
+   "name": "Mothebroker – HELOC vs Cash-Out Refi vs HELOAN Comparison Calculator [2026]",
+   "url": "https://www.mothebroker.com/tools/equity-comparison-calculator",
+   "type": "partial",
+   "access": "Darmowe narzędzie brokera (lead-gen), wg podsumowania ukierunkowane na California i Washington; strona nieotwierana",
+   "covers_pl": "Najbliższy znaleziony kandydat: porównuje trzy warianty (HELOC, cash-out refi, home equity loan) obok siebie. Z podsumowania wynika, że jedno z takich narzędzi pokazuje łączne odsetki, ratę miesięczną i break-even, ale nie wiadomo, czy chodzi o to.",
+   "misses_or_unverified_pl": "Niezweryfikowane: harmonogram wypłat HELOC, scenariusze ścieżki prime, szok raty po okresie draw, rok sprzedaży i NPV w horyzontach 2/5/10 lat, warianty personal loan i etapowania, sekwencja 'HELOC teraz, refi później', filtr CLTV/DTI. Zasięg regionalny (CA/WA) może ograniczać przydatność dla rynku ogólnokrajowego."
+  },
+  {
+   "name": "Teamzlab – HELOC vs Cash-Out Refi Calculator 2026 (Break-Even Compare)",
+   "url": "https://tool.teamzlab.com/mortgage/heloc-vs-cash-out-refi-calculator-2026/",
+   "type": "partial",
+   "access": "Darmowy kalkulator na stronie z wieloma narzędziami; strona nieotwierana",
+   "covers_pl": "Porównanie HELOC z cash-out refi z punktem break-even. Podsumowanie zaznacza, że jego domyślne stopy są sprzeczne z innymi źródłami.",
+   "misses_or_unverified_pl": "Niezweryfikowane: home equity loan, personal loan, etapowanie, ścieżka prime, szok raty, horyzont sprzedaży, NPV, CLTV. Podsumowanie sugeruje słabą jakość danych domyślnych."
+  },
+  {
+   "name": "Figure – HELOC vs Cash-Out Refinance Calculator",
+   "url": "https://www.figure.com/home-equity-line/heloc-vs-cash-out-refinance-calculator/",
+   "type": "partial",
+   "access": "Darmowe narzędzie pożyczkodawcy (porównuje własny HELOC Figure); strona nieotwierana",
+   "covers_pl": "Zestawienie obok siebie HELOC Figure i cash-out refi: szacowane kwoty, opłaty, raty miesięczne, okres 15 lub 30 lat.",
+   "misses_or_unverified_pl": "Tylko dwa warianty. W podsumowaniu nie ma: home equity loan, harmonogramu wypłat, ścieżki stóp, szoku raty, roku sprzedaży, NPV. Narzędzie stronnicze (produkt własny)."
+  },
+  {
+   "name": "Better.com – Home Equity Line of Credit vs Cash-Out Refinance Calculator",
+   "url": "https://better.com/heloc-vs-cashout-refi-calculator",
+   "type": "partial",
+   "access": "Darmowe narzędzie pożyczkodawcy, wymaga podania m.in. credit score; strona nieotwierana",
+   "covers_pl": "Szacowana rata, stopa i koszt całkowity dla HELOC i cash-out refi, na podstawie wartości domu, potrzebnej kwoty i credit score.",
+   "misses_or_unverified_pl": "Podsumowanie zaznacza, że przykładowy wynik jest nieaktualny. Niezweryfikowane: horyzont sprzedaży, ścieżka prime, szok raty, home equity loan, NPV, CLTV."
+  },
+  {
+   "name": "MortgageCalculator.org – Should I use a HELOC (Compare Home Equity Loans to Cash Out Refinancing)",
+   "url": "https://www.mortgagecalculator.org/calculators/should-i-use-heloc.php",
+   "type": "partial",
+   "access": "Darmowy kalkulator z reklamami i ofertami stóp; strona nieotwierana",
+   "covers_pl": "Dane wejściowe: saldo i stopa obecnego kredytu, okres pierwotny i pozostały, wartość domu, dodatkowa gotówka, credit score. Porównuje drugą hipotekę (HELOC lub home equity) z cash-out refi.",
+   "misses_or_unverified_pl": "Niezweryfikowane: scenariusze prime, szok raty, rok sprzedaży, NPV, personal loan, etapowanie, sekwencja refi później. Podsumowanie mówi ogólnie, że znalezione narzędzia nie modelują zmian prime."
+  },
+  {
+   "name": "NetRate Mortgage – Get Cash Out: 2nd Lien vs Cash-Out Refi Calculator",
+   "url": "https://www.netratemortgage.com/tools/second-lien-comparison",
+   "type": "partial",
+   "access": "Darmowe narzędzie brokera; strona nieotwierana",
+   "covers_pl": "Porównanie drugiej hipoteki z cash-out refi (rdzeń decyzji 'zachować niską stopę').",
+   "misses_or_unverified_pl": "Funkcje poza nazwą niezweryfikowane: horyzont, ścieżka stóp, szok raty, NPV, CLTV."
+  },
+  {
+   "name": "Kalkulatory blended rate (Refi.com, The Truth About Mortgage, True Blue Lending, Brokers First Funding)",
+   "url": "https://www.refi.com/calculator/blended-rate-mortgage-calculator/",
+   "type": "partial",
+   "access": "Darmowe; strony nieotwierane. Inne URL: thetruthaboutmortgage.com/blended-rate-mortgage-calculator/, truebluelending.net/calculators/blended-rate, bffws.com/resources/blended-rate-calculator",
+   "covers_pl": "Średnia ważona stopa (pierwsza hipoteka plus druga) porównana ze stopą cash-out refi. Wg podsumowania Brokers First Funding pokazuje też raty i koszt w horyzoncie 60 miesięcy.",
+   "misses_or_unverified_pl": "Wg podsumowań blended rate pomija różnice okresów kredytowania i koszty zamknięcia. Brak modelu zmiennej stopy HELOC, harmonogramu wypłat, szoku raty i sprzedaży (w podsumowaniu)."
+  },
+  {
+   "name": "Eagle Calculator – Second Mortgage Calculator (Or Should You Refinance Instead)",
+   "url": "https://eaglecalculator.com/finance/mortgage/second-mortgage",
+   "type": "partial",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Druga hipoteka czy refinansowanie, sądząc po tytule.",
+   "misses_or_unverified_pl": "Wszystkie funkcje poza tytułem niezweryfikowane."
+  },
+  {
+   "name": "Richify.ai – Home Equity Calculator: How Much to Borrow, HELOC vs Loan",
+   "url": "https://www.richify.ai/us/tools/home-equity-calculator",
+   "type": "partial",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Ile można pożyczyć (limit equity) i porównanie HELOC z home equity loan.",
+   "misses_or_unverified_pl": "Wg tytułu brak cash-out refi; reszta (horyzont, prime, szok raty) niezweryfikowana."
+  },
+  {
+   "name": "Moreira Team – HELOC or a Refi? (refinance cash-out calculator, blog)",
+   "url": "https://moreirateam.com/blog/heloc-or-refi-start-with-this-refinance-cash-out-mortgage-calculator/",
+   "type": "partial",
+   "access": "Blog brokera z kalkulatorem; strona nieotwierana",
+   "covers_pl": "Narzędzie do porównania HELOC i refi wg podsumowania.",
+   "misses_or_unverified_pl": "Szczegóły modelu niezweryfikowane."
+  },
+  {
+   "name": "Zillow – Cash-Out Refinance Calculator",
+   "url": "https://www.zillow.com/mortgage-calculator/cash-out-refinance/",
+   "type": "partial",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Maksymalna kwota cash-out, z opłatami refinansowania lub bez (fragment: limit LTV dla wariantu A).",
+   "misses_or_unverified_pl": "Narzędzie jednowariantowe, nie porównuje z HELOC (wg podsumowania). Kalkulator jednozadaniowy, więc nie jest bezpośrednim konkurentem."
+  },
+  {
+   "name": "NerdWallet – osobne kalkulatory HELOC, cash-out i refinance oraz artykuł porównawczy",
+   "url": "https://www.nerdwallet.com/article/mortgages/home-equity-loan-vs-cash-out-refinance",
+   "type": "partial",
+   "access": "Darmowe; strona nieotwierana",
+   "covers_pl": "Podsumowanie potwierdza osobne kalkulatory HELOC i cash-out oraz kalkulator refinance z kosztami zamknięcia w projekcji oszczędności. Zalecana heurystyka: dodać ratę HELOC do obecnej raty i porównać z ratą refi.",
+   "misses_or_unverified_pl": "Kalkulatory są osobne, wyniki nie wpływają na siebie, więc nie ma integracji. To koryguje notatkę wave-1, gdzie NerdWallet był wpisany jako kalkulator 'HELOC vs cash-out' bez weryfikacji. Bankrate: w tej fali pojawił się tylko artykuł porównawczy, nie kalkulator porównawczy."
+  },
+  {
+   "name": "Treści edukacyjne: Bankrate, The Mortgage Reports, Lower.com, Experian, Rocket, Quicken, AmeriSave, Wise Money Life",
+   "url": "https://www.bankrate.com/home-equity/home-equity-loan-heloc-or-cash-out-refi/",
+   "type": "substitute",
+   "access": "Darmowe artykuły; strony nieotwierane. Inne URL: themortgagereports.com/131328/cash-out-refi-trap-low-rate, lower.com/mortgages/heloc-vs-cash-out-when-you-have-a-low-mortgage-rate, experian.com/blogs/ask-experian/home-equity-loan-vs-heloc-vs-cash-out-refinance/, amerisave.com/learn/cashout-refi-vs-heloc-homeowner-guide",
+   "covers_pl": "Jakościowa odpowiedź na dylemat 'niska stopa: HELOC lub HEL zamiast cash-out', zakresy kosztów zamknięcia (2–6%), szok raty po okresie draw, heurystyki (np. cash-out ma sens przy obecnej stopie powyżej ok. 6,5%), odliczalność odsetek tylko przy wydatkach na dom.",
+   "misses_or_unverified_pl": "Brak spersonalizowanej kalkulacji wielookresowej. Podsumowania odnotowują sprzeczne dane o stopach (HELOC 7,25% vs 8,5–9,5% w 2026). Hometap (HEI) z notatki wave-1 nie był ponownie sprawdzany; to inny produkt (home equity investment), co najwyżej peryferyjny substytut."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z Intelligent UI, Google AI Mode, Claude, Gemini) oraz AI-podsumowania wyszukiwarki",
+   "url": "brak URL – kategoria substytutu",
+   "type": "substitute",
+   "access": "Darmowe lub subskrypcja",
+   "covers_pl": "W tej fali wyszukiwarka sama, bez pytania, odpowiedziała na przykładowy prompt użytkownika gotową rekomendacją: przy 3% kredycie HEL lub HELOC zamiast cash-out; przy jednorazowych 80 tys. USD i horyzoncie 5 lat raczej home equity loan o stałej stopie. Od 10.2026 ChatGPT, a od 08.2026 Google AI Mode potrafią renderować interaktywne kalkulatory.",
+   "misses_or_unverified_pl": "Nie sprawdzano, czy asystent buduje pełny model z harmonogramem wypłat, scenariuszami prime, NPV i wykresem wrażliwości. Jest to możliwe przez code interpreter, ale niezweryfikowane. Wiarygodność stóp domyślnych zależy od świeżości danych."
+  },
+  {
+   "name": "Oprogramowanie dla loan officerów (np. Mortgage Coach / Total Cost Analysis)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "type": "substitute",
+   "access": "Płatne, B2B (wiedza modelu, niezweryfikowane)",
+   "covers_pl": "Hipoteza: doradca może przygotować porównanie kosztu całkowitego scenariuszy kredytowych w czasie.",
+   "misses_or_unverified_pl": "Zapytanie o oprogramowanie doradców nie zwróciło żadnego narzędzia. Funkcje HELOC (ścieżka prime, okres draw) niezweryfikowane. Narzędzie niedostępne dla konsumenta bezpośrednio."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie: 7 wyszukiwań WebSearch (extended), US English, wyłącznie podsumowania wyszukiwarki, żadna strona nie została otwarta. Pewność niska do średniej.\n\nHipoteza wave-1 była zbyt szeroka i trzeba ją zawęzić. Istnieje co najmniej 6 darmowych, dedykowanych kalkulatorów porównawczych:\n- Mothebroker: 3 warianty z HELOAN, ale tylko CA/WA,\n- Teamzlab: break-even,\n- Figure, Better, MortgageCalculator.org, NetRate,\n- kalkulatory blended rate (Refi.com, The Truth About Mortgage, True Blue Lending, BFFWS z kosztem w horyzoncie 60 miesięcy).\n\nTe narzędzia pokrywają rdzeń decyzji: 'zachować niską stopę i dobrać drugą hipotekę czy zrobić cash-out', czyli ratę, koszt całkowity, blended rate i break-even.\n\nLuka, jeśli istnieje, dotyczy głębi modelu, nie samego porównania. W podsumowaniach nie pojawiła się żadna z tych funkcji (wszystkie niezweryfikowane, a nie 'brak'):\n(1) harmonogram wypłat HELOC w czasie z okresem interest-only i szokiem raty po okresie draw;\n(2) scenariusze ścieżki prime (np. ±2 pp) i wykres wrażliwości;\n(3) rok sprzedaży jako zmienna z NPV w horyzontach 2/5/10 lat i rokiem zrównania wariantów;\n(4) warianty personal loan plus oszczędności oraz etapowanie projektu;\n(5) sekwencja 'HELOC teraz, refi lub konsolidacja później';\n(6) filtr wykonalności CLTV/DTI.\n\nOstatnie podsumowanie wprost stwierdziło, że znalezione narzędzia nie modelują zmian prime ani break-even dla sprzedaży w danym roku. Mothebroker i Teamzlab mogą jednak mieć więcej funkcji, niż widać w podsumowaniu. Przed budową trzeba je przetestować ręcznie.",
+ "search_scope_pl": "Wykonano 7 z 7 dozwolonych wyszukiwań WebSearch, wszystkie w trybie extended. Pokrycie typów zapytań:\n- zapytanie kategorii: 'HELOC vs cash-out refinance calculator',\n- problem użytkownika w języku naturalnym (przykładowy prompt),\n- alternatywna terminologia: blended rate, second mortgage, keep low rate,\n- płatne oprogramowanie i narzędzia doradców (loan officer total cost analysis): brak wyników o oprogramowaniu,\n- Reddit i arkusze: nie zwróciło żadnego wątku Reddit ani arkusza,\n- sygnały popytu: TransUnion, Cotality, Equifax,\n- zaawansowane funkcje: okres draw, szok raty, scenariusze prime, rok sprzedaży.\n\nOgraniczenia:\n- WebFetch zablokowany, więc żadnej strony nie otwarto ani nie przetestowano formularzy; dowody pochodzą wyłącznie z podsumowań wyszukiwarki.\n- Nie sprawdzono: aplikacji mobilnych (App Store / Google Play), Mortgage Coach z nazwy, szablonów Google Sheets/Excel wyszukiwanych bezpośrednio, kalkulatorów osadzanych przez banki i credit unions (np. dostawcy white-label), YouTube, wolumenów wyszukiwań (brak danych keyword).\n- Nie testowano, jak ChatGPT lub Google AI Mode faktycznie odpowiadają na przykładowy prompt.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wg podsumowania (dane TransUnion): home-equity originations w Q3 2025 wzrosły o 14,3% r/r do 714 tys., w tym HELOC o 15,8% do 352 tys. To szósty kwartał wzrostu z rzędu. Chodzi o skalę decyzji rocznie, nie o popyt miesięczny online.",
+   "url": "https://newsroom.transunion.com/q4-2025-ciir/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Infografika TransUnion (Q2 2026 CIIR): w Q1 2026 home equity originations rosły wolniej (+5,8% r/r), a mortgage originations mocno wzrosły, bo stopy spadły w okolice 6%. To potwierdza moment 'oferty refi przy ok. 6%' z opisu produktu.",
+   "url": "https://media.transunion.com/content/dam/transunion/us/business/collateral/infographic/q2-2026-ciir-mortgage-infographic.pdf",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg podsumowania (Cotality): w 2025 udzielono 1,5 mln HELOC na 271 mld USD, wobec 1,4 mln i 230 mld USD rok wcześniej. Przypisanie liczby do konkretnego URL z wyników jest niepewne (HELN News).",
+   "url": "https://www.hel.news/articles/bank-home-equity-news/study-originations-040726/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg podsumowania (Equifax): do lutego 2026 ok. 190,1 tys. HELOC na 28,8 mld USD, wobec 186 tys. na 26,0 mld USD rok wcześniej, czyli niewielki wzrost liczby.",
+   "url": "https://www.hel.news/articles/headlines/q3-originations-021926/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg podsumowania: tappable equity 21,4 bln USD wśród 104,4 mln właścicieli domów (Q4 2025). To potencjał, nie popyt. Przypisanie URL niepewne.",
+   "url": "https://www.quorumfcu.org/learn/home-equity-perspective",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Duże nasycenie treściami na frazę 'HELOC vs cash-out refinance' i wariant 'when you have a low mortgage rate': Bankrate, NerdWallet, Rocket, Quicken, Experian, Lower, The Mortgage Reports (2026: 'Cash-Out Refi With a Low Rate: Why It's a Trap'), banki regionalne (BetterBanks, 05.2026). To pośredni sygnał istotnego wolumenu zapytań i wysokiej konkurencji w SERP.",
+   "url": "https://themortgagereports.com/131328/cash-out-refi-trap-low-rate",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Strona Lower.com poświęcona dokładnie temu kadrowaniu ('HELOC vs. Cash-Out Refinance When You Have A Low Mortgage Rate') potwierdza, że rynek traktuje 'niska stopa z lat 2020–2021' jako osobny segment zapytań.",
+   "url": "https://www.lower.com/mortgages/heloc-vs-cash-out-when-you-have-a-low-mortgage-rate",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wyniki nie łączą wprost wzrostu HELOC z efektem lock-in. Analityk TransUnion wskazuje raczej na odroczony popyt po spadku stóp. Teza o 'lock-in' jako motorze pozostaje hipotezą.",
+   "url": "https://newsroom.transunion.com/q4-2025-ciir/",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest wysokie dla warstwy jakościowej i średnie dla warstwy ilościowej.\n\nDowód z tej fali: wyszukiwarka sama, bez pytania, odpowiedziała na przykładowy prompt gotową rekomendacją. Przy 3% kredycie lepszy jest HEL lub HELOC, bo cash-out reprycuje całe saldo i ma koszty zamknięcia 2–5%. Przy jednorazowych 80 tys. USD i horyzoncie 5 lat raczej home equity loan o stałej stopie, HELOC przy wypłatach rozłożonych w czasie. Dla większości użytkowników z niską stopą kierunek decyzji jest oczywisty i AI go podaje.\n\nChatGPT (Intelligent UI od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą renderować prosty kalkulator porównawczy w odpowiedzi.\n\nZewnętrzne narzędzie ma przewagę tylko tam, gdzie potrzebne są:\n- aktualne dane (prime, średnie marże HELOC i HEL; źródła są sprzeczne: 7,25% vs 8,5–9,5%),\n- długi model miesięczny z okresem draw, szokiem raty i scenariuszami stóp,\n- NPV w kilku horyzontach,\n- audytowalność założeń i możliwość powrotu do zapisanego scenariusza.\n\nAI z code interpreterem potrafi to zbudować, ale użytkownik musi o to poprosić. Odsyłanie do zewnętrznego narzędzia jest wiarygodne głównie dla użytkowników 'zaawansowanych', np. z planem sprzedaży lub sekwencją refi później.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja jest częsta w USA: ok. 1,5 mln HELOC rocznie i ok. 700 tys. originations home equity kwartalnie. Segment z kredytem 2,5–3,5% jest duży (wiedza ogólna, niezweryfikowane tu liczbowo). Widoczne nasycenie treściami 'HELOC vs cash-out' i wariantem 'low rate' wskazuje na realny popyt na pytania.",
+   "evidence_pl": "TransUnion: Q3 2025 714 tys. home-equity originations (+14,3%), Q1 2026 +5,8% r/r. Cotality: 1,5 mln HELOC w 2025. Wiele stron 2026 od Bankrate, NerdWallet, Lower, Mortgage Reports, AmeriSave.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań. Spowolnienie w 2026. Liczby originations to decyzje roczne, nie popyt miesięczny online. Efekt lock-in jako motor nie został potwierdzony w wynikach.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Częściowi konkurenci pokrywają rdzeń: porównanie 2–3 wariantów, ratę, koszt całkowity, blended rate i break-even. W podsumowaniach nie widać zintegrowanej sekwencji wielookresowej (harmonogram wypłat, ścieżka prime, szok raty, rok sprzedaży z NPV, personal loan i etapowanie, refi później, CLTV/DTI).",
+   "evidence_pl": "Mothebroker (HELOC/HELOAN/cash-out, CA/WA), Teamzlab (break-even), Figure, Better, MortgageCalculator.org, NetRate, kalkulatory blended rate (BFFWS z horyzontem 60 miesięcy). Podsumowanie wprost: brak modelu zmian prime i break-even dla sprzedaży w danym roku.",
+   "gaps_pl": "Żadnej strony nie otwarto, więc funkcje Mothebroker i Teamzlab mogą być bogatsze. Nie sprawdzono aplikacji mobilnych, kalkulatorów white-label banków ani szablonów arkuszy.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent rozstrzyga kierunek decyzji sam, co potwierdza AI-podsumowanie wyszukiwarki dla przykładowego promptu, i może wyrenderować prosty kalkulator. Odesłanie do narzędzia jest prawdopodobne tylko przy potrzebie świeżych stóp, długiego modelu i audytowalności.",
+   "evidence_pl": "Odpowiedź wyszukiwarki na prompt w języku naturalnym dała gotową rekomendację HEL/HELOC. Interaktywne UI ChatGPT i Google AI Mode są ogólnodostępne (wg kontekstu zadania).",
+   "gaps_pl": "Nie testowano bezpośrednio ChatGPT ani AI Mode. Nie wiadomo, czy cytują zewnętrzne kalkulatory w odpowiedziach na ten temat.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumencka publiczność w USA w wertykale mortgage/HELOC, jednym z najdroższych w reklamie, plus kontekst remontu (dach, kuchnia), czyli home services. Ograniczenia: polityki Google dla reklam kredytowych i mieszkaniowych w USA (ograniczona personalizacja targetowania) oraz charakter YMYL treści.",
+   "evidence_pl": "Obecność dużych lenderów i publisherów afiliacyjnych (Rocket, Quicken, Better, Figure, Bankrate, NerdWallet) na tę frazę wskazuje na wysoką wartość komercyjną.",
+   "gaps_pl": "Brak danych o CPC i RPM AdSense. Ograniczenia personalizacji reklam kredytowych obniżają przychód o nieznaną skalę (wiedza modelu, niezweryfikowane).",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Matematyka jest deterministyczna: amortyzacja, okres interest-only, zmienna stopa = indeks + marża, NPV. Prime jest dostępny za darmo (np. FRED; wiedza modelu). Średnie stopy HELOC, HEL i cash-out to dane mniej stabilne i często płatne, ale można je podać jako edytowalne wartości domyślne. Zasady (CLTV 80–85%, odliczalność odsetek) zmieniają się rzadko.",
+   "evidence_pl": "Podsumowania podają strukturę HELOC: draw 5–10 lat, spłata 10–20 lat, prime plus marża, koszty zamknięcia cash-out 2–6%, HEL 1–5%. Źródła są niespójne co do bieżących stóp, więc potrzebny jest mechanizm aktualizacji.",
+   "gaps_pl": "Nie sprawdzono licencji ani dostępności darmowego źródła średnich stóp HELOC i HEL. Aktualny status przepisów podatkowych o odsetkach (limit 750 tys. USD) wymaga weryfikacji.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd nie jest katastrofalny, bo użytkownik i tak dostaje oferty lenderów. To jednak treść YMYL przy decyzji na 30–150 tys. USD. Niepewność prognoz prime, sprzeczne dane o stopach i ryzyko nieaktualnych wartości domyślnych łatwo prowadzą do mylących rankingów wariantów. Interpretacja prawna jest ograniczona (odliczalność odsetek, limity CLTV i DTI różnią się między lenderami).",
+   "evidence_pl": "Podsumowania wskazują sprzeczności: HELOC 7,25% vs 8,5–9,5% w 2026. Teamzlab ma domyślne stopy sprzeczne z innymi źródłami, a Better nieaktualny przykład. To pokazuje realne ryzyko starzenia się danych.",
+   "gaps_pl": "Nie oceniano wymogów disclaimerów ani ryzyka regulacyjnego treści kredytowych (np. reklama kredytu, wiedza modelu).",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Rdzeń produktu to oś przepływów pieniężnych, moduł finansowania (amortyzacja, zmienna stopa, interest-only, koszty zamknięcia), wartość domu i CLTV, podatki i NPV. Silnik wprost obsłuży produkty pokrewne: refinance break-even, szok raty HELOC, konsolidacja kart, remontować czy się przeprowadzić, finansowanie dachu, solar loan vs HELOC, ADU i home equity investment.",
+   "evidence_pl": "Wszystkie znalezione kalkulatory używają tych samych wejść (saldo, stopa, okres, wartość domu, potrzebna kwota, credit score), co potwierdza wspólny model danych.",
+   "gaps_pl": "Wartość dla rodziny zależy od tego, czy rodzeństwo produktów też ma lukę. Tego tu nie badano.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony to ok. 3,5/5, ale kluczowy parametr (luka) ma niską pewność.\n\nZa:\n- duży i powtarzalny popyt na decyzję,\n- wertykał reklamowy mortgage/HELOC plus remonty,\n- najwyższa wartość jako wspólny silnik (finansowanie, oś czasu, NPV) dla całej rodziny 'Finansowanie i zadłużenie'.\n\nPrzeciw:\n- rdzeń porównania jest już pokryty przez co najmniej 6 darmowych kalkulatorów i silną treść Bankrate, NerdWallet i lenderów,\n- AI rozstrzyga kierunek decyzji sam,\n- SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL).\n\nPrzed pilotem trzeba zrobić trzy rzeczy:\n1. Ręcznie przetestować Mothebroker, Teamzlab, MortgageCalculator.org i NetRate pod kątem harmonogramu wypłat, scenariuszy prime, roku sprzedaży i NPV.\n2. Sprawdzić wolumen i trudność fraz typu 'heloc vs cash out refinance calculator' i 'keep low mortgage rate'.\n3. Zadać przykładowy prompt w ChatGPT i Google AI Mode i sprawdzić, czy odsyłają do zewnętrznych narzędzi.\n\nJeśli punkt 1 potwierdzi brak modelu wielookresowego, warto zbudować pilota jako silnik bazowy, z wyróżnikiem 'sell year + prime scenarios + draw-period shock'.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://www.mothebroker.com/tools/equity-comparison-calculator",
+   "competitor": "Mothebroker – HELOC vs Cash-Out Refi vs HELOAN Comparison Calculator [2026]",
+   "features_checked": "liczba wariantów, zasięg geograficzny, wyniki (koszt, rata, break-even)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, najbliższy kandydat: 3 warianty, CA/WA. Ścieżka prime, okres draw, rok sprzedaży i NPV niezweryfikowane. Wymaga ręcznego testu.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://tool.teamzlab.com/mortgage/heloc-vs-cash-out-refi-calculator-2026/",
+   "competitor": "Teamzlab – HELOC vs Cash-Out Refi Calculator 2026",
+   "features_checked": "break-even, jakość domyślnych stóp",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: porównanie 2 wariantów z break-even. Domyślne stopy sprzeczne z innymi źródłami.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://www.figure.com/home-equity-line/heloc-vs-cash-out-refinance-calculator/",
+   "competitor": "Figure – HELOC vs Cash-Out Refinance Calculator",
+   "features_checked": "kwoty, opłaty, raty, okres 15/30 lat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie pożyczkodawcy (produkt własny)",
+   "conclusion": "Partial: 2 warianty, ujęcie statyczne. Brak widocznego modelu w czasie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://better.com/heloc-vs-cashout-refi-calculator",
+   "competitor": "Better.com – HELOC vs Cash-Out Refinance Calculator",
+   "features_checked": "rata, stopa, koszt całkowity, wymagane dane (credit score)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie lead-gen pożyczkodawcy",
+   "conclusion": "Partial: 2 warianty, koszt całkowity. Przykładowy wynik nieaktualny.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity comparison calculator HELOC draw period payment shock prime rate scenarios sell home year break-even home equity loan cash-out refi",
+   "url": "https://www.mortgagecalculator.org/calculators/should-i-use-heloc.php",
+   "competitor": "MortgageCalculator.org – Should I use a HELOC",
+   "features_checked": "dane wejściowe (saldo, stopa, okres pierwotny i pozostały, wartość domu, kwota, credit score), porównanie druga hipoteka vs cash-out",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: dobre pokrycie danych obecnego kredytu. Wg podsumowania znalezione narzędzia nie modelują zmian prime ani sprzedaży w danym roku.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "blended rate calculator second mortgage vs cash-out refinance keep low rate",
+   "url": "https://www.netratemortgage.com/tools/second-lien-comparison",
+   "competitor": "NetRate Mortgage – 2nd Lien vs Cash-Out Refi Calculator",
+   "features_checked": "tylko tytuł i kategoria",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: rdzeń 'druga hipoteka vs cash-out'. Reszta funkcji niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "blended rate calculator second mortgage vs cash-out refinance keep low rate",
+   "url": "https://www.refi.com/calculator/blended-rate-mortgage-calculator/",
+   "competitor": "Kalkulatory blended rate (Refi.com, The Truth About Mortgage, True Blue Lending, Brokers First Funding)",
+   "features_checked": "blended rate vs stopa cash-out, raty, koszt w horyzoncie 60 miesięcy (BFFWS)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: wycinek decyzji. Wg podsumowania blended rate ignoruje różnice okresów i koszty zamknięcia.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "blended rate calculator second mortgage vs cash-out refinance keep low rate",
+   "url": "https://eaglecalculator.com/finance/mortgage/second-mortgage",
+   "competitor": "Eagle Calculator – Second Mortgage Calculator",
+   "features_checked": "tylko tytuł",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity comparison calculator HELOC draw period payment shock prime rate scenarios sell home year break-even home equity loan cash-out refi",
+   "url": "https://www.richify.ai/us/tools/home-equity-calculator",
+   "competitor": "Richify.ai – Home Equity Calculator",
+   "features_checked": "ile pożyczyć, HELOC vs loan",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: limit equity i HELOC vs HEL. Cash-out refi niewidoczny w tytule.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://www.zillow.com/mortgage-calculator/cash-out-refinance/",
+   "competitor": "Zillow – Cash-Out Refinance Calculator",
+   "features_checked": "maksymalna kwota cash-out, opłaty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (kalkulator jednozadaniowy): nie porównuje z HELOC.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC vs cash-out refinance calculator",
+   "url": "https://www.nerdwallet.com/article/mortgages/home-equity-loan-vs-cash-out-refinance",
+   "competitor": "NerdWallet – osobne kalkulatory HELOC, cash-out i refinance",
+   "features_checked": "czy kalkulatory są zintegrowane; koszty zamknięcia w projekcji refi",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: kalkulatory osobne, więc brak integracji. Koryguje notatkę wave-1 o kalkulatorze 'HELOC vs cash-out' NerdWallet/Bankrate.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "I have a 3% mortgage and need $80k for renovation, should I get a HELOC, home equity loan or cash-out refi if I might sell in 5 years",
+   "url": "https://www.bankrate.com/home-equity/home-equity-loan-heloc-or-cash-out-refi/",
+   "competitor": "Bankrate i inne artykuły (Experian, Rocket, Quicken, Lower, The Mortgage Reports)",
+   "features_checked": "jakościowa odpowiedź na dylemat, koszty zamknięcia, szok raty, opłaty za wcześniejsze zamknięcie HELOC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść): odpowiada jakościowo, bez spersonalizowanego modelu wielookresowego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit HELOC vs cash out refi spreadsheet low rate mortgage",
+   "url": "https://themortgagereports.com/131328/cash-out-refi-trap-low-rate",
+   "competitor": "The Mortgage Reports – Cash-Out Refi With a Low Rate: Why It's a Trap [2026]",
+   "features_checked": "kadrowanie 'niska stopa', heurystyki",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść). Zapytanie nie zwróciło wątków Reddit ani arkuszy, więc kategoria arkuszy pozostaje niezbadana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "I have a 3% mortgage and need $80k for renovation, should I get a HELOC, home equity loan or cash-out refi if I might sell in 5 years",
+   "url": "brak URL – AI-podsumowanie wyszukiwarki",
+   "competitor": "Asystenci AI / AI-podsumowania",
+   "features_checked": "czy odpowiedź na przykładowy prompt rozstrzyga decyzję",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; ChatGPT i AI Mode nie testowane bezpośrednio",
+   "conclusion": "Substitute silny: gotowa rekomendacja HEL/HELOC przy 3% stopie i horyzoncie 5 lat. Brak modelu prime, NPV i wrażliwości.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "loan officer software total cost analysis compare HELOC home equity loan cash-out refinance scenarios over time",
+   "url": "brak URL – brak wyników o oprogramowaniu",
+   "competitor": "Oprogramowanie doradców (np. Mortgage Coach – wiedza modelu)",
+   "features_checked": "istnienie płatnych narzędzi B2B do analizy kosztu całkowitego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; produkty B2B zwykle za loginem lub płatne",
+   "conclusion": "Niezweryfikowane: zapytanie zwróciło tylko artykuły konsumenckie.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "HELOC vs cash-out refinance calculator",
+  "I have a 3% mortgage and need $80k for renovation, should I get a HELOC, home equity loan or cash-out refi if I might sell in 5 years",
+  "blended rate calculator second mortgage vs cash-out refinance keep low rate",
+  "loan officer software total cost analysis compare HELOC home equity loan cash-out refinance scenarios over time",
+  "reddit HELOC vs cash out refi spreadsheet low rate mortgage",
+  "2026 HELOC originations growth homeowners locked in low mortgage rates TransUnion home equity",
+  "home equity comparison calculator HELOC draw period payment shock prime rate scenarios sell home year break-even home equity loan cash-out refi"
+ ]
+}

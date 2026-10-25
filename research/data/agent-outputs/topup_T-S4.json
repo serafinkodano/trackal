@@ -1,0 +1,1054 @@
+{
+ "seeds": [
+  {
+   "seed_id": "G",
+   "restated_problem_pl": "Senior albo jego dorosłe dzieci wybierają ścieżkę na 1–10 lat. Są cztery opcje: (1) zostać w domu, przystosować go (łazienka, rampy, schodołaz; jednorazowo od kilku do kilkudziesięciu tys. USD) i płacić za opiekę domową, której godzin z czasem przybywa; (2) sprzedać dom i przenieść się do independent living, assisted living, memory care albo CCRC; (3) zamieszkać z rodziną; (4) zostać teraz i przenieść się później, gdy potrzeby opieki przekroczą próg. Każdą ścieżkę trzeba sfinansować z oszczędności, sprzedaży domu, reverse mortgage (HECM), HELOC lub polisy LTC, a po wyczerpaniu aktywów z Medicaid. Wynik symulatora: w którym roku kończą się płynne środki w każdym wariancie, ile zostaje dla małżonka lub spadkobierców, przy ilu godzinach opieki zmienia się ranking wariantów i kiedy pojawia się wymuszony drugi ruch.",
+   "integration_check_pl": "Integracja jest realna, to nie są sklejone kalkulatory. (a) HECM działa tylko przy zamieszkaniu: wyprowadzka na ponad 12 kolejnych miesięcy zagraża pożyczce (search-summary: NCOA, Mutual of Omaha). Finansowanie zależy więc od wyboru mieszkaniowego, a wariant 'zostaję teraz, placówka później' kasuje HECM w chwili przeprowadzki. (b) Sprzedaż domu zasila fundusz opieki i zamienia aktywo zwykle wyłączone z oceny Medicaid w środki policzalne. Limity home equity w 2026 r.: federalnie 752 tys. USD, stany mogą podnieść do 1,13 mln USD. OBBBA wprowadza limit 1 mln USD od 1.01.2028 (search-summary: HousingWire). (c) Rosnąca trajektoria godzin opieki przesuwa punkt przecięcia kosztów (SeniorCareCalc podaje krajowo ok. 41 h tygodniowo) i może wymusić przeprowadzkę. Koszt adaptacji staje się wtedy kosztem utopionym. Zastrzeżenie: bezpieczeństwo, demencja i preferencje często przeważają nad rachunkiem. Symulator musi je traktować jako ograniczenia wykonalności, nie jako wynik.",
+   "competitors": [
+    {
+     "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+     "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+     "type": "partial",
+     "features_claimed": "Break-even obu scenariuszy. Uwzględnia godziny opieki, koszty adaptacji domu (15–50 tys. USD) i zmniejszenie godzin pracy przez rodzinę (search-summary).",
+     "notes": "Najbliższy rdzeniowi seeda G. Modelowanie finansowania (HECM, sprzedaż domu) i wyczerpania oszczędności w czasie jest niezweryfikowane.",
+     "paid": "darmowy (wg wyników); strona firmy doradczej"
+    },
+    {
+     "name": "SeniorCareCalc",
+     "url": "https://seniorcarecalc.org/",
+     "type": "partial",
+     "features_claimed": "Home care vs assisted living na medianach stanowych CareScout 2025. Krajowy punkt przecięcia ok. 41 h tygodniowo, wartości dla każdego stanu. Deklaruje brak prowizji od placówek.",
+     "notes": "Niszowa strona z rokiem 2026 w tytule. Nie modeluje finansowania ani wyczerpania aktywów (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "PayingForSeniorCare – Assisted Living vs Home Care Affordability Calculator",
+     "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+     "type": "partial",
+     "features_claimed": "Porównanie kosztów i przystępności home care vs assisted living.",
+     "notes": "Serwis ma też treści o reverse mortgage dla opieki. Integracja z narzędziem niezweryfikowana.",
+     "paid": "darmowy (prawdopodobnie lead-gen, niezweryfikowane)"
+    },
+    {
+     "name": "A Place for Mom – Senior Living Cost Calculator",
+     "url": "https://www.aplaceformom.com/paying-for-senior-care/cost-calculator",
+     "type": "partial",
+     "features_claimed": "Porównuje obecne wydatki domowe z kosztem assisted living, memory care i independent living.",
+     "notes": "Duży gracz lead-gen w branży senior living. Formularz kontaktowy lub bramka niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "ParentCareCalc",
+     "url": "https://parentcarecalc.com/",
+     "type": "partial",
+     "features_claimed": "Porównuje assisted living, home care, memory care i opiekę rodzinną. Wlicza ukryty koszt nieodpłatnego czasu opiekuna, dane wg stanów.",
+     "notes": "Uwzględnia koszt opiekuna rodzinnego, którego brakuje u większości konkurentów.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "EldersCalc – Assisted Living Cost Estimator",
+     "url": "https://eldercalc.com/assisted-living-cost-estimator/",
+     "type": "partial",
+     "features_claimed": "Sumy 5-letnie, np. 4 h opieki dziennie: 271 400 USD vs 300 000 USD w assisted living przy 5 000 USD miesięcznie (search-summary).",
+     "notes": "Statyczne porównanie bez finansowania (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "RetirementBudget.org – Assisted Living Cost Calculator 2026",
+     "url": "https://www.retirementbudget.org/calculators/assisted-living-cost-calculator",
+     "type": "partial",
+     "features_claimed": "Kalkulator kosztu assisted living.",
+     "notes": "Szczegóły funkcji niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "CostPrism – Assisted Living Cost Calculator 2026",
+     "url": "https://costprism.com/assisted-living-cost/",
+     "type": "partial",
+     "features_claimed": "Miesięczne stawki według poziomu opieki.",
+     "notes": "Przykład programmatic calculator site.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Arbor Company – Retirement Community Cost Calculator",
+     "url": "https://www.arborcompany.com/cost-calculator",
+     "type": "partial",
+     "features_claimed": "Sumuje obecne koszty życia w domu (mieszkanie, transport, opieka domowa) i porównuje z independent living, assisted living lub memory care.",
+     "notes": "Narzędzie operatora placówek, prawdopodobna stronniczość.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Storypoint – Senior Living Cost Calculator",
+     "url": "https://storypoint.com/senior-living-cost-calculator/",
+     "type": "partial",
+     "features_claimed": "Porównanie kosztów w domu i w społeczności senioralnej na założeniach użytkownika.",
+     "notes": "Operator placówek.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Senior Living Residences – Expense Calculator",
+     "url": "https://www.seniorlivingresidences.com/family-guide/financial-options/expense-calculator/",
+     "type": "partial",
+     "features_claimed": "Kalkulator wydatków: dom vs placówka.",
+     "notes": "Operator placówek. Szczegóły niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "MyLifeSite – narzędzia projekcji finansowych CCRC",
+     "url": "https://mylifesite.net/blog/post/overview-of-senior-living-cost-calculators-for-consumers",
+     "type": "substitute",
+     "features_claimed": "Szczegółowe projekcje finansowe używane przez personel CCRC i planistów. Modelują dopłaty, rabaty na przyszłą opiekę i zwroty entry fee (search-summary).",
+     "notes": "Narzędzie B2B dla doradców i placówek, w praktyce może być bliskie bezpośredniemu dla wariantu CCRC. Dostęp konsumencki niezweryfikowany.",
+     "paid": "niezweryfikowane (prawdopodobnie B2B)"
+    },
+    {
+     "name": "CareYaya – Home Care vs CCRC Cost",
+     "url": "https://www.careyaya.org/home-care-costs/home-care-vs-continuing-care-retirement-community",
+     "type": "partial",
+     "features_claimed": "Porównanie kosztów: aging in place vs life plan community.",
+     "notes": "Nie wiadomo, czy to narzędzie, czy artykuł (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "NRMLA reverse mortgage calculator (wzmianka w przewodniku NCOA)",
+     "url": "https://www.ncoa.org/article/a-guide-to-reverse-mortgages-for-older-adults/",
+     "type": "partial",
+     "features_claimed": "Szacuje koszty i kwotę z HECM.",
+     "notes": "Moduł finansowania. Nie modeluje decyzji zostać czy się przenieść (search-summary).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Genworth/CareScout Cost of Care Calculator; AARP Long-Term Care Cost Estimator",
+     "url": "brak URL w wynikach – wzmianka w podsumowaniu wyszukiwania 'aging in place vs assisted living cost calculator'",
+     "type": "partial",
+     "features_claimed": "Lokalne koszty opieki.",
+     "notes": "Źródła danych dla całego rynku. W tym przebiegu nie sprawdzone bezpośrednio.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "Doradca finansowy, prawnik elder law (NAELA), doradca senior living, ChatGPT, arkusz",
+     "url": "https://portal.prod.caregivers.com/questions/running-out-of-money-any-advice-on-planning-for-the-future-478568.htm",
+     "type": "substitute",
+     "features_claimed": "Na forach opiekunów użytkownicy polecają prawnika elder law w sprawach Medicaid i look-back oraz planowanie przeprowadzki przed wyczerpaniem środków.",
+     "notes": "Główny realny substytut w sytuacji kryzysowej.",
+     "paid": "płatne (prawnik/doradca) lub darmowe (doradcy lead-gen – hipoteza)"
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie (brak wolumenów wyszukiwań i promptów, niezweryfikowane). (a) W latach 2025–2026 powstało wiele niszowych kalkulatorów 'home care vs assisted living' z rokiem w tytule (SeniorCareCalc, ParentCareCalc, EldersCalc, CostPrism, RetirementBudget). Do tego dochodzą narzędzia operatorów i lead-genu (A Place for Mom, Arbor, Storypoint). To sygnał, że inni widzą popyt i wartość leadów, ale też że rdzeń jest zatłoczony. (b) Na forach (caregivers.com, early-retirement.org) wracają wątki o kończących się pieniądzach w assisted living, więc problem jest realny i bolesny. To, że problem istnieje, nie oznacza jednak chęci użycia złożonego symulatora. Rodzina w kryzysie często dzwoni do doradcy senior living lub prawnika (hipoteza).",
+   "ai_risk_pl": "Średnie. Prosty break-even (godziny × stawka vs miesięczna opłata) asystent AI policzy sam, a AI Overviews streszczają gotowe przewodniki (np. US News 2026), co zabiera kliknięcia z ogólnych zapytań. Czatowi trudniej spójnie powtórzyć wieloletnią symulację wyczerpywania aktywów: inflacja kosztów opieki, sprzedaż domu, HECM z regułą 12 miesięcy, próg Medicaid i wrażliwość. Tu deterministyczne narzędzie ma przewagę. Czy asystenci AI polecają takie strony, jest niezweryfikowane. Reguł Google nie przenoszę na ChatGPT, Perplexity ani Gemini.",
+   "maintenance_pl": "Średnie do wysokiego. Corocznie trzeba aktualizować: mediany kosztów opieki (CareScout/Genworth; warunki licencji danych niezweryfikowane), limit HECM (2026: 1 249 125 USD wg HousingWire/MBA/Longbridge), roczne standardy Medicaid (CMS), a w 2028 r. limit OBBBA 1 mln USD dla home equity. Reguły stanowe (spend-down, look-back, estate recovery, filial responsibility) to 50 wariantów i wysokie ryzyko błędu prawnego w obszarze YMYL. Tabele federalne można zautomatyzować (n8n). Reguł stanowych nie da się utrzymać bez ręcznej weryfikacji, chyba że Medicaid stanie się progiem wpisywanym przez użytkownika, z linkami do źródeł stanowych.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Rdzeń seeda (koszt opieki w domu vs placówka, nawet z kosztem adaptacji i czasem rodziny) obsługuje ponad 10 częściowych narzędzi: niszowe strony na danych CareScout 2025, break-even Riggins z kosztami adaptacji, ParentCareCalc z opieką rodzinną, kalkulatory operatorów i A Place for Mom. Nie znaleziono bezpośredniego konkurenta, który w jednym modelu łączy trajektorię opieki, finansowanie zależne od wariantu (HECM vs sprzedaż), wyczerpywanie oszczędności, drugi ruch i próg Medicaid. Zakres: ok. 6 zapytań dla G. Pewność średnio-niska, bo funkcji Riggins i MyLifeSite nie dało się zweryfikować bez otwarcia stron. Proponuję zmianę na 'Care Funding Runway' (T-S4-R1): ile lat starczy pieniędzy w każdym wariancie i kiedy nastąpi drugi ruch, Medicaid jako parametr, bez porad prawnych. Nie budować kolejnego 'home care vs assisted living calculator'.",
+   "search_scope_pl": "Zapytania: nazwa kategorii ('aging in place vs assisted living cost calculator', extended), CCRC vs dom (extended), finansowanie (reverse mortgage + long-term care + savings run out, extended), fraza forumowa/reddit (parents stay home vs assisted living money run out), ADU vs assisted living (extended), regulacje 2026 (HECM, Medicaid home equity, OBBBA). Nie sprawdzono bezpośrednio: Genworth/CareScout, AARP, kalkulatorów kosztu adaptacji domu, aplikacji ubezpieczycieli LTC, płatnych planerów emerytalnych i oprogramowania doradców, Reddita (wyszukiwanie nie zwróciło wątków z Reddita). Dowody to wyłącznie search-summary, strony nie były otwierane.",
+   "confidence": "medium"
+  },
+  {
+   "seed_id": "H",
+   "restated_problem_pl": "Właściciel jednej lub kilku nieruchomości na wynajem ma do wyboru: (1) trzymać bez zmian; (2) wyremontować i trzymać. Remont oznacza koszt i finansowanie (gotówka, HELOC, cash-out refi), przestój, czyli pustostan, a potem wyższy czynsz, niższą rotację i wyższą wartość. (3) Sprzedać teraz: koszty transakcyjne, recapture §1250 do 25%, LTCG, NIIT 3,8%, podatek stanowy. Warianty pochodne to (3a) sprzedaż z 1031 exchange i (3b) remont, a potem sprzedaż. Wynik: majątek netto po podatkach w horyzoncie N lat, IRR, przepływy, break-even remontu oraz wrażliwość na czynsz, pustostan, wzrost wartości i stopy.",
+   "integration_check_pl": "Integracja jest realna. Remont jako ulepszenie kapitałowe podnosi bazę i jest amortyzowany przez 27,5 roku, więc zmienia przyszły recapture i zysk ze sprzedaży. Przestój remontowy to pustostan. Finansowanie remontu zmienia dźwignię i cash flow. Wynik sprzedaży zależy od skumulowanej amortyzacji, a 1031 odracza podatek, przenosząc bazę (search-summary: OverlineIQ). Uwaga praktyczna: wariant 'remont i trzymaj' można przybliżyć, uruchamiając dwa razy istniejące narzędzie hold-vs-sell ze zmienionym czynszem, wartością i capex. Pełne sprzężenie podatkowe capex to niewielki dodatek. Wiele darmowych kalkulatorów rent-vs-sell porównuje dwa strumienie bez spójności podatkowej. Tak twierdzi OverlineIQ, czyli konkurent; niezweryfikowane.",
+   "competitors": [
+    {
+     "name": "BiggerPockets – Sell vs. Keep Calculator",
+     "url": "https://www.biggerpockets.com/calculators",
+     "type": "direct",
+     "features_claimed": "Osobny Sell vs. Keep Calculator obok Rental Property Calculator (proformy na 5/10/20+ lat wg recenzji).",
+     "notes": "Darmowe są 5 raportów, potem Pro (wg jednego źródła 39 USD miesięcznie lub 390 USD rocznie). Obsługa wariantu remontowego i głębokość podatkowa (recapture, NIIT) niezweryfikowane.",
+     "paid": "freemium (5 raportów, potem Pro)"
+    },
+    {
+     "name": "OverlineIQ – Keep vs. Sell a Rental Property calculator",
+     "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+     "type": "direct",
+     "features_claimed": "Twierdzi, że uwzględnia to, co inni pomijają: depreciation recapture, adjusted basis, NIIT; omawia też przenoszenie bazy w 1031 (blog z marca 2026).",
+     "notes": "Szczegóły narzędzia niezweryfikowane. Drugie wyszukiwanie nazwy marki nie zwróciło informacji o firmie.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Northpoint Asset Management – Rent vs Sell Calculator",
+     "url": "https://northpointam.com/rent-sell-calculator",
+     "type": "partial",
+     "features_claimed": "Porównuje sprzedaż teraz z wynajmem i sprzedażą później: kredyt, podatki, capital gains, wzrost wartości, reinwestycja. Domyślnie 95% obłożenia (czyli pustostan), 8% za zarządzanie, 3,5% wzrostu wartości.",
+     "notes": "Bliski bezpośredniemu dla hold vs sell, brak wariantu remontu (niezweryfikowane).",
+     "paid": "darmowy (lead-gen zarządcy)"
+    },
+    {
+     "name": "RentUPM – Rent vs Sell Calculator",
+     "url": "https://www.rentupm.com/rent-vs-sell/calculator/",
+     "type": "partial",
+     "features_claimed": "Wynajem i późniejsza sprzedaż vs sprzedaż teraz, domyślnie 5 lat. Wydatki: podatki, ubezpieczenie, HOA, zarządzanie, rezerwa na utrzymanie.",
+     "notes": "Lead-gen zarządcy.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "New Silver – Rent vs Sell Calculator",
+     "url": "https://newsilver.com/rent-vs-sell-calculator/",
+     "type": "partial",
+     "features_claimed": "Majątek z najmu (cash flow i equity) vs zainwestowane wpływy ze sprzedaży.",
+     "notes": "Strona pożyczkodawcy.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Good Life Management – Rent vs Sell Calculator",
+     "url": "https://www.goodlifemgmt.com/rent-vs-sell-calculator/",
+     "type": "partial",
+     "features_claimed": "Kwota dla każdej opcji, np. '$21,355 more wealth in 5 years'.",
+     "notes": "Lead-gen zarządcy. Jest też wersja OC: https://ocgoodlife.com/rent-vs-sell-calculator/",
+     "paid": "darmowy"
+    },
+    {
+     "name": "RL Property Management – Rent vs Sell Calculator",
+     "url": "https://rlpmg.com/rent-vs-sell-calculator/",
+     "type": "partial",
+     "features_claimed": "Długoterminowy majątek, lokalne komparatywy czynszów (Columbus, OH).",
+     "notes": "Lokalny lead-gen.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "DealCheck",
+     "url": "https://www.realestateskills.com/blog/dealcheck-review",
+     "type": "partial",
+     "features_claimed": "Projekcje buy-and-hold na lata 1–35 (cash flow, cap rate, odliczenia, ROI, equity). Obsługuje rehab, fix-and-flip, BRRRR, multifamily.",
+     "notes": "Wariant remontowy i projekcje są, ale bezpośrednie porównanie hold vs sell z podatkiem od sprzedaży jest niezweryfikowane. Darmowy plan na 15 nieruchomości, płatne plany ok. 10–20 USD miesięcznie (źródła się różnią).",
+     "paid": "freemium"
+    },
+    {
+     "name": "Stessa",
+     "url": "brak własnego URL w wynikach – wzmianka w przeglądach narzędzi (np. https://vouchermatch.com/rentalcalcs/best-rental-property-calculator; przypisanie cytatu niepewne)",
+     "type": "partial",
+     "features_claimed": "Narzędzie po zakupie: rejestruje rzeczywiste dane, nie służy do underwritingu. Darmowy kalkulator i platforma portfelowa.",
+     "notes": "Potencjalne źródło danych o bazie i amortyzacji dla użytkownika, nie konkurent decyzji.",
+     "paid": "freemium"
+    },
+    {
+     "name": "OneTopStop – Depreciation Recapture Calculator 2026",
+     "url": "https://www.onetopstop.insure/calculators/depreciation-recapture",
+     "type": "partial",
+     "features_claimed": "Podatek przy sprzedaży wynajmu: §1250, LTCG, NIIT. Omawia reguły 1031 (45/180 dni).",
+     "notes": "Moduł podatku od sprzedaży.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "HomeLight – Cash Offer Comparison Calculator",
+     "url": "https://www.homelight.com/blog/sell-home-as-is/",
+     "type": "partial",
+     "features_claimed": "Na podstawie ARV i kosztu napraw szacuje, ile różni kupujący zapłacą za dom as-is.",
+     "notes": "Dla właścicieli domów, nie landlordów. Moduł 'sprzedaj as-is vs napraw'.",
+     "paid": "darmowy (lead-gen)"
+    },
+    {
+     "name": "FortuneBuilders – Rental Property Calculator",
+     "url": "https://www.fortunebuilders.com/p/rental-property-calculator/",
+     "type": "partial",
+     "features_claimed": "Ogólny kalkulator rentowności najmu.",
+     "notes": "Szczegóły niezweryfikowane.",
+     "paid": "darmowy (prawdopodobnie lead-gen szkoleń)"
+    },
+    {
+     "name": "allpropertymanagement calculator (wątek Bogleheads)",
+     "url": "https://www.bogleheads.org/forum/viewtopic.php?t=174713",
+     "type": "partial",
+     "features_claimed": "Podatki od nieruchomości, zarządzanie, amortyzacja. Użytkownik forum zauważa, że nie jest kompletny podatkowo.",
+     "notes": "Starsze narzędzie polecane na forum.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "CPA lub doradca podatkowy, arkusz Excel, ChatGPT z analizą danych",
+     "url": "https://financial-advisors-for-real-estate-investors.com/guides/selling-rental-property-taxes/",
+     "type": "substitute",
+     "features_claimed": "Przewodniki zalecają przegląd przez CPA przed sprzedażą. Doradcy modelują recapture, NIIT i 1031.",
+     "notes": "Inwestorzy to grupa biegła w arkuszach.",
+     "paid": "płatne lub darmowe"
+    }
+   ],
+   "novelty": "pozorna",
+   "demand_pl": "Dane pośrednie: silny sygnał dla frazy, przy dużym zatłoczeniu. Jest ponad 8 kalkulatorów rent-vs-sell od zarządców nieruchomości (wartość leadu), dedykowany Sell vs Keep w BiggerPockets i artykuł OverlineIQ z marca 2026. Pojawiają się też strony spamowe AI na przejętych domenach ('8+ Free Keep or Sell Rental Property Calculator'), co pokazuje, że fraza ma wartość SEO, ale SERP jest zanieczyszczony. Wolumeny niezweryfikowane. Hipoteza: inwestorzy żyją w ekosystemie BiggerPockets/DealCheck i forach, więc rzadziej trafiają 'na zimno' z jednym zadaniem niż przypadkowi właściciele.",
+   "ai_risk_pl": "Średnio-wysokie. Inwestorzy sprawnie używają arkuszy i ChatGPT z analizą danych do policzenia recapture, LTCG i NIIT. Ekosystem zawiera przy tym błędne informacje: jeden blog twierdzi, że OBBBA obniżyła stawki LTCG i wydłużyła okres identyfikacji 1031 do 90 dni, co w wynikach oznaczono jako niepotwierdzone lub błędne. Czat powtarzający takie treści może się pomylić, więc deterministyczny model ze źródłami ma wartość jakościową. To jednak nie jest dowód popytu.",
+   "maintenance_pl": "Średnie. Przedziały podatkowe federalne zmieniają się co roku (automatyzacja z IRS). Progi NIIT nie są indeksowane. Stawka recapture 25% i reguły 1031 (45/180 dni) są stabilne. OBBBA z 4.07.2025: przywrócona 100% bonus depreciation dla aktywów oddanych do użytku od 19/20.01.2025 do 2029 (źródła różnią się co do daty) i limit SALT podniesiony do 40 tys. USD. Trzeba to zweryfikować w H.R.1 i wytycznych IRS, bo blogi vendorów zawierają błędy. Do tego stanowe podatki od zysków kapitałowych (50 stanów) i feed stóp procentowych.",
+   "verdict": "odrzucić",
+   "verdict_reason_pl": "W ogólnej postaci (inwestor: remont, trzymanie albo sprzedaż) przestrzeń jest obsadzona. BiggerPockets Sell vs Keep jest bezpośrednim konkurentem (freemium). OverlineIQ deklaruje pełną świadomość podatkową. Northpoint porównuje sprzedaż teraz z wynajmem i sprzedażą później, z podatkami, reinwestycją i obłożeniem. DealCheck ma projekcje do 35 lat i rehab/BRRRR. Do tego kilkanaście darmowych kalkulatorów zarządców. Wariant remontowy przybliża się dwukrotnym uruchomieniem istniejących narzędzi. Odbiorcy są kompetentni i mają substytuty, a SERP jest zaspamowany. Lepiej przejść do węższych momentów z innym użytkownikiem: przypadkowy właściciel przy relokacji (T-S4-R4) lub zdarzenie kapitałowe (T-S4-R5, później).",
+   "search_scope_pl": "Zapytania: nazwa kategorii ('sell or keep rental property calculator', extended), narzędzia inwestorskie i płatne (DealCheck, Stessa, BiggerPockets, value-add, extended), podatki (depreciation recapture, 1031, NIIT, extended), konkretny konkurent (OverlineIQ), naturalna fraza ('rental property needs major repairs fix up or sell as-is'), relokacja ('rent out my house or sell when moving', Section 121, extended), zmiany 2025–2026 (OBBBA). Nie sprawdzono: Roofstock, kalkulatorów 1031 od qualified intermediaries, szablonów Excel/Sheets, Reddita r/realestateinvesting bezpośrednio, Rentometer. Dowody to search-summary, strony nie były otwierane.",
+   "confidence": "medium"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "T-S4-R1",
+   "name_en": "Care Funding Runway Simulator (stay + home care vs reverse mortgage vs sell & move)",
+   "family": "Senior care & housing finance",
+   "user_and_moment": "Dorosłe dziecko (45–65 lat) lub sam senior tuż po upadku, diagnozie albo hospitalizacji, gdy potrzebna jest pomoc kilka godzin dziennie, a decyzję trzeba podjąć w ciągu tygodni.",
+   "sample_prompt_en": "My mom is 82, needs help about 4 hours a day, has $180k in savings and a paid-off house worth $350k. Should she stay home with aides and remodel the bathroom, take a reverse mortgage, or sell and move to assisted living — and how long will the money last in each case?",
+   "decision_problem": "Który wykonalny wariant opieki i mieszkania najdłużej utrzyma finansowanie i przy jakich założeniach ranking się odwraca (godziny opieki, inflacja kosztów, wartość domu). Kiedy wypada drugi ruch (dom → placówka) i kiedy płynne aktywa spadną do progu Medicaid podanego przez użytkownika.",
+   "combined_domains": "Koszty opieki (home care, assisted living, memory care), adaptacja domu, nieruchomości (sprzedaż, koszty transakcyjne), finansowanie (HECM, HELOC, polisa LTC), Medicaid jako próg aktywów (parametr), czas i utracony dochód opiekuna rodzinnego.",
+   "variants_compared": "A) zostaje, adaptacja i opiekunka z oszczędności; B) jak A, plus HECM line of credit; C) sprzedaż domu i assisted living teraz; D) zostaje teraz, przenosi się, gdy godziny opieki przekroczą X (HECM wtedy wygasa); E) zamieszkanie z rodziną, z kosztem utraconego dochodu opiekuna.",
+   "key_dependencies": "HECM tylko przy zamieszkaniu (reguła 12 miesięcy), więc wariant D likwiduje HECM przy przeprowadzce. Rosnące godziny opieki podnoszą koszt A nieliniowo, a adaptacja staje się kosztem utopionym przy przejściu. Sprzedaż domu zamienia aktywo zwykle wyłączone z Medicaid w policzalne. Inflacja kosztów opieki ściga się ze wzrostem wartości domu.",
+   "main_outputs": "Rok wyczerpania płynnych aktywów w każdym wariancie; majątek pozostały dla małżonka lub spadkobierców; próg godzin opieki zmieniający ranking; wykres tornado dla wrażliwości; jawna lista założeń i ograniczeń (bez porady prawnej i medycznej).",
+   "reason_external_site": "Wieloletni model z kilkoma sprzężeniami i analizą wrażliwości trudno w czacie wiarygodnie i powtarzalnie przeliczyć. Strona może utrzymywać aktualne tabele (mediany stanowe, limit HECM), pokazywać wykresy i być neutralna wobec lead-genu placówek.",
+   "data_sources": "Mediany kosztów opieki wg stanów (CareScout/Genworth; licencja niezweryfikowana, alternatywą są źródła publiczne – hipoteza). Limit HECM (2026: 1 249 125 USD wg HousingWire/MBA). Roczne progi Medicaid (CMS) i zmiana OBBBA od 2028. Zakresy kosztów adaptacji z publikacji (np. Atria: 3–50 tys. USD, search-summary).",
+   "user_data": "Wiek, stan, wartość domu i saldo kredytu, oszczędności, dochody (Social Security, emerytura), obecne godziny opieki i ich spodziewany wzrost, polisa LTC, oferta placówki, wycena adaptacji. Bez danych identyfikujących, obliczenia po stronie klienta.",
+   "nearest_competition": [
+    {
+     "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+     "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+     "type": "partial",
+     "features_claimed": "Break-even z godzinami opieki, kosztem adaptacji i redukcją pracy rodziny.",
+     "notes": "Finansowanie i wyczerpanie aktywów niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "SeniorCareCalc",
+     "url": "https://seniorcarecalc.org/",
+     "type": "partial",
+     "features_claimed": "Punkt przecięcia w godzinach, mediany CareScout 2025 wg stanów.",
+     "notes": "Bez finansowania (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "ParentCareCalc",
+     "url": "https://parentcarecalc.com/",
+     "type": "partial",
+     "features_claimed": "Uwzględnia nieodpłatną opiekę rodzinną, dane wg stanów.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "PayingForSeniorCare – Affordability Calculator",
+     "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+     "type": "partial",
+     "features_claimed": "Przystępność home care vs assisted living.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "MyLifeSite – projekcje CCRC dla doradców",
+     "url": "https://mylifesite.net/blog/post/overview-of-senior-living-cost-calculators-for-consumers",
+     "type": "substitute",
+     "features_claimed": "Szczegółowe projekcje finansowe dla personelu CCRC i planistów.",
+     "notes": "Dostęp konsumencki niezweryfikowany.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "NRMLA reverse mortgage calculator (via NCOA)",
+     "url": "https://www.ncoa.org/article/a-guide-to-reverse-mortgages-for-older-adults/",
+     "type": "partial",
+     "features_claimed": "Szacunek kosztów i kwoty z HECM.",
+     "notes": "Nie modeluje decyzji zostać czy się przenieść.",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Porównanie kosztu miesięcznego i 5-letniego home care vs assisted living, punkt przecięcia w godzinach, koszt adaptacji jako składnik break-even (Riggins), nieodpłatna opieka rodziny (ParentCareCalc), kwota z HECM (kalkulatory NRMLA i pożyczkodawców), kalkulatory operatorów placówek.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta, który w jednym modelu łączy wyczerpywanie aktywów w czasie, finansowanie zależne od wariantu (HECM vs sprzedaż), wymuszony drugi ruch i próg Medicaid. Zakres to ok. 6 zapytań dla G, pewność niska do średniej. Riggins i MyLifeSite mogą mieć więcej funkcji (niezweryfikowane).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Dane pośrednie: wysyp niszowych kalkulatorów 2025–2026 i narzędzi operatorów, wątki forów opiekunów o kończących się pieniądzach (caregivers.com, early-retirement.org). Brak danych o wolumenach wyszukiwań i promptów (niezweryfikowane).",
+   "ad_environment": "Hipoteza, niezweryfikowane: branża senior living i home care płaci za leady (A Place for Mom i operatorzy budują własne kalkulatory), więc w AdSense prawdopodobne są reklamy placówek, agencji opieki i HECM. Ryzyka: konflikt z neutralnością i niezweryfikowane polityki reklam usług finansowych dla seniorów.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Integracja jest realna, a moment decyzji silny i jednorazowy, co pasuje do modelu 'nowi użytkownicy z konkretnym zadaniem'. Ryzyka: YMYL, zatłoczony rdzeń, nieznane funkcje Riggins i MyLifeSite. Przed pilotem trzeba ręcznie przejść te narzędzia, sprawdzić popyt (Keyword Planner, testowe prompty w asystentach AI) i zaprojektować Medicaid jako parametr, a nie regułę stanową.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S4-R2",
+   "name_en": "In-Law Suite / ADU vs Assisted Living vs Home Care Simulator",
+   "family": "Senior care & home improvement finance",
+   "user_and_moment": "Rodzina z domem i miejscem na działce rozważa przyjęcie rodzica, który nie może już mieszkać sam, ale nie wymaga opieki 24/7.",
+   "sample_prompt_en": "Should we build an in-law suite for my dad or pay for assisted living? He's 78 with mild mobility issues, we have space in the backyard, and his house is worth about $300k.",
+   "decision_problem": "Czy jednorazowy koszt budowy lub przebudowy (ADU, dobudówka, adaptacja piwnicy) plus część opieki rodzinnej i płatnej wychodzi taniej i jest wykonalny w porównaniu z assisted living lub home care w domu rodzica, w spodziewanym horyzoncie potrzeb. Co stanie się z jednostką po zakończeniu opieki (wynajem, wartość przy odsprzedaży)?",
+   "combined_domains": "Budownictwo i regionalne koszty ADU, finansowanie (HELOC, cash-out refi, oszczędności rodzica, sprzedaż domu rodzica), koszty opieki, czas i utracony dochód opiekuna rodzinnego, nieruchomości (wartość dodana, przyszły czynsz), czas na pozwolenia i budowę.",
+   "variants_compared": "A) ADU wolnostojące; B) dobudówka lub in-law suite; C) rodzic zostaje u siebie z home care; D) assisted living; E) A lub B plus dochód z najmu po okresie opieki.",
+   "key_dependencies": "Długość okresu opieki decyduje o amortyzacji kosztu budowy. Jeśli potrzeby wzrosną (np. demencja), i tak może dojść do przeprowadzki do placówki, a koszt budowy wraca tylko częściowo przez najem lub wartość. Sprzedaż domu rodzica finansuje budowę. Czas budowy i pozwoleń (miesiące) zderza się z pilnością potrzeby. Opieka rodzinna obniża koszty płatne, ale ma koszt utraconego dochodu.",
+   "main_outputs": "Koszt netto w horyzoncie 3/5/10 lat, break-even w latach, wrażliwość na koszt budowy, długość i stawkę opieki, wartość rezydualna jednostki, wykonalność czasowa (czy budowa zdąży przed potrzebą).",
+   "reason_external_site": "Łączy dwa światy obsługiwane dziś osobno: kalkulatory ADU od firm budowlanych nie liczą opieki, a kalkulatory opieki nie liczą budowy. Wymaga regionalnych tabel i wykresów, których czat sam nie utrzyma.",
+   "data_sources": "Regionalne zakresy kosztów in-law suite i ADU (np. Angi: średnio 82 750 USD za in-law suite; tabele ADU 90–300 tys. USD i więcej, metropolie +20–40%; search-summary), mediany kosztów opieki wg stanów, stopy HELOC (feed), czynsze (wpisywane przez użytkownika).",
+   "user_data": "Stan i metropolia, typ projektu, wycena wykonawcy, oszczędności i dom rodzica, godziny opieki, dostępność rodziny i jej dochód.",
+   "nearest_competition": [
+    {
+     "name": "HomeAdditionCostCalculator – ADU Cost Calculator 2026",
+     "url": "https://homeadditioncostcalculator.com/adu-calculator/",
+     "type": "partial",
+     "features_claimed": "Koszt budowy ADU, miesięczny czynsz i okres zwrotu wg regionu.",
+     "notes": "Nie modeluje kosztów assisted living ani opieki.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "ParentCareCalc",
+     "url": "https://parentcarecalc.com/",
+     "type": "partial",
+     "features_claimed": "Assisted living, home care, memory care i opieka rodzinna wg stanów.",
+     "notes": "Bez budowy.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Minimal Living Concepts – ADU vs Assisted Living",
+     "url": "https://minimallivingconcepts.com/building-an-adu-vs-opting-for-an-assisted-living-facility-for-aging-parents-a-financial-and-lifestyle-comparison/",
+     "type": "substitute",
+     "features_claimed": "Artykuł porównawczy (finanse i styl życia).",
+     "notes": "Treść vendora, nie narzędzie.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Angi – cost to build in-law suite",
+     "url": "https://www.angi.com/articles/cost-to-build-in-law-suite.htm",
+     "type": "partial",
+     "features_claimed": "Dane kosztowe 2026.",
+     "notes": "Źródło danych, nie decyzja.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "CustomHome.us – ADU vs In-Law Suite for Aging Parents (Bay Area)",
+     "url": "https://www.customhome.us/blog/adu-vs-in-law-suite-aging-parents-bay-area",
+     "type": "substitute",
+     "features_claimed": "Przewodnik wykonawcy (ADU wolnostojące 250–500 tys. USD i więcej w Bay Area).",
+     "notes": "Lokalny vendor.",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Osobno istnieją: koszt ADU z czynszem i okresem zwrotu (HomeAdditionCostCalculator), porównanie opieki z uwzględnieniem opieki rodzinnej (ParentCareCalc, SeniorCareCalc) oraz artykuły ADU vs assisted living.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta, który łączy koszt i czas budowy z trajektorią opieki i wartością rezydualną jednostki. Zakres: 1 zapytanie extended, pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie: treści firm budowlanych i Angi o in-law suite dla rodziców (2026) oraz artykuły ADU vs assisted living. Brak danych wolumenowych. Hipoteza: grupa jest węższa (właściciele domów z miejscem i zoningiem pozwalającym na ADU).",
+   "ad_environment": "Hipoteza, niezweryfikowane: reklamy wykonawców, prefabrykowanych ADU, HELOC i senior care, potencjalnie wartościowe.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Rzadko spotykane połączenie domen w jednym narzędziu z realnymi sprzężeniami (czas budowy vs pilność, wartość rezydualna). Popyt jest jednak węższy, a regionalne koszty budowy trudno utrzymać automatycznie. Przed pilotem zbadać wolumen i ograniczenia zoningowe ADU.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S4-R3",
+   "name_en": "Retiree Home Sale Timing Simulator (downsize now vs later vs stay; §121 + IRMAA + buy vs rent)",
+   "family": "Retirement housing & tax",
+   "user_and_moment": "Para w wieku 60–70 lat z dużym zyskiem na domu, która rozważa downsizing przy przejściu na emeryturę lub Medicare i sprzedaż w ciągu 1–3 lat.",
+   "sample_prompt_en": "We're 64 and 66 and thinking of selling our house (bought in 1995 for $180k, now worth $900k) to downsize. Should we sell now or wait, buy a condo or rent, and how much will capital gains and Medicare IRMAA surcharges cost us?",
+   "decision_problem": "Kiedy i jak sprzedać (przed 63. rokiem życia, później albo wcale) i co potem (mniejszy dom, wynajem, CCRC). Wchodzą w to: limit wyłączenia §121 (250/500 tys. USD, niezmieniony od 1997), 2-letni look-back IRMAA, NIIT, koszty transakcyjne, koszty utrzymania domu, zwrot z uwolnionego kapitału i step-up dla spadkobierców przy zachowaniu domu.",
+   "combined_domains": "Podatki (LTCG, §121, NIIT, korekta bazy o ulepszenia), Medicare (IRMAA), nieruchomości (koszty sprzedaży i zakupu, utrzymanie), finanse osobiste (reinwestycja, płynność), mieszkanie (wynajem vs zakup).",
+   "variants_compared": "A) zostaje (aging in place, step-up); B) sprzedaje teraz i kupuje mniejszy dom; C) sprzedaje teraz i wynajmuje; D) sprzedaje później, rozkładając inne dochody; E) sprzedaż i CCRC (opcjonalnie).",
+   "key_dependencies": "Zysk ponad wyłączenie podnosi MAGI, co za 2 lata uruchamia IRMAA i ewentualnie NIIT. Liczy się termin sprzedaży względem wieku 63 lat i innych dochodów (moduł Roth/RMD to hipoteza). Zakup vs wynajem wpływa na płynność i ryzyko. Zatrzymanie domu do śmierci daje step-up bazy.",
+   "main_outputs": "Podatek i dopłata IRMAA w każdym wariancie i roku, majątek netto po 5/10/20 latach, przepływy miesięczne, wrażliwość na ceny domów i stopę zwrotu, próg zysku, od którego opłaca się przesunąć sprzedaż.",
+   "reason_external_site": "Łączy w wieloletnim harmonogramie reguły podatkowe i Medicare, które łatwo pominąć (look-back, NIIT). Zmienne tabele (progi IRMAA, przedziały LTCG) można aktualizować automatycznie z publikacji IRS i CMS.",
+   "data_sources": "IRS (przedziały LTCG; progi NIIT są stałe), CMS/SSA (roczne progi i dopłaty IRMAA), §121 (stałe), zakresy kosztów transakcyjnych, stopy hipoteczne (feed).",
+   "user_data": "Cena zakupu i ulepszenia, obecna wartość, stan cywilny, dochody i ich plan, wiek, plany mieszkaniowe.",
+   "nearest_competition": [
+    {
+     "name": "Calcbee – Section 121 Exclusion Calculator",
+     "url": "https://calcbee.com/calculators/real-estate/selling/section-121-exclusion-calculator/",
+     "type": "partial",
+     "features_claimed": "Test 24/24 miesięcy w okresie 60 miesięcy i wyliczenie wyłączenia.",
+     "notes": "Bez IRMAA i wariantów mieszkaniowych (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Rethinking65 – Surprise Medicare Bill Triggered by Home Sales",
+     "url": "https://rethinking65.com/surprise-medicare-bill-triggered-by-home-sales/",
+     "type": "substitute",
+     "features_claimed": "Artykuł o pułapce IRMAA przy sprzedaży domu.",
+     "notes": "Treść, nie narzędzie.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Fortune (03.2026) – IRMAA surcharge after selling house",
+     "url": "https://fortune.com/2026/03/11/medicare-irmaa-surcharge-home-sale-premium-increase-after-selling-house-retirement",
+     "type": "substitute",
+     "features_claimed": "Przykład: 300 tys. USD zysku podatkowego, składki rosną z ok. 406 USD do ponad 800 USD miesięcznie.",
+     "notes": "Media masowe, sygnał zainteresowania.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Płatne planery emerytalne i oprogramowanie doradców",
+     "url": "nie wyszukiwano w tym przebiegu – hipoteza / niezweryfikowane",
+     "type": "substitute",
+     "features_claimed": "Mogą modelować sprzedaż domu, podatki i IRMAA.",
+     "notes": "Do sprawdzenia przed decyzją.",
+     "paid": "płatne (hipoteza)"
+    }
+   ],
+   "already_solved": "Są kalkulatory wyłączenia §121 i artykuły o IRMAA przy sprzedaży domu (Fortune, Rethinking65, Yahoo/AOL, Moneywise). Pełne planery emerytalne mogą to robić, ale w tym przebiegu ich nie sprawdzono.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta, który łączy termin sprzedaży, §121, IRMAA i wybór między zakupem a wynajmem. Zakres: 1 zapytanie standard, w wynikach brak kalkulatorów. Pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie: kilka artykułów mediów masowych z 2026 r. o tym, że sprzedaż domu po 63. roku życia to kosztowny błąd medicare'owy (Fortune, Yahoo/AOL, Moneywise). Redakcje uznają temat za nośny. Wolumen niezweryfikowany.",
+   "ad_environment": "Hipoteza, niezweryfikowane: reklamy doradców finansowych, agentów nieruchomości, planów Medicare, społeczności 55+.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Mniejsze ryzyko prawne niż Medicaid (reguły federalne), niski koszt utrzymania (tabele roczne do automatyzacji) i wyraźny moment decyzji. Trzeba sprawdzić planery emerytalne i istniejące kalkulatory IRMAA oraz to, czy użytkownicy szukają narzędzia, czy tylko artykułu.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S4-R4",
+   "name_en": "Moving Homeowner: Keep as Rental vs Sell Simulator (rate lock-in + §121 window + next-home financing)",
+   "family": "Real estate / accidental landlord",
+   "user_and_moment": "Właściciel domu, który przeprowadza się z powodu pracy lub rodziny i ma niskooprocentowany kredyt. Moment: 1–3 miesiące przed przeprowadzką i zakupem kolejnego domu.",
+   "sample_prompt_en": "I'm relocating for work. My mortgage is at 2.9%. Should I rent out my house or sell it before the 3-year capital gains window closes, given I need a down payment for the new place?",
+   "decision_problem": "Sprzedać przed zamknięciem okna §121 (około 3 lata od wyprowadzki) czy zatrzymać dom jako wynajem? Zatrzymanie oznacza mniejszy wkład na nowy dom, czyli wyższy kredyt po dzisiejszej stopie i ewentualnie PMI. Do tego pustostan, zarządzanie, amortyzacja i recapture. Sprzedaż po terminie oznacza utratę całego wyłączenia.",
+   "combined_domains": "Nieruchomości (czynsz, pustostan, zarządzanie, utrzymanie), finansowanie (stary niski kredyt vs nowy kredyt, wkład, PMI, zdolność kredytowa – hipoteza), podatki (§121, amortyzacja, recapture, LTCG, NIIT), harmonogram (termin okna), rynek (wzrost wartości).",
+   "variants_compared": "A) sprzedaj teraz, pełny wkład na nowy dom; B) wynajmuj 2–3 lata i sprzedaj przed końcem okna §121; C) trzymaj długoterminowo, tracąc wyłączenie; D) wynajmuj i weź HELOC lub refinansowanie na wkład (opcjonalnie).",
+   "key_dependencies": "Kapitał zamrożony w starym domu określa wielkość i koszt nowego kredytu. Sprzedaż po oknie §121 opodatkowuje cały zysk bez częściowego zaliczenia (search-summary). Amortyzacja w okresie najmu daje recapture nawet przy sprzedaży w oknie (wiedza ogólna, do weryfikacji w IRS). Pustostan i koszty zarządzania zjadają przewagę niskiej stopy.",
+   "main_outputs": "Majątek netto po podatkach po 3/5/10 latach w każdym wariancie, miesięczne przepływy dla obu domów, data graniczna §121 i koszt jej przekroczenia, wrażliwość na czynsz, pustostan, stopę nowego kredytu i wzrost cen, break-even czynszu.",
+   "reason_external_site": "Sprzężenie dwóch kredytów, terminu podatkowego i najmu trudno spójnie policzyć w czacie. Kalkulatory zarządców w badanym zakresie wydają się modelować tylko jeden dom (niezweryfikowane). Szeroka grupa nie-inwestorów przychodzi z jednym konkretnym zadaniem.",
+   "data_sources": "Stopy hipoteczne (feed, np. publiczne tygodniowe średnie – hipoteza dostępności), przedziały IRS, NIIT, §121, koszty transakcyjne, czynsze wpisywane przez użytkownika.",
+   "user_data": "Saldo i oprocentowanie obecnego kredytu, wartość i baza, daty zamieszkania, spodziewany czynsz, cena i stopa nowego domu, oszczędności, stan cywilny i dochód.",
+   "nearest_competition": [
+    {
+     "name": "RentUPM – Rent vs Sell Calculator",
+     "url": "https://www.rentupm.com/rent-vs-sell/calculator/",
+     "type": "partial",
+     "features_claimed": "Wynajem i sprzedaż później vs sprzedaż teraz, wydatki, horyzont 5 lat.",
+     "notes": "Nowy kredyt i §121 niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Northpoint – Rent vs Sell Calculator",
+     "url": "https://northpointam.com/rent-sell-calculator",
+     "type": "partial",
+     "features_claimed": "Kredyt, podatki, capital gains, reinwestycja, obłożenie.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Good Life Management – Rent vs Sell",
+     "url": "https://www.goodlifemgmt.com/rent-vs-sell-calculator/",
+     "type": "partial",
+     "features_claimed": "Różnica majątku po 5 latach.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Calcbee – Section 121 Exclusion Calculator",
+     "url": "https://calcbee.com/calculators/real-estate/selling/section-121-exclusion-calculator/",
+     "type": "partial",
+     "features_claimed": "Test 2 z 5 lat.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Switchwize – Sell vs Rent Your Home (2026)",
+     "url": "https://www.switchwize.com/learn/sell-vs-rent-2026",
+     "type": "substitute",
+     "features_claimed": "Rachunek i ramy decyzji.",
+     "notes": "Treść, czy jest narzędzie – niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Morkel Financial – Rent Out My House or Sell It",
+     "url": "https://morkelfinancial.com/blog/rent-out-my-house-or-sell-it",
+     "type": "substitute",
+     "features_claimed": "Artykuł doradcy.",
+     "notes": "",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Intentional Living FP – 3-Year Tax Window",
+     "url": "https://www.intentionallivingfp.com/insights/converting-home-to-rental-tax-rules",
+     "type": "substitute",
+     "features_claimed": "Reguły podatkowe zamiany domu w wynajem.",
+     "notes": "",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Porównania rent vs sell z kredytem, kosztami i podatkami (Northpoint, kalkulatory zarządców), kalkulator testu §121 (Calcbee), artykuły o 3-letnim oknie.",
+   "gap": "W badanym zakresie nie znaleziono narzędzia, które sprzęga decyzję o starym domu z finansowaniem nowego (wkład, stopa, PMI) i terminem §121. Wyszukiwanie wprost zaznaczyło, że wyniki nie obejmują wpływu niskiej stopy na decyzję. Pewność niska do średniej, funkcje kalkulatorów zarządców niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie: wiele kalkulatorów rent vs sell od zarządców nieruchomości, adresowanych do przeprowadzających się właścicieli (wartość leadu), treści z 2026 r. (Switchwize, Morkel, Intentional Living FP), wątek Bogleheads. Skala zjawiska lock-in to hipoteza (nie szukano danych).",
+   "ad_environment": "Hipoteza, niezweryfikowane: reklamy kredytów hipotecznych, zarządców nieruchomości, firm przeprowadzkowych, agentów i ubezpieczeń landlord.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Lepszy niż H, bo trafia do szerokiej grupy nie-inwestorów z wyraźnym momentem i twardym terminem. Ryzyko: zatłoczony SERP rent vs sell (lead-gen zarządców). Wyróżnik musi wynikać ze sprzężenia z nowym kredytem i §121, co trzeba potwierdzić ręcznym testem 5–8 konkurencyjnych kalkulatorów.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S4-R5",
+   "name_en": "Rental Capex Event Simulator (repair & keep vs sell as-is vs repair & sell)",
+   "family": "Real estate / small landlord decisions",
+   "user_and_moment": "Mały właściciel (1–4 lokale) w momencie dużego wydatku: wymiana dachu lub HVAC, szkody po najemcy, wyprowadzka najemcy, raport z inspekcji.",
+   "sample_prompt_en": "My rental needs a new roof and HVAC ($28k) and the tenant is moving out. Should I fix it and keep renting, sell as-is, or fix it and then sell?",
+   "decision_problem": "Czy duży nakład kapitałowy ma sens, skoro właściciel i tak rozważa wyjście z inwestycji? Porównanie trzech ścieżek z czasem przestoju, pustostanem, finansowaniem naprawy, rabatem za sprzedaż as-is i podatkiem od sprzedaży.",
+   "combined_domains": "Nieruchomości (rabat as-is, ARV), koszty remontu, pustostan i rotacja, finansowanie (HELOC, gotówka), podatki (ulepszenie vs naprawa, baza, recapture; bonus depreciation dla niektórych składników po OBBBA – do weryfikacji).",
+   "variants_compared": "A) napraw i trzymaj; B) sprzedaj as-is (z najemcą lub pusty); C) napraw i sprzedaj; D) minimalna naprawa i trzymaj.",
+   "key_dependencies": "Kapitalizacja vs koszt bieżący zmienia podatek teraz i recapture później. Czas naprawy to pustostan. Rabat as-is trzeba zestawić ze wzrostem ceny po naprawie. Finansowanie naprawy zmienia cash flow.",
+   "main_outputs": "Majątek netto po podatkach dla każdej ścieżki, break-even naprawy, wrażliwość na rabat as-is, czas przestoju i czynsz.",
+   "reason_external_site": "Konkretny moment (rachunek od wykonawcy) łączy narzędzia sprzedażowe (HomeLight) i inwestorskie (BiggerPockets, DealCheck). Przewaga to hipoteza.",
+   "data_sources": "Przedziały podatkowe i reguły kapitalizacji (IRS), koszty transakcyjne; dane remontowe od użytkownika.",
+   "user_data": "Wycena naprawy, wartość as-is i po naprawie, czynsz, saldo kredytu, baza i skumulowana amortyzacja, dochód.",
+   "nearest_competition": [
+    {
+     "name": "HomeLight – Cash Offer Comparison Calculator",
+     "url": "https://www.homelight.com/blog/sell-home-as-is/",
+     "type": "partial",
+     "features_claimed": "Sprzedaż as-is vs po naprawie na podstawie ARV i kosztu napraw.",
+     "notes": "Dla właścicieli domów, bez najmu i podatków.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "BiggerPockets – Sell vs. Keep Calculator",
+     "url": "https://www.biggerpockets.com/calculators",
+     "type": "partial",
+     "features_claimed": "Hold vs sell.",
+     "notes": "Obsługa capex niezweryfikowana. Freemium.",
+     "paid": "freemium"
+    },
+    {
+     "name": "DealCheck",
+     "url": "https://www.realestateskills.com/blog/dealcheck-review",
+     "type": "partial",
+     "features_claimed": "Budżet rehab, projekcje 1–35 lat.",
+     "notes": "",
+     "paid": "freemium"
+    },
+    {
+     "name": "Bay Management Group – Selling a Property As-Is",
+     "url": "https://www.baymgmtgroup.com/blog/selling-a-property-as-is/",
+     "type": "substitute",
+     "features_claimed": "Przewodnik zarządcy (szkody po najemcy jako powód sprzedaży as-is).",
+     "notes": "",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "HomeLight porównuje sprzedaż as-is z naprawą dla właścicieli domów. BiggerPockets i DealCheck dają projekcje hold i sell oraz budżet rehab. Zarządcy publikują przewodniki o sprzedaży as-is.",
+   "gap": "W badanym zakresie (1 zapytanie standard) nie znaleziono kalkulatora dla landlordów, który łączy naprawę, pustostan i podatek od sprzedaży. Pewność niska. Wynik łatwo przybliżyć istniejącymi narzędziami.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Dane pośrednie i słabe: przewodniki zarządców o sprzedaży as-is. Brak danych wolumenowych.",
+   "ad_environment": "Hipoteza, niezweryfikowane: reklamy wykonawców (dachy, HVAC), cash buyers, zarządców.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "To zawężona wersja H, słabo odróżniona od BiggerPockets i DealCheck. Może posłużyć jako strona lub moduł w rodzinie z T-S4-R4, ale nie jako osobny priorytet.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+   "competitor": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "break-even, godziny opieki, koszt adaptacji, redukcja pracy rodziny (search-summary)",
+   "access_limits": "strony nie otwierano; finansowanie i wyczerpanie aktywów niezweryfikowane",
+   "conclusion": "Częściowy, najbliższy rdzeniowi G. Nie jest pełnym symulatorem finansowania (niezweryfikowane).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://seniorcarecalc.org/",
+   "competitor": "SeniorCareCalc",
+   "related_idea": "G / T-S4-R1 / T-S4-R2",
+   "features_checked": "mediany CareScout 2025 wg stanów, punkt przecięcia ok. 41 h tygodniowo, deklaracja braku prowizji",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy. Rdzeń home care vs assisted living jest skomodytyzowany.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+   "competitor": "PayingForSeniorCare – Assisted Living vs Home Care Affordability Calculator",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "porównanie przystępności",
+   "access_limits": "search-summary; szczegóły niezweryfikowane",
+   "conclusion": "Częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.aplaceformom.com/paying-for-senior-care/cost-calculator",
+   "competitor": "A Place for Mom – Senior Living Cost Calculator",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "obecne wydatki vs assisted living, memory care, independent living",
+   "access_limits": "możliwa bramka lead-gen (niezweryfikowana)",
+   "conclusion": "Częściowy. Duży gracz lead-gen, co sygnalizuje wartość komercyjną niszy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://eldercalc.com/assisted-living-cost-estimator/",
+   "competitor": "EldersCalc",
+   "related_idea": "G",
+   "features_checked": "sumy 5-letnie home care vs assisted living",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.retirementbudget.org/calculators/assisted-living-cost-calculator",
+   "competitor": "RetirementBudget.org – Assisted Living Cost Calculator 2026",
+   "related_idea": "G",
+   "features_checked": "koszt assisted living",
+   "access_limits": "search-summary; szczegóły niezweryfikowane",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://health.usnews.com/home-care/articles/home-care-vs-assisted-living-a-full-cost-benefit-analysis-and-2026-price-guide",
+   "competitor": "US News – Home Care vs Assisted Living cost-benefit guide 2026",
+   "related_idea": "G",
+   "features_checked": "treść porównawcza 2026",
+   "access_limits": "search-summary",
+   "conclusion": "Substytut treściowy, który może zasilać AI Overviews.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ADU or in-law suite for aging parent vs assisted living cost comparison calculator",
+   "url": "https://parentcarecalc.com/",
+   "competitor": "ParentCareCalc",
+   "related_idea": "G / T-S4-R1 / T-S4-R2",
+   "features_checked": "assisted living, home care, memory care, opieka rodzinna z kosztem czasu, wg stanów",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy. Uwzględnia opiekę rodzinną.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ADU or in-law suite for aging parent vs assisted living cost comparison calculator",
+   "url": "https://homeadditioncostcalculator.com/adu-calculator/",
+   "competitor": "HomeAdditionCostCalculator – ADU Cost Calculator 2026",
+   "related_idea": "T-S4-R2",
+   "features_checked": "koszt ADU, czynsz, okres zwrotu wg regionu; bez opieki",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy (moduł budowy).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ADU or in-law suite for aging parent vs assisted living cost comparison calculator",
+   "url": "https://minimallivingconcepts.com/building-an-adu-vs-opting-for-an-assisted-living-facility-for-aging-parents-a-financial-and-lifestyle-comparison/",
+   "competitor": "Minimal Living Concepts – ADU vs Assisted Living",
+   "related_idea": "T-S4-R2",
+   "features_checked": "artykuł porównawczy",
+   "access_limits": "search-summary",
+   "conclusion": "Substytut treściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ADU or in-law suite for aging parent vs assisted living cost comparison calculator",
+   "url": "https://costprism.com/assisted-living-cost/",
+   "competitor": "CostPrism – Assisted Living Cost Calculator 2026",
+   "related_idea": "G",
+   "features_checked": "stawki wg poziomu opieki",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy. Przykład programmatic calculator site.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "continuing care retirement community vs staying at home cost comparison calculator",
+   "url": "https://www.arborcompany.com/cost-calculator",
+   "competitor": "Arbor Company – Retirement Community Cost Calculator",
+   "related_idea": "G",
+   "features_checked": "koszty w domu vs independent living, assisted living, memory care",
+   "access_limits": "search-summary; operator placówek",
+   "conclusion": "Częściowy, stronniczy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "continuing care retirement community vs staying at home cost comparison calculator",
+   "url": "https://storypoint.com/senior-living-cost-calculator/",
+   "competitor": "Storypoint – Cost Calculator",
+   "related_idea": "G",
+   "features_checked": "porównanie dom vs społeczność senioralna",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "continuing care retirement community vs staying at home cost comparison calculator",
+   "url": "https://www.seniorlivingresidences.com/family-guide/financial-options/expense-calculator/",
+   "competitor": "Senior Living Residences – Expense Calculator",
+   "related_idea": "G",
+   "features_checked": "wydatki dom vs placówka",
+   "access_limits": "search-summary; szczegóły niezweryfikowane",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "continuing care retirement community vs staying at home cost comparison calculator",
+   "url": "https://mylifesite.net/blog/post/overview-of-senior-living-cost-calculators-for-consumers",
+   "competitor": "MyLifeSite – projekcje finansowe CCRC",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "projekcje dla personelu CCRC i planistów, dopłaty, zwroty entry fee",
+   "access_limits": "prawdopodobnie B2B; dostęp konsumencki niezweryfikowany",
+   "conclusion": "Substytut, potencjalnie bliski bezpośredniemu dla wariantu CCRC. Wymaga ręcznej weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "continuing care retirement community vs staying at home cost comparison calculator",
+   "url": "https://www.careyaya.org/home-care-costs/home-care-vs-continuing-care-retirement-community",
+   "competitor": "CareYaya – Home Care vs CCRC",
+   "related_idea": "G",
+   "features_checked": "porównanie aging in place vs life plan community",
+   "access_limits": "search-summary; czy narzędzie – niezweryfikowane",
+   "conclusion": "Częściowy lub treściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement stay in home or move calculator home modifications reverse mortgage long-term care savings run out",
+   "url": "https://www.ncoa.org/article/a-guide-to-reverse-mortgages-for-older-adults/",
+   "competitor": "NRMLA reverse mortgage calculator (wzmianka NCOA)",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "koszty i kwota HECM; wyszukiwanie wprost zaznaczyło brak kalkulatora stay-or-move z wyczerpaniem oszczędności",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy (moduł finansowania). W tym zapytaniu nie znaleziono bezpośredniego konkurenta dla stay vs move z wyczerpaniem oszczędności.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit should parents stay home with in-home care or sell house move assisted living money run out spreadsheet",
+   "url": "https://portal.prod.caregivers.com/questions/running-out-of-money-any-advice-on-planning-for-the-future-478568.htm",
+   "competitor": "Forum opiekunów (substytut: elder law attorney, doradca, arkusz)",
+   "related_idea": "G / T-S4-R1",
+   "features_checked": "rodzaje porad: Medicaid spend-down, look-back, NAELA, planowanie przeprowadzki przed wyczerpaniem środków",
+   "access_limits": "search-summary; Reddit nie pojawił się w wynikach",
+   "conclusion": "Dowód realnego problemu i główne substytuty, a nie wolumen popytu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://northpointam.com/rent-sell-calculator",
+   "competitor": "Northpoint Asset Management – Rent vs Sell Calculator",
+   "related_idea": "H / T-S4-R4",
+   "features_checked": "sprzedaż teraz vs wynajem i sprzedaż później, kredyt, podatki, capital gains, reinwestycja, obłożenie 95%, zarządzanie 8%",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy, bliski bezpośredniemu dla hold vs sell.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://newsilver.com/rent-vs-sell-calculator/",
+   "competitor": "New Silver – Rent vs Sell Calculator",
+   "related_idea": "H",
+   "features_checked": "majątek z najmu vs zainwestowane wpływy",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://www.goodlifemgmt.com/rent-vs-sell-calculator/",
+   "competitor": "Good Life Management – Rent vs Sell Calculator (także ocgoodlife.com)",
+   "related_idea": "H / T-S4-R4",
+   "features_checked": "różnica majątku po 5 latach",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy (lead-gen zarządcy).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://rlpmg.com/rent-vs-sell-calculator/",
+   "competitor": "RL Property Management – Rent vs Sell Calculator",
+   "related_idea": "H",
+   "features_checked": "majątek długoterminowy, lokalne komparatywy czynszów (Columbus)",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy, lokalny.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://www.rentupm.com/rent-vs-sell/calculator/",
+   "competitor": "RentUPM – Rent vs Sell Calculator",
+   "related_idea": "H / T-S4-R4",
+   "features_checked": "wynajem i sprzedaż później vs sprzedaż teraz, horyzont 5 lat, wydatki",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://www.fortunebuilders.com/p/rental-property-calculator/",
+   "competitor": "FortuneBuilders – Rental Property Calculator",
+   "related_idea": "H",
+   "features_checked": "rentowność najmu",
+   "access_limits": "search-summary; szczegóły niezweryfikowane",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=174713",
+   "competitor": "allpropertymanagement calculator (Bogleheads)",
+   "related_idea": "H",
+   "features_checked": "podatki od nieruchomości, zarządzanie, amortyzacja; ocena forum: niekompletny podatkowo",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy, starszy. Pokazuje, że na forach polecano takie narzędzia.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell or keep rental property calculator",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "competitor": "OverlineIQ – Keep vs Sell calculator",
+   "related_idea": "H",
+   "features_checked": "deklaracja: recapture, adjusted basis, NIIT, 1031 (marzec 2026)",
+   "access_limits": "search-summary; narzędzie nie zostało zweryfikowane, wyszukiwanie marki nie dało informacji",
+   "conclusion": "Bezpośredni dla hold vs sell z podatkami (na podstawie deklaracji). Wariant remontowy niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep vs sell rental property calculator depreciation recapture 1031 exchange NIIT renovate",
+   "url": "https://www.onetopstop.insure/calculators/depreciation-recapture",
+   "competitor": "OneTopStop – Depreciation Recapture Calculator 2026",
+   "related_idea": "H / T-S4-R5",
+   "features_checked": "§1250, LTCG, NIIT, reguły 1031 45/180 dni",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy (moduł podatku od sprzedaży).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "DealCheck Stessa BiggerPockets hold vs sell analysis rental property renovation value-add calculator",
+   "url": "https://www.biggerpockets.com/calculators",
+   "competitor": "BiggerPockets – Sell vs. Keep Calculator",
+   "related_idea": "H / T-S4-R5",
+   "features_checked": "osobny Sell vs Keep; proformy 5/10/20+ lat",
+   "access_limits": "5 darmowych raportów, potem Pro (wg recenzji 39 USD miesięcznie lub 390 USD rocznie); szczegóły za loginem niezweryfikowane",
+   "conclusion": "Bezpośredni dla rdzenia H.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "DealCheck Stessa BiggerPockets hold vs sell analysis rental property renovation value-add calculator",
+   "url": "https://www.realestateskills.com/blog/dealcheck-review",
+   "competitor": "DealCheck",
+   "related_idea": "H / T-S4-R5",
+   "features_checked": "projekcje 1–35 lat, rehab, BRRRR, flip, multifamily",
+   "access_limits": "darmowy plan na 15 nieruchomości; płatne ok. 10–20 USD miesięcznie (źródła się różnią); porównanie hold vs sell niezweryfikowane",
+   "conclusion": "Częściowy, mocny substytut dla wariantu remontowego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "DealCheck Stessa BiggerPockets hold vs sell analysis rental property renovation value-add calculator",
+   "url": "https://vouchermatch.com/rentalcalcs/best-rental-property-calculator",
+   "competitor": "Stessa (wzmianka w przeglądach)",
+   "related_idea": "H",
+   "features_checked": "śledzenie danych po zakupie, bez underwritingu",
+   "access_limits": "przypisanie cytatu do konkretnego artykułu niepewne",
+   "conclusion": "Częściowy. Raczej źródło danych użytkownika niż konkurent decyzji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "overlineiq keep vs sell rental property",
+   "url": "https://production.matthewmarks.com/?p=38576",
+   "competitor": "Strony spamowe AI ('8+ Free Keep or Sell Rental Property Calculator') na przejętych domenach",
+   "related_idea": "H",
+   "features_checked": "rodzaj treści (spam SEO)",
+   "access_limits": "search-summary",
+   "conclusion": "To nie konkurent, tylko sygnał wartości SEO frazy i zanieczyszczenia SERP.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent out my house or sell when moving calculator section 121 three year rule low mortgage rate",
+   "url": "https://calcbee.com/calculators/real-estate/selling/section-121-exclusion-calculator/",
+   "competitor": "Calcbee – Section 121 Exclusion Calculator",
+   "related_idea": "T-S4-R4 / T-S4-R3",
+   "features_checked": "test 24/24 miesięcy w 60 miesiącach",
+   "access_limits": "search-summary",
+   "conclusion": "Częściowy (moduł podatkowy).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent out my house or sell when moving calculator section 121 three year rule low mortgage rate",
+   "url": "https://www.switchwize.com/learn/sell-vs-rent-2026",
+   "competitor": "Switchwize – Sell vs Rent Your Home (2026)",
+   "related_idea": "T-S4-R4",
+   "features_checked": "rachunek i ramy decyzji",
+   "access_limits": "search-summary; czy jest narzędzie – niezweryfikowane",
+   "conclusion": "Substytut lub częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent out my house or sell when moving calculator section 121 three year rule low mortgage rate",
+   "url": "https://morkelfinancial.com/blog/rent-out-my-house-or-sell-it",
+   "competitor": "Morkel Financial – Rent Out My House or Sell It",
+   "related_idea": "T-S4-R4",
+   "features_checked": "artykuł doradcy",
+   "access_limits": "search-summary",
+   "conclusion": "Substytut treściowy. Wyszukiwanie nie objęło aspektu niskiej stopy kredytu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent out my house or sell when moving calculator section 121 three year rule low mortgage rate",
+   "url": "https://www.intentionallivingfp.com/insights/converting-home-to-rental-tax-rules",
+   "competitor": "Intentional Living FP – 3-Year Tax Window",
+   "related_idea": "T-S4-R4",
+   "features_checked": "reguły podatkowe zamiany domu w wynajem",
+   "access_limits": "search-summary",
+   "conclusion": "Substytut treściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "downsizing in retirement calculator sell house capital gains exclusion IRMAA buy smaller vs rent",
+   "url": "https://fortune.com/2026/03/11/medicare-irmaa-surcharge-home-sale-premium-increase-after-selling-house-retirement",
+   "competitor": "Brak narzędzia w wynikach – artykuły o IRMAA (Fortune, Rethinking65, Yahoo/AOL, Moneywise)",
+   "related_idea": "T-S4-R3",
+   "features_checked": "czy istnieje kalkulator łączący §121, IRMAA i wybór kupno vs wynajem (wynik: w wynikach nie było kalkulatorów)",
+   "access_limits": "1 zapytanie standard",
+   "conclusion": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Pewność niska, planery emerytalne nie były sprawdzane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rental property needs major repairs fix up or sell as-is calculator landlord",
+   "url": "https://www.homelight.com/blog/sell-home-as-is/",
+   "competitor": "HomeLight – Cash Offer Comparison Calculator",
+   "related_idea": "T-S4-R5 / H",
+   "features_checked": "ARV i koszt napraw, oferty dla różnych typów kupujących",
+   "access_limits": "search-summary; lead-gen",
+   "conclusion": "Częściowy (sprzedaż as-is vs naprawa, bez najmu i podatków). Kalkulatora dla landlordów nie znaleziono w tym zapytaniu.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "[extended] aging in place vs assisted living cost calculator",
+  "[extended] sell or keep rental property calculator",
+  "[extended] retirement stay in home or move calculator home modifications reverse mortgage long-term care savings run out",
+  "[extended] keep vs sell rental property calculator depreciation recapture 1031 exchange NIIT renovate",
+  "[extended] DealCheck Stessa BiggerPockets hold vs sell analysis rental property renovation value-add calculator",
+  "[standard] overlineiq keep vs sell rental property",
+  "[standard] 2026 HECM lending limit Medicaid home equity limit change One Big Beautiful Bill long-term care",
+  "[standard] reddit should parents stay home with in-home care or sell house move assisted living money run out spreadsheet",
+  "[standard] One Big Beautiful Bill landlords rental property changes bonus depreciation 2025 2026 capital gains selling rental",
+  "[extended] rent out my house or sell when moving calculator section 121 three year rule low mortgage rate",
+  "[extended] ADU or in-law suite for aging parent vs assisted living cost comparison calculator",
+  "[extended] continuing care retirement community vs staying at home cost comparison calculator",
+  "[standard] downsizing in retirement calculator sell house capital gains exclusion IRMAA buy smaller vs rent",
+  "[standard] rental property needs major repairs fix up or sell as-is calculator landlord"
+ ]
+}

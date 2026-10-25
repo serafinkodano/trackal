@@ -1,0 +1,1191 @@
+{
+ "topic": "Ekonomia monetyzacji reklamowej dla amerykańskiej strony z symulatorami decyzji (AdSense, sieci premium, polityki, RPM, sezonowość, IVT/agenci AI, zgody, lead-gen jako dodatek, zmiany 2025-2026)",
+ "summary_pl": "Ustalenia oparte wyłącznie na podsumowaniach wyników wyszukiwania (search-summary). Nie otwierałem żadnej strony, bo WebFetch jest zablokowany. Pod koniec pracy wyczerpał się limit wyszukiwań: 200 na turę, wspólny dla wszystkich agentów. Przez to nie zweryfikowałem viewability, wielkości wzrostu CPM w Q4 2025, RPM dla nisz motoryzacja/energia ani listy core update'ów z 2026.\n\nWniosek główny: model „hundreds of decision simulators + AdSense” ma strukturalny problem z przychodem na sesję. Nie wynika on z popytu, tylko z mechaniki reklamy.\n\n(1) AdSense od 2024 płaci za wyświetlenie. Wydawca dostaje 80% po opłacie strony kupującej, co Google szacuje efektywnie na ok. 68% (źródło pierwotne: blog Google). Liczą się więc wyświetlenia, a interaktywny symulator to zwykle 1 odsłona z długim czasem na stronie.\n\n(2) AdSense nie pozwala odświeżać reklam automatycznie ani bez działania użytkownika. Zakazane są też reklamy w iframe. Długi czas spędzony na symulatorze nie zamienia się więc w dodatkowe wyświetlenia. Odświeżanie in-view (minimum 30 s) jest możliwe dopiero w Ad Manager, z którego korzystają sieci premium.\n\n(3) Polityki Google bezpośrednio uderzają w ten typ strony:\n- zakaz reklam na ekranach bez treści wydawcy, z niską wartością albo z treścią generowaną automatycznie bez ręcznej weryfikacji,\n- zakaz reklam tuż obok elementów interaktywnych (accidental clicks),\n- „scaled content abuse” w Search (liczy się intencja, nie metoda; Google nie podaje progu),\n- YMYL dla finansów.\nOdrzucenia AdSense z powodu „low value content” dla stron-narzędzi są udokumentowane anegdotycznie.\n\n(4) Benchmarki RPM w niszach finanse/ubezpieczenia/nieruchomości to głównie szacunki marketingowe (rozrzut 3-60 USD). Rzetelniejsze są self-reported RPM sesyjne z blogów treściowych:\n- Journey: ok. 12-19 USD,\n- Mediavine: ok. 22-43 USD,\n- Raptive: ok. 47-68 USD.\nTe liczby obciąża survivor bias i dotyczą długich artykułów z wieloma slotami. Nie przenoszą się na narzędzia.\n\n(5) Progi wejścia (stan 2025-2026):\n- Journey: ponad 1 000 sesji,\n- Mediavine Official: ponad 5 000 USD rocznego przychodu z reklam,\n- Raptive: 25 000 PV, z wymogiem udziału ruchu z rynków tier-1,\n- Ezoic: 250 000 MAU dla nowych stron od 19.02.2026 (przestał być łatwym krokiem pośrednim).\n\n(6) CPC wyszukiwania nie przekłada się na RPM display. Według WordStream 2025 CPC w Search dla Finance & Insurance to 3,46 USD, a według Promodo CPC w GDN dla tej branży to ok. 0,86 USD. Do tego RPM = CPC × CTR, a podaż drogich reklam jest ograniczona.\n\n(7) Ryzyka przychodowe:\n- adblock: ok. 32,5% amerykańskich internautów (GWI, Q2 2025; inne pomiary pokazują 19-27%),\n- GPC/RDP w kilkunastu stanach, czyli reklamy niespersonalizowane,\n- sezonowość: historycznie spadek o 40-60% na przełomie grudnia i stycznia,\n- incydenty platformy: w styczniu 2026 spadki eCPM o 50-70%, które Google potwierdził jako błąd,\n- IVT: Google zatrzymuje niewypłacone środki, a potrąceń nie da się odwołać.\n\n(8) Agenci AI (Comet, Atlas) są klasyfikowani przez IAS/DV jako GIVT lub SIVT i często nie generują wyświetleń. Cloudflare od 15.09.2026 domyślnie blokuje crawlery typu Training/Agent na stronach z reklamami. Ruch z asystentów AI jest wciąż mały wobec Google: według Chartbeat poniżej 1% odesłań, według TollBit Google wysyła 831 razy więcej wizyt.\n\n(9) Nowe źródła przychodu z ery AI są na etapie pilotów i nie mają jawnych stawek: Microsoft PCM, Comet Plus (80% z subskrypcji 5 USD, pula 42,5 mln USD), ProRata/Gist (50/50), Cloudflare Pay Per Crawl/Use. Nie mogą być bazą przychodu małej, nowej strony. Środki zaradcze przewidziane w sprawie antymonopolowej ad tech (Brinkema, 2.09.2026) to tylko zobowiązania behawioralne, a apelacja jest prawdopodobna.\n\n(10) Lead-gen jako osobny model (ceny płacone przez kupującego, źródła vendorskie):\n- solar: 25-250 USD za lead,\n- ubezpieczenia auto/dom: ok. 6-80 USD, live transfer do 200 USD,\n- refinansowanie hipoteki: 40-200 USD,\n- senior living: prowizja rzędu pierwszego czynszu (historycznie ok. 3,5 tys. USD w WA),\n- refinansowanie auta: 100-240 USD za sfinansowaną pożyczkę.\nAfiliant dostaje mniej niż kupujący płaci.\n\nSzacunek orientacyjny: przy 1,1-1,5 PV/sesję i page RPM 5-15 USD wychodzi ok. 5,5-22,5 USD na 1 000 sesji. 1 000 USD miesięcznie wymaga wtedy rzędu 45-180 tys. sesji z USA.",
+ "findings": [
+  {
+   "question": "1. Aktualny podział przychodu i model rozliczeń AdSense",
+   "claim_pl": "Od 2024 AdSense for content rozlicza wydawców za wyświetlenie (eCPM), a nie za kliknięcie. Wydawca dostaje 80% przychodu po potrąceniu opłaty platformy kupującej (Google Ads lub zewnętrzny DSP). Google Ads zatrzymuje średnio ok. 15% budżetu reklamodawcy, więc według przykładu Google z 1 USD reklamodawcy do wydawcy trafia nadal ok. 0,68 USD (historyczne 68%). Zmiana nie objęła AdSense for Search. Ginny Marvin (Google Ads Liaison) potwierdziła przejście na eCPM w lutym 2024 (search-summary).",
+   "evidence_type": "direct",
+   "numbers": "80% po stronie sprzedażowej; ok. 15% średnio po stronie kupującej (Google Ads); efektywnie ok. 68%; od 2024; dotyczy AFC, nie AFS",
+   "sources": [
+    {
+     "url": "https://blog.google/products/adsense/evolving-how-publishers-monetize-with-adsense/",
+     "title": "evolving how publishers monetize with adsense",
+     "publisher": "Google (blog)",
+     "published": "2023-11"
+    },
+    {
+     "url": "https://searchengineland.com/google-adsense-changes-pays-publishers-434055",
+     "title": "Google AdSense unveils major changes to how it pays publishers",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://ppc.land/google-increases-adsense-rev-share-from-68-to/",
+     "title": "Google to increase AdSense revenue share from 68% to 80%",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/google-adsense-shifts-to-ecpm-payment-model/508132",
+     "title": "Google AdSense shifts to eCPM payment model",
+     "publisher": "Search Engine Journal",
+     "published": "2024-02"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Przychód zależy od liczby (widocznych) wyświetleń, nie od kliknięć w drogie reklamy. Symulator, w którym użytkownik spędza 5 minut na jednej odsłonie, zarabia tyle, ile wyświetleń zdążą wygenerować sloty przy ładowaniu i przewijaniu. To strukturalna wada formatu „one big interactive page” w porównaniu z wielostronicowymi artykułami."
+  },
+  {
+   "question": "2. Polityka: reklamy na ekranach bez treści wydawcy / niska wartość / treść automatyczna",
+   "claim_pl": "Google Publisher Policies zabraniają reklam Google na ekranach:\n- bez treści wydawcy,\n- z treścią niskiej wartości,\n- w budowie,\n- służących do powiadomień, nawigacji lub innych celów behawioralnych.\n\nZabronione są też reklamy na stronach typu Thank you, Login, Error oraz na treści generowanej automatycznie bez ręcznej weryfikacji lub kuracji. Osobna polityka mówi, że reklam nie może być więcej niż treści wydawcy. Do treści wydawcy nie wlicza się whitespace, nagłówków, stopek ani linków do innych treści (search-summary stron pomocy Google).",
+   "evidence_type": "direct",
+   "numbers": "brak progów liczbowych w polityce",
+   "sources": [
+    {
+     "url": "https://support.google.com/publisherpolicies/answer/11112688",
+     "title": "Google-served ads on screens without publisher-content",
+     "publisher": "Google Publisher Policies"
+    },
+    {
+     "url": "https://support.google.com/publisherpolicies/answer/11169917",
+     "title": "More ads or paid promotional material than publisher-content",
+     "publisher": "Google Publisher Policies"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Ryzyko dla symulatora:\n- ekran z samymi polami formularza i suwakami może nie zostać uznany za „treść wydawcy” (hipoteza / niezweryfikowane, bo polityka nie mówi wprost o formularzach),\n- setki stron generowanych przez Claude Code/n8n bez ręcznej weryfikacji podpadają pod zakaz „automatically generated content without manual review”.\n\nKażdy monetyzowany ekran musi mieć merytoryczną treść: założenia, interpretację wyniku, porównanie wariantów. Ekrany pośrednie, np. krok kreatora albo „calculating…”, powinny być bez reklam."
+  },
+  {
+   "question": "2. Polityka: reklamy przy elementach interaktywnych / przypadkowe kliknięcia",
+   "claim_pl": "Polityka „Ads interfering” mówi, że reklamy nie mogą zasłaniać elementów interaktywnych ani stać bezpośrednio obok nich. Przykłady to przyciski nawigacyjne, czaty, galerie i rozgrywka. Reklamy nie mogą też wypychać treści wydawcy z ekranu.\n\nPolityka AdSense dotycząca nakłaniania do kliknięć jako ryzykowne wymienia reklamy w pobliżu linków, przycisków play, przycisków nawigacji, okien gier, odtwarzaczy i menu rozwijanych. Ostrzeżenie może dostać także layout nieintencjonalny, a Google zaleca odsuwanie reklam od przycisków „next” i innych klikalnych elementów (search-summary).",
+   "evidence_type": "direct",
+   "numbers": "brak minimalnych odległości w pikselach w wynikach",
+   "sources": [
+    {
+     "url": "https://support.google.com/publisherpolicies/answer/11035030",
+     "title": "Ads interfering",
+     "publisher": "Google Publisher Policies"
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/1346295",
+     "title": "AdSense – encouraging clicks / ad placement policy",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://adsense.googleblog.com/2007/05/clarification-on-accidental-clicks.html",
+     "title": "clarification on accidental clicks",
+     "publisher": "Google AdSense Blog (2007)"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Symulator to niemal cały ekran elementów interaktywnych: suwaki, pola, przyciski „Compare”, zakładki wariantów. Bezpieczne sloty zostają głównie poza strefą sterowania, czyli nad nagłówkiem, pod wynikami i w bocznym railu na desktopie. To zmniejsza liczbę i widoczność slotów na mobile, a zarazem podnosi ryzyko ostrzeżeń przy agresywnym Auto ads."
+  },
+  {
+   "question": "2. Polityka: odświeżanie reklam i iframe'y",
+   "claim_pl": "Odświeżanie: AdSense dopuszcza nowe żądanie reklamy tylko po działaniu użytkownika. Przykładem jest klik w kolejny slajd, a slajdy przewijane automatycznie już się nie kwalifikują. Odświeżanie na timer jest niedozwolone. W Google Ad Manager/AdX auto-refresh jest dozwolony po zadeklarowaniu, przy minimalnym interwale 30 s (search-summary blogów MonetizeMore/PubGalaxy, nie pierwotny tekst Google).\n\nIframe: według pomocy AdSense nie wolno umieszczać reklam w ramce wewnątrz innej strony, w swoim oprogramowaniu ani modyfikować kodu reklam. Wyjątek to obsługiwane web-view w aplikacjach.",
+   "evidence_type": "indirect",
+   "numbers": "minimalny interwał refresh w Ad Manager: 30 s (zadeklarowany)",
+   "sources": [
+    {
+     "url": "https://www.monetizemore.com/blog/adsense-policy-auto-refreshing-ads",
+     "title": "What is the Adsense Policy on Auto-Refreshing Ads?",
+     "publisher": "MonetizeMore"
+    },
+    {
+     "url": "https://www.pubgalaxy.com/ad-refreshing-with-google-ad-manager-and-ad-sense/",
+     "title": "Ad refreshing with Google Ad Manager and Ad Sense",
+     "publisher": "PubGalaxy"
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/3394713",
+     "title": "AdSense – ads in iframes / software (FAQ)",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://searchengineland.com/google-bans-iframes-for-adsense-though-says-it-will-grant-exceptions-81174",
+     "title": "Google Bans iFrames for AdSense, Though Says It Will Grant Exceptions",
+     "publisher": "Search Engine Land (2011)"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Na AdSense długi czas na stronie nie daje dodatkowych wyświetleń. Czy przeliczenie symulacji przez użytkownika może uzasadnić nowe żądanie reklamy, pozostaje niezweryfikowane i jest ryzykowne. Architektura musi mieć kod reklam w głównym dokumencie, nie w osadzonym widgecie. Nie da się też monetyzować własnych symulatorów osadzanych jako iframe na cudzych stronach."
+  },
+  {
+   "question": "2/8. Invalid traffic – konsekwencje dla wydawcy",
+   "claim_pl": "Według strony Google o jakości ruchu przy zablokowaniu konta za invalid traffic Google zatrzymuje całość niewypłaconych środków. Odwołanie jest możliwe tylko wtedy, gdy wydawca w dobrej wierze twierdzi, że ruch nie wynikał z jego działań ani zaniedbania, i nie gwarantuje przywrócenia. Google nie ujawnia metod detekcji.\n\nPotrącenia z zarobków za IVT są ostateczne i nieodwoływalne. Reguła kciuka z jednego bloga: 1-2% potrąceń to norma, powyżej 4-5% trzeba reagować. Anegdotycznie zdarzały się potrącenia sięgające 70-80% (search-summary).",
+   "evidence_type": "direct",
+   "numbers": "1-2% potrąceń jako „norma” (jeden blog, opinia); skrajne przypadki 70-80% (fora)",
+   "sources": [
+    {
+     "url": "https://www.google.com/ads/adtrafficquality/publishers/",
+     "title": "Resources for publishers (ad traffic quality)",
+     "publisher": "Google"
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/2808531",
+     "title": "AdSense – deductions from earnings",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://justpublishingadvice.com/always-check-invalid-traffic-on-your-google-adsense-account",
+     "title": "How To Check Invalid Clicks In Google AdSense For Content",
+     "publisher": "Just Publishing Advice"
+    },
+    {
+     "url": "https://xenforo.com/community/threads/adsense-shaved-80.182439",
+     "title": "AdSense shaved 80%",
+     "publisher": "XenForo community"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Przy automatycznym utrzymaniu przez n8n i Claude Code trzeba wykluczyć reklamy z testów E2E, monitoringu uptime i screenshotów, bo własne boty mogą generować IVT. Jedno konto AdSense to pojedynczy punkt awarii całego przychodu."
+  },
+  {
+   "question": "2. Google Search: scaled content abuse i spam update 2025",
+   "claim_pl": "Polityka „scaled content abuse” (od marca 2024, zastąpiła „spammy automatically generated content”) obejmuje wiele stron tworzonych głównie po to, by manipulować rankingiem, a nie pomagać użytkownikom, niezależnie od sposobu ich stworzenia. Przykładem jest używanie generatywnego AI do tworzenia wielu stron bez wartości dodanej. Google nie publikuje progu liczby stron ani tempa publikacji.\n\nSpam update z sierpnia 2025 (26.08-22.09.2025 według blogów SEO) celował w scaled content abuse i site reputation abuse (search-summary, źródła wtórne).",
+   "evidence_type": "indirect",
+   "numbers": "brak publicznego progu; spam update 26.08-22.09.2025 (źródła wtórne)",
+   "sources": [
+    {
+     "url": "https://ppc.land/scaled-content-abuse/",
+     "title": "scaled content abuse",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/in-depth-look-at-google-spam-policies-updates/511005/",
+     "title": "In-depth look at Google spam policies updates",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://www.practicalecommerce.com/google-spam-policies-explained",
+     "title": "Google spam policies explained",
+     "publisher": "Practical Ecommerce"
+    },
+    {
+     "url": "https://www.seo-kreativ.de/en/blog/google-august-2025-spam-update-officially-complete/",
+     "title": "Google August 2025 Spam Update: Officially Complete",
+     "publisher": "SEO Kreativ"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "„Setki symulatorów” generowanych szablonowo to dokładnie wzorzec, który ta polityka opisuje. Liczy się intencja i unikalna wartość, nie sama liczba stron. Bezpieczniej startować od kilkudziesięciu dopracowanych symulatorów i skalować dopiero po dowodzie jakości (sygnały zaangażowania). Site reputation abuse nie dotyczy własnej domeny, chyba że strona hostowałaby treści stron trzecich."
+  },
+  {
+   "question": "2. Helpful content / core updates – asymetria ryzyka",
+   "claim_pl": "Glenn Gabe śledził ok. 400 stron mocno dotkniętych Helpful Content Update z września 2023. Do sierpnia 2024 tylko 22% odzyskało 20% lub więcej utraconego ruchu, a większość pozostała stłumiona. Pełne odzyskanie ruchu opisywane jest jako anomalia.\n\nNie znaleziono źródła łączącego spadki dużych stron kalkulatorowych z konkretnym update'em (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "ok. 400 stron; 22% z odbiciem ≥20% po ok. 11 miesiącach",
+   "sources": [
+    {
+     "url": "https://www.seroundtable.com/google-helpful-content-update-recovery-data-38358.html",
+     "title": "22% Of Sites Hit By Google's Helpful Content Update Are Up 20% Or More",
+     "publisher": "Search Engine Roundtable"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-helpful-content-recovery-core-update-37095.html",
+     "title": "No Site Impacted By The September Helpful Content Update Recovered Yet",
+     "publisher": "Search Engine Roundtable"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Kara obejmująca całą domenę jest praktycznie nieodwracalna w horyzoncie 1-2 lat. Projekt nastawiony na masowe generowanie stron ma więc ogon ryzyka ryzyka zera, a nie tylko słabszego wyniku. Właściciel stawia na ruch z asystentów AI, ale ten wciąż jest mały względem Google (patrz ustalenie o TollBit/Chartbeat)."
+  },
+  {
+   "question": "2. YMYL i surowsza ocena tematów finansowych",
+   "claim_pl": "Rewizja Search Quality Rater Guidelines z 11.09.2025 utrzymuje YMYL dla kategorii „financial security” (pieniądze, podatki, inwestycje, duże zakupy). W styczniu 2025 dodano wytyczne o scaled content abuse.\n\nPrzewodnik społeczności AdSense podaje, że wnioski ocenia w większości człowiek, a dla tematów finansowych i zdrowotnych obowiązuje wyższy standard. Żadne źródło nie wspomina wprost o kalkulatorach (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "rewizja QRG 11.09.2025; aktualizacja 01.2025 (scaled content abuse)",
+   "sources": [
+    {
+     "url": "https://ipullrank.com/eeat-ymyl-ai-search",
+     "title": "Google's Search Quality Rater Guidelines and YMYL in the Age of AI Search",
+     "publisher": "iPullRank"
+    },
+    {
+     "url": "https://www.seoteric.com/google-updates-search-quality-raters-guidelines-with-ai-overview-examples-and-ymyl-definitions/",
+     "title": "Google's Updated Search Quality Raters Guidelines: AI Content and YMYL Clarifications",
+     "publisher": "Seoteric"
+    },
+    {
+     "url": "https://support.google.com/adsense/community-guide/241032356/how-can-you-solve-the-low-value-content-adsense-disapproval-challenge?hl=en",
+     "title": "How can you solve the low value content AdSense disapproval challenge",
+     "publisher": "Google AdSense Community"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Najlepiej płatne nisze (finanse, ubezpieczenia, hipoteki, nieruchomości) mają też najwyższą poprzeczkę E-E-A-T. Potrzebne są widoczne metodologia, źródła danych, autor lub recenzent i daty aktualizacji. To przeczy założeniu „bez kosztownej pracy redakcyjnej”."
+  },
+  {
+   "question": "2. Odrzucenia AdSense „low value content” dla stron-narzędzi",
+   "claim_pl": "Google nie publikuje minimalnej liczby słów, artykułów, ruchu ani wieku domeny dla AdSense. Deweloper z ponad 65 stronami narzędzi opisuje odrzucenie za „low value content” bez wskazania konkretów (anegdota). Poradniki diagnostyczne jako typowe przyczyny wymieniają:\n- cienkie strony,\n- powtarzalne sformułowania,\n- strony typu doorway,\n- gołe pole wejściowe bez tekstu objaśniającego.\n(search-summary)",
+   "evidence_type": "indirect",
+   "numbers": "65+ stron narzędzi odrzuconych (pojedyncza anegdota)",
+   "sources": [
+    {
+     "url": "https://toolpod.dev/blog/adsense-rejection-low-value-content",
+     "title": "I Got Rejected by Google AdSense: What 'Low Value Content' Really Means",
+     "publisher": "toolpod.dev"
+    },
+    {
+     "url": "https://eiway.com/adsense-low-value-content-diagnostic-guide/",
+     "title": "AdSense Low Value Content Diagnostic Guide",
+     "publisher": "eiway.com"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Sama akceptacja do AdSense nie jest pewna dla świeżej domeny z narzędziami. Trzeba zaplanować bufor czasowy i warstwę treści objaśniającej przed wnioskiem. Healthscorer.com ma już konto AdSense, ale nowa domena i tak przechodzi ocenę strony (hipoteza: jedno konto ułatwia formalności, nie zwalnia z oceny jakości)."
+  },
+  {
+   "question": "3/9. Benchmark incumbentów: strony kalkulatorowe żyją z reklam, ale skala przychodu jest umiarkowana",
+   "claim_pl": "Omni Calculator jest finansowany głównie z reklam (AdSense) i ma case study w Google Publisher Stories. Według profili ma ok. 30-65 pracowników. Growjo szacuje jego roczny przychód na ok. 4,2 mln USD, co jest szacunkiem stron trzecich, a nie danymi finansowymi.\n\nTrackery ruchu podają dla Omni i calculator.net spadki w 2026, ale ich liczby są wzajemnie sprzeczne. Semrush: calculator.net 59,76 mln wizyt w sierpniu 2026, średnia sesja 4:57 (search-summary).",
+   "evidence_type": "estimate",
+   "numbers": "Omni: ok. 4,2 mln USD/rok (szacunek Growjo); 19-23 mln wizyt/mies. według profili; calculator.net: 59,76 mln wizyt, sesja 4:57 (Semrush, VIII 2026)",
+   "sources": [
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator (publisher story)",
+     "publisher": "Google"
+    },
+    {
+     "url": "https://growjo.com/company/Omni_Calculator",
+     "title": "Omni Calculator: Revenue, Competitors, Alternatives",
+     "publisher": "Growjo"
+    },
+    {
+     "url": "https://app.dealroom.co/companies/omni_calculator",
+     "title": "Omni Calculator company information, funding & investors",
+     "publisher": "Dealroom"
+    },
+    {
+     "url": "https://www.similarweb.com/website/omnicalculator.com/",
+     "title": "omnicalculator.com Traffic Analytics",
+     "publisher": "Similarweb"
+    },
+    {
+     "url": "https://www.semrush.com/website/calculator.net/overview/",
+     "title": "calculator.net Website Traffic, Ranking, Analytics [August 2026]",
+     "publisher": "Semrush"
+    },
+    {
+     "url": "https://analytics.explodingtopics.com/website/calculator.net",
+     "title": "calculator.net Website Traffic, Rankings & Analytics Report April 2026",
+     "publisher": "Exploding Topics"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Nawet lider kategorii z dziesiątkami milionów wizyt to (szacunkowo) firma o przychodzie kilku mln USD rocznie i zespole kilkudziesięciu osób. Z rozbieżnych szacunków nie liczę implikowanego RPM. Długie sesje (ok. 5 min) przy formacie kalkulatora potwierdzają problem „długi czas, mało odsłon”."
+  },
+  {
+   "question": "3. Benchmarki RPM AdSense dla nisz (finanse, ubezpieczenia, nieruchomości, dom) – jakość danych",
+   "claim_pl": "Dostępne zestawienia RPM według nisz to głównie strony marketingowe i kalkulatory bez metodologii. Przykładowe widełki:\n- finanse: 30-60 USD,\n- ubezpieczenia: 28-55 USD,\n- nieruchomości: 6-18 USD albo 25-50 USD (zależnie od źródła),\n- dom i remont: 3-6 USD albo 20-40 USD,\n- page RPM dla finansów i ubezpieczeń przy ruchu z USA: 15-40 USD (WeForAds).\n\nKalkulatory AdSense podają typowe RPM w przedziale ok. 1-25 USD. Jeden benchmark podaje medianę ok. 2,40 USD z 75 stawek; nie umiem przypisać tej liczby z pewnością do konkretnego URL z poniższej listy. Wszystko to search-summary, bez danych audytowanych.",
+   "evidence_type": "estimate",
+   "numbers": "finanse 30-60 USD; ubezpieczenia 28-55 USD; nieruchomości 6-50 USD; dom 3-40 USD; finanse US page RPM 15-40 USD (szacunki vendorów)",
+   "sources": [
+    {
+     "url": "https://adstimate.com/blog/highest-paying-adsense-niches.html",
+     "title": "Highest Paying AdSense Niches 2026: RPM Data for All 30 Categories",
+     "publisher": "Adstimate"
+    },
+    {
+     "url": "https://monetizepros.com/ad-sales/high-paying-ad-niches/",
+     "title": "15 Highest Paying Ad Niches (Highest CPC & RPM Niches)",
+     "publisher": "MonetizePros"
+    },
+    {
+     "url": "https://weforads.com/blog/ad-revenue-benchmarks-2026/",
+     "title": "ad revenue benchmarks 2026",
+     "publisher": "WeForAds"
+    },
+    {
+     "url": "https://www.appadrevenue.com/guides/how-much-do-websites-earn",
+     "title": "How Much Do Websites Earn From Ads? RPM by Niche (2026)",
+     "publisher": "appadrevenue.com"
+    },
+    {
+     "url": "https://pubmonitor.com/tools/adsense-calculator",
+     "title": "AdSense Revenue Calculator",
+     "publisher": "PubMonitor"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Widełki różnią się nawet dziesięciokrotnie, więc nie nadają się do modelu biznesowego. Model należy oprzeć na scenariuszach (pesymistyczny 3-5 USD, bazowy 8-12 USD, optymistyczny 15-25 USD page RPM dla ruchu z USA) i szybko zweryfikować własnym testem na healthscorer lub pilotażowej domenie."
+  },
+  {
+   "question": "3. Self-reported RPM w sieciach premium (Journey / Mediavine / Raptive)",
+   "claim_pl": "Raporty blogerów za 2025 (RPM sesyjne, self-reported):\n- Mediavine: 22-43 USD miesięcznie, średnio ok. 35 USD (X 2024-X 2025, jeden bloger); inny autor: nieco poniżej 30 USD za 2025, ze spadkiem,\n- Journey: średnio 19,22 USD na sesję u jednego autora; 12,69 USD w pierwszych 90 dniach u innego (styczeń i luty słabe),\n- Raptive: 47-57 USD w pierwszych 3 miesiącach po przejściu z Mediavine; blog kulinarny 59,71 USD w I 2025 i 68,35 USD w II 2025.\n\nTo blogi treściowe (food, travel, lifestyle), a nie narzędzia (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "Journey 12,69-19,22 USD; Mediavine 22-43 USD (śr. ok. 35 USD); Raptive 47-68 USD (RPM sesyjne, pojedyncze przypadki)",
+   "sources": [
+    {
+     "url": "https://thisweekinblogging.com/mediavine-vs-raptive/",
+     "title": "Mediavine vs Raptive - Which Ad Network Makes More Money?",
+     "publisher": "This Week in Blogging"
+    },
+    {
+     "url": "https://johnnyafrica.com/how-much-money-did-i-make-blogging-in-2025/",
+     "title": "How Much Money Did I Make Blogging In 2025?",
+     "publisher": "Johnny Africa"
+    },
+    {
+     "url": "https://apurplelife.com/2025/09/23/review-journey-by-mediavine/",
+     "title": "Review: Journey By Mediavine",
+     "publisher": "A Purple Life",
+     "published": "2025-09-23"
+    },
+    {
+     "url": "https://danny-cph.com/mediavine-journey-first-3-months/",
+     "title": "My Travel Blog's First 3 Months With Mediavine Journey",
+     "publisher": "Danny in the North"
+    },
+    {
+     "url": "https://midwestfoodieblog.com/how-i-made-over-530k-from-my-food-blog-in-2025/",
+     "title": "How I Made Over $530k From My Food Blog in 2025",
+     "publisher": "Midwest Foodie"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Liczby obciąża silny survivor bias: piszą ci, którym się udało. Dotyczą długich artykułów z wieloma slotami in-content i odświeżaniem in-view. Nie wolno ich przenosić 1:1 na symulatory z 1-2 slotami poza strefą sterowania. Realistyczny RPM sesyjny narzędzia na Journey może być niższy od dolnej granicy dla blogów (hipoteza / niezweryfikowane)."
+  },
+  {
+   "question": "3. Progi wejścia sieci premium 2025-2026",
+   "claim_pl": "Progi wejścia według źródeł:\n- Mediavine Official: co najmniej 5 000 USD rocznego przychodu z reklam (oficjalna strona wymagań). Dawny próg 50 tys. sesji już nie obowiązuje; data zmiany według różnych źródeł to X 2025 albo I 2026.\n- Journey by Mediavine: ponad 1 000 sesji (help center). Według źródeł wtórnych sesje z krajów tier-1 w ciągu 30 dni i wymagany plugin Grow.\n- Raptive: od 16.10.2025 25 000 PV miesięcznie (wcześniej 100 tys.). Przy 25-99,9 tys. PV co najmniej 50% ruchu musi pochodzić z US/UK/CA/AU/NZ, a powyżej 100 tys. PV co najmniej 40%.\n- Ezoic: 250 000+ miesięcznych aktywnych użytkowników dla nowych stron dodanych po 19.02.2026 (oficjalne wsparcie Ezoic). Istnieje program Incubator, według recenzji ok. 20 stron miesięcznie.\n- Monumetric: ok. 10 tys. PV, opłata setup 99 USD poniżej 80 tys. PV (źródła wtórne).\n- SHE Media: ok. 20 tys. PV, decyzja indywidualna (źródła wtórne).",
+   "evidence_type": "direct",
+   "numbers": "Mediavine 5 000 USD/rok; Journey >1 000 sesji; Raptive 25 000 PV i ≥50% ruchu tier-1; Ezoic 250 000 MAU (od 19.02.2026); Monumetric 10k PV i setup 99 USD; SHE Media ok. 20k PV",
+   "sources": [
+    {
+     "url": "https://prod.mediavine.com/mediavine-requirements/",
+     "title": "Mediavine Requirements",
+     "publisher": "Mediavine"
+    },
+    {
+     "url": "https://help.mediavine.com/what-does-it-take-to-get-approved-by-mediavine",
+     "title": "What does it take to get approved by Mediavine?",
+     "publisher": "Mediavine Help Center"
+    },
+    {
+     "url": "https://raptive.com/blog/opening-the-door-to-more-creators-who-meet-raptive-quality-standards/",
+     "title": "Opening the door to more creators who meet Raptive quality standards",
+     "publisher": "Raptive"
+    },
+    {
+     "url": "https://ppc.land/raptive-drops-pageview-requirement-to-25-000-monthly-visits/",
+     "title": "raptive drops pageview requirement to 25 000 monthly visits",
+     "publisher": "PPC Land",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://support.ezoic.com/kb/article/getting-started-ezoics-requirements",
+     "title": "Getting Started: Ezoic's Requirements",
+     "publisher": "Ezoic Support"
+    },
+    {
+     "url": "https://bloggingguide.com/display-ad-traffic-requirements/",
+     "title": "Display Ad Traffic Requirements",
+     "publisher": "Blogging Guide"
+    },
+    {
+     "url": "https://imperfectidealist.com/she-media-review/",
+     "title": "SHE Media Ad Network Review: My Experience",
+     "publisher": "Imperfect Idealist"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Ścieżka dla nowej strony to AdSense, potem Journey (bardzo niski próg), potem Mediavine po 5 tys. USD rocznie albo Raptive po 25 tys. PV. Ezoic przestał być łatwym krokiem pośrednim. Raptive wymaga dużego udziału ruchu tier-1, co wymusza kontrolę ruchu z Indii i Filipin. Nie zweryfikowano, czy sieci premium akceptują strony z małą ilością tekstu (niezweryfikowane)."
+  },
+  {
+   "question": "3. Udziały przychodu w sieciach",
+   "claim_pl": "Udziały przychodu:\n- Raptive: bazowo 75% dla twórcy (strona Raptive dla travel creators). Raptive argumentuje, że wyższy udział procentowy nie gwarantuje wyższej wypłaty, co jest materiałem vendorskim.\n- Mediavine: według poradników 75% poniżej 100 tys. USD rocznie, do 90% powyżej 500 tys. USD.\n- Journey: 70%; podają to blogi, Publift twierdzi, że Journey nie ma go w oficjalnej tabeli.\n- SHE Media: ok. 60% (starsze poradniki).\n- AdSense: efektywnie ok. 68%.\n(search-summary)",
+   "evidence_type": "indirect",
+   "numbers": "Raptive 75%; Mediavine 75-90%; Journey 70% (niepotwierdzone oficjalnie); SHE Media ok. 60%; AdSense ok. 68% efektywnie",
+   "sources": [
+    {
+     "url": "https://raptive.com/tbex/",
+     "title": "Raptive for Travel Creators: see what your site could earn",
+     "publisher": "Raptive"
+    },
+    {
+     "url": "https://raptive.com/revenue-share-doesnt-tell-the-whole-story/",
+     "title": "revenue share doesnt tell the whole story",
+     "publisher": "Raptive"
+    },
+    {
+     "url": "https://www.jupiter.co/blog/mediavine-requirements-2026-how-to-qualify",
+     "title": "How to Apply for Mediavine in 2026: Requirements & Approval Process",
+     "publisher": "Jupiter"
+    },
+    {
+     "url": "https://www.productiveblogging.com/everything-you-need-to-know-about-journey-by-mediavine/",
+     "title": "Everything you need to know about Journey by Mediavine [2026]",
+     "publisher": "Productive Blogging"
+    },
+    {
+     "url": "https://www.publift.com/blog/best-mediavine-alternatives",
+     "title": "Top Mediavine Alternatives in 2026 for Digital Publishers",
+     "publisher": "Publift"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Różnice w udziale (68-75%) są mniejsze niż różnice w stawkach brutto, bo sieci premium mają dostęp do header biddingu, direct deals i odświeżania. Przewaga sieci premium wynika z popytu i technologii, nie z procentu. Przy modelowaniu nie należy liczyć „AdSense RPM × 75/68”."
+  },
+  {
+   "question": "4. Dlaczego CPC wyszukiwania (ubezpieczenia/hipoteki) nie przekłada się na RPM display",
+   "claim_pl": "Według benchmarków WordStream/LocaliQ 2025 średni CPC w Search wynosi 5,26 USD dla wszystkich branż, 3,46 USD dla Finance & Insurance i 8,58 USD dla prawa. Promodo podaje dla Finance & Insurance 3,44 USD w Search wobec 0,86 USD w Google Display Network, czyli CPC display to ok. 1/4 CPC search. Kategoria słów „insurance” z CPC 54,91 USD to wartość dla kategorii słów kluczowych, nie średnia kont.\n\nRPM = CPC × CTR. Inżynier AdSense pisał w 2012, że system maksymalizuje RPM, a podaż reklam o wysokim RPM nie jest nieskończona; gdy ich brak, wyświetla się tańsza kategoria. Od 2024 AdSense płaci za wyświetlenie, więc CPC słowa kluczowego jest jeszcze słabszym predyktorem (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "Search CPC: ogółem 5,26 USD, F&I 3,46 USD, prawo 8,58 USD (WordStream 2025); F&I GDN 0,86 USD (Promodo)",
+   "sources": [
+    {
+     "url": "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+     "title": "2025 google ads benchmarks",
+     "publisher": "WordStream by LocaliQ"
+    },
+    {
+     "url": "https://promodo.com/blog/ppc-benchmarks",
+     "title": "PPC Benchmarks: How Much to Spend Per Click in 2025?",
+     "publisher": "Promodo"
+    },
+    {
+     "url": "https://seroundtable.com/google-adsense-pricing-14779.html",
+     "title": "Google AdSense Ads Pricing Exposed",
+     "publisher": "Search Engine Roundtable (2012)"
+    },
+    {
+     "url": "https://www.adpushup.com/blog/google-adsense-rpm/",
+     "title": "google adsense rpm",
+     "publisher": "AdPushup"
+    },
+    {
+     "url": "https://setupad.com/blog/increase-adsense-rpm/",
+     "title": "11 Tips to Increase AdSense RPM",
+     "publisher": "Setupad"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wybór tematów symulatorów według CPC z Ahrefs czy Semrush systematycznie zawyża oczekiwany przychód z display. Wysoki CPC sygnalizuje raczej potencjał lead-gen lub afiliacji, które są osobnym modelem, niż RPM. Reklamodawcy ubezpieczeń i hipotek kupują głównie Search, a nie inventory display na małych stronach."
+  },
+  {
+   "question": "5. Różnice RPM USA vs reszta świata",
+   "claim_pl": "Raptive w artykule „Performance by Country” wskazuje udział ruchu z USA jako główny czynnik sitewide RPM. W krajach z GDPR brak zgody oznacza reklamy niespersonalizowane, które płacą znacznie mniej.\n\nDane krajowe dla display są fragmentaryczne. Dla YouTube (nie display) jedna analiza podaje CPM w USA ok. 12,86 USD wobec ok. 1,37 USD na rynkach wschodzących. Źródło afiliacyjne podaje CPM tier-1 na poziomie 5-20 USD i niższych tierów poniżej 2 USD. Strony kalkulatorów twierdzą, że ruch z obu Ameryk zarabia 2-3 razy więcej niż APAC i EMEA (vendor, niezweryfikowane).",
+   "evidence_type": "indirect",
+   "numbers": "YouTube CPM: US 12,86 USD wobec rynków wschodzących 1,37 USD (nie display); tier-1 CPM 5-20 USD wobec <2 USD (źródło afiliacyjne)",
+   "sources": [
+    {
+     "url": "https://help.raptive.com/hc/en-us/articles/20016740721563-Performance-by-Country",
+     "title": "Performance by Country",
+     "publisher": "Raptive Help"
+    },
+    {
+     "url": "https://upgrowth.in/youtube-cpm-overview-highest-paying-niches/",
+     "title": "youtube cpm overview highest paying niches",
+     "publisher": "Upgrowth"
+    },
+    {
+     "url": "https://affninja.com/ad-networks-tier-1-countries/",
+     "title": "ad networks tier 1 countries",
+     "publisher": "AffNinja"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Anglojęzyczne narzędzia przyciągają duży ruch z Indii, Pakistanu, Filipin i Nigerii, który rozcieńcza RPM i może zablokować wejście do Raptive (próg 50% tier-1). Symulatory powinny być mocno osadzone w realiach USA: stanowe ulgi, programy federalne, ubezpieczenia, podatki. To naturalnie filtruje ruch i zarazem odróżnia produkt."
+  },
+  {
+   "question": "6. Adblock w USA (desktop/mobile)",
+   "claim_pl": "GWI (przez DataReportal, cytowane przez Backlinko i innych) podaje ok. 32,5% amerykańskich internautów używających adblocka w Q2 2025. Inne źródła cytują 32,2-33%.\n\nPomiary per odsłona dają niższe wartości. Blockthrough/PageFair 2022 (dane z 2021) podaje 19% w USA wobec 21% globalnie. Inne zestawienie przypisuje Blockthrough 27% na desktopie i 22% na pozostałych urządzeniach. Najczęściej cytowany podział urządzeń to AudienceProject z 2020: 37% desktop i 15% mobile (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "32,5% użytkowników (GWI Q2 2025); 19% (Blockthrough 2022, dane 2021); 27% desktop / 22% inne (Blockthrough, data niejasna); 37% desktop / 15% mobile (2020)",
+   "sources": [
+    {
+     "url": "https://backlinko.com/ad-blockers-users",
+     "title": "Ad Blocker Usage and Demographic Statistics in 2026",
+     "publisher": "Backlinko"
+    },
+    {
+     "url": "https://blockthrough.com/blog/2022-pagefair-adblock-report/",
+     "title": "2022 PageFair Adblock Report",
+     "publisher": "Blockthrough"
+    },
+    {
+     "url": "https://www.signalbridgedata.com/blog/ad-blocker-statistics-2026",
+     "title": "Ad Blocker Usage Statistics 2026",
+     "publisher": "SignalBridge Data"
+    },
+    {
+     "url": "https://cropink.com/ad-blockers-usage-statistics",
+     "title": "Ad Blockers Usage Statistics [2026]",
+     "publisher": "Cropink"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Model powinien zakładać utratę 15-30% wyświetleń, a więcej na desktopie (szacunek wyprowadzony ze źródeł). Odbiorcy złożonych narzędzi finansowych są prawdopodobnie bardziej desktopowi i technicznie świadomi, więc ich adblock może być wyższy od średniej (hipoteza / niezweryfikowane)."
+  },
+  {
+   "question": "6. Zgody: wymóg certyfikowanego CMP w AdSense (EEA/UK/CH) i zmiany 2025-2026",
+   "claim_pl": "Pomoc AdSense: od 16.01.2024 serwowanie reklam spersonalizowanych w EEA i UK wymaga certyfikowanego przez Google CMP zintegrowanego z TCF, a w Szwajcarii od 31.07.2024. Bez tego nie ma reklam spersonalizowanych.\n\nŹródła wtórne podają, że od 01.03.2026 obowiązuje TCF v2.3 dla nowych stringów zgody. We wrześniu 2026 Google ogłosił kontrolę na poziomie konta, w której Google CMP zapewnia awaryjne zbieranie zgód (search-summary).",
+   "evidence_type": "direct",
+   "numbers": "EEA/UK 16.01.2024; CH 31.07.2024; TCF v2.3 od 01.03.2026 (źródło wtórne)",
+   "sources": [
+    {
+     "url": "https://support.google.com/adsense/answer/13554020",
+     "title": "Certified CMP requirement (EEA/UK)",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/13554116",
+     "title": "Certified CMP requirement (Switzerland)",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://support.google.com/adsense/announcements/9189068?hl=en",
+     "title": "Announcements - Google AdSense Help",
+     "publisher": "Google AdSense Help"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Dla strony skierowanej do USA ruch z EEA/UK/CH będzie marginalny, ale CMP i tak trzeba wdrożyć. Najprościej użyć darmowego Google CMP w AdSense. Ten ruch monetyzuje się słabiej, więc nie należy go celowo pozyskiwać."
+  },
+  {
+   "question": "6. Stanowe prawo prywatności w USA: GPC, RDP, wpływ na przychód",
+   "claim_pl": "Trackery prawne podają, że 11-12 stanów wymaga honorowania Global Privacy Control, m.in. CA, CO, CT, DE, MD, MN, MT, NE, NH, NJ, OR i TX (dokładna lista i daty różnią się między trackerami). CA, CO i CT prowadziły skoordynowany sweep egzekucyjny.\n\nOgłoszenie AdSense: od 17.11.2025 Google odbiera sygnał GPC bezpośrednio dla użytkowników z Delaware i Oregonu i włącza tryb Restricted Data Processing, czyli reklamy niespersonalizowane. PPC Land odnotowuje, że rozszerzenie kontroli na kolejne stany może obniżać przychód (search-summary).",
+   "evidence_type": "direct",
+   "numbers": "11-12 stanów z obowiązkiem GPC; RDP na GPC dla DE/OR od 17.11.2025",
+   "sources": [
+    {
+     "url": "https://support.google.com/adsense/announcements/9189068?hl=en",
+     "title": "Announcements - Google AdSense Help",
+     "publisher": "Google AdSense Help"
+    },
+    {
+     "url": "https://support.google.com/admanager/answer/9598414?hl=en",
+     "title": "US states privacy laws guidance",
+     "publisher": "Google Ad Manager Help"
+    },
+    {
+     "url": "https://ppc.land/google-expands-privacy-controls-to-eight-additional-us-states/",
+     "title": "google expands privacy controls to eight additional us states",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://www.consenteo.com/knowledge-hub/legal/us_state_privacy_law_tracker_2026",
+     "title": "The US State Privacy Law Tracker for 2026",
+     "publisher": "Consenteo"
+    },
+    {
+     "url": "https://www.enzuzo.com/blog/us-state-privacy-laws",
+     "title": "U.S. State Privacy Laws: 2026 Tracker and Compliance Guide",
+     "publisher": "Enzuzo"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Część ruchu z USA (użytkownicy przeglądarek z domyślnie włączonym GPC i mieszkańcy objętych stanów) dostaje reklamy niespersonalizowane o niższym CPM. Skala jest nieznana (niezweryfikowane). Potrzebny jest link „Do Not Sell/Share” i konfiguracja RDP w AdSense, a to dodatkowy koszt compliance."
+  },
+  {
+   "question": "7. Sezonowość: szczyt w Q4, spadek w styczniu",
+   "claim_pl": "Mediavine (historycznie, post z 2018 i inne) opisuje spadek stawek o 40-60% od końca grudnia. Q1 to według Mediavine największe tąpnięcie przychodów w roku, a powrót do normy następuje dopiero w Q2.\n\nBlockthrough podaje, że CPM spada do 51% szczytu świątecznego (dane vendora). MonetizeMore (I 2026) podaje spadki RPM o 35-75% na początku stycznia. Wzrost w Q4 napędzają Black Friday, Cyber Monday i wydawanie końcówek budżetów rocznych (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "spadek w styczniu 40-60% (Mediavine, historycznie); do 51% szczytu (Blockthrough); 35-75% (MonetizeMore)",
+   "sources": [
+    {
+     "url": "https://www.mediavine.com/q1-ad-revenue-slump/",
+     "title": "The Q1 Ad Revenue Slump and How To Set Up Now For A Successful 2018",
+     "publisher": "Mediavine"
+    },
+    {
+     "url": "https://blockthrough.com/blog/how-smart-publishers-deal-with-the-january-cpm-drop/",
+     "title": "How smart publishers deal with the January CPM drop",
+     "publisher": "Blockthrough"
+    },
+    {
+     "url": "https://www.monetizemore.com/blog/how-publishers-combat-q1-ad-revenue-drop/",
+     "title": "How publishers can combat the Q1 ad revenue drop?",
+     "publisher": "MonetizeMore"
+    },
+    {
+     "url": "https://headerbidding.co/cpm-seasonality",
+     "title": "cpm seasonality",
+     "publisher": "headerbidding.co"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Roczny model musi mieć miesięczne mnożniki: styczeń mniej więcej o połowę niżej niż grudzień. Popyt na niektóre decyzje ma własną sezonowość, która może częściowo się z tym znosić albo nakładać (hipoteza / niezweryfikowane). Przykłady: open enrollment w ubezpieczeniach (XI-I), podatki (I-IV), decyzje o dachu i solarach (wiosna). Nie oceniać pilotażu na danych ze stycznia i lutego."
+  },
+  {
+   "question": "11. Zmienność AdSense 2025-2026 (ryzyko platformy)",
+   "claim_pl": "Wątki WebmasterWorld z października i grudnia 2025 opisują silne spadki RPM. Search Engine Land w styczniu 2026 raportował spadki eCPM/RPM o 50-70% u wielu wydawców. Według tej relacji Google potwierdził błąd i usunął go 15 stycznia, a część wydawców twierdziła, że spadki narastały od miesięcy. Przyczyny szerszego trendu nie są ustalone (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "spadki eCPM/RPM o 50-70% (I 2026); poprawka 15.01.2026 według SEL",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/adsense-publishers-report-sudden-revenue-plunge-again-467566",
+     "title": "AdSense publishers report sudden revenue plunge — again",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://www.webmasterworld.com/google_adsense/5127582.htm",
+     "title": "AdSense Earnings and Observations - December 2025",
+     "publisher": "WebmasterWorld"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-adsense-earnings-drops-ecpm-rpm-40759.html",
+     "title": "Google AdSense Earnings Dropping Again eCPM/RPM",
+     "publisher": "Search Engine Roundtable"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Przychód z jednego dostawcy reklam jest podatny na nieprzewidywalne wahania niezależne od właściciela. Inwestor powinien zdyskontować prognozy. Automatyczne alerty n8n na nagłe zmiany RPM są tanie i warto je mieć."
+  },
+  {
+   "question": "8. Udział botów i rozbieżne pomiary IVT",
+   "claim_pl": "Imperva Bad Bot Report 2025 (dane za 2024): ruch zautomatyzowany przekroczył ruch ludzki i stanowi 51% ruchu w sieci, złe boty 37% (wobec 32% w 2023), dobre boty 14%.\n\nOcena IVT zależy od dostawcy:\n- Fraudlogix: 20,64% IVT na 105,7 mld wyświetleń w 2025,\n- DoubleVerify: 0,6%,\n- IAS: 1,1%,\n- Pixalate: ok. 20% web.\n(search-summary)",
+   "evidence_type": "indirect",
+   "numbers": "51% ruchu zautomatyzowanego (2024); złe boty 37%; IVT 0,6% (DV) – 20,64% (Fraudlogix)",
+   "sources": [
+    {
+     "url": "https://www.techradar.com/pro/security/bots-now-account-for-over-half-of-all-internet-traffic",
+     "title": "Bots now account for over half of all internet traffic",
+     "publisher": "TechRadar",
+     "published": "2025-04"
+    },
+    {
+     "url": "https://www.malwarebytes.com/blog/news/2025/04/hi-robot-half-of-all-internet-traffic-now-automated",
+     "title": "Hi, robot: Half of all internet traffic now automated",
+     "publisher": "Malwarebytes",
+     "published": "2025-04"
+    },
+    {
+     "url": "https://www.fraudlogix.com/stats/ad-fraud-statistics-2026",
+     "title": "Ad Fraud Statistics 2026: 20.64% IVT Rate",
+     "publisher": "Fraudlogix"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ruch w analityce to nie to samo co ruch monetyzowalny. Mała, nowa strona z nagłymi skokami ruchu z nieznanych źródeł (scrapery, boty) jest narażona na potrącenia IVT. Model przychodu powinien liczyć wyłącznie zweryfikowane sesje ludzkie z USA."
+  },
+  {
+   "question": "8. Przeglądarki agentowe AI (Comet, Atlas, ChatGPT agent): wyświetlenia i ryzyko IVT",
+   "claim_pl": "Według Digiday IAS raportuje zadeklarowanych agentów AI jako GIVT, więc reklamodawca za nich nie płaci. DoubleVerify klasyfikuje zadeklarowaną aktywność AI jako GIVT, a ukrywaną jako SIVT, i od listopada 2025 raportuje sesje agentowe (Comet, Atlas) jako osobną klasę.\n\nSalon stracił reklamodawcę po skoku wizyt agentowych. Wizyty agentów często nie generują klasycznej odsłony ani wyświetlenia. Search Engine Land ostrzega, że Atlas (oparty na Chromium) może klikać reklamy nieodróżnialnie od człowieka. Według blogów vendorskich Google nie ma publicznej polityki wobec kliknięć agentów (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "DV raportuje osobną klasę agentic od XI 2025",
+   "sources": [
+    {
+     "url": "https://digiday.com/media/when-bots-look-like-buyers-agentic-traffic-causing-new-publisher-headaches/",
+     "title": "When bots look like buyers: agentic traffic causing new publisher headaches",
+     "publisher": "Digiday"
+    },
+    {
+     "url": "https://www.brandsafetyinstitute.com/blog/agentic-traffic-advertisers",
+     "title": "When Bots are Us: What Agentic Traffic Means for Advertisers",
+     "publisher": "Brand Safety Institute"
+    },
+    {
+     "url": "https://searchengineland.com/chatgpt-atlas-mimicking-human-clicks-463757",
+     "title": "ChatGPT Atlas browser could drain ad budgets by mimicking human clicks",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://clickguardian.ai/blog/ai-agent-traffic-google-ads",
+     "title": "AI Agent Traffic and Google Ads: Are Agentic Browsers Clicking Your Ads in 2026?",
+     "publisher": "ClickGuardian"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Trzeba rozróżnić dwa przypadki:\n- człowiek, który przeszedł z linku w ChatGPT czy Perplexity, to zwykły, monetyzowalny ruch,\n- agent, który sam uruchamia symulator w imieniu użytkownika, daje zero przychodu albo ryzyko IVT.\n\nJeśli asystenci będą coraz częściej wykonywać narzędzia agentowo albo przez API lub MCP zamiast odsyłać ludzi, model display traci podstawę (hipoteza). Warto oznaczać i wykluczać ruch agentowy z serwowania reklam."
+  },
+  {
+   "question": "8/11. Wolumen ruchu z asystentów AI względem Google",
+   "claim_pl": "Dane o ruchu z asystentów AI:\n- TollBit (Q2 2025): Google wysyła wydawcom 831 razy więcej wizyt niż systemy AI, a na 1 odesłanie człowieka przypada ok. 135 scrapów AI. W Q4 2025 była ok. 1 wizyta bota AI na 31 wizyt ludzkich, wobec 1:200 w Q1.\n- Chartbeat (III 2026): chatboty to poniżej 1% odesłań do wydawców, mimo że odesłania z ChatGPT wzrosły o ponad 200% (XII 2024-XII 2025). Odsłony z Google Search spadły o 34%. Mali wydawcy (1-10 tys. PV dziennie) stracili ok. 60% ruchu z wyszukiwarki w 2 lata.\n- Similarweb (V 2026): po zmianie linków w ChatGPT odsłony na wizytę wzrosły z 3,8 do 4,7, a odesłania o 157,7% tydzień do tygodnia.\n(search-summary)",
+   "evidence_type": "indirect",
+   "numbers": "Google 831× więcej wizyt; 135 scrapów na 1 odesłanie; boty AI 1:31 wizyt ludzkich (Q4 2025); chatboty <1% odesłań; Google Search -34%; mali wydawcy -60% w 2 lata; ChatGPT 3,8→4,7 PV/wizytę",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/google-more-visitors-ai-systems-report-462905",
+     "title": "Google sends more visitors than AI systems (TollBit report)",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://tollbit.com/blog/portfolio-analytics",
+     "title": "TollBit State of the AI Bots - Q3 & Q4 2025",
+     "publisher": "TollBit"
+    },
+    {
+     "url": "https://www.theregister.com/2026/02/04/ai_bot_traffic_web_browsers/",
+     "title": "Bots are taking over the internet and AI users are to blame",
+     "publisher": "The Register",
+     "published": "2026-02-04"
+    },
+    {
+     "url": "https://chartbeat.com/resources/articles/pageviews-down-ai-impact/",
+     "title": "Pageviews are down, but AI's impact is complicated",
+     "publisher": "Chartbeat"
+    },
+    {
+     "url": "https://www.axios.com/2026/03/17/chartbeat-search-traffic-ai-chatbots",
+     "title": "Exclusive: Small publishers hit hardest by search traffic declines",
+     "publisher": "Axios",
+     "published": "2026-03-17"
+    },
+    {
+     "url": "https://aisearch.similarweb.com/blog/chatgpt-referral-traffic-triples/",
+     "title": "ChatGPT Referral Traffic Near Triples Overnight",
+     "publisher": "Similarweb"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Teza właściciela, że kluczowe są odesłania z AI, jest kierunkowo uzasadniona: ruch rośnie, a zaangażowanie jest przyzwoite. Wolumenowo to jednak nadal ułamek ruchu z Google, a dane dotyczą wydawców newsowych i marek, nie narzędzi. Model display wymaga setek tysięcy sesji miesięcznie, czego sam ruch z AI raczej nie dostarczy w krótkim horyzoncie (hipoteza). Google pozostaje źródłem dominującym i zarazem ryzykownym."
+  },
+  {
+   "question": "2/11. AI Overviews a CTR organiczny",
+   "claim_pl": "Badania wpływu AI Overviews na CTR:\n- Pew (panel ok. 900 dorosłych w USA, ok. 68 tys. zapytań): klik w wynik w 8% sesji z podsumowaniem AI wobec 15% bez niego; Google kwestionuje metodologię,\n- Ahrefs: CTR o 34,5% niższy przy obecności AIO (III 2024 vs III 2025),\n- Seer Interactive: organiczny CTR o 61% niższy dla zapytań z AIO (VI 2024-IX 2025); strony cytowane w AIO miały CTR wyższy o 35%.\n(search-summary, część danych z omówień wtórnych)",
+   "evidence_type": "indirect",
+   "numbers": "8% vs 15% (Pew); -34,5% (Ahrefs); -61% organiczny CTR (Seer); +35% dla cytowanych",
+   "sources": [
+    {
+     "url": "https://wholewhale.com/tips/googles-gaslighting-pew-research-confirms-what-seos-already-know-about-ai-overviews/",
+     "title": "Google's Gaslighting: Pew Research Confirms What SEOs Already Know About AI Overviews",
+     "publisher": "Whole Whale"
+    },
+    {
+     "url": "https://www.seerinteractive.com/news/seer-interactive-research-featured-in-inc.-analysis-of-ctr-and-ai-overviews",
+     "title": "Seer Interactive research featured in Inc. analysis of CTR and AI Overviews",
+     "publisher": "Seer Interactive"
+    },
+    {
+     "url": "https://www.emarketer.com/content/google-denies-that-ai-overviews-harm-referral-traffic--stats-say-otherwise",
+     "title": "Google denies that AI Overviews harm referral traffic, but data says otherwise",
+     "publisher": "eMarketer"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Zapytania informacyjne tracą kliknięcia. Zadania wymagające interaktywnego przeliczenia własnych danych mogą być mniej podatne na AIO niż artykuły (hipoteza / niezweryfikowane). Asystenci AI potrafią jednak liczyć sami, co jest substytutem."
+  },
+  {
+   "question": "9. Odsłony na sesję i aplikacje single-page",
+   "claim_pl": "Benchmark z 2026 podaje medianę 3,81 odsłony na sesję dla wszystkich branż. Strony content/media mają 3-10 odsłon, a landing pages nastawione na jedną konwersję 1-1,5.\n\nWytyczne Google Analytics: bez wirtualnych odsłon aplikacja SPA jest liczona jako jedna strona. Anegdota z Discourse: przychód reklamowy liczy się z pierwszego załadowania, a nie z późniejszych nawigacji w aplikacji. Semrush podaje średnią sesję na calculator.net 4:57. Nie znaleziono publicznych benchmarków odsłon na sesję dla stron-narzędzi (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "mediana 3,81 PV/sesję (ogółem); 1-1,5 dla landing pages; sesja 4:57 na calculator.net",
+   "sources": [
+    {
+     "url": "https://www.webtonic.io/blog/pageview-statistics",
+     "title": "Pageview Benchmarks 2026: Traffic, Bounce Rates and Session Duration",
+     "publisher": "Webtonic"
+    },
+    {
+     "url": "https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications?hl=en",
+     "title": "Measure single-page applications (GA4)",
+     "publisher": "Google Developers"
+    },
+    {
+     "url": "https://meta.discourse.org/t/why-there-is-huge-difference-in-pageviews-tracking-number-on-discourse-admin-dahboard-and-on-google-analytics/25306/50?tl=he",
+     "title": "Why there is huge difference in Pageviews tracking...",
+     "publisher": "Discourse Meta"
+    },
+    {
+     "url": "https://www.semrush.com/website/calculator.net/overview/",
+     "title": "calculator.net Website Traffic, Ranking, Analytics [August 2026]",
+     "publisher": "Semrush"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Symulator jest bliżej modelu landing page (ok. 1-1,5 PV) niż bloga (3-5 PV). Podział symulatora na kroki z osobnymi URL zwiększa liczbę odsłon, ale grozi naruszeniem polityki o ekranach bez treści i pogarsza UX. Sensowniej budować naturalne przejścia do powiązanych decyzji, np. „roof → solar → sell timing” (hipoteza)."
+  },
+  {
+   "question": "9. Viewability i odświeżanie in-view w sieciach premium; EPMV",
+   "claim_pl": "W Ad Manager odświeżanie in-view jest typowe. Plugin Newspack odświeża reklamę, gdy jednostka jest co najmniej w 70% w viewporcie przez co najmniej 30 s, a Browsi stosuje próg 50% w widoku. Jeden vendor twierdzi, że podwojenie viewability daje 2,4 raza wyższy RPM wyświetleniowy (bez źródła).\n\nEzoic mierzy EPMV, czyli przychód na 1 000 odwiedzających. W lipcu 2026 na ok. 950 stronach grupa kontrolna miała ok. 10,67 USD EPMV, a grupa z AI Ad Optimization 11,49 USD. To wszystkie nisze łącznie (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "refresh przy ≥70% w widoku i ≥30 s (Newspack); Ezoic EPMV 10,67-11,49 USD (ok. 950 stron, VII 2026)",
+   "sources": [
+    {
+     "url": "https://help.newspack.com/?p=12872",
+     "title": "Ad Refresh Control",
+     "publisher": "Newspack Help"
+    },
+    {
+     "url": "https://browsi.atlassian.net/wiki/spaces/BKB/pages/2368045188/In-view+Ad+Refresh",
+     "title": "In-view Ad Refresh",
+     "publisher": "Browsi"
+    },
+    {
+     "url": "https://support.ezoic.com/kb/article/what-is-epmv",
+     "title": "what is epmv",
+     "publisher": "Ezoic Support"
+    },
+    {
+     "url": "https://ppc.land/ezoic-drops-placement-id-rule-as-ai-optimization-lifts-epmv-to-11-3/",
+     "title": "ezoic drops placement id rule as ai optimization lifts epmv to 11 3",
+     "publisher": "PPC Land"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Długi czas na symulatorze zamienia się w przychód głównie w sieciach z Ad Manager i deklarowanym odświeżaniem in-view, a nie w czystym AdSense. To argument, by jak najszybciej przejść do Journey lub Mediavine. Średni EPMV Ezoic ok. 11 USD to orientacyjny punkt odniesienia dla przychodu na 1 000 odwiedzających w modelu display, a nie benchmark dla niszy."
+  },
+  {
+   "question": "3/9. Orientacyjna ekonomika jednostkowa (scenariusz)",
+   "claim_pl": "Szacunek scenariuszowy (moje wyliczenie na niezweryfikowanych założeniach):\n- przy 1,1-1,5 PV na sesję i page RPM AdSense w USA 5-15 USD przychód wynosi ok. 5,5-22,5 USD na 1 000 sesji,\n- 1 000 USD miesięcznie wymaga wtedy ok. 45-180 tys. sesji z USA, a 5 000 USD ok. 220-900 tys.,\n- w styczniu (spadek o 40-60%) próg sesji rośnie mniej więcej dwukrotnie,\n- dla porównania blogi treściowe na Journey raportują ok. 12,7-19,2 USD RPM sesyjnego.",
+   "evidence_type": "estimate",
+   "numbers": "5,5-22,5 USD / 1 000 sesji; 45-180 tys. sesji na 1 000 USD/mies.; 220-900 tys. sesji na 5 000 USD/mies.",
+   "sources": [
+    {
+     "url": "https://blog.google/products/adsense/evolving-how-publishers-monetize-with-adsense/",
+     "title": "evolving how publishers monetize with adsense",
+     "publisher": "Google (blog)"
+    },
+    {
+     "url": "https://www.webtonic.io/blog/pageview-statistics",
+     "title": "Pageview Benchmarks 2026",
+     "publisher": "Webtonic"
+    },
+    {
+     "url": "https://apurplelife.com/2025/09/23/review-journey-by-mediavine/",
+     "title": "Review: Journey By Mediavine",
+     "publisher": "A Purple Life"
+    },
+    {
+     "url": "https://danny-cph.com/mediavine-journey-first-3-months/",
+     "title": "My Travel Blog's First 3 Months With Mediavine Journey",
+     "publisher": "Danny in the North"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Model bazowy wymaga dużej skali nowego ruchu z USA. Przy setkach symulatorów oznacza to setki do tysięcy sesji miesięcznie na każdy symulator. Najważniejszą niewiadomą do szybkiego testu jest rzeczywisty page RPM interaktywnej strony z 1-2 slotami. Należy go zmierzyć na 3-5 symulatorach pilotażowych przed skalowaniem."
+  },
+  {
+   "question": "11. Środki zaradcze w sprawie antymonopolowej Google ad tech (2026)",
+   "claim_pl": "Sędzia Brinkema 2.09.2026 odrzuciła przymusową sprzedaż AdX, otwarcie logiki aukcji DFP i warunkową sprzedaż reszty DFP. Przyjęła większość proponowanych środków behawioralnych. Według AdExchanger i PPC Land obejmują one:\n- integracje API AdX/DFP z Prebid,\n- udostępnianie wydawcom danych o przetargach (wygrane i przegrane),\n- monitora technicznego,\n- globalny zakres obowiązków,\n- dekret na 6 lat zamiast 15.\nOrzeczenie o odpowiedzialności z IV 2025 pozostaje w mocy, a apelacja jest prawdopodobna. Nie potwierdziłem wpisania wyroku końcowego (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "orzeczenie 02.09.2026; dekret na 6 lat; liability IV 2025",
+   "sources": [
+    {
+     "url": "https://www.adexchanger.com/platforms/the-court-just-unsealed-judge-brinkemas-remedies-decision-in-the-google-ad-tech-antitrust-case-heres-your-tldr/",
+     "title": "The court just unsealed Judge Brinkema's remedies decision in the Google ad tech antitrust case",
+     "publisher": "AdExchanger"
+    },
+    {
+     "url": "https://ppc.land/google-faces-six-year-worldwide-ad-tech-decree-instead-of-adx-sale/",
+     "title": "google faces six year worldwide ad tech decree instead of adx sale",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://www.thecurrent.com/ad-tech/google-avoids-ad-tech-breakup-monopoly-case",
+     "title": "Google avoids ad tech breakup in monopoly case",
+     "publisher": "The Current"
+    },
+    {
+     "url": "https://digiday.com/media-buying/google-avoided-yet-another-breakup-now-comes-the-test-of-the-ad-tech-remedies/",
+     "title": "Google avoided (yet another) breakup... now comes the test of the ad tech remedies",
+     "publisher": "Digiday"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W horyzoncie 1-2 lat nie należy oczekiwać zmiany ekonomiki AdSense dla małego wydawcy. Interoperacyjność z Prebid może z czasem wzmocnić konkurencję o inventory w sieciach premium. Biznesplan nie powinien na tym opierać przychodów."
+  },
+  {
+   "question": "11. Nowe modele płatności w erze AI: Microsoft PCM, Perplexity Comet Plus, ProRata/Gist",
+   "claim_pl": "Microsoft Publisher Content Marketplace ogłoszono 4.02 (2026, według źródła wtórnego). To pilotaż, Copilot jest pierwszym kupującym, a Yahoo partnerem popytowym. Płatność zależy od użycia, a wydawca ustala warunki. Nie ma publicznych stawek, są też wątpliwości co do pozycji małych wydawców.\n\nPerplexity Comet Plus: subskrypcja 5 USD miesięcznie, 80% dla wydawców, pula startowa 42,5 mln USD. Wypłaty liczone są za wizyty, cytowania i akcje agenta. Faktycznych wypłat nie ujawniono.\n\nProRata/Gist: przychód z reklam dzielony 50/50, a pula wydawców proporcjonalnie do wkładu w odpowiedź. Udział jest opt-in, liczba wydawców to 500-750 według różnych źródeł (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "Comet Plus: 5 USD/mies., 80/20, pula 42,5 mln USD; Gist: 50/50; PCM: brak stawek",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/microsoft-launches-publisher-content-marketplace-for-ai-licensing-468191",
+     "title": "Microsoft launches Publisher Content Marketplace for AI licensing",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://axios.com/2025/09/23/microsoft-ai-marketplace-publishers",
+     "title": "Scoop: Microsoft looks to build AI marketplace for publishers",
+     "publisher": "Axios",
+     "published": "2025-09-23"
+    },
+    {
+     "url": "https://mediacopilot.ai/microsoft-publisher-content-marketplace-ai-licensing/",
+     "title": "Microsoft Publisher Content Marketplace AI licensing",
+     "publisher": "The Media Copilot"
+    },
+    {
+     "url": "https://www.axios.com/2025/08/26/perplexity-comet-plus-subscription",
+     "title": "Perplexity says it will give publishers 80% cut of new subscription product's revenue",
+     "publisher": "Axios",
+     "published": "2025-08-26"
+    },
+    {
+     "url": "https://www.subscriptioninsider.com/article-type/news/perplexity-unveils-42-5m-revenue-sharing-model-as-comet-browser-takes-aim-at-google",
+     "title": "Perplexity Unveils $42.5M Revenue-Sharing Model as Comet Browser Takes Aim at Google",
+     "publisher": "Subscription Insider"
+    },
+    {
+     "url": "https://axios.com/2025/09/05/prorata-ai-search-tool-publishers",
+     "title": "Exclusive: ProRata.ai raises $40M and launches new search tool for publishers",
+     "publisher": "Axios",
+     "published": "2025-09-05"
+    },
+    {
+     "url": "https://pressgazette.co.uk/publishers/digital-journalism/prorata-publishers-ai-start-up-news-widget-answers/",
+     "title": "ProRata publishers AI start-up news widget answers",
+     "publisher": "Press Gazette"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "To programy dla dużych lub wyselekcjonowanych wydawców, bez jawnych stawek. Mała nowa strona z narzędziami nie może ich wliczać do przychodu bazowego. Warto je monitorować jako opcję, a nie jako filar."
+  },
+  {
+   "question": "11. Cloudflare: domyślne blokowanie botów AI, Pay Per Crawl / Pay Per Use",
+   "claim_pl": "Od lipca 2025 Cloudflare domyślnie blokuje znane crawlery AI na nowych domenach. Uruchomił też prywatną betę Pay Per Crawl: crawler płaci albo dostaje odpowiedź HTTP 402 z ceną. Program jest rebrandowany na Pay Per Use, w którym płatność zależy od wartości w produktach AI; testują go Ceramic.ai i You.com.\n\nOd 15.09.2026 Cloudflare domyślnie blokuje crawlery sklasyfikowane jako Training lub Agent na stronach wyświetlających reklamy. Crawlery wyszukiwarek pozostają dozwolone. Dotyczy to nowych klientów, nowych domen i kont darmowych bez zmienionych ustawień (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "domyślna blokada od VII 2025; blokada Training/Agent na stronach z reklamami od 15.09.2026",
+   "sources": [
+    {
+     "url": "https://forklog.com/en/news/cloudflare-to-block-mixed-ai-crawlers",
+     "title": "cloudflare to block mixed ai crawlers",
+     "publisher": "ForkLog"
+    },
+    {
+     "url": "https://www.theregister.com/a/5264727",
+     "title": "Cloudflare AI crawler changes (The Register)",
+     "publisher": "The Register"
+    },
+    {
+     "url": "https://alternativeto.net/news/2025/7/cloudflare-blocks-ai-crawlers-by-default-and-launches-pay-per-crawl-for-publishers",
+     "title": "Cloudflare blocks AI crawlers by default and launches Pay Per Crawl for publishers",
+     "publisher": "AlternativeTo"
+    },
+    {
+     "url": "https://www.techspot.com/news/108521-cloudflare-tests-pay-crawl-system-charges-ai-firms.html",
+     "title": "Cloudflare tests pay per crawl system, charges AI firms",
+     "publisher": "TechSpot"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Właściciel ma konflikt interesów: chce być polecany przez asystentów AI, a jednocześnie monetyzować reklamami. Domyślne ustawienia Cloudflare na stronach z reklamami mogą zablokować boty retrieval lub agentowe asystentów. Nie zweryfikowałem, jak sklasyfikowane są np. ChatGPT-User, OAI-SearchBot czy PerplexityBot. Trzeba świadomie skonfigurować dostęp. Pay Per Crawl dla małej strony z narzędziami ma znikomy potencjał (hipoteza)."
+  },
+  {
+   "question": "11. AdSense for Search w konwersacyjnych interfejsach AI",
+   "claim_pl": "Google umieszcza reklamy AdSense w odpowiedziach chatbotów stron trzecich; testy z iAsk i Liner trwały od 2024 do 2025. Rzecznik Google powiedział TechCrunch, że AdSense for Search jest dostępny dla stron, które chcą pokazywać reklamy w swoich konwersacyjnych doświadczeniach AI. Gemini pozostawał bez reklam (według eWeek) (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "brak stawek w wynikach",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/?p=3001837",
+     "title": "Google places AdSense ads inside AI chatbot conversations",
+     "publisher": "TechCrunch"
+    },
+    {
+     "url": "https://searchengineland.com/google-test-ai-chatbot-chats-ads-454891",
+     "title": "Google tests ads in AI chatbot chats",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://ppc.land/google-begins-placing-ads-in-ai-chatbot-conversations/",
+     "title": "google begins placing ads in ai chatbot conversations",
+     "publisher": "PPC Land"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "To potencjalny dodatkowy format, jeśli symulator miałby warstwę „zapytaj o swój wynik” opartą na LLM. Koszty inferencji i odrębne zasady AFS (nie sprawdzałem udziału przychodu AFS) mogą zjeść marżę (hipoteza / niezweryfikowane). Nie jest to rozwiązanie modelu bazowego."
+  },
+  {
+   "question": "10. Lead-gen (osobny model): solar, ubezpieczenia, hipoteki – ceny płacone przez kupującego",
+   "claim_pl": "Ceny leadów według źródeł vendorskich (search-summary):\n- Solar: leady ekskluzywne 100-250 USD (inne źródło 150-300 USD), współdzielone 25-100 USD, umówione spotkania 150-500 USD, aged 0,10-10 USD.\n- Ubezpieczenia auto: współdzielone ok. 8-25 USD, ekskluzywne ok. 20-80 USD, live transfer 50-200 USD.\n- Ubezpieczenia domu: współdzielone web leady ok. 6-18 USD.\n- Refinansowanie hipoteki (vendor, IV 2026): ekskluzywne 75-200 USD, rate-and-term 40-120 USD, cash-out 60-150 USD, aged 5-25 USD.\n- Hipoteka na zakup: ekskluzywne 50-100 USD (premium 150-200+ USD), współdzielone 30-60 USD.",
+   "evidence_type": "estimate",
+   "numbers": "solar 25-250 USD (spotkania do 500 USD); auto ins. 8-80 USD (transfer do 200 USD); home ins. 6-18 USD; refi 40-200 USD; zakup 30-200+ USD",
+   "sources": [
+    {
+     "url": "https://activeprospect.com/blog/how-much-do-solar-leads-cost/",
+     "title": "how much do solar leads cost",
+     "publisher": "ActiveProspect"
+    },
+    {
+     "url": "https://elevarus.com/solar-lead-generation/",
+     "title": "A Buyer's Framework for Solar Lead Generation",
+     "publisher": "Elevarus"
+    },
+    {
+     "url": "https://activeprospect.com/blog/insurance-leads-cost/",
+     "title": "Insurance leads cost",
+     "publisher": "ActiveProspect"
+    },
+    {
+     "url": "https://phonexa.com/blog/insurances-leads-cost/",
+     "title": "Insurance Leads Cost: Complete Pricing Breakdown",
+     "publisher": "Phonexa"
+    },
+    {
+     "url": "https://elevarus.com/auto-insurance-leads-buyer-guide/",
+     "title": "Auto Insurance Leads: A Buyer's Guide",
+     "publisher": "Elevarus"
+    },
+    {
+     "url": "https://leadpops.com/blog/mortgage-refinance-leads",
+     "title": "Mortgage refinance leads",
+     "publisher": "LeadPops"
+    },
+    {
+     "url": "https://www.leadgen-economy.com/blog/purchase-vs-refinance-mortgage-leads-economics/",
+     "title": "Purchase vs Refinance Leads: Completely Different Economics",
+     "publisher": "Leadgen Economy"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "To ceny, które płaci kupujący, czyli instalator, agent lub pożyczkodawca. Wydawca-afiliant w sieci lead-gen dostaje mniej (marża pośrednika, niezweryfikowane). Jeden lead solar może być wart tyle, co tysiące odsłon display, więc lead-gen łatwo może zacząć ratować model, czego właściciel chce uniknąć. Lead-gen wymaga zgód marketingowych i compliance; reguł TCPA nie badałem. Warto liczyć go osobno jako opcję, nie wliczać do modelu bazowego."
+  },
+  {
+   "question": "10. Lead-gen/afiliacja (osobny model): senior living i kredyty samochodowe",
+   "claim_pl": "Senior living: według listu senatora Caseya z 2024, cytującego stronę firmy, społeczność płaci A Place for Mom równowartość pierwszego miesięcznego czynszu i opieki. Historycznie średnia prowizja wynosiła ok. 3 500 USD w stanie Washington, z czego ok. 650 USD dla doradcy (Seattle Times przez ElderLawAnswers, dane dawne i regionalne). Model jest pod lupą Senatu (NBC News, 2024).\n\nRefinansowanie kredytu samochodowego, afiliacja: Caribou 240 USD za sfinansowaną pożyczkę (FlexOffers), Autopay 100 USD (Awin), SuperMoney do 150 USD, MyAutoLoan ok. 5 USD za kwalifikowany wniosek (UpPromote). Dane mogą być nieaktualne (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "APFM: ok. 1. miesięczny czynsz; ok. 3 500 USD (WA, dawne); auto refi: 100-240 USD za sfinansowaną pożyczkę, 5 USD za wniosek",
+   "sources": [
+    {
+     "url": "https://casey.senate.gov/imo/media/doc/letter_to_a_place_for_mom.pdf",
+     "title": "letter to a place for mom",
+     "publisher": "U.S. Senate (Sen. Casey)",
+     "published": "2024-06"
+    },
+    {
+     "url": "https://attorney.elderlawanswers.com/elder-care-referral-services-attracting-increased-scrutiny-9119",
+     "title": "Elder Care Referral Services Attracting Increased Scrutiny",
+     "publisher": "ElderLawAnswers"
+    },
+    {
+     "url": "https://www.nbcnews.com/news/us-news/senate-announces-probe-place-for-mom-referral-service-rcna157282",
+     "title": "Senate announces probe of A Place for Mom referral service",
+     "publisher": "NBC News"
+    },
+    {
+     "url": "https://www.flexoffers.com/affiliate-programs/caribou-affiliate-program",
+     "title": "caribou affiliate program",
+     "publisher": "FlexOffers"
+    },
+    {
+     "url": "https://ui.awin.com/merchant-profile/123422",
+     "title": "Autopay merchant profile",
+     "publisher": "Awin"
+    },
+    {
+     "url": "https://www.flexoffers.com/affiliate-programs/supermoney-auto-loans-affiliate-program/",
+     "title": "supermoney auto loans affiliate program",
+     "publisher": "FlexOffers"
+    },
+    {
+     "url": "https://uppromote.com/blog/auto-loan-affiliate-programs",
+     "title": "auto loan affiliate programs",
+     "publisher": "UpPromote"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Senior living ma najwyższe stawki za konwersję, ale też ryzyko reputacyjne i regulacyjne (konflikt interesów w rekomendacji). To kłóci się z neutralnym porównaniem wariantów w symulatorze. Afiliacja CPA w kredytach auto (100-240 USD za sfinansowaną pożyczkę) wymaga dużego wolumenu, bo konwersja do sfinansowania jest niska (hipoteza)."
+  },
+  {
+   "question": "6/11. Ciasteczka third-party i Privacy Sandbox – wpływ na CPM",
+   "claim_pl": "W lipcu 2024 Google zrezygnował z wycofania ciasteczek third-party w Chrome. Według jednego (opiniotwórczego) źródła później wycofał większość technologii Privacy Sandbox, bez potwierdzonej daty.\n\nTesty branżowe: Index Exchange odnotował CPM niższe o 33% z Privacy Sandbox i o 36% bez ciasteczek i bez Sandbox. Raptive raportował spadek przychodu o 30% w bezciasteczkowym Chrome. Criteo szacował do 60% utraty przychodu (search-summary).",
+   "evidence_type": "indirect",
+   "numbers": "CPM -33% (Sandbox) / -36% (bez cookies) według Index Exchange; -30% przychodu według Raptive; do -60% według Criteo",
+   "sources": [
+    {
+     "url": "https://www.thedrum.com/news/2024/07/22/shock-decision-google-abandons-third-party-cookie-deprecation-plans",
+     "title": "shock decision google abandons third party cookie deprecation plans",
+     "publisher": "The Drum",
+     "published": "2024-07-22"
+    },
+    {
+     "url": "https://www.monetizemore.com/blog/whats-happening-with-cookies",
+     "title": "Google's Reversal on Cookie Deprecation: What's happening?",
+     "publisher": "MonetizeMore"
+    },
+    {
+     "url": "https://snigel.com/blog/google-cookie-deprecation",
+     "title": "google cookie deprecation",
+     "publisher": "Snigel"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ciasteczka w Chrome stabilizują CPM. Ruch z Safari i iOS, gdzie ciasteczka third-party są ograniczone, monetyzuje się prawdopodobnie gorzej (hipoteza oparta na testach bezciasteczkowych). Przy dużym udziale mobile/iOS z odesłań AI realny RPM może być niższy od średnich."
+  }
+ ],
+ "contradictions_pl": [
+  "Ezoic: oficjalna strona wsparcia podaje 250 000+ MAU dla nowych stron od 19.02.2026, a liczne starsze poradniki wciąż podają ok. 10 000 sesji (nieaktualne).",
+  "Mediavine: przejście z progu 50 tys. sesji na 5 000 USD rocznego przychodu źródła datują na X 2025 albo na I 2026. Oficjalna strona potwierdza sam próg, nie datę.",
+  "Journey: 70% udziału podają blogi, a Publift twierdzi, że Journey nie ma go w oficjalnej tabeli udziałów Mediavine 2026.",
+  "Adblock w USA: 32,5% użytkowników (ankieta GWI Q2 2025), 19% (pomiar odsłon Blockthrough, dane 2021) i 27% desktop / 22% inne (Blockthrough, data niejasna). Metody (ankieta vs pomiar) nie są porównywalne.",
+  "CPC Finance & Insurance: 3,46 USD w tabeli WordStream 2025, a wtórne omówienia przypisują tej branży ponad 7 USD. Średnia ogółem: 5,26 USD albo 5,42 USD, zależnie od próby i okresu.",
+  "Stopień IVT: DoubleVerify 0,6%, IAS 1,1%, Fraudlogix 20,64%, Pixalate ok. 20% web. Definicje i próby się różnią.",
+  "Liczba stanów USA z obowiązkiem GPC: 11 albo 12 według trackerów. Daty wejścia dla MD/MN są różne (I albo VII 2026).",
+  "Spadek CPM w styczniu: 40-60% (Mediavine, historycznie), do 51% szczytu (Blockthrough), 35-75% (MonetizeMore).",
+  "Ruch calculator.net i Omni w 2026: szacunki Semrush, Similarweb i Exploding Topics różnią się wielokrotnie (np. ok. 59-60 mln wizyt wobec znacznie niższych wartości ruchu z wyszukiwarki według innych trackerów).",
+  "RPM nieruchomości i domu w zestawieniach vendorskich: 6-18 USD wobec 25-50 USD (nieruchomości) i 3-6 USD wobec 20-40 USD (dom), czyli rozrzut kilkukrotny.",
+  "Comet Plus: część źródeł datuje start na VIII 2025, inne na formalny start w I 2026. Liczba partnerów (np. 2 400+) pochodzi tylko ze źródeł wtórnych.",
+  "Teza właściciela, że odesłania z AI są kluczowym aktywem, kontra dane: odesłania z ChatGPT rosną szybko (+200% r/r według Chartbeat, +157,7% tydzień do tygodnia po zmianie linków według Similarweb), ale to nadal poniżej 1% odesłań do wydawców, a Google wysyła 831 razy więcej wizyt (TollBit, Q2 2025)."
+ ],
+ "open_questions_pl": [
+  "Rzeczywisty page RPM i RPM sesyjny interaktywnych symulatorów (1 odsłona, długi czas, 1-2 sloty poza strefą sterowania) dla ruchu z USA. Publicznych danych brak, potrzebny pilotaż 3-5 symulatorów na AdSense.",
+  "Czy AdSense uznaje formularz i wyniki symulatora za „publisher content”? Czy przeliczenie wyniku przez użytkownika może legalnie wywołać nowe żądanie reklamy? Wymaga lektury pierwotnych polityk lub kontaktu z Google (nie mogłem otworzyć stron).",
+  "Jaki odsetek ruchu z USA trafia w tryb RDP lub reklamy niespersonalizowane (GPC, stany) i jaki jest tego wpływ na CPM? Brak danych liczbowych.",
+  "Jak Cloudflare (od 15.09.2026) i inne CDN klasyfikują boty retrieval i agentowe asystentów (ChatGPT-User, OAI-SearchBot, PerplexityBot, Claude-User)? Czy domyślna blokada na stronach z reklamami utnie widoczność w asystentach?",
+  "Czy Mediavine/Journey i Raptive akceptują strony-narzędzia z małą ilością tekstu? Jakie RPM osiągają takie strony w tych sieciach?",
+  "Nie zweryfikowano z powodu wyczerpania limitu wyszukiwań: benchmarków viewability (above/below the fold), wielkości wzrostu CPM w Q4 2025, RPM dla nisz motoryzacja/energia/solar, listy i wpływu core update'ów z 2026, aktualnego udziału przychodu AdSense for Search.",
+  "Regulacje lead-gen (TCPA, zasady zgód na kontakt w USA po 2025) nie były badane, a decydują o realności dodatku lead-gen.",
+  "Ile wynoszą wypłaty afiliacyjne dla wydawcy (nie ceny kupującego) w sieciach lead-gen dla solar, ubezpieczeń i hipotek?",
+  "Czy asystenci AI będą częściej wykonywać narzędzia sami (agent, API, MCP) zamiast odsyłać ludzi? To podważałoby model display oparty na odsłonach."
+ ],
+ "queries_run": [
+  "AdSense revenue share 80% AdSense for content per-impression payment change",
+  "Google AdSense \"ads on screens without publisher content\" policy",
+  "Google search spam policies scaled content abuse site reputation abuse 2025 update",
+  "Mediavine Journey Raptive Ezoic requirements 2026 minimum sessions pageviews (extended)",
+  "Mediavine revenue-based eligibility $5,000 annual ad revenue new requirement announcement (extended)",
+  "Raptive lowers threshold 25,000 pageviews October 2025",
+  "Ezoic 250,000 monthly active users requirement February 2026 new sites (extended)",
+  "Monumetric requirements pageviews 2026 SHE Media partner network requirements",
+  "RPM by niche finance insurance home improvement real estate Mediavine Raptive 2025 report (extended)",
+  "calculator website AdSense RPM earnings case study (extended)",
+  "why high CPC keywords don't mean high AdSense display RPM insurance mortgage",
+  "US vs international RPM difference tier 1 traffic display ads CPM by country 2025",
+  "Google publisher policies ads placement accidental clicks near interactive elements ad refresh iframe",
+  "AdSense ad refresh policy automatic refresh not allowed user action",
+  "AdSense invalid traffic definition policy publisher account disabled bots",
+  "Google AdSense certified CMP required EEA UK Switzerland January 2024",
+  "ad blocker usage United States 2025 percentage desktop mobile survey (extended)",
+  "US state privacy laws Global Privacy Control opt-out sale targeted advertising publishers GPP AdSense restricted data processing 2026 (extended)",
+  "Q4 CPM peak January CPM drop publishers display ad seasonality data",
+  "bot traffic share 2025 Imperva bad bot report percentage of internet traffic AI crawlers",
+  "AI agent browsers ad impressions invalid traffic ChatGPT agent Comet ad fraud IVT publishers 2025 (extended)",
+  "Google ad tech antitrust remedies ruling Brinkema 2026 AdX divestiture decision (extended)",
+  "Microsoft Publisher Content Marketplace launch publishers paid AI Copilot 2026 (extended)",
+  "Perplexity Comet Plus publishers 80% revenue share $42.5 million",
+  "Brinkema ad tech remedies decision date Google AdX not divested publishers final judgment",
+  "Cloudflare pay per crawl publishers 2025 2026 results default block AI crawlers",
+  "TollBit report AI bot scrapes to referral ratio 2025 publishers",
+  "ProRata Gist answer engine 50% revenue share publishers ads",
+  "solar lead cost per lead 2025 exclusive shared solar leads price",
+  "insurance leads cost per lead auto home insurance 2025 average price shared exclusive",
+  "mortgage refinance leads cost per lead 2025 average",
+  "senior living referral fee A Place for Mom commission per move-in lead cost",
+  "auto loan refinance affiliate program payout per funded loan lead LendingTree affiliate CPA",
+  "calculator sites helpful content update traffic loss omnicalculator calculator.net 2024 2025 core update (extended)",
+  "pages per session benchmark tool sites calculator websites average session pageviews",
+  "single page application ad impressions viewability time on page refresh SPA AdSense virtual pageview",
+  "AdSense changes 2025 2026 new policy update publishers announcement (extended)",
+  "AdSense US state privacy laws restricted data processing CPRA Google publishers settings",
+  "Google Search Quality Rater Guidelines YMYL 2025 update finance calculators",
+  "AI Overviews click-through rate drop publishers 2025 study Pew Ahrefs Seer",
+  "personal finance blog income report Mediavine RPM session RPM $40 $60 2025 (extended)",
+  "AdSense RPM dropped 2025 publishers reddit earnings decline per impression (extended)",
+  "AdSense \"low value content\" rejection tool site calculator approval",
+  "Raptive revenue share percentage publishers 75% Journey 70% Ezoic revenue share",
+  "Raptive Apex publishers lost 60% search traffic",
+  "ChatGPT Atlas agent mode ads blocked ad impressions publishers AI browser ad revenue (extended)",
+  "Mediavine ad seasonality RPM Q4 January drop percent publishers Mediavine blog",
+  "\"helpful content\" calculator site traffic drop September 2023 case study tool site recovery (extended)",
+  "Google Display Network average CPC vs search CPC benchmark WordStream LocaliQ 2025 insurance finance",
+  "Google Ads search advertising benchmarks 2025 cost per click insurance finance legal highest CPC",
+  "Chartbeat small publishers search referral traffic down 60% two years 2025",
+  "Ezoic EPMV finance niche reported earnings per thousand visitors 2025",
+  "Google spam policies scaled content abuse definition developers.google.com many pages generated primary purpose manipulating rankings",
+  "Google Privacy Sandbox retired third-party cookies Chrome 2025 decision publishers CPM impact",
+  "AdSense policy ads in iframe framed pages software applications ad placement policy",
+  "Blockthrough PageFair adblock report 2024 2025 US desktop mobile ad blocking rate",
+  "Omni Calculator business model advertising revenue employees how it makes money (extended)",
+  "Google invalid traffic AI agents automated browsing ad clicks advertisers not charged 2026 policy (extended)",
+  "Microsoft Publisher Content Marketplace official announcement February 2026 Copilot pay per use publishers",
+  "Comet Plus payouts publishers 2026 update Perplexity publisher program results (extended)",
+  "Google AdSense ads in AI chatbot responses startups iAsk Liner AdSense for Search AI",
+  "ChatGPT referral traffic engagement pages per session ad revenue publishers Similarweb 2025 2026",
+  "Journey by Mediavine requirements 1,000 sessions help center Grow revenue share 70%",
+  "AdSense invalid traffic deductions percentage of earnings typical deductions publishers report",
+  "[NIEWYKONANE – limit wyszukiwań wyczerpany] Google core update 2026; viewability benchmark; Q4 CPM increase 2025; automotive/energy niche RPM"
+ ]
+}

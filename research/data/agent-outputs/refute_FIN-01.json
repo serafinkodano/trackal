@@ -1,0 +1,103 @@
+{
+ "id": "FIN-01",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "MortgageCalculators.info – Cash Out Refinance Calculator: Compare Cash Out Refi vs Alternatives Including HELOC & Home Equity Loans",
+   "url": "https://www.mortgagecalculators.info/calc-cash-out-refi.php",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: wynik pojawił się tylko jako tytuł, bez opisu funkcji. Tytuł sugeruje porównanie cash-out z HELOC i home equity loan, czyli 3 z 6 wariantów. Nie było go w poprzednim audycie. Brak sygnałów, że obejmuje personal loan, etapowanie, sekwencję HELOC-potem-refi, ścieżkę prime lub rok sprzedaży.",
+   "what_to_check_manually_pl": "Otworzyć stronę i sprawdzić: (1) czy jest pole horyzontu posiadania lub roku sprzedaży; (2) czy HELOC ma harmonogram wypłat i okres interest-only przechodzący w amortyzację; (3) czy można podać scenariusz stóp lub prime; (4) czy jest personal loan albo opcja odłożenia projektu."
+  },
+  {
+   "name": "Point – Home equity loan vs cash-out refinance calculator",
+   "url": "https://point.com/tools/hel-vs-cash-out-refinance",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator porównuje długoterminowy koszt home equity loan z cash-out refinance. Przykład w opisie: cash-out kosztuje 63 800 USD odsetek, ponad dwa razy więcej niż HEL. To dwa warianty, bez HELOC, personal loan, etapowania i ścieżki stóp. Point sprzedaje home equity investment, więc narzędzie jest też lejkiem sprzedażowym.",
+   "what_to_check_manually_pl": "Sprawdzić, czy jest pole horyzontu lub sprzedaży i czy wynik to koszt w horyzoncie, czy tylko koszt do końca okresu. Sprawdzić, czy uwzględnia utratę niskiej stopy na całym saldzie oraz koszty zamknięcia."
+  },
+  {
+   "name": "CalculateHELOC.com – Cash-Out Refinance vs. HELOC (2025) i HELOC Payment Calculator",
+   "url": "https://calculateheloc.com/cash-out-refinance-vs-heloc/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: wymieniony obok Figure, Better i Teamzlab jako narzędzie porównujące HELOC z cash-out. Ma też osobny kalkulator HELOC (https://calculateheloc.com/) i stronę o okresie draw i repayment. Opisy wskazują raczej na artykuł z kalkulatorami niż na jeden zintegrowany symulator. Strona ma datę 2025.",
+   "what_to_check_manually_pl": "Sprawdzić, czy porównanie to jeden kalkulator z wspólnymi danymi wejściowymi, czy osobne narzędzia. Sprawdzić, czy modeluje szok raty po końcu draw i czy ma horyzont sprzedaży."
+  },
+  {
+   "name": "Etsy – Cash-out Refinance Calculator (płatny szablon Excel/Google Sheets)",
+   "url": "https://www.etsy.com/listing/4451367129/film-call-sheet-template-excel-video",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: płatny szablon zgodny z .xlsx i Google Sheets. Ma porównanie kosztów obok siebie, analizę break-even i werdykt, czy HELOC byłby lepszy. Opis nie wspomina o roku sprzedaży, personal loan, HEL, etapowaniu ani scenariuszach stóp. Uwaga: slug URL ('film-call-sheet-template-excel-video') nie pasuje do tytułu, więc wynik może być błędnie zindeksowany.",
+   "what_to_check_manually_pl": "Sprawdzić, czy listing faktycznie istnieje i dotyczy tego produktu. Sprawdzić zakres arkusza: warianty, horyzont posiadania, harmonogram wypłat HELOC, scenariusze prime. Poszukać na Etsy innych szablonów typu 'HELOC vs cash out refi spreadsheet'."
+  },
+  {
+   "name": "calc.one – HELOC Calculator: Draw Period, Repayment & Payment Shock",
+   "url": "https://calc.one/heloc-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator jednego instrumentu, który modeluje okres draw, spłatę i szok raty. Pokrywa jedną zależność z briefu (koniec okresu draw), ale nie porównuje wariantów A–F.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma porównanie z HEL lub cash-out, harmonogram wypłat oraz scenariusz stóp."
+  },
+  {
+   "name": "RateCompas – HELOC Calculator with Payment Shock Analysis",
+   "url": "https://ratecompas.com/heloc-calculator.html",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator HELOC z analizą szoku raty. Jeden z wyników w tej wyszukiwarce opisywał stress test 'prime +2% w okresie draw', ale podsumowanie nie przypisało go jednoznacznie do tej strony. To jeden instrument, bez porównania pięciu wariantów i bez horyzontu sprzedaży.",
+   "what_to_check_manually_pl": "Ustalić, które narzędzie ma stress test prime +2% (RateCompas, calc.one, TheMortgageMath czy inne) i czy którekolwiek łączy go z porównaniem z HEL lub cash-out."
+  },
+  {
+   "name": "TheMortgageMath – HELOC Payment Calculator: Draw & Repayment Phase Costs (2026)",
+   "url": "https://themortgagemath.com/heloc-payment-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator HELOC z 2026 roku, który pokazuje koszty fazy draw i spłaty. Przykład z wyników: 100 tys. USD przy 8,5% daje 708 USD odsetek w okresie draw i 868 USD P+I przy spłacie w 20 lat. Brak porównania wariantów.",
+   "what_to_check_manually_pl": "Sprawdzić, czy domena ma też narzędzie porównawcze (HELOC vs HEL vs cash-out) z horyzontem."
+  },
+  {
+   "name": "Mothebroker – HELOC vs Cash-Out Refi vs HELOAN Comparison Calculator [2026]",
+   "url": "https://www.mothebroker.com/tools/equity-comparison-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary, potwierdzenie z poprzedniego audytu: porównuje obok siebie trzy opcje equity (HELOC, cash-out, HELOAN) i podaje koszt całkowity. W tym wyszukiwaniu opisany jako strona 'z ograniczonymi szczegółami'. Brak personal loan, etapowania i sekwencji. Według poprzedniego audytu działa tylko dla CA/WA.",
+   "what_to_check_manually_pl": "Sprawdzić, czy jest pole horyzontu lub roku sprzedaży, scenariusz prime i harmonogram wypłat HELOC. Pod względem zakresu to wciąż najbliższy konkurent."
+  },
+  {
+   "name": "Figure / Better.com / MortgageCalculator.org / Teamzlab – kalkulatory HELOC vs cash-out (z poprzedniego audytu)",
+   "url": "https://tool.teamzlab.com/mortgage/heloc-vs-cash-out-refi-calculator-2026/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: wszystkie cztery pojawiły się ponownie. Figure pyta o saldo, stopę, pozostały okres i wartość domu, a zwraca koszty i raty. Better pokazuje tabelę odsetek i kosztu całkowitego. Teamzlab liczy break-even. Wszystkie to dwa warianty (HELOC vs cash-out). Inne URL: https://www.figure.com/home-equity-line/heloc-vs-cash-out-refinance-calculator/, https://better.com/heloc-vs-cashout-refi-calculator, https://www.mortgagecalculator.org/calculators/should-i-use-heloc.php",
+   "what_to_check_manually_pl": "Sprawdzić, czy którykolwiek ma pole horyzontu sprzedaży lub scenariusz stóp; Teamzlab z break-even jest tu najbliżej."
+  },
+  {
+   "name": "Kiplinger – narzędzie porównania ofert HELOC i home equity loan (powered by Bankrate)",
+   "url": "https://www.kiplinger.com/personal-finance/home-equity-loans/what-to-know-before-tapping-home-equity",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: Kiplinger osadza narzędzie Bankrate do porównywania ofert pożyczkodawców HELOC i HEL. To marketplace ofert, a nie symulator decyzji.",
+   "what_to_check_manually_pl": "Brak potrzeby głębokiej weryfikacji; ewentualnie sprawdzić, czy widget liczy koszt w horyzoncie."
+  },
+  {
+   "name": "Treści edukacyjne o wyborze instrumentu (Freedom Mortgage, Navy Federal, Effective Agents, HomeCostLab, Build-Folio, loan.ai, Experian, The Mortgage Reports)",
+   "url": "https://www.effectiveagents.com/resources/financing-a-home-renovation-before-you-sell-heloc-vs-personal-loan-vs-cash-out-refinance",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: artykuły z regułami kciuka, np. 'HELOC przy stopie poniżej 5%', 'personal loan dla małych projektów', 'cash-out przy 75k+ i stopie na poziomie rynku'. Effective Agents porusza finansowanie remontu przed sprzedażą (HELOC vs personal loan vs cash-out), a Navy Federal i Freedom Mortgage dodają personal loan. Brak interaktywnego modelu. Inne URL: https://homecostlab.com/guides/heloc-vs-cashout-refi/, https://www.navyfederal.org/makingcents/home-ownership/heloc-home-equity-loan-vs-personal-loan.html, https://loan.ai/blog/heloc-vs-cash-out-refinance-guide",
+   "what_to_check_manually_pl": "Sprawdzić, czy HomeCostLab lub Build-Folio mają osadzony kalkulator (wyniki pokazały tylko przewodniki)."
+  },
+  {
+   "name": "Asystenci AI i AI-podsumowania wyszukiwarki",
+   "url": "https://www.experian.com/blogs/ask-experian/home-equity-loan-vs-heloc-vs-cash-out-refinance/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: w każdym z 8 zapytań wyszukiwarka sama złożyła rekomendację jakościową. Przykład: 'przy niskiej stopie HELOC lub HEL zostawia pierwszy kredyt, cash-out go zastępuje'. Trzy razy wprost zaleciła zbudowanie własnego arkusza z kosztem do daty przeprowadzki. URL wskazuje źródło jednej z syntez, a nie narzędzie AI.",
+   "what_to_check_manually_pl": "Przetestować przykładowy prompt w ChatGPT, Gemini i Claude: czy liczą koszt w horyzoncie 5 lat ze ścieżką prime i szokiem raty, czy tylko dają odpowiedź jakościową."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. W 8 wyszukiwaniach z innymi sformułowaniami (Reddit, arkusz lub szablon, planner lub decision tool, AI app 2026, kalkulatory remontowe, HELOC z harmonogramem i szokiem raty, porównanie 4 opcji z horyzontem, oprogramowanie doradcze) żaden wynik nie opisał narzędzia, które łączy wszystkie elementy decyzji FIN-01:\n- 4–5 instrumentów, w tym personal loan, etapowanie lub odłożenie oraz sekwencję HELOC teraz, refi później;\n- rok sprzedaży lub horyzont posiadania;\n- ścieżkę prime;\n- harmonogram wypłat z okresem interest-only i szokiem raty.\n\nW jednym z wyników (synteza wyszukiwarki) padło wprost: 'None of the results describes a calculator that combines all four options, including a personal loan, into a blended rate over your expected holding period. The closest tools compare two or three options at a time.'\n\nNowi kandydaci (wszyscy partial):\n- MortgageCalculators.info: cash-out vs HELOC i HEL;\n- Point: HEL vs cash-out;\n- CalculateHELOC: HELOC vs cash-out;\n- płatny szablon na Etsy: cash-out vs HELOC z break-even, ale slug URL nie pasuje do tytułu;\n- kalkulatory jednego instrumentu, które modelują szok raty i być może stress test prime: calc.one, RateCompas, TheMortgageMath.\n\nRynek jest więc rozbity na dwie grupy:\n- porównywarki 2–3 wariantów (HELOC, cash-out, HEL) z break-even lub kosztem całkowitym;\n- kalkulatory HELOC z fazą draw i szokiem raty.\n\nŻadna z nich nie łączy tych dwóch warstw. Luka, jeśli istnieje, to integracja, a nie samo porównanie. Rdzeń decyzji 'zachowaj niską stopę i weź drugą hipotekę' jest dobrze obsłużony przez darmowe narzędzia i przez AI-podsumowania, które w każdym zapytaniu same dawały rekomendację jakościową.\n\nOgraniczenia:\n- nie zweryfikowano Mortgage Coach (oprogramowanie dla loan officerów z total cost analysis); zapytanie nie zwróciło jego stron, więc to otwarty trop, nie konkurent;\n- nie przeszukano wprost App Store i Google Play;\n- nie otwarto żadnej strony, więc funkcje kandydatów mogą być szersze niż w podsumowaniach.\n\nPewność: niska do średniej.",
+ "search_scope_pl": "8 wywołań WebSearch: 7 w trybie extended i 1 w standard. Wyniki US, po angielsku, wyłącznie podsumowania wyszukiwarki; żadna strona nie została otwarta, bo WebFetch jest niedostępny. Zakres: darmowe kalkulatory porównawcze, kalkulatory HELOC z fazą draw i szokiem raty, szablony arkuszy (w tym Etsy), narzędzia renowacyjne (próba znalezienia RenoFi nie dała wyniku), narzędzia AI lub aplikacje 2026, rekomendacje z Reddita (żaden wątek nie pojawił się w wynikach) oraz oprogramowanie doradcze (Mortgage Coach, bez wyników o produkcie). Nie przeszukano sklepów z aplikacjami, Product Hunt ani GitHub.",
+ "confidence": "medium",
+ "queries_run": [
+  "home equity options comparison tool HELOC home equity loan cash-out refinance personal loan side by side keep low mortgage rate",
+  "reddit best calculator spreadsheet compare HELOC vs cash out refi when you have 3% mortgage",
+  "HELOC vs home equity loan vs cash-out refi spreadsheet template Excel Google Sheets download compare total cost years until sale",
+  "home equity decision tool AI app 2026 which home equity option is best for me HELOC home equity loan cash-out personal loan recommendation planner",
+  "renovation financing calculator compare HELOC home equity loan cash-out refinance personal loan RenoFi which loan is best for my remodel",
+  "HELOC calculator draw schedule interest-only period then repayment prime rate scenarios payment shock compare home equity loan",
+  "calculator compare HELOC, home equity loan, cash-out refinance and personal loan total cost over how long you plan to stay in home blended rate",
+  "Mortgage Coach Total Cost Analysis cash-out refinance vs HELOC second mortgage comparison presentation borrower holding period software"
+ ]
+}

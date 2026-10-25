@@ -93,6 +93,7 @@ Strony konkurentów traktowano jako źródło **deklarowanych** funkcji, nie dow
 | Z-13 | Właściciel ma konto AdSense z healthscorer.com, a nowa domena przejdzie ocenę | — | hipoteza; nowa witryna i tak podlega ocenie [E-ADS-09] | wniosek o dodanie witryny |
 | Z-14 | Dane publiczne wystarczą do MVP pięciu produktów | — | hipoteza; część parametrów (zniżki stanowe, surcharge, NFIP) nie ma API [E-REG3-*] | inwentaryzacja danych przed budową |
 | Z-15 | Koszt przeglądu eksperckiego 125–250 USD/h | — | założenie | oferty EA/CPA/CFP, dekarza, agenta ubezpieczeniowego |
+| Z-16 | Godziny eksperta na nowy symulator | 9 / 13 / 18 h (śr. dla 5 produktów pilotażowych: łącznie ~55–90 h) | szacunek agentów fali 2b | oferty i rzeczywisty czas przeglądu RENO-02 |
 
 ## 5. Sprzeczności w danych (zachowane, nie uśrednione)
 

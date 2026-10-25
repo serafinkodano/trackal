@@ -1,0 +1,117 @@
+{
+ "id": "RENO-02",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "Roof ROI calculators: Weathershield Roofers – Roofing ROI Calculator 2026 / CalculateMyRoof – Roof ROI Calculator / ShinglesCalculator – Roof ROI Calculator",
+   "url": "https://weathershieldroofers.com/roofing-roi-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: jeden z tych kalkulatorów 'estimates home value, energy, insurance, and maintenance savings over 5 to 20 years'. Przykład ze snippetu: składka bazowa $7,900, wpływ wieku dachu 10%, dach $14,000, zwrot z oszczędności na ubezpieczeniu po ok. 12 latach. Summary nie mówi, który z trzech kalkulatorów to robi. Pozostałe adresy: https://calculatemyroof.com/calculator/roof-roi-calculator/ oraz https://shinglescalculator.com/calculators/roof-roi-calculator/ (w tytule 'Resale Value & Energy Savings'). To najbliższe zagrożenie: łączy horyzont wieloletni, składkę zależną od wieku dachu i wzrost wartości domu. Brak dowodów na wariant naprawy i czekania, oczekiwaną stratę przy ACV albo udziale własnym wiatr/grad, kredyt przy zamknięciu dla kupującego czy datę sprzedaży jako zmienną.",
+   "what_to_check_manually_pl": "Otworzyć wszystkie trzy. (1) Czy jest pole 'years until sale' albo horyzont sprzedaży. (2) Czy porównuje warianty (wymiana teraz, naprawa i czekanie N lat, sprzedaż as-is z kredytem), czy tylko liczy ROI jednej wymiany. (3) Czy modeluje ACV/RCV, harmonogram wypłat i udział własny wiatr/grad. (4) Czy uwzględnia finansowanie (HELOC/kredyt) i PV. Jeśli ma (1) i (2), przeklasyfikować na probably_direct."
+  },
+  {
+   "name": "BuildFolio – Should I Repair or Replace My Roof? Free Tool",
+   "url": "https://build-folio.com/repair-or-replace-roof/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: darmowe narzędzie, które na podstawie zdjęć satelitarnych i danych o nieruchomości rekomenduje naprawę albo wymianę i podaje szacunek kosztów. Wspierane marketingowo przez branżę dekarską. Brak dowodów na moduł ubezpieczenia, horyzont sprzedaży, analizę wielookresową czy PV.",
+   "what_to_check_manually_pl": "Sprawdzić, czy pyta o ubezpieczyciela (ACV/RCV, dopłaty) i plan sprzedaży, czy daje wynik w czasie (koszt czekania), czy jest tylko lead-genem z jednorazową rekomendacją. Sprawdzić też model biznesowy (leady dla dekarzy)."
+  },
+  {
+   "name": "Hammerio – Replace vs Repair Calculator 2026: 5-Year TCO & 50% Rule",
+   "url": "https://hammerio.com/tools/replace-vs-repair-decision-calculator-2026/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary podaje tylko tytuł: kalkulator naprawa vs wymiana z 5-letnim TCO i regułą 50%. Prawdopodobnie ogólny (sprzęt, AGD), nie dachowy. Wielookresowy, ale bez dowodów na ubezpieczenie, sprzedaż i ryzyko burzowe.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma tryb dla dachu, czy horyzont da się wydłużyć poza 5 lat, czy uwzględnia ubezpieczenie i sprzedaż domu."
+  },
+  {
+   "name": "InsuranceCostCity – Roof Age & Insurance Cost Calculator",
+   "url": "https://www.insurancecostcity.com/tools/roof-age-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary, tylko tytuł: 'How Your Roof Affects Your Premium'. Pokrywa zależność wiek dachu → składka, czyli jeden z kluczowych modułów RENO-02. Brak dowodów na decyzję o wymianie, oczekiwaną stratę czy sprzedaż.",
+   "what_to_check_manually_pl": "Sprawdzić, czy daje rekomendację wymiany albo okres zwrotu, czy modeluje ACV i nieodnowienie polisy, czy uwzględnia region (grad/wiatr)."
+  },
+  {
+   "name": "RoofingCalculatorUSA – Roof Insurance Deductible Calculator 2026 (+ New Roof Insurance Premium Savings Calculator)",
+   "url": "https://roofingcalculatorusa.com/calculators/roof-insurance-deductible",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: strona o udziałach własnych w szkodach dachowych 'offers a New Roof Insurance Premium Savings Calculator'. Szacuje spadek składki po nowym dachu i liczbę lat do zwrotu. Do tego osobny kalkulator udziału własnego. Ta sama farma kalkulatorów mogłaby je skleić, ale dziś to osobne narzędzia.",
+   "what_to_check_manually_pl": "Sprawdzić, czy kalkulatory są połączone (wspólne dane wejściowe), czy jest wariant 'wait' albo horyzont sprzedaży, czy udział własny wiatr/grad trafia do oczekiwanego kosztu."
+  },
+  {
+   "name": "Roof Decision Guide – Roof Decision Tools and Calculators (hub)",
+   "url": "https://roofdecisionguide.com/tools/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: darmowy kalkulator naprawa vs wymiana oparty na wieku, stanie i uszkodzeniach. Strona /tools/ to hub z wieloma narzędziami, poza kalkulatorem znanym z poprzedniego audytu. Wspierana marketingowo przez dekarzy.",
+   "what_to_check_manually_pl": "Przejrzeć listę narzędzi w hubie: czy są tam narzędzia do ubezpieczenia, sprzedaży albo PV i czy dzielą dane wejściowe (zintegrowany przepływ), czy są osobne."
+  },
+  {
+   "name": "Hail-damage calculators (ShinglesCalculator Hail Damage Calculator; RoofingCalculatorHQ Hail Damage Assessment Calculator)",
+   "url": "https://shinglescalculator.com/calculators/hail-damage-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: wielkość gradu, wiek i materiał dachu → % uszkodzeń. Potem porównanie naprawy z wymianą (próg 25-30%, dostępność koloru, pozostała żywotność). RoofingCalculatorHQ (https://www.roofingcalculatorhq.com/calculators/hail-damage-assessment-calculator/) szacuje szkodę wg skali Haag. Narzędzia na po szkodzie, nie do planowania z góry. Summary wprost: 'didn't find a calculator that directly models the expected cost of waiting'.",
+   "what_to_check_manually_pl": "Sprawdzić, czy któryś liczy roczne prawdopodobieństwo gradu albo ACV vs RCV przy przyszłej szkodzie (koszt czekania), czy tylko ocenia szkodę, która już wystąpiła."
+  },
+  {
+   "name": "Paperform – Roof Replacement Financing Calculator (template)",
+   "url": "https://paperform.co/templates/roof-replacement-financing-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: szablon kalkulatora rat i planu płatności za wymianę dachu. Pokrywa tylko moduł finansowania, bez decyzji o terminie.",
+   "what_to_check_manually_pl": "Brak potrzeby głębszej weryfikacji; ewentualnie sprawdzić, czy szablon ma pola ubezpieczenia albo sprzedaży."
+  },
+  {
+   "name": "CostPrism / RealCostIQ – roof repair vs replacement 2026 guides (20-year replace-now vs wait example)",
+   "url": "https://costprism.com/guides/roof-repair-vs-replacement/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: jeden z poradników modeluje 20-letni scenariusz dla dachu za $12,000 przy inflacji kosztów 3% i wnioskuje, że wymiana teraz oszczędza ok. $5,500. Atrybucja do CostPrism niepewna. RealCostIQ (https://realcostiq.com/guides/roof-repair-vs-replacement/) to '2026 Decision Framework': naprawiać przy ponad 15 latach pozostałej żywotności, wymieniać w ostatniej ćwiartce. To statyczne treści, nie interaktywne narzędzia, ale konkurują o te same zapytania.",
+   "what_to_check_manually_pl": "Sprawdzić, czy na stronach jest wbudowany interaktywny kalkulator replace-now vs wait. Jeśli tak i obejmuje ubezpieczenie, przeklasyfikować na partial."
+  },
+  {
+   "name": "Oxmaint – Property CapEx Request Template (NPV repair vs replace)",
+   "url": "https://oxmaint.com/industries/property-management/property-capex-request-template-building-owners",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: szablon CapEx dla właścicieli nieruchomości komercyjnych. Porównuje dalsze naprawy przez pozostałą żywotność, wymianę 1:1 i wymianę z ulepszeniem metodą NPV. Wielowariantowy i wielookresowy, ale B2B, bez ubezpieczenia ACV i bez sprzedaży domu.",
+   "what_to_check_manually_pl": "Sprawdzić, czy to plik do pobrania z formułami, czy tylko opis procesu; poza tym niska relewancja dla konsumenta."
+  },
+  {
+   "name": "Seller roof guides: Opendoor, Best Utah Real Estate (replace, repair or credit), ListWithClever, Fixr",
+   "url": "https://bestutahrealestate.com/news/roof-condition-and-home-sales-replace-repair-or-credit",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: reguły bez kalkulatora. Opendoor (https://www.opendoor.com/articles/does-a-new-roof-increase-home-value-roi-costs-and-what-sellers-need-to-know): wymieniać przed wystawieniem tylko przy dachu na końcu życia; przy 5+ latach żywotności zwykle kredyt przy zamknięciu. Best Utah: wymiana rzadko zwraca się 1:1, a kredyt wyznaczać jako średnią z 3 lokalnych wycen. FHA wymaga min. 2 lat pozostałej żywotności dachu. Summary wprost: 'I didn't find a dedicated seller roof-credit vs. replacement calculator'.",
+   "what_to_check_manually_pl": "Sprawdzić, czy Opendoor albo ListWithClever nie mają wbudowanego kalkulatora net proceeds z opcją dachu (Opendoor ma narzędzia do szacowania wartości)."
+  },
+  {
+   "name": "Roof + solar sequencing guides (EnergySage, Griffith Roofing 5-15 year rule, RoofVista, Roofmaxx, DOE)",
+   "url": "https://www.energysage.com/solar/solar-panel-roof-replacement/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: reguły kciuka (wymiana przed PV przy mniej niż 5 latach żywotności, PV bez przekrycia przy 15+ latach). Demontaż i ponowny montaż paneli $300-350 za panel albo $1,500-6,000. Oszczędność ok. $4,000 przy łączeniu prac (DOE/NREL). Summary wprost: 'The results don't address selling the home'. Żadnego narzędzia łączącego dach, PV i sprzedaż.",
+   "what_to_check_manually_pl": "Sprawdzić, czy EnergySage Marketplace nie ma kalkulatora 'roof + solar' z opcją wymiany dachu i horyzontem sprzedaży (EnergySage ma rozbudowane narzędzia kosztowe dla PV)."
+  },
+  {
+   "name": "MyTidyBoss – Home Maintenance Cost Calculator",
+   "url": "https://mytidyboss.com/tools/maintenance-budget-calculator/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: estymator kosztów utrzymania domu z typową żywotnością dachu 20-30 lat. Ogólny budżet, bez decyzji o terminie, ubezpieczenia czy sprzedaży. Summary: 'didn't turn up any specific app that forecasts roof remaining life and ties it to insurance premiums'.",
+   "what_to_check_manually_pl": "Niska relewancja; ewentualnie sprawdzić aplikacje do zarządzania domem (HomeZada, Centriq, Homebase) w innej sesji, bo tu nie pojawiły się w wynikach."
+  },
+  {
+   "name": "ValuePenguin – Can Renovating Your House Lower Your Insurance Costs? (data source)",
+   "url": "https://www.valuepenguin.com/home-renovation-insurance-savings",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: wycena u 7 ubezpieczycieli. Wymiana 20-letniego dachu daje średnio $625 rocznie (21%) oszczędności, przy 15-letnim dachu tylko $88. To dane wejściowe dla modułu składki, nie narzędzie.",
+   "what_to_check_manually_pl": "Brak; wartość jako źródło danych do produktu, nie konkurent."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 8 wyszukiwań WebSearch (5 extended, 3 standard), anglojęzyczny web US, 2026-10-25, wyłącznie search-summary bez otwierania stron; do tego 7 wyszukiwań poprzedniego audytora. Pewność: średnia.\n\nSzukałem innaczej niż poprzedni audytor: naturalne sformułowania użytkownika (Reddit), 'decision tool/app', szablony NPV, aplikacje do utrzymania domu, kalkulator kredytu przy zamknięciu, PV + sprzedaż, okres zwrotu ze składki i 'cost of waiting'. Pięć wyników wprost zgłosiło brak narzędzia. Brak szablonu NPV dla terminu wymiany dachu. Brak aplikacji łączącej pozostałą żywotność dachu ze składką. Brak kalkulatora kredytu dla kupującego vs wymiana. Brak kalkulatora oczekiwanego kosztu czekania (grad × szkoda vs wymiana). Treści o PV nie dotykają sprzedaży domu. Uwaga: negatywne stwierdzenia z search-summary to słaby dowód.\n\nNajgroźniejsze znaleziska, nowe względem poprzedniego audytu:\n(1) Kalkulatory Roof ROI (Weathershield Roofers, CalculateMyRoof, ShinglesCalculator). Jeden z nich liczy oszczędności na ubezpieczeniu, wartości domu, energii i utrzymaniu w horyzoncie 5-20 lat, z wpływem wieku dachu na składkę i okresem zwrotu. Jeśli któryś ma też horyzont sprzedaży i porównanie wariantów, staje się bliski bezpośredniemu, więc trzeba to sprawdzić ręcznie w pierwszej kolejności.\n(2) RoofingCalculatorUSA: New Roof Insurance Premium Savings Calculator i kalkulator udziału własnego, ale osobno.\n(3) InsuranceCostCity: wiek dachu → składka.\n(4) BuildFolio: rekomendacja naprawa/wymiana z danych satelitarnych.\n(5) Kalkulatory szkód gradowych (oceniają szkodę po fakcie, nie planują).\n\nŻadne z nich, według dostępnych opisów, nie łączy w jednym przepływie wszystkich elementów RENO-02: warianty (wymiana teraz, naprawa i czekanie, samoubezpieczenie, wymiana przed wystawieniem, as-is z kredytem, PV), ACV/RCV, udział własny wiatr/grad, regionalne ryzyko burz, koszt finansowania i datę sprzedaży. To kawałki do sklejenia, nie konkurent bezpośredni.\n\nRyzyko rynkowe: nisza jest gęsto obsadzona przez programatyczne farmy kalkulatorów dachowych (shinglescalculator, roofingcalculatorhq, calculatemyroof, roofingcalculatorusa, costprism, realcostiq, homecostdesk) finansowane reklamą lub leadami. Mogą szybko dodać wariant 'replace now vs wait'. Ten sam model monetyzacji oznacza też konkurencję o pozycje w SERP i stawki AdSense.",
+ "search_scope_pl": "8 wyszukiwań WebSearch (extended i standard), anglojęzyczny web US, 2026-10-25. Wyłącznie search-summary, bez otwierania stron (WebFetch niedostępny). Funkcje znalezionych narzędzi poznane tylko z tytułów i snippetów, niezweryfikowane. Pokryte kąty: naprawa/wymiana jako app/tool 2026; Reddit i naturalne sformułowanie użytkownika; szablon NPV/arkusz; PV + wymiana dachu + sprzedaż; aplikacje do utrzymania domu z prognozą dachu i składką; kredyt przy zamknięciu vs wymiana; okres zwrotu ze składki, dopłata za wiek, ACV, udział własny wiatr/grad; koszt czekania i ryzyko gradu. Niepokryte: aplikacje mobilne w App Store/Google Play, płatne oprogramowanie doradców ubezpieczeniowych, aplikacje typu HomeZada/Centriq (nie pojawiły się w wynikach), narzędzia AI-native wydane w 2026 poza ogólnymi asystentami.",
+ "confidence": "medium",
+ "queries_run": [
+  "roof repair vs replace decision tool homeowner insurance age sell house app 2026",
+  "reddit roof 18 years old insurance actual cash value only replace now or wait selling in few years",
+  "roof replacement timing calculator net present value repair vs replace spreadsheet template",
+  "should I replace roof before installing solar calculator panel removal reinstall cost roof remaining life tool selling home",
+  "home maintenance app roof age remaining life replacement forecast insurance premium savings homeowner planner",
+  "seller roof credit at closing vs replace roof calculator net proceeds",
+  "new roof payback calculator insurance premium savings roof age surcharge ACV wind hail deductible",
+  "cost of waiting to replace roof calculator storm hail risk expected cost replace now vs later"
+ ]
+}

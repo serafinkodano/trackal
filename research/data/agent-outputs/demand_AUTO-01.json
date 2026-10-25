@@ -1,0 +1,138 @@
+{
+ "id": "AUTO-01",
+ "demand_evidence": [
+  {
+   "claim_pl": "Edmunds za Q3 2026: 29,1% trade-inów przy zakupie nowego auta miało negative equity (Q1 2026: 30,9%, Q3 2025: 28,1%). Średnia luka wynosiła 7 107 USD, a kupujący, którzy wliczyli dług w nowy kredyt, finansowali średnio 57 235 USD. Źródło: search-summary jednego artykułu opublikowanego kilka dni temu, niepotwierdzonego drugim źródłem. Z podsumowania nie wynika jasno, czy mianownikiem są wszystkie trade-iny, czy tylko te z otwartym kredytem.",
+   "url": "https://www.edmunds.com/car-news/Q3-2026-negative-equity-report.html",
+   "kind": "indirect",
+   "measures_pl": "Odsetek transakcji trade-in przy zakupie nowego auta z ujemnym equity i średnia głębokość luki w kwartale. To miara populacji i transakcji, nie popytu na wyszukiwania."
+  },
+  {
+   "claim_pl": "Edmunds za Q1 2026: 30,9% underwater, najwyższy odsetek od Q1 2021 (31,9%). Średnia luka 7 183 USD, najwyższa w historii dla pierwszego kwartału. Tytuł raportu wskazuje na wydłużanie okresów kredytowania jako przyczynę.",
+   "url": "https://www.edmunds.com/car-news/edmunds-insights-q1-2026-report.html",
+   "kind": "indirect",
+   "measures_pl": "Kwartalny odsetek i średnia kwota negative equity przy trade-inie na nowe auto."
+  },
+  {
+   "claim_pl": "CNBC (styczeń 2026) za Edmunds: rekordowa średnia luka 7 214 USD w Q4 2025. Temat stale wraca w mediach głównego nurtu.",
+   "url": "https://www.cnbc.com/2026/01/15/underwater-car-trade-ins.html",
+   "kind": "indirect",
+   "measures_pl": "Rekord średniej kwoty negative equity oraz zasięg tematu w dużych mediach (podaż treści, nie ruch)."
+  },
+  {
+   "claim_pl": "CNBC (30.03.2026): 'Nearly 1 in 3 car buyers are underwater on trade-ins', analityk nazywa kwotę 'troubling'. Druga duża publikacja w ciągu kwartału.",
+   "url": "https://www.cnbc.com/2026/03/30/negative-equity-trade-ins-car-buyers.html",
+   "kind": "indirect",
+   "measures_pl": "Pokrycie wydawnicze tematu. Każdy raport kwartalny Edmunds generuje falę artykułów."
+  },
+  {
+   "claim_pl": "Według podsumowania wyszukiwania kredyty z wliczonym negative equity miały w Q2 2026 średnią ratę 944 USD, najwyższą w danych Edmunds. Przypisanie liczby do konkretnego URL jest niepewne, bo podsumowanie nie wskazało źródła. Tytuł artykułu poniżej mówi o rekordowych ratach.",
+   "url": "https://www.zerohedge.com/personal-finance/buyers-trading-vehicles-negative-equity-face-record-monthly-payments-edmunds",
+   "kind": "indirect",
+   "measures_pl": "Obciążenie ratą po rolloverze. Ma znaczenie dla limitu raty w modelu."
+  },
+  {
+   "claim_pl": "CFPB Data Spotlight (czerwiec 2024, 9 kredytodawców, lata 2018–2022): 11,6% kredytów zawierało wliczone negative equity (od poniżej 8% w 2022 do ponad 17% w 2020). Ci kredytobiorcy ponad 2 razy częściej niż osoby z dodatnim trade-inem trafiali do repossession w ciągu 2 lat. Średni okres kredytu wynosił 73 mies., średni score 704, a raty były o ok. 27% wyższe niż bez trade-inu.",
+   "url": "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-negative-equity-findings-from-the-auto-finance-data-pilot/",
+   "kind": "indirect",
+   "measures_pl": "Udział kredytów z rolloverem w próbie 9 kredytodawców (nie cały rynek) i skutki: ryzyko repossession, okres, rata."
+  },
+  {
+   "claim_pl": "Treści typu 'jak wyjść z underwater car loan' mają rozbudowane poradniki: NerdWallet, Credit Karma (3 opcje), Bankrate, AAA, Yahoo Finance. Rekomendują zwykle 'zatrzymaj i spłacaj', a rollover uznają za kosztowny. Żaden nie liczy wariantów razem w jednym modelu (search-summary, strony nieotwierane).",
+   "url": "https://www.nerdwallet.com/auto-loans/learn/trade-in-car-when-you-owe-money",
+   "kind": "indirect",
+   "measures_pl": "Podaż treści u dużych wydawców jako pośredni sygnał popytu informacyjnego. Nie pokazuje wolumenu."
+  },
+  {
+   "claim_pl": "Credit Karma ma osobny poradnik 'How to trade in a car with negative equity: 3 options', czyli osobny intent dla trade-inu z ujemnym equity.",
+   "url": "https://www.creditkarma.com/auto/i/negative-equity-car-trade-in",
+   "kind": "indirect",
+   "measures_pl": "Istnienie dedykowanych stron pod intent decyzyjny (wybór wariantu)."
+  },
+  {
+   "claim_pl": "FTC ostrzega przed reklamami dealerów 'spłacimy Twój kredyt przy trade-inie', kiedy klient jest underwater, bo luka trafia wtedy do nowego kredytu.",
+   "url": "https://consumer.ftc.gov/node/298619",
+   "kind": "indirect",
+   "measures_pl": "Uwaga regulatora: istnieje realna szkoda konsumencka i potrzeba niezależnego przeliczenia oferty dealera."
+  },
+  {
+   "claim_pl": "Forum myFICO: użytkownik z F-150 z 2018 r. i kredytem na 15% pyta, jak wyjść z kredytu przewyższającego wartość auta. Wątek ma ok. 1 133 dni. Forum Saving Advice: 'keep or trade in' przy negative equity, ok. 481 dni. To pytania zadane wprost przez użytkowników.",
+   "url": "https://ficoforums.myfico.com/t5/Auto-Loans/What-to-do-about-my-car-loan-I-owe-more-than-its-worth/td-p/6703571",
+   "kind": "direct",
+   "measures_pl": "Jakościowy dowód, że użytkownicy formułują dokładnie ten problem decyzyjny. Próba mała (2 wątki), a Reddit był niedostępny w narzędziu wyszukiwania."
+  },
+  {
+   "claim_pl": "Sezon zwrotów podatku 2026: średni zwrot ok. 3 700–3 800 USD, o ok. 10% więcej r/r (Autotrader za danymi IRS, Cox w wypowiedzi J. Robba). W ankiecie Cox (14.04) 52% kupujących z refundem wskazało konieczność (wymiana auta, dojazdy).",
+   "url": "https://b2b.autotrader.com/resources/tax-refund-car-buying-season/",
+   "kind": "indirect",
+   "measures_pl": "Wyzwalacz sezonowy: gotówka pozwalająca dopłacić lukę (wariant 3) oraz szczyt zakupów II–IV."
+  },
+  {
+   "claim_pl": "Ankieta Cox w omówieniu GoodCarBadCar: 93% kupujących z refundem planowało zakup wcześniej, refund działa jako most nad luką dostępności. Interpretację 'mostu' podaje blog, nie Cox.",
+   "url": "https://www.goodcarbadcar.net/cox-tax-season-survey-2026-affordability-gap",
+   "kind": "indirect",
+   "measures_pl": "Rola refundu w finansowaniu decyzji (dopłata luki lub wkład)."
+  },
+  {
+   "claim_pl": "SZACUNEK rzędu wielkości. Założenia spoza tego przebiegu, niezweryfikowane: ok. 15–16 mln nowych aut rocznie w USA i 35–50% transakcji z trade-inem. Po przemnożeniu przez 29–31% underwater (Edmunds) wychodzi ok. 1,5–2,5 mln transakcji rocznie z negative equity, tylko dla nowych aut. To transakcje już zawarte, nie miesięczny popyt na wyszukiwania ani liczba użytkowników narzędzia.",
+   "url": "https://www.edmunds.com/car-news/Q3-2026-negative-equity-report.html",
+   "kind": "estimate",
+   "measures_pl": "Przybliżona roczna liczba transakcji z ujemnym equity (segment nowych aut). Nie obejmuje osób rozważających wyjście, które nie dokonały transakcji, ani rynku aut używanych."
+  },
+  {
+   "claim_pl": "HIPOTEZA: grupa 'utkniętych' (underwater i zastanawiających się, ale bez transakcji) jest większa niż liczba transakcji. Kohorta zakupów z lat 2021–2023 (ceny szczytowe, okresy 72–84 mies.) nadal jest pod wodą w 2026. Z tym kierunkiem zgodny jest nagłówek Auto Remarketing 'pandemic-era problems still festering'; treści artykułu nie czytano.",
+   "url": "https://www.autoremarketing.com/subprime/edmunds-pandemic-era-problems-still-festering-in-form-of-negative-equity",
+   "kind": "hypothesis",
+   "measures_pl": "Do testu: udział zapytań 'stuck/trapped in car loan' w Search Console po starcie oraz w Google Trends (bez podawania wolumenów)."
+  },
+  {
+   "claim_pl": "HIPOTEZA sezonowości: piki zainteresowania w II–IV (refundy, popyt dealerów na używane od marca według CarEdge, treść marketingowa), w IX–XII (koniec roku modelowego, wyprzedaże) oraz po kwartalnych raportach Edmunds (styczeń, kwiecień, lipiec, październik).",
+   "url": "https://caredge.com/guides/best-month-to-trade-in-your-car",
+   "kind": "hypothesis",
+   "measures_pl": "Do weryfikacji w Google Trends i GSC po uruchomieniu. Nie podaje się wolumenów słów kluczowych."
+  }
+ ],
+ "forum_question_examples": [
+  {
+   "paraphrase_en": "I have a 2018 F-150 financed at around 15% and I owe more than it's worth. How do I get out of this loan? Would trading it for something cheaper or refinancing actually help? (Replies: a cheaper car still leaves a big balance, and refinancing is hard when you're underwater.)",
+   "url": "https://ficoforums.myfico.com/t5/Auto-Loans/What-to-do-about-my-car-loan-I-owe-more-than-its-worth/td-p/6703571"
+  },
+  {
+   "paraphrase_en": "Should I keep my car or trade it in when I still owe more than it's worth? (Thread consensus: negative equity has no value toward the next car, so keep driving it unless you can sell for more than the payoff.)",
+   "url": "https://www.savingadvice.com/forums/forum/financial-faq-s/753271-do-i-keep-my-car-or-trade-it-in"
+  }
+ ],
+ "seasonality_or_triggers_pl": "Sezonowość (zmierzone tylko pośrednio, reszta to hipotezy):\n(1) Luty–kwiecień, sezon zwrotów podatku. Średni zwrot w 2026 to ok. 3 700–3 800 USD (+~10% r/r, Autotrader/Cox), co daje gotówkę na dopłatę luki lub wkład. CarEdge opisuje, że dealerzy od marca szukają aut używanych, a wyższe oferty trade-in zmniejszają lukę. Fakty o refundach: indirect. Wpływ na ruch: hypothesis.\n(2) Wrzesień–grudzień, koniec roku modelowego i wyprzedaże. Dealerzy agresywniej wliczają negative equity w nowe kredyty (hypothesis).\n(3) Raporty kwartalne Edmunds (styczeń, koniec marca/kwiecień, lipiec, październik) wywołują fale artykułów w CNBC, CBT News, Yahoo i innych (indirect). Linkowalny kalkulator może zbierać ruch z tych fal.\n\nWyzwalacze indywidualne, czyli moment z briefu:\n- oferta trade-in od dealera lub instant offer (Carvana, CarMax) niższa niż payoff;\n- kosztorys dużej naprawy po wygaśnięciu gwarancji;\n- chęć przejścia na EV lub hybrydę albo na tańsze auto przy wysokiej racie (CFPB: raty z rolloverem o ok. 27% wyższe, średni okres 73 mies.);\n- wzrost składki ubezpieczenia;\n- zmiana życiowa (dziecko, praca, przeprowadzka do innego stanu ze zmianą podatku i rejestracji);\n- koniec leasingu;\n- szkoda całkowita, gdy auto jest underwater (gap insurance);\n- poprawa scoringu, która otwiera refinans.\n\nKontekst strukturalny: kohorta zakupów 2021–2023 przy szczytowych cenach i okresach 72–84 mies. nadal jest pod wodą (nagłówek Auto Remarketing; hipoteza). Warto też uwzględnić zakończenie federalnych ulg na EV 30.09.2025 oraz odliczenie odsetek od kredytu auto (OBBBA, 2025–2028). Obie zmiany pochodzą z wiedzy modelu i NIE były weryfikowane w tym przebiegu; zmieniają kalkulację 'przejdź na EV teraz'.",
+ "prompts_no_tool_request": [
+  "My 2021 F-150 has a $38,200 payoff and Carvana offered me $29,000. It also needs a $4,800 transmission repair. I'm in Ohio. Is it dumb to trade it in now, or should I just fix it and keep paying?",
+  "I'm 26 and about $5k upside down on a 2023 Kia Forte at 13.9% APR, $489 a month. I want something cheaper to drive. What are my realistic options to get out of this loan without wrecking my credit?",
+  "We owe $31,500 on our 2022 Honda Pilot. KBB private party says about $27,000 and the dealer offered $24,000. We live in California and could charge an EV at home. When does it actually make sense to switch to a used Model Y?",
+  "How long until I'm not underwater on my car anymore? I owe $19,800 on a 2022 Camry, 48 months left at 7.4%, and it's worth around $16,500 today. I put about 12,000 miles a year on it."
+ ],
+ "prompts_calculator_request": [
+  "Build me a calculator that shows the month my car loan stops being underwater. Inputs: payoff amount, APR, months remaining, current value, yearly depreciation and miles per year.",
+  "Is there a calculator that compares trading in my upside-down car now vs waiting 12 months vs selling it privately? I'm in Texas, I owe $27,400, the trade-in offer is $21,000, and private sale would probably get $23,500.",
+  "Make an interactive tool where I enter my negative equity, the new car price, Florida sales tax and dealer fees, my down payment, APR and term. It should show the new monthly payment, total interest, loan-to-value, and how many months I'd be upside down on the new loan.",
+  "Can you make me a spreadsheet or calculator to decide between refinancing my current loan ($22,000 left at 11.5%, 54 months remaining) and trading it for a cheaper used car with the negative equity rolled in? I'm in Pennsylvania and can't go over $450 a month."
+ ],
+ "prompts_scenario_comparison": [
+  "Compare these over 5 years. (A) Keep my 2022 RAV4 and pay off the $26,000 loan. (B) Trade it now for a $34,000 hybrid, rolling in $5,200 negative equity at 6.9% for 72 months. (C) Trade now and pay the $5,200 gap from savings. (D) Sell privately for about $1,800 more than the trade-in and cover the rest with a personal loan. I'm in Virginia and drive 15,000 miles a year. Which leaves me with the most money?",
+  "The dealer says they can roll my $7,000 negative equity into a 36-month lease on a new Ioniq 5. The other option is keeping my 2021 Tahoe: I owe $41,000 and it's worth about $34,000. I'm in Georgia, can charge at home, and drive 18,000 miles a year. Which costs less over 3 years once gas, electricity and insurance are counted?",
+  "Trade in now, in 6 months, or in 12 months? I owe $18,900 on a 2020 Civic worth about $15,000, paying $430 at 8.9%. The car I want is a $28,000 Corolla Cross Hybrid at 5.9%. Show me the total cost and the new payment for each timing.",
+  "My car needs a $3,500 repair. Option 1: fix it and drive it 2 more years. Option 2: trade it now and roll $4,000 negative equity into a $25,000 used car. Option 3: sell it privately as-is and cover the gap with a 12% personal loan. I live in Michigan. Which is cheapest, and what would have to change for a different answer to win?"
+ ],
+ "ai_self_solve_assessment_pl": "Ryzyko, że AI rozwiąże problem bez wizyty na stronie: WYSOKIE dla pojedynczego pytania o rollover, ŚREDNIE dla pełnej decyzji wielowariantowej.\n\nDla pojedynczego pytania (np. przykładowy prompt) sedno to arytmetyka: luka = payoff − trade-in, kwota kredytu, rata z annuity, łączne odsetki, porównanie z dopłatą gotówką. ChatGPT z Intelligent UI (wg briefu od 7.10.2026 renderuje kalkulatory w odpowiedzi) i Google AI Mode z generative UI (wg briefu od 19.08.2026) wygenerują takie narzędzie ad hoc. Daty tych funkcji pochodzą z briefu i nie były weryfikowane w tym przebiegu. Do tego asystenci powtarzają konsensus wydawców (NerdWallet, Credit Karma, Bankrate: 'keep paying, avoid rollover'), więc użytkownik często dostaje wystarczającą odpowiedź jakościową bez kliknięcia. Zero-click jest tu bardzo prawdopodobny.\n\nRyzyko spada do średniego, gdy decyzja wymaga spójnego modelu wielookresowego. Potrzebne są: equity(t) dla 5–7 wariantów na wspólnej osi czasu, wariant 'czekaj N miesięcy', w którym zmieniają się jednocześnie saldo, wartość, przebieg i ryzyko naprawy, stanowe reguły ulgi podatkowej przy trade-inie zestawione z premią ze sprzedaży prywatnej, limit raty i gotówki jako ograniczenia, break-even oraz wrażliwość na deprecjację, APR i cenę prywatną. Generatywne UI zwykle buduje jeden kalkulator na jeden wariant i nie ma zweryfikowanej tabeli 51 jurysdykcji ani kalibrowanych krzywych deprecjacji. Asystent policzy, ale założenia (podatek, deprecjacja, LTV/APR) będą zgadywane lub pominięte.\n\nWnioski dla produktu:\n(a) Wartością ma być integracja i zweryfikowane dane domyślne, nie sama formuła.\n(b) Potrzebne są stany wyników możliwe do zlinkowania (URL ze scenariuszem), żeby Perplexity, Copilot i AI Overviews mogły cytować konkretną stronę z wynikiem dla danego przypadku.\n(c) Pomogą strony programatyczne 'underwater car loan + [state]' z jawną regułą podatkową. To treść, której model nie odtworzy wiarygodnie, a są cytowalne.\n(d) Trzeba się liczyć z tym, że ruch z AI będzie mniejszy niż z klasycznego SEO. Model AdSense wymaga długiej sesji (interakcja z suwakami) i odwiedzin powrotnych (np. 'sprawdź ponownie za 3 mies.').\n\nPrzyszły test ręczny (bez wyników na dziś): prompty z sekcji powyżej należy uruchomić w 5 asystentach i ocenić, czy uwzględniają zależności z listy obok.",
+ "missing_dependencies_ai_likely_ignores_pl": "Zależności, które asystent prawdopodobnie pominie lub uprości (hipotezy do przyszłego testu, nie wyniki):\n1) Ulga podatkowa przy trade-inie działa tylko przy wymianie u dealera, nie przy sprzedaży prywatnej. Część jurysdykcji nie daje jej wcale albo ją limituje (z wiedzy modelu, do weryfikacji: m.in. California, Virginia, Hawaii, DC; Michigan z limitem). Dla auta za 35k i trade-inu 17,5k przy 7% różnica to 1 225 USD, co może zjeść premię ze sprzedaży prywatnej.\n2) Payoff to nie saldo z wyciągu. Dochodzą odsetki dzienne (per diem), 10-day payoff, możliwe kary za wcześniejszą spłatę i kredyty liczone wg Rule of 78 w subprime.\n3) Trzy różne wartości auta: trade-in (wholesale), private party i retail. Każda maleje w czasie inaczej, a w wariancie 'czekaj' rośnie przebieg.\n4) Limity LTV kredytodawców (często ok. 120–150%; do weryfikacji) blokują rollover albo podnoszą APR. Polisy gap insurance mogą mieć limit LTV, więc przy wysokim LTV gap może nie pokrywać całej luki.\n5) Prywatna sprzedaż auta z zastawem: przeniesienie tytułu, spłata przez kupującego lub bank, czas i ryzyko. Kredyt na lukę jest niezabezpieczony i ma wyższe APR.\n6) Koszt alternatywny gotówki użytej na lukę, czyli utrata poduszki bezpieczeństwa.\n7) Refinans z wydłużeniem okresu obniża ratę, ale może podnieść łączne odsetki. Dochodzą opłaty tytułowe i administracyjne, a refinans przy LTV powyżej 100% bywa trudny.\n8) EV i hybryda: dostęp do ładowania w domu, taryfy (TOU), koszt ładowania publicznego, wyższe ubezpieczenie EV, stanowe dopłaty rejestracyjne dla EV i szybsza deprecjacja części EV. Asystent może też nadal przywoływać federalną ulgę 7 500 USD, która wg wiedzy modelu wygasła 30.09.2025 (do weryfikacji).\n9) Odliczenie odsetek od kredytu na nowe auto montowane w USA (OBBBA, lata 2025–2028, limity dochodowe; wiedza modelu, do weryfikacji). Zmienia koszt po podatku wariantów z nowym kredytem.\n10) Porównanie w równym horyzoncie: trzeba uwzględnić wartość końcową auta i equity na koniec okresu, a nie tylko sumę rat. Do tego oczekiwany koszt napraw rosnący z wiekiem i przebiegiem.\n11) Leasing z negative equity: luka zwiększa capitalized cost i wpływa na sposób opodatkowania leasingu w danym stanie. Dochodzą opłata dispositon fee i limit mil.\n12) Ograniczenia twarde, czyli limit raty i gotówki, oraz to, że wysoki LTV i niski score podnoszą APR nowego kredytu. CFPB: kredytobiorcy z rolloverem mają niższy średni score.",
+ "mvp_scope_pl": "MVP: jedna strona kalkulatora z modelem miesięcznym na wspólnej osi czasu (horyzont 36–84 mies., domyślnie 60).\n\nWEJŚCIA:\n- obecny kredyt: payoff, APR, pozostałe miesiące (rata wyliczana lub wpisana);\n- wartość auta: oferta trade-in i szacunek private party, rocznik, przebieg i mile rocznie;\n- preset deprecjacji wg wieku i segmentu (nowy/używany, EV/hybryda/benzyna) z możliwością nadpisania;\n- kosztorys naprawy starego auta, opcjonalnie;\n- stan z tabelą 51 jurysdykcji: stawka stanowa i reguła ulgi trade-in (pełna, limit, brak) oraz pole na stawkę lokalną;\n- nowe auto: cena, opłaty dealera i rejestracji (ryczałt edytowalny), wkład, APR, okres, typ napędu z efektywnością (mpg lub kWh/100 mi) i ceną paliwa lub energii;\n- dostęp do ładowania w domu (tak/nie);\n- dostępna gotówka i limit raty.\n\nWARIANTY w MVP: (1) zatrzymaj do dodatniego equity, potem wymień (miesiąc przecięcia); (2) wymień teraz z rolloverem; (3) wymień teraz i dopłać lukę gotówką; (4) sprzedaj prywatnie i weź pożyczkę na lukę (APR i okres edytowalne); (5) refinans i zostań; (6) poczekaj N miesięcy (suwak 0–24) i wymień. Leasing (7) jest odroczony.\n\nWYJŚCIA:\n- tabela wariantów: rata, łączna gotówka wydana, łączne odsetki, koszt energii, oczekiwane naprawy, equity na koniec horyzontu i koszt netto mobilności (= wydatki − equity końcowe);\n- wykres equity(t) dla wszystkich wariantów;\n- LTV nowego kredytu z ostrzeżeniem powyżej 120% (gap insurance, ryzyko odmowy);\n- flagi łamania limitu raty i gotówki;\n- break-even: miesiąc wyjścia spod wody w wariancie 1 i w nowym kredycie, minimalna premia ze sprzedaży prywatnej równoważąca ulgę podatkową, N miesięcy, przy którym 'czekaj' zaczyna wygrywać;\n- prosta wrażliwość (tornado ±) dla deprecjacji, APR nowego kredytu, ceny prywatnej i kosztu naprawy;\n- opis słowny 'dlaczego wygrywa X i co musiałoby się zmienić'.\n\nUX i dystrybucja: stan scenariusza w URL (udostępnialny i cytowalny), wersja do druku, nota 'nie jest poradą finansową', a do tego 51 stron stanowych z regułą podatkową i przykładem liczbowym.",
+ "deferred_features_pl": "Świadomie odroczone:\n(1) wariant 7, leasing z negative equity (money factor, residual, opodatkowanie leasingu różne w każdym stanie, opłaty końcowe). Duża złożoność, dodać w v2;\n(2) wyceny na żywo przez API KBB, Edmunds lub Black Book (licencje, koszty). W MVP wartości wpisuje użytkownik, a presety deprecjacji są statyczne;\n(3) macierz APR i LTV wg scoringu i kredytodawcy oraz cennik gap insurance;\n(4) lokalne stawki podatku po ZIP i opłaty rejestracyjne stanu (w tym dopłaty EV);\n(5) koszt energii po ZIP i taryfie (TOU) oraz ładowanie publiczne;\n(6) ubezpieczenie wg modelu i stanu;\n(7) probabilistyczny model awaryjności wg marki, modelu i przebiegu (w MVP tylko kosztorys i prosty współczynnik rosnący z wiekiem);\n(8) odliczenie odsetek OBBBA i inne efekty podatku dochodowego (najpierw weryfikacja prawna);\n(9) kredyty Rule of 78, kary za wcześniejszą spłatę, payoff z per diem z dokładnością do dnia;\n(10) Monte Carlo i rozkłady zamiast tornado;\n(11) konta, zapisywanie i przypomnienia 'sprawdź equity za 3 mies.';\n(12) wersja hiszpańska;\n(13) integracje lead-gen z kredytodawcami (konflikt z neutralnością i ryzyko regulacyjne; poza zakresem modelu AdSense).",
+ "data_sources_and_tests_pl": "ŹRÓDŁA DANYCH:\n- Kontekst i treść: Edmunds, raporty kwartalne negative equity (Q1 i Q3 2026, URL w demand_evidence), CFPB Data Spotlight 2024, ostrzeżenie FTC.\n- Podatki: tabela stawek stanowych i reguł ulgi trade-in z oficjalnych stron departamentów skarbowych i DMV 50 stanów i DC, jako cross-check zestawienia stawek Tax Foundation. Nie wyszukiwano w tym przebiegu, URL do zebrania; aktualizacja co najmniej raz w roku.\n- Energia: fueleconomy.gov (mpg, kWh/100 mi), EIA (średnia cena prądu dla gospodarstw wg stanu), AAA lub EIA (ceny benzyny wg stanu). Nazwy z wiedzy, bez URL z wyników.\n- Stopy: Fed G.19 lub publiczne średnie APR jako wartości domyślne, edytowalne.\n- Deprecjacja: presety z publicznych badań deprecjacji wg segmentu (źródło do wyboru i udokumentowania) plus nadpisanie przez użytkownika.\n\nNARZĘDZIA REFERENCYJNE do cross-checku (z audytu): Bankrate Negative Equity Auto Loan Calculator, CarCalcPro, Caribou rollover calculator, Carwhere trade-in vs private (ulga podatkowa) oraz Excel/Sheets PMT, IPMT, CUMIPMT.\n\nGOLDEN CASES. Wartości policzyłem lokalnie standardowym wzorem annuitetowym (Python), a nie w narzędziach referencyjnych. Przed wydaniem trzeba je potwierdzić w Bankrate lub Excelu.\nGC1 rollover: cena 35 000, trade-in 17 500, payoff 24 000 (luka 6 500), podatek 7%, opłaty 800, wkład 0, APR 6,9%, 72 mies.\n - Stan z ulgą: podatek 1 225, kwota kredytu 43 525, rata 739,97, odsetki 9 752,82, LTV 124,4%.\n - Stan bez ulgi: podatek 2 450, kredyt 44 750, rata 760,80, odsetki 10 027,31, LTV 127,9%.\nGC2 'zatrzymaj': saldo 24 000, APR 9%, 48 mies., rata 597,24. Wartość 17 500 przy deprecjacji 15% rocznie (geometrycznie, miesięcznie). Saldo i wartość: po 12 mies. 18 781,32 i 14 875,00, po 24 mies. 13 073,10 i 12 643,75. Przecięcie (equity ≥ 0) w miesiącu 26: wartość 12 305,87, saldo 12 070,97.\nGC3 sprzedaż prywatna: cena 19 500 przy payoff 24 000 daje lukę 4 500. Pożyczka 12% na 36 mies.: rata 149,46, odsetki 880,72. Premia ze sprzedaży prywatnej 2 000 wobec utraconej ulgi 1 225 (7% × 17 500) daje przewagę 775 przed odsetkami od pożyczki (880,72), więc wynik netto wynosi ok. −106 na niekorzyść sprzedaży prywatnej.\nGC4 refinans: 24 000 przy 11,5% na 54 mies. to rata 571,40 i odsetki 6 855,54. Refinans na 7,5%: przy 54 mies. rata 525,03 i odsetki 4 351,60, przy 60 mies. rata 480,91 i odsetki 4 854,65.\n\nTESTY WŁASNOŚCI:\n- equity = wartość − saldo w każdym miesiącu;\n- tożsamość kwoty kredytu (cena + podatek + opłaty − wkład − trade-in + payoff);\n- APR = 0 daje ratę równą P/n;\n- luka = 0 sprowadza się do zwykłego kredytu;\n- 'czekaj' przy N = 0 daje to samo co 'wymień teraz';\n- większa deprecjacja daje późniejsze przecięcie (monotoniczność);\n- stan bez ulgi daje podatek nie niższy niż stan z ulgą;\n- saldo po ostatniej racie wynosi 0 ± 0,01;\n- flaga limitu raty i gotówki uruchamia się poprawnie;\n- testy regresji tabeli podatkowej (51 wierszy, snapshot).",
+ "expert_review_pl": "Wymagany przegląd ekspercki (wszystkie godziny to SZACUNEK):\n(1) Specjalista finansowania aut, np. były F&I manager, doradca kredytowy auto lub CFP z praktyką w kredytach konsumenckich. Weryfikuje logikę wariantów 1–6, domyślne APR i LTV, realia payoff, sprzedaży z zastawem i refinansu oraz przyszły moduł leasingu. 1 osoba, ok. 8–12 h.\n(2) CPA lub specjalista sales and use tax z doświadczeniem wielostanowym. Weryfikuje tabelę 51 jurysdykcji: stawki, reguły ulgi trade-in, traktowanie negative equity w podstawie, przypadki szczególne (limity, podatek od leasingu). Ocenia też, czy i jak uwzględnić odliczenie odsetek OBBBA i stan ulg EV. 1 osoba, ok. 10–14 h na start i ok. 3–4 h rocznie na aktualizację.\n(3) Recenzent ilościowy lub aktuarialny. Kalibruje presety deprecjacji i rosnący z wiekiem koszt napraw, sprawdza golden cases i testy własności. 1 osoba, ok. 4–6 h.\n(4) Prawnik lub compliance (treści finansowe, FTC, disclaimery, brak porady inwestycyjnej i kredytowej, polityka AdSense dla treści finansowych). 1 osoba, ok. 2–4 h.\nRazem ok. 24–36 h (szacunek) przed publikacją. Ponowny przegląd punktów (1) i (2) przy dodaniu leasingu: ok. 6–10 h (szacunek).",
+ "queries_run": [
+  "Edmunds negative equity trade-ins 2026 share underwater average amount owed (extended)",
+  "reddit upside down car loan roll negative equity into new car or keep paying (extended)",
+  "underwater car loan trade in offer negative equity sell privately pay the difference [allowed_domains: reddit.com] (extended) - BLAD 400: reddit.com niedostepny dla user agenta",
+  "\"owe more than my car is worth\" forum should I trade in or keep it bogleheads OR quora OR reddit (extended)",
+  "CFPB negative equity auto loans rollover data spotlight borrowers default rates (standard)",
+  "tax refund season car buying spike trade-ins negative equity spring 2026 Cox Automotive (standard)"
+ ]
+}

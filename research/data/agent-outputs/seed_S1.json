@@ -1,0 +1,542 @@
+{
+ "seeds": [
+  {
+   "seed_id": "A",
+   "restated_problem_pl": "Właściciel domu w USA (stan na 2026-10) ma dach z ograniczoną pozostałą żywotnością (typowo 3-15 lat), rozważa fotowoltaikę i planuje sprzedać dom za N lat. Realne warianty: (1) PV teraz na starym dachu, wymiana dachu później. Wtedy przy wymianie trzeba zdemontować i ponownie zamontować panele: według search-summary ok. $250 za panel albo $1,500-6,000 za całość, plus przestój produkcji; (2) dach i PV razem teraz. DOE podaje średnią oszczędność ok. $4,000 przy łączeniu prac, https://www.energy.gov/eere/solar/articles/replacing-your-roof-its-great-time-add-solar; (3) tylko dach teraz, PV później albo wcale; (4) nic nie robić i sprzedać z obecnym dachem: ryzyko w negocjacjach po inspekcji kupującego; (5) dla wariantów z PV forma finansowania: gotówka, kredyt (spłata przy sprzedaży), leasing/PPA (przeniesienie umowy na kupującego albo wykup). Wynik to przepływy pieniężne albo NPV do daty sprzedaży dla każdego wariantu i to, co zmienia ranking. Kluczowa zmiana 2025-2026: OBBBA zakończyła ulgę 25D dla systemów własnych oddanych po 31.12.2025 (dotyczy też baterii). Ulga 48E dla modeli TPO (leasing/PPA) działa, jeśli system zostanie oddany do 31.12.2027 albo budowa rozpocznie się do 4.07.2026: https://seia.org/research-resources/clean-energy-provisions-big-beautiful-bill/, https://www.eidebailly.com/insights/alerts/2025/individual-solar-electric-credits. W 2026 seed nie brzmi więc 'czy PV teraz z 30% ulgą', tylko 'czy PV w ogóle ma sens bez 25D przy krótkim horyzoncie, a jeśli tak, to czy leasing/PPA przeżyje sprzedaż domu'.",
+   "integration_check_pl": "Integracja jest prawdziwa, to nie są sklejone kalkulatory. (a) Pozostała żywotność dachu w połączeniu z datą montażu PV decyduje, czy i kiedy przed sprzedażą wypadnie demontaż i ponowny montaż. (b) Data sprzedaży ucina strumień oszczędności i decyduje, czy liczy się premia cenowa za PV, czy przeniesienie umowy leasingu. (c) Forma finansowania zmienia gotówkę przy sprzedaży: spłata kredytu, wykup albo przejęcie leasingu. (d) Reżim ulg (koniec 25D, 48E dla TPO do 2027) zmienia porównanie własność kontra leasing. Zastrzeżenia: (1) wynik zależy głównie od 2-3 danych użytkownika (żywotność dachu z inspekcji, horyzont sprzedaży, wycena), a wiele zmiennych pochodzi z ofert, nie z danych publicznych; (2) premia za PV przy sprzedaży jest bardzo niepewna. W search-summary źródła podają rozbieżnie $4-6k/kW (LBNL 2023, przez solarsizecalculator.com) albo 3-4% wartości domu (todaycalculator.com, Zillow/LBNL), więc analiza wrażliwości będzie zdominowana przez jedną słabo znaną liczbę; (3) przy horyzoncie poniżej ok. 5 lat i typowym zwrocie 9-14 lat (thegreenwatt.com, search-summary) odpowiedź 'nie kupuj PV teraz' często wynika bez złożonego modelu. Złożoność jest częściowo pozorna: symulator może sprowadzić się do reguły typu '5-15 lat' z blogów dekarzy (griffithroofing.com).",
+   "competitors": [
+    {
+     "name": "Solar Roofing Calculator (roofcalc.org)",
+     "url": "https://www.roofcalc.org/solar-roofing-calculator",
+     "type": "partial",
+     "features_claimed": "Łączny koszt nowego dachu i systemu PV. Tylko zakup, bez leasingu i PPA. Koszt PV netto po 30% uldze federalnej (w 2026 prawdopodobnie nieaktualne). Koszt dachu obejmuje zerwanie, membranę i papę. Dwie wersje strony podają różne zakresy cen.",
+     "paid": "niezweryfikowane",
+     "notes": "Źródło: search-summary, strony nie otwarto. Modelowanie sekwencji, daty sprzedaży i finansowania: niezweryfikowane (nie wynika z opisu)."
+    },
+    {
+     "name": "Solar Before Selling Home Calculator (solarsizecalculator.com)",
+     "url": "https://solarsizecalculator.com/solar-before-selling-home-calculator/",
+     "type": "partial",
+     "features_claimed": "Planowany rok sprzedaży, koszt systemu, oszczędności energii, premia wartości domu ($4-6k/kW wg LBNL 2023), rok break-even. Sam stwierdza, że przy krótkim horyzoncie wynik zależy od premii.",
+     "paid": "niezweryfikowane",
+     "notes": "Najbliższy fragment seeda (oś data sprzedaży). Moduł dachu, sekwencja, leasing i kredyt: niezweryfikowane. Najpewniej programatyczna strona-kalkulator (hipoteza), czyli tani gracz tego samego typu co planowany serwis."
+    },
+    {
+     "name": "Generyczne kalkulatory zwrotu PV (greencalculus.com, thegreenwatt.com, howmuchwatts.com, thesolarmath.com, calcdocu.com, todaycalculator.com, aemacalc.com, 247calculator.com)",
+     "url": "https://greencalculus.com/calculators/solar-panel-calculator/",
+     "type": "partial",
+     "features_claimed": "Koszt, oszczędności i okres zwrotu, częściowo per stan. Greencalculus uwzględnia koniec ulgi po 2025. Thegreenwatt podaje typowy zwrot 9-14 lat. Calcdocu nadal podaje 30% ITC do 2032 (nieaktualne). Todaycalculator podaje premię 3-4%.",
+     "paid": "niezweryfikowane",
+     "notes": "Dają fragment (zwrot z energii), bez dachu i daty sprzedaży. Liczba takich stron w jednym wyszukiwaniu pokazuje, że nisza kalkulatorów solarnych jest w 2026 zalewana tanimi, częściowo nieaktualnymi stronami (search-summary)."
+    },
+    {
+     "name": "EnergySage – Do You Need A Roof Replacement With Solar Panels? (+ marketplace ofert)",
+     "url": "https://www.energysage.com/solar/solar-panel-roof-replacement/",
+     "type": "substitute",
+     "features_claimed": "Poradnik o wymianie dachu przy PV. Marketplace porównuje oferty instalatorów.",
+     "paid": "bezpłatne dla użytkownika (model lead-gen, hipoteza)",
+     "notes": "Narzędzie łączące dach, PV i sprzedaż: niezweryfikowane."
+    },
+    {
+     "name": "Griffith Roofing – 5 to 15 Year Rule",
+     "url": "https://www.griffithroofing.com/replace-roof-before-solar/",
+     "type": "substitute",
+     "features_claimed": "Reguła kciuka: poniżej 5 lat żywotności wymień dach, powyżej 15 lat nie wymieniaj, pomiędzy zrób pisemną inspekcję. Oszczędności z łączenia prac największe w przedziale 5-15 lat.",
+     "paid": "bezpłatne (treść)",
+     "notes": "Reguła rozwiązuje dużą część decyzji bez symulatora."
+    },
+    {
+     "name": "DOE – Replacing your roof? It's a great time to add solar",
+     "url": "https://www.energy.gov/eere/solar/articles/replacing-your-roof-its-great-time-add-solar",
+     "type": "substitute",
+     "features_claimed": "Łączenie wymiany dachu z PV oszczędza średnio ok. $4,000.",
+     "paid": "bezpłatne",
+     "notes": "Źródło danych, nie narzędzie."
+    },
+    {
+     "name": "Narzędzia kosztu dachu dla wykonawców (Jobber, Serviceform)",
+     "url": "https://www.getjobber.com/free-tools/roof-replacement-cost-calculator/",
+     "type": "partial",
+     "features_claimed": "Jobber: rozmiar dachu z satelity po adresie, koszt przy podanej cenie za square. Serviceform (https://2026.serviceform.com/forms/roof-replacement-cost-calculator/): formularz wyceny dachu i PV dla wykonawców (lead-gen).",
+     "paid": "darmowe narzędzia dla wykonawców (niezweryfikowane)",
+     "notes": "Fragment: koszt dachu. Pokazuje, że wykonawcy osadzają kalkulatory jako lead-gen."
+    },
+    {
+     "name": "Tesla Solar Roof (produkt zintegrowany dach i PV)",
+     "url": "https://www.rooferscoffeeshop.com/post/roof-smarter-not-harder-with-these-digital-tools",
+     "type": "substitute",
+     "features_claimed": "Według bloga dekarskiego średnia wycena ok. $189,861 (search-summary). Dach i PV w jednym produkcie.",
+     "paid": "płatny produkt",
+     "notes": "Substytut produktowy dla wariantu 'dach i PV razem'. Kwota z bloga, niezweryfikowana."
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie: jedno wyszukiwanie z naturalnym pytaniem zwróciło 8+ artykułów instalatorów, dekarzy i marketplace'ów (citadelrs, griffithroofing, energysage, aesrenew, bidlist, strawberrysolar, mysolarfy, DOE). Pytanie 'dach przed PV?' jest więc częste w lejku sprzedażowym, a temat jest obsadzony przez lead-gen. Istnieje dedykowany 'Solar Before Selling Home Calculator', czyli ktoś uznał oś sprzedaży za wartą strony. Danych o wolumenie wyszukiwań ani promptów w LLM nie sprawdzono. Hipoteza / niezweryfikowane: przecięcie trzech warunków (stary dach, zainteresowanie PV, sprzedaż w ciągu N lat) jest wąskie, a w 2026 popyt na zakup własnych systemów PV prawdopodobnie spadł po wygaśnięciu 25D. Brak dowodu, że użytkownik asystenta AI kliknie w zewnętrzny symulator.",
+   "ai_risk_pl": "Średnio-wysokie. Decyzja dobrze poddaje się narracji: ChatGPT, Claude czy Gemini zbudują tabelę 3-4 scenariuszy z ofert użytkownika i regułą '5-15 lat'. Gorzej AI wypada w spójnym modelu przepływów do daty sprzedaży i w aktualnym prawie. Search-summary pokazuje, że część stron nadal podaje 30% ITC dla 2026 (calcdocu.com; podsumowanie dla baterii też), więc modele mogą powielać nieaktualne ulgi. To argument za symulatorem, ale nie dowód, że asystenci będą go cytować. Reguł Google nie przenoszę na LLM: ruch z poleceń AI dla tej niszy jest niezweryfikowany.",
+   "maintenance_pl": "Średnio-wysokie. Ulgi federalne zmieniły się w 2025 (koniec 25D). Dla TPO są terminy 4.07.2026 i 31.12.2027, po których reżim zmieni się znowu (seia.org, eidebailly.com). Do tego zasady net meteringu w stanach (niezweryfikowane w tej sesji), stawki energii, regionalne koszty dachu i $/W PV oraz badania premii przy sprzedaży (LBNL datowane na 2023). Stawki energii da się pobierać automatycznie (np. dane EIA, hipoteza). Ulgi, net metering i warunki leasingu wymagają ręcznej weryfikacji. Liczne nieaktualne strony konkurencji pokazują, że to obciążenie jest realne.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Integracja zależności jest prawdziwa (sekwencja demontażu, ucięcie oszczędności datą sprzedaży, skutki finansowania przy sprzedaży), ale: (1) w badanym zakresie nie znaleziono bezpośredniego konkurenta. Kluczowe fragmenty już jednak istnieją: łączny koszt dachu i PV (roofcalc.org), oś daty sprzedaży z premią (solarsizecalculator.com), reguła 5-15 lat i liczne poradniki; (2) po wygaśnięciu 25D gałąź 'kup PV teraz' przy krótkim horyzoncie jest zwykle przegrana, a model zdominuje jedna niepewna zmienna (premia przy sprzedaży); (3) wąskie przecięcie popytu i niestabilny reżim TPO do 2027. Zostawiam jako moduł, nie jako samodzielny produkt. Przeformułować na: (a) symulator terminu wymiany dachu z ubezpieczeniem i horyzontem sprzedaży, gdzie PV jest opcjonalną gałęzią (S1-R1); albo (b) wąski moduł 2026 'PV bez 25D: własność, leasing/PPA czy nic, przy dacie przeprowadzki' (S1-R2, status później).",
+   "search_scope_pl": "Budżet wyszukiwań orkiestracji (200 wywołań na turę, współdzielony) wyczerpał się po 5 wykonanych wyszukiwaniach dla obu seedów łącznie, więc wymagane minimum 10 zapytań na seed nie zostało spełnione. Dla seeda A wykonano 4 zapytania: krótkie kategorii ('solar and roof replacement calculator'), naturalne pytanie użytkownika (dach przed PV przy sprzedaży), zmiany 25D/OBBBA 2025-2026 oraz kalkulatory zwrotu PV z wartością przy sprzedaży i przeprowadzką. Zablokowano 5 zaplanowanych zapytań: Reddit, finansowanie i leasing w EnergySage, przeniesienie leasingu i UCC przy sprzedaży, narzędzia demontażu i ponownego montażu, sam solarsizecalculator. Nie sprawdzono: oprogramowania ofertowego instalatorów (Aurora, OpenSolar itp.), narzędzi pożyczkodawców (GoodLeap pojawił się tylko jako blog o ulgach), forów, płatnych aplikacji, arkuszy. WebFetch nie był używany. Wszystkie funkcje konkurentów pochodzą z search-summary. Ocena: nie znaleziono bezpośredniego konkurenta w badanym zakresie, pewność niska.",
+   "confidence": "low"
+  },
+  {
+   "seed_id": "F",
+   "restated_problem_pl": "Gospodarstwo domowe w USA decyduje, jak przygotować się na przerwy w zasilaniu. Warianty: (1) nic nie robić i akceptować straty (zepsuta żywność, zalanie piwnicy przy stojącej pompie sump, zamarznięte rury, utracony dochód z pracy zdalnej, hotel, ryzyko dla urządzeń medycznych); (2) przenośna stacja zasilania; (3) przenośny generator z interlockiem lub przełącznikiem; (4) generator stacjonarny (gaz ziemny lub propan); (5) bateria domowa, samodzielna albo z PV, dobrana do obciążeń krytycznych lub całego domu; (6) hybryda. Dane wejściowe: lista obciążeń (moc rozruchowa i ciągła, kWh na dobę), rozkład częstotliwości i długości przerw u danego operatora, dostępność paliwa, budżet i finansowanie, zachęty 2026 (brak 25D dla baterii oddanych po 2025: https://www.eidebailly.com/insights/alerts/2025/individual-solar-electric-credits; programy stanowe i VPP niezweryfikowane). Wynik: roczny koszt zannualizowany kontra oczekiwana uniknięta strata, koszt na pokrytą godzinę przerwy, próg opłacalności w godzinach przerw, straty, które zostają, i wrażliwość na długość przerw. Seed w pierwotnej wersji (bateria, generator albo nic plus finansowanie) pomija najtańsze i najczęściej wybierane opcje (stacje przenośne, przenośny generator z interlockiem).",
+   "integration_check_pl": "Integracja jest prawdziwa. Obciążenia wyznaczają moc i pojemność baterii albo moc generatora, a od nich zależy koszt. Rozkład długości przerw razem z pojemnością baterii daje udział przerw pokrytych w całości i straty, które zostają. Przy przerwach wielodniowych liczy się logistyka i koszt paliwa (search-summary: $50-150 za dzień pracy generatora). Doładowanie z PV w przerwie wielodniowej zmienia pokrycie baterii. Żywotność (bateria ok. 10 lat, generator 20+ lat wg search-summary, źródła z 2025) wpływa na koszt roczny. Słabe ogniwa: (1) finansowanie to w dużej mierze kosmetyczna oś (zmienia annualizację, nie ranking), więc nie powinno być filarem; (2) wycena strat zostających jest subiektywna; (3) dane o przerwach dla pojedynczego gospodarstwa są słabe. Średnie dla operatorów, np. SAIDI/SAIFI z EIA, to hipoteza / niezweryfikowane w tej sesji, a ich wartość dla jednego domu jest ograniczona.",
+   "competitors": [
+    {
+     "name": "Anker SOLIX – generator vs battery whole home backup guide / switch from gas generator to home battery",
+     "url": "https://www.ankersolix.com/blogs/home-generator/generator-vs-battery-whole-home-backup-guide",
+     "type": "partial",
+     "features_claimed": "Metoda doboru: suma obciążeń krytycznych podzielona przez sprawność 0.9 (przykład 300 W × 24 h / 0.9 ≈ 8 kWh). Zwraca uwagę na moc wyjściową i rozruchową, nie tylko pojemność. Porównanie z generatorem.",
+     "paid": "bezpłatne (treść marki)",
+     "notes": "Druga strona: https://www.ankersolix.com/blogs/battery/switch-from-gas-generator-to-home-battery. Treść stronnicza (sprzedawca baterii). Interaktywny kalkulator: niezweryfikowany."
+    },
+    {
+     "name": "pv magazine USA – home battery versus generator",
+     "url": "https://pv-magazine-usa.com/2025/03/14/home-battery-versus-generator/",
+     "type": "substitute",
+     "features_claimed": "Porównanie kosztów (bateria $10-20k, generator stacjonarny $7-15k), żywotności i paliwa, reguła wyboru wg długości przerw.",
+     "paid": "bezpłatne",
+     "notes": "Artykuł z 03.2025, przedrukowany w edycjach global i India. Wzmianka o 30% ITC dla baterii nieaktualna w 2026."
+    },
+    {
+     "name": "Aurora Solar – Battery backup vs. generator: which one earns its keep? (blog + oprogramowanie dla instalatorów)",
+     "url": "https://aurorasolar.com/home-solar/blog/energy-101/battery-backup-vs-generator",
+     "type": "substitute",
+     "features_claimed": "Poradnik porównawczy. Aurora sprzedaje instalatorom oprogramowanie projektowo-ofertowe; modelowanie baterii i backupu w ofertach dla klientów: niezweryfikowane.",
+     "paid": "blog bezpłatny; oprogramowanie płatne dla instalatorów (niezweryfikowane)",
+     "notes": "Po stronie instalatorów oferty PV z baterią mogą zawierać szacunki godzin backupu (hipoteza)."
+    },
+    {
+     "name": "NREL REopt (narzędzie optymalizacji PV, baterii i generatora z analizą odporności)",
+     "url": "brak URL w wynikach wyszukiwania – niezweryfikowane w tej sesji (wiedza modelu)",
+     "type": "partial",
+     "features_claimed": "Hipoteza z wiedzy modelu: modelowanie PV, magazynu i generatora z obciążeniem krytycznym i scenariuszami przerw, głównie dla obiektów komercyjnych.",
+     "paid": "hipoteza: bezpłatne",
+     "notes": "Nie pojawiło się w wynikach. Wymaga weryfikacji, bo mógłby być najbliższym narzędziem 'zintegrowanym' (choć nie konsumenckim)."
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie: wyszukiwanie kategorii 'home battery vs generator calculator' zwróciło treści producentów (Anker SOLIX x2, Aurora) i prasy branżowej (pv magazine w 3 edycjach, 03.2025). Temat jest więc komercyjnie ważny dla marek. W tym jednym wyszukiwaniu podsumowanie nie wskazało dedykowanego interaktywnego kalkulatora, ale to bardzo słaby dowód. Hipoteza / niezweryfikowane: popyt jest zdarzeniowy (szczyty po huraganach i burzach zimowych), co pasuje do 'nowych użytkowników z konkretnym zadaniem', ale daje ruch skokowy i sezonowy. Danych o wolumenach wyszukiwań ani promptów w LLM nie zebrano. Liczba gospodarstw w strefach przerw to nie jest miesięczny popyt.",
+   "ai_risk_pl": "Średnie. Asystenci AI dobrze robią dobór obciążeń i jakościową regułę (bateria na krótkie przerwy, generator na wielodniowe, hybryda powyżej 24 h; ta reguła jest już w search-summary). Większość użytkowników zadowoli się taką odpowiedzią. Przewaga symulatora wymagałaby danych lokalnych (historia przerw u operatora, ceny paliwa) i spójnego rachunku oczekiwanej straty, czego czat zwykle nie liczy rzetelnie. To hipoteza, niezweryfikowana na rzeczywistych promptach.",
+   "maintenance_pl": "Średnie. Ceny baterii ($/kWh), generatorów i paliwa, zachęty (koniec 25D, a treści 2025 nadal podają 30% ITC, co pokazuje szybką dezaktualizację), stanowe programy VPP i rabaty (niezweryfikowane), roczne dane o niezawodności operatorów (hipoteza: EIA-861). Należy unikać katalogu konkretnych modeli urządzeń, bo to najdroższa część utrzymania. Wystarczą przedziały cen i klasy urządzeń, aktualizowane półautomatycznie.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Integracja jest realna, a w bardzo wąskim zakresie wyszukiwania nie znaleziono bezpośredniego konkurenta (niska pewność). Pierwotny seed ma jednak trzy wady: (1) zbiór wariantów jest za wąski, bo pomija stacje przenośne i przenośny generator z interlockiem, czyli opcje najczęściej realnie rozważane przez masowego użytkownika; (2) finansowanie jako filar dodaje złożoność bez zmiany rankingu; (3) bez lokalnego profilu przerw wynik sprowadza się do reguły, którą AI i artykuły już podają. Przeformułować na 'drabinę backupu' opartą na obciążeniach krytycznych i lokalnym rozkładzie przerw, z kosztem na pokrytą godzinę i stratami zostającymi (S2-R1). Węższy wariant o wysokiej stawce to piwnica i pompa sump plus rider ubezpieczeniowy (S2-R2).",
+   "search_scope_pl": "Dla seeda F wykonano tylko 1 wyszukiwanie ('home battery vs generator calculator', standard). Współdzielony budżet wyszukiwań orkiestracji wyczerpał się, więc minimum 10 zapytań nie zostało spełnione. Nie sprawdzono: narzędzi Generac, Kohler, Tesla, Enphase, EcoFlow (EcoFlow pojawił się tylko jako blog o 25D), NREL REopt, kalkulatorów doboru generatora, Reddit i forów (np. r/preppers, r/solar, r/HomeImprovement), arkuszy, programów VPP, danych EIA o przerwach. WebFetch nie był używany. Funkcje konkurentów pochodzą wyłącznie z search-summary. Ocena: nie znaleziono bezpośredniego konkurenta w badanym zakresie, pewność niska.",
+   "confidence": "low"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "S1-R1",
+   "name_en": "Aging Roof Decision Simulator: replace now, repair, or wait (insurance + sale horizon, optional solar)",
+   "family": "Dom: terminy dużych wydatków (home capex timing)",
+   "user_and_moment": "Właściciel domu z dachem 15-25 lat po inspekcji, po zawiadomieniu ubezpieczyciela przy odnowieniu polisy (dopłata za wiek dachu, pokrycie tylko ACV, groźba nieodnowienia: hipoteza / niezweryfikowane w tej sesji) albo przed wystawieniem domu na sprzedaż.",
+   "sample_prompt_en": "My roof is 18 years old, my insurer now only covers actual cash value for it, and I might sell in 3 years. Should I replace it now, patch it, or wait?",
+   "decision_problem": "Kiedy wymienić dach (lub czy w ogóle przed sprzedażą) przy danej pozostałej żywotności, warunkach ubezpieczenia (RCV vs ACV, dopłaty, udział własny wiatr/grad), ryzyku szkody burzowej, koszcie finansowania i horyzoncie sprzedaży (inspekcja kupującego, kredyt przy zamknięciu).",
+   "combined_domains": "Koszty dekarskie; warunki polisy homeowners; ryzyko gradu i wiatru; finansowanie (gotówka/HELOC/kredyt); sprzedaż nieruchomości (inspekcja, concessions); opcjonalnie PV (demontaż i ponowny montaż, łączenie prac).",
+   "variants_compared": "Wymiana teraz (gotówka/HELOC/kredyt); naprawa punktowa i czekanie N lat; czekanie i samoubezpieczenie; wymiana tuż przed wystawieniem; sprzedaż as-is z kredytem przy zamknięciu; wymiana z PV (moduł opcjonalny).",
+   "key_dependencies": "Wiek dachu wpływa na składkę i zakres pokrycia, a to na oczekiwany koszt własny przy szkodzie. Termin wymiany wpływa na koszt finansowania. Data sprzedaży decyduje, czy wartość nowego dachu wraca w cenie, czy trzeba dać kredyt kupującemu. Regionalna częstość gradu i wiatru zmienia oczekiwaną stratę. Przy PV termin dachu decyduje o zdarzeniu demontażu ($1,500-6,000 wg search-summary).",
+   "main_outputs": "Oczekiwany łączny koszt do daty sprzedaży dla każdego wariantu; próg opłacalności roku wymiany; wrażliwość na prawdopodobieństwo szkody, zmianę składki i datę sprzedaży; jawna lista założeń i ograniczeń.",
+   "reason_external_site": "Wymaga spójnego, wieloletniego rachunku wartości oczekiwanej z regionalnymi danymi domyślnymi i własną polisą użytkownika. Czat AI zwykle daje ogólną poradę bez rachunku.",
+   "data_sources": "Regionalne przedziały kosztów dachu (źródło do ustalenia, niezweryfikowane); dane o burzach i gradzie (np. publiczne bazy NOAA: hipoteza / niezweryfikowane); oprocentowanie HELOC i kredytów (np. FRED: hipoteza); DOE o łączeniu dachu i PV (https://www.energy.gov/eere/solar/articles/replacing-your-roof-its-great-time-add-solar). Harmonogramy wieku dachu u ubezpieczycieli nie są publiczne, więc to dane od użytkownika.",
+   "user_data": "Wiek i materiał dachu, wyceny, warunki polisy z deklaracji (RCV/ACV, udziały własne), stan/ZIP, horyzont sprzedaży, opcjonalnie oferta PV.",
+   "nearest_competition": [
+    {
+     "name": "Griffith Roofing – 5 to 15 Year Rule",
+     "url": "https://www.griffithroofing.com/replace-roof-before-solar/",
+     "type": "substitute",
+     "features_claimed": "Reguła kciuka co do wymiany dachu przed PV wg pozostałej żywotności.",
+     "paid": "bezpłatne",
+     "notes": "Bez ubezpieczenia i daty sprzedaży (wg search-summary)."
+    },
+    {
+     "name": "Jobber Roof Replacement Cost Calculator",
+     "url": "https://www.getjobber.com/free-tools/roof-replacement-cost-calculator/",
+     "type": "partial",
+     "features_claimed": "Rozmiar dachu z satelity i koszt wymiany (dla wykonawców).",
+     "paid": "bezpłatne (niezweryfikowane)",
+     "notes": "Tylko koszt."
+    },
+    {
+     "name": "Solar Roofing Calculator (roofcalc.org)",
+     "url": "https://www.roofcalc.org/solar-roofing-calculator",
+     "type": "partial",
+     "features_claimed": "Łączny koszt dachu i PV (tylko zakup).",
+     "paid": "niezweryfikowane",
+     "notes": "Bez ubezpieczenia i terminu."
+    }
+   ],
+   "already_solved": "Szacowanie kosztu dachu i ogólne reguły (5-15 lat) są rozwiązane przez kalkulatory wykonawców i blogi. Powiązania terminu wymiany z warunkami ubezpieczenia i datą sprzedaży w tej sesji nie wyszukiwano wcale (budżet wyczerpany), więc nie można stwierdzić braku konkurenta.",
+   "gap": "Hipoteza: brak konsumenckiego narzędzia, które łączy wiek dachu, warunki polisy (ACV/RCV, dopłaty), ryzyko burzowe i horyzont sprzedaży w jeden rachunek. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednio: liczne treści dekarzy i instalatorów o terminie wymiany dachu przy PV (search-summary, 8+ wyników). Popytu na wątek ubezpieczeniowy nie zbadano (hipoteza / niezweryfikowane).",
+   "ad_environment": "Dom, dach, ubezpieczenia to prawdopodobnie wertykały o wysokim CPC (hipoteza / niezweryfikowane). Afiliacja i lead-gen (dekarze, porównywarki ubezpieczeń) tylko jako dodatek.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Integracja prawdziwa i szersza bazowo niż seed A, bo nie wymaga zainteresowania PV. Wymaga jednak pełnego audytu konkurencji (narzędzia ubezpieczycieli, porównywarki, Reddit) i sprawdzenia popytu, a w tej sesji nie wykonano żadnego wyszukiwania na ten temat.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "S1-R2",
+   "name_en": "Solar After the Tax Credit (2026+): Buy, Lease/PPA, or Skip Given Your Move Date",
+   "family": "Energia w domu / finansowanie",
+   "user_and_moment": "Właściciel domu, który w 2026 dostaje oferty PV. Po wygaśnięciu 25D sprzedawcy częściej proponują leasing/PPA (hipoteza). Planuje przeprowadzkę za 3-10 lat.",
+   "sample_prompt_en": "Now that the 30% solar tax credit is gone, is a solar lease better than buying if I might sell my house in 6 years?",
+   "decision_problem": "Własność (gotówka/kredyt) vs leasing/PPA (eskalator, wykup, przeniesienie przy sprzedaży) vs rezygnacja vs odłożenie, przy danej dacie sprzedaży i stanie dachu, w reżimie: brak 25D od 2026, a 48E dla TPO pod warunkiem oddania do 31.12.2027 lub rozpoczęcia budowy do 4.07.2026.",
+   "combined_domains": "Prawo podatkowe (25D/48E); stawki energii i net metering; finansowanie; przeniesienie umowy przy sprzedaży nieruchomości; termin dachu.",
+   "variants_compared": "Gotówka; kredyt ze spłatą przy sprzedaży; leasing z przeniesieniem; leasing z wykupem przy sprzedaży; PPA; rezygnacja; odłożenie do wymiany dachu.",
+   "key_dependencies": "Data sprzedaży razem z warunkami przeniesienia lub wykupu; eskalator umowy kontra wzrost stawek operatora; żywotność dachu wpływa na demontaż; reżim net meteringu wpływa na wartość produkcji; przy własności rozrzut premii przy sprzedaży ($4-6k/kW vs 3-4% wg search-summary).",
+   "main_outputs": "Przepływy do daty sprzedaży i do 20 lat; próg opłacalności roku sprzedaży; wrażliwość na wzrost stawek, premię i ryzyko odmowy przejęcia umowy przez kupującego.",
+   "reason_external_site": "Spójny model umów z eskalatorem i zdarzeniem sprzedaży jest trudny do rzetelnego policzenia w czacie. Wiele stron nadal podaje nieaktualne ulgi.",
+   "data_sources": "SEIA o OBBBA (https://seia.org/research-resources/clean-energy-provisions-big-beautiful-bill/), Eide Bailly (https://www.eidebailly.com/insights/alerts/2025/individual-solar-electric-credits), przewodniki 2026 (https://www.goodleap.com/blog/unlocking-savings-energy-tax-credits-explained); stawki energii (np. EIA, hipoteza); net metering per stan (niezweryfikowane).",
+   "user_data": "Oferta (cena, $/W, warunki leasingu/PPA, eskalator, wykup), rachunki za energię, stan/operator, horyzont sprzedaży, wiek dachu.",
+   "nearest_competition": [
+    {
+     "name": "Solar Before Selling Home Calculator (solarsizecalculator.com)",
+     "url": "https://solarsizecalculator.com/solar-before-selling-home-calculator/",
+     "type": "partial",
+     "features_claimed": "Rok sprzedaży, koszt, oszczędności, premia wartości domu, break-even.",
+     "paid": "niezweryfikowane",
+     "notes": "Leasing/PPA i przeniesienie umowy: niezweryfikowane."
+    },
+    {
+     "name": "Greencalculus Solar Panel Calculator",
+     "url": "https://greencalculus.com/calculators/solar-panel-calculator/",
+     "type": "partial",
+     "features_claimed": "Koszt, oszczędności i zwrot per stan; uwzględnia brak ulgi federalnej po 2025.",
+     "paid": "niezweryfikowane",
+     "notes": "Bez daty sprzedaży (wg search-summary)."
+    },
+    {
+     "name": "Solar.com – Trump and the Fate of the 30% Solar Tax Credit",
+     "url": "https://www.solar.com/learn/trump-and-the-fate-of-the-30-solar-tax-credit/",
+     "type": "substitute",
+     "features_claimed": "Treść o zmianach ulg; solar.com to marketplace/lead-gen (hipoteza).",
+     "paid": "bezpłatne",
+     "notes": "Treść, nie symulator."
+    }
+   ],
+   "already_solved": "Zwrot z PV i oś daty sprzedaży są rozwiązane częściowo (solarsizecalculator.com, liczne generyczne kalkulatory). Porównania leasing/PPA kontra własność przy sprzedaży i regułach 48E nie znaleziono w badanym zakresie, ale nie wykonano dedykowanych wyszukiwań.",
+   "gap": "Hipoteza: brak narzędzia, które modeluje zdarzenie sprzedaży dla umów TPO (przeniesienie/wykup) obok własności w reżimie 2026-2027. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednio: w jednym wyszukiwaniu co najmniej 9 stron z 2025-2026 tłumaczy, co zostało po 25D (seia, eidebailly, goodleap, solar.com, realcostiq, energyrebatecalculator, sunriseelectricalcontracting, ecoflow, paradisesolarenergy). Temat jest żywy, ale silnie obsadzony treściami. Wolumenów nie sprawdzono.",
+   "ad_environment": "Solar to wertykał lead-gen o wysokim CPC (hipoteza). Ryzyko, że reklamy AdSense będą od tych samych instalatorów, których oferty użytkownik ocenia.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Reżim TPO zmienia się w 2026-2027 (termin 4.07.2026 już minął, oddanie do końca 2027), więc okno życia treści jest krótkie, a utrzymanie drogie. Popyt na zakup PV po 25D prawdopodobnie spadł (hipoteza). Lepiej jako opcjonalny moduł S1-R1 niż osobny produkt.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S2-R1",
+   "name_en": "Power Outage Backup Planner: which backup (if any) pays off for your critical loads and your utility's outage record",
+   "family": "Odporność domu / energia",
+   "user_and_moment": "Właściciel domu po dłuższej przerwie w zasilaniu, przed sezonem huraganów lub zim, albo przy ofercie generatora lub baterii od instalatora. Ma konkretne obciążenia krytyczne: pompa sump, lodówka, pompa studzienna, ogrzewanie, urządzenie medyczne, praca zdalna.",
+   "sample_prompt_en": "We lose power 3-4 times a year, once for two days. I need the fridge, sump pump and furnace fan running. Is a battery, a portable generator with an interlock, or a standby generator worth it?",
+   "decision_problem": "Który poziom zabezpieczenia (od żadnego po hybrydę) minimalizuje łączny koszt zannualizowany plus oczekiwane straty zostające, przy danych obciążeniach, lokalnym rozkładzie przerw, dostępności paliwa i budżecie.",
+   "combined_domains": "Inżynieria obciążeń (moc rozruchowa i ciągła, kWh); statystyka niezawodności sieci; ceny sprzętu i paliwa; wycena strat (żywność, zalanie, rury, dochód); zachęty 2026 (brak 25D dla baterii); opcjonalnie PV jako doładowanie.",
+   "variants_compared": "Nic; przenośna stacja zasilania; przenośny generator z interlockiem lub przełącznikiem; generator stacjonarny (gaz/propan); bateria tylko na obciążenia krytyczne; bateria z PV; hybryda bateria plus generator.",
+   "key_dependencies": "Obciążenia wyznaczają wymaganą moc i pojemność, od których zależy koszt. Rozkład długości przerw razem z pojemnością daje udział pokrytych przerw i straty zostające. Przerwy wielodniowe zwiększają wagę paliwa ($50-150 za dzień wg search-summary). Żywotność (ok. 10 vs 20+ lat) wpływa na koszt roczny. Doładowanie z PV wydłuża pokrycie baterii.",
+   "main_outputs": "Koszt na pokrytą godzinę przerwy; oczekiwana roczna strata zostająca dla każdego wariantu; próg opłacalności w godzinach przerw rocznie; wrażliwość na najdłuższą przerwę; jawne założenia i ograniczenia (np. brak gwarancji dostaw paliwa).",
+   "reason_external_site": "Wymaga tabel mocy urządzeń, lokalnych danych o przerwach i spójnego rachunku wartości oczekiwanej. Czat zwykle podaje tylko regułę jakościową.",
+   "data_sources": "Tabele mocy urządzeń (do zbudowania); przedziały cen sprzętu (search-summary: bateria $10-20k, generator stacjonarny $7-15k, https://pv-magazine-usa.com/2025/03/14/home-battery-versus-generator/); dane o niezawodności operatorów (hipoteza: EIA-861 SAIDI/SAIFI, niezweryfikowane w sesji); ceny paliw (hipoteza: EIA).",
+   "user_data": "Lista obciążeń krytycznych, operator lub ZIP, własna historia przerw (opcjonalnie), dostępny gaz/propan, budżet, posiadane PV.",
+   "nearest_competition": [
+    {
+     "name": "Anker SOLIX – generator vs battery whole home backup guide",
+     "url": "https://www.ankersolix.com/blogs/home-generator/generator-vs-battery-whole-home-backup-guide",
+     "type": "partial",
+     "features_claimed": "Metoda doboru pojemności z obciążeń (sprawność 0.9), uwaga na moc rozruchową, porównanie z generatorem.",
+     "paid": "bezpłatne",
+     "notes": "Treść marki, stronnicza; interaktywność niezweryfikowana."
+    },
+    {
+     "name": "pv magazine USA – home battery versus generator",
+     "url": "https://pv-magazine-usa.com/2025/03/14/home-battery-versus-generator/",
+     "type": "substitute",
+     "features_claimed": "Porównanie kosztów, żywotności, paliwa; reguła wg długości przerw.",
+     "paid": "bezpłatne",
+     "notes": "Część danych nieaktualna w 2026 (ITC dla baterii)."
+    },
+    {
+     "name": "Aurora Solar – Battery backup vs. generator",
+     "url": "https://aurorasolar.com/home-solar/blog/energy-101/battery-backup-vs-generator",
+     "type": "substitute",
+     "features_claimed": "Poradnik; firma dostarcza instalatorom oprogramowanie ofertowe (zakres funkcji backupu niezweryfikowany).",
+     "paid": "blog bezpłatny",
+     "notes": "Kanał instalatorski jako substytut."
+    }
+   ],
+   "already_solved": "Dobór baterii do obciążeń i jakościowe porównanie bateria vs generator są rozwiązane w treściach marek i prasy (search-summary). Rachunku 'koszt kontra oczekiwana strata zostająca' z lokalnym profilem przerw i pełną drabiną opcji nie znaleziono w jednym wykonanym wyszukiwaniu. Nie sprawdzono narzędzi Generac, Tesla, Enphase, EcoFlow ani NREL REopt.",
+   "gap": "Hipoteza: neutralne (nie od producenta) narzędzie z pełną drabiną opcji i lokalną statystyką przerw. Niezweryfikowane, pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednio: aktywne treści producentów i prasy branżowej (Anker x2, Aurora, pv magazine w 3 edycjach). Popyt prawdopodobnie zdarzeniowy i sezonowy (hipoteza). Brak danych o wolumenach.",
+   "ad_environment": "Generatory, baterie i instalatorzy to sprzęt drogi; reklamy prawdopodobnie od producentów i instalatorów (hipoteza). Afiliacja dla stacji przenośnych i przenośnych generatorów możliwa jako dodatek (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Integracja silniejsza niż w seedzie F (pełna drabina opcji, profil przerw, straty zostające), szersza baza użytkowników (nie tylko kupujący baterię). Wymaga audytu narzędzi producentów i REopt oraz weryfikacji dostępności danych o przerwach na poziomie operatora i ZIP.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S2-R2",
+   "name_en": "Basement Flood & Sump Pump Backup Simulator: battery backup pump vs water-powered pump vs generator vs insurance water-backup rider",
+   "family": "Odporność domu / ubezpieczenia",
+   "user_and_moment": "Właściciel domu z piwnicą (często wykończoną) po zalaniu lub ostrzeżeniu przy burzy z przerwą w zasilaniu, przy wykańczaniu piwnicy albo przy odnowieniu polisy.",
+   "sample_prompt_en": "My sump pump stopped during a storm power outage last spring. Is a battery backup pump enough, or do I need a generator or the water backup rider on my insurance?",
+   "decision_problem": "Jaka kombinacja zabezpieczenia technicznego i ubezpieczeniowego minimalizuje oczekiwany koszt zalania piwnicy, gdy burze korelują z przerwami w zasilaniu.",
+   "combined_domains": "Hydraulika (pompy, czas pracy na baterii, wymagania ciśnienia wody miejskiej dla pomp wodnych); statystyka przerw; korelacja burza-przerwa; warunki ubezpieczenia (endorsement water backup, limity: hipoteza); wartość wykończenia piwnicy.",
+   "variants_compared": "Nic; bateryjna pompa zapasowa; pompa wodna (wymaga wody miejskiej); przenośny generator; bateria domowa lub stacja; rider water backup (różne limity); kombinacje.",
+   "key_dependencies": "Napływ wody i cykle pompy wyznaczają godziny pracy na baterii. Długość przerwy w burzy decyduje, czy bateria wystarczy. Limit ridera w połączeniu z wartością wykończenia daje szkodę niepokrytą. Typ zasilania wodą decyduje o wykonalności pompy wodnej.",
+   "main_outputs": "Oczekiwana roczna strata niepokryta per wariant; próg opłacalności ridera i sprzętu; wrażliwość na długość przerwy i wartość wykończenia.",
+   "reason_external_site": "Łączy dane techniczne pomp z ubezpieczeniem i prawdopodobieństwem. Czat poda listę opcji, ale rzadko policzy wartość oczekiwaną.",
+   "data_sources": "Specyfikacje pomp (przedziały, do zbudowania); statystyka przerw (hipoteza: EIA); typowe limity riderów (od użytkownika; hipoteza / niezweryfikowane).",
+   "user_data": "Napływ i cykle pompy (szacunek), typ zasilania wodą, wartość wykończenia piwnicy, warunki polisy, historia przerw.",
+   "nearest_competition": [],
+   "already_solved": "W tej sesji nie wykonano żadnego wyszukiwania na ten temat (budżet wyczerpany). Pusta lista konkurentów NIE oznacza ich braku. Prawdopodobnie istnieją treści producentów pomp i ubezpieczycieli (hipoteza).",
+   "gap": "Hipoteza / niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Brak dowodów zebranych w sesji (hipoteza / niezweryfikowane).",
+   "ad_environment": "Hydraulika i ubezpieczenia: hipoteza o przyzwoitym CPC. Afiliacja dla pomp zapasowych możliwa jako dodatek.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Węższy, tańszy i częstszy problem niż bateria vs generator, z prawdziwym sprzężeniem technika × ubezpieczenie × przerwy i z niskim utrzymaniem (bez katalogu modeli). Zero weryfikacji rynkowej, więc najpierw audyt konkurencji i popytu.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "solar and roof replacement calculator",
+   "url": "https://www.roofcalc.org/solar-roofing-calculator",
+   "competitor": "Solar Roofing Calculator (roofcalc.org)",
+   "related_idea": "Seed A; S1-R1",
+   "features_checked": "search-summary: łączny koszt dachu i PV, tylko zakup (bez leasingu/PPA), PV netto po 30% uldze, elementy kosztu dachu; dwie wersje strony (także https://roofcalc.org/?p=881)",
+   "access_limits": "Strony nie otwarto (WebFetch niedostępny); tylko search-summary",
+   "conclusion": "Częściowy: fragment kosztowy, bez dowodu na sekwencję i datę sprzedaży; ulga prawdopodobnie nieaktualna w 2026",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://solarsizecalculator.com/solar-before-selling-home-calculator/",
+   "competitor": "Solar Before Selling Home Calculator (solarsizecalculator.com)",
+   "related_idea": "Seed A; S1-R2",
+   "features_checked": "search-summary: rok sprzedaży, koszt systemu, oszczędności, premia wartości domu ($4-6k/kW wg LBNL 2023), rok break-even",
+   "access_limits": "Strony nie otwarto; moduł dachu, finansowanie i leasing niezweryfikowane",
+   "conclusion": "Częściowy, najbliższy osi sprzedaży w seedzie A; programatyczny gracz tego samego typu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://greencalculus.com/calculators/solar-panel-calculator/",
+   "competitor": "Greencalculus Solar Panel Calculator",
+   "related_idea": "Seed A; S1-R2",
+   "features_checked": "search-summary: koszt, oszczędności, zwrot per stan; uwzględnia brak ulgi federalnej po 2025",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy (tylko zwrot z energii)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://www.thegreenwatt.com/solar-panel-calculator/",
+   "competitor": "The Green Watt Solar Panel Calculator (2026)",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: rozmiar, koszt, zwrot; typowy zwrot 9-14 lat",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy (tylko zwrot z energii)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://calcdocu.com/solar-panel-calculator/",
+   "competitor": "Calcdocu Solar Panel Calculator",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: oszczędności, zwrot, ROI; podaje 30% ITC do 2032 (nieaktualne po OBBBA)",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy; przykład nieaktualnych danych u konkurencji",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://www.todaycalculator.com/calculators/solar/",
+   "competitor": "TodayCalculator Solar Payback Calculator",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: zwrot; podaje premię przy sprzedaży 3-4% wartości domu (Zillow/LBNL)",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panels home resale value payback if I move in 5 years calculator",
+   "url": "https://howmuchwatts.com/calculators/solar-panel-payback-calculator/",
+   "competitor": "HowMuchWatts / TheSolarMath / AEMAcalc / 247Calculator (generyczne kalkulatory zwrotu PV)",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: tylko oszczędności energii i lata do zwrotu; pozostałe: https://thesolarmath.com/solar-payback-calculator/, https://aemacalc.com/calculators/finance/solar-payback-calculator, https://247calculator.com/solar-panel-payback-calculator/",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy; świadczy o nasyceniu niszy programatycznymi kalkulatorami",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I replace my roof before installing solar if selling house in a few years",
+   "url": "https://www.energysage.com/solar/solar-panel-roof-replacement/",
+   "competitor": "EnergySage (poradnik + marketplace ofert)",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: artykuł o wymianie dachu przy PV",
+   "access_limits": "Strony nie otwarto; narzędzia marketplace niezweryfikowane",
+   "conclusion": "Substytut (treść i porównanie ofert)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I replace my roof before installing solar if selling house in a few years",
+   "url": "https://www.griffithroofing.com/replace-roof-before-solar/",
+   "competitor": "Griffith Roofing – 5 to 15 Year Rule",
+   "related_idea": "Seed A; S1-R1",
+   "features_checked": "search-summary: reguła poniżej 5, 5-15 i powyżej 15 lat; łączenie prac najkorzystniejsze przy 5-15 latach",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Substytut; reguła kciuka rozwiązuje dużą część decyzji",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I replace my roof before installing solar if selling house in a few years",
+   "url": "https://www.energy.gov/eere/solar/articles/replacing-your-roof-its-great-time-add-solar",
+   "competitor": "U.S. DOE – Replacing your roof? Add solar",
+   "related_idea": "Seed A; S1-R1",
+   "features_checked": "search-summary: łączenie prac oszczędza średnio ok. $4,000",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Substytut / źródło danych",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roof replacement calculator",
+   "url": "https://www.getjobber.com/free-tools/roof-replacement-cost-calculator/",
+   "competitor": "Jobber Roof Replacement Cost Calculator",
+   "related_idea": "Seed A; S1-R1",
+   "features_checked": "search-summary: rozmiar dachu z satelity po adresie, koszt przy cenie za square; dla wykonawców w Ameryce Płn.",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Częściowy (tylko koszt dachu)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roof replacement calculator",
+   "url": "https://2026.serviceform.com/forms/roof-replacement-cost-calculator/",
+   "competitor": "Serviceform – roof replacement / solar calculator forms",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: formularze wyceny dachu i oszczędności PV jako lead-gen dla wykonawców",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Substytut / narzędzie lead-gen wykonawców",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roof replacement calculator",
+   "url": "https://www.rooferscoffeeshop.com/post/roof-smarter-not-harder-with-these-digital-tools",
+   "competitor": "Tesla Solar Roof (wzmianka na blogu RoofersCoffeeShop)",
+   "related_idea": "Seed A",
+   "features_checked": "search-summary: średnia wycena ok. $189,861 wg bloga; produkt zintegrowany dach i PV",
+   "access_limits": "Strony nie otwarto; kwota niezweryfikowana",
+   "conclusion": "Substytut produktowy",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "25D residential clean energy credit ends December 31 2025 One Big Beautiful Bill solar homeowners 2026",
+   "url": "https://energyrebatecalculator.com/articles/home-energy-tax-credits-2026-complete-guide.html",
+   "competitor": "EnergyRebateCalculator.com",
+   "related_idea": "Seed A; S1-R2; S2-R1",
+   "features_checked": "search-summary: przewodnik po wygaśnięciu 25C/25D i tym, co zostało w 2026",
+   "access_limits": "Strony nie otwarto; funkcje kalkulatora niezweryfikowane",
+   "conclusion": "Częściowy (moduł zachęt)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "25D residential clean energy credit ends December 31 2025 One Big Beautiful Bill solar homeowners 2026",
+   "url": "https://www.realcostiq.com/guides/home-energy-tax-credits-2026/",
+   "competitor": "RealCostIQ",
+   "related_idea": "Seed A; ogólnie koncepcja serwisu",
+   "features_checked": "search-summary: przewodnik 'Home Energy Tax Credits 2026'",
+   "access_limits": "Strony nie otwarto; zakres serwisu (czy ma narzędzia decyzyjne) niezweryfikowany",
+   "conclusion": "Substytut / możliwy serwis o podobnej koncepcji kosztowo-decyzyjnej (hipoteza)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home battery vs generator calculator",
+   "url": "https://www.ankersolix.com/blogs/home-generator/generator-vs-battery-whole-home-backup-guide",
+   "competitor": "Anker SOLIX – generator vs battery guides",
+   "related_idea": "Seed F; S2-R1",
+   "features_checked": "search-summary: metoda doboru (obciążenia / 0.9), moc vs pojemność, porównanie z generatorem; też https://www.ankersolix.com/blogs/battery/switch-from-gas-generator-to-home-battery",
+   "access_limits": "Strony nie otwarto; interaktywność niezweryfikowana",
+   "conclusion": "Częściowy, stronniczy (producent)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home battery vs generator calculator",
+   "url": "https://pv-magazine-usa.com/2025/03/14/home-battery-versus-generator/",
+   "competitor": "pv magazine USA – home battery versus generator",
+   "related_idea": "Seed F; S2-R1",
+   "features_checked": "search-summary: koszty bateria $10-20k vs generator $7-15k, paliwo $50-150/dzień, żywotność ok. 10 vs 20+ lat, reguła wg długości przerw; przedruki: https://www.pv-magazine.com/2025/03/20/home-batteries-vs-power-generators/",
+   "access_limits": "Strony nie otwarto",
+   "conclusion": "Substytut (artykuł); część danych nieaktualna w 2026",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home battery vs generator calculator",
+   "url": "https://aurorasolar.com/home-solar/blog/energy-101/battery-backup-vs-generator",
+   "competitor": "Aurora Solar (blog + oprogramowanie instalatorskie)",
+   "related_idea": "Seed F; S2-R1",
+   "features_checked": "search-summary: poradnik 'Battery backup vs. generator: which one earns its keep?'",
+   "access_limits": "Strony nie otwarto; funkcje oprogramowania niezweryfikowane",
+   "conclusion": "Substytut; kanał instalatorski",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(nie wyszukano – wiedza modelu)",
+   "url": "brak URL w wynikach wyszukiwania – niezweryfikowane w tej sesji",
+   "competitor": "NREL REopt",
+   "related_idea": "Seed F; S2-R1",
+   "features_checked": "Hipoteza: optymalizacja PV, magazynu i generatora z obciążeniem krytycznym i scenariuszami przerw, głównie komercyjnie",
+   "access_limits": "Nie wyszukano i nie otwarto; wymaga weryfikacji",
+   "conclusion": "Potencjalnie częściowy; do sprawdzenia w następnej rundzie",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "solar and roof replacement calculator (standard)",
+  "should I replace my roof before installing solar if selling house in a few years (extended)",
+  "25D residential clean energy credit ends December 31 2025 One Big Beautiful Bill solar homeowners 2026 (extended)",
+  "home battery vs generator calculator (standard)",
+  "solar panels home resale value payback if I move in 5 years calculator (extended)",
+  "NIE WYKONANO (limit budżetu wyszukiwań): solarsizecalculator.com solar roof replacement timing calculator",
+  "NIE WYKONANO (limit): roof age solar decision tool replace roof now or later remove and reinstall cost calculator",
+  "NIE WYKONANO (limit): reddit roof replacement and solar at the same time worth it planning to sell",
+  "NIE WYKONANO (limit): EnergySage solar calculator roof replacement financing compare loan lease 2026",
+  "NIE WYKONANO (limit): selling house with leased solar panels transfer problem buyer UCC filing 2026"
+ ]
+}

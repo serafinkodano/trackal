@@ -1,0 +1,478 @@
+{
+ "id": "AUTO-01",
+ "competitors": [
+  {
+   "name": "CarCalcPro Negative Equity Calculator",
+   "url": "https://carcalcpro.com/negative-equity-calculator.html",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Wg podsumowania: wariant rollover do nowego kredytu – nowa rata, początkowe LTV, łączne odsetki, przybliżony moment, w którym saldo nowego kredytu spada poniżej szacowanej wartości odsprzedaży; uwzględnia deprecjację i 'mileage penalties'. Najbliższy fragment w badanym zakresie.",
+   "misses_or_unverified_pl": "Niezweryfikowane: porównanie kilku wariantów równolegle, wariant 'poczekaj N miesięcy', sprzedaż prywatna, stanowy kredyt podatkowy trade-in, koszt energii EV/hybryda, ryzyko napraw, wykres wartości netto i tornado. W podsumowaniu widać tylko ścieżkę rollover."
+  },
+  {
+   "name": "Bankrate Negative Equity Auto Loan Calculator",
+   "url": "https://www.bankrate.com/loans/auto-loans/negative-equity-auto-loan-calculator",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "URL potwierdzony w wynikach (zapytanie o CarEdge/Edmunds/NerdWallet). Silna marka; prawdopodobnie liczy wpływ rolloveru na kwotę kredytu i ratę.",
+   "misses_or_unverified_pl": "Szczegóły funkcji niezweryfikowane (podsumowanie ich nie opisało). Brak dowodu na porównanie wariantów w czasie, podatki stanowe, napęd docelowy."
+  },
+  {
+   "name": "Caribou negative equity rollover calculator",
+   "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+   "type": "partial",
+   "access": "darmowy; serwis refinansowania (lead-gen); strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Przykłady rolloveru $5K/$10K/$15K, reguła ok. $20/mies. więcej na każde $1,000 wliczone (zależnie od APR i okresu); cytuje dane Edmunds Q1 2026. Pokrywa fragment 'rollover' i pośrednio 'refinansuj'.",
+   "misses_or_unverified_pl": "Czy to interaktywny kalkulator, czy artykuł z przykładami – niezweryfikowane. Brak dowodu na trajektorię equity, sprzedaż prywatną, podatki, EV."
+  },
+  {
+   "name": "Joteo Negative Equity Calculator",
+   "url": "https://joteo.net/automotive-calculators/negative-equity-calculator/",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Wejścia: payoff, wartość, cena nowego auta, wkład, APR, okres, podatki i opłaty; wyjścia: rata, kwota negative equity, łączne odsetki, łączny koszt. Tekst sugeruje dopłatę luki lub czekanie.",
+   "misses_or_unverified_pl": "Jeden wariant (rollover); brak w podsumowaniu porównania 'poczekaj', sprzedaży prywatnej, stanowej ulgi podatkowej, kosztu energii, wrażliwości."
+  },
+  {
+   "name": "CarPaymentCalculator.net – Underwater Trade-Ins",
+   "url": "https://www.carpaymentcalculator.net/calcs/underwater-trade-ins.php",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Rata kredytu z wliczonym negative equity przy trade-in.",
+   "misses_or_unverified_pl": "Treść częściowo stara (dane 2017/2019 wg podsumowania). Brak dowodu na integrację wariantów, podatki stanowe, EV."
+  },
+  {
+   "name": "Lumen Calculator – Car Loan Negative Equity Rollover Calculator",
+   "url": "https://lumencalculator.com/car-loan-negative-equity-rollover-calculator/",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Rollover: payoff od pożyczkodawcy, oferta trade-in, cena nowego auta, APR, okres. Ten sam serwis ma kalkulator podatku od sprzedaży z regułą break-even sprzedaż prywatna vs trade-in.",
+   "misses_or_unverified_pl": "Osobne kalkulatory, których wyniki (wg podsumowania) nie wpływają na siebie; brak wariantu w czasie, EV, napraw."
+  },
+  {
+   "name": "Car Dogs Trade-In Equity Calculator",
+   "url": "https://cardogs.org/tools/trade-in-calculator",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Equity trade-in (dodatnie/ujemne).",
+   "misses_or_unverified_pl": "Funkcje poza obliczeniem equity niezweryfikowane."
+  },
+  {
+   "name": "CarsCounsel Negative Equity Calculator",
+   "url": "https://carscounsel.com/calculators/negative-equity-calculator/",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Negative equity; wskazuje, że sprzedaż prywatna likwiduje lukę tylko gdy cena > payoff.",
+   "misses_or_unverified_pl": "Brak dowodu na porównanie wielookresowe, podatki, EV."
+  },
+  {
+   "name": "AutoAdvisorAI Vehicle Value Underwater Calculator",
+   "url": "https://autoadvisorai.com/underwater-calculator/",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Projekcja wartości auta (krzywa deprecjacji) vs saldo z harmonogramu spłat i miesiąc przecięcia – czyli fragment wariantu 1/6 (trzymaj do dodatniego equity).",
+   "misses_or_unverified_pl": "Nie łączy (w podsumowaniu) momentu wyjścia z kosztem kolejnego auta, podatkami, EV, naprawami; brak porównania wariantów."
+  },
+  {
+   "name": "US Finance Calculators – Car Depreciation Estimator (Equity & Underwater)",
+   "url": "https://usfinancecalculators.com/loans/car-depreciation-estimator/",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Deprecjacja + pozycja equity/underwater w czasie.",
+   "misses_or_unverified_pl": "Pojedynczy fragment; brak wariantów wyjścia, podatków, napędu docelowego."
+  },
+  {
+   "name": "Carwhere Trade-In vs Private Sale Calculator",
+   "url": "https://www.carwhere.com/tools/trade-in-calculator",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Sprzedaż prywatna vs trade-in ze stanowym kredytem podatkowym; wymienia stany bez ulgi (CA, HI, KY, MD, WA); premia sprzedaży prywatnej ok. 10–20%. Pokrywa zależność podatkową z opisu produktu.",
+   "misses_or_unverified_pl": "Obsługa negative equity, kredytu na lukę, horyzontu czasowego i EV – niezweryfikowana."
+  },
+  {
+   "name": "Trade-in tax savings calculators (FindTheBestCarPrice, Numeraty, 100calc, Mytulify, MyCarCalc)",
+   "url": "https://www.findthebestcarprice.com/trade-in-calculator/",
+   "type": "partial",
+   "access": "darmowe, web; strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Ulga podatkowa trade-in (41–42 stany wg różnych źródeł), koszty sprzedaży prywatnej (Numeraty: przykład z wygraną sprzedaży prywatnej ok. $1,740), negative equity wliczane do kredytu (Mytulify, 100calc). Inne URL: https://numeraty.com/car-trade-in-calculator/ , https://100calc.com/car-trade-in-tax-savings-calculator/ , https://www.mytulify.com/home-trade-calculators/car-trade-equity-calculator",
+   "misses_or_unverified_pl": "Jednookresowe porównanie; brak (w podsumowaniu) trajektorii equity, wariantu 'poczekaj', EV, napraw, wrażliwości."
+  },
+  {
+   "name": "MotoWatchdog Vehicle Replacement Timing Calculator (2026)",
+   "url": "https://www.motowatchdog.com/free-tools/vehicle-replacement-timing-calculator",
+   "type": "partial",
+   "access": "darmowy, web; strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "covers_pl": "Tytuł wskazuje na timing wymiany auta – potencjalnie bliski wariantowi 'poczekaj N miesięcy'.",
+   "misses_or_unverified_pl": "Wszystkie funkcje niezweryfikowane (podsumowanie podało tylko tytuł). Priorytet do ręcznej weryfikacji – może zawężać lukę."
+  },
+  {
+   "name": "Repair vs Replace calculators (RawCalc, Ultimate Finance Calculator, AutoCalcHub, AgentCalc, IsMyCarCooked)",
+   "url": "https://rawcalc.com/calculators/repair-replace/",
+   "type": "partial",
+   "access": "darmowe, web; strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Fragment 'ryzyko napraw starego auta vs rata nowego': roczne naprawy, ubezpieczenie, deprecjacja nowego auta w tym samym horyzoncie. Inne URL: https://www.ultimatefinancecalculator.com/calculators/repair-vs-replace-car-calculator/ , https://autocalchub.com/tools/repair-or-replace-car-calculator.html",
+   "misses_or_unverified_pl": "Brak (w podsumowaniu) obsługi negative equity, rolloveru, podatków stanowych, EV."
+  },
+  {
+   "name": "MEK Auto Group Car Lease Equity Calculator",
+   "url": "https://mekautogroup.com/car-lease-equity-calculator/",
+   "type": "partial",
+   "access": "darmowy, dealer; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Equity leasingu (rezydual, pozostałe miesiące) – fragment związany z wariantem 7.",
+   "misses_or_unverified_pl": "Liczy equity istniejącego leasingu, nie leasing z wliczonym negative equity; integracja niezweryfikowana."
+  },
+  {
+   "name": "EV savings calculators (Coltura, GeneralStaff) – z notatek fali 1",
+   "url": "brak URL w wynikach tej fali (fala 1: https://coltura.org/?p=6032 ; https://generalstaff.org/Tech/EV_Calculator.htm)",
+   "type": "partial",
+   "access": "darmowe; nieponownie wyszukane w tej fali; strony nieotwierane (WebFetch zablokowany)",
+   "covers_pl": "Fragment kosztu energii EV vs benzyna (wg fali 1).",
+   "misses_or_unverified_pl": "W tej fali zapytanie keep/replace + EV nie zwróciło żadnego narzędzia EV TCO – funkcje niezweryfikowane; brak powiązania z negative equity."
+  },
+  {
+   "name": "Edmunds / KBB / NerdWallet / CarEdge tools",
+   "url": "brak URL w wynikach wyszukiwania",
+   "type": "partial",
+   "access": "niezweryfikowane – zapytanie nazwane markami nie zwróciło ich stron",
+   "covers_pl": "Notatka fali 1 zakładała kalkulatory negative equity Edmunds/NerdWallet; w tej fali nie potwierdzono. Edmunds jest źródłem danych (30.9% trade-in z negative equity, Q1 2026) cytowanym przez innych.",
+   "misses_or_unverified_pl": "Istnienie i zakres narzędzi niezweryfikowane – nie wolno zakładać ani braku, ani obecności integracji."
+  },
+  {
+   "name": "Carvana / CarMax instant offers",
+   "url": "brak URL w wynikach wyszukiwania",
+   "type": "substitute",
+   "access": "darmowe oferty online; nie wyszukiwane w tej fali (limit 7 zapytań)",
+   "covers_pl": "Wejście danych: realna oferta wykupu (wartość auta dziś).",
+   "misses_or_unverified_pl": "Niezweryfikowane w tej fali; nie modelują wariantów ani kosztu w czasie."
+  },
+  {
+   "name": "Poradniki pożyczkodawców i mediów (USAA, Experian, CNBC Select, PNC, Bankrate, Credit Karma, Upsolve)",
+   "url": "https://www.experian.com/blogs/ask-experian/how-to-get-out-of-an-upside-down-car-loan/",
+   "type": "substitute",
+   "access": "darmowe artykuły; strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Jakościowo opisują te same warianty: trzymaj i spłacaj, sprzedaż prywatna + dopłata luki, trade-in z rolloverem, dopłata gotówką, refinansowanie; CNBC: średni wiek auta oddanego z negative equity 3.5 roku. Inne URL: https://www.usaa.com/advice/upside-down-car-loan/ , https://www.cnbc.com/select/how-to-get-out-of-an-upside-down-car-loan/ , https://www.bankrate.com/loans/auto-loans/upside-down-car-loan",
+   "misses_or_unverified_pl": "Brak liczbowego, spersonalizowanego porównania wielookresowego."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "brak URL (substytut ogólny)",
+   "type": "substitute",
+   "access": "darmowe dla wszystkich (ChatGPT Intelligent UI od 7.10.2026; Google AI Mode z generowaniem interaktywnych narzędzi od 19.08.2026)",
+   "covers_pl": "Odpowiadają na przykładowy prompt: liczą lukę, ratę z rolloverem, porównują warianty i dają rekomendację; mogą wyrenderować prosty kalkulator. Sama wyszukiwarka w tej fali wygenerowała 'bottom line' i propozycję arkusza porównawczego.",
+   "misses_or_unverified_pl": "Spójny model miesiąc po miesiącu dla 7 wariantów z deprecjacją konkretnego modelu, stanową ulgą podatkową, kosztem energii i tornado – możliwy, ale niespójny i nieaudytowalny między sesjami (hipoteza)."
+  },
+  {
+   "name": "Własny arkusz (DIY spreadsheet / Reddit)",
+   "url": "brak URL w wynikach wyszukiwania",
+   "type": "substitute",
+   "access": "darmowy; zapytanie o Reddit/arkusze nie zwróciło wątków ani szablonów",
+   "covers_pl": "Teoretycznie pełna elastyczność.",
+   "misses_or_unverified_pl": "Nie znaleziono gotowego szablonu w badanym zakresie; istnienie szablonów niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań extended, US, tylko podsumowania wyników; strony nieotwierane; pewność niska–średnia). Fragmenty są dobrze i licznie pokryte (10+ kalkulatorów): (a) rollover negative equity → rata, odsetki, LTV i przybliżony miesiąc wyjścia z underwater dla nowego kredytu (CarCalcPro – najbliższy, Joteo, Bankrate, Caribou, Lumen); (b) trajektoria equity obecnego kredytu i miesiąc przecięcia (AutoAdvisorAI, US Finance Calculators); (c) trade-in vs sprzedaż prywatna ze stanową ulgą podatkową (Carwhere, Numeraty, FindTheBestCarPrice, 100calc); (d) naprawa vs wymiana i timing wymiany (RawCalc, MotoWatchdog – funkcje niezweryfikowane); (e) koszt energii EV (fala 1, nieponowione). Luka ma charakter wyłącznie integracyjny: w podsumowaniach nie widać narzędzia, które liczy warianty 1–7 równolegle w jednym modelu, w którym 'poczekaj N miesięcy' zmienia kwotę negative equity przenoszoną do nowego kredytu (a ta ratę, LTV i APR), a jednocześnie uwzględnia stanową ulgę trade-in vs sprzedaż prywatną z kredytem na lukę, koszt energii docelowego napędu i rosnące ryzyko napraw, z wykresem wartości netto/kosztu skumulowanego i analizą wrażliwości. Lukę trzeba traktować jako wąską i nietrwałą: CarCalcPro i MotoWatchdog mogą ją częściowo zamykać (niezweryfikowane), a Edmunds/KBB/NerdWallet/CarEdge nie zostały sprawdzone bezpośrednio.",
+ "search_scope_pl": "7 zapytań WebSearch (extended, wyniki US) dnia 2026-10-25: problem w języku naturalnym, krótka kategoria ('negative equity car calculator'), terminologia alternatywna (underwater/break-even), marki/narzędzia płatne i doradcze (CarEdge, Edmunds, NerdWallet), Reddit/arkusze, keep vs replace + EV, trade now vs wait + ulga podatkowa. Dowody wyłącznie z podsumowań wyników; WebFetch zablokowany, żadna strona nie została otwarta, formularze nie były testowane, paywalle/loginy niewidoczne. Nie sprawdzono: stron Edmunds/KBB/NerdWallet/CarEdge wprost (zapytanie markowe ich nie zwróciło), sklepów z aplikacjami, narzędzi banków kaptywnych, Carvana/CarMax, YouTube, wątków Reddit (nie zwrócone), narzędzi EV TCO w tej fali, kalkulatorów leasingu z wliczonym negative equity.",
+ "demand_signals": [
+  {
+   "signal_pl": "Dane Edmunds (cytowane wtórnie): 30.9% trade-inów przy zakupie nowego auta w Q1 2026 miało negative equity, średnia luka $7,183 – decyzja dotyczy bardzo dużej grupy kupujących rocznie (liczby gospodarstw nie przeliczano na popyt miesięczny).",
+   "url": "https://www.silkohonda.com/blog/trade-in-car-with-negative-equity",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Caribou powtarza tę samą statystykę Edmunds Q1 2026 (30.9%) i buduje wokół niej treść lead-gen refinansowania – sygnał, że temat jest monetyzowany.",
+   "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "CNBC Select: średni wiek auta oddawanego z negative equity to 3.5 roku – decyzja pojawia się w typowym cyklu wymiany.",
+   "url": "https://www.cnbc.com/select/how-to-get-out-of-an-upside-down-car-loan/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele dużych wydawców finansowych pisze o 'upside-down car loan' (USAA, Experian x2, CNBC, PNC, Bankrate x2, Credit Karma x2, Upsolve) – pośredni dowód na istotny popyt wyszukiwań; wolumenów nie zmierzono.",
+   "url": "https://www.usaa.com/advice/upside-down-car-loan/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "10+ dedykowanych kalkulatorów negative equity/rollover, w tym nowe serwisy kalkulatorowe z 2026 – sygnał popytu SEO, ale też zatłoczonego SERP.",
+   "url": "https://carcalcpro.com/negative-equity-calculator.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Dealerzy (Silko Honda, Hendrick, Liberty CDJR, Pride Chevy) publikują poradniki o trade-in z negative equity – problem jest częsty na sali sprzedaży.",
+   "url": "https://www.libertychryslerdodgejeep.com/blog/what-is-negative-equity-car-trade",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Brak danych o wolumenie zapytań i o udziale osób szukających porównania wielu wariantów (a nie tylko raty) – popyt na integrowany symulator to hipoteza.",
+   "url": "brak URL",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI: wysokie dla pytania w formie przykładowego promptu, średnie dla pełnego modelu. Rachunek sedna (luka $6,500, rata z rolloverem, odsetki, porównanie z dopłatą gotówką i sprzedażą prywatną) to prosta arytmetyka, którą ChatGPT (Intelligent UI od 7.10.2026 renderuje kalkulatory w odpowiedzi) i Google AI Mode (od 19.08.2026 generuje interaktywne narzędzia) wykonają w odpowiedzi; w tej fali sama wyszukiwarka wygenerowała gotową rekomendację ('sell privately or keep paying; trading in is last resort') i strukturę arkusza porównawczego. Wartość zewnętrznego narzędzia: spójna, audytowalna symulacja miesiąc po miesiącu dla 7 wariantów, stanowe reguły ulgi trade-in, krzywe deprecjacji modelu, ceny energii lokalnie, wykres tornado i zapisywalne założenia – to argumenty za linkowaniem, ale asystent może je przybliżyć, a większość użytkowników zadowoli się jakościową odpowiedzią (hipoteza).",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja dotyczy ok. jednej trzeciej trade-inów przy zakupie nowych aut (Edmunds Q1 2026), z dużą średnią luką; temat intensywnie obsługiwany przez wydawców i kalkulatory, co wskazuje na widoczny popyt na pytania.",
+   "evidence_pl": "30.9% trade-in z negative equity, średnio $7,183 (Edmunds via Silko Honda/Caribou); 10+ artykułów dużych wydawców; 10+ kalkulatorów.",
+   "gaps_pl": "Brak wolumenów wyszukiwań; nie wiadomo, ilu użytkowników chce porównania wielowariantowego zamiast samej raty; dane Edmunds cytowane wtórnie.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Fragmenty (rollover + LTV + miesiąc przecięcia, equity w czasie, trade-in vs prywatnie z ulgą stanową, naprawa vs wymiana, EV) są pokryte przez wiele darmowych kalkulatorów; brakuje (w podsumowaniach) zintegrowanej sekwencji z wariantem 'poczekaj' wpływającym na nowy kredyt.",
+   "evidence_pl": "CarCalcPro (rollover z LTV i momentem wyjścia z underwater), AutoAdvisorAI, Carwhere, RawCalc, MotoWatchdog (tylko tytuł).",
+   "gaps_pl": "Strony nieotwierane; Edmunds/KBB/NerdWallet/CarEdge i aplikacje niesprawdzone; MotoWatchdog i CarCalcPro mogą zawężać lukę.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent rozwiązuje typowe pytanie sam (prosta arytmetyka + jakościowa rada), a nowe funkcje renderowania kalkulatorów w ChatGPT i Google AI Mode zmniejszają potrzebę odsyłania. Przewaga narzędzia (wielookresowy model, stanowe reguły, audytowalność) jest realna, ale niekoniecznie wymagana przez użytkownika.",
+   "evidence_pl": "Wyszukiwarka sama wygenerowała gotową rekomendację i strukturę arkusza; kontekst ChatGPT Intelligent UI (7.10.2026) i Google AI Mode (19.08.2026).",
+   "gaps_pl": "Brak danych o tym, jak często asystenci cytują/linkują kalkulatory w tym temacie.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumenci w USA w momencie decyzji o kredycie auto, refinansowaniu, gap insurance, ubezpieczeniu i zakupie auta (w tym EV) – wysokowartościowe wertykale bez ograniczeń kategorii wrażliwych. Obniżenie o 1: część audytorium to osoby w stresie kredytowym, a strony-narzędzia zwykle mają niższe RPM niż treści (hipoteza).",
+   "evidence_pl": "Caribou (refinansowanie) i dealerzy monetyzują temat; obecność Bankrate/Experian/Credit Karma w SERP.",
+   "gaps_pl": "Brak danych RPM/CPC; nie sprawdzono ograniczeń AdSense dla treści o zadłużeniu.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Matematyka kredytowa prosta; trudniejsze: stanowe reguły ulgi trade-in (41–42 stany, wyjątki, limity), krzywe deprecjacji bez darmowego API wycen (użytkownik musi wprowadzać wartości), leasing z negative equity, model ryzyka napraw oparty na założeniach. Ceny paliwa/energii i średnie APR dostępne z publicznych źródeł (EIA, Fed – wiedza modelu).",
+   "evidence_pl": "Rozbieżności 41 vs 42 stanów i lista stanów bez ulgi w kalkulatorach podatkowych; brak API wycen w wynikach.",
+   "gaps_pl": "Nie zweryfikowano aktualnych zmian stanowych 2026; zachęty EV traktowane jako wiedza modelu (federalny kredyt EV zakończony 30.09.2025, niezweryfikowane w tej fali).",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd modelu nie jest katastrofalny, ale dotyczy decyzji rzędu tysięcy dolarów i treści YMYL; interpretacja stanowych reguł podatkowych, gap insurance i warunków leasingu wymaga ostrożności; wyniki silnie zależą od założeń deprecjacji.",
+   "evidence_pl": "Dealerskie kalkulatory zastrzegają 'tylko do planowania'; źródła różnią się co do liczby stanów z ulgą.",
+   "gaps_pl": "Brak analizy odpowiedzialności prawnej i wymogów disclosure.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Reużywa modułów: harmonogram kredytu, finansowanie/refinansowanie, deprecjacja, stanowy podatek, koszt energii EV vs benzyna, cash-flow timeline. Rodzi produkty siostrzane: lease vs buy, EV vs ICE TCO, refinansowanie auto, repair vs replace, trade-in vs sprzedaż prywatna.",
+   "evidence_pl": "Liczne osobne kalkulatory dla każdego z tych fragmentów w wynikach pokazują, że moduły odpowiadają realnym zapytaniom.",
+   "gaps_pl": "Niewielkie współdzielenie z modułami nieruchomości (home value/HELOC).",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony ok. 3.3/5. Mocne strony: częsta i kosztowna decyzja (30.9% trade-in z negative equity, średnio $7,183), atrakcyjne wertykale reklamowe, dobry wspólny silnik dla rodziny produktów auto/EV. Słabe strony: luka jest tylko integracyjna, SERP jest zatłoczony 10+ darmowymi kalkulatorami (CarCalcPro już łączy rollover, LTV i moment wyjścia z underwater), a ryzyko, że ChatGPT/Google AI Mode same odpowiedzą, jest wysokie. Przed pilotem: ręcznie zweryfikować CarCalcPro, MotoWatchdog, Bankrate oraz narzędzia Edmunds/KBB/NerdWallet/CarEdge; sprawdzić wolumeny zapytań typu 'upside down car loan' i 'trade in or wait'; sprawdzić, czy asystenci AI linkują kalkulatory w tym temacie.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "upside down on car loan should I trade in, keep paying, or sell privately and pay the difference",
+   "url": "https://www.experian.com/blogs/ask-experian/how-to-get-out-of-an-upside-down-car-loan/",
+   "competitor": "Poradniki (Experian, USAA, CNBC Select, PNC, Bankrate, Crediful)",
+   "features_checked": "opis wariantów: keep, sprzedaż prywatna + luka, trade-in z rolloverem, refinansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy: jakościowo te same warianty, bez spersonalizowanego modelu liczbowego; wyszukiwarka sama wygenerowała rekomendację (sygnał self-solve).",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "upside down on car loan should I trade in, keep paying, or sell privately and pay the difference",
+   "url": "https://www.cnbc.com/select/how-to-get-out-of-an-upside-down-car-loan/",
+   "competitor": "CNBC Select",
+   "features_checked": "statystyka średniego wieku auta oddawanego z negative equity (3.5 roku)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Sygnał popytu/kontekstu, nie narzędzie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity car calculator",
+   "url": "https://carcalcpro.com/negative-equity-calculator.html",
+   "competitor": "CarCalcPro Negative Equity Calculator",
+   "features_checked": "nowa rata, początkowe LTV, łączne odsetki, moment spadku salda poniżej wartości, deprecjacja, mileage penalties",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – najbliższy fragment (ścieżka rollover w czasie); porównanie wariantów, 'poczekaj', podatki stanowe, EV niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity car calculator",
+   "url": "https://joteo.net/automotive-calculators/negative-equity-calculator/",
+   "competitor": "Joteo Negative Equity Calculator",
+   "features_checked": "payoff, wartość, cena, wkład, APR, okres, podatki/opłaty → rata, negative equity, odsetki, koszt całkowity",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – jeden wariant (rollover), brak w podsumowaniu porównania w czasie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity car calculator",
+   "url": "https://www.carpaymentcalculator.net/calcs/underwater-trade-ins.php",
+   "competitor": "CarPaymentCalculator.net Underwater Trade-Ins",
+   "features_checked": "rata z wliczonym negative equity",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – starsza treść (dane 2017/2019), pojedynczy rachunek.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity car calculator",
+   "url": "https://www.omvic.ca/wp-content/uploads/2023/11/NegativeEquityCalculator.pdf",
+   "competitor": "OMVIC Negative Equity Calculator (Ontario)",
+   "features_checked": "formularz PDF dla dealerów, HST",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; PDF",
+   "conclusion": "Poza rynkiem USA; nie jest konkurentem.",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "negative equity car calculator",
+   "url": "https://mekautogroup.com/car-lease-equity-calculator/",
+   "competitor": "MEK Auto Group Car Lease Equity Calculator",
+   "features_checked": "equity leasingu z rezydualem i pozostałymi miesiącami",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial dla wariantu leasingowego; nie modeluje leasingu z wliczonym negative equity (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "underwater auto loan when will I break even equity calculator depreciation vs loan balance over time",
+   "url": "https://autoadvisorai.com/underwater-calculator/",
+   "competitor": "AutoAdvisorAI Vehicle Value Underwater Calculator",
+   "features_checked": "krzywa deprecjacji vs saldo, miesiąc przecięcia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – pokrywa trajektorię equity (wariant 1/6), bez łączenia z kolejnym zakupem.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "underwater auto loan when will I break even equity calculator depreciation vs loan balance over time",
+   "url": "https://usfinancecalculators.com/loans/car-depreciation-estimator/",
+   "competitor": "US Finance Calculators Car Depreciation Estimator",
+   "features_checked": "deprecjacja, pozycja equity/underwater",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – pojedynczy fragment.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+   "url": "https://caribou.com/resource-center/auto-refinance/negative-equity-rollover-calculator/",
+   "competitor": "Caribou negative equity rollover calculator",
+   "features_checked": "przykłady $5K/$10K/$15K, ~$20/mies. na $1,000, statystyka Edmunds Q1 2026",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; serwis lead-gen refinansowania",
+   "conclusion": "Partial potwierdzony (notatka fali 1 zgodna); interaktywność niezweryfikowana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+   "url": "https://www.bankrate.com/loans/auto-loans/negative-equity-auto-loan-calculator",
+   "competitor": "Bankrate Negative Equity Auto Loan Calculator",
+   "features_checked": "tylko obecność URL w wynikach",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (bez opisu funkcji)",
+   "conclusion": "Partial – URL z fali 1 potwierdzony, funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+   "url": "https://lumencalculator.com/car-loan-negative-equity-rollover-calculator/",
+   "competitor": "Lumen Calculator Negative Equity Rollover",
+   "features_checked": "payoff od pożyczkodawcy, oferta trade-in, cena, APR, okres",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – rollover; osobny kalkulator podatku w tym samym serwisie, bez integracji (wg podsumowania).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+   "url": "https://cardogs.org/tools/trade-in-calculator",
+   "competitor": "Car Dogs Trade-In Equity Calculator",
+   "features_checked": "equity trade-in",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – pojedynczy fragment; reszta funkcji niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+   "url": "brak URL w wynikach wyszukiwania",
+   "competitor": "Edmunds / NerdWallet / CarEdge",
+   "features_checked": "istnienie kalkulatora negative equity",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; zapytanie markowe nie zwróciło stron tych marek",
+   "conclusion": "Niezweryfikowane – notatka fali 1 o ich kalkulatorach niepotwierdzona; wymaga osobnego sprawdzenia.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit upside down car loan keep or trade in spreadsheet compare options",
+   "url": "https://upsolve.org/learn/upside-down-car-loan/",
+   "competitor": "Reddit / arkusze DIY (nie znaleziono); Upsolve, Credit Karma, Honest Credit",
+   "features_checked": "warianty keep/sprzedaż prywatna/rollover/dopłata gotówką, ryzyko deficiency przy szkodzie całkowitej",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Brak wątków Reddit i szablonów arkuszy w wynikach; substytut treściowy jak wyżej.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep or replace my car calculator repair costs vs new car payment switch to EV total cost",
+   "url": "https://www.motowatchdog.com/free-tools/vehicle-replacement-timing-calculator",
+   "competitor": "MotoWatchdog Vehicle Replacement Timing Calculator (2026)",
+   "features_checked": "tylko tytuł",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Potencjalnie najbliższy wariantowi 'poczekaj N miesięcy'; wszystkie funkcje niezweryfikowane – priorytet weryfikacji ręcznej.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep or replace my car calculator repair costs vs new car payment switch to EV total cost",
+   "url": "https://rawcalc.com/calculators/repair-replace/",
+   "competitor": "Repair vs Replace calculators (RawCalc, Ultimate Finance Calculator, AutoCalcHub, AgentCalc, IsMyCarCooked)",
+   "features_checked": "roczne naprawy vs rata, ubezpieczenie, deprecjacja w horyzoncie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – fragment ryzyka napraw; brak (w podsumowaniu) negative equity i podatków.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep or replace my car calculator repair costs vs new car payment switch to EV total cost",
+   "url": "brak URL w wynikach wyszukiwania",
+   "competitor": "Narzędzia EV TCO (Coltura, GeneralStaff z fali 1)",
+   "features_checked": "koszt energii EV vs benzyna",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; zapytanie nie zwróciło narzędzi EV",
+   "conclusion": "Notatki fali 1 nieponowione w tej fali – niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "trade in now or wait calculator negative equity private sale vs trade-in tax savings",
+   "url": "https://www.carwhere.com/tools/trade-in-calculator",
+   "competitor": "Carwhere Trade-In vs Private Sale Calculator",
+   "features_checked": "stanowa ulga trade-in, lista stanów bez ulgi (CA, HI, KY, MD, WA), premia sprzedaży prywatnej 10–20%",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – pokrywa zależność podatkową; negative equity i horyzont czasowy niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "trade in now or wait calculator negative equity private sale vs trade-in tax savings",
+   "url": "https://numeraty.com/car-trade-in-calculator/",
+   "competitor": "Trade-in tax savings calculators (Numeraty, FindTheBestCarPrice, 100calc, Mytulify, MyCarCalc)",
+   "features_checked": "ulga podatkowa (41–42 stany), koszty sprzedaży prywatnej, negative equity wliczane do kredytu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – jednookresowe porównanie trade-in vs prywatnie; brak wariantu 'poczekaj' w podsumowaniu. Zapytanie 'trade in now or wait' nie zwróciło narzędzia porównującego timing z negative equity.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "upside down on car loan should I trade in, keep paying, or sell privately and pay the difference",
+  "negative equity car calculator",
+  "underwater auto loan when will I break even equity calculator depreciation vs loan balance over time",
+  "CarEdge Edmunds NerdWallet negative equity trade-in calculator rollover new car payment",
+  "reddit upside down car loan keep or trade in spreadsheet compare options",
+  "keep or replace my car calculator repair costs vs new car payment switch to EV total cost",
+  "trade in now or wait calculator negative equity private sale vs trade-in tax savings"
+ ]
+}

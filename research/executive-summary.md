@@ -52,7 +52,7 @@ Data: 2026-10-25 · Zespół: badanie wieloagentowe (~80 agentów, kilkaset zapy
 | Sesje/mies. dla 10 000 USD | ~5,5 mln | ~1,4 mln | ~450 tys. |
 | Próg rentowności gotówkowej (5 narzędzi) | ~480 tys. sesji | ~50 tys. sesji | ~8 tys. sesji |
 | Próg rentowności z wyceną czasu właściciela (5 narzędzi) | ~1,3 mln sesji | ~160 tys. sesji | ~24 tys. sesji |
-| Uruchomienie: gotówka / czas właściciela | ~14 tys. USD / ~520 h | ~6 tys. USD / ~315 h | ~2,6 tys. USD / ~190 h |
+| Uruchomienie 5 symulatorów: gotówka (głównie przegląd ekspercki) / czas właściciela | ~27 tys. USD / ~520 h | ~13 tys. USD / ~315 h | ~6 tys. USD / ~190 h |
 
 Wszystkie wartości to **założenia** skalibrowane do zakresów rynkowych (`economics.csv`, `tools/economics_model.py`).
 

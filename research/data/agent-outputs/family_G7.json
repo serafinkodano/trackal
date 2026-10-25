@@ -1,0 +1,1727 @@
+{
+ "families": [
+  {
+   "family": "Health insurance plan choice (employer / ACA Marketplace / HSA)",
+   "demand_pl": "Dane bezpośrednie (search-summary): w 2026 r. ok. 23,1 mln osób wybrało plan na ACA Marketplace (AJMC na podstawie KFF). Efektuowane (opłacone) zapisy spadły z 21,8 mln (2025) do 19,2 mln (luty 2026) po wygaśnięciu rozszerzonych ulg podatkowych z końcem 2025 r. (KFF, CBPP). Średnia składka netto wzrosła z $113 do $178 miesięcznie, a zapisani przesunęli się do planów bronze, w których średni deductible wzrósł o ok. $1,000 (AJMC). Od 1.01.2026 plany bronze i catastrophic są zgodne z HSA (IRS, OBBBA). W OEP 2025 ok. 30% zapisanych wybrało bronze (CEA/White House). To liczby osób, NIE miesięczny popyt na narzędzie. Popyt jest silnie sezonowy: OE na Marketplace trwa mniej więcej od 1.11 do 15.01, a OE u pracodawców zwykle przypada na październik–listopad (hipoteza / niezweryfikowane). Liczby osób ubezpieczonych przez pracodawcę nie zweryfikowano w tej sesji (hipoteza). Sygnał pośredni: jedno wyszukiwanie zwróciło co najmniej 5 darmowych kalkulatorów HDHP vs PPO opisanych jako 2026. Twórcy widzą więc popyt, ale nie jest to pomiar wolumenu wyszukiwań.",
+   "demand_sources": [
+    {
+     "url": "https://www.kff.org/affordable-care-act/what-we-know-so-far-about-2026-aca-marketplace-enrollment-premiums-and-deductibles/",
+     "title": "What We Know So Far About 2026 ACA Marketplace Enrollment, Premiums, and Deductibles",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.ajmc.com/view/aca-marketplace-enrollment-and-affordability-take-historic-hit-as-enhanced-tax-credits-expire",
+     "title": "ACA Marketplace Deductibles Surge $1000 in 2026 as Enhanced Tax Credits Expire",
+     "publisher": "AJMC"
+    },
+    {
+     "url": "https://www.healio.com/news/primary-care/20260206/aca-enrollment-plummets-with-enhanced-premium-tax-credit-expiration",
+     "title": "ACA enrollment plummets with enhanced premium tax credit expiration",
+     "publisher": "Healio",
+     "published": "2026-02-06"
+    },
+    {
+     "url": "https://www.irs.gov/zh-hant/newsroom/treasury-irs-provide-guidance-on-new-tax-benefits-for-health-savings-account-participants-under-the-one-big-beautiful-bill",
+     "title": "Treasury, IRS provide guidance on new tax benefits for health savings account participants under the One Big Beautiful Bill",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.whitehouse.gov/wp-content/uploads/2025/09/Expansion-of-HSA-Eligibility-Under-OBBA-1.pdf",
+     "title": "Expansion of HSA Eligibility Under OBBA",
+     "publisher": "White House CEA",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://healthplancompare.app/calculators/hdhp-vs-ppo",
+     "title": "HDHP vs PPO Calculator — Compare Plans Side-by-Side (2026) [sygnał pośredni: podaż narzędzi]",
+     "publisher": "healthplancompare.app"
+    }
+   ],
+   "commercial_pl": "Decyzja jest tylko częściowo zakupowa. Na Marketplace użytkownik kupuje plan (brokerzy, ubezpieczyciele). U pracodawcy wybiera z zamkniętego menu i nie zawiera nowej transakcji, więc reklamodawcami byliby raczej dostawcy HSA, telemedycyna i apteki online (hipoteza). Kategoria ubezpieczeń zdrowotnych ma wysoką wartość reklamową, ale konkretnych stawek AdSense nie zweryfikowano (hipoteza / niezweryfikowane). Lead-gen brokerów ACA nadaje się tylko na dodatek.",
+   "integrated_competition_pl": "Konkurencja częściowa jest gęsta. Search-summary wskazuje m.in.: healthplancompare.app (HDHP vs PPO, wersja 2026), vscalculator.com (HSA vs PPO vs FSA), getnextool.com (HMO vs PPO vs HDHP), useacalculator.com, usfinancecalculators.com (premium vs deductible) i kalkulator PEBA dla pracowników publicznych Karoliny Płd. Wszystkie liczą koszt roczny jako premium + OOP, część podaje break-even i uwzględnia HSA. W środowiskach zamkniętych konkurencję częściową lub bezpośrednią stanowią narzędzia pracodawców (np. ALEX by Jellyvision — wiedza modelu, niezweryfikowane) oraz HealthCare.gov plan compare (niezweryfikowane w tej sesji). Dla wariantów złożonych (dwie oferty pracodawców z tierami i timingiem zdarzeń; Marketplace połączony z zarządzaniem MAGI) nie znaleziono bezpośredniego konkurenta. Zakres: 1 zapytanie extended o kalkulatory HDHP/PPO; pewność niska. Nazwy i tytuły wielu stron z wyników przypominają serwisy programatyczne lub budowane przez AI w latach 2025–2026 (hipoteza). Prosty kalkulator nie daje więc żadnej przewagi.",
+   "ai_fit_pl": "Hipoteza / niezweryfikowane: 'HDHP or PPO?' to typowe pytanie do asystenta. Asystent odpowie regułą kciuka (zdrowy → HDHP; choroby przewlekłe lub ciąża → PPO — tę samą regułę podają źródła z search-summary), a gdy użytkownik poda liczby, sam je przeliczy. Odesłanie do narzędzia jest prawdopodobne tylko przy wariantach wielowymiarowych: dwie oferty, rodzina, ACA z MAGI, timing zdarzeń. Brak danych o wolumenie takich promptów i o tym, czy ChatGPT, Perplexity, Claude, Copilot lub Gemini cytują takie kalkulatory. Reguł Google nie przenoszę na asystentów.",
+   "shared_modeling_pl": "Bardzo wysoki. Wspólne mogą być: silnik kosztu planu (deductible embedded/non-embedded, coinsurance, copay, OOP max, tiery), silnik podatkowy (federal/state, FICA, HSA), scenariusze zużycia usług medycznych oraz kalkulacja MAGI/PTC. Z tych samych modułów korzystają rodziny: early-retirement/ACA cliff, procedure timing, freelancer stack i inherited IRA.",
+   "data_cost_pl": "Parametry roczne są tanie: limity HSA (search-summary: $4,400 / $8,750 na 2026), FPL, applicable percentage, OOP max. Dane planów per ZIP są drogie i złożone (pliki CMS dla HealthCare.gov — hipoteza dostępności; stany z własnymi giełdami osobno). Proponowane obejście: użytkownik wpisuje dane ze swojego SBC. Aktualizacja raz w roku plus zmiany legislacyjne. Na połowę października 2026 przedłużenia ulg nie uchwalono (cfhic.com, search-summary).",
+   "error_risk_pl": "Średnio-wysokie. Źródła błędów: założenia o kosztach zdarzeń medycznych, reguły HSA (np. general-purpose FSA współmałżonka wyklucza HSA — wiedza modelu, niezweryfikowane) i kategoria YMYL. Ryzyko ogranicza się jawnymi założeniami, danymi wpisywanymi przez użytkownika i podawaniem przedziałów zamiast jednej liczby.",
+   "catalog_potential_pl": "Dobre, przy odrębnych decyzjach: dwie oferty pracodawców; Marketplace metal tier z MAGI; COBRA vs Marketplace po utracie pracy; HSA inwestować czy wydawać; timing ciąży/porodu względem roku planu; timing zabiegu. Nie liczę wariantów różniących się tylko stanem czy kwotą.",
+   "ad_fit_pl": "Dobre środowisko reklamowe: ubezpieczenia, HSA, telemedycyna, apteki. Synergia z healthscorer.com jest tematyczna, ale tu odbiorca myśli finansowo, nie zdrowotnie. Stawki reklam to hipoteza.",
+   "expert_cost_pl": "Umiarkowany: coroczny przegląd modelu przez specjalistę od benefitów lub brokera (kilka godzin na model, nie na stronę).",
+   "scores": {
+    "demand": 5,
+    "commercial": 3,
+    "integrated_gap": 2,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Zachować, ale wyłącznie warianty złożone. Prosty HDHP vs PPO odrzucić: co najmniej 5 kalkulatorów 2026 w jednym wyniku (search-summary). Największa wartość jest w połączeniu z MAGI/ACA cliff (rodzina 2) i z timingiem zabiegów (rodzina 3). Pewność: średnia co do popytu, niska co do luki. Do sprawdzenia w kolejnej sesji: narzędzia employer decision support, HealthCare.gov/KFF, Reddit 'two employer plans spouse surcharge calculator'."
+  },
+  {
+   "family": "Early retirement health bridge & MAGI cliffs (ACA subsidy cliff, IRMAA, Medicare transition)",
+   "demand_pl": "Dane bezpośrednie (search-summary): po wygaśnięciu rozszerzonych ulg znaczna część spadku zapisów na Marketplace dotyczy osób powyżej 400% FPL, gdzie znów kończy się prawo do PTC (KFF). Efektuowane zapisy spadły o prawie 3 mln r/r (CBPP), a KFF prognozuje ich dalszy spadek do ok. 17,5 mln, zgodnie z wcześniejszą projekcją CBO (kurczenie o ok. 25%). Składka netto wzrosła z $113 do $178 (AJMC). Na połowę października 2026 przedłużenia ulg nie uchwalono (cfhic). Populacja dotknięta to osoby 50–64 lata na Marketplace, wcześni emeryci i samozatrudnieni blisko progu 400% FPL. Ich liczby nie zweryfikowano. Decyzja powtarza się co roku, ze szczytem w IV kwartale (konwersje Roth do 31.12 i OE). Wolumen zapytań niezweryfikowany: to populacja, nie popyt.",
+   "demand_sources": [
+    {
+     "url": "https://www.kff.org/quick-insights/aca-marketplace-enrollment-is-down-by-3-million-after-big-jump-in-premium-payments/",
+     "title": "ACA Marketplace Enrollment Is Down By 3 Million After Big Jump in Premium Payments",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.cbpp.org/blog/aca-marketplace-enrollment-shrank-in-nearly-every-state-after-premium-tax-credit-enhancements",
+     "title": "ACA Marketplace Enrollment Shrank in Nearly Every State After Premium Tax Credit Enhancements Expired",
+     "publisher": "CBPP"
+    },
+    {
+     "url": "https://www.kff.org/affordable-care-act/what-we-know-so-far-about-2026-aca-marketplace-enrollment-premiums-and-deductibles/",
+     "title": "What We Know So Far About 2026 ACA Marketplace Enrollment, Premiums, and Deductibles",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.cfhic.com/aca-enhanced-subsidies-expired-what-it-means-for-employer-health-plans/",
+     "title": "ACA enhanced subsidies expired: what it means for employer health plans",
+     "publisher": "cfhic.com"
+    },
+    {
+     "url": "https://insurancenewsnet.com/oarticle/individual-market-enrollment-continues-to-fall-through-mid-2026",
+     "title": "Individual market enrollment declines through mid-2026",
+     "publisher": "InsuranceNewsNet"
+    }
+   ],
+   "commercial_pl": "Wysoka wartość odbiorcy: zamożni pre-emeryci, którzy korzystają z doradców majątkowych, brokerage i ubezpieczeń (hipoteza / niezweryfikowane). Decyzja zwykle nie kończy się zakupem na stronie, ale środowisko reklamowe jest finansowe i drogie (hipoteza).",
+   "integrated_competition_pl": "Kalkulatory PTC (KFF Health Insurance Marketplace Calculator, HealthCare.gov — wiedza modelu, nie wyszukano w tej sesji) liczą dopłatę dla podanego dochodu, ale nie optymalizują samego dochodu. Płatne planery emerytalne (Boldin, dawniej NewRetirement; ProjectionLab — wiedza modelu) są substytutem lub konkurencją częściową; to, czy modelują PTC po 2026 r. i cliff 400% FPL, jest niezweryfikowane. Fora (Bogleheads, r/financialindependence — hipoteza) posługują się arkuszami. Nie znaleziono bezpośredniego konkurenta, przy czym wyszukiwania konkurencji dla tej rodziny NIE wykonano (budżet wyszukiwań wyczerpany). Pewność niska.",
+   "ai_fit_pl": "Hipoteza: prompt 'how much can I Roth convert without losing my ACA subsidy' to klasyczne pytanie, przy którym asystent poda zasady, ale precyzyjne wyliczenie progu jest podatne na błędy. Potrzebne są: tabela applicable percentage, SLCSP dla ZIP, FPL z roku poprzedniego, dopłaty stanowe i bieżąca sytuacja legislacyjna. To przesłanka do odesłania do narzędzia z aktualnymi parametrami. Ryzyko odwrotne: asystent z code interpreter i aktualnym wyszukiwaniem policzy to sam. Niezweryfikowane dla każdego asystenta osobno.",
+   "shared_modeling_pl": "Bardzo wysoki. Wspólny silnik MAGI/podatkowy z rodzinami: health plan choice, inherited IRA, freelancer stack, procedure timing (HSA). IRMAA (2-letni lookback) i przejście na Medicare dokłada się jako kolejna warstwa tego samego modelu.",
+   "data_cost_pl": "Parametry federalne są roczne i tanie (FPL, applicable percentage, przedziały podatkowe, progi IRMAA). Koszt umiarkowany generuje SLCSP per rating area (pliki CMS — hipoteza), a dopłaty stanowe w kilku stanach (hipoteza) zwiększają koszt utrzymania. Główne ryzyko legislacyjne: ewentualne przywrócenie rozszerzonych ulg, nawet retroaktywnie (stan na połowę października 2026: brak, cfhic).",
+   "error_risk_pl": "Wysokie. Przy klifie jeden dolar dochodu może kosztować tysiące dolarów utraconej PTC. Hipoteza / niezweryfikowane: OBBBA zniósł od 2026 r. limity zwrotu nadpłaconej APTC, co podnosi koszt błędu użytkownika. Model musi pokazywać margines bezpieczeństwa i wrażliwość na prognozę dochodu.",
+   "catalog_potential_pl": "Dobre: ACA cliff z konwersją Roth; bronze-HSA vs silver CSR; COBRA vs ACA po zwolnieniu; IRMAA przy wejściu w Medicare; praca po 65 a zapisy do Medicare/HSA. Medigap vs Medicare Advantage odrzucam: Plan Finder i brokerzy, reguły marketingowe CMS (hipoteza).",
+   "ad_fit_pl": "Dobre: wealth management, brokerage, ubezpieczenia, oprogramowanie podatkowe (hipoteza co do stawek).",
+   "expert_cost_pl": "Umiarkowany do wysokiego: CPA/EA przegląda model raz w roku i po każdej zmianie ustawy.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 4,
+    "ai_fit": 4,
+    "shared_modeling": 5,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Najsilniejsza nieoczywista rodzina w tym badaniu. Udokumentowana zmiana regulacyjna 2026 (powrót klifu 400% FPL, bronze kwalifikujący do HSA) tworzy wieloletni, sekwencyjny problem decyzyjny, w którym liczby mają znaczenie. Przed pilotem trzeba zweryfikować konkurencję: Boldin, ProjectionLab, KFF calculator, arkusze z Bogleheads, 'ACA cliff Roth conversion calculator'. Pewność: średnia co do zmiany i populacji, niska co do luki."
+  },
+  {
+   "family": "Medical procedure timing & financing",
+   "demand_pl": "Brak danych bezpośrednich (nie wyszukano). Wnioskowanie pośrednie (hipoteza): przesunięcie do planów bronze ze wzrostem deductible o ok. $1,000 (AJMC) oraz zgodność bronze z HSA od 2026 r. (IRS) zwiększają ekspozycję na koszty własne. To prawdopodobnie zwiększa liczbę decyzji 'kiedy zrobić zabieg i jak zapłacić', ale wolumenu nie zmierzono.",
+   "demand_sources": [
+    {
+     "url": "https://www.ajmc.com/view/aca-marketplace-enrollment-and-affordability-take-historic-hit-as-enhanced-tax-credits-expire",
+     "title": "ACA Marketplace Deductibles Surge $1000 in 2026 as Enhanced Tax Credits Expire (pośrednie)",
+     "publisher": "AJMC"
+    },
+    {
+     "url": "https://rsmus.com/insights/services/business-tax/irs-notice-2026-expanded-hdhp-definition-obbba-broadens-hsa.html",
+     "title": "IRS notice 2026: expanded HDHP definition, OBBBA broadens HSA (pośrednie)",
+     "publisher": "RSM"
+    }
+   ],
+   "commercial_pl": "Wysoki (hipoteza): zabiegi planowe (LASIK, implanty, ortodoncja, IVF, chirurgia bariatryczna, aparaty słuchowe), finansowanie medyczne i kliniki to reklamodawcy z wysokimi stawkami. Nie zweryfikowano.",
+   "integrated_competition_pl": "Konkurencja częściowa (wiedza modelu, niezweryfikowane w tej sesji): CareCredit i kalkulatory rat, szpitalne estymatory cen, serwisy price transparency (np. Turquoise Health, FAIR Health Consumer). Kalkulatory HDHP/PPO z search-summary nie wspominają o timingu zabiegu względem roku planu (niezweryfikowane). Nie znaleziono bezpośredniego konkurenta, ale wyszukiwania konkurencji NIE wykonano. Pewność niska.",
+   "ai_fit_pl": "Hipoteza: asystent łatwo poda zasady (reset deductible, pułapka deferred interest). Porównanie miesiąca zabiegu, zmiany planu w OE i sposobu finansowania na konkretnych liczbach wymaga modelu. Odesłanie do narzędzia jest umiarkowanie prawdopodobne.",
+   "shared_modeling_pl": "Wysoki: korzysta z silnika kosztu planu (rodzina 1), reguł HSA/FSA oraz modułu kredytu konsumenckiego (deferred interest, 0% APR, pożyczka), który przyda się też w innych rodzinach.",
+   "data_cost_pl": "Umiarkowany. Ceny zabiegów są rozproszone i nieporównywalne, więc najlepiej, żeby użytkownik wpisał kwotę z wyceny; zakresy referencyjne są opcjonalne (hipoteza). Parametry HSA/FSA aktualizuje się raz w roku.",
+   "error_risk_pl": "Średnie. Ryzyko kliniczne: nie wolno sugerować odkładania leczenia wskazanego medycznie, więc narzędzie powinno obejmować tylko zabiegi planowe i zawierać wyraźne zastrzeżenia.",
+   "catalog_potential_pl": "Dobre: każdy typ zabiegu ma inną strukturę kosztów i finansowania (IVF: wiele cykli i pokrycie stanowe; LASIK vs okulary/soczewki przez całe życie; implant vs most; aparat słuchowy OTC vs na receptę).",
+   "ad_fit_pl": "Dobre (hipoteza): finansowanie medyczne, kliniki, ubezpieczenia dentystyczne i wzrokowe. Synergia z healthscorer.com najwyższa ze wszystkich rodzin.",
+   "expert_cost_pl": "Umiarkowany: przegląd przez specjalistę od rozliczeń medycznych lub benefitów; przegląd kliniczny tylko dla zastrzeżeń.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 4,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Zbadać. To rodzina najbliższa healthscorer.com, z realną sekwencją zdarzeń (rok planu, OE, finansowanie). Wymaga weryfikacji popytu i konkurencji (np. 'when to schedule surgery deductible', 'CareCredit vs payment plan'). Pewność niska."
+  },
+  {
+   "family": "Inheritance decisions (inherited IRA 10-year rule, inherited house)",
+   "demand_pl": "Sygnał pośredni (search-summary): jedno wyszukiwanie zwróciło co najmniej 8 stron z przewodnikami lub kalkulatorami dotyczącymi 10-year rule opisanymi jako 2026 (m.in. retirementliteracyfoundation.org, taxpayers.net, incomelaboratory.com, plancorp.com, mezzi.com). To dowód popytu informacyjnego i podaży treści, ale nie wolumenu. Zasada potwierdzona w search-summary: jeśli właściciel zmarł po RBD, spadkobierca musi wypłacać roczne RMD w latach 1–9 i opróżnić konto do końca roku 10; w przeciwnym razie wypłaty są dowolne. Liczba dziedziczonych IRA i domów rocznie nie została zweryfikowana (hipoteza). Dom dziedziczony: brak danych (wyszukiwanie niewykonane).",
+   "demand_sources": [
+    {
+     "url": "https://retirementliteracyfoundation.org/guides/inherited-ira-10-year-rule/",
+     "title": "Inherited IRA Rules: The 10-Year Withdrawal Trap (2026) (pośrednie)",
+     "publisher": "Retirement Literacy Foundation"
+    },
+    {
+     "url": "https://taxpayers.net/guides/inherited-ira-10-year-rule",
+     "title": "Inherited IRA 10-Year Rule (2026) — Annual RMDs & Year-10 Deadline (pośrednie)",
+     "publisher": "taxpayers.net"
+    },
+    {
+     "url": "https://www.plancorp.com/blog/inherited-ira-withdrawal-strategies-10-year-rule",
+     "title": "Inherited IRA Withdrawal Strategies: How to Manage Tax Exposure Under the 10-Year Rule (pośrednie)",
+     "publisher": "Plancorp"
+    },
+    {
+     "url": "https://www.mezzi.com/blog/inherited-ira-10-year-rule-withdrawal-trap-high-earning-heirs",
+     "title": "The Inherited IRA 10-Year Rule: The Withdrawal Trap for High-Earning Heirs (pośrednie)",
+     "publisher": "Mezzi"
+    }
+   ],
+   "commercial_pl": "Wysoki: doradcy majątkowi (search-summary pokazuje serwis lead-gen financial-advisors-for-inheritance.com), nieruchomości, kredyty i refinansowanie przy wykupie od rodzeństwa, prawnicy spadkowi. Stawki reklam to hipoteza.",
+   "integrated_competition_pl": "IRA: takehometax.com Inherited IRA Calculator wg search-summary porównuje obok siebie trzy strategie: równe wypłaty, odroczenie do roku 10 i bracket-filling. onetopstop.insure porównuje równe, back-load i front-load. Podstawowy problem harmonogramu względem przedziałów podatkowych jest więc częściowo, a może prawie bezpośrednio, rozwiązany. To, czy któreś narzędzie uwzględnia IRMAA, ACA cliff lub FAFSA, jest niezweryfikowane; artykuł Mezzi wspomina IRMAA jako pułapkę. Dom dziedziczony: wyszukiwania NIE wykonano (budżet). Konkurencja częściowa to prawdopodobnie kalkulatory rent vs sell i treści skupujących domy (hipoteza).",
+   "ai_fit_pl": "Hipoteza: spadkobiercy pytają asystentów o zasady 10-year rule. Asystent je wyjaśni, ale wieloletni harmonogram z progami i obowiązkowymi RMD oraz podział domu między rodzeństwo o różnych stawkach podatkowych wymagają modelu. Umiarkowane prawdopodobieństwo odesłania.",
+   "shared_modeling_pl": "Wysoki. IRA korzysta ze wspólnego silnika MAGI/podatkowego. Dom korzysta ze wspólnego silnika nieruchomości (sprzedaż, wynajem, refinans, koszty transakcyjne, 121 exclusion, recapture), który obsługuje też rodzinę divorce i home z listy standardowej.",
+   "data_cost_pl": "Niski do umiarkowanego. Reguły federalne są stabilne i aktualizowane raz w roku (tabele Single Life, przedziały, IRMAA). Reguły stanowe ponownej wyceny podatku od nieruchomości (np. Prop 19 w CA — wiedza modelu, niezweryfikowane) dotyczą kilku stanów.",
+   "error_risk_pl": "Wysokie dla IRA: wyjątki EDB (małżonek, osoba niepełnosprawna, beneficjent nie więcej niż 10 lat młodszy), data śmierci względem RBD, Roth vs traditional, kary za brak RMD. W search-summary źródła różnią się co do strategii dla Roth. Dla domu ryzyko średnie.",
+   "catalog_potential_pl": "Dobre: inherited IRA (traditional vs Roth, EDB vs non-EDB); dom (rodzeństwo, wykup, wynajem, zamieszkanie); odziedziczony rachunek maklerski ze stepped-up basis; disclaimer spadku. Każdy wariant to inna decyzja.",
+   "ad_fit_pl": "Dobre (hipoteza): nieruchomości, wealth management, prawo spadkowe, kredyt hipoteczny.",
+   "expert_cost_pl": "Umiarkowany: CPA/EA dla IRA, konsultacja z agentem nieruchomości lub CPA dla domu; przegląd raz w roku.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 4,
+    "shared_modeling": 4,
+    "data_cost_ease": 4,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Zachować. Inherited IRA prowadzić tylko jako moduł wspólnego silnika MAGI, bo rdzeń jest już obsłużony przez co najmniej 2 darmowe kalkulatory (search-summary). Dom dziedziczony z rodzeństwem to kandydat do zbadania. Pewność: średnia (IRA), niska (dom)."
+  },
+  {
+   "family": "Divorce financial decisions",
+   "demand_pl": "Brak danych zebranych w tej sesji: wyszukiwanie przerwał limit budżetu. Liczba rozwodów w USA rocznie jest rzędu setek tysięcy (hipoteza / niezweryfikowane, wiedza modelu: dane CDC NVSS). To liczba zdarzeń, nie popyt na narzędzie. Decyzja o domu dotyczy tylko par z nieruchomością.",
+   "demand_sources": [],
+   "commercial_pl": "Wysoki (hipoteza): prawnicy rodzinni, mediatorzy, CDFA, refinansowanie hipoteczne.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane (wyszukiwanie niewykonane). Profesjonalne oprogramowanie dla CDFA (np. FinPlan Divorce Planner — wiedza modelu) prawdopodobnie integruje podział aktywów i przepływy, ale jest płatne i przeznaczone dla specjalistów, więc to substytut lub konkurencja częściowa. Kalkulatory wykupu u pożyczkodawców i na blogach (hipoteza) są częściowe. Nie można stwierdzić braku bezpośredniego konkurenta konsumenckiego, bo zakres badania wynosi zero zapytań.",
+   "ai_fit_pl": "Hipoteza: użytkownicy zadają asystentom takie pytania, często anonimowo. Asystent da zasady ogólne i zastrzeżenia prawne. Liczbowe porównanie refinansu, offsetu 401(k) i timingu 121 wymaga modelu. Wrażliwość tematu może skłaniać asystentów do odsyłania do prawnika, a nie do narzędzia.",
+   "shared_modeling_pl": "Średni: wspólny silnik nieruchomości (refinans, DTI, sprzedaż, 121) i podatkowy (tax-effecting aktywów pre-tax vs after-tax). Część specyficzna (alimenty, child support) zależy od stanu.",
+   "data_cost_pl": "Umiarkowany. Reguły stanowe (community property vs equitable distribution, wytyczne child support w 50 stanach) są drogie w utrzymaniu, więc trzeba je pominąć i przyjmować kwoty od użytkownika. Stopy kredytowe aktualizuje się co tydzień (publiczne źródła — hipoteza).",
+   "error_risk_pl": "Wysokie: granica porady prawnej, emocje, prawo stanowe, QDRO, skutki podatkowe alimentów (wiedza modelu: po 2018 alimenty nie są odliczane — niezweryfikowane).",
+   "catalog_potential_pl": "Średni: dom (zatrzymać, wykupić, sprzedać), podział emerytur (QDRO vs offset), budżet dwóch gospodarstw, wybór ubezpieczenia zdrowotnego po rozwodzie (łączy się z rodziną 1).",
+   "ad_fit_pl": "Średni (hipoteza): reklamy prawne i finansowe są wartościowe, ale treść jest wrażliwa i polityki reklamowe dla tematów rodzinnych mogą ograniczać wybór reklam (niezweryfikowane).",
+   "expert_cost_pl": "Wysoki: przegląd przez CDFA lub prawnika rodzinnego jest konieczny dla wiarygodności.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 3,
+    "data_cost_ease": 3,
+    "low_error_risk": 1,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Zbadać ostrożnie jeden produkt (dom: zatrzymać, wykupić czy sprzedać). Rodzina ma realną integrację, ale wysokie ryzyko błędu i treści oraz drogi przegląd ekspercki. Pewność niska: brak wyszukiwań."
+  },
+  {
+   "family": "Disaster hardening & catastrophe insurance (FORTIFIED roof, wind mitigation, wildfire, flood)",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza / niezweryfikowane: rosnące składki i odmowy odnowienia w FL, LA, AL, CA i TX, stanowe granty FORTIFIED (Strengthen Alabama Homes, Louisiana Fortify Homes Program — wiedza modelu) oraz kalifornijska regulacja Safer from Wildfires tworzą decyzje o wysokiej stawce. Popyt jest regionalny i wyzwalany zdarzeniami (sezon huraganów, pożary, pismo od ubezpieczyciela).",
+   "demand_sources": [],
+   "commercial_pl": "Bardzo wysoki (hipoteza): dekarze, wykonawcy okien i okiennic, ubezpieczyciele, finansowanie remontów. Decyzja kończy się realnym zakupem za $10–30k+ (hipoteza).",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane (wyszukiwanie niewykonane). Strony IBHS FORTIFIED, programów stanowych i departamentów ubezpieczeń informują o rabatach i grantach, ale prawdopodobnie nie modelują payback w horyzoncie sprzedaży domu. Strony dekarzy publikują 'FORTIFIED cost' (hipoteza). Bezpośredniego konkurenta nie badano, pewność bardzo niska.",
+   "ai_fit_pl": "Hipoteza: pytanie 'should I get a FORTIFIED roof' asystent obsłuży ogólnie. Aktualne rundy grantów i procenty rabatów u konkretnego ubezpieczyciela są lokalne i zmienne, więc asystent może je przytoczyć tylko z wyszukiwania. Narzędzie z jawnymi założeniami (rabat wpisuje użytkownik) ma przewagę przy liczeniu payback.",
+   "shared_modeling_pl": "Wysoki: wspólny silnik decyzji kapitałowych dla domu (koszt, finansowanie, horyzont sprzedaży, wartość rezydualna, oczekiwana strata) z rodziną roof+solar z listy standardowej oraz z wymianą HVAC i okien.",
+   "data_cost_pl": "Wysoki: programy stanowe (rundy, limity, kwalifikowalność), tabele rabatów ubezpieczycieli z filingów stanowych i reguły wiekowe dachu (ACV vs RCV) zmieniają się kwartalnie lub rocznie. Częściowe obejście: rabat i składkę wpisuje użytkownik, a strona utrzymuje tylko listę programów.",
+   "error_risk_pl": "Średnie: przy danych od użytkownika ryzyko błędu modelu jest umiarkowane, ale prawdopodobieństwa szkód (wiatr, grad, pożar) są niepewne. Trzeba podawać przedziały i analizę wrażliwości.",
+   "catalog_potential_pl": "Dobre: FORTIFIED Roof/Silver/Gold, okiennice i drzwi garażowe, wildfire hardening (Zone 0, otwory wentylacyjne), elewacja i flood vents wobec składki NFIP lub prywatnej polisy powodziowej, wymiana dachu przy ACV.",
+   "ad_fit_pl": "Bardzo dobre (hipoteza): home improvement i ubezpieczenia to jedne z najmocniejszych kategorii reklamowych.",
+   "expert_cost_pl": "Umiarkowany: agent ubezpieczeniowy lub ewaluator FORTIFIED do przeglądu założeń dla każdego regionu.",
+   "scores": {
+    "demand": 3,
+    "commercial": 5,
+    "integrated_gap": 4,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 2,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 5,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Zbadać, szczególnie dach z FORTIFIED i wind mitigation, w połączeniu z przykładem właściciela (dach + solar). Wildfire w Kalifornii odłożyć: duża zmienność regulacji i zachowań ubezpieczycieli. Pewność niska (brak wyszukiwań)."
+  },
+  {
+   "family": "Pet insurance vs self-insure",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza: populacja zwierząt domowych w USA jest bardzo duża, a odsetek ubezpieczonych mały (wiedza modelu: raporty NAPHIA, niezweryfikowane). Pytanie 'is pet insurance worth it' jest częste na forach (hipoteza).",
+   "demand_sources": [],
+   "commercial_pl": "Wysoki (hipoteza): ubezpieczyciele zwierząt płacą za afiliację i reklamy, a weterynaryjne finansowanie jest wartościowe.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane: wiele serwisów porównawczych i blogów afiliacyjnych z kalkulatorami 'is it worth it' oraz silniki wycen ubezpieczycieli. Konkurencja częściowa i substytuty są prawdopodobnie gęste. Bezpośredniego konkurenta nie badano.",
+   "ai_fit_pl": "Hipoteza: asystent odpowie sam (zależy od rasy, wieku, funduszu awaryjnego). Odesłanie do narzędzia jest mało prawdopodobne, chyba że narzędzie modeluje wzrost składki z wiekiem i wyłączenia pre-existing.",
+   "shared_modeling_pl": "Niski: model ryzyka i składki specyficzny dla zwierząt; wspólny jest jedynie ogólny moduł 'ubezpieczyć się czy samoubezpieczyć'.",
+   "data_cost_pl": "Umiarkowany: krzywe wzrostu składek są zastrzeżone i różne u ubezpieczycieli (dane od użytkownika lub szacunki); koszty leczenia mają szerokie zakresy (hipoteza).",
+   "error_risk_pl": "Niskie: niewielkie stawki finansowe w porównaniu z innymi rodzinami.",
+   "catalog_potential_pl": "Niski: kilka decyzji (zapisać teraz czy później, accident-only, wellness plan, fundusz). Warianty per rasa to cienkie strony.",
+   "ad_fit_pl": "Dobre dla afiliacji, umiarkowane dla AdSense (hipoteza).",
+   "expert_cost_pl": "Niski.",
+   "scores": {
+    "demand": 4,
+    "commercial": 4,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 2,
+    "data_cost_ease": 3,
+    "low_error_risk": 4,
+    "catalog": 2,
+    "ad_fit": 4,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Później, z niskim priorytetem. Kuszące (popyt, afiliacja), ale integracja jest płytka, asystenci odpowiadają sami, a dane o składkach są zastrzeżone. Pewność niska."
+  },
+  {
+   "family": "Long-term care & elder care funding",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza: starzenie się baby boomers i wysokie koszty opieki (wiedza modelu: CareScout/Genworth Cost of Care Survey, niezweryfikowane). Decyzja zapada raz lub kilka razy w życiu, w wieku 50–70 lat.",
+   "demand_sources": [],
+   "commercial_pl": "Wysoki (hipoteza): agenci LTC i hybrid life/LTC, domy opieki, home care, prawnicy elder law.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane: kalkulatory kosztu opieki (Genworth/CareScout — wiedza modelu) są częściowe, a narzędzia agentów nastawione na sprzedaż. Bezpośredniego konkurenta nie badano.",
+   "ai_fit_pl": "Hipoteza: asystent wyjaśni opcje (tradycyjne LTC, hybryda, samofinansowanie, Medicaid). Modelowanie rozkładu prawdopodobieństwa potrzeby opieki i ryzyka podwyżek składek wymaga narzędzia, ale odbiorcy rzadziej korzystają z interaktywnych narzędzi (hipoteza).",
+   "shared_modeling_pl": "Średni: moduł 'ubezpieczyć się czy samoubezpieczyć' z rozkładem zdarzeń; łączy się z modelem emerytalnym i dziedziczeniem.",
+   "data_cost_pl": "Umiarkowany: koszty opieki per stan (licencja lub dostępność danych niezweryfikowane), rozkład czasu trwania opieki z badań (hipoteza), programy stanowe (np. WA Cares — wiedza modelu).",
+   "error_risk_pl": "Wysokie: horyzont kilkudziesięciu lat, niepewność podwyżek składek, Medicaid look-back i ochrona współmałżonka.",
+   "catalog_potential_pl": "Średni: LTC vs hybryda vs samofinansowanie; opieka nad rodzicem (przeprowadzka do domu dziecka, assisted living, opieka domowa) z ograniczeniem czasu pracy opiekuna.",
+   "ad_fit_pl": "Dobre (hipoteza): ubezpieczenia seniorów, opieka.",
+   "expert_cost_pl": "Wysoki: aktuariusz lub specjalista LTC.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 3,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Później. Realny problem z wysokimi stawkami, ale wysokie ryzyko błędu i koszt eksperta; rynek zdominowany przez agentów. Pewność niska."
+  },
+  {
+   "family": "Freelancer / 1099 entity, retirement account & health coverage stack",
+   "demand_pl": "Brak danych bezpośrednich zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza: dziesiątki milionów osób mają dochód 1099 (wiedza modelu, niezweryfikowane), a pytanie 'should I elect S-corp' powraca co roku. Pośrednio: samozatrudnieni kupują plany na Marketplace i są dotknięci powrotem klifu PTC (KFF, search-summary).",
+   "demand_sources": [
+    {
+     "url": "https://www.kff.org/affordable-care-act/what-we-know-so-far-about-2026-aca-marketplace-enrollment-premiums-and-deductibles/",
+     "title": "What We Know So Far About 2026 ACA Marketplace Enrollment, Premiums, and Deductibles (pośrednie)",
+     "publisher": "KFF"
+    }
+   ],
+   "commercial_pl": "Bardzo wysoki (hipoteza): payroll, księgowość, oprogramowanie podatkowe, bankowość firmowa, Solo 401(k) u brokerów, ubezpieczenia.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane (wyszukiwanie niewykonane). Liczne kalkulatory oszczędności z S-corp (CPA, payroll) i kalkulatory Solo 401(k)/SEP u brokerów to konkurencja częściowa. Połączenie wysokości pensji w S-corp z maksymalnym wkładem do 401(k), QBI i PTC na Marketplace jest prawdopodobnie rzadsze, ale nie zbadano tego. Płatne platformy planowania podatkowego to substytut.",
+   "ai_fit_pl": "Hipoteza: częste pytanie do asystentów. Asystent poda regułę kciuka (np. próg dochodu dla S-corp), ale interakcje (reasonable salary ↔ limit 401(k) ↔ QBI ↔ MAGI/PTC ↔ podatki stanowe) są podatne na błędy. Umiarkowane prawdopodobieństwo odesłania.",
+   "shared_modeling_pl": "Bardzo wysoki: wspólny silnik podatkowy (SE tax, FICA, QBI, przedziały, podatki stanowe) i MAGI/PTC z rodzinami 1 i 2.",
+   "data_cost_pl": "Umiarkowany: parametry federalne raz w roku; opłaty i podatki stanowe (franchise tax, PTET) w 50 stanach są kosztowne, więc warto zacząć od kilku największych stanów i danych od użytkownika.",
+   "error_risk_pl": "Wysokie: reasonable salary, zasada 2% shareholder dla ubezpieczenia zdrowotnego, limity wkładów, reguły stanowe. Wiedza modelu: OBBBA utrwalił 199A — niezweryfikowane.",
+   "catalog_potential_pl": "Dobre: wybór formy prawnej, wybór konta emerytalnego, decyzja W-2 vs 1099 (oferta kontraktowa vs etat), zakup planu zdrowotnego z dochodem nieregularnym, kwartalne zaliczki podatkowe.",
+   "ad_fit_pl": "Bardzo dobre (hipoteza): B2B SaaS, payroll, księgowość, bankowość.",
+   "expert_cost_pl": "Wysoki: przegląd przez CPA raz w roku i dla każdego obsługiwanego stanu.",
+   "scores": {
+    "demand": 4,
+    "commercial": 5,
+    "integrated_gap": 3,
+    "ai_fit": 4,
+    "shared_modeling": 5,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 5,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Zbadać. Silna komercyjność i wspólny model z rodzinami zdrowotnymi; ryzyko gęstej konkurencji częściowej (kalkulatory S-corp). Przewagą może być integracja z ACA/MAGI. Pewność niska."
+  },
+  {
+   "family": "Interstate relocation for taxes & cost of living",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza: migracje międzystanowe emerytów i pracowników zdalnych to stały temat, z popytem rozłożonym przez cały rok.",
+   "demand_sources": [],
+   "commercial_pl": "Wysoki (hipoteza): firmy przeprowadzkowe, pośrednicy nieruchomości, kredyt hipoteczny, ubezpieczenia.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane: SmartAsset, NerdWallet i wiele kalkulatorów porównujących podatki stanowe oraz koszty życia (wiedza modelu) dają gęstą konkurencję częściową. Integracja według typu dochodu (SS, emerytury, zyski kapitałowe), ubezpieczeń domu, kosztów transakcji i roku przejściowego jest rzadsza (hipoteza). Nie badano.",
+   "ai_fit_pl": "Hipoteza: asystenci chętnie porównują stany ogólnie. Wieloletni model z kosztami transakcji wymaga narzędzia, ale asystent prawdopodobnie odpowie sam szacunkowo.",
+   "shared_modeling_pl": "Wysoki: silnik podatkowy dla 50 stanów i silnik nieruchomości (sprzedaż i zakup).",
+   "data_cost_pl": "Bardzo wysoki: podatki stanowe i lokalne, podatki od nieruchomości per hrabstwo, koszty życia i ubezpieczeń domu (zmienne, szczególnie FL/LA). Aktualizacja raz w roku albo częściej.",
+   "error_risk_pl": "Średnie: reguły rezydencji, convenience-of-employer, częściowy rok.",
+   "catalog_potential_pl": "Średni: pary stanów to cienkie warianty i NIE liczą się jako odrębne produkty. Odrębne decyzje: emeryt (sprzedać dom i przenieść się), pracownik zdalny (rezydencja), snowbird (dwa domy).",
+   "ad_fit_pl": "Dobre (hipoteza).",
+   "expert_cost_pl": "Umiarkowany.",
+   "scores": {
+    "demand": 4,
+    "commercial": 4,
+    "integrated_gap": 2,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 1,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Później. Gęsta konkurencja częściowa i najwyższy koszt danych spośród badanych rodzin. Pewność niska."
+  },
+  {
+   "family": "Childcare vs one parent home vs part-time (work-family economics)",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza: bardzo częsty dylemat rodziców małych dzieci, popularny na forach. Wiedza modelu, niezweryfikowane: OBBBA podniósł od 2026 r. limit dependent care FSA do $7,500 i zmienił CDCTC.",
+   "demand_sources": [],
+   "commercial_pl": "Niski do średniego (hipoteza): żłobki, opieka, ubezpieczenia; użytkownik zwykle nie dokonuje zakupu na podstawie wyniku.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane: kalkulatory 'cost of working' i 'is daycare worth it' na blogach i portalach finansowych są częściowe; arkusze to substytut. Nie badano.",
+   "ai_fit_pl": "Hipoteza: asystent łatwo przeliczy prosty przypadek. Model wieloletni (koszty opieki według wieku dzieci, utrata wzrostu zarobków i matchu 401(k), ubezpieczenie zdrowotne) daje narzędziu przewagę, ale prawdopodobieństwo odesłania jest umiarkowane.",
+   "shared_modeling_pl": "Średni: silnik podatkowy i benefitów (DCFSA, CDCTC, CTC) oraz zmiana planu zdrowotnego na plan małżonka (rodzina 1).",
+   "data_cost_pl": "Umiarkowany: koszty opieki per hrabstwo (wiedza modelu: baza Departamentu Pracy, niezweryfikowane) albo dane od użytkownika; parametry podatkowe raz w roku.",
+   "error_risk_pl": "Średnie: model zarobków utraconych w przyszłości jest silnie założeniowy.",
+   "catalog_potential_pl": "Średni: drugie dziecko, praca w niepełnym wymiarze vs pełny, au pair vs żłobek vs niania (nanny share), powrót do pracy po przerwie.",
+   "ad_fit_pl": "Słaby do średniego (hipoteza): treści parentingowe mają raczej niskie stawki.",
+   "expert_cost_pl": "Niski.",
+   "scores": {
+    "demand": 4,
+    "commercial": 2,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 3,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 2,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Później. Popyt jest prawdopodobnie wysoki, ale monetyzacja AdSense słaba, a asystent zrobi uproszczoną wersję sam. Pewność niska."
+  },
+  {
+   "family": "College choice & financing (post-2026 federal loan changes)",
+   "demand_pl": "Brak danych zebranych w tej sesji (wyszukiwanie przerwane limitem). Hipoteza / niezweryfikowane (wiedza modelu): OBBBA od 1.07.2026 likwiduje Grad PLUS dla nowych pożyczkobiorców, ogranicza Parent PLUS i wprowadza nowy plan spłat (RAP). Te zmiany, jeśli zostaną potwierdzone, tworzą nowy problem 'luki finansowania'. Popyt jest sezonowy (marzec–maj: listy z ofertami pomocy).",
+   "demand_sources": [],
+   "commercial_pl": "Wysoki (hipoteza): prywatne kredyty studenckie i refinansowanie należą do kategorii z wysokimi stawkami.",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane (wiedza modelu): College Scorecard, obowiązkowe Net Price Calculators uczelni, StudentAid.gov Loan Simulator, płatne narzędzia planowania studiów i kalkulatory pożyczkodawców dają gęstą konkurencję częściową. Nie badano.",
+   "ai_fit_pl": "Hipoteza: rodzice pytają asystentów o porównanie ofert. Asystent porówna dwie oferty, jeśli dostanie liczby; przewaga narzędzia leży w modelu luki po limitach pożyczek i wpływie na emeryturę rodzica.",
+   "shared_modeling_pl": "Średni: moduł kredytowy, podatkowy i oszczędności (529); łączy się z rodziną inheritance (wpływ na FAFSA).",
+   "data_cost_pl": "Umiarkowany: College Scorecard jest bezpłatny (wiedza modelu), oferty wpisuje użytkownik, a limity pożyczek aktualizuje się przy zmianach ustawy.",
+   "error_risk_pl": "Średnie: reguły pożyczek w okresie przejściowym 2026 (grandfathering — niezweryfikowane).",
+   "catalog_potential_pl": "Dobre: porównanie ofert, community college + transfer vs 4-letnie studia, studia magisterskie bez Grad PLUS, wybór planu spłaty.",
+   "ad_fit_pl": "Dobre (hipoteza).",
+   "expert_cost_pl": "Umiarkowany.",
+   "scores": {
+    "demand": 4,
+    "commercial": 4,
+    "integrated_gap": 2,
+    "ai_fit": 3,
+    "shared_modeling": 3,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Zbadać selektywnie, tylko z kątem limitów pożyczek po 2026 r., po weryfikacji zmian ustawowych i konkurencji. Rdzeń (porównanie net price) jest zatłoczony. Pewność niska."
+  },
+  {
+   "family": "Benefits cliffs for low-income households (SNAP / Medicaid / EITC)",
+   "demand_pl": "Brak danych zebranych w tej sesji. Hipoteza: realny problem przy podwyżce lub zmianie pracy. Liczba osób, których dotyczy, to nie popyt na narzędzie.",
+   "demand_sources": [],
+   "commercial_pl": "Bardzo niski: odbiorcy o niskich dochodach mają słabe środowisko reklamowe (hipoteza).",
+   "integrated_competition_pl": "Hipoteza / niezweryfikowane (wiedza modelu): narzędzia typu CLIFF Atlanta Fed oraz stanowe i NGO-owe kalkulatory świadczeń są konkurencją bezpośrednią lub częściową. Nie badano.",
+   "ai_fit_pl": "Hipoteza: asystent odpowie ogólnie; precyzja wymaga reguł stanowych.",
+   "shared_modeling_pl": "Średni: moduł MAGI/progów, ale reguły świadczeń są specyficzne dla stanów.",
+   "data_cost_pl": "Bardzo wysoki: dziesiątki programów razy 50 stanów, zmiany co roku.",
+   "error_risk_pl": "Bardzo wysokie: błąd może skłonić do odrzucenia podwyżki lub utraty świadczeń.",
+   "catalog_potential_pl": "Niski przy realnych kosztach danych.",
+   "ad_fit_pl": "Słaby.",
+   "expert_cost_pl": "Bardzo wysoki.",
+   "scores": {
+    "demand": 3,
+    "commercial": 1,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 3,
+    "data_cost_ease": 1,
+    "low_error_risk": 1,
+    "catalog": 2,
+    "ad_fit": 1,
+    "low_expert_cost": 1
+   },
+   "verdict_pl": "Odrzucić dla tego modelu biznesowego (AdSense, automatyzacja). Pewność średnia co do monetyzacji, niska co do konkurencji."
+  }
+ ],
+ "ideas": [
+  {
+   "temp_id": "G7-01",
+   "name_en": "Two-Employer Household Health Plan Optimizer",
+   "family": "Health insurance plan choice (employer / ACA Marketplace / HSA)",
+   "user_and_moment": "Para, w której oboje mają oferty ubezpieczenia od pracodawców (często z dziećmi lub z ciążą w planach), w trakcie open enrollment (październik–grudzień), z 1–2 tygodniami na decyzję.",
+   "sample_prompt_en": "My wife and I both have employer health plans. We're expecting a baby in March. Should we both go on her HDHP with an HSA, stay on our own plans, or put the kids on my PPO?",
+   "decision_problem": "Wybór kombinacji pokrycia: kto na którym planie, który tier (employee / +spouse / +children / family) i jaki typ planu. Trzeba uwzględnić spousal surcharge, wkład pracodawcy do HSA, opt-out cash, scenariusze zdarzeń oraz timing zdarzeń względem roku planu (poród w marcu vs w grudniu).",
+   "combined_domains": "Ubezpieczenie zdrowotne (premium, deductible embedded vs non-embedded, coinsurance, OOP max), podatki (składki pre-tax, HSA, krańcowa stawka, FICA), HSA jako inwestycja, przepływy miesięczne, prawdopodobieństwo zdarzeń medycznych, kalendarz roku planu.",
+   "variants_compared": "(A) każdy na swoim planie; (B) cała rodzina na HDHP+HSA małżonka 1; (C) cała rodzina na PPO małżonka 2; (D) podział: dorośli osobno, dzieci na tańszym tierze; (E) jeden z małżonków rezygnuje z planu i bierze opt-out cash.",
+   "key_dependencies": "Spousal surcharge; embedded deductible; termin porodu względem resetu deductible; limit HSA dla rodziny dzielony między małżonków (search-summary: $8,750 family na 2026); general-purpose FSA współmałżonka blokuje HSA (wiedza modelu, niezweryfikowane); sieć lekarzy.",
+   "main_outputs": "Rozkład rocznego kosztu całkowitego (składka netto po podatku + OOP − wkład HSA pracodawcy − wartość podatkowa HSA) dla scenariuszy niskiego, średniego, wysokiego i katastrofalnego zużycia; break-even; ranking wariantów; sekcja 'co zmienia wynik' (np. poród przesunięty na styczeń, surcharge, wzrost kosztów leków).",
+   "reason_external_site": "Decyzja wymaga 20–40 pól z dwóch dokumentów SBC i porównania 4–5 kombinacji w kilku scenariuszach. Asystent AI może to policzyć, ale łatwo pomyli reguły embedded deductible i konflikt FSA/HSA (hipoteza). Strona daje powtarzalny, sprawdzony model z wizualizacją rozkładu kosztów.",
+   "data_sources": "Dane użytkownika z SBC; roczne parametry IRS (limity HSA; search-summary podaje $4,400/$8,750 na 2026); referencyjne koszty zdarzeń (poród, SOR, MRI) z publicznych źródeł do zweryfikowania (hipoteza: HCCI, Peterson-KFF tracker).",
+   "user_data": "Składki per tier dla obu planów, deductible, OOP max, coinsurance, copay, wkład HSA pracodawcy, surcharge, opt-out cash, planowane zdarzenia i ich miesiąc, leki stałe, stawka podatkowa.",
+   "nearest_competition": [
+    {
+     "name": "Health Plan Compare — HDHP vs PPO Calculator (2026)",
+     "url": "https://healthplancompare.app/calculators/hdhp-vs-ppo",
+     "type": "partial",
+     "features_claimed": "Wg search-summary: porównanie HDHP vs PPO side-by-side, aktualizacja na 2026; dla grupy narzędzi koszt roczny = premium + OOP oraz break-even.",
+     "paid": "prawdopodobnie darmowe (niezweryfikowane)",
+     "notes": "Strony nie otwarto; obsługa dwóch ofert pracodawców, tierów i timingu zdarzeń niezweryfikowana."
+    },
+    {
+     "name": "HSA vs PPO vs FSA Calculator (vscalculator.com)",
+     "url": "https://vscalculator.com/calculators/hsa-vs-ppo-vs-fsa",
+     "type": "partial",
+     "features_claimed": "Wg tytułu i search-summary: porównanie HSA/PPO/FSA.",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "Health Plan Comparison Tool: HDHP vs PPO Calculator (useacalculator.com)",
+     "url": "https://useacalculator.com/growth-career/which-health-plan-is-right-for-me",
+     "type": "partial",
+     "features_claimed": "Wg search-summary: porównanie kosztu HDHP vs PPO dla sytuacji użytkownika (2026).",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "Health Insurance Calculator — HMO vs PPO vs HDHP (getnextool.com)",
+     "url": "https://getnextool.com/tools/health-insurance-calculator",
+     "type": "partial",
+     "features_claimed": "Wg tytułu: porównanie trzech typów planów.",
+     "paid": "wg tytułu darmowe",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "ALEX (Jellyvision) – employer benefits decision support",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: interaktywny doradca wyboru planu u pracodawców; obsługa planów współmałżonka niezweryfikowana.",
+     "paid": "dostępny tylko przez pracodawcę (niezweryfikowane)",
+     "notes": "Zamknięte środowisko, niedostępne dla ruchu z wyszukiwarki."
+    },
+    {
+     "name": "Asystenci AI (ChatGPT, Claude, Gemini, Perplexity)",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Mogą przeliczyć warianty z danych użytkownika; ryzyko błędów w regułach (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Porównanie JEDNEGO HDHP z JEDNYM PPO z break-even jest wielokrotnie rozwiązane: jedno wyszukiwanie extended zwróciło co najmniej 5 darmowych kalkulatorów opisanych jako 2026 (search-summary). Nie zweryfikowano, czy któryś obsługuje kombinacje dwóch pracodawców, tiery i timing zdarzeń.",
+   "gap": "Hipoteza: kombinatoryka dwóch ofert pracodawców (tiery, surcharge, opt-out), timing zdarzeń względem roku planu i scenariusze probabilistyczne. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (1 zapytanie extended o kalkulatory HDHP/PPO, bez zapytań o 'spouse plan' i 'dual coverage'); pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: gęsta podaż kalkulatorów HDHP/PPO z etykietą 2026 sugeruje popyt wyszukiwania (search-summary), ale nie jest pomiarem. Liczba gospodarstw z dwiema ofertami pracodawców nie została zweryfikowana (hipoteza). Wolumen promptów w asystentach nieznany.",
+   "ad_environment": "Ubezpieczenia zdrowotne, dostawcy HSA, telemedycyna, apteki; szczyt w IV kwartale (hipoteza co do stawek).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Realna integracja (kombinacje, timing, scenariusze), ale rdzeń jest zatłoczony przez kalkulatory 2025–2026. Trzeba sprawdzić zapytania 'spouse surcharge calculator', 'both spouses employer insurance which plan' i narzędzia employer decision support. Uwaga: budżet wyszukiwań wyczerpał się po 4 zapytaniach, wykonano 1 wyszukiwanie konkurencji zamiast 2–4.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G7-02",
+   "name_en": "ACA Subsidy Cliff & MAGI Planner (Roth conversions, bronze-HSA vs silver vs gold)",
+   "family": "Early retirement health bridge & MAGI cliffs (ACA subsidy cliff, IRMAA, Medicare transition)",
+   "user_and_moment": "Wcześniejszy emeryt w wieku 55–64 lat lub samozatrudniony, który kupuje plan na Marketplace. Moment: IV kwartał, przed terminem konwersji Roth (31.12) i w czasie OE, albo przy przejściu na emeryturę.",
+   "sample_prompt_en": "I retired at 58 and buy ACA coverage. Now that the subsidy cliff is back, how much can I Roth-convert this year without losing my premium tax credit, and should I switch to a bronze plan with an HSA?",
+   "decision_problem": "Ile dochodu zrealizować w danym roku (konwersja Roth, zyski kapitałowe, wypłaty z IRA) wobec kosztu utraty PTC i wyższego podatku; jaki poziom planu wybrać (bronze kwalifikujący do HSA od 2026, silver z CSR, gold); ile wpłacić do HSA lub traditional IRA, żeby obniżyć MAGI; jak rozłożyć to do 65. roku życia.",
+   "combined_domains": "Podatek federalny i stanowy, PTC (FPL, applicable percentage, benchmark SLCSP), HSA, wieloletnie konwersje Roth, ryzyko kosztów własnych w planie, IRMAA (2-letni lookback od 63. roku życia), ryzyko legislacyjne.",
+   "variants_compared": "(A) pozostanie poniżej 400% FPL z minimalnymi konwersjami; (B) duża konwersja teraz i świadoma utrata PTC w tym roku; (C) konwersje co drugi rok; (D) bronze + HSA obniżające MAGI i składkę; (E) niski MAGI i silver z CSR (gdy dochód jest blisko 200–250% FPL).",
+   "key_dependencies": "Klif 400% FPL (search-summary: spadek zapisów skoncentrowany powyżej 400% FPL wg KFF); FPL z roku poprzedniego; rozliczenie na Form 8962. Hipoteza / niezweryfikowane: OBBBA zniósł limity zwrotu nadpłaconej APTC od 2026. Dalej: IRMAA od 63. roku życia; dopłaty stanowe; ryzyko przywrócenia ulg (stan na połowę października 2026: brak przedłużenia wg cfhic).",
+   "main_outputs": "Krzywa efektywnej krańcowej stawki (podatek + utracona PTC) w funkcji dodatkowego dochodu; bezpieczny przedział konwersji z marginesem; plan wieloletni do 65 lat; porównanie poziomów planu po podatku; wrażliwość na prognozę dochodu i stopy zwrotu.",
+   "reason_external_site": "Precyzyjny próg i aktualne parametry (applicable percentage, SLCSP dla ZIP, FPL) oraz sekwencja wieloletnia. Asystent może się mylić co do wartości na 2026/2027 i stanu prawnego po wygaśnięciu ulg (hipoteza). Strona daje jawne założenia i wykres klifu.",
+   "data_sources": "Coroczne Rev. Proc. IRS (applicable percentage), FPL HHS, przedziały podatkowe, progi IRMAA, SLCSP per rating area (pliki CMS — hipoteza dostępności), dopłaty stanowe (kilka stanów).",
+   "user_data": "Wiek, stan, ZIP, wielkość gospodarstwa, prognoza dochodu (dywidendy, zyski, emerytury), saldo traditional IRA, planowany wiek przejścia na Medicare, wybrany plan i jego składka brutto.",
+   "nearest_competition": [
+    {
+     "name": "KFF Health Insurance Marketplace Calculator",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: szacuje PTC dla podanego dochodu i lokalizacji; nie optymalizuje dochodu (niezweryfikowane).",
+     "paid": "darmowe (niezweryfikowane)"
+    },
+    {
+     "name": "HealthCare.gov window shopping / plan compare",
+     "url": "brak URL – wiedza modelu, nie wyszukano",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: ceny planów po dopłacie dla podanego dochodu; brak modelu konwersji Roth (niezweryfikowane).",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Boldin (dawniej NewRetirement) / ProjectionLab",
+     "url": "brak URL – wiedza modelu, nie wyszukano",
+     "type": "substitute",
+     "features_claimed": "Wiedza modelu: płatne planery emerytalne z konwersjami Roth; modelowanie PTC i klifu po 2026 niezweryfikowane.",
+     "paid": "freemium/płatne (niezweryfikowane)",
+     "notes": "Mogą być bliskim konkurentem; priorytet do weryfikacji."
+    },
+    {
+     "name": "Arkusze Bogleheads / r/financialindependence",
+     "url": "brak URL – hipoteza",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: arkusze do planowania MAGI i konwersji.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnią zasady i mogą policzyć z podanymi parametrami (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza (nie wyszukano w tej sesji): szacowanie PTC dla danego dochodu jest rozwiązane (KFF, HealthCare.gov), a optymalizacja konwersji Roth częściowo w płatnych planerach. Pełne połączenie nie zostało zweryfikowane.",
+   "gap": "Hipoteza: darmowe narzędzie łączące krańcową stawkę z klifem PTC, konwersje Roth, wybór poziomu planu z HSA i plan wieloletni do 65 lat. Bezpośredniego konkurenta NIE badano (0 wyszukiwań konkurencji z powodu limitu), więc nie można stwierdzić luki; pewność niska.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Bezpośrednie dane o populacji (search-summary): efektuowane zapisy spadły z 21,8 mln do 19,2 mln (KFF), spadek jest skoncentrowany powyżej 400% FPL, składka netto wzrosła z $113 do $178 (AJMC), przedłużenia ulg brak (cfhic, połowa października 2026). Wolumen zapytań o narzędzie niezweryfikowany.",
+   "ad_environment": "Wealth management, brokerage, oprogramowanie podatkowe, ubezpieczenia (hipoteza co do stawek).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "zbadać",
+   "status_reason": "Najmocniejszy kandydat w tej rodzinie: udokumentowana zmiana 2026, sekwencja wieloletnia, wysoka stawka błędu. Przed pilotem trzeba zweryfikować Boldin/ProjectionLab, kalkulator KFF i zapytania 'ACA cliff Roth conversion calculator 2026'. Pilot nie zdąży na OE 2027 (zaczyna się ok. 1.11.2026 — hipoteza), ale planowanie MAGI trwa przez cały rok.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-03",
+   "name_en": "Planned Procedure Timing & Payment Simulator",
+   "family": "Medical procedure timing & financing",
+   "user_and_moment": "Osoba z planowanym zabiegiem, który nie jest nagły (artroskopia, IVF, implanty, zaćma, LASIK, operacja przepukliny), we wrześniu–grudniu albo przed zmianą pracy lub planu.",
+   "sample_prompt_en": "I need knee surgery sometime in the next 6 months. I've already met half my deductible, open enrollment is coming, and I'm considering CareCredit. When should I schedule it and how should I pay?",
+   "decision_problem": "Miesiąc zabiegu (przed czy po resecie deductible), plan na przyszły rok (zmiana w OE) i sposób finansowania: HSA, FSA typu use-it-or-lose-it, plan ratalny szpitala 0%, CareCredit z deferred interest, karta 0% APR, pożyczka osobista. Do tego ewentualnie COBRA przy zmianie pracy.",
+   "combined_domains": "Struktura planu zdrowotnego, kalendarz roku planu, reguły HSA/FSA, koszt kredytu i ryzyko deferred interest, przepływy miesięczne, ryzyko zmiany planu w OE.",
+   "variants_compared": "(A) zabieg w tym roku po częściowym spełnieniu deductible; (B) zabieg w styczniu po zmianie na lepszy plan; (C) zabieg w styczniu na obecnym planie; razy finansowanie: HSA / plan szpitala / CareCredit 12 mies. / pożyczka.",
+   "key_dependencies": "Reset deductible i OOP; zmiana planu w OE; deferred interest naliczany wstecz przy niespłaceniu w terminie (wiedza modelu, niezweryfikowane); HSA tylko przy planie kwalifikującym (bronze kwalifikuje od 2026 — IRS, search-summary); carry-over FSA (limit niezweryfikowany).",
+   "main_outputs": "Koszt całkowity i miesięczny przepływ dla każdej kombinacji miesiąca i finansowania; minimalna rata pozwalająca uniknąć deferred interest; 'co zmienia wynik' (np. dodatkowe wizyty pooperacyjne w nowym roku planu).",
+   "reason_external_site": "Decyzja zależy od czasu i od konkretnej polisy. Asystent poda zasady, ale porównanie wariantów z timingiem i kredytem wymaga modelu (hipoteza). Strona może wyraźnie oddzielić aspekt finansowy od klinicznego.",
+   "data_sources": "Dane planu od użytkownika; wycena zabiegu od dostawcy (wpisywana); parametry HSA/FSA raz w roku; warunki typowych produktów finansowania (wpisywane lub domyślne, do weryfikacji).",
+   "user_data": "Deductible i OOP (spełnione i pozostałe), opcje planów na przyszły rok, wycena zabiegu i opieki pooperacyjnej, saldo HSA/FSA, oferty finansowania, budżet miesięczny.",
+   "nearest_competition": [
+    {
+     "name": "CareCredit (kalkulator rat)",
+     "url": "brak URL – wiedza modelu, nie wyszukano",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: kalkulator płatności dla finansowania medycznego; brak timingu roku planu (niezweryfikowane).",
+     "paid": "darmowe narzędzie, produkt kredytowy"
+    },
+    {
+     "name": "Szpitalne estymatory cen / serwisy price transparency (np. Turquoise Health, FAIR Health Consumer)",
+     "url": "brak URL – wiedza modelu, nie wyszukano",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: szacunek ceny zabiegu; bez finansowania i timingu (niezweryfikowane).",
+     "paid": "darmowe (niezweryfikowane)"
+    },
+    {
+     "name": "Kalkulatory HDHP vs PPO (np. healthplancompare.app)",
+     "url": "https://healthplancompare.app/",
+     "type": "partial",
+     "features_claimed": "Wg search-summary: roczny koszt planu i break-even; timing zabiegu niezweryfikowany.",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnią zasady deductible i deferred interest (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: szacunek ceny zabiegu i rata kredytu są dostępne osobno. Połączenie z timingiem roku planu nie zostało zweryfikowane.",
+   "gap": "Hipoteza: timing względem roku planu, zmiana planu w OE i finansowanie w jednym modelu. Wyszukiwania konkurencji NIE wykonano (limit); pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie (wnioskowanie, hipoteza): przesunięcie do bronze i wzrost deductible o ok. $1,000 w 2026 (AJMC) zwiększa ekspozycję na koszty własne. Brak danych o wolumenie.",
+   "ad_environment": "Finansowanie medyczne, kliniki (LASIK, dental, IVF), ubezpieczenia dentystyczne i wzrokowe (hipoteza); największa synergia z healthscorer.com.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Prawdziwa sekwencja zdarzeń i bliskość tematyczna do healthscorer.com. Trzeba zweryfikować popyt ('when to schedule surgery deductible reset', Reddit) i konkurencję. Obowiązkowe zastrzeżenie: tylko zabiegi planowe, nie należy odkładać leczenia ze wskazań medycznych.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-04",
+   "name_en": "Inherited IRA Withdrawal Planner with Life-Event Coordination",
+   "family": "Inheritance decisions (inherited IRA 10-year rule, inherited house)",
+   "user_and_moment": "Spadkobierca niebędący małżonkiem, w wieku 40–62 lat, w 1.–3. roku okna 10-letniego, przed złożeniem zeznania lub po pierwszym piśmie od custodiana o RMD.",
+   "sample_prompt_en": "I inherited a $600k traditional IRA from my dad, who was already taking RMDs. I plan to retire at 60 in four years and my kids start college in 2028. How should I spread withdrawals over the 10 years?",
+   "decision_problem": "Harmonogram wypłat w ciągu 10 lat (z obowiązkowymi RMD w latach 1–9, jeśli właściciel zmarł po RBD), skoordynowany ze zmianami dochodu spadkobiercy: emerytura, własne konwersje Roth, lata liczone do FAFSA, klif ACA przy wcześniejszej emeryturze, IRMAA.",
+   "combined_domains": "Reguły RMD dla odziedziczonych kont, wieloletnie przedziały podatkowe, klif PTC na Marketplace, FAFSA SAI (dochód z wypłat — hipoteza co do mechaniki lat bazowych), IRMAA z 2-letnim lookbackiem, podatek stanowy i ewentualna przeprowadzka.",
+   "variants_compared": "Równe wypłaty; minimum RMD i reszta w roku 10; bracket-filling; front-load przed emeryturą; koordynacja z konwersjami Roth i latami FAFSA.",
+   "key_dependencies": "Data śmierci względem RBD (search-summary: z RMD w latach 1–9 lub bez); status EDB; tabela Single Life; kary za brak RMD (niezweryfikowane); różnice dla Roth (w search-summary źródła się różnią).",
+   "main_outputs": "Harmonogram roczny, łączny podatek (nominalny i PV), wpływ na PTC, SAI i IRMAA w poszczególnych latach, wrażliwość na stopę zwrotu i zmianę stawek.",
+   "reason_external_site": "Model wieloletni z wieloma progami. Asystent zrobi uproszczenie, a narzędzie pokaże przebieg roczny i wrażliwość.",
+   "data_sources": "Tabele IRS (Single Life Expectancy), przedziały podatkowe, progi IRMAA, FPL, formuła FAFSA SAI — aktualizacja raz w roku.",
+   "user_data": "Saldo i typ konta, data śmierci i wiek właściciela, czy właściciel pobierał RMD, dochody spadkobiercy w kolejnych latach, plany emerytalne, lata studiów dzieci, stan.",
+   "nearest_competition": [
+    {
+     "name": "Inherited IRA Calculator — SECURE Act 10-Year Rule (takehometax.com)",
+     "url": "https://www.takehometax.com/tools/inherited-ira-calculator",
+     "type": "partial",
+     "features_claimed": "Wg search-summary: porównuje obok siebie strategie even-annual, defer-to-year-10 i strategic bracket-filling.",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto; uwzględnienie ACA, FAFSA i IRMAA niezweryfikowane. Najbliższy konkurent dla rdzenia."
+    },
+    {
+     "name": "Inherited IRA 10-Year Rule Calculator (onetopstop.insure)",
+     "url": "https://www.onetopstop.insure/calculators/inherited-ira-10-year-rmd",
+     "type": "partial",
+     "features_claimed": "Wg search-summary: porównuje równe wypłaty, back-loading i front-loading (50% w roku 1).",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "Mezzi – blog i aplikacja",
+     "url": "https://www.mezzi.com/blog/inherited-ira-10-year-rule-withdrawal-trap-high-earning-heirs",
+     "type": "substitute",
+     "features_claimed": "Wg search-summary: artykuł o pułapce roku 10, w tym o IRMAA i progach.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Plancorp (doradca) – przewodnik",
+     "url": "https://www.plancorp.com/blog/inherited-ira-withdrawal-strategies-10-year-rule",
+     "type": "substitute",
+     "features_claimed": "Wg search-summary: strategie wypłat (bracket-filling, rozkładanie).",
+     "paid": "usługa doradcza"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnią zasady 10-year rule; uproszczone harmonogramy (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Rdzeń jest częściowo, może prawie bezpośrednio, rozwiązany: co najmniej 2 darmowe kalkulatory porównują strategie wypłat względem przedziałów podatkowych (search-summary).",
+   "gap": "Hipoteza: koordynacja z ACA, FAFSA i IRMAA oraz ze zdarzeniami życiowymi spadkobiercy. Nie zweryfikowano, czy konkurenci to mają. Luka może być kosmetyczna dla użytkowników bez tych zdarzeń.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Pośrednie: co najmniej 8 przewodników i kalkulatorów z etykietą 2026 w jednym wyszukiwaniu (search-summary), czyli popyt informacyjny. Wolumen niezweryfikowany.",
+   "ad_environment": "Wealth management, przygotowanie zeznań, lead-gen doradców (hipoteza co do stawek).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "później",
+   "status_reason": "Rdzeń jest już obsłużony. Ma sens tylko jako moduł wspólnego silnika MAGI (G7-02), a nie samodzielny produkt. Wykonano 1 wyszukiwanie konkurencji (limit budżetu).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G7-05",
+   "name_en": "Inherited House Decision: Keep, Rent, Sell or Buy Out Siblings",
+   "family": "Inheritance decisions (inherited IRA 10-year rule, inherited house)",
+   "user_and_moment": "Rodzeństwo (2–4 osoby), które dziedziczy dom rodziców, 1–6 miesięcy po śmierci, w trakcie probate, gdy wysokie są koszty utrzymania pustego domu.",
+   "sample_prompt_en": "My brother and I inherited our mom's house. He wants to rent it out, I want to sell. Can one of us buy the other out, and what are the tax consequences of each option?",
+   "decision_problem": "Sprzedać teraz (w stanie obecnym czy po remoncie), wynajmować przez N lat, wykup udziałów przez jednego spadkobiercę (refinans) czy zamieszkanie spadkobiercy (zwolnienie 121 po 2 latach).",
+   "combined_domains": "Stepped-up basis, zyski kapitałowe, depreciation recapture przy wynajmie, zwolnienie 121, ponowna wycena podatku od nieruchomości (np. Prop 19 w CA — niezweryfikowane), koszty utrzymania w probate, refinans do wykupu, rynek najmu, podział między współwłaścicieli o różnych stawkach podatkowych, płynność.",
+   "variants_compared": "(A) sprzedaż teraz w stanie obecnym; (B) remont i sprzedaż; (C) wspólny wynajem przez 3–5 lat i sprzedaż; (D) wykup przez jednego spadkobiercę z refinansem; (E) zamieszkanie przez spadkobiercę i sprzedaż po 2+ latach.",
+   "key_dependencies": "Wartość w dniu śmierci (wycena), istniejąca hipoteka (ochrona przed due-on-sale — wiedza modelu, niezweryfikowane), stawki podatkowe każdego spadkobiercy, koszty remontu, czas sprzedaży, czynsz rynkowy, reguły stanowe.",
+   "main_outputs": "Wartość netto po podatku dla KAŻDEGO spadkobiercy w każdej opcji, przepływy roczne, break-even czynszu, cena wykupu fair value, wrażliwość na cenę, czas i stopy.",
+   "reason_external_site": "Decyzja wielostronna (osobno dla każdego spadkobiercy) i wieloletnia. Asystent poda zasady stepped-up basis, ale pełne porównanie dla kilku osób wymaga modelu (hipoteza).",
+   "data_sources": "Federalne reguły podatkowe (stabilne), reguły stanowej ponownej wyceny w kilku stanach, czynsze (od użytkownika lub HUD FMR — hipoteza), koszty transakcyjne (domyślne do edycji), stopy kredytowe (publiczne, cotygodniowe).",
+   "user_data": "Wycena domu, hipoteka, liczba spadkobierców i ich stawki podatkowe, koszty remontu, oczekiwany czynsz, preferencje i horyzont.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory 'rent vs sell' (portale nieruchomości i finansowe)",
+     "url": "brak URL – hipoteza, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: porównanie sprzedaży z wynajmem dla jednego właściciela; bez stepped-up basis i podziału między spadkobierców.",
+     "paid": "darmowe (hipoteza)"
+    },
+    {
+     "name": "Treści skupujących domy i iBuyerów ('sell inherited house fast')",
+     "url": "brak URL – hipoteza",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: lead-gen do szybkiej sprzedaży; bez neutralnego porównania.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Prawnicy spadkowi / CPA",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Indywidualna porada.",
+     "paid": "płatne"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnią stepped-up basis i opcje (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: osobne kalkulatory rent vs sell i treści informacyjne. Nie zweryfikowano.",
+   "gap": "Hipoteza: podział dla wielu spadkobierców, finansowanie wykupu, stepped-up basis, recapture i zwolnienie 121 w jednym modelu. Wyszukiwanie konkurencji przerwał limit budżetu; pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (zapytanie 'inherited house keep rent or sell calculator stepped-up basis' nie zostało wykonane z powodu limitu).",
+   "ad_environment": "Nieruchomości, kredyt hipoteczny, zarządzanie najmem, prawo spadkowe (hipoteza: silne kategorie).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Realna integracja (wiele stron, podatki, finansowanie, czas) i silne środowisko reklamowe. Wymaga weryfikacji konkurencji i popytu (Reddit r/inheritance, r/personalfinance, 'buy out sibling inherited house calculator').",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-06",
+   "name_en": "Divorce House Decision: Keep, Buy Out, Offset or Sell",
+   "family": "Divorce financial decisions",
+   "user_and_moment": "Małżonek w trakcie negocjacji ugody rozwodowej, przed mediacją lub spotkaniem z prawnikiem, który chce zatrzymać dom (często ze względu na dzieci).",
+   "sample_prompt_en": "We're divorcing. I want to keep the house for the kids, but can I afford to refinance and buy out my spouse, or should I trade my share of his 401(k) instead?",
+   "decision_problem": "Zatrzymać dom (refinans i wykup gotówką albo offset aktywami emerytalnymi), sprzedać przed lub po finalizacji rozwodu czy odroczyć sprzedaż (np. do ukończenia szkoły przez dziecko).",
+   "combined_domains": "Zdolność kredytowa (DTI, alimenty i child support jako dochód), utrata niskiej obecnej stopy, ekwiwalencja 401(k) pre-tax wobec equity domu (tax-effecting), zwolnienie 121 ($500k vs $250k, timing), koszty utrzymania przy jednym dochodzie, horyzont.",
+   "variants_compared": "(A) refinans i wykup gotówką; (B) zatrzymanie domu w zamian za mniejszy udział w 401(k) (QDRO offset); (C) sprzedaż przed rozwodem; (D) sprzedaż po rozwodzie; (E) odroczona sprzedaż ze wspólną własnością.",
+   "key_dependencies": "Obecna stopa vs nowa, wycena, podatek od przyszłych wypłat z 401(k), status 121, reguły stanowe (community property — hipoteza), standardy DTI pożyczkodawców (hipoteza).",
+   "main_outputs": "Czy użytkownik kwalifikuje się do refinansu (szacunek), rata wobec budżetu, wartość netto po podatku dla obu stron w każdym wariancie, ryzyko płynności, wrażliwość na stopy i ceny.",
+   "reason_external_site": "Decyzja liczbowa i emocjonalna. Asystent poda zasady i odeśle do prawnika. Narzędzie daje neutralne porównanie przed drogą konsultacją (hipoteza).",
+   "data_sources": "Stopy kredytowe (publiczne, cotygodniowe), limity 121, typowe progi DTI, dane od użytkownika.",
+   "user_data": "Wycena, saldo i stopa hipoteki, dochody po rozwodzie, alimenty i child support, salda kont emerytalnych, stawki podatkowe, horyzont.",
+   "nearest_competition": [
+    {
+     "name": "FinPlan Divorce Planner (oprogramowanie dla CDFA)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "substitute",
+     "features_claimed": "Wiedza modelu: profesjonalne modelowanie finansów rozwodowych dla specjalistów; dostępność dla konsumentów niezweryfikowana.",
+     "paid": "płatne (niezweryfikowane)"
+    },
+    {
+     "name": "Kalkulatory wykupu / refinansu u pożyczkodawców",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: rata i kwota wykupu; bez offsetu 401(k) i podatków.",
+     "paid": "darmowe (hipoteza)"
+    },
+    {
+     "name": "CDFA / mediatorzy / prawnicy",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Indywidualna analiza.",
+     "paid": "płatne"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Ogólne wskazówki z zastrzeżeniami prawnymi (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: profesjonalne oprogramowanie rozwiązuje to dla CDFA; konsumentom zostają kalkulatory częściowe. Niezweryfikowane.",
+   "gap": "Hipoteza: konsumenckie narzędzie łączące zdolność do refinansu, offset aktywów pre-tax/after-tax i timing 121. Wyszukiwanie przerwane limitem; pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza / niezweryfikowane (zapytanie 'divorce keep the house vs buyout vs sell calculator' nie zostało wykonane z powodu limitu).",
+   "ad_environment": "Prawo rodzinne, mediacja, refinansowanie (hipoteza). Polityki reklamowe dla treści wrażliwych niezweryfikowane.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Rzeczywista integracja (refinans, offset, podatki, timing), ale wysokie ryzyko treści i koszt eksperta (CDFA). Priorytet niższy niż G7-02, G7-05 i G7-07. Wymaga weryfikacji konkurencji.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-07",
+   "name_en": "Roof Replacement + FORTIFIED / Wind Mitigation Payback Simulator",
+   "family": "Disaster hardening & catastrophe insurance (FORTIFIED roof, wind mitigation, wildfire, flood)",
+   "user_and_moment": "Właściciel domu w strefie huraganów lub gradu (AL, LA, FL, SC, NC, TX, OK) z dachem w wieku 12–20 lat, po piśmie od ubezpieczyciela (przejście na ACV, podwyżka, odmowa odnowienia) albo po ogłoszeniu rundy grantów.",
+   "sample_prompt_en": "My roof is 17 years old and my insurer is switching me to actual cash value. Should I replace it now with a standard roof, pay extra for a FORTIFIED roof to get the insurance discount, or wait until I sell in 3 years?",
+   "decision_problem": "Wymiana teraz na dach standardowy, na FORTIFIED Roof (ewentualnie Silver/Gold), naprawa i odroczenie, czekanie na grant stanowy albo sprzedaż domu w horyzoncie.",
+   "combined_domains": "Koszt dachu i dopłata za FORTIFIED, rabat ubezpieczeniowy (część wiatrowa składki), grant stanowy (losowania, limity), ACV vs RCV i oczekiwana strata, deductible huraganowy, wpływ na sprzedaż, finansowanie, ulgi podatkowe stanowe (hipoteza).",
+   "variants_compared": "(A) dach standardowy teraz; (B) FORTIFIED Roof teraz za własne środki; (C) zgłoszenie do grantu i czekanie (z ryzykiem szkody w międzyczasie); (D) naprawa i sprzedaż za 3 lata; (E) FORTIFIED z finansowaniem.",
+   "key_dependencies": "Prawdopodobieństwo szkody (wiatr i grad), procent rabatu zależny od stanu i ubezpieczyciela, termin grantu, reguły wieku dachu (ACV), horyzont sprzedaży, stopy procentowe.",
+   "main_outputs": "NPV i payback każdej opcji w horyzoncie sprzedaży, oczekiwana strata, wrażliwość na rabat i prawdopodobieństwo szkody, horyzont break-even, ryzyko czekania na grant.",
+   "reason_external_site": "Lokalne programy, timing i ryzyko; asystent może nie znać aktualnych rund grantów ani rabatów. Narzędzie z jawnymi założeniami (rabat wpisuje użytkownik) liczy payback (hipoteza).",
+   "data_sources": "Wiedza modelu, niezweryfikowane: IBHS FORTIFIED, Strengthen Alabama Homes, Louisiana Fortify Homes Program, inspekcje wind mitigation na Florydzie, filingi rabatów w departamentach ubezpieczeń. Aktualizacja kwartalna lub roczna.",
+   "user_data": "Wiek i powierzchnia dachu, wyceny (standard i FORTIFIED), obecna składka i jej część wiatrowa, rabat z oferty ubezpieczyciela, deductible, horyzont sprzedaży, kwalifikowalność do grantu.",
+   "nearest_competition": [
+    {
+     "name": "IBHS FORTIFIED (informacje programu)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "substitute",
+     "features_claimed": "Wiedza modelu: standard i informacje o korzyściach; model payback niezweryfikowany.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Strengthen Alabama Homes / Louisiana Fortify Homes Program",
+     "url": "brak URL – wiedza modelu, nie wyszukano",
+     "type": "substitute",
+     "features_claimed": "Wiedza modelu: granty na FORTIFIED Roof; kwalifikowalność i rundy niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Strony dekarzy 'FORTIFIED roof cost'",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: koszt i deklarowane oszczędności; brak neutralnego modelu.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Ogólne zasady i ewentualne wyszukanie programów (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: informacje o programach i rabatach istnieją osobno. Neutralnego modelu payback z horyzontem sprzedaży nie zweryfikowano.",
+   "gap": "Hipoteza: integracja kosztu, rabatu, grantu, oczekiwanej straty i horyzontu sprzedaży. Wyszukiwanie przerwane limitem; pewność bardzo niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (zapytanie 'FORTIFIED roof insurance discount calculator payback' nie zostało wykonane z powodu limitu).",
+   "ad_environment": "Dekarze, okna i okiennice, ubezpieczenia domu, finansowanie remontów (hipoteza: bardzo silne kategorie).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wysoka komercyjność i naturalne powiązanie z przykładem właściciela (dach + solar), co pozwala współdzielić model. Ryzyko: wysoki koszt utrzymania danych stanowych i ubezpieczeniowych, więc rabaty powinien wpisywać użytkownik. Wymaga weryfikacji konkurencji.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-08",
+   "name_en": "Wildfire Hardening vs Insurance Path Simulator (California FAIR Plan exit)",
+   "family": "Disaster hardening & catastrophe insurance (FORTIFIED roof, wind mitigation, wildfire, flood)",
+   "user_and_moment": "Właściciel domu w strefie WUI w Kalifornii, po odmowie odnowienia, na FAIR Plan + DIC, który rozważa hardening, żeby wrócić do ubezpieczyciela dopuszczonego.",
+   "sample_prompt_en": "My insurer dropped me and I'm on the California FAIR Plan. If I do ember-resistant vents, a Class A roof and Zone 0 clearing, can I get back to a regular insurer and does it pay off?",
+   "decision_problem": "Pakiet hardeningu (Zone 0, otwory wentylacyjne, dach, okna) wobec pozostania na FAIR Plan + DIC, zmiany ubezpieczyciela lub sprzedaży domu.",
+   "combined_domains": "Koszty hardeningu, rabaty (Safer from Wildfires — wiedza modelu, niezweryfikowane), dostępność ubezpieczycieli, składki FAIR + DIC, ryzyko szkody, wartość domu.",
+   "variants_compared": "(A) brak zmian, FAIR + DIC; (B) minimalny pakiet; (C) pełny pakiet i próba powrotu do ubezpieczyciela; (D) sprzedaż.",
+   "key_dependencies": "Zachowanie ubezpieczycieli (wiedza modelu: reformy rynku w Kalifornii — niezweryfikowane), których nie da się wiarygodnie zamodelować; lokalne ryzyko pożarowe.",
+   "main_outputs": "Koszt pakietu, różnica składek przy założonej akceptacji, payback, wrażliwość na prawdopodobieństwo powrotu do rynku.",
+   "reason_external_site": "Lokalne i zmienne dane. Model byłby zbyt zależny od założeń o akceptacji przez ubezpieczyciela.",
+   "data_sources": "California Department of Insurance, FAIR Plan, wyceny wykonawców — wiedza modelu, niezweryfikowane.",
+   "user_data": "Lokalizacja, składki, wyceny prac, oferta ubezpieczyciela.",
+   "nearest_competition": [
+    {
+     "name": "California Department of Insurance – Safer from Wildfires (informacje)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "substitute",
+     "features_claimed": "Wiedza modelu: lista działań kwalifikujących do rabatów; brak modelu payback (niezweryfikowane).",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Brokerzy ubezpieczeniowi w Kalifornii",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Indywidualne oferty.",
+     "paid": "prowizja"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Ogólne zasady (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: informacje regulacyjne są dostępne; modelu nie zweryfikowano.",
+   "gap": "Hipoteza: payback hardeningu z ryzykiem dostępności ubezpieczenia. Kluczowa zmienna (akceptacja przez ubezpieczyciela) nie jest modelowalna z danych publicznych.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
+   "ad_environment": "Wykonawcy, ubezpieczenia (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Duża zmienność regulacyjna, jeden stan, wynik zależny od zmiennej spoza modelu (akceptacja ubezpieczyciela), wysoki koszt utrzymania. Wrócić po uruchomieniu wspólnego silnika home capex (G7-07).",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-09",
+   "name_en": "Pet Insurance Lifetime Cost Simulator (insure now vs later vs self-insure)",
+   "family": "Pet insurance vs self-insure",
+   "user_and_moment": "Nowy właściciel szczeniaka lub kociaka albo właściciel starszego zwierzęcia po pierwszym wysokim rachunku od weterynarza.",
+   "sample_prompt_en": "Is pet insurance worth it for my 1-year-old Labrador, or should I just put $60 a month into a savings account? What if I wait a few years?",
+   "decision_problem": "Ubezpieczyć teraz, później (z ryzykiem wyłączeń pre-existing), wykupić polisę accident-only, zbudować fundusz własny lub wybrać wellness plan.",
+   "combined_domains": "Krzywa wzrostu składki z wiekiem, ryzyko rasowe, typ deductible (roczny vs per-condition), wyłączenia pre-existing, rozkład kosztów leczenia, fundusz awaryjny.",
+   "variants_compared": "(A) pełna polisa od teraz; (B) accident-only; (C) fundusz własny; (D) polisa od wieku N (z wyłączeniami); (E) fundusz z finansowaniem awaryjnym.",
+   "key_dependencies": "Wzrost składki z wiekiem (dane zastrzeżone), prawdopodobieństwo dużego rachunku, wyłączenia przy opóźnionym zapisie.",
+   "main_outputs": "Rozkład łącznego kosztu w ciągu życia zwierzęcia i prawdopodobieństwo, że fundusz nie wystarczy na rachunek X.",
+   "reason_external_site": "Umiarkowany: modelowanie probabilistyczne, ale asystent da zadowalającą odpowiedź jakościową.",
+   "data_sources": "Wyceny od użytkownika, zakresy kosztów leczenia (hipoteza), krzywe składek (zastrzeżone).",
+   "user_data": "Gatunek, rasa, wiek, wycena polisy, budżet, tolerancja ryzyka.",
+   "nearest_competition": [
+    {
+     "name": "Serwisy porównawcze i blogi afiliacyjne 'is pet insurance worth it'",
+     "url": "brak URL – hipoteza, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: kalkulatory opłacalności i rankingi ubezpieczycieli.",
+     "paid": "darmowe (afiliacja)"
+    },
+    {
+     "name": "Silniki wycen ubezpieczycieli zwierząt",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: wycena składki; bez porównania z samoubezpieczeniem.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Odpowiedź jakościowa z regułą kciuka (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: wiele kalkulatorów 'worth it' na stronach afiliacyjnych; niezweryfikowane.",
+   "gap": "Hipoteza: modelowanie wzrostu składki z wiekiem i wyłączeń przy opóźnionym zapisie. Mało prawdopodobne, by stanowiło przewagę wartą ruchu.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "low",
+   "demand_evidence": "Hipoteza / niezweryfikowane (zapytanie 'pet insurance vs self insure savings account calculator' nie zostało wykonane z powodu limitu).",
+   "ad_environment": "Ubezpieczenia zwierząt, weterynaryjne finansowanie, karma (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Kuszące (popyt, afiliacja), ale integracja jest płytka, asystenci odpowiadają sami, a krzywe składek są zastrzeżone. Najwyżej tani moduł po zbudowaniu wspólnego silnika 'insure vs self-insure'.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-10",
+   "name_en": "Long-Term Care Funding Path Simulator",
+   "family": "Long-term care & elder care funding",
+   "user_and_moment": "Osoba lub para w wieku 50–65 lat po ofercie agenta LTC albo po doświadczeniu opieki nad rodzicem.",
+   "sample_prompt_en": "We're 58 and 56 with $1.2M saved. Should we buy traditional long-term care insurance, a hybrid life/LTC policy, or just self-fund care if we need it?",
+   "decision_problem": "Tradycyjne LTC, hybryda life/LTC, samofinansowanie, częściowe pokrycie (krótka polisa) lub planowanie pod Medicaid.",
+   "combined_domains": "Prawdopodobieństwo i czas trwania potrzeby opieki, inflacja kosztów opieki, ryzyko podwyżek składek, ochrona współmałżonka, podatki, dziedziczenie.",
+   "variants_compared": "(A) samofinansowanie; (B) tradycyjna polisa (różne okresy świadczeń); (C) hybryda; (D) krótka polisa i fundusz; (E) program stanowy, jeśli istnieje (wiedza modelu: WA Cares — niezweryfikowane).",
+   "key_dependencies": "Rozkład zdarzeń opieki, podwyżki składek, stopy zwrotu, stan zdrowia.",
+   "main_outputs": "Rozkład wyczerpania aktywów, oczekiwany majątek dla spadkobierców, wrażliwość na podwyżki składek.",
+   "reason_external_site": "Model probabilistyczny; asystent zrobi tylko jakościowe porównanie.",
+   "data_sources": "Koszty opieki per stan (wiedza modelu: CareScout/Genworth — licencja niezweryfikowana), rozkłady z badań (hipoteza), oferty użytkownika.",
+   "user_data": "Wiek, aktywa, dochody, oferty polis, stan zamieszkania.",
+   "nearest_competition": [
+    {
+     "name": "Genworth/CareScout Cost of Care (kalkulator kosztów)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: koszty opieki per region; bez porównania sposobów finansowania (niezweryfikowane).",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Narzędzia agentów i ubezpieczycieli LTC",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: wyceny i ilustracje polis, z nastawieniem sprzedażowym.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Doradcy finansowi / płatne planery",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: modelowanie scenariuszy LTC.",
+     "paid": "płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: koszty opieki i ilustracje polis są dostępne osobno.",
+   "gap": "Hipoteza: neutralne porównanie ścieżek finansowania z rozkładem ryzyka. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
+   "ad_environment": "Ubezpieczenia seniorów, opieka (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Wysokie ryzyko błędu, koszt aktuarialnego przeglądu i rynek zdominowany przez agentów. Odbiorcy rzadziej trafiają z konkretnym, pilnym zadaniem (hipoteza).",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-11",
+   "name_en": "Freelancer Entity, Retirement & Health Stack Optimizer",
+   "family": "Freelancer / 1099 entity, retirement account & health coverage stack",
+   "user_and_moment": "Freelancer lub konsultant z dochodem netto $80–250k, w IV kwartale (planowanie przed końcem roku, termin wyboru S-corp na następny rok) albo po pierwszym roku na 1099.",
+   "sample_prompt_en": "I'm a freelance designer netting about $140k in Texas. Should I elect S-corp, and should I use a Solo 401(k) or SEP-IRA? I also buy my own ACA plan.",
+   "decision_problem": "Działalność jednoosobowa vs S-corp (z wysokością reasonable salary), Solo 401(k) vs SEP-IRA i wysokość wkładów, sposób odliczenia ubezpieczenia zdrowotnego oraz interakcja z PTC na Marketplace.",
+   "combined_domains": "SE tax, FICA od pensji w S-corp, koszty payroll i księgowości, QBI (199A; wiedza modelu: utrwalony przez OBBBA — niezweryfikowane), limity Solo 401(k) (część pracownicza i pracodawcy) vs SEP, ubezpieczenie zdrowotne udziałowca 2%, MAGI/PTC, opłaty stanowe i PTET.",
+   "variants_compared": "(A) jednoosobowa + SEP; (B) jednoosobowa + Solo 401(k); (C) S-corp + Solo 401(k) przy 2–3 poziomach pensji; (D) S-corp + SEP; wszystko z PTC i bez niej.",
+   "key_dependencies": "Pensja w S-corp ogranicza wkład pracodawcy do 401(k), ale obniża FICA; QBI zależy od pensji; MAGI decyduje o PTC (klif 400% FPL — KFF, search-summary); koszty stałe S-corp.",
+   "main_outputs": "Dochód po podatkach i składkach w każdym wariancie, łączne oszczędności emerytalne, próg dochodu, od którego S-corp się opłaca, 'co zmienia wynik' (stan, poziom pensji, PTC).",
+   "reason_external_site": "Wiele zależnych od siebie reguł. Asystent poda regułę kciuka, a narzędzie pokaże interakcje na liczbach (hipoteza).",
+   "data_sources": "Parametry IRS (raz w roku), limity wkładów, przedziały, opłaty stanowe (na początek kilka stanów), parametry PTC.",
+   "user_data": "Dochód netto, stan, koszty, plan zdrowotny i jego składka, wielkość gospodarstwa, docelowy poziom oszczędzania.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory oszczędności z S-corp (CPA, payroll, fintech)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: szacunek oszczędności na SE tax przy danej pensji; integracja z 401(k) i PTC niezweryfikowana.",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "Kalkulatory Solo 401(k) i SEP u brokerów",
+     "url": "brak URL – wiedza modelu",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: maksymalny wkład dla danego dochodu i formy prawnej.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "CPA / płatne platformy planowania podatkowego",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Indywidualne planowanie.",
+     "paid": "płatne"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Reguła kciuka dla S-corp i ogólne porównanie kont (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: osobne kalkulatory S-corp i Solo 401(k)/SEP są powszechne. Niezweryfikowane w tej sesji.",
+   "gap": "Hipoteza: interakcja pensji S-corp z limitem 401(k), QBI i MAGI/PTC w jednym modelu. Wyszukiwanie przerwane limitem; pewność niska.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza (wiedza modelu: duża populacja z dochodem 1099). Pośrednio: samozatrudnieni na Marketplace są dotknięci klifem PTC (KFF, search-summary).",
+   "ad_environment": "Payroll, księgowość, bankowość firmowa, brokerzy, oprogramowanie podatkowe (hipoteza: bardzo silne B2B/B2C).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Silna komercyjność i wspólny silnik z G7-02. Ryzyko: gęsta konkurencja częściowa w kalkulatorach S-corp i koszt przeglądu CPA. Wyróżnikiem musi być integracja z ACA/MAGI i limitami 401(k), a nie sam kalkulator S-corp.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-12",
+   "name_en": "Childcare vs Stay-Home vs Part-Time Household Simulator",
+   "family": "Childcare vs one parent home vs part-time (work-family economics)",
+   "user_and_moment": "Rodzice przed końcem urlopu rodzicielskiego albo przed narodzinami drugiego dziecka.",
+   "sample_prompt_en": "Daycare for our two kids would cost $3,200 a month. Does it make financial sense for me to keep working full time, go part-time, or stay home until they start school?",
+   "decision_problem": "Pełny etat z opieką płatną, niepełny etat, rezygnacja z pracy jednego rodzica do czasu szkoły albo inne formy opieki (nanny share, au pair).",
+   "combined_domains": "Koszty opieki zależne od wieku dzieci, DCFSA (wiedza modelu: $7,500 od 2026 — niezweryfikowane), CDCTC, CTC, utrata wzrostu zarobków, matchu 401(k) i stażu, ubezpieczenie zdrowotne (przejście na plan małżonka), koszty dojazdów.",
+   "variants_compared": "(A) oboje pełny etat + żłobek; (B) jeden na niepełnym etacie; (C) jeden w domu do przedszkola lub szkoły; (D) nanny share lub au pair.",
+   "key_dependencies": "Ścieżka zarobków po przerwie (silnie założeniowa), koszty opieki per wiek, ulgi podatkowe, zmiana planu zdrowotnego.",
+   "main_outputs": "Przepływy roczne do czasu szkoły, wartość PV utraconych przyszłych zarobków i oszczędności emerytalnych, próg wynagrodzenia, przy którym praca się opłaca.",
+   "reason_external_site": "Model wieloletni; asystent zrobi wersję uproszczoną.",
+   "data_sources": "Koszty opieki (od użytkownika lub z publicznej bazy — wiedza modelu, niezweryfikowane), parametry podatkowe raz w roku.",
+   "user_data": "Dochody, koszty opieki, wiek dzieci, benefity pracodawcy, oczekiwania co do kariery.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory 'cost of working' / 'is daycare worth it'",
+     "url": "brak URL – hipoteza, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: jednoroczne porównanie dochodu netto z kosztem opieki.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Arkusze rodziców (Reddit, blogi)",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Hipoteza.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Proste przeliczenie (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: proste kalkulatory jednoroczne istnieją.",
+   "gap": "Hipoteza: perspektywa wieloletnia z utratą zarobków, emerytury i benefitów. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
+   "ad_environment": "Parenting, opieka nad dziećmi (hipoteza: niskie stawki).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Popyt prawdopodobnie wysoki, ale słaba monetyzacja AdSense, a asystent zrobi wersję uproszczoną sam. Do rozważenia jako moduł wspólnego silnika podatkowo-benefitowego.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-13",
+   "name_en": "Multi-State Relocation Tax, Housing & Insurance Simulator",
+   "family": "Interstate relocation for taxes & cost of living",
+   "user_and_moment": "Emeryt lub pracownik zdalny rozważający przeprowadzkę do 2–4 stanów (np. z NJ do FL, NC lub TN), w fazie planowania na 6–18 miesięcy przed decyzją.",
+   "sample_prompt_en": "We're retiring next year with pensions and Social Security. Would moving from New Jersey to Florida or North Carolina actually save us money once you count property taxes, home insurance and selling costs?",
+   "decision_problem": "Pozostanie w stanie obecnym lub przeprowadzka do jednego z 2–3 stanów, z timingiem sprzedaży i zakupu domu oraz rokiem przejściowym rezydencji.",
+   "combined_domains": "Podatki stanowe według typu dochodu (SS, emerytury, zyski), podatek od nieruchomości, ubezpieczenie domu (rosnące w FL i LA — hipoteza), sales tax, koszty transakcyjne, koszty życia, stanowy podatek od spadków.",
+   "variants_compared": "(A) zostać; (B) stan X; (C) stan Y; z wariantem wynajmu przed zakupem.",
+   "key_dependencies": "Mix dochodów, wartość domu, koszty ubezpieczeń, reguły rezydencji.",
+   "main_outputs": "Różnica kosztów w ciągu 10 lat z kosztami przeprowadzki, break-even, wrażliwość na ubezpieczenie i ceny domów.",
+   "reason_external_site": "Model wieloletni; asystent chętnie da szacunek ogólny.",
+   "data_sources": "Podatki 50 stanów i lokalne, podatki od nieruchomości per hrabstwo, koszty ubezpieczeń i życia — bardzo kosztowne w utrzymaniu.",
+   "user_data": "Dochody według typu, wartość domu, budżet na nowy dom, stany do porównania.",
+   "nearest_competition": [
+    {
+     "name": "SmartAsset / NerdWallet – kalkulatory kosztów życia i podatków stanowych",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: porównanie kosztów życia i podatków między lokalizacjami; integracja kosztów transakcyjnych i ubezpieczeń niezweryfikowana.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Szacunkowe porównanie stanów (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Hipoteza: porównania kosztów życia i podatków stanowych są powszechne.",
+   "gap": "Hipoteza: integracja typu dochodu, ubezpieczeń domu, kosztów transakcyjnych i roku przejściowego. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
+   "ad_environment": "Przeprowadzki, nieruchomości, kredyt hipoteczny, ubezpieczenia (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Gęsta konkurencja częściowa i najwyższy koszt danych. Pary stanów to cienkie warianty, nie odrębne produkty.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-14",
+   "name_en": "College Offer Comparison under 2026 Federal Loan Caps",
+   "family": "College choice & financing (post-2026 federal loan changes)",
+   "user_and_moment": "Rodzic i uczeń w marcu–maju z 2–4 ofertami pomocy finansowej, przed terminem decyzji (zwykle 1 maja — hipoteza).",
+   "sample_prompt_en": "We have aid offers from three colleges. With the new Parent PLUS limits, how would we cover the gap at each school over four years, and which one is really cheapest?",
+   "decision_problem": "Wybór uczelni i strategii finansowania: wkład rodziny, 529, federalne pożyczki z nowymi limitami (wiedza modelu: zmiany OBBBA od 1.07.2026 — niezweryfikowane), pożyczki prywatne, home equity, community college z transferem.",
+   "combined_domains": "Normalizacja ofert (granty vs pożyczki vs praca), koszt w ciągu 4–6 lat z podwyżkami czesnego, luka po limitach pożyczek, plan spłaty (wiedza modelu: RAP — niezweryfikowane), oczekiwane zarobki według kierunku (College Scorecard — wiedza modelu), wpływ na emeryturę rodziców.",
+   "variants_compared": "(A) uczelnia X z pożyczkami federalnymi; (B) uczelnia Y z luką pokrytą pożyczką prywatną; (C) community college + transfer; (D) tańsza uczelnia z wkładem z 529.",
+   "key_dependencies": "Limity Parent PLUS i Grad PLUS (niezweryfikowane), utrzymanie stypendiów, wzrost czesnego, oprocentowanie.",
+   "main_outputs": "Koszt netto w ciągu 4–6 lat, całkowity dług i rata, relacja raty do oczekiwanych zarobków, wpływ na oszczędności emerytalne rodziców.",
+   "reason_external_site": "Normalizacja ofert i model luki finansowania; asystent porówna oferty, jeśli dostanie liczby (hipoteza).",
+   "data_sources": "College Scorecard (wiedza modelu: darmowe API), parametry pożyczek federalnych, oferty od użytkownika.",
+   "user_data": "Oferty pomocy, saldo 529, dochód rodziców, wkład ucznia, kierunek.",
+   "nearest_competition": [
+    {
+     "name": "College Scorecard (U.S. Department of Education)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: koszty netto, zadłużenie i zarobki absolwentów według uczelni i kierunku.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Net Price Calculators uczelni",
+     "url": "brak URL – wiedza modelu",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: szacunek kosztu netto dla jednej uczelni.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "StudentAid.gov Loan Simulator",
+     "url": "brak URL – wiedza modelu",
+     "type": "partial",
+     "features_claimed": "Wiedza modelu: plany spłaty pożyczek federalnych; aktualizacja dla RAP niezweryfikowana.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Płatne narzędzia planowania studiów i kalkulatory pożyczkodawców",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: porównanie ofert, strategie FAFSA, pożyczki prywatne.",
+     "paid": "płatne / darmowe lead-gen"
+    }
+   ],
+   "already_solved": "Hipoteza: koszt netto, dane o zarobkach i symulacja spłaty są dostępne osobno, w tym w narzędziach rządowych.",
+   "gap": "Hipoteza: model luki finansowania po limitach z 2026 r. dla kilku ofert z wpływem na emeryturę rodziców. Wymaga weryfikacji zmian ustawowych i konkurencji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań).",
+   "ad_environment": "Pożyczki prywatne i refinansowanie, 529, korepetycje (hipoteza: wysokie stawki).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Kandydat tylko z kątem limitów pożyczek po 2026 r. (jeśli zostaną potwierdzone); rdzeń porównania ofert jest zatłoczony narzędziami rządowymi i komercyjnymi. Popyt silnie sezonowy.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G7-15",
+   "name_en": "Generic HDHP vs PPO Break-Even Calculator (single plan pair)",
+   "family": "Health insurance plan choice (employer / ACA Marketplace / HSA)",
+   "user_and_moment": "Pracownik w czasie open enrollment z dwiema opcjami planu u jednego pracodawcy.",
+   "sample_prompt_en": "Should I pick the HDHP with HSA or the PPO at work? I'm healthy and 32.",
+   "decision_problem": "Wybór między jednym HDHP a jednym PPO na podstawie składki, deductible i oczekiwanych kosztów.",
+   "combined_domains": "Ubezpieczenie zdrowotne i podatki (HSA); w praktyce jedna dziedzina.",
+   "variants_compared": "HDHP+HSA vs PPO.",
+   "key_dependencies": "Składka, deductible, OOP max, wkład HSA, oczekiwane zużycie.",
+   "main_outputs": "Koszt roczny i break-even.",
+   "reason_external_site": "Słaby: asystent i co najmniej 5 istniejących kalkulatorów robią to samo.",
+   "data_sources": "Dane od użytkownika, limity HSA.",
+   "user_data": "Parametry dwóch planów.",
+   "nearest_competition": [
+    {
+     "name": "Health Plan Compare — HDHP vs PPO Calculator (2026)",
+     "url": "https://healthplancompare.app/calculators/hdhp-vs-ppo",
+     "type": "direct",
+     "features_claimed": "Wg search-summary: porównanie HDHP vs PPO side-by-side na 2026; break-even (dla grupy narzędzi).",
+     "paid": "niezweryfikowane",
+     "notes": "Strony nie otwarto."
+    },
+    {
+     "name": "HSA vs PPO vs FSA Calculator (vscalculator.com)",
+     "url": "https://vscalculator.com/calculators/hsa-vs-ppo-vs-fsa",
+     "type": "direct",
+     "features_claimed": "Wg tytułu: porównanie HSA/PPO/FSA.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Health Insurance Premium vs Deductible Calculator 2026 (usfinancecalculators.com)",
+     "url": "https://usfinancecalculators.com/insurance/health-insurance-premium-vs-deductible-calculator/",
+     "type": "partial",
+     "features_claimed": "Wg tytułu: kompromis składka vs deductible, 2026.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "PEBA Health Plan Comparison Calculator",
+     "url": "https://schsa.centralbank.net/calculators/health-plan-comparison-calculator.html",
+     "type": "partial",
+     "features_claimed": "Wg tytułu: porównanie planów dla pracowników PEBA (Karolina Płd.).",
+     "paid": "darmowe (dla członków; niezweryfikowane)"
+    },
+    {
+     "name": "Cigna – HDHP vs PPO (artykuł)",
+     "url": "https://www.cigna.com/knowledge-center/hdhp-vs-ppo-plans",
+     "type": "substitute",
+     "features_claimed": "Wg search-summary: wyjaśnienie różnic.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystenci AI",
+     "url": "n/d",
+     "type": "substitute",
+     "features_claimed": "Reguła kciuka i przeliczenie (hipoteza).",
+     "paid": "darmowe/płatne"
+    }
+   ],
+   "already_solved": "Tak, wielokrotnie: co najmniej 5 darmowych kalkulatorów z etykietą 2026 w jednym wyszukiwaniu (search-summary).",
+   "gap": "Brak istotnej luki. Brakujące pola kosmetyczne nie tworzą niszy.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Pośrednie: gęsta podaż (search-summary). Wolumen niezweryfikowany.",
+   "ad_environment": "Ubezpieczenia, HSA (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "high",
+   "status": "odrzucić",
+   "status_reason": "Zatłoczone i niezintegrowane (jedna para planów, jedna dziedzina), a asystent łatwo odpowie sam. Może istnieć wyłącznie jako tryb uproszczony G7-01.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G7-16",
+   "name_en": "Benefits Cliff Simulator for Low-Income Families (SNAP / Medicaid / EITC)",
+   "family": "Benefits cliffs for low-income households (SNAP / Medicaid / EITC)",
+   "user_and_moment": "Rodzic o niskich dochodach rozważający podwyżkę, więcej godzin pracy lub nową pracę.",
+   "sample_prompt_en": "If I take a $3/hour raise, will I lose SNAP and my kids' Medicaid and end up worse off?",
+   "decision_problem": "Przyjąć podwyżkę lub dodatkowe godziny czy pozostać na obecnym poziomie dochodu wobec utraty świadczeń.",
+   "combined_domains": "SNAP, Medicaid/CHIP, EITC/CTC, dopłaty do opieki nad dziećmi, dopłaty mieszkaniowe — reguły stanowe.",
+   "variants_compared": "Obecny dochód vs +X vs +Y vs nowa praca.",
+   "key_dependencies": "Dziesiątki reguł stanowych i progów.",
+   "main_outputs": "Dochód netto ze świadczeniami w funkcji dochodu brutto i lokalizacja klifów.",
+   "reason_external_site": "Merytorycznie silny, ale ekonomicznie słaby dla tego modelu biznesowego.",
+   "data_sources": "Reguły programów w 50 stanach — bardzo kosztowne.",
+   "user_data": "Skład gospodarstwa, dochody, stan, świadczenia.",
+   "nearest_competition": [
+    {
+     "name": "Atlanta Fed CLIFF tools (Career Ladder Identifier and Financial Forecaster)",
+     "url": "brak URL – wiedza modelu, nie wyszukano (limit budżetu)",
+     "type": "direct",
+     "features_claimed": "Wiedza modelu: modelowanie klifów świadczeń dla wybranych stanów (niezweryfikowane).",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Stanowe i NGO-owe screenery świadczeń",
+     "url": "brak URL – hipoteza",
+     "type": "partial",
+     "features_claimed": "Hipoteza: sprawdzanie kwalifikowalności.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Hipoteza: częściowo lub bezpośrednio przez narzędzia Atlanta Fed i stanowe.",
+   "gap": "Niezweryfikowane; nawet jeśli luka istnieje, model biznesowy jej nie udźwignie.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza / niezweryfikowane.",
+   "ad_environment": "Słabe (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Bardzo wysoki koszt danych i ryzyko szkody przy błędzie, słabe środowisko reklamowe, a konkurencja instytucjonalna prawdopodobnie istnieje. Nie pasuje do modelu AdSense z automatycznym utrzymaniem.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://healthplancompare.app/calculators/hdhp-vs-ppo",
+   "competitor": "Health Plan Compare — HDHP vs PPO Calculator (2026) (także strona główna https://healthplancompare.app/)",
+   "related_idea": "G7-01, G7-03, G7-15",
+   "features_checked": "Wg search-summary: porównanie HDHP vs PPO side-by-side, aktualizacja na 2026, koszt roczny = premium + OOP, break-even. Wspólna metodyka grupy narzędzi; nie wiadomo, które funkcje ma ta konkretna strona.",
+   "access_limits": "Strony nie otwarto (WebFetch zablokowany); dowód: search-summary. Obsługa dwóch ofert pracodawców, tierów i timingu niezweryfikowana.",
+   "conclusion": "Bezpośredni konkurent dla prostego HDHP vs PPO (G7-15); częściowy dla G7-01.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://vscalculator.com/calculators/hsa-vs-ppo-vs-fsa",
+   "competitor": "HSA vs PPO vs FSA Calculator (vscalculator.com)",
+   "related_idea": "G7-01, G7-15",
+   "features_checked": "Wg tytułu: porównanie HSA, PPO i FSA.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary (tytuł).",
+   "conclusion": "Konkurent częściowy lub bezpośredni dla prostego porównania; potwierdza zatłoczenie rdzenia.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://getnextool.com/tools/health-insurance-calculator",
+   "competitor": "Free Health Insurance Calculator — HMO vs PPO vs HDHP (getnextool.com)",
+   "related_idea": "G7-01, G7-15",
+   "features_checked": "Wg tytułu: porównanie trzech typów planów; wg search-summary grupa narzędzi szacuje koszty z poziomu zużycia razy średni koszt usług.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Konkurent częściowy; prawdopodobnie programatyczny serwis z narzędziami (hipoteza).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://useacalculator.com/growth-career/which-health-plan-is-right-for-me",
+   "competitor": "Health Plan Comparison Tool: HDHP vs PPO Calculator (2026) (useacalculator.com)",
+   "related_idea": "G7-01, G7-15",
+   "features_checked": "Wg tytułu i search-summary: który plan kosztuje mniej dla sytuacji użytkownika (2026).",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Konkurent częściowy lub bezpośredni dla prostego porównania.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://usfinancecalculators.com/insurance/health-insurance-premium-vs-deductible-calculator/",
+   "competitor": "Health Insurance Premium vs Deductible Calculator 2026 (usfinancecalculators.com)",
+   "related_idea": "G7-15",
+   "features_checked": "Wg tytułu: kompromis składka vs deductible.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary (tytuł).",
+   "conclusion": "Konkurent częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://schsa.centralbank.net/calculators/health-plan-comparison-calculator.html",
+   "competitor": "Health Plan Comparison Calculator – PEBA (South Carolina)",
+   "related_idea": "G7-15",
+   "features_checked": "Wg tytułu: porównanie planów dla pracowników objętych PEBA.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary. Prawdopodobnie ograniczony do konkretnych planów pracodawcy (hipoteza).",
+   "conclusion": "Konkurent częściowy w zamkniętym środowisku; przykład narzędzi pracodawców.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+   "url": "https://www.cigna.com/knowledge-center/hdhp-vs-ppo-plans",
+   "competitor": "Cigna Knowledge Center – HDHP vs PPO",
+   "related_idea": "G7-15",
+   "features_checked": "Wg search-summary: artykuł wyjaśniający różnice; brak informacji o narzędziu.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Substytut (treść informacyjna ubezpieczyciela).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://www.takehometax.com/tools/inherited-ira-calculator",
+   "competitor": "Inherited IRA Calculator — SECURE Act 10-Year Rule (takehometax.com)",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: porównuje obok siebie strategie even-annual, defer-to-year-10 i strategic bracket-filling.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary. Uwzględnienie RMD w latach 1–9, ACA, FAFSA i IRMAA niezweryfikowane.",
+   "conclusion": "Najbliższy konkurent dla rdzenia G7-04 (częściowy, może prawie bezpośredni).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://www.onetopstop.insure/calculators/inherited-ira-10-year-rmd",
+   "competitor": "Inherited IRA 10-Year Rule Calculator — Withdrawal Strategy & Tax Impact (onetopstop.insure)",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: trzy harmonogramy (równe, back-loading, front-loading 50% w roku 1); optymalna strategia zależy od obecnych i przyszłych przedziałów.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Konkurent częściowy dla G7-04.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://www.mezzi.com/blog/inherited-ira-10-year-rule-withdrawal-trap-high-earning-heirs",
+   "competitor": "Mezzi (blog / aplikacja wealth)",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: artykuł o pułapce roku 10 (skok przedziału z 22% do 32–35%, IRMAA, utrata ulg).",
+   "access_limits": "Strony nie otwarto; dowód: search-summary. Funkcje aplikacji niezweryfikowane.",
+   "conclusion": "Substytut (treść i ewentualnie aplikacja).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://www.plancorp.com/blog/inherited-ira-withdrawal-strategies-10-year-rule",
+   "competitor": "Plancorp – Inherited IRA Withdrawal Strategies",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: strategie wypłat i zarządzania podatkiem.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Substytut (doradca i treść).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://incomelaboratory.com/inherited-ira-10-year-rule-distribution-strategies/",
+   "competitor": "Income Laboratory – Inherited IRA 10-Year Rule: Distribution Strategies (2026)",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: strategie dystrybucji 2026; obecność narzędzia niezweryfikowana.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Substytut (treść, prawdopodobnie dla doradców — hipoteza).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://taxpayers.net/guides/inherited-ira-10-year-rule",
+   "competitor": "taxpayers.net – Inherited IRA 10-Year Rule (2026) guide",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: roczne RMD w latach 1–9, jeśli właściciel pobierał RMD; termin roku 10.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Substytut (przewodnik).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://retirementliteracyfoundation.org/guides/inherited-ira-10-year-rule/",
+   "competitor": "Retirement Literacy Foundation – Inherited IRA 10-Year Withdrawal Trap (2026)",
+   "related_idea": "G7-04",
+   "features_checked": "Wg search-summary: zasady 10-year rule i RMD.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary.",
+   "conclusion": "Substytut (przewodnik).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://financial-advisors-for-inheritance.com/guides/inherited-ira-10-year-rule/",
+   "competitor": "financial-advisors-for-inheritance.com – Complete 2026 Guide",
+   "related_idea": "G7-04, G7-05",
+   "features_checked": "Wg tytułu: przewodnik 2026; nazwa domeny sugeruje lead-gen doradców (hipoteza).",
+   "access_limits": "Strony nie otwarto; dowód: search-summary (tytuł).",
+   "conclusion": "Substytut i sygnał komercyjny (lead-gen).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+   "url": "https://www.modwm.com/inherited-ira-withdrawal-rules-secure-act-10-year-rule/",
+   "competitor": "Modern Wealth Management – Inherited IRA Withdrawal Rules",
+   "related_idea": "G7-04",
+   "features_checked": "Wg tytułu: przewodnik po 10-year rule.",
+   "access_limits": "Strony nie otwarto; dowód: search-summary (tytuł).",
+   "conclusion": "Substytut (doradca i treść).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "KFF Health Insurance Marketplace Calculator",
+   "related_idea": "G7-02",
+   "features_checked": "Wiedza modelu: szacunek PTC dla dochodu i lokalizacji; optymalizacja dochodu i konwersji niezweryfikowana.",
+   "access_limits": "Strony nie otwarto, nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Prawdopodobnie konkurent częściowy; do weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "HealthCare.gov window shopping / plan compare",
+   "related_idea": "G7-02",
+   "features_checked": "Wiedza modelu: ceny planów po dopłacie; bez modelu wieloletniego.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (oficjalny).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Boldin (dawniej NewRetirement) / ProjectionLab",
+   "related_idea": "G7-02, G7-04",
+   "features_checked": "Wiedza modelu: płatne planery emerytalne z konwersjami Roth; modelowanie PTC i klifu po 2026 niezweryfikowane.",
+   "access_limits": "Nie wyszukano; prawdopodobnie część funkcji za loginem lub paywallem — niezweryfikowana.",
+   "conclusion": "Potencjalnie najbliższy substytut lub konkurent dla G7-02; priorytet weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "ALEX (Jellyvision) – employer benefits decision support",
+   "related_idea": "G7-01",
+   "features_checked": "Wiedza modelu: interaktywny doradca wyboru planu u pracodawców; obsługa planu współmałżonka niezweryfikowana.",
+   "access_limits": "Nie wyszukano; dostęp przez pracodawcę — niezweryfikowane.",
+   "conclusion": "Konkurent częściowy w zamkniętym kanale; nie konkuruje o ruch z wyszukiwarki i asystentów (hipoteza).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "CareCredit (kalkulator płatności)",
+   "related_idea": "G7-03",
+   "features_checked": "Wiedza modelu: raty i promocje finansowania medycznego.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (tylko finansowanie).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Turquoise Health / FAIR Health Consumer / szpitalne estymatory cen",
+   "related_idea": "G7-03",
+   "features_checked": "Wiedza modelu: szacunki cen świadczeń.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (tylko cena).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "FinPlan Divorce Planner",
+   "related_idea": "G7-06",
+   "features_checked": "Wiedza modelu: oprogramowanie do analiz finansowych rozwodu dla CDFA.",
+   "access_limits": "Nie wyszukano; prawdopodobnie płatne i dla profesjonalistów — niezweryfikowane.",
+   "conclusion": "Substytut lub konkurent częściowy (kanał profesjonalny).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "IBHS FORTIFIED; Strengthen Alabama Homes; Louisiana Fortify Homes Program",
+   "related_idea": "G7-07",
+   "features_checked": "Wiedza modelu: informacje o standardzie i grantach; model payback niezweryfikowany.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Substytut informacyjny i źródło danych.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "California Department of Insurance – Safer from Wildfires; California FAIR Plan",
+   "related_idea": "G7-08",
+   "features_checked": "Wiedza modelu: lista działań kwalifikujących do rabatów; ubezpieczyciel ostatniej szansy.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Substytut informacyjny.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Serwisy porównawcze ubezpieczeń zwierząt / blogi afiliacyjne / silniki wycen ubezpieczycieli",
+   "related_idea": "G7-09",
+   "features_checked": "Hipoteza: kalkulatory 'worth it', rankingi, wyceny.",
+   "access_limits": "Nie wyszukano; hipoteza.",
+   "conclusion": "Konkurencja częściowa prawdopodobnie gęsta (hipoteza).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Genworth / CareScout Cost of Care",
+   "related_idea": "G7-10",
+   "features_checked": "Wiedza modelu: koszty opieki według regionu i typu.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurent częściowy i potencjalne źródło danych (licencja niezweryfikowana).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Kalkulatory S-corp savings (CPA/payroll) oraz kalkulatory Solo 401(k)/SEP brokerów",
+   "related_idea": "G7-11",
+   "features_checked": "Wiedza modelu: oszczędności na SE tax; maksymalne wkłady.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurencja częściowa prawdopodobnie gęsta.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "SmartAsset / NerdWallet – kalkulatory kosztów życia i podatków stanowych",
+   "related_idea": "G7-13",
+   "features_checked": "Wiedza modelu: porównania lokalizacji.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurent częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "College Scorecard; Net Price Calculators; StudentAid.gov Loan Simulator",
+   "related_idea": "G7-14",
+   "features_checked": "Wiedza modelu: koszt netto, zarobki absolwentów, plany spłaty.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Konkurencja częściowa (oficjalna, darmowa).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit budżetu); pozycja z wiedzy modelu",
+   "url": "brak URL – niezweryfikowane",
+   "competitor": "Atlanta Fed CLIFF tools",
+   "related_idea": "G7-16",
+   "features_checked": "Wiedza modelu: modelowanie klifów świadczeń.",
+   "access_limits": "Nie wyszukano; wiedza modelu, niezweryfikowane.",
+   "conclusion": "Prawdopodobnie konkurent bezpośredni dla odrzuconej G7-16.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d – substytut ogólny",
+   "url": "n/d",
+   "competitor": "Asystenci AI (ChatGPT, Claude, Gemini, Perplexity, Copilot)",
+   "related_idea": "G7-01 do G7-16",
+   "features_checked": "Hipoteza: wyjaśniają zasady i liczą proste warianty z danych użytkownika; precyzja przy aktualnych parametrach 2026 i progach niezweryfikowana.",
+   "access_limits": "Nie testowano (brak testów promptów w tej sesji).",
+   "conclusion": "Substytut dla wszystkich pomysłów; największe zagrożenie dla G7-09, G7-12 i G7-15.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "[extended] enhanced ACA premium tax credits expired 2026 marketplace premiums enrollment drop",
+  "[standard] One Big Beautiful Bill bronze catastrophic plans HSA eligible 2026 direct primary care",
+  "[extended] HDHP vs PPO calculator compare health plans expected medical costs HSA tool",
+  "[extended] inherited IRA 10-year rule calculator withdrawal strategy tax brackets",
+  "[NIE WYKONANO – budżet wyszukiwań (200/turę, wspólny dla agentów) wyczerpany] divorce keep the house vs buyout vs sell calculator",
+  "[NIE WYKONANO – limit] inherited house keep rent or sell calculator stepped-up basis",
+  "[NIE WYKONANO – limit] FORTIFIED roof insurance discount calculator payback Alabama Louisiana grant",
+  "[NIE WYKONANO – limit] pet insurance vs self insure savings account calculator",
+  "UWAGA: wykonano tylko 4 wyszukiwania, bo budżet sesji był wyczerpany; WebFetch nie był używany. Większość ocen konkurencji ma poziom 'koncepcyjny'. Zalecane wyszukiwania w kolejnej turze: 'ACA cliff Roth conversion calculator 2026', 'Boldin ACA subsidy', 'ProjectionLab ACA premium tax credit', 'spouse surcharge two employer health plans calculator', 'buy out sibling inherited house calculator', 'FORTIFIED roof worth it reddit', 'S corp vs sole prop solo 401k calculator ACA', 'Parent PLUS cap 2026 gap calculator', 'when to schedule surgery deductible reset calculator'."
+ ]
+}

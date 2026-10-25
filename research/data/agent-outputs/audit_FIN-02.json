@@ -1,0 +1,431 @@
+{
+ "id": "FIN-02",
+ "competitors": [
+  {
+   "name": "HEI Calculator (heicalculator.com) - Hometap Calculator / Unlock Calculator",
+   "url": "https://heicalculator.com/hometap-calculator",
+   "type": "partial",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Kalkulatory spłaty HEI per dostawca (Hometap, Unlock; podstrona https://heicalculator.com/unlock-calculator), efektywny roczny koszt liczony od gotówki netto po opłacie dostawcy i ok. 1,5 tys. USD kosztów zamknięcia; tabela porównawcza dostawców (14,1% Hometap, 14,3% Point, 15,9% Unlock); wg summary koszt Hometap rośnie gwałtownie wraz ze wzrostem wartości domu.",
+   "misses_or_unverified_pl": "Porównanie z HECM, sprzedażą/downsizingiem i HELOC niezweryfikowane (nie pojawiło się w summary). Mapa rok wyjścia × wzrost wartości, flagi kwalifikacji i kapitał dla spadkobierców niezweryfikowane. Scenariusz wzrostu stojący za tabelą nie jest jasno opisany (wg summary)."
+  },
+  {
+   "name": "Equity Squirrel - HELOC vs. HEI Calculator",
+   "url": "https://equitysquirrel.com/tools/heloc-vs-hei-calculator/",
+   "type": "partial",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Neutralne wobec dostawców porównanie HELOC (oprocentowanie, okres ciągnięcia i spłaty, limit CLTV w opcjach zaawansowanych) z HEI; porównanie rat i przyszłego kapitału.",
+   "misses_or_unverified_pl": "Strona HEI ma stałe założenia (3% opłaty, mnożnik 2,0x, pułap 19,9% rocznie), więc nie modeluje konkretnych dostawców. Brak HECM i sprzedaży/downsizingu w summary. Mapa ciepła i flagi kwalifikacji (DTI, scoring) niezweryfikowane."
+  },
+  {
+   "name": "tools.realestate - Reverse Mortgage Calculator 2026 + Downsizing Calculator 2026",
+   "url": "https://tools.realestate/s/general/retirement/reverse-mortgage-calculator",
+   "type": "partial",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Kalkulator HECM: kwota netto po spłacie hipoteki, początkowym MIP, opłacie origination i kosztach zamknięcia. Wg summary jedno z narzędzi w wynikach deklaruje porównanie z HELOC lub downsizingiem. Osobny kalkulator downsizingu: https://www.tools.realestate/s/general/retirement/downsizing-calculator",
+   "misses_or_unverified_pl": "Nie wiadomo na pewno, które narzędzie deklaruje porównanie z HELOC/downsizingiem, ani czy wyniki są powiązane (dwa osobne kalkulatory to nie integracja) - niezweryfikowane. Brak HEI w summary. Wieloletni wzrost salda HECM i mapa rok wyjścia × wzrost wartości niezweryfikowane."
+  },
+  {
+   "name": "HEI Review (heireview.com)",
+   "url": "https://heireview.com/",
+   "type": "partial",
+   "access": "nieznany; strona nieotwierana; tylko notatka z fali 1",
+   "covers_pl": "Wg notatki z fali 1: recenzje i porównania HEI, możliwy kalkulator HEI.",
+   "misses_or_unverified_pl": "W tej fali nie pojawił się w żadnym wyniku, także w zapytaniu nakierowanym na tę domenę. Wszystkie funkcje (HECM, sprzedaż, mapa ciepła, kwalifikacja) niezweryfikowane. Klasyfikacja partial przejęta z fali 1, bez potwierdzenia."
+  },
+  {
+   "name": "Reverse.Mortgage - Free Reverse Mortgage Calculator",
+   "url": "https://reverse.mortgage/calculator",
+   "type": "partial",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Szacuje dostępny kapitał z HECM dla właściciela 62+.",
+   "misses_or_unverified_pl": "Brak HEI, HELOC i sprzedaży w summary. Projekcja salda w czasie i kapitał dla spadkobierców niezweryfikowane."
+  },
+  {
+   "name": "Fairway Reverse - Reverse Mortgage Calculator (HECM)",
+   "url": "https://fairwayreverse.com/resource-center/reverse-mortgage-calculator/",
+   "type": "partial",
+   "access": "bezpłatny, wg tytułu bez danych osobowych; strona nieotwierana",
+   "covers_pl": "Szacuje środki z HECM na podstawie wartości domu, wieku i salda istniejącej hipoteki.",
+   "misses_or_unverified_pl": "To narzędzie kredytodawcy, które pokazuje tylko jeden produkt. Brak HEI i sprzedaży. Wzrost salda w kolejnych latach niezweryfikowany."
+  },
+  {
+   "name": "Center for Retirement Research (Boston College) - broszura: downsizing vs reverse mortgage z narzędziami szacunkowymi",
+   "url": "https://crr.bc.edu/?p=18796",
+   "type": "partial",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana; materiał z 2014 r.",
+   "covers_pl": "Omawia dwie najczęstsze ścieżki: downsizing i reverse mortgage, z przykładami i narzędziami szacunkowymi.",
+   "misses_or_unverified_pl": "Materiał z 2014 r., więc parametry HECM są nieaktualne. Brak HEI i HELOC. Format i aktualność narzędzi niezweryfikowane."
+  },
+  {
+   "name": "SavvyReverse - Reverse Mortgage vs. Other Options",
+   "url": "https://savvyreverse.com/compare/",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Tabela cech HECM vs inne opcje (HELOC, HEA i in.): ograniczenia wiekowe, sposób oceny dochodu (financial assessment vs pełna weryfikacja dochodu), wpływ na spadkobierców.",
+   "misses_or_unverified_pl": "Wg summary to statyczne porównanie cech, nie model kosztów. Kalkulator, scenariusze wzrostu wartości i rok wyjścia niezweryfikowane."
+  },
+  {
+   "name": "WalletGrower - HEI vs Reverse Mortgage 2026: Which Keeps More Equity? (+ wzmianka o HEI cost calculator)",
+   "url": "https://walletgrower.com/blog/hei-vs-reverse-mortgage",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Artykuł porównujący HEI i reverse mortgage: zestawia stopę HECM plus roczne MIP z ekwiwalentną roczną stopą HEI w tym samym okresie. Wspomina własny kalkulator kosztu HEI.",
+   "misses_or_unverified_pl": "Zakres kalkulatora WalletGrower (czy obejmuje HECM lub sprzedaż) jest niezweryfikowany. Ten sam wydawca ma też artykuł HEI vs HELOC (fala 1), więc łatwo mógłby rozszerzyć narzędzie."
+  },
+  {
+   "name": "HomeEquity101 - HEI vs Reverse Mortgage / Home Equity for Retirement Income (HEI vs HECM vs HELOC vs HEL vs Cash-Out Refi)",
+   "url": "https://homeequity101.com/blog/home-equity-retirement-income",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Treści porównujące pięć ścieżek kapitału na emeryturze, w tym HEI i HECM. Osobny artykuł: https://homeequity101.com/blog/home-equity-investment-vs-reverse-mortgage",
+   "misses_or_unverified_pl": "Narzędzie interaktywne niezweryfikowane: wyniki pokazują tylko artykuły. Sprzedaż/downsizing jako wariant niezweryfikowane."
+  },
+  {
+   "name": "The Mortgage Reports - Reverse Mortgage vs HEI / Is a Reverse Mortgage Your Only Option When You're House-Rich but Cash-Poor?",
+   "url": "https://themortgagereports.com/125173/reverse-mortgage-vs-hei-which-is-better",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Tabela różnic HECM vs HEI: wiek, forma wypłaty, mechanika kosztu. Przykład: saldo 150 tys. USD przy 8% rośnie do ok. 325 tys. po 10 latach. Osobny artykuł o sytuacji house-rich, cash-poor.",
+   "misses_or_unverified_pl": "To treść, nie kalkulator. Brak personalizacji i mapy wrażliwości."
+  },
+  {
+   "name": "SuperMoney - Hometap vs Reverse Mortgage",
+   "url": "https://www.supermoney.com/hometap-vs-reverse-mortgage",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Porównanie Hometap i reverse mortgage dla sytuacji zbliżonej do sample prompt: scoring ok. 585, brak rat, wymóg opłacania podatków i ubezpieczenia przy HECM.",
+   "misses_or_unverified_pl": "Artykuł bez modelu wieloletniego. Kalkulator niezweryfikowany."
+  },
+  {
+   "name": "StateCalc - Reverse Mortgage vs. HELOC vs. Home Equity Loan vs. Cash-Out Refi",
+   "url": "https://statecalc.com/blog/reverse-mortgage-vs-heloc-vs-home-equity-loan-vs-cash-out-refinance/",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana",
+   "covers_pl": "Porównanie HECM z produktami kredytowymi. Serwis ma kalkulatory stanowe.",
+   "misses_or_unverified_pl": "Brak HEI i sprzedaży w summary. Model porównawczy HECM wg summary nieopisany, więc niezweryfikowany."
+  },
+  {
+   "name": "Boldin (dawniej NewRetirement) - planer emerytalny; artykuł 5 Ways to Tap Home Equity in Retirement",
+   "url": "https://www.boldin.com/retirement/how-to-use-home-equity-in-retirement/",
+   "type": "substitute",
+   "access": "artykuł bezpłatny; planer z płatnym planem; strona nieotwierana",
+   "covers_pl": "Treść o ścieżkach wykorzystania kapitału w domu na emeryturze. Planer emerytalny Boldin (wiedza modelu) modeluje nieruchomości i przepływy w czasie.",
+   "misses_or_unverified_pl": "Modelowanie HEI, HECM i porównanie wariantów w planerze niezweryfikowane w tej fali. Planer jest ogólnoemerytalny, nie zbudowany wokół tej decyzji."
+  },
+  {
+   "name": "Kalkulatory HELOC vs HEL vs Cash-Out (Lower.com, Mo the Broker, MortgageCalculator.org)",
+   "url": "https://www.mothebroker.com/tools/equity-comparison-calculator",
+   "type": "substitute",
+   "access": "bezpłatne (wg search-summary); strony nieotwierane",
+   "covers_pl": "Porównanie produktów kredytowych na kapitale domu (np. https://www.lower.com/mortgages/calculators/heloc-vs-home-equity-loan-calculator).",
+   "misses_or_unverified_pl": "Zakładają, że użytkownik ma zdolność kredytową, więc pomijają główny problem segmentu (DTI powyżej 43%, scoring poniżej 620). Brak HEI, HECM i sprzedaży."
+  },
+  {
+   "name": "Point - How to pay back your HEI: reverse mortgage",
+   "url": "https://point.com/blog/pay-back-hei-reverse-mortgage",
+   "type": "substitute",
+   "access": "bezpłatny (wg search-summary); strona nieotwierana; treść dostawcy HEI",
+   "covers_pl": "Opisuje ścieżkę kombinowaną: HEI teraz, spłata HEI reverse mortgage później. Potwierdza, że kombinacje wariantów są realne.",
+   "misses_or_unverified_pl": "Treść marketingowa jednego dostawcy, bez neutralnego modelu kosztów. Kalkulator niezweryfikowany."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI od 7.10.2026; Google AI Mode z interaktywnymi narzędziami od 19.08.2026) oraz doradca HUD (housing counselor)",
+   "url": "n/d - brak URL w wynikach wyszukiwania",
+   "type": "substitute",
+   "access": "bezpłatne / ogólnodostępne",
+   "covers_pl": "Wynik wyszukiwania na sample prompt sam dał rozsądną jakościową odpowiedź: profil każdej opcji, ryzyko podatków i ubezpieczenia przy HECM oraz rekomendację doradcy HUD. Asystent może też wygenerować prosty kalkulator.",
+   "misses_or_unverified_pl": "Aktualne warunki dostawców HEI (opłaty, mnożniki, kapy, korekta wartości startowej) są sprzeczne między źródłami, więc wynik asystenta zależy od świeżości danych. Spójność wieloletniej mapy ciepła generowanej ad hoc niezweryfikowana."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 zapytań WebSearch (5 extended, 2 standard), dowód wyłącznie z search-summary, bez otwierania stron. Pewność średnia, niższa dla heireview.com, homeequity101 i walletgrower, których narzędzia są niezweryfikowane.\n\nFragmenty decyzji pokrywają rozłączne narzędzia:\n- koszt HEI per dostawca w funkcji wzrostu wartości: heicalculator.com;\n- HELOC vs HEI z generycznymi założeniami HEI: Equity Squirrel;\n- kwota netto z HECM: Fairway, reverse.mortgage, tools.realestate;\n- downsizing: tools.realestate, broszura CRR z 2014 r.;\n- statyczne tabele cech: SavvyReverse, The Mortgage Reports, SuperMoney.\n\nLuka jest wąska. Nie znaleziono narzędzia, które w jednym modelu:\n- liczy koszt HEI u kilku dostawców (opłaty, kapy, mnożnik) obok narastania salda HECM (odsetki i MIP) oraz sprzedaży i downsizingu albo najmu;\n- filtruje warianty flagami kwalifikacji, tak że HELOC/HEL odpada przy DTI powyżej 43% lub scoringu poniżej 620, a HECM poniżej 62 lat;\n- daje mapę rok wyjścia × wzrost wartości, próg wzrostu, przy którym HEI kosztuje tyle co HELOC, oraz kapitał netto dla spadkobierców;\n- obsługuje kombinacje, np. HEI teraz i sprzedaż lub HECM za 3 lata. Tę ścieżkę Point opisuje tylko marketingowo.\n\nWniosek z fali 1 potwierdzony i nieco wzmocniony: 7 zróżnicowanych zapytań, w tym zapytanie nakierowane na heireview, heicalculator i homeequity101.\n\nRyzyka:\n- serwisy afiliacyjne HEI (heicalculator, walletgrower, homeequity101, equitysquirrel) mają już silniki kosztu HEI i mogą tanio dodać HECM i sprzedaż;\n- asystenci AI potrafią wygenerować uproszczoną wersję modelu.",
+ "search_scope_pl": "7 wywołań WebSearch, 25.10.2026, rynek US, tylko angielski:\n1) home equity investment vs reverse mortgage vs sell and downsize calculator (extended);\n2) home equity investment calculator compare Hometap Unlock Point cost (extended, kategoria);\n3) pytanie w języku naturalnym emeryta ze złym scoringiem (standard);\n4) home equity agreement vs HECM vs HELOC, rok wyjścia i wzrost wartości (extended, alternatywna terminologia);\n5) oprogramowanie dla doradców finansowych (extended);\n6) reddit i arkusze (standard);\n7) HEI vs reverse mortgage calculator z nazwami heireview/heicalculator/homeequity101 (extended).\n\nOgraniczenia:\n- WebFetch zablokowany, więc żadna strona nie została otwarta ani przetestowana;\n- funkcje znane tylko z podsumowań wyszukiwarki;\n- nie sprawdzono aplikacji mobilnych, App Store, narzędzi za loginem (np. pełny planer Boldin), kalkulatorów dostawców HEI (Hometap, Unlock, Point) bezpośrednio ani wątków Reddit, bo żadne nie pojawiły się w wynikach;\n- heireview.com nie pojawił się w żadnym wyniku.",
+ "demand_signals": [
+  {
+   "signal_pl": "Gęsta sieć treści porównawczych z 2026 r. (HEI vs reverse mortgage, HEI vs HELOC, ranking dostawców HEI) od wielu wydawców afiliacyjnych: walletgrower, homeequity101, financebuzz, mortgage-info, mymillennialguide. Pośrednio wskazuje na popyt wyszukiwania i monetyzację tego tematu.",
+   "url": "https://walletgrower.com/blog/hei-vs-reverse-mortgage",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieją dedykowane serwisy-kalkulatory HEI z podstronami per dostawca (Hometap, Unlock). Ktoś inwestuje w ruch na frazy typu 'Hometap calculator'.",
+   "url": "https://heicalculator.com/unlock-calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Duże media finansowe publikują treści o sytuacji house-rich, cash-poor i alternatywach dla reverse mortgage (CNBC Select, The Mortgage Reports, Morningstar).",
+   "url": "https://www.cnbc.com/select/alternatives-to-reverse-mortgage/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kredytodawca reverse mortgage (Finance of America) publikuje '9 alternatyw dla reverse mortgage', a kredytodawcy (Atlantic Avenue, South River) piszą artykuły HEI vs reverse mortgage. Wskazuje na konkurencję reklamodawców o tego samego klienta.",
+   "url": "https://www.financeofamerica.com/education/alternatives-reverse-mortgage/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Dostawca HEI (Point) opisuje spłatę HEI reverse mortgage. Ścieżki kombinowane z listy wariantów występują w praktyce.",
+   "url": "https://point.com/blog/pay-back-hei-reverse-mortgage",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg summary Hometap podaje swoją główną grupę demograficzną jako 45-55 lat, a HEI kończy się po 10 latach. Część wspólna segmentów (62+, HEI kontra HECM) może być węższa, niż zakłada produkt. To może ograniczać popyt.",
+   "url": "https://www.housingwire.com/articles/hometap-ceo-reverse-mortgages-alternative-products-can-coexist/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Brak wątków Reddit i arkuszy w wynikach zapytania 6. Nie dowodzi to braku dyskusji (wyszukiwarka może słabo indeksować Reddit). Popyt na forach jest niezmierzony.",
+   "url": "https://www.supermoney.com/hometap-vs-reverse-mortgage",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Liczba gospodarstw 62+ z dużym kapitałem i niską zdolnością kredytową, rocznie podejmujących tę decyzję, nie została zmierzona w tej fali. Brak danych o wolumenie wyszukiwań. Ocena popytu jest szacunkiem.",
+   "url": "https://themortgagereports.com/134243/reverse-mortgage-only-option-house-rich-cash-poor",
+   "evidence_type": "estimate"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko średnie do wysokiego dla prostego pytania i średnie dla pełnego modelu.\n\nNa sample prompt podsumowanie wyszukiwarki (zapytanie 3) samo dało poprawną jakościową odpowiedź: profil HEI, HECM i sprzedaży, ryzyko defaultu HECM przy niepłaceniu podatków i ubezpieczenia oraz zalecenie doradcy HUD. Od 7.10.2026 ChatGPT Intelligent UI, a od 19.08.2026 Google AI Mode potrafią wyrenderować prosty kalkulator.\n\nAsystentowi trudniej z trzema rzeczami:\n1) Aktualne, sprzeczne między źródłami warunki dostawców HEI. Dla Hometap summary podaje minimalny scoring 550, 585 lub 600, a maksymalne kwoty też się różnią. Do tego dochodzą kapy i korekta wartości startowej.\n2) Parametry HECM: tabele PLF, MIP, limit kwoty.\n3) Powtarzalna, audytowalna mapa ciepła rok wyjścia × wzrost wartości z kapitałem dla spadkobierców i kombinacjami wariantów.\n\nAsystent ma więc powód, by odesłać do zewnętrznego narzędzia przy pytaniach o konkretne liczby. Przy pytaniach 'co jest lepsze' raczej odpowie sam i odeśle do doradcy HUD.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja jest realna i dobrze opisana (house-rich, cash-poor). Wielu wydawców i reklamodawców konkuruje o te frazy. Segment docelowy (62+, niska zdolność kredytowa, rozważa HEI) jest jednak węższy: HEI celuje głównie w wiek 45-55 i działa tylko w części stanów (wg summary ok. 16 dla Hometap).",
+   "evidence_pl": "Treści porównawcze HEI vs reverse mortgage z 2026 r. w wielu serwisach (walletgrower, homeequity101, themortgagereports, supermoney). Dedykowane kalkulatory HEI (heicalculator, equitysquirrel). Artykuły CNBC Select i Morningstar o alternatywach.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań, liczbie umów HEI i HECM rocznie oraz wątkach Reddit. Wszystkie sygnały są pośrednie.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po 7 zróżnicowanych zapytaniach nie znaleziono narzędzia integrującego HEI u kilku dostawców, HECM, sprzedaż, flagi kwalifikacji i mapę rok wyjścia × wzrost wartości. Narzędzia częściowe pomijają kluczowe zależności (HEI vs HECM vs sprzedaż), nie tylko kosmetyczne pola. Nie daję 5, bo funkcje heireview, homeequity101 i walletgrower są niezweryfikowane, a serwisy afiliacyjne HEI mogą szybko rozszerzyć narzędzia.",
+   "evidence_pl": "Pokrycie fragmentów: heicalculator (koszt HEI per dostawca), Equity Squirrel (HELOC vs HEI z generycznym HEI), Fairway, reverse.mortgage i tools.realestate (HECM), CRR i tools.realestate (downsizing). Summary z zapytań 1, 4 i 7 wprost: brak kalkulatora HEI vs sprzedaż oraz brak kalkulatora porównującego z HECM.",
+   "gaps_pl": "Nie otwarto stron. Nie zweryfikowano deklaracji tools.realestate o porównaniu z HELOC/downsizingiem, kalkulatora WalletGrower, heireview.com, planera Boldin ani kalkulatorów samych dostawców HEI.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Model wieloletni z aktualnymi, rozbieżnymi danymi dostawców i parametrami HECM daje asystentowi powód do odesłania do narzędzia. Pytanie 'co lepsze' asystent rozwiązuje jednak sam, a temat YMYL skłania asystentów do polecania doradcy HUD zamiast stron trzecich.",
+   "evidence_pl": "Summary zapytania 3 samo udzieliło jakościowej odpowiedzi. Sprzeczne dane dostawców (scoring, kwoty, udział we wzroście) w summary zapytania 2. Od 10.2026 asystenci mają generatywne UI kalkulatorów.",
+   "gaps_pl": "Nie zmierzono, czy asystenci rzeczywiście cytują lub linkują kalkulatory HEI. Brak danych o ruchu referral z AI.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Kategorie reklamowe: reverse mortgage, HELOC i home equity, HEI, nieruchomości (sprzedaż, agenci), przeprowadzki. Część z nich to kategorie o wysokiej wartości wymienione w kryteriach. Odbiorcy to amerykańskie gospodarstwa z dużym majątkiem w nieruchomości. Nie daję 5: segment z niskim scoringiem jest mniej wartościowy dla części reklamodawców kredytowych, a temat finansowy YMYL dla seniorów może ograniczać część formatów i reklamodawców.",
+   "evidence_pl": "Kredytodawcy (Finance of America, Fairway, Atlantic Avenue, South River) i dostawcy HEI (Point, Hometap) aktywnie publikują treści na te frazy, co świadczy o konkurencji reklamodawców.",
+   "gaps_pl": "Brak danych o CPC i RPM AdSense dla tych fraz. Ograniczenia polityk reklamowych dla finansów nie zostały sprawdzone w tej fali.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 2,
+   "rationale_pl": "Sam silnik (projekcja wartości domu, saldo HECM, HEI z kapą, koszty sprzedaży) ma umiarkowaną złożoność. Trudne jest automatyczne utrzymanie danych. Warunki HEI (opłaty, mnożniki, kapy, korekta wartości startowej, dostępność stanowa, minimalny scoring) nie mają publicznego API, zmieniają się i różnią między źródłami. Parametry HECM (PLF, MIP, limit kwoty) są publiczne, ale aktualizowane okresowo. Stopy HELOC zmieniają się na bieżąco.",
+   "evidence_pl": "Summary zapytania 2: sprzeczne minimalne scoringi (550, 585, 600), maksymalne kwoty i wymogi kapitałowe dla tych samych dostawców.",
+   "gaps_pl": "Nie sprawdzono częstotliwości zmian warunków dostawców ani dostępności danych HUD w formie maszynowej.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Błąd może skierować seniora z niską zdolnością kredytową do drogiej, trudnej do wyjścia umowy (HEI) albo do HECM z ryzykiem defaultu przy niepłaceniu podatków. Umowy HEI mają złożone warunki (kapy, korekta startu, termin 10 lat). Kwalifikacja HECM (financial assessment, LESA) wymaga interpretacji. Temat jest pod lupą regulatorów (CFPB opublikował hipotetyczne porównania HEA). Potrzebne są wyraźne zastrzeżenia i wariant 'dane do weryfikacji u dostawcy'.",
+   "evidence_pl": "Summary: ryzyko defaultu HECM przy zaległych podatkach i ubezpieczeniu. Przykład CFPB: rozrzut rozliczenia HEA od 94 074 do 215 892 USD dla 50 tys. USD po 10 latach. Źródła sprzeczne co do tego, która opcja jest tańsza.",
+   "gaps_pl": "Nie sprawdzono stanowych regulacji HEI ani wymogów prawnych dla narzędzi porównujących produkty finansowe.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Produkt wykorzystuje wspólne moduły: projekcję wartości domu, oś czasu przepływów pieniężnych, finansowanie (amortyzacja HELOC i HEL, narastanie salda), koszty sprzedaży i podatek od zysku (wyłączenie przy sprzedaży domu), kapitał dla spadkobierców. Pozwala zbudować produkty siostrzane: HELOC vs cash-out refi, age in place vs downsize, HECM for Purchase, wykup HEI przed terminem, HEI dla osób poniżej 62 lat.",
+   "evidence_pl": "Wyniki pokazują popyt na pokrewne porównania (HELOC vs HEL vs cash-out, reverse vs downsizing, age in place vs sell), więc moduły posłużą wielu stronom.",
+   "gaps_pl": "Moduł danych dostawców HEI jest specyficzny dla tej rodziny i słabo przenośny.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Luka integracyjna wygląda realnie. Fragmenty pokrywają rozłączne kalkulatory (HEI, HELOC vs HEI, HECM, downsizing), a summary wprost nie wskazały narzędzia łączącego HEI, HECM i sprzedaż z mapą rok wyjścia × wzrost wartości. Potencjał reklamowy jest wysoki (mortgage, HELOC, reverse mortgage). Szacunkowy ważony wynik to ok. 3,25 na 5.\n\nNie rekomenduję pilotu od razu z trzech powodów:\n1) Funkcje heireview.com, homeequity101, walletgrower i tools.realestate są niezweryfikowane, a te serwisy mogą łatwo rozszerzyć zakres.\n2) Warunki dostawców HEI są niestandaryzowane, sprzeczne między źródłami i wymagają ręcznej aktualizacji. To kłóci się z celem automatycznego utrzymania (feasibility 2).\n3) Ryzyko błędu wobec wrażliwej grupy (seniorzy z niskim scoringiem) jest wysokie (reliability 2), a segment wspólny 62+ i HEI może być wąski.\n\nNastępne kroki:\n- ręcznie otworzyć i przetestować heireview.com, heicalculator.com, walletgrower, equitysquirrel, tools.realestate i kalkulatory Hometap, Unlock i Point;\n- sprawdzić wolumeny fraz (hometap vs reverse mortgage, home equity investment calculator, sell or reverse mortgage);\n- ocenić, czy wersja z parametrami HEI wpisywanymi przez użytkownika z oferty (zamiast utrzymywanej bazy dostawców) ogranicza koszty utrzymania i ryzyko.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment calculator compare Hometap Unlock Point cost",
+   "url": "https://heicalculator.com/hometap-calculator",
+   "competitor": "HEI Calculator (heicalculator.com)",
+   "features_checked": "kalkulator spłaty HEI per dostawca; efektywny roczny koszt; tabela dostawców; wrażliwość na wzrost wartości; HECM, sprzedaż, HELOC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; brak informacji o loginie lub paywallu",
+   "conclusion": "partial: dobrze pokrywa koszt HEI u dostawców; porównanie z HECM, sprzedażą i HELOC niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity agreement vs HECM vs HELOC cost comparison calculator by home appreciation and exit year",
+   "url": "https://equitysquirrel.com/tools/heloc-vs-hei-calculator/",
+   "competitor": "Equity Squirrel HELOC vs. HEI Calculator",
+   "features_checked": "parametry HELOC; założenia HEI; opcje zaawansowane; HECM; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial: HELOC vs HEI ze stałymi założeniami HEI (3%, 2,0x, pułap 19,9%); brak HECM i sprzedaży w summary",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs reverse mortgage vs sell and downsize calculator",
+   "url": "https://tools.realestate/s/general/retirement/reverse-mortgage-calculator",
+   "competitor": "tools.realestate Reverse Mortgage Calculator + Downsizing Calculator",
+   "features_checked": "kwota netto HECM (MIP, origination, closing, spłata hipoteki); deklarowane porównanie z HELOC/downsizingiem; HEI",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; nie wiadomo, które narzędzie deklaruje porównanie",
+   "conclusion": "partial: HECM i osobny kalkulator downsizingu; integracja wyników i HEI niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HEI vs reverse mortgage calculator (heireview OR heicalculator OR homeequity101)",
+   "url": "https://heireview.com/",
+   "competitor": "HEI Review (heireview.com)",
+   "features_checked": "obecność w wynikach; funkcje HEI, HECM, sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: brak w search-summary; tylko notatka z fali 1",
+   "conclusion": "nie pojawił się w żadnym wyniku; klasyfikacja partial z fali 1 niepotwierdzona; wszystkie funkcje niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs reverse mortgage vs sell and downsize calculator",
+   "url": "https://reverse.mortgage/calculator",
+   "competitor": "Reverse.Mortgage Free Reverse Mortgage Calculator",
+   "features_checked": "szacunek kwoty z HECM; HEI; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial: tylko HECM",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HEI vs reverse mortgage calculator (heireview OR heicalculator OR homeequity101)",
+   "url": "https://fairwayreverse.com/resource-center/reverse-mortgage-calculator/",
+   "competitor": "Fairway Reverse Mortgage Calculator",
+   "features_checked": "wejścia: wartość domu, wiek, saldo hipoteki; HEI; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wg tytułu bez danych osobowych",
+   "conclusion": "partial: kalkulator HECM jednego kredytodawcy",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit Hometap vs reverse mortgage vs downsize spreadsheet",
+   "url": "https://crr.bc.edu/?p=18796",
+   "competitor": "Boston College CRR - broszura downsizing vs reverse mortgage",
+   "features_checked": "porównanie downsizingu z reverse mortgage; narzędzia szacunkowe; aktualność",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; materiał z 2014 r.",
+   "conclusion": "partial: dwa z wariantów, przestarzały, brak HEI",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial advisor software compare reverse mortgage, home equity sharing agreement, HELOC and downsizing for retirement clients",
+   "url": "https://savvyreverse.com/compare/",
+   "competitor": "SavvyReverse - Reverse Mortgage vs. Other Options",
+   "features_checked": "tabela cech: wiek, weryfikacja dochodu, wpływ na spadkobierców, koszty sprzedaży; kalkulator",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: statyczne porównanie cech; model kosztów niezweryfikowany",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial advisor software compare reverse mortgage, home equity sharing agreement, HELOC and downsizing for retirement clients",
+   "url": "https://www.boldin.com/retirement/how-to-use-home-equity-in-retirement/",
+   "competitor": "Boldin (planer emerytalny)",
+   "features_checked": "treść o ścieżkach kapitału; modelowanie HEI i HECM w planerze",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; planer z płatnym planem lub loginem (wiedza modelu)",
+   "conclusion": "substitute: ogólny planer emerytalny; modelowanie HEI i HECM niezweryfikowane. Summary: nie znaleziono oprogramowania dla doradców do tego porównania",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HEI vs reverse mortgage calculator (heireview OR heicalculator OR homeequity101)",
+   "url": "https://walletgrower.com/blog/hei-vs-reverse-mortgage",
+   "competitor": "WalletGrower HEI vs Reverse Mortgage + HEI cost calculator",
+   "features_checked": "metoda porównania stopy HECM z MIP vs ekwiwalent HEI; wzmianka o kalkulatorze kosztu HEI",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: artykuł; zakres kalkulatora (HECM, sprzedaż) niezweryfikowany; ryzyko rozszerzenia",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial advisor software compare reverse mortgage, home equity sharing agreement, HELOC and downsizing for retirement clients",
+   "url": "https://homeequity101.com/blog/home-equity-retirement-income",
+   "competitor": "HomeEquity101 (HEI vs HECM vs HELOC vs HEL vs Cash-Out; HEI vs Reverse Mortgage)",
+   "features_checked": "porównanie pięciu ścieżek; narzędzie interaktywne; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: treści porównawcze; kalkulator niezweryfikowany",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs reverse mortgage vs sell and downsize calculator",
+   "url": "https://themortgagereports.com/125173/reverse-mortgage-vs-hei-which-is-better",
+   "competitor": "The Mortgage Reports - Reverse Mortgage vs HEI",
+   "features_checked": "tabela różnic; przykład wzrostu salda HECM; kalkulator",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: artykuł bez personalizacji",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "I'm retired with bad credit and need cash from my house without monthly payments, Hometap or reverse mortgage or sell?",
+   "url": "https://www.supermoney.com/hometap-vs-reverse-mortgage",
+   "competitor": "SuperMoney Hometap vs Reverse Mortgage",
+   "features_checked": "porównanie dla niskiego scoringu; wymogi HECM; koszty Hometap",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: artykuł; brak modelu wieloletniego w summary",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity agreement vs HECM vs HELOC cost comparison calculator by home appreciation and exit year",
+   "url": "https://statecalc.com/blog/reverse-mortgage-vs-heloc-vs-home-equity-loan-vs-cash-out-refinance/",
+   "competitor": "StateCalc - Reverse Mortgage vs HELOC vs HEL vs Cash-Out Refi",
+   "features_checked": "porównanie HECM z kredytami; HEI; model HECM",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: brak HEI i sprzedaży; model porównawczy niezweryfikowany",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity agreement vs HECM vs HELOC cost comparison calculator by home appreciation and exit year",
+   "url": "https://www.mothebroker.com/tools/equity-comparison-calculator",
+   "competitor": "Mo the Broker / Lower.com / MortgageCalculator.org - kalkulatory HELOC vs HEL vs cash-out",
+   "features_checked": "porównanie produktów kredytowych; HEI, HECM, sprzedaż; kwalifikacja",
+   "access_limits": "strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: tylko produkty wymagające zdolności kredytowej, nieprzydatne dla segmentu z DTI powyżej 43% i scoringiem poniżej 620",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HEI vs reverse mortgage calculator (heireview OR heicalculator OR homeequity101)",
+   "url": "https://point.com/blog/pay-back-hei-reverse-mortgage",
+   "competitor": "Point - pay back HEI with reverse mortgage",
+   "features_checked": "ścieżka kombinowana HEI, potem HECM; kalkulator",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; treść dostawcy",
+   "conclusion": "substitute: potwierdza realność kombinacji; brak neutralnego modelu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment calculator compare Hometap Unlock Point cost",
+   "url": "https://mortgage-info.com/blog/home-equity-sharing-companies-2026-compare",
+   "competitor": "Mortgage-Info / FinanceBuzz / LendEDU - porównania dostawców HEI",
+   "features_checked": "opłaty, maksymalne kwoty, minimalny scoring, wymogi kapitałowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: dane o dostawcach sprzeczne między źródłami (scoring Hometap 550, 585 lub 600; różne maksymalne kwoty), co wymusza weryfikację u dostawców",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "I'm retired with bad credit and need cash from my house without monthly payments, Hometap or reverse mortgage or sell?",
+   "url": "n/d - odpowiedź wygenerowana przez wyszukiwarkę, brak URL",
+   "competitor": "Asystent AI / odpowiedź generatywna wyszukiwarki",
+   "features_checked": "jakościowa odpowiedź na sample prompt; liczby; rekomendacja doradcy HUD",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute: pełna odpowiedź jakościowa bez modelu liczbowego; wysokie ryzyko self-solve dla pytania 'co lepsze'",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "home equity investment vs reverse mortgage vs sell and downsize calculator",
+  "home equity investment calculator compare Hometap Unlock Point cost",
+  "I'm retired with bad credit and need cash from my house without monthly payments, Hometap or reverse mortgage or sell?",
+  "home equity agreement vs HECM vs HELOC cost comparison calculator by home appreciation and exit year",
+  "financial advisor software compare reverse mortgage, home equity sharing agreement, HELOC and downsizing for retirement clients",
+  "reddit Hometap vs reverse mortgage vs downsize spreadsheet",
+  "HEI vs reverse mortgage calculator (heireview OR heicalculator OR homeequity101)"
+ ]
+}

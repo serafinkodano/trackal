@@ -1,0 +1,1366 @@
+{
+ "families": [
+  {
+   "family": "Zmiana pracy, relokacja i benefity pracownicze (oferty, equity/vesting, bonusy i clawbacki, vesting matchu 401k, benefity zdrowotne, pakiety relokacyjne, praca zdalna vs przeprowadzka, podatki stanowe)",
+   "demand_pl": "OGRANICZENIE SESJI: wykonano tylko 5 wyszukiwań; kolejne zablokował wspólny limit 200 wyszukiwań na turę (dzielony z innymi agentami). Dane bezpośrednie (to przepływy na rynku pracy, a nie popyt na narzędzie): BLS JOLTS podaje quits 3,2 mln w czerwcu 2026 i 3,0 mln w kwietniu 2026, layoffs & discharges 1,7–1,8 mln miesięcznie, hires 5,1–5,3 mln miesięcznie i job openings 7,3 mln w lipcu 2026 (search-summary, bls.gov). Tylko nieznana część tych zmian pracy wiąże się ze złożoną decyzją (equity, vesting, relokacja, wybór planu zdrowotnego, luka w ubezpieczeniu). Wielkość tej części to hipoteza, niezweryfikowane. Dane pośrednie: jedno wyszukiwanie zwróciło co najmniej 9 darmowych kalkulatorów porównania ofert i co najmniej 4 publiczne 'agent skills' do porównywania ofert (smithery.ai, aitmpl.com, hackernoon.com, findskill.ai). To pokazuje podaż i zainteresowanie twórców, ale nie mówi nic o wolumenie zapytań. Zapytanie z frazą 'reddit' nie zwróciło żadnych wątków Reddit, więc brak dowodu forumowego wynika z ograniczeń wyszukiwania i nie dowodzi braku dyskusji. W sesji nie było danych o wolumenach Google, wolumenach promptów LLM, liczbie relokacji (Census) ani trendzie RTO: hipoteza, niezweryfikowane.",
+   "demand_sources": [
+    {
+     "url": "https://www.bls.gov/news.release/archives/jolts_08042026.htm",
+     "title": "Job Openings and Labor Turnover – June 2026 (quits 3,2 mln; layoffs 1,8 mln)",
+     "publisher": "U.S. Bureau of Labor Statistics",
+     "published": "2026-08-04"
+    },
+    {
+     "url": "https://www.bls.gov/news.release/archives/jolts_05052026.htm",
+     "title": "Job Openings and Labor Turnover – kwiecień 2026 (quits 3,0 mln; layoffs 1,7 mln)",
+     "publisher": "U.S. Bureau of Labor Statistics",
+     "published": "2026-05-05"
+    },
+    {
+     "url": "https://www.bls.gov/news.release/jolts.nr0.htm?stream=top",
+     "title": "Job Openings and Labor Turnover Summary (lipiec 2026: openings 7,3 mln, hires 5,1 mln)",
+     "publisher": "U.S. Bureau of Labor Statistics",
+     "published": "2026-09 (wg search-summary)"
+    },
+    {
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "title": "Job Offer Comparison Calculator (dowód podaży narzędzi, nie popytu)",
+     "publisher": "SheetsResume",
+     "published": "nieznana"
+    },
+    {
+     "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+     "title": "Compare multiple job offers side-by-side with total compensation analysis (agent skill, dowód substytutu AI)",
+     "publisher": "Smithery",
+     "published": "nieznana"
+    }
+   ],
+   "commercial_pl": "Charakter mieszany. Sama decyzja o ofercie pracy nie jest zakupem. Reklamodawcy w jej otoczeniu to głównie branża kariery (resume builders, coaching, kursy) oraz HR-tech, który kieruje reklamy do pracodawców (hipoteza). Silniej komercyjne są podproblemy związane z transakcjami: relokacja (przeprowadzki, sprzedaż i zakup domu, kredyt hipoteczny, wynajem), wybór ubezpieczenia (COBRA vs ACA Marketplace, plany HDHP/HSA), rollover 401(k) (brokerzy) oraz equity (doradcy, finansowanie wykonania opcji). Brak w sesji źródeł o CPC i RPM, więc ocena reklamodawców to hipoteza, niezweryfikowane.",
+   "integrated_competition_pl": "Podstawowe 'porównaj dwie oferty' ma gęstą konkurencję (search-summary, żadna strona nie była otwierana). SheetsResume liczy total comp i annualized equity, pokazuje dilution i exit scenarios. SheCodes Offer Calculator porównuje do 3 ofert w roku 1 i w 4 latach, z vestingiem, bonusem, sign-on i benefitami, ale według summary nie liczy podatków. Dalej: LoopCV (weighted scoring, eksport do arkusza), The Salary Negotiator, CalcPlanet, US Tax Tools job-offer-comparison, PaycheckTaxCalculator.net Offer Comparison, PaycheckCity Dual Scenario (netto w dwóch scenariuszach) i sum.money. Część z nich to prawdopodobnie bezpośredni konkurenci prostego porównania ofert. Nie sprawdzono, czy któreś łączy podatki stanowe, koszty zdrowia i vesting naraz. Dochodzi substytut AI: publiczne agent skills 'offer-comparison-analyzer'. Dla podproblemów zdarzeniowych (moment odejścia vs vesting i clawback, luka w ubezpieczeniu między pracami, odprawa, RTO czyli relokacja vs dojazd) nie było dedykowanych wyszukiwań z powodu limitu. Stan konkurencji jest tam nieznany, co nie znaczy, że jej nie ma.",
+   "ai_fit_pl": "Użytkownik bardzo prawdopodobnie zapyta asystenta 'which job offer should I take?' (hipoteza, brak danych o promptach). Przy porównaniu ofert ryzyko, że asystent odpowie sam, jest wysokie. Istnieją gotowe skills dla agentów, które robią dokładnie to (smithery.ai, aitmpl.com, findskill.ai, hackernoon.com; search-summary). Szansa na odesłanie do zewnętrznego narzędzia rośnie, gdy potrzebne są aktualne dane, których asystent nie ma (premie ACA dla ZIP, tabele stanowe, reguły UI), albo wiele zależnych od siebie dat (harmonogramy vestingu, clawback pro-rata) razem z analizą wrażliwości (hipoteza). Reguł Google Search nie przenoszę na ChatGPT, Perplexity, Claude, Copilot ani Gemini. Nie sprawdzono, jak każdy z nich linkuje kalkulatory.",
+   "shared_modeling_pl": "Duży potencjał wspólnego modelu. Wspólne moduły: silnik podatkowy (federal, 50 stanów, FICA, supplemental withholding), harmonogramy (vesting RSU i opcji, match 401k graded/cliff, clawback pro-rata), koszty zdrowia (premie, deductible, OOP max, HSA, ACA PTC), mieszkanie (sprzedaż, zakup, wynajem, koszty transakcji) oraz koszty życia. Moduły podatkowy, ACA i HSA zasilają też rodzinę emerytalną, co daje synergię między rodzinami. Opcja architektoniczna: zamiast własnych tabel użyć open-source silnika typu PolicyEngine US (wiedza treningowa, niezweryfikowane w tej sesji).",
+   "data_cost_pl": "Koszt średni. Co roku trzeba zaktualizować: progi federalne, 50 systemów stanowych i podatki lokalne (np. NYC, gminy w Ohio i PA), limity 401k i HSA, FPL i applicable percentage ACA, stawkę IRS mileage. Koszty życia: darmowe i roczne BEA Regional Price Parities oraz HUD FMR albo płatny C2ER COLI (źródła z wiedzy treningowej, niezweryfikowane). Reguły UI i wypłaty PTO zmieniają się w każdym stanie nieregularnie, a ich utrzymanie bez redakcji jest drogie. Zmiany 2025–2026 do potwierdzenia przed budową (wszystkie: hipoteza, niezweryfikowane w tej sesji): OBBBA miała utrwalić opodatkowanie zwrotów kosztów przeprowadzki dla cywili i wprowadzić odliczenia tips/overtime; SECURE 2.0 wprowadza Roth catch-up dla lepiej zarabiających od 2026; status rozszerzonych dopłat ACA w 2026 jest niepewny.",
+   "error_risk_pl": "Ryzyko średnie. Pomyłki w regułach stanowych (convenience-of-employer, part-year residency, sourcing equity przy przeprowadzce w trakcie vestingu) oraz w regułach ACA i COBRA mogą realnie kosztować użytkownika. Wiele wyników jest jednak kierunkowych (który wariant wygrywa, kiedy jest break-even). Najbardziej ryzykowne obszary to ISO/AMT/QSBS i luki ubezpieczeniowe.",
+   "catalog_potential_pl": "Lista RÓŻNYCH decyzji jest długa: porównanie ofert, moment odejścia, RTO (relokacja, dojazd albo zmiana pracy), pakiet relokacyjny, plan zdrowotny i HSA, luka w ubezpieczeniu, odprawa lub VSP, rollover 401(k), ESPP, equity startupowe, counteroffer, 1099 vs W-2, przejście na part-time. Wiele z nich dzieli silnik, więc łatwo zrobić warianty, które różnią się tylko stanem lub kwotą. Takie warianty nie liczą się jako nowe produkty.",
+   "ad_fit_pl": "Dopasowanie średnie (hipoteza, niezweryfikowane, brak w sesji danych o stawkach). Otoczenie kariera/HR jest słabsze. Relokacja (real estate, mortgage, moving) i ubezpieczenia zdrowotne są silniejsze. Treści zdrowotno-finansowe to YMYL, więc Google prawdopodobnie stawia im wyższe wymagania jakości (hipoteza).",
+   "expert_cost_pl": "Koszt średni. Potrzebny okresowy przegląd przez EA lub CPA (podatki stanowe) i specjalistę od benefitów i ubezpieczeń (COBRA, ACA, HSA). Przy equity dochodzi doradca od opcji. Bez equity koszt pozostaje umiarkowany.",
+   "scores": {
+    "demand": 3,
+    "commercial": 3,
+    "integrated_gap": 3,
+    "ai_fit": 2,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 3,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Warunkowo tak, ale wejściem nie powinien być 'job offer calculator'. Ogólne porównanie ofert jest zatłoczone (co najmniej 9 darmowych narzędzi w jednym wyszukiwaniu), a asystent łatwo robi je sam (gotowe agent skills). Ten kierunek odrzucam. Potencjał widzę w decyzjach przejściowych wywołanych konkretnym zdarzeniem, z twardymi datami i danymi zewnętrznymi: moment odejścia vs vesting, bonus i clawback; luka w ubezpieczeniu (COBRA vs ACA po zmianach 2026); odprawa lub VSP; RTO. Konkurencji dla nich nie zweryfikowano z powodu wyczerpanego limitu wyszukiwań. Przed decyzją każda z tych decyzji wymaga 2–4 wyszukiwań. Możliwa synergia z healthscorer.com przez moduł zdrowie i ubezpieczenia (hipoteza)."
+  },
+  {
+   "family": "Emerytura i drawdown (kolejność wypłat, konwersje Roth, moment Social Security, annuities, RMD, IRMAA, wcześniejsza emerytura z ACA)",
+   "demand_pl": "Dane bezpośrednie (to demografia, nie popyt na narzędzie): według Alliance for Lifetime Income około 4,18 mln Amerykanów skończyło 65 lat w 2025, czyli około 11 400 dziennie. Kiplinger podaje około 4,1 mln rocznie i ponad 11 000 dziennie także w 2026. 'Peak 65 Zone' trwa do 2027 (search-summary). Alliance jest organizacją wspieraną przez branżę annuity, więc jej framing może być stronniczy. Liczba osób w wieku decyzji to nie miesięczny popyt na symulator. Dane pośrednie: istnieje płatny rynek planerów. Boldin PlannerPlus kosztuje 168 USD rocznie według robberger.com i wealthfluent.com (stan na 21.10.2026). ProjectionLab Premium to około 129 USD rocznie, Pralana Online 99–129 USD, MaxiFi nie ma darmowego planu. Liczne rankingi z 2026 (killionlabs, wealthfluent, bellerophonchs, retirementplanningtools.net) też wskazują na skłonność do płacenia i duże zainteresowanie. Wolumenów Google i promptów brak w sesji (hipoteza).",
+   "demand_sources": [
+    {
+     "url": "https://protectedincome.org/?p=7453",
+     "title": "The U.S. Has Reached the Peak of Peak 65®",
+     "publisher": "Alliance for Lifetime Income (organizacja związana z branżą annuity)",
+     "published": "2025"
+    },
+    {
+     "url": "https://401kspecialistmag.com/the-peak-of-peak-65-record-number-to-reach-traditional-retirement-age-in-2025/",
+     "title": "The Peak of Peak 65: Record Number to Reach Traditional Retirement Age in 2025",
+     "publisher": "401k Specialist",
+     "published": "2025-01"
+    },
+    {
+     "url": "https://kiplinger.com/retirement/turning-65-key-things-to-know",
+     "title": "Turning 65 This Year? Here Are 10 Key Things To Know",
+     "publisher": "Kiplinger",
+     "published": "2026 (wg search-summary)"
+    },
+    {
+     "url": "https://www.planadviser.com/peak-65-finds-millions-americans-unprepared-economist-warns/",
+     "title": "Peak 65 finds millions of Americans unprepared, economist warns",
+     "publisher": "PLANADVISER",
+     "published": "nieznana"
+    },
+    {
+     "url": "https://wealthfluent.com/best-retirement-planning-software/",
+     "title": "Best Retirement Planning Software 2026 (ceny sprawdzone 21.10.2026; dowód płatnego rynku)",
+     "publisher": "Wealthfluent",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://robberger.com/boldin-review/",
+     "title": "Boldin Review 2026: Is This Retirement Planner Worth $168 a Year?",
+     "publisher": "Rob Berger",
+     "published": "2026"
+    }
+   ],
+   "commercial_pl": "Charakter bardzo komercyjny. Decyzje dotyczą przenoszenia dużych aktywów: rollover, annuity, wybór doradcy, Medicare i Medigap, reverse mortgage, sprzedaż domu. Badania Peak 65 publikuje organizacja promująca annuities (protectedincome.org), co pośrednio sugeruje intensywny marketing tej branży. Stawek reklamowych nie znam: hipoteza, niezweryfikowane.",
+   "integrated_competition_pl": "Na poziomie kompleksowego planera kategoria jest zatłoczona. Potwierdzają to wyniki wyszukiwania (search-summary, wysoka pewność dla kategorii jako całości): Boldin (podatki, Social Security, wypłaty; według retirementplanningtools.net Monte Carlo do 1000 przebiegów; linkowanie kont w płatnym planie). ProjectionLab (według killionlabs Monte Carlo i backtesting historyczny także w planie darmowym; obsługuje planowanie poza USA). MaxiFi (consumption smoothing, czyli wylicza zrównoważony poziom wydatków; 14-dniowy trial). Pralana (szczegółowość 'actuarial-grade', w wersji Gold analiza historyczna od 1928). Boldin sam porównuje się z 13 innymi narzędziami (boldin.com), a jasonwootten.com wymienia top 5 programów do drawdown. Szczegółowych funkcji każdego z nich (Roth conversion optimizer, IRMAA, ACA PTC) nie sprawdzono w tej sesji. Z wiedzy treningowej są prawdopodobne. Istnieją też darmowe narzędzia znane z wiedzy treningowej (Open Social Security, i-orp, kalkulatory brokerów), ale ich URL nie pojawił się w wynikach i są niezweryfikowane. Luka może istnieć tylko w wąskich decyzjach wywołanych konkretnym zdarzeniem, które planery traktują jako jeden parametr z wielu: pension lump sum, relokacja na emeryturze, inherited IRA, pomost ACA (hipoteza).",
+   "ai_fit_pl": "Pytania typu 'Should I convert to Roth before RMDs?' albo 'When should I claim Social Security?' naturalnie trafiają do asystentów (hipoteza, brak danych o promptach). Reguły i heurystyki asystent poda sam. Przy wieloletnich projekcjach podatkowych z klifami (IRMAA, ACA, opodatkowanie świadczeń SS) może odesłać do narzędzia. Prawdopodobnie wskaże jednak znane marki (Boldin, ProjectionLab, Open Social Security), co utrudnia start nowej domenie (hipoteza, niezweryfikowane). Osoby 60+ mogą rzadziej korzystać z asystentów AI (hipoteza).",
+   "shared_modeling_pl": "Bardzo duży potencjał wspólnego modelu. Jeden roczny silnik obsłuży większość symulatorów: podatek federalny i stanowy, opodatkowanie SS, LTCG, IRMAA z 2-letnim lookbackiem, ACA PTC, RMD z tabel IRS, konta taxable/traditional/Roth, mortality, zwroty i Monte Carlo. Moduł podatkowy i ACA jest wspólny z rodziną 'zmiana pracy'.",
+   "data_cost_pl": "Koszt średnio-wysoki. Wiele parametrów zmienia się co roku (progi, IRMAA, Part B, COLA, wage base, FPL i applicable %, limity), część co miesiąc (stopy 417(e) dla pension lump sum). Do tego duża zmienność polityczna 2025–2026: OBBBA z dodatkowym odliczeniem dla 65+ w latach 2025–2028 i trwałymi progami TCJA, wygaśnięcie lub przedłużenie rozszerzonych dopłat ACA, prognozy wyczerpania funduszu SS. Wszystkie te fakty to hipoteza, niezweryfikowane w tej sesji. Dane źródłowe są darmowe (IRS, SSA, CMS, HHS), ale ich wzajemne interakcje wymagają testów regresyjnych przy każdej zmianie.",
+   "error_risk_pl": "Ryzyko wysokie. Część decyzji jest nieodwracalna lub trudna do odwrócenia: moment przejścia na SS, konwersje Roth (od 2018 bez rekarakteryzacji), wybór annuity lub lump sum. Występują klify, gdzie 1 USD ponad próg IRMAA lub ACA zmienia wynik. To treści YMYL. Błąd silnika przekłada się na duże kwoty.",
+   "catalog_potential_pl": "Decyzji jest dużo: konwersje Roth, SS, kolejność wypłat, annuity/SPIA, pension, RMD/QCD, IRMAA, pomost ACA, downsizing lub relokacja, reverse mortgage, LTC, Medicare przy pracy po 65, inherited IRA, planowanie dla owdowiałego małżonka. Większość z nich to jednak moduły kompleksowego planu, który konkurenci już oferują. Realna luka w katalogu jest więc mniejsza niż ta lista.",
+   "ad_fit_pl": "Dopasowanie wysokie (hipoteza, niezweryfikowane): usługi finansowe, brokerzy, annuities, doradcy, Medicare, senior living, real estate. Trzeba uwzględnić politykę YMYL i możliwe ograniczenia dla reklamodawców finansowych. Stawek nie szacuję.",
+   "expert_cost_pl": "Koszt wysoki. Potrzebny przegląd CFP lub EA przy budowie i co roku przy aktualizacji parametrów. Przy pension i annuity dodatkowo weryfikacja aktuarialna.",
+   "scores": {
+    "demand": 4,
+    "commercial": 5,
+    "integrated_gap": 2,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 2,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Komercyjnie najsilniejsza rodzina, konkurencyjnie najsłabsza. Wejście jako 'retirement planner' albo kalkulator Roth/SS odrzucam: Boldin, ProjectionLab, MaxiFi i Pralana plus darmowe narzędzia już tam są. Sens mają tylko wąskie symulatory z jedną dominującą decyzją i konkretną datą: pension lump sum vs annuity, pomost ACA przy wcześniejszej emeryturze (po zmianach 2026), relokacja lub downsizing na emeryturze, inherited IRA w regule 10 lat. Każdy z nich wymaga osobnej weryfikacji konkurencji (nie wykonanej z powodu limitu) i przeglądu eksperckiego. Rodzina ma największy koszt utrzymania i największe ryzyko błędu."
+  }
+ ],
+ "ideas": [
+  {
+   "temp_id": "G4-01",
+   "name_en": "Two-Offer Total Compensation Comparator (generic)",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Kandydat z 2–3 ofertami w ręku, kilka dni przed terminem akceptacji.",
+   "sample_prompt_en": "I have two job offers: $145k in Austin with a 10% bonus and RSUs, or $160k in San Jose with a better 401k match. Which one is actually better?",
+   "decision_problem": "Którą ofertę przyjąć według łącznej wartości wynagrodzenia po podatkach i benefitach.",
+   "combined_domains": "Podatki federalne i stanowe, bonus, equity (wycena roczna), match 401k, składki zdrowotne, koszty życia.",
+   "variants_compared": "Oferta A vs B vs C, statycznie (rok 1 i suma 4 lat).",
+   "key_dependencies": "Stan zamieszkania wpływa na podatek, harmonogram vestingu na wartość equity, wysokość składki na dochód netto.",
+   "main_outputs": "Total comp w roku 1 i w 4 latach, wartość po podatku, opcjonalny scoring jakościowy.",
+   "reason_external_site": "Słaby. Asystent policzy to sam w rozmowie, a publicznie dostępne są gotowe agent skills do porównywania ofert.",
+   "data_sources": "Progi IRS, stanowe tabele podatkowe, BEA RPP (wiedza treningowa, niezweryfikowane).",
+   "user_data": "Pensja, bonus, grant equity, match, składki, lokalizacje.",
+   "nearest_competition": [
+    {
+     "name": "SheetsResume Job Offer Comparison Calculator",
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "type": "direct",
+     "features_claimed": "Total target compensation, annualized equity value, upside scenarios, szacunek dilution i exit scenarios dla equity startupowego, działa w przeglądarce (search-summary)",
+     "notes": "Strony nie otwierano. Nie wiadomo, czy uwzględnia podatki stanowe i koszty zdrowia.",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "SheCodes Offer Calculator",
+     "url": "https://tools.shecodes.io/career-tools/offer",
+     "type": "partial",
+     "features_claimed": "Do 3 ofert, wartość w roku 1 i w 4 latach z vestingiem, bonusem, sign-on i benefitami",
+     "notes": "Według summary nie modeluje podatków",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "US Tax Tools – Job Offer Comparison",
+     "url": "https://ustax.tools/job-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Porównanie ofert w serwisie podatkowym (wniosek z tytułu i URL)",
+     "notes": "Funkcji nie sprawdzono. Prawdopodobnie liczy podatki stanowe, ale to niezweryfikowane.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "LoopCV Job Offer Comparison",
+     "url": "https://www.loopcv.pro/tools/job-offer-comparison/",
+     "type": "partial",
+     "features_claimed": "Do 3 ofert, weighted scoring (total comp, work-life balance, rozwój, stabilność, kultura), eksport do arkusza",
+     "notes": "search-summary",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "The Salary Negotiator Job Offer Comparison Tool",
+     "url": "https://www.thesalarynegotiator.com/job-offer-comparison-tool",
+     "type": "partial",
+     "features_claimed": "Pola: base, target bonus, roczna wartość equity, sign-on, poziom stanowiska",
+     "notes": "search-summary",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "PaycheckCity Dual Scenario Salary Paycheck Calculator",
+     "url": "https://www.paycheckcity.com/calculator/dual/taxreform/",
+     "type": "partial",
+     "features_claimed": "Dochód netto w dwóch scenariuszach wynagrodzenia (wniosek z tytułu)",
+     "notes": "Liczy tylko część płacową",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "offer-comparison-analyzer (agent skill)",
+     "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+     "type": "substitute",
+     "features_claimed": "Skill dla asystentów AI: porównanie wielu ofert side-by-side z analizą total compensation (wniosek z tytułu)",
+     "notes": "Ten sam skill widnieje też na aitmpl.com i hackernoon.com. To dowód, że problem rozwiązuje się bezpośrednio w asystencie.",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Tak, w dużej mierze. Jedno wyszukiwanie zwróciło co najmniej 9 darmowych narzędzi i co najmniej 4 agent skills (search-summary, pewność średnio-wysoka).",
+   "gap": "Widoczne różnice między narzędziami są kosmetyczne, np. brak podatku w SheCodes. Brakujące pole nie tworzy niszy. Nie zidentyfikowano luki integracyjnej.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "low",
+   "demand_evidence": "Przepływy: quits 3,2 mln w czerwcu 2026 według BLS JOLTS (https://www.bls.gov/news.release/archives/jolts_08042026.htm). Liczba narzędzi świadczy o zainteresowaniu twórców (pośrednio). Wolumen zapytań nieznany.",
+   "ad_environment": "Kariera i HR, resume buildery. Dopasowanie średnio-niskie (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Kategoria zatłoczona (co najmniej 9 darmowych kalkulatorów), asystent łatwo rozwiązuje problem sam (gotowe agent skills), a różnice między narzędziami są kosmetyczne. Model porównania ofert warto jednak zachować jako wewnętrzny moduł innych symulatorów (G4-02, G4-03).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G4-02",
+   "name_en": "Leave Now or Wait? Quit-Timing & Make-Whole Simulator",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Pracownik z nową ofertą, który negocjuje datę startu. W obecnej pracy ma niezwestowane RSU, zbliża się wypłata rocznego bonusu, cliff vestingu matchu 401k i koniec okresu clawbacku sign-on lub relokacji.",
+   "sample_prompt_en": "My next RSU vest is in 4 months, my annual bonus pays out in March, and my 401k match fully vests next August. The new company wants me to start in 3 weeks. Is it worth waiting, or should I ask them for a sign-on bonus to cover what I'd lose?",
+   "decision_problem": "Wybór daty odejścia i ustalenie, jaki make-whole (sign-on lub dodatkowy grant) negocjować, żeby zrównoważyć utracone świadczenia, przy ryzyku wycofania oferty.",
+   "combined_domains": "Harmonogramy vestingu RSU, wycena akcji z niepewnością, warunki bonusu (zatrudnienie w dniu wypłaty), vesting matchu 401k (graded lub cliff, lata służby), clawback sign-on i relokacji pro-rata, okres ESPP, stanowe reguły wypłaty PTO, luka w ubezpieczeniu, różnica pensji w okresie opóźnienia, podatek (supplemental withholding vs faktyczny).",
+   "variants_compared": "Odejście teraz, po najbliższym vestingu, po bonusie, po pełnym vestingu matchu, teraz z wynegocjowanym make-whole, zostanie (counteroffer).",
+   "key_dependencies": "Każdy miesiąc opóźnienia przesuwa wyższą pensję w nowej pracy, ale daje dodatkowe vesty. Clawback maleje w czasie. Ryzyko wycofania oferty rośnie z opóźnieniem. Wynik zależy od ceny akcji i prawdopodobieństwa wypłaty bonusu.",
+   "main_outputs": "Oś czasu zdarzeń, wartość netto dla każdej kandydackiej daty, data break-even, kwota make-whole do negocjacji, wrażliwość na cenę akcji i na ryzyko utraty oferty.",
+   "reason_external_site": "Trzeba uporządkować 6–10 dat i reguł, a wynik najlepiej pokazać na osi czasu z analizą wrażliwości. Asystent jest w stanie to policzyć, ale strona daje powtarzalny model i gotową kwotę do negocjacji. Hipoteza.",
+   "data_sources": "Limity 401k (IRS), stawka supplemental withholding (IRS Pub 15), stanowe reguły wypłaty PTO (stanowe DOL). Aktualizacja roczna. Wiedza treningowa, niezweryfikowane.",
+   "user_data": "Harmonogram grantów, cena akcji, data i warunki bonusu, plan vestingu 401k, warunki clawback, oferta (pensja, data startu).",
+   "nearest_competition": [
+    {
+     "name": "SheCodes Offer Calculator",
+     "url": "https://tools.shecodes.io/career-tools/offer",
+     "type": "partial",
+     "features_claimed": "Wartość ofert w 4 latach z vestingiem i sign-on",
+     "notes": "Porównuje oferty statycznie. Nie sprawdzono, czy optymalizuje datę odejścia.",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "SheetsResume Job Offer Comparison Calculator",
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "type": "partial",
+     "features_claimed": "Annualized equity, upside scenarios",
+     "notes": "Timingu odejścia i clawbacku nie sprawdzono",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "offer-comparison-analyzer (agent skill)",
+     "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+     "type": "substitute",
+     "features_claimed": "Porównanie ofert przez asystenta AI",
+     "notes": "Substytut AI",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres jest jednak minimalny: zero dedykowanych wyszukiwań, bo planowane zapytania ('sign-on bonus clawback calculator', 'golden handcuffs calculator unvested RSU') zablokował limit budżetu. Pewność niska.",
+   "gap": "Hipoteza: kalkulatory ofert porównują oferty statycznie i nie optymalizują daty odejścia z obecnej pracy ani kwoty make-whole. Wymaga weryfikacji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Przepływy: quits 3,0–3,2 mln miesięcznie (BLS JOLTS, kwiecień–czerwiec 2026). Udział osób z RSU, vestingiem lub clawbackiem nieznany (hipoteza).",
+   "ad_environment": "Kariera, fintech, doradcy equity. Dopasowanie średnio-niskie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Decyzja jest wyraźna i ma sekwencję zdarzeń, której zwykłe kalkulatory ofert nie modelują (hipoteza). Wymaga 2–4 wyszukiwań konkurencji, których nie wykonano z powodu limitu.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-03",
+   "name_en": "Return-to-Office Mandate: Relocate vs Super-Commute vs Find a Remote Job",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Pracownik zdalny, któremu pracodawca ogłosił powrót do biura z terminem. Decyduje 30–90 dni przed tym terminem.",
+   "sample_prompt_en": "My company is ending remote work and wants me in the Seattle office by March. I live in Boise and own my house with a 3% mortgage. Should I relocate, commute weekly, or start looking for a new remote job?",
+   "decision_problem": "Wybór ścieżki po ogłoszeniu RTO przy ograniczonym czasie, kosztach transakcji mieszkaniowych i niepewności znalezienia nowej pracy.",
+   "combined_domains": "Koszty przeprowadzki i transakcji nieruchomości (sprzedaż i zakup vs wynajem i wynajęcie obecnego domu), stypendium relokacyjne z clawbackiem, podatek stanowy, koszty życia i mieszkania, koszt i czas dojazdu (loty, hotel), czas szukania pracy i luka dochodowa (COBRA/ACA), praca partnera, utrata niskiego oprocentowania obecnego kredytu (hipoteza).",
+   "variants_compared": "Relokacja z kupnem domu; relokacja z wynajmem plus wynajęcie obecnego domu; super-commute; szukanie zdalnej pracy (z prawdopodobieństwem sukcesu i czasem trwania); odejście z odprawą.",
+   "key_dependencies": "Horyzont pozostania u pracodawcy, oprocentowanie obecnego kredytu vs bieżące stopy, wartość czasu dojazdu, prawdopodobieństwo i czas znalezienia nowej pracy, różnica podatków stanowych.",
+   "main_outputs": "Koszt netto każdej ścieżki w horyzoncie 1, 3 i 5 lat, horyzont break-even, wrażliwość na czas poszukiwań, ceny domów i stopy procentowe.",
+   "reason_external_site": "Potrzebne są dane lokalne (podatki, czynsze, koszty transakcji) i obliczenia scenariuszowe. Asystent poda listę jakościową, ale liczby wymagają tych danych. Hipoteza.",
+   "data_sources": "BEA Regional Price Parities, HUD Fair Market Rents, stanowe tabele podatkowe, FHFA HPI, Freddie Mac PMMS, stawka IRS mileage. Wiedza treningowa, niezweryfikowane.",
+   "user_data": "Pensja, dane domu (wartość, saldo, stopa kredytu), oferta relokacyjna, koszt podróży, sytuacja partnera.",
+   "nearest_competition": [
+    {
+     "name": "sum.money – US Salary Comparison Calculator",
+     "url": "https://sum.money/us/salary-comparison-calculator/",
+     "type": "partial",
+     "features_claimed": "Porównanie wynagrodzeń (wniosek z tytułu); uwzględnienie kosztów życia niezweryfikowane",
+     "notes": "search-summary",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "PaycheckCity Dual Scenario Salary Paycheck Calculator",
+     "url": "https://www.paycheckcity.com/calculator/dual/taxreform/",
+     "type": "partial",
+     "features_claimed": "Dochód netto w dwóch scenariuszach",
+     "notes": "Liczy tylko część płacową",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "US Tax Tools – Compare Paychecks",
+     "url": "https://ustax.tools/compare-paychecks/",
+     "type": "partial",
+     "features_claimed": "Porównanie wypłat (wniosek z tytułu)",
+     "notes": "Funkcji nie sprawdzono",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Asystent AI lub arkusz kalkulacyjny",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Lista jakościowa i ręczne zestawienie",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nieznane. Nie było dedykowanych wyszukiwań (limit). Prawdopodobnie istnieją kalkulatory cost of living i rent vs buy, czyli fragmenty problemu (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: brak narzędzia, które w jednym modelu łączy scenariusz szukania pracy, transakcję mieszkaniową i super-commute. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Brak w sesji źródła o skali RTO (hipoteza). Przepływy rynku pracy według BLS JOLTS są tylko pośrednie.",
+   "ad_environment": "Real estate, mortgage, moving, rental. Dopasowanie średnio-wysokie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Decyzja jest wielowymiarowa, ma sekwencję zdarzeń i ograniczenie czasu, a środowisko reklamowe jest silne. Wymaga weryfikacji popytu na RTO w 2026 i konkurencji (nie wykonano z powodu limitu).",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-04",
+   "name_en": "Relocation Package Evaluator (lump sum vs managed move, tax gross-up, repayment risk)",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Osoba z ofertą wymagającą przeprowadzki, która wybiera między lump sum a managed move (z temporary housing i home sale assistance). Pakiet obejmuje umowę zwrotu na 12–24 miesiące.",
+   "sample_prompt_en": "My new employer offers either a $15k lump sum relocation or a full managed move with 60 days of temp housing. I own a house I'd need to sell. Which is better after taxes, and what if I leave within a year?",
+   "decision_problem": "Który wariant pakietu wybrać, czy negocjować wyższą pensję zamiast pakietu i jaka jest ekspozycja na zwrot.",
+   "combined_domains": "Opodatkowanie świadczeń relokacyjnych (hipoteza: od TCJA w pełni opodatkowane dla cywili, utrwalone przez OBBBA; niezweryfikowane), gross-up vs brak gross-up, koszt przeprowadzki, sprzedaż domu (prowizje, wyłączenie §121), podwójne koszty mieszkaniowe, zwrot pro-rata, prawdopodobieństwo odejścia.",
+   "variants_compared": "Lump sum; managed move z gross-upem; managed move z programem BVO/home sale; odmowa pakietu w zamian za wyższy sign-on lub pensję.",
+   "key_dependencies": "Krańcowa stawka podatkowa, rzeczywisty koszt przeprowadzki, czas sprzedaży domu, prawdopodobieństwo odejścia przed końcem okresu zwrotu.",
+   "main_outputs": "Wartość netto po podatku, koszt out-of-pocket, ekspozycja na zwrot w czasie, kwota do negocjacji.",
+   "reason_external_site": "Umiarkowany. Główną trudność stanowi reguła podatkowa i prosta arytmetyka, które asystent ogarnie (hipoteza).",
+   "data_sources": "IRS (supplemental withholding, §121), stanowe tabele podatkowe. Brak twardego źródła średnich kosztów przeprowadzek (hipoteza).",
+   "user_data": "Warunki pakietu, wartość i saldo domu, koszt przeprowadzki, plan pozostania w firmie.",
+   "nearest_competition": [
+    {
+     "name": "SheCodes Offer Calculator",
+     "url": "https://tools.shecodes.io/career-tools/offer",
+     "type": "partial",
+     "features_claimed": "Sign-on i benefity w wartości oferty",
+     "notes": "Nie sprawdzono, czy obsługuje relokację i jej podatki",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "Poradniki firm relokacyjnych (np. Cartus, SIRVA)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "substitute",
+     "features_claimed": "Treści o pakietach relokacyjnych (wiedza treningowa)",
+     "notes": "Nie sprawdzono w tej sesji",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnienie zasad opodatkowania i prosty rachunek",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nieznane. Planowane wyszukiwanie ('relocation package calculator gross-up...') zablokował limit.",
+   "gap": "Hipoteza: połączenie podatku, sprzedaży domu i ryzyka zwrotu w jednym narzędziu. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Brak danych o liczbie relokacji korporacyjnych w sesji (hipoteza). Prawdopodobnie wąska grupa.",
+   "ad_environment": "Moving, real estate, mortgage (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Grupa jest prawdopodobnie wąska, a problem częściowo rozwiązywalny w asystencie. Lepiej włączyć go jako moduł G4-03 niż jako osobny produkt. Wymaga weryfikacji popytu.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-05",
+   "name_en": "Startup Options vs Public-Company RSU: Risk-Adjusted Offer Simulator",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Kandydat wybierający między startupem (opcje ISO, preferencje likwidacyjne, dilution) a korporacją (RSU) albo między dwiema ofertami startupowymi.",
+   "sample_prompt_en": "A startup offers $150k plus 0.2% in options at a $2 strike; Big Tech offers $185k plus $200k in RSUs over 4 years. How do I compare these realistically, including what happens if I leave the startup after 2 years?",
+   "decision_problem": "Porównanie ofert przy skrajnie różnym profilu ryzyka, z uwzględnieniem kosztu wykonania opcji przy odejściu.",
+   "combined_domains": "Struktura kapitału (liquidation preference, dilution w kolejnych rundach), scenariusze i prawdopodobieństwa exitu, koszt wykonania (strike i AMT dla ISO), okno 90 dni po odejściu, QSBS (zmiany OBBBA: hipoteza, niezweryfikowane), różnica w gotówce, ryzyko utraty pracy.",
+   "variants_compared": "Startup vs RSU; scenariusze exitu (brak, acqui-hire, średni, duży); zostanie do exitu vs odejście po 2 latach (wykonanie lub porzucenie opcji).",
+   "key_dependencies": "Preferencje likwidacyjne decydują o wartości common przy niskim exicie, dilution o udziale, koszt i podatek wykonania o tym, czy opłaca się zachować opcje po odejściu.",
+   "main_outputs": "Rozkład wartości (oczekiwana, mediana, P(0)), break-even exit valuation, kapitał potrzebny na wykonanie, porównanie z RSU.",
+   "reason_external_site": "Model scenariuszowy z wieloma parametrami i wykresem rozkładu. Asystent może policzyć uproszczoną wersję (hipoteza).",
+   "data_sources": "IRS (AMT exemption, progi), parametry od użytkownika. Typowe dane o dilution pochodzą z raportów branżowych (wiedza treningowa, niezweryfikowane).",
+   "user_data": "Liczba opcji, strike, 409A/FMV, preferred price, liczba akcji w pełni rozwodnionych (jeśli znana), etap startupu.",
+   "nearest_competition": [
+    {
+     "name": "SheetsResume Job Offer Comparison Calculator",
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "type": "partial",
+     "features_claimed": "Szacunek przyszłej dilution i exit scenarios dla equity startupowego (search-summary)",
+     "notes": "Nie sprawdzono, czy uwzględnia preferencje, AMT i scenariusz odejścia",
+     "paid": "Darmowe według summary"
+    },
+    {
+     "name": "Carta / Secfi – narzędzia do equity",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Kalkulatory wartości i podatków opcji (wiedza treningowa)",
+     "notes": "Funkcje niezweryfikowane. Mogą być za loginem lub służyć jako lead-gen.",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Częściowo: SheetsResume ma dilution i exit scenarios (search-summary). Funkcje fintechów niezweryfikowane. Planowane wyszukiwanie ('startup stock options calculator... AMT ISO NSO') zablokował limit.",
+   "gap": "Hipoteza: rzadko spotykane połączenie preferencji likwidacyjnych, kosztu wykonania i scenariusza odejścia w darmowym narzędziu. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych o liczbie pracowników z opcjami w tej sesji (hipoteza: wąska, ale zamożna grupa).",
+   "ad_environment": "Doradcy equity, finansowanie wykonania opcji, wealth management (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Wąska grupa, wysokie ryzyko błędu podatkowego (AMT, QSBS po OBBBA) i prawdopodobna konkurencja fintechów (niezweryfikowane). Nie nadaje się na start.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-06",
+   "name_en": "ISO Exercise & AMT Timing Planner",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Pracownik startupu z opcjami ISO, przed odejściem, przed tender offer albo pod koniec roku podatkowego.",
+   "sample_prompt_en": "I have 20,000 ISOs at $1.50 and the 409A is now $12. Should I exercise this year, early exercise with an 83(b), wait for the tender offer, or let them expire when I leave?",
+   "decision_problem": "Kiedy i ile opcji wykonać przy ryzyku AMT i braku płynności.",
+   "combined_domains": "AMT, 83(b), holding periods (ISO qualifying disposition), QSBS, płynność (tender), okno po odejściu, ryzyko utraty wartości.",
+   "variants_compared": "Wykonanie teraz, rozłożone na lata, w momencie tendera, przy odejściu, wcale.",
+   "key_dependencies": "Spread 409A vs strike, AMT crossover, przyszła płynność.",
+   "main_outputs": "Podatek i AMT credit w czasie, potrzebna gotówka, scenariusze wartości.",
+   "reason_external_site": "Złożone obliczenia podatkowe, ale konkurencja wyspecjalizowanych fintechów jest prawdopodobna (hipoteza).",
+   "data_sources": "Parametry AMT od IRS (roczne).",
+   "user_data": "Granty, strike, 409A, dochód, stan zamieszkania.",
+   "nearest_competition": [
+    {
+     "name": "Secfi / Carta / ESO Fund / Harness Wealth – kalkulatory opcji",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "direct",
+     "features_claimed": "Kalkulatory exercise i AMT (wiedza treningowa)",
+     "notes": "Typ 'direct' to hipoteza do weryfikacji. Część może być za loginem.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "SheetsResume Job Offer Comparison Calculator",
+     "url": "https://sheetsresume.com/job-offer-comparison",
+     "type": "partial",
+     "features_claimed": "Wycena equity i exit scenarios",
+     "notes": "Nie liczy AMT według dostępnego summary (niezweryfikowane)",
+     "paid": "Darmowe według summary"
+    }
+   ],
+   "already_solved": "Prawdopodobnie tak, przez finansowane fintechy z darmowymi kalkulatorami do lead-gen (wiedza treningowa, niezweryfikowane w tej sesji; wyszukiwanie zablokowane).",
+   "gap": "Nie zidentyfikowano. Domenę prawdopodobnie obsługują wyspecjalizowane podmioty.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Brak w sesji (hipoteza: wąska grupa).",
+   "ad_environment": "Fintech i wealth (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "odrzucić",
+   "status_reason": "Odrzucenie warunkowe: prawdopodobna gęsta konkurencja fintechów (niezweryfikowane), bardzo wysokie ryzyko błędu (AMT, 83(b), QSBS), wąska grupa i wysoki koszt eksperta. Do ponownego rozpatrzenia tylko wtedy, gdy weryfikacja nie potwierdzi konkurencji.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-07",
+   "name_en": "New-Job / Open-Enrollment Health Plan Chooser (HDHP+HSA vs PPO vs spouse plan vs split coverage)",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Nowy pracownik w 30-dniowym oknie wyboru benefitów albo para z dwoma pracodawcami w okresie open enrollment.",
+   "sample_prompt_en": "We're expecting a baby next year. My employer has an HDHP with a $1,000 HSA seed; my wife's employer has a PPO but charges a spousal surcharge. Should we both be on one plan, split, or pick the HDHP?",
+   "decision_problem": "Wybór konfiguracji planów zdrowotnych dla rodziny przy niepewnych wydatkach medycznych.",
+   "combined_domains": "Składki według tieru, deductible (embedded vs non-embedded), OOP max, coinsurance, scenariusze zużycia (zdrowy rok, poród, choroba przewlekła, wypadek), HSA (wkład pracodawcy, ulga federalna, FICA i stanowa; hipoteza: CA i NJ nie uznają HSA, niezweryfikowane), spousal surcharge, alternatywa FSA.",
+   "variants_compared": "Oboje na planie A; oboje na planie B; każdy na własnym planie; HDHP+HSA vs PPO w każdej konfiguracji.",
+   "key_dependencies": "Oczekiwane wydatki medyczne decydują o tym, który plan wygrywa. Wkład pracodawcy do HSA przesuwa break-even, a surcharge zmienia opłacalność wspólnego planu.",
+   "main_outputs": "Rozkład kosztu rocznego (oczekiwany i najgorszy przypadek, czyli składki plus OOP max), break-even poziom wydatków medycznych, wartość HSA po podatku, wrażliwość.",
+   "reason_external_site": "Trzeba wprowadzić parametry kilku planów i scenariusze, a krzywa 'koszt vs wydatki' wymaga wizualizacji. Asystent może to policzyć, ale strona daje strukturę. Możliwa synergia z healthscorer.com (hipoteza).",
+   "data_sources": "Limity HSA i minimalny deductible HDHP od IRS (roczne), stanowe traktowanie HSA, typowe koszty zdarzeń medycznych (np. KFF lub HCCI; wiedza treningowa, niezweryfikowane).",
+   "user_data": "Parametry planów z materiałów pracodawcy, skład rodziny, przewidywane zdarzenia, stan zamieszkania.",
+   "nearest_competition": [
+    {
+     "name": "Narzędzia decision support pracodawców (np. ALEX by Jellyvision, Nayya, Picwell)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Rekomendacja planu w obrębie oferty jednego pracodawcy (wiedza treningowa)",
+     "notes": "Działają B2B i za loginem pracodawcy, więc dostępność dla użytkownika jest niezweryfikowana. Prawdopodobnie nie porównują planów dwóch pracodawców (niezweryfikowane).",
+     "paid": "Płaci pracodawca (niezweryfikowane)"
+    },
+    {
+     "name": "Publiczne kalkulatory HDHP vs PPO (brokerzy, dostawcy HSA)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Porównanie dwóch planów (wiedza treningowa)",
+     "notes": "Nie wyszukiwano w tej sesji",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Rachunek przy wklejonych parametrach",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nieznane w tej sesji (brak wyszukiwań). Z wiedzy treningowej istnieją rozwiązania częściowe, B2B i publiczne.",
+   "gap": "Hipoteza: porównanie planów dwóch pracodawców (wariant split i spousal surcharge) połączone z HSA i scenariuszami zdarzeń. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Popyt sezonowy (open enrollment) i zdarzeniowy (nowa praca: hires 5,1–5,3 mln miesięcznie według BLS JOLTS). Udział z wyborem planu nieznany (hipoteza).",
+   "ad_environment": "Ubezpieczenia zdrowotne, dostawcy HSA. Kategorie zdrowotne mogą mieć ograniczenia reklamowe (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźna decyzja z ograniczeniem budżetowym i scenariuszami, możliwa synergia z healthscorer.com. Wymaga weryfikacji publicznych konkurentów.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-08",
+   "name_en": "Coverage Gap Bridge Between Jobs: COBRA vs ACA Marketplace vs Spouse Plan",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Osoba odchodząca z pracy z przerwą 1–6 miesięcy przed startem nowego ubezpieczenia (okres oczekiwania do 90 dni) albo szukająca pracy po zwolnieniu.",
+   "sample_prompt_en": "I'm leaving my job at the end of May and my new job's health insurance starts August 1. Should I take COBRA, go on the ACA marketplace, or join my husband's plan?",
+   "decision_problem": "Jak ubezpieczyć lukę najtaniej przy akceptowalnym ryzyku i w jakiej kolejności podejmować kroki.",
+   "combined_domains": "Koszt COBRA (do 102% składki), 60-dniowe okno wyboru z retroaktywnością (regulacja do potwierdzenia), dotacja ACA zależna od MAGI za cały rok (część roku z wysokimi zarobkami), klif 400% FPL w 2026 (hipoteza, niezweryfikowane), special enrollment period, reset deductible przy zmianie planu w trakcie roku, okres oczekiwania w nowej pracy, plan małżonka (qualifying event, 30 dni), short-term plans (reguły do potwierdzenia).",
+   "variants_compared": "COBRA; ACA Marketplace; plan małżonka; short-term plan; wybór COBRA tylko w razie potrzeby (retroaktywnie); brak ubezpieczenia jako scenariusz ryzyka.",
+   "key_dependencies": "Roczny MAGI decyduje o dotacji i ryzyku zwrotu przy rozliczeniu PTC. Deductible już wykorzystany w roku przemawia za COBRA. Długość luki i oczekiwane zużycie zmieniają ranking.",
+   "main_outputs": "Koszt oczekiwany i maksymalny w luce, ostrzeżenie o zwrocie dotacji, rekomendowana sekwencja i terminy.",
+   "reason_external_site": "Potrzebne są aktualne składki ACA dla ZIP i obliczenie dotacji z rocznym dochodem. Asystent nie ma pod ręką aktualnych premii dla ZIP (hipoteza).",
+   "data_sources": "CMS QHP landscape files lub API healthcare.gov (wiedza treningowa, niezweryfikowane), FPL od HHS, applicable percentage od IRS (roczne). Stany z własnymi giełdami wymagają osobnych danych (hipoteza).",
+   "user_data": "ZIP, dochód roczny (dotychczasowy i przewidywany), składka COBRA, wykorzystany deductible, daty, skład rodziny.",
+   "nearest_competition": [
+    {
+     "name": "HealthCare.gov window shopping",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Premie i dotacje ACA (wiedza treningowa)",
+     "notes": "Prawdopodobnie bez porównania z COBRA i planem małżonka (niezweryfikowane)",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "KFF Health Insurance Marketplace Calculator",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Szacunek dotacji (wiedza treningowa)",
+     "notes": "Niezweryfikowane w tej sesji",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnienie reguł COBRA i SEP",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nieznane (brak wyszukiwań z powodu limitu). Istnieją fragmenty: kalkulatory dotacji ACA.",
+   "gap": "Hipoteza: brak jednego modelu luki, który łączy częściowy roczny dochód, COBRA, plan małżonka i retroaktywność. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Przepływy: quits 3,0–3,2 mln i layoffs 1,7–1,8 mln miesięcznie (BLS JOLTS 2026). Odsetek osób z luką w ubezpieczeniu nieznany (hipoteza).",
+   "ad_environment": "Ubezpieczenia zdrowotne (ACA brokers), ograniczenia kategorii zdrowotnych możliwe (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Decyzja zdarzeniowa z twardymi terminami i danymi zewnętrznymi (premie dla ZIP), stawki w 2026 prawdopodobnie wzrosły (hipoteza dot. ACA). Ryzyko błędu i utrzymania jest wysokie. Wymaga potwierdzenia stanu dopłat ACA na 2026–2027.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-09",
+   "name_en": "Layoff / Severance Path Simulator (job search vs early retirement vs bridge)",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze (przecięcie z rodziną emerytalną)",
+   "user_and_moment": "Osoba zwolniona albo z propozycją dobrowolnego odejścia (VSP lub buyout), szczególnie w wieku 50–64, w ciągu 21–45 dni na podpisanie porozumienia.",
+   "sample_prompt_en": "I got laid off at 57 with 26 weeks of severance. Should I take it as a lump sum in December or January, claim unemployment, and is this my chance to just retire early?",
+   "decision_problem": "Wybór ścieżki po zwolnieniu (szukanie pracy, wcześniejsza emerytura, praca pomostowa) oraz decyzje o timingu odprawy, UI, ubezpieczenia i dostępu do oszczędności.",
+   "combined_domains": "Odprawa (lump sum vs salary continuation, rok podatkowy), UI (stanowe kryteria, wpływ odprawy na zasiłek), ubezpieczenie (COBRA/ACA, link do G4-08), dostęp do 401k (Rule of 55), timing SS (62+), scenariusze czasu szukania pracy, zużycie poduszki finansowej, przyspieszony vesting equity.",
+   "variants_compared": "Natychmiastowe szukanie pracy; wcześniejsza emerytura; praca pomostowa na part-time; przyjęcie VSP vs pozostanie z ryzykiem późniejszego zwolnienia.",
+   "key_dependencies": "Timing odprawy decyduje o podatku i MAGI, który wpływa na dotację ACA. Czas szukania pracy decyduje o runwayu. Wiek decyduje o dostępności Rule of 55 i SS.",
+   "main_outputs": "Runway w miesiącach, podatek w różnych wariantach timingu, scenariusze dochodu, break-even czasu poszukiwań, test 'czy stać mnie na emeryturę teraz'.",
+   "reason_external_site": "Decyzja zdarzeniowa łącząca dwie rodziny. Asystent poda reguły, ale scenariusze wymagają liczenia i danych stanowych (hipoteza).",
+   "data_sources": "Stanowe reguły UI (50 stanów, kosztowne i zmienne), progi federalne, dane ACA, parametry SSA. Wiedza treningowa, niezweryfikowane.",
+   "user_data": "Warunki odprawy, oszczędności według typu konta, wiek, stan, wydatki, dane ubezpieczenia.",
+   "nearest_competition": [
+    {
+     "name": "Stanowe estymatory zasiłku UI",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Szacunek zasiłku (wiedza treningowa)",
+     "notes": "Niezweryfikowane",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "Planery emerytalne (Boldin itp.)",
+     "url": "https://robberger.com/boldin-review/",
+     "type": "partial",
+     "features_claimed": "Planowanie podatków, SS i wypłat (search-summary)",
+     "notes": "Brak modułu odprawy i UI. Niezweryfikowane.",
+     "paid": "Płatne, PlannerPlus 168 USD/rok według recenzji"
+    },
+    {
+     "name": "Asystent AI lub doradca",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Reguły i listy kontrolne",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres to zero dedykowanych wyszukiwań (limit), pewność niska.",
+   "gap": "Hipoteza: brak jednego narzędzia, które łączy odprawę, UI, ubezpieczenie i opcję wcześniejszej emerytury. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Layoffs & discharges 1,7 mln w kwietniu i 1,8 mln w czerwcu 2026 (BLS JOLTS, https://www.bls.gov/news.release/archives/jolts_08042026.htm). To przepływy, nie popyt na narzędzie.",
+   "ad_environment": "Doradcy finansowi, rollover IRA, ubezpieczenia, kariera (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wysokie stawki i konkretny moment z terminem. Łączy obie rodziny i wykorzystuje wspólny silnik. Utrzymanie stanowych reguł UI jest kosztowne. Można zacząć od wariantu bez UI albo z uproszczonym modułem UI.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-10",
+   "name_en": "Old 401(k) Rollover Decision on Job Change",
+   "family": "Zmiana pracy, relokacja i benefity pracownicze",
+   "user_and_moment": "Osoba po zmianie pracy ze starym 401(k).",
+   "sample_prompt_en": "I just changed jobs. Should I leave my old 401k, roll it into my new employer's plan, roll it to an IRA, or cash it out?",
+   "decision_problem": "Co zrobić ze starym planem emerytalnym.",
+   "combined_domains": "Opłaty, opcje inwestycyjne, pro-rata przy backdoor Roth, loan offset, Rule of 55, NUA dla akcji pracodawcy.",
+   "variants_compared": "Pozostawienie; rollover do nowego planu; rollover do IRA; wypłata gotówki.",
+   "key_dependencies": "Plany backdoor Roth (pro-rata), wiek odejścia (Rule of 55), posiadanie akcji pracodawcy (NUA).",
+   "main_outputs": "Porównanie kosztów i podatków.",
+   "reason_external_site": "Słaby: problem jest głównie jakościowy, a asystent odpowiada dobrze sam (hipoteza).",
+   "data_sources": "Reguły IRS.",
+   "user_data": "Saldo, opłaty, wiek, inne IRA.",
+   "nearest_competition": [
+    {
+     "name": "Poradniki i kalkulatory brokerów (Fidelity, Schwab, Vanguard)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "substitute",
+     "features_claimed": "Porównanie opcji rollover (wiedza treningowa)",
+     "notes": "Niezweryfikowane w tej sesji",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnienie opcji",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Prawdopodobnie tak, przez treści brokerów i asystentów (wiedza treningowa, niezweryfikowane).",
+   "gap": "Obliczeń wymaga tylko wąski przypadek NUA i pro-rata. Za mało na osobny produkt.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Przepływy zmian pracy według BLS JOLTS (pośrednie).",
+   "ad_environment": "Brokerzy, rollover IRA. Dopasowanie wysokie (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Głównie decyzja jakościowa, którą asystent rozwiązuje sam, a treści brokerów dominują (hipoteza). Najwyżej jako moduł G4-09.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-11",
+   "name_en": "Multi-Year Roth Conversion Planner (with IRMAA, ACA, SS taxation)",
+   "family": "Emerytura i drawdown",
+   "user_and_moment": "Osoba 55–72 z dużym saldem traditional IRA/401k, w latach niskiego dochodu przed RMD i SS.",
+   "sample_prompt_en": "I'm 62, retired, with $1.2M in traditional IRAs. How much should I convert to Roth each year before RMDs start without triggering IRMAA?",
+   "decision_problem": "Ile konwertować do Roth w kolejnych latach.",
+   "combined_domains": "Progi podatkowe, IRMAA (2-letni lookback), opodatkowanie SS, ACA PTC, RMD, podatek stanowy, spadkobiercy.",
+   "variants_compared": "Brak konwersji; wypełnianie do progu X; konwersja do granicy IRMAA; konwersja jednorazowa.",
+   "key_dependencies": "Konwersja podnosi MAGI, a to wpływa na IRMAA za dwa lata, dotację ACA i opodatkowanie SS.",
+   "main_outputs": "Harmonogram konwersji, podatek w całym okresie, wartość dla spadkobierców.",
+   "reason_external_site": "Obliczenia wieloletnie, ale wykonuje je już wiele dojrzałych narzędzi.",
+   "data_sources": "IRS, CMS (IRMAA), SSA.",
+   "user_data": "Salda, dochody, wiek, stan.",
+   "nearest_competition": [
+    {
+     "name": "Boldin (PlannerPlus)",
+     "url": "https://robberger.com/boldin-review/",
+     "type": "direct",
+     "features_claimed": "Recenzja z 2026 wskazuje Boldin jako najlepszy do podatków, Social Security i wypłat. PlannerPlus 168 USD/rok (search-summary).",
+     "notes": "Funkcji modułu Roth nie sprawdzono w tej sesji (z wiedzy treningowej istnieje explorer konwersji)",
+     "paid": "Freemium i płatne (168 USD/rok według robberger.com i wealthfluent.com)"
+    },
+    {
+     "name": "ProjectionLab",
+     "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+     "type": "direct",
+     "features_claimed": "Monte Carlo i backtesting historyczny w planie darmowym, Premium około 129 USD/rok (search-summary)",
+     "notes": "Funkcje konwersji Roth niezweryfikowane",
+     "paid": "Freemium"
+    },
+    {
+     "name": "Pralana",
+     "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+     "type": "direct",
+     "features_claimed": "Szczegółowość 'actuarial-grade', analiza historyczna od 1928 (Gold), Online 99–129 USD",
+     "notes": "Optymalizacja Roth niezweryfikowana",
+     "paid": "Płatne"
+    },
+    {
+     "name": "MaxiFi Planner",
+     "url": "https://www.boldin.com/retirement/maxifi-vs-boldin-which-is-the-better-retirement-planning-tool-for-you/",
+     "type": "partial",
+     "features_claimed": "Consumption smoothing, wylicza zrównoważony poziom wydatków (search-summary, strona konkurenta)",
+     "notes": "Według killionlabs nie ma darmowego planu, jest 14-dniowy trial",
+     "paid": "Płatne"
+    },
+    {
+     "name": "Darmowe kalkulatory konwersji (np. Engaging Data, i-orp)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Kalkulatory konwersji Roth (wiedza treningowa)",
+     "notes": "Niezweryfikowane",
+     "paid": "Darmowe (wiedza treningowa)"
+    }
+   ],
+   "already_solved": "Tak. Kategorię obsługuje co najmniej kilka planerów płatnych i freemium (search-summary, wysoka pewność dla kategorii, średnia dla konkretnych funkcji Roth).",
+   "gap": "Nie zidentyfikowano luki integracyjnej. Różnice dotyczą UX i ceny.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Peak 65: około 4,1–4,2 mln osób rocznie kończy 65 lat (protectedincome.org, kiplinger.com). Istnieje płatny rynek planerów (robberger.com, wealthfluent.com).",
+   "ad_environment": "Brokerzy, doradcy, annuities. Dopasowanie wysokie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Kategoria zatłoczona przez Boldin, ProjectionLab, Pralana i MaxiFi oraz darmowe kalkulatory. Asystent prawdopodobnie poleci znane marki. Ryzyko błędu i koszty utrzymania są wysokie.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G4-12",
+   "name_en": "Social Security Claiming Age Optimizer (couples, survivor)",
+   "family": "Emerytura i drawdown",
+   "user_and_moment": "Osoba lub para w wieku 60–70 przed złożeniem wniosku o SS.",
+   "sample_prompt_en": "My wife and I are both 63. When should each of us claim Social Security to maximize lifetime and survivor benefits?",
+   "decision_problem": "Kiedy każdy z małżonków powinien zacząć pobierać SS.",
+   "combined_domains": "Formuła PIA, delayed credits, spousal i survivor benefits, earnings test, opodatkowanie świadczeń, długość życia.",
+   "variants_compared": "Kombinacje wieków 62–70 dla obu małżonków.",
+   "key_dependencies": "Świadczenie wyższego zarabiającego staje się survivor benefit. Ważne są oczekiwana długość życia i dostępne środki na pomost.",
+   "main_outputs": "Optymalna para wieków, break-even, wartość dożywotnia.",
+   "reason_external_site": "Obliczenia już dobrze pokrywają darmowe i płatne narzędzia.",
+   "data_sources": "SSA (bend points, COLA).",
+   "user_data": "PIA lub historia zarobków, wiek, stan zdrowia.",
+   "nearest_competition": [
+    {
+     "name": "Open Social Security",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "direct",
+     "features_claimed": "Darmowa optymalizacja wieku wnioskowania dla par (wiedza treningowa)",
+     "notes": "Niezweryfikowane w tej sesji",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "Boldin",
+     "url": "https://robberger.com/boldin-review/",
+     "type": "direct",
+     "features_claimed": "Recenzja wskazuje go jako najlepszy w Social Security, podatkach i wypłatach (search-summary)",
+     "notes": "Szczegółów modułu nie sprawdzono",
+     "paid": "Freemium, 168 USD/rok"
+    },
+    {
+     "name": "MaxiFi (także Maximize My Social Security – wiedza treningowa)",
+     "url": "https://www.boldin.com/retirement/maxifi-vs-boldin-which-is-the-better-retirement-planning-tool-for-you/",
+     "type": "direct",
+     "features_claimed": "Consumption smoothing (search-summary)",
+     "notes": "Moduł SS z wiedzy treningowej, niezweryfikowany",
+     "paid": "Płatne"
+    }
+   ],
+   "already_solved": "Tak (search-summary dla Boldin, wiedza treningowa dla Open Social Security i SSA). Pewność średnio-wysoka.",
+   "gap": "Nie zidentyfikowano.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Peak 65 (około 11 000+ osób dziennie kończy 65 lat w 2025–2026; protectedincome.org, kiplinger.com). To demografia, nie wolumen zapytań.",
+   "ad_environment": "Finanse i emerytura. Dopasowanie wysokie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Problem dobrze rozwiązany przez darmowe narzędzia (Open Social Security, kalkulatory SSA; wiedza treningowa) i płatne planery. Asystent zna heurystyki i marki. Moduł SS warto mieć wewnątrz innych symulatorów (G4-09, G4-13, G4-14).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G4-13",
+   "name_en": "Early Retirement ACA Bridge Simulator (retire before 65 under the 2026 subsidy rules)",
+   "family": "Emerytura i drawdown",
+   "user_and_moment": "Osoba 50–64 planująca odejście z pracy przed Medicare, z oszczędnościami w 401k/IRA, na kontach maklerskich i Roth. Decyduje 6–24 miesiące przed planowaną datą odejścia.",
+   "sample_prompt_en": "I'm 58 and want to retire next year. With ACA subsidies changing in 2026, how should I draw from my 401k, brokerage and Roth so health insurance stays affordable until Medicare?",
+   "decision_problem": "Kiedy przejść na emeryturę i z jakich kont wypłacać, żeby utrzymać MAGI w korzystnym przedziale dotacji ACA bez nadmiernej utraty korzyści z konwersji Roth.",
+   "combined_domains": "MAGI targeting (klif 400% FPL w 2026: hipoteza, niezweryfikowane), źródła wypłat (basis na kontach maklerskich, wkłady Roth, Roth conversion ladder z 5-letnim okresem, 72(t) SEPP, Rule of 55), podatki (federalne i stanowe, 0% LTCG), premie ACA dla ZIP (benchmark silver), trade-off konwersje Roth vs dotacje, IRMAA (lookback od 63 lat), timing SS, sequence risk, opcja COBRA na 18 miesięcy.",
+   "variants_compared": "Emerytura w wieku X, X+1 lub X+2; strategie wypłat: najpierw konta maklerskie, maksymalne konwersje, maksymalizacja dotacji, 72(t); COBRA na początek vs od razu ACA.",
+   "key_dependencies": "Wypłaty i konwersje podnoszą MAGI, co obniża dotację i może przekroczyć klif. Konwersje w latach 63–64 podnoszą IRMAA w wieku 65–66. Premia ACA zależy od wieku i ZIP.",
+   "main_outputs": "Rok po roku: MAGI, dotacja, podatek, salda kont. Zaznaczony punkt klifu, wrażliwość na premie i zwroty, porównanie dat przejścia na emeryturę.",
+   "reason_external_site": "Wieloletnia symulacja plus dane premii dla ZIP plus klif. Trudno to zrobić niezawodnie w czacie (hipoteza). Płatne planery mogą jednak to modelować (niezweryfikowane).",
+   "data_sources": "CMS QHP landscape lub API healthcare.gov (wiedza treningowa, niezweryfikowane), FPL od HHS, applicable percentage od IRS, progi IRS, IRMAA z CMS.",
+   "user_data": "Wiek, ZIP, salda według typu konta i basis, planowane wydatki, inne dochody.",
+   "nearest_competition": [
+    {
+     "name": "ProjectionLab",
+     "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+     "type": "partial",
+     "features_claimed": "Monte Carlo i backtesting w planie darmowym (search-summary)",
+     "notes": "Modelowanie ACA PTC niezweryfikowane. Jeśli istnieje, narzędzie może być konkurentem bezpośrednim.",
+     "paid": "Freemium"
+    },
+    {
+     "name": "Pralana",
+     "url": "https://retirementplanningtools.net/tools/boldin/",
+     "type": "partial",
+     "features_claimed": "Szczegółowość 'actuarial-grade', mniejsza baza użytkowników, mniej dopracowany interfejs (search-summary z recenzji)",
+     "notes": "Funkcja ACA niezweryfikowana (z wiedzy treningowej prawdopodobna)",
+     "paid": "Płatne"
+    },
+    {
+     "name": "Boldin",
+     "url": "https://robberger.com/boldin-review/",
+     "type": "partial",
+     "features_claimed": "Podatki, SS, wypłaty (search-summary)",
+     "notes": "Modelowanie dotacji ACA niezweryfikowane",
+     "paid": "Freemium, 168 USD/rok"
+    },
+    {
+     "name": "HealthCare.gov / KFF subsidy calculator",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Dotacja dla jednego roku (wiedza treningowa)",
+     "notes": "Bez strategii wypłat",
+     "paid": "Darmowe (wiedza treningowa)"
+    }
+   ],
+   "already_solved": "Częściowo. Płatne planery mogą to robić, ale funkcji nie zweryfikowano (wyszukiwania per-idea zablokowane).",
+   "gap": "Hipoteza: darmowy, wąski symulator 'pomost do Medicare' z klifem ACA 2026 i porównaniem dat przejścia na emeryturę, łatwiejszy niż kompleksowy planer. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Brak w sesji danych o liczbie osób przechodzących na emeryturę przed 65 lub korzystających z ACA (hipoteza). Pośrednio: Peak 65 (protectedincome.org).",
+   "ad_environment": "ACA brokers, doradcy, brokerzy (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźna decyzja z sekwencją wieloletnią i klifem. Zmiana polityki w 2026 (hipoteza) może tworzyć nowy popyt. Wymaga: (1) potwierdzenia stanu dopłat ACA na 2026–2027, (2) sprawdzenia, czy ProjectionLab, Pralana i Boldin modelują PTC, (3) przeglądu eksperckiego.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-14",
+   "name_en": "Pension Lump Sum vs Annuity (with survivor options and SPIA alternative)",
+   "family": "Emerytura i drawdown",
+   "user_and_moment": "Uczestnik planu DB (korporacyjnego lub publicznego) z pakietem wyboru przy odejściu albo w oknie lump-sum oferowanym przez pracodawcę. Termin decyzji to zwykle 30–90 dni (hipoteza).",
+   "sample_prompt_en": "My employer is offering a $480,000 lump sum or $2,900 a month for life, or $2,550 joint with 100% survivor. Which should I take?",
+   "decision_problem": "Czy wziąć lump sum (rollover do IRA), czy annuity, i z jaką opcją dla małżonka. Porównanie z zakupem SPIA za lump sum.",
+   "combined_domains": "Implied discount rate (IRR annuity vs lump sum), długość życia (tabele mortality i stan zdrowia), opcje J&S 50/75/100%, brak COLA i inflacja, rynkowe ceny SPIA, limit gwarancji PBGC, podatki (rollover vs wypłata), interakcja z timingiem SS (pension jako pomost), cele spadkowe, sequence risk przy samodzielnym inwestowaniu.",
+   "variants_compared": "Lump sum z rolloverem i stałą stopą wypłat; lump sum z zakupem SPIA; single life; J&S 50/75/100%; częściowy lump sum, jeśli plan na to pozwala.",
+   "key_dependencies": "Stopy 417(e) wpływają na wysokość lump sum. Długość życia obu małżonków decyduje o wartości annuity. Inflacja obniża realną wartość annuity bez COLA. Stopy zwrotu i sequence risk decydują o lump sum.",
+   "main_outputs": "Wiek break-even, implied rate, prawdopodobieństwo wyczerpania środków, wartość dla spadkobierców, wrażliwość na stopy, długość życia i inflację, porównanie z ceną SPIA.",
+   "reason_external_site": "Zdarzenie z terminem, wysokie stawki, potrzebne tabele mortality i analiza wrażliwości. Asystent policzy IRR, ale pełny model z survivor i SPIA lepiej działa jako narzędzie (hipoteza).",
+   "data_sources": "Stopy segmentowe IRS 417(e) (miesięcznie) i tabela mortality (roczna), maksymalna gwarancja PBGC (roczna), tabele SOA. Brak darmowego API cen SPIA (hipoteza). Wszystko z wiedzy treningowej, niezweryfikowane.",
+   "user_data": "Kwota lump sum i opcje annuity z pakietu, wiek obojga, stan zdrowia, inne aktywa, cele.",
+   "nearest_competition": [
+    {
+     "name": "Boldin",
+     "url": "https://robberger.com/boldin-review/",
+     "type": "partial",
+     "features_claimed": "Planowanie podatków, SS i wypłat (search-summary)",
+     "notes": "Modelowanie wyboru pension lump sum niezweryfikowane",
+     "paid": "Freemium, 168 USD/rok"
+    },
+    {
+     "name": "MaxiFi Planner",
+     "url": "https://www.boldin.com/retirement/maxifi-vs-boldin-which-is-the-better-retirement-planning-tool-for-you/",
+     "type": "partial",
+     "features_claimed": "Consumption smoothing (search-summary)",
+     "notes": "Porównanie lump sum vs annuity niezweryfikowane",
+     "paid": "Płatne"
+    },
+    {
+     "name": "Kalkulatory pension lump sum vs annuity (różne serwisy)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Break-even lub IRR (wiedza treningowa)",
+     "notes": "Prawdopodobnie bez SPIA, survivor i sequence risk łącznie (hipoteza)",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Narzędzia z wycenami SPIA",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Wyceny rent natychmiastowych (wiedza treningowa)",
+     "notes": "Często służą jako lead-gen (hipoteza)",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Częściowo i niezweryfikowane. Wyszukiwania per-idea nie wykonano (limit).",
+   "gap": "Hipoteza: integracja implied rate, survivor options, alternatywy SPIA i analizy wrażliwości w jednym darmowym narzędziu. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych o liczbie decyzji lump sum vs annuity w sesji (hipoteza: populacja planów DB maleje, ale ruch tworzą okna lump-sum).",
+   "ad_environment": "Annuities, doradcy, rollover IRA. Dopasowanie wysokie (hipoteza). Możliwy affiliate z rentami jako dodatek, a nie podstawa modelu.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Jedna dominująca decyzja z terminem i wysokimi stawkami, silne środowisko reklamowe, dane w większości darmowe. Wymaga weryfikacji konkurencji i przeglądu aktuarialnego.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-15",
+   "name_en": "Retirement Relocation & Downsizing Simulator (stay vs downsize vs move to another state)",
+   "family": "Emerytura i drawdown (przecięcie z rodziną relokacyjną)",
+   "user_and_moment": "Para lub osoba 58–75 rozważająca sprzedaż domu i przeprowadzkę: do mniejszego domu, do innego stanu, do społeczności 55+ albo bliżej dzieci.",
+   "sample_prompt_en": "We're 66 and thinking of selling our New Jersey house and moving to South Carolina, or just downsizing locally. What's the financial difference over 20 years?",
+   "decision_problem": "Zostać w domu, zmniejszyć go lokalnie czy przeprowadzić się do innego stanu, i jak to wpływa na podatki, płynność i ryzyka.",
+   "combined_domains": "Uwolnienie kapitału z domu (sprzedaż, koszty transakcji, wyłączenie §121), stanowe podatki od emerytur, SS i wypłat z IRA (różne zwolnienia), podatek od nieruchomości i senior freezes, koszty ubezpieczenia domu (rosnące w części stanów; hipoteza), koszty życia, wpływ zysku ze sprzedaży powyżej wyłączenia na IRMAA (2-letni lookback), koszty przeprowadzki, bliskość rodziny i LTC (jakościowo).",
+   "variants_compared": "Pozostanie w domu; downsizing lokalny; przeprowadzka do stanu X z kupnem; przeprowadzka z wynajmem; CCRC lub społeczność 55+.",
+   "key_dependencies": "Zysk ze sprzedaży powyżej §121 podnosi MAGI i IRMAA. Reguły podatkowe stanu docelowego decydują o podatku od emerytury. Uwolniony kapitał zmienia trwałość portfela.",
+   "main_outputs": "Przepływy pieniężne w horyzoncie 10 i 20 lat, uwolniony kapitał, podatki według wariantu, wrażliwość na ceny domów i koszty ubezpieczeń, break-even.",
+   "reason_external_site": "Potrzebne są dane stanowe i lokalne oraz wieloletnia projekcja. Asystent poda ogólniki o 'tax-friendly states', ale liczby wymagają danych (hipoteza).",
+   "data_sources": "Stanowe reguły podatkowe dla emerytów (zmieniają się co roku), podatki od nieruchomości (lokalne, kosztowne w pozyskaniu), BEA RPP. Brak darmowych danych o składkach ubezpieczenia domu (hipoteza).",
+   "user_data": "Wartość domu i basis, saldo kredytu, dochody emerytalne według typu, docelowe lokalizacje, wydatki.",
+   "nearest_competition": [
+    {
+     "name": "Boldin",
+     "url": "https://www.boldin.com/retirement/newretirement-vs-best-retirement-planning/",
+     "type": "partial",
+     "features_claimed": "Kompleksowe planowanie emerytalne, porównanie z 13 innymi narzędziami (strona konkurenta, search-summary)",
+     "notes": "Modelowanie sprzedaży domu i przeprowadzki między stanami niezweryfikowane",
+     "paid": "Freemium, 168 USD/rok"
+    },
+    {
+     "name": "ProjectionLab",
+     "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+     "type": "partial",
+     "features_claimed": "Monte Carlo i backtesting w planie darmowym (search-summary)",
+     "notes": "Moduł nieruchomości i podatków stanowych niezweryfikowany",
+     "paid": "Freemium"
+    },
+    {
+     "name": "Przewodniki po podatkach stanowych dla emerytów (np. Kiplinger)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Porównanie stanów pod kątem podatków dla emerytów (wiedza treningowa)",
+     "notes": "Treść, nie symulator",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "sum.money – US Salary Comparison Calculator",
+     "url": "https://sum.money/us/salary-comparison-calculator/",
+     "type": "substitute",
+     "features_claimed": "Porównanie wynagrodzeń między lokalizacjami (wniosek z tytułu)",
+     "notes": "Skupia się na wynagrodzeniach, a nie na emeryturze",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Częściowo: planery prawdopodobnie modelują sprzedaż domu, a przewodniki opisują podatki stanowe. Integracji nie zweryfikowano.",
+   "gap": "Hipoteza: brak darmowego symulatora, który łączy transakcję mieszkaniową, podatki stanowe dla emerytów, IRMAA i koszty lokalne w porównaniu wariantów. Niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Peak 65: około 4,1–4,2 mln osób rocznie (protectedincome.org, kiplinger.com). Brak danych o migracji emerytów w tej sesji (hipoteza).",
+   "ad_environment": "Real estate, moving, senior living, mortgage, doradcy. Dopasowanie wysokie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Łączy obie rodziny, ma wyraźne warianty i silne środowisko reklamowe. Ryzyko leży w koszcie danych lokalnych (podatki od nieruchomości, ubezpieczenia). Można zacząć od wariantu z danymi wprowadzanymi przez użytkownika i stanowymi tabelami podatkowymi.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G4-16",
+   "name_en": "Inherited IRA 10-Year Withdrawal Planner (coordinated with the heir's career and retirement timeline)",
+   "family": "Emerytura i drawdown",
+   "user_and_moment": "Beneficjent w wieku 40–62 (non-eligible designated beneficiary) po odziedziczeniu tradycyjnego IRA lub 401k po rodzicu. Decyzja zapada w pierwszym roku i jest powtarzana co roku.",
+   "sample_prompt_en": "I inherited a $600k traditional IRA from my dad in 2025. I'm 52, earning $180k, and plan to retire at 58. How should I spread the withdrawals over the 10 years to minimize taxes?",
+   "decision_problem": "Jak rozłożyć obowiązkowe wypłaty w ciągu 10 lat, biorąc pod uwagę zmiany własnego dochodu (zmiana pracy, emerytura, pomost ACA, IRMAA).",
+   "combined_domains": "Reguła 10 lat z corocznymi RMD, jeśli spadkodawca przekroczył RBD (regulacje finalne z 2024: hipoteza, niezweryfikowane), trajektoria dochodu beneficjenta, progi podatkowe (utrwalenie TCJA przez OBBBA: hipoteza), stan zamieszkania i ewentualna relokacja, ACA w latach pomostowych, IRMAA, kara za brak RMD (SECURE 2.0: hipoteza).",
+   "variants_compared": "Wypłaty równomierne; minimalne RMD i duża wypłata w roku 10; wypłaty skumulowane w latach niskiego dochodu po przejściu na emeryturę; wypełnianie progu podatkowego; połączenie z własnymi konwersjami Roth.",
+   "key_dependencies": "Rok przejścia na emeryturę i przeprowadzki decyduje o okresie niskiego dochodu. Wypłaty podnoszą MAGI, co wpływa na ACA i IRMAA. Roczne RMD wyznaczają minimum wypłat.",
+   "main_outputs": "Harmonogram wypłat, łączny podatek w porównaniu wariantów, wrażliwość na zwroty i przyszłe stawki, kalendarz terminów.",
+   "reason_external_site": "Optymalizacja wieloletnia powiązana z planami życiowymi. Asystent poda regułę, ale optymalizacja wymaga liczenia (hipoteza).",
+   "data_sources": "IRS Single Life Table (zmienia się rzadko), progi podatkowe (roczne), stanowe tabele podatkowe.",
+   "user_data": "Saldo, data śmierci i wiek spadkodawcy, dochód beneficjenta i plany (emerytura, przeprowadzka), stan.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory RMD dla inherited IRA u brokerów (Schwab, Fidelity, Vanguard)",
+     "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+     "type": "partial",
+     "features_claimed": "Minimalne RMD (wiedza treningowa)",
+     "notes": "Prawdopodobnie nie optymalizują wypłat względem dochodu (hipoteza)",
+     "paid": "Darmowe (wiedza treningowa)"
+    },
+    {
+     "name": "Boldin / ProjectionLab",
+     "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+     "type": "partial",
+     "features_claimed": "Kompleksowe planowanie (search-summary)",
+     "notes": "Modelowanie inherited IRA niezweryfikowane",
+     "paid": "Freemium"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "nie dotyczy (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Wyjaśnienie reguły 10 lat",
+     "notes": "Hipoteza",
+     "paid": "nie dotyczy"
+    }
+   ],
+   "already_solved": "Nieznane (wyszukiwania per-idea zablokowane). Fragment, czyli minimalne RMD, jest prawdopodobnie dobrze pokryty.",
+   "gap": "Hipoteza: optymalizacja wypłat z odziedziczonego konta względem przyszłych zdarzeń w życiu beneficjenta. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych w sesji o liczbie odziedziczonych IRA (hipoteza: rośnie razem z Peak 65 i transferem międzypokoleniowym).",
+   "ad_environment": "Brokerzy, doradcy, podatki. Dopasowanie wysokie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźny moment (spadek) i sekwencja 10 lat, wspólny silnik z G4-13 i G4-11. Ryzyko: asystent zna regułę, a planery mogą ją modelować. Wymaga weryfikacji.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://sheetsresume.com/job-offer-comparison",
+   "competitor": "SheetsResume Job Offer Comparison Calculator",
+   "related_idea": "G4-01, G4-02, G4-05",
+   "features_checked": "Total target compensation, annualized equity value, upside scenarios, dilution i exit scenarios dla startup equity, działanie w przeglądarce (z search-summary)",
+   "access_limits": "Strony nie otwierano (WebFetch zablokowany). Dowód to wyłącznie search-summary. Podatki stanowe i koszty zdrowia niezweryfikowane.",
+   "conclusion": "Bezpośredni konkurent prostego porównania ofert (G4-01). Częściowy dla equity (G4-05) i timingu odejścia (G4-02).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://tools.shecodes.io/career-tools/offer",
+   "competitor": "SheCodes Offer Calculator",
+   "related_idea": "G4-01, G4-02, G4-04",
+   "features_checked": "Do 3 ofert, wartość w roku 1 i w 4 latach z vestingiem, bonusem, sign-on i benefitami. Według summary bez modelowania podatków.",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy (brak podatków według summary).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://www.calcplanet.com/finance/job-offer-comparison-calculator/",
+   "competitor": "CalcPlanet Job Offer Comparison Calculator",
+   "related_idea": "G4-01",
+   "features_checked": "Tylko istnienie (tytuł i URL)",
+   "access_limits": "Strony nie otwierano. Funkcje niezweryfikowane.",
+   "conclusion": "Konkurent częściowy lub bezpośredni dla G4-01, zakres niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://www.loopcv.pro/tools/job-offer-comparison/",
+   "competitor": "LoopCV Job Offer Comparison",
+   "related_idea": "G4-01",
+   "features_checked": "Do 3 ofert, weighted scoring (total comp, work-life balance, career growth, stability, culture), eksport do arkusza",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy (scoring jakościowy plus total comp).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://www.thesalarynegotiator.com/job-offer-comparison-tool",
+   "competitor": "The Salary Negotiator – Job Offer Comparison Tool",
+   "related_idea": "G4-01",
+   "features_checked": "Pola: base salary, target bonus, roczna wartość equity, sign-on, poziom stanowiska",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://ustax.tools/job-offer-comparison/",
+   "competitor": "US Tax Tools – Job Offer Comparison",
+   "related_idea": "G4-01, G4-03",
+   "features_checked": "Istnienie narzędzia do porównania ofert w serwisie podatkowym (tytuł i URL)",
+   "access_limits": "Strony nie otwierano. Funkcje (podatki stanowe, benefity) niezweryfikowane. Planowane wyszukiwanie uzupełniające zablokował limit.",
+   "conclusion": "Prawdopodobnie konkurent bezpośredni lub częściowy dla G4-01 po stronie podatkowej (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://ustax.tools/compare-paychecks/",
+   "competitor": "US Tax Tools – Compare Paychecks",
+   "related_idea": "G4-01, G4-03",
+   "features_checked": "Porównanie wypłat (tytuł i URL)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy (tylko część płacowa).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://www.paycheckcity.com/calculator/dual/taxreform/",
+   "competitor": "PaycheckCity Dual Scenario Salary Paycheck Calculator",
+   "related_idea": "G4-01, G4-03",
+   "features_checked": "Dochód netto w dwóch scenariuszach wynagrodzenia (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy (fragment podatkowo-płacowy).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://sum.money/us/salary-comparison-calculator/",
+   "competitor": "sum.money – US Salary Comparison Calculator",
+   "related_idea": "G4-03, G4-15",
+   "features_checked": "Porównanie wynagrodzeń (tytuł). Uwzględnienie kosztów życia niezweryfikowane.",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Konkurent częściowy lub substytut.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://paychecktaxcalculator.net/offer-comparison-calculator",
+   "competitor": "PaycheckTaxCalculator.net – Offer Comparison Calculator",
+   "related_idea": "G4-01",
+   "features_checked": "Istnienie. Summary opisuje formułę total comp = base + bonus + equity + match 401k − koszt ubezpieczenia oraz uwzględnienie PTO i dojazdu, ale nie jest pewne, którego źródła ten opis dotyczy.",
+   "access_limits": "Strony nie otwierano. Przypisanie funkcji niepewne.",
+   "conclusion": "Konkurent częściowy lub bezpośredni dla G4-01 (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+   "competitor": "offer-comparison-analyzer (agent skill, Smithery)",
+   "related_idea": "G4-01, G4-02",
+   "features_checked": "Skill dla asystentów: porównanie wielu ofert side-by-side z analizą total compensation (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Substytut (rozwiązanie bezpośrednio w asystencie AI). Wzmacnia ryzyko, że asystent odpowie sam.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://www.aitmpl.com/component/skills/career/offer-comparison-analyzer",
+   "competitor": "offer-comparison-analyzer (agent skill, aitmpl)",
+   "related_idea": "G4-01",
+   "features_checked": "Listing skilla kariera/porównanie ofert (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Substytut AI (ten sam typ co Smithery).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator total compensation equity bonus benefits",
+   "url": "https://hackernoon.com/skills/davila7-offer-comparison-analyzer",
+   "competitor": "offer-comparison-analyzer (listing HackerNoon)",
+   "related_idea": "G4-01",
+   "features_checked": "Listing skilla (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Substytut AI.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://findskill.ai/skills/productivity/job-offer-comparison-tool/",
+   "competitor": "FindSkill.ai – Job Offer Comparison Tool (skill)",
+   "related_idea": "G4-01",
+   "features_checked": "Listing skilla do porównania ofert (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Substytut AI.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit how to compare two job offers different states taxes 401k match health insurance",
+   "url": "https://resumly.ai/blog/how-to-calculate-aftertax-income-for-job-offers",
+   "competitor": "Resumly – poradnik 'how to calculate after-tax income for job offers'",
+   "related_idea": "G4-01",
+   "features_checked": "Treść poradnikowa (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Substytut treściowy, nie narzędzie.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://robberger.com/boldin-review/",
+   "competitor": "Boldin (PlannerPlus) – recenzja Rob Berger 2026",
+   "related_idea": "G4-09, G4-11, G4-12, G4-13, G4-14",
+   "features_checked": "Według recenzji najlepszy do podatków, Social Security i wypłat. PlannerPlus 168 USD/rok. Brak planowania poza USA.",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary recenzji zewnętrznej. Funkcji modułów Roth, IRMAA i ACA nie sprawdzono.",
+   "conclusion": "Bezpośredni konkurent dla kompleksowego planowania i Roth/SS (G4-11, G4-12). Częściowy dla G4-13 i G4-14.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://www.boldin.com/retirement/newretirement-vs-best-retirement-planning/",
+   "competitor": "Boldin – strona porównawcza producenta (13 innych narzędzi)",
+   "related_idea": "G4-11, G4-15",
+   "features_checked": "Producent porównuje się z 13 narzędziami. ProjectionLab opisany jako narzędzie do ręcznego modelowania bez asystenta AI.",
+   "access_limits": "Strony nie otwierano. Strona producenta, więc możliwa stronniczość. Dowód to search-summary.",
+   "conclusion": "Potwierdza zatłoczenie kategorii planerów (co najmniej 14 narzędzi).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://killionlabs.com/compare/best-retirement-planning-software/",
+   "competitor": "ProjectionLab (oraz Pralana, MaxiFi) – porównanie Killion Labs 2026",
+   "related_idea": "G4-11, G4-13, G4-15, G4-16",
+   "features_checked": "ProjectionLab: Monte Carlo i backtesting historyczny w planie darmowym, Premium około 129 USD/rok. Pralana: historical od 1928 w Gold. MaxiFi: brak darmowego planu, 14-dniowy trial. Boldin: jedyny z linkowaniem kont w płatnym planie.",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary. Funkcji ACA, IRMAA i inherited IRA nie sprawdzono.",
+   "conclusion": "ProjectionLab i Pralana to konkurenci bezpośredni w kompleksowym planowaniu i częściowi w wąskich decyzjach.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://www.boldin.com/retirement/maxifi-vs-boldin-which-is-the-better-retirement-planning-tool-for-you/",
+   "competitor": "MaxiFi Planner",
+   "related_idea": "G4-11, G4-12, G4-14",
+   "features_checked": "Consumption smoothing, czyli wyliczenie zrównoważonego poziomu wydatków zamiast projekcji planu użytkownika",
+   "access_limits": "Strony nie otwierano. Opis pochodzi ze strony konkurenta (Boldin). Dowód to search-summary.",
+   "conclusion": "Konkurent bezpośredni lub częściowy w planowaniu emerytalnym i SS.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://retirementplanningtools.net/tools/boldin/",
+   "competitor": "Pralana / Boldin – recenzja retirementplanningtools.net",
+   "related_idea": "G4-11, G4-13",
+   "features_checked": "Boldin: Monte Carlo do 1000 przebiegów (ProjectionLab 10 000). Pralana: mniejsza baza użytkowników, mniej dopracowany interfejs. Cena Boldin w tym źródle 120 USD/rok (konflikt z innymi źródłami).",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary. Ceny się różnią między źródłami.",
+   "conclusion": "Potwierdza dojrzałość konkurentów w kompleksowym planowaniu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://wealthfluent.com/best-retirement-planning-software/",
+   "competitor": "Wealthfluent – Best Retirement Planning Software 2026 (mapa rynku)",
+   "related_idea": "G4-11, G4-12, G4-13",
+   "features_checked": "Ceny sprawdzone 21.10.2026, Boldin PlannerPlus 168 USD/rok",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Dowód aktywnego, płatnego rynku planerów w X 2026.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+   "url": "https://jasonwootten.com/top-5-financial-planning-software-for-retirement-drawdown-choices/",
+   "competitor": "Top 5 Retirement Drawdown Software (lista)",
+   "related_idea": "G4-11, G4-13",
+   "features_checked": "Istnienie rankingu narzędzi do decyzji drawdown (tytuł)",
+   "access_limits": "Strony nie otwierano. Dowód to search-summary.",
+   "conclusion": "Potwierdza istnienie wyspecjalizowanych narzędzi do drawdown, czyli zatłoczenie kategorii.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie zablokowane limitem)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Open Social Security",
+   "related_idea": "G4-12",
+   "features_checked": "Z wiedzy treningowej: darmowa optymalizacja wieku wnioskowania o SS dla par",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji. Brak dowodu z sesji.",
+   "conclusion": "Prawdopodobnie konkurent bezpośredni dla G4-12 (do weryfikacji).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie 'startup stock options calculator... AMT ISO NSO' zablokowane limitem)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Secfi / Carta / ESO Fund / Harness Wealth – narzędzia equity",
+   "related_idea": "G4-05, G4-06",
+   "features_checked": "Z wiedzy treningowej: kalkulatory wartości opcji, exercise i AMT",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji. Część może być za loginem.",
+   "conclusion": "Prawdopodobni konkurenci bezpośredni lub częściowi (do weryfikacji).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie niewykonane z powodu limitu)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Employer benefits decision support (ALEX by Jellyvision, Nayya, Picwell)",
+   "related_idea": "G4-07",
+   "features_checked": "Z wiedzy treningowej: rekomendacje planów zdrowotnych w obrębie oferty pracodawcy",
+   "access_limits": "Nie wyszukiwano i nie otwierano. Narzędzia B2B za loginem pracodawcy, funkcje niezweryfikowane.",
+   "conclusion": "Prawdopodobnie konkurent częściowy (ograniczony do jednego pracodawcy, niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie niewykonane z powodu limitu)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "HealthCare.gov window shopping / KFF Marketplace Calculator",
+   "related_idea": "G4-08, G4-13",
+   "features_checked": "Z wiedzy treningowej: premie i dotacje ACA dla jednego roku",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji.",
+   "conclusion": "Konkurenci częściowi (dotacja bez strategii luki lub wypłat).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie niewykonane z powodu limitu)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Kalkulatory RMD dla inherited IRA u brokerów (Schwab, Fidelity, Vanguard)",
+   "related_idea": "G4-16",
+   "features_checked": "Z wiedzy treningowej: minimalne RMD",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji.",
+   "conclusion": "Konkurenci częściowi (minimum, nie optymalizacja; hipoteza).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie niewykonane z powodu limitu)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Kalkulatory pension lump sum vs annuity oraz narzędzia z wycenami SPIA (różne serwisy)",
+   "related_idea": "G4-14",
+   "features_checked": "Z wiedzy treningowej: break-even lub IRR, wyceny SPIA",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji.",
+   "conclusion": "Prawdopodobnie konkurenci częściowi (do weryfikacji).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak (wiedza treningowa; wyszukiwanie niewykonane z powodu limitu)",
+   "url": "brak URL w wynikach – wiedza treningowa, niezweryfikowane",
+   "competitor": "Darmowe kalkulatory konwersji Roth (np. Engaging Data, i-orp)",
+   "related_idea": "G4-11",
+   "features_checked": "Z wiedzy treningowej: kalkulatory konwersji Roth i optymalizacja wypłat",
+   "access_limits": "Nie wyszukiwano i nie otwierano w tej sesji.",
+   "conclusion": "Prawdopodobnie konkurenci częściowi lub bezpośredni (do weryfikacji). Wzmacniają wniosek o zatłoczeniu G4-11.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "[WYKONANE, standard] job offer comparison calculator total compensation equity bonus benefits",
+  "[WYKONANE, standard] JOLTS quits 2026 job openings labor turnover BLS",
+  "[WYKONANE, standard] Peak 65 Americans turning 65 per day 2025 2026 retirement",
+  "[WYKONANE, extended] Boldin vs ProjectionLab vs Pralana vs MaxiFi retirement planner comparison 2026",
+  "[WYKONANE, standard] reddit how to compare two job offers different states taxes 401k match health insurance",
+  "[ZABLOKOWANE – wyczerpany wspólny limit 200 wyszukiwań na turę, dzielony z innymi agentami] ustax.tools job offer comparison state tax cost of living 401k match (extended)",
+  "[ZABLOKOWANE – limit] relocation package calculator gross-up taxable relocation lump sum vs cost of move",
+  "[ZABLOKOWANE – limit] startup stock options calculator exercise now or later AMT ISO NSO tender offer tool (extended)",
+  "[ZABLOKOWANE – limit] sign-on bonus clawback calculator leave job early repay bonus vesting unvested RSU cost of leaving (extended)",
+  "[ZABLOKOWANE – limit] \"golden handcuffs\" calculator unvested RSU 401k match vesting should I leave now or wait (extended)",
+  "[UWAGA] Pozostałe planowane wyszukiwania per-idea (około 30–40: COBRA vs ACA, HDHP vs PPO, severance, RTO, pension lump sum, ACA bridge, retirement relocation, inherited IRA, zmiany ACA/OBBBA/SECURE 2.0 w 2026, dystrybucja przez asystentów AI) nie zostały wykonane. Wymagana kolejna tura z nowym budżetem wyszukiwań. WebFetch nie był używany."
+ ]
+}

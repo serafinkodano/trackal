@@ -1,0 +1,1502 @@
+{
+ "families": [
+  {
+   "family": "Energia domowa: PV i magazyny energii",
+   "demand_pl": "OGRANICZENIE METODYCZNE: w tej turze wykonano tylko 3 wyszukiwania (o ulgach 25D/25C/30D/30C). Kolejne zapytania odrzucono, bo wyczerpał się limit 200 wyszukiwań na turę, wspólny dla wszystkich agentów. Wszystko, co dotyczy popytu i konkurencji poza ulgami, pochodzi z wiedzy treningowej (do ok. 06.2026) i jest NIEZWERYFIKOWANE w tej sesji.\nDane bezpośrednie o popycie (wolumeny wyszukiwań, liczba ofert, prompty LLM): brak.\nDane pośrednie (search-summary): OBBBA podpisana 4.07.2025 kończy ulgę 25D dla systemów zainstalowanych po 31.12.2025, a systemy od 2026 nie mają federalnej ulgi przy zakupie gotówkowym lub kredytowym (solar.com, SEIA). Systemy third-party (lease/PPA) korzystają z 48E: wg SEIA trzeba rozpocząć budowę do 4.07.2026 albo oddać system do użytku do 31.12.2027. To realna, nowa niepewność decyzyjna dla każdego domu rozważającego PV w latach 2026-2027.\nSzacunek/hipoteza: liczba domów z PV w USA to kilka mln (wiedza treningowa, niezweryfikowane). To zasób, nie miesięczny popyt. Popyt decyzyjny to przepływ: oferty instalatorów, wymiany dachów, sprzedaże domów z PV, decyzje o baterii po zmianach net meteringu. Hipoteza: po wygaśnięciu 25D segment cash/loan się kurczy, więc decyzji 'kupić PV' jest mniej, ale pozostałe są bardziej złożone.",
+   "demand_sources": [
+    {
+     "url": "https://seia.org/research-resources/clean-energy-provisions-big-beautiful-bill/",
+     "title": "EXPLAINED: The Clean Energy Provisions in the “One Big Beautiful Bill.”",
+     "publisher": "SEIA",
+     "published": "niezweryfikowane (2025)"
+    },
+    {
+     "url": "https://solar.com/learn/update-senate-proposes-solar-tax-credit-policy-changes/",
+     "title": "Senate Proposes New Deadline for Solar Tax Credit Phaseout",
+     "publisher": "Solar.com",
+     "published": "niezweryfikowane (2025)"
+    },
+    {
+     "url": "https://www.solar.com/learn/senate-releases-updated-one-big-beautiful-bill-text-what-it-means-for-solar/",
+     "title": "Senate Releases Updated One Big Beautiful Bill Text – What It Means for Solar",
+     "publisher": "Solar.com",
+     "published": "niezweryfikowane (2025)"
+    },
+    {
+     "url": "https://www.solar.com/learn/breaking-congress-proposes-to-end-residential-solar-tax-credit/",
+     "title": "House Approves Terminating the Residential Solar Tax Credit",
+     "publisher": "Solar.com",
+     "published": "niezweryfikowane (2025)"
+    }
+   ],
+   "commercial_pl": "Charakter silnie komercyjny. Jedna decyzja to zwykle kilkanaście do kilkudziesięciu tys. USD (hipoteza, niezweryfikowane). Leady solarne należą do najdroższych w lead-gen (wiedza branżowa, niezweryfikowana w tej sesji). Ryzyko: reklamodawcy to głównie agregatory leadów i instalatorzy (reklamy typu 'free solar'), co może podważać wiarygodność neutralnego symulatora. Afiliacja/lead-gen może być tylko dodatkiem, nie fundamentem.",
+   "integrated_competition_pl": "Zakres: 0 wykonanych zapytań o konkurencję (budżet wyczerpany). Lista pochodzi z wiedzy treningowej i jest niezweryfikowana:\n- NREL PVWatts: produkcja, bez decyzji finansowej, partial.\n- Google Project Sunroof: status w 2026 niezweryfikowany.\n- Kalkulatory lead-gen EnergySage, SolarReviews, Solar.com: oszczędności i payback, partial.\n- Oprogramowanie instalatorów Aurora Solar, OpenSolar: oferty, substitute.\n- NREL SAM/REopt: darmowe, eksperckie, substitute.\nDomeny EnergySage, SolarReviews i Solar.com pojawiły się w wynikach tylko jako artykuły o ulgach, nie jako strony kalkulatorów.\nOgólne 'czy PV się opłaca' to rynek zatłoczony. Dla decyzji łączących żywotność dachu, koszt demontażu i ponownego montażu PV, horyzont sprzedaży domu i formę własności po 25D: Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres badania był minimalny, pewność niska.",
+   "ai_fit_pl": "Hipoteza: użytkownicy pytają asystentów typu 'Should I still get solar now that the tax credit is gone?'. Asystent sam odpowie jakościowo i policzy przybliżony payback. Nie zna jednak nasłonecznienia adresu, taryfy eksportowej ani aktualnych zasad net meteringu, więc może odesłać do PVWatts lub EnergySage. Czy odeśle do nowej witryny, zależy od cytowania w trybach z wyszukiwaniem (ChatGPT search, Perplexity, Copilot, Gemini). Reguł Google nie da się na to przenieść; niezweryfikowane. Plus: asystenci z nieaktualną wiedzą mogą wciąż podawać 30% ulgę 25D. Narzędzie z aktualnymi założeniami ma więc przewagę, ale tylko przejściową.",
+   "shared_modeling_pl": "Bardzo wysoki. Wspólne silniki: produkcja PV (PVWatts API), taryfy (flat/TOU/net billing), amortyzacja kredytu, NPV/IRR, degradacja, wrażliwość, break-even. Te same moduły obsługują baterie, backup, pompy ciepła (profil zużycia) i EV (ładowanie domowe).",
+   "data_cost_pl": "- PVWatts API: darmowe z kluczem (wiedza treningowa, niezweryfikowane).\n- Taryfy i net metering: stanowe i per utility, zmieniają się kilka razy w roku. OpenEI URDB jest darmowy, ale niepełny (niezweryfikowane).\n- Ceny instalacji ($/W): brak darmowego, bieżącego źródła. Raporty LBNL wychodzą raz w roku (niezweryfikowane).\n- Ulgi federalne: zmiany 2025 potwierdzone (solar.com, SEIA).\nCzęstotliwość aktualizacji: kwartalnie (ceny, taryfy) i natychmiast przy zmianach prawa. Koszt danych średni, koszt utrzymania średni-wysoki.",
+   "error_risk_pl": "Wysokie:\n- Decyzje za dziesiątki tys. USD.\n- Reguły ulg zmieniły się radykalnie (25D zniesiona od 2026, 48E z terminami do 2027; SEIA, solar.com).\n- Umowy lease/PPA mają eskalatory i klauzule przy sprzedaży domu.\n- Jedno błędne założenie, np. eksport po stawce detalicznej zamiast avoided cost, odwraca wynik.\nWymagane: jawne założenia, zakresy, data stanu prawnego na każdej stronie.",
+   "catalog_potential_pl": "Wysoki. Przykłady odrębnych decyzji (nie wariantów miasta czy kwoty): dach + PV + sprzedaż, forma własności po 25D, bateria do istniejącej PV, rozbudowa PV po zakupie EV lub pompy ciepła, sprzedaż domu z PV w leasingu, community solar vs dach, ground mount vs dach.",
+   "ad_fit_pl": "Bogate środowisko reklamodawców: instalatorzy, lead-gen, dekarze, HELOC/banki (hipoteza; brak danych o CPC/RPM w tej sesji). Ryzyko jakości reklam i konfliktu z neutralnością. Polityka AdSense dla treści energetyczno-finansowych niezweryfikowana.",
+   "expert_cost_pl": "Średni: jednorazowy przegląd modelu przez inżyniera PV lub analityka energii plus okresowa weryfikacja zmian prawa (ulgi, net metering). n8n może monitorować źródła (IRS, SEIA, stany), ale interpretacja zmian wymaga człowieka.",
+   "scores": {
+    "demand": 3,
+    "commercial": 5,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Rodzina rdzeniowa dla home energy, ale wchodzić tylko przez wąskie decyzje sekwencyjne (dach + PV + sprzedaż, forma własności po 25D), nie przez kolejny 'solar calculator'.\nWarunki:\n- weryfikacja konkurencji (w tej sesji niewykonana),\n- budżet na przegląd ekspercki,\n- świadomość, że okno 48E (do 2027) skraca życie części produktów."
+  },
+  {
+   "family": "Energia domowa: ogrzewanie/chłodzenie i ciepła woda",
+   "demand_pl": "OGRANICZENIE: budżet wyszukiwań wyczerpany po 3 zapytaniach. Poza statusem 25C dane są z wiedzy treningowej i niezweryfikowane.\nDane bezpośrednie o wolumenie zapytań: brak.\nDane pośrednie (search-summary):\n- Ulga 25C (m.in. do 2 000 USD na pompy ciepła) nie przysługuje dla urządzeń oddanych do użytku po 31.12.2025 (tabela IRS, instead.com z 19.05.2026, Honkamp, pv magazine). OBBBA nie wprowadziła następcy.\n- Rewiring America uruchomiła krajową kampanię w związku z wygasaniem ulg (ESG Dive). To sygnał, że temat jest żywy, nie miara popytu.\nWiedza treningowa (niezweryfikowane):\n- W USA sprzedaje się rocznie kilka mln central AC i pomp ciepła (AHRI). Od 2022 pompy ciepła wyprzedzają piece gazowe.\n- HVAC wymienia się co ok. 15-20 lat, podgrzewacze wody co ok. 10-15 lat.\nTo przepływ wymian (miliony rocznie), nie miesięczny popyt na narzędzie.\nKluczowy moment to awaria w szczycie sezonu: decyzja pod presją czasu. Sprzyja to szybkim, prostym w obsłudze symulatorom.",
+   "demand_sources": [
+    {
+     "url": "https://www.irs.gov/node/150421",
+     "title": "www.irs.gov (tabela IRS dot. terminu 25C – tytuł w wynikach)",
+     "publisher": "IRS",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://instead.com/resources/blog/what-section-70505-ended-for-the-25c-home-energy-credit",
+     "title": "May 19, 2026 (tytuł w wynikach; artykuł o zakończeniu 25C przez Section 70505)",
+     "publisher": "Instead",
+     "published": "2026-05-19"
+    },
+    {
+     "url": "https://www.pv-magazine.com/2025/08/13/how-the-one-big-beautiful-bill-affects-heat-pump-adoption/",
+     "title": "How the One Big Beautiful Bill affects heat pump adoption",
+     "publisher": "pv magazine",
+     "published": "2025-08-13"
+    },
+    {
+     "url": "https://www.esgdive.com/news/with-home-electrification-tax-credits-expiring-rewiring-america-starts-national-campaign/759286/",
+     "title": "Dive Brief: (ESG Dive – kampania Rewiring America w związku z wygasaniem ulg; tytuł wg wyników)",
+     "publisher": "ESG Dive",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://www.honkamp.com/insights/article/impact-of-the-one-beautiful-bill-act-on-residential-energy-credits/",
+     "title": "Impact of the One Beautiful Bill Act on Residential Energy Credits",
+     "publisher": "Honkamp",
+     "published": "niezweryfikowane"
+    }
+   ],
+   "commercial_pl": "Wysoki. Wymiana systemu to typowo kilka do kilkunastu tys. USD (hipoteza, niezweryfikowane). Wokół decyzji działają finansowanie HVAC, kontraktorzy i producenci; Trane pojawił się w wynikach jako źródło treści o 25C (search-summary). Lead-gen HVAC to dojrzały rynek (niezweryfikowane).",
+   "integrated_competition_pl": "Zakres: 0 zapytań o konkurencję. Wiedza treningowa, niezweryfikowana:\n- Rewiring America: kalkulator zachęt i planer elektryfikacji, partial. Jego funkcje po wygaśnięciu 25C są niezweryfikowane.\n- ENERGY STAR: kalkulatory oszczędności, partial.\n- Kalkulatory producentów i kontraktorów: marketingowe, substitute.\n- Darmowa wycena kontraktora: silny substitute, bo i tak potrzebna.\nDla decyzji 'naprawić / wymienić 1:1 / pompa ciepła / dual-fuel' z klimatem (COP vs temperatura), cenami paliw, wiekiem drugiego urządzenia i pojemnością tablicy elektrycznej: Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Pewność niska.",
+   "ai_fit_pl": "Hipoteza: 'heat pump vs furnace in Ohio' to typowy prompt. Asystent odpowiada sam, ale ogólnikowo. Precyzyjne liczby wymagają danych klimatycznych (stopniodni, temperatura projektowa), taryf i cen gazu lub propanu. Tu narzędzie wnosi wartość, a asystent w trybie search może je zacytować (niezweryfikowane). Asystenci mogą wciąż cytować 25C, więc aktualne narzędzie zyskuje przewagę informacyjną, ale krótkotrwałą.",
+   "shared_modeling_pl": "Wysoki. Wspólne elementy: model obciążenia budynku (stopniodni), krzywe COP, ceny paliw (EIA), taryfy, model awaryjności i wymiany (repair vs replace). Moduły są wspólne z podgrzewaczem wody, tablicą elektryczną, PV (wzrost zużycia) i backupem (moc rozruchowa).",
+   "data_cost_pl": "- EIA: ceny gazu, propanu, oleju i energii, darmowe, miesięczne (wiedza treningowa).\n- NOAA climate normals: darmowe.\n- NEEP ccASHP (dane urządzeń): licencja niezweryfikowana.\n- Koszty instalacji: brak dobrego darmowego źródła. Trzeba stosować zakresy i pozwolić wpisać ofertę.\n- Zachęty: po 25C zostają głównie programy stanowe i utility (pv magazine, ESG Dive – search-summary). Są rozproszone i zmienne.",
+   "error_risk_pl": "Średnie. Wynik jest wrażliwy na COP w mrozie, ceny paliw i sprawność istniejącego pieca. Narzędzie nie może udawać obliczenia Manual J (doboru mocy). Ryzyko zmiany ulg już się zmaterializowało (25C wygasła), więc model jest dziś mniej zależny od polityki.",
+   "catalog_potential_pl": "Wysoki. Przykłady decyzji: awaria AC lub pieca, dual-fuel, mini-split w części domu, geotermia vs ASHP, podgrzewacz HPWH vs gaz vs tankless, propan na wsi, wymiana planowa vs po awarii, kolejność względem PV i panelu.",
+   "ad_fit_pl": "Dobre: kontraktorzy HVAC, producenci, finansowanie, sieci DIY (hipoteza; brak danych o stawkach).",
+   "expert_cost_pl": "Średni: jednorazowy przegląd przez inżyniera HVAC lub energy auditora, plus sezonowa aktualizacja cen (automatyzowalna z EIA).",
+   "scores": {
+    "demand": 4,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Najlepsza rodzina energetyczna pod względem przepływu decyzji: każdy dom kiedyś wymienia HVAC. Po wygaśnięciu 25C model mniej zależy od polityki. Wejście przez moment awarii ('repair vs replace vs heat pump vs dual-fuel'). Przed pilotem trzeba zweryfikować Rewiring America i narzędzia kontraktorów."
+  },
+  {
+   "family": "Energia domowa: przerwy w zasilaniu i zasilanie awaryjne",
+   "demand_pl": "OGRANICZENIE: budżet wyszukiwań wyczerpany; dane o popycie niezweryfikowane.\nDane bezpośrednie: brak.\nDane pośrednie (search-summary): BLUETTI, producent power stations, publikuje przewodnik po OBBB dla właścicieli domów. Świadczy to o tym, że producenci backupu targetują decyzje energetyczne domów, ale nie mierzy popytu.\nWiedza treningowa (niezweryfikowane):\n- Popyt jest epizodyczny i regionalny: skoki po huraganach, burzach zimowych, PSPS w Kalifornii, zdarzeniach w Teksasie.\n- EIA publikuje roczne wskaźniki niezawodności (SAIDI/SAIFI).\n- 25D obejmowała baterie domowe; jej koniec 31.12.2025 (potwierdzony dla 25D przez solar.com i SEIA) podnosi koszt zakupu baterii.\nLiczba domów w strefach ryzyka to zasób, nie miesięczny popyt.",
+   "demand_sources": [
+    {
+     "url": "https://www.bluettipower.com/blogs/knowledge/understanding-obbb-homeowners-guide",
+     "title": "Understanding One Big Beautiful Bill: A Simple Guide for Homeowners",
+     "publisher": "BLUETTI",
+     "published": "niezweryfikowane"
+    }
+   ],
+   "commercial_pl": "Wysoki. Standby generator z instalacją to kilka do kilkunastu tys. USD (hipoteza). Power stations to silna kategoria e-commerce (BLUETTI, EcoFlow, Jackery; programy afiliacyjne niezweryfikowane). Baterie domowe sprzedają instalatorzy. Typy produktów są różne, więc porównanie międzytechnologiczne ma wartość dla użytkownika.",
+   "integrated_competition_pl": "Zakres: 0 zapytań o konkurencję. Wiedza treningowa, niezweryfikowana:\n- Kalkulatory doboru mocy generatora (Generac, Champion).\n- Kalkulatory czasu pracy power stations (EcoFlow, BLUETTI, Jackery).\n- Narzędzia doboru baterii instalatorów (Tesla, Enphase).\n- NREL REopt: resilience, eksperckie.\nKażde narzędzie producenta porównuje głównie własną technologię. Dla porównania przenośnego generatora, standby, baterii, baterii z PV i power station w funkcji profilu przerw (częstotliwość, długość, sezon), krytycznych obciążeń, paliwa i budżetu 10-letniego: Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Pewność niska.",
+   "ai_fit_pl": "Proste pytania o dobór ('What size generator to run fridge, sump pump, furnace?') asystent policzy sam, więc ryzyko samodzielnej odpowiedzi jest wysokie. Wartość narzędzia rośnie przy porównaniu technologii w czasie:\n- koszt 10-letni i paliwo,\n- przerwy wielodniowe i zimowe (brak ładowania z PV),\n- moce rozruchowe.\nHipoteza: w trybie search asystent może zacytować takie porównanie.",
+   "shared_modeling_pl": "Wysoki. Z PV/bateriami dzieli model baterii i profil obciążenia, z HVAC moc rozruchową pompy ciepła lub pieca, z taryfami programy VPP.",
+   "data_cost_pl": "Tanio. Źródła (wiedza treningowa, niezweryfikowane):\n- EIA-861: wskaźniki niezawodności per utility, rocznie, darmowe.\n- ORNL EAGLE-I: dane o przerwach, darmowe.\n- EIA: ceny paliw.\n- Ceny urządzeń z detalu: aktualizacja kwartalna, możliwa z wartością wpisaną przez użytkownika.",
+   "error_risk_pl": "Średnie. Kwestie bezpieczeństwa wymagają ostrzeżeń: CO z generatorów, backfeeding bez przełącznika lub interlocka, urządzenia medyczne. Możliwe niedoszacowanie mocy rozruchowej. Ryzyko finansowe jest niższe niż w PV.",
+   "catalog_potential_pl": "Średni. Przykłady: wybór technologii, urządzenia medyczne, studnia i sump pump, praca zdalna, dom z propanem, mieszkanie (tylko power station), V2H z EV. Mniej rozgałęzień niż w samochodach.",
+   "ad_fit_pl": "Dobre: e-commerce power stations, dealerzy generatorów, instalatorzy, sieci DIY. Reklamy są sezonowe (huragany, zima) – hipoteza.",
+   "expert_cost_pl": "Niski-średni: jednorazowy przegląd przez elektryka i coroczna aktualizacja danych niezawodności (automatyzowalna).",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 4,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 4,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Kandydat na szybki pilot w energetyce: hipotetycznie największa luka integracyjna, tanie dane, umiarkowana ekspertyza. Słabości: epizodyczny popyt i łatwość samodzielnej odpowiedzi asystenta na proste pytania o dobór. Produkt musi porównywać technologie w czasie, nie sumować waty."
+  },
+  {
+   "family": "Energia domowa: taryfy energii",
+   "demand_pl": "OGRANICZENIE: brak wyszukiwań w tym zakresie (budżet wyczerpany).\nHipoteza (niezweryfikowane):\n- Rachunki za prąd rosną w latach 2025-2026 (presja popytu data center i kosztów sieci – wiedza treningowa), co zwiększa zainteresowanie zmianą planu.\n- W Kalifornii TOU jest domyślne.\n- W stanach z wyborem sprzedawcy (np. TX, PA, OH, IL) działają porównywarki planów.\nMomenty decyzji: zakup EV, instalacja PV lub pompy ciepła, wysoki rachunek. Jako samodzielne pytanie popyt jest umiarkowany i silnie lokalny.",
+   "demand_sources": [],
+   "commercial_pl": "Średni. W stanach deregulowanych istnieje lead-gen planów detalicznych (EnergyBot, ChooseEnergy – niezweryfikowane). Poza nimi brak transakcji: użytkownik tylko przełącza plan u monopolisty.",
+   "integrated_competition_pl": "Wiedza treningowa, niezweryfikowana:\n- Narzędzia porównania planów samych utility (np. PG&E, SCE) na rzeczywistych danych interwałowych klienta: silny partial, w praktyce bliski direct.\n- Power to Choose (TX, rządowe) i porównywarki komercyjne.\nUtility ma dane zużycia klienta; zewnętrzna witryna wymaga ręcznego uploadu Green Button. Nie znaleziono bezpośredniego konkurenta w badanym zakresie dla optymalizacji taryfy z przyszłymi urządzeniami (EV, pompa ciepła), ale przewaga strukturalna utility jest duża. Pewność niska.",
+   "ai_fit_pl": "Niski. Asystent nie zna danych interwałowych użytkownika ani bieżącego tariff sheet. Najpewniej odeśle do narzędzia utility. Szansa na cytowanie zewnętrznej witryny jest mała (hipoteza).",
+   "shared_modeling_pl": "Bardzo wysoki jako infrastruktura: silnik taryf jest wejściem dla PV, baterii, EV i pomp ciepła. Jako samodzielny produkt słaby.",
+   "data_cost_pl": "Bardzo kosztowne w utrzymaniu: tysiące taryf, częste zmiany, publikacje w PDF-ach. OpenEI URDB jest darmowy, ale ma luki (niezweryfikowane). Automatyczny scraping przez n8n jest ryzykowny.",
+   "error_risk_pl": "Wysokie przy szczegółowych taryfach: bloki, opłaty stałe, strefy czasowe, sezony, minimalne opłaty, NBT.",
+   "catalog_potential_pl": "Średni. Przykłady: TOU + EV, TOU + bateria, plan stały vs zmienny, community solar, demand charges.",
+   "ad_fit_pl": "Średnie; najlepsze w stanach deregulowanych (hipoteza).",
+   "expert_cost_pl": "Niski koszt ekspercki, ale wysoki koszt pracy przy utrzymaniu danych (sprzeczne z celem automatyzacji).",
+   "scores": {
+    "demand": 3,
+    "commercial": 3,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 5,
+    "data_cost_ease": 1,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Nie budować jako rodziny produktów. Zbudować uproszczoną warstwę wspólną: średnie stanowe EIA, kilka szablonów TOU dla największych utility i stawki wpisywane przez użytkownika. Pełny optymalizator taryf odrzucić."
+  },
+  {
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "demand_pl": "OGRANICZENIE: zaplanowane zapytania (Edmunds negative equity 2026, stawki, leasing) nie zostały wykonane, bo budżet wyczerpał się. Wszystkie liczby poniżej to wiedza treningowa, niezweryfikowana w tej sesji.\n- W USA sprzedaje się rocznie ok. 15-16 mln nowych i ok. 35-40 mln używanych pojazdów.\n- Ok. 1/5-1/4 nowych pojazdów jest leasingowanych, więc co roku kończą się miliony umów.\n- Edmunds raportował w 2025, że ok. 1/4 aut oddawanych w rozliczeniu przy zakupie nowego miało ujemny kapitał, średnio ok. 6-7 tys. USD.\n- Średni wiek auta to ponad 12,5 roku (S&P Global Mobility), co zwiększa częstość decyzji 'naprawić czy wymienić'.\n- Cła na auta z 2025 i wysokie stopy podnoszą koszt wymiany.\nTo przepływy transakcji (dziesiątki mln rocznie), lepszy proxy niż liczba gospodarstw. Nadal nie jest to miesięczny popyt na narzędzie. Fora (r/personalfinance, r/askcarsales, Leasehackr) wg wiedzy treningowej obfitują w pytania 'trade in / keep / buy out'; niezweryfikowane.",
+   "demand_sources": [],
+   "commercial_pl": "Bardzo wysoki: kredyty, refinansowanie, ubezpieczenia, dealerzy, marketplace'y (Carvana, CarMax), gap insurance, przedłużone gwarancje. To jedna z najbogatszych kategorii reklamowych (hipoteza, brak danych CPC).\nNowość z OBBBA (wiedza treningowa, niezweryfikowane w tej sesji): odliczenie odsetek od kredytu na nowe auto montowane w USA, do 10 tys. USD rocznie w latach 2025-2028, z limitami dochodowymi. Zmienia to porównanie gotówka / kredyt / leasing.",
+   "integrated_competition_pl": "Zakres: 0 zapytań o konkurencję. Wiedza treningowa, niezweryfikowana:\n- Edmunds True Cost to Own i KBB 5-Year Cost to Own: TCO modelu, bez decyzji keep vs replace z bieżącym kredytem.\n- Setki jednocelowych kalkulatorów NerdWallet, Bankrate, Edmunds: rata, lease vs buy, rebate vs 0% APR, rollover negative equity.\n- Leasehackr: kalkulator i forum, silne w strukturze nowego leasingu.\n- Instant offers Carvana/CarMax: wartość auta.\n- AAA Your Driving Costs.\nTo katalog fragmentów, a szerokość katalogu to nie integracja. Dla prostych pytań (rata, rollover) to jednak wystarczający substitute. Dla połączenia naprawa/awaria + ujemny kapitał + refinansowanie + wartość rynkowa + horyzont: Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Pewność niska.",
+   "ai_fit_pl": "Hipoteza: prompty w stylu 'I owe $18k, car worth $12k, transmission quote $4k – what should I do?' są częste. Asystent policzy amortyzację i da rozsądną odpowiedź jakościową, więc ryzyko samodzielnej odpowiedzi jest realne. Wartość narzędzia:\n- krzywa w czasie (kiedy kapitał wychodzi na plus),\n- 4-6 ścieżek z ryzykiem kolejnych napraw,\n- wrażliwość na stopę i wartość auta.\nAsystent zwykle nie ma aktualnych wycen rynkowych. Cytowanie w trybach search niezweryfikowane.",
+   "shared_modeling_pl": "Bardzo wysoki. Jeden silnik (amortyzacja, krzywe deprecjacji, koszty napraw wg wieku i przebiegu, TCO, finansowanie, podatek od sprzedaży z trade-in credit per stan, ubezpieczenie jako wejście) obsługuje kilkanaście odrębnych decyzji.",
+   "data_cost_pl": "Najsłabszy punkt.\n- Wyceny aut (KBB, Edmunds, Black Book, J.D. Power): płatne lub zamknięte API (wiedza treningowa, niezweryfikowane).\n- Obejście: wartość wpisywana przez użytkownika, linki do darmowych wycen, zakresy deprecjacji z publicznych raportów.\n- Darmowe: NHTSA vPIC, fueleconomy.gov, stopy z Fed G.19, stawki podatków stanowych (rzadko się zmieniają).\nAktualizacja: stopy miesięcznie, podatki rocznie.",
+   "error_risk_pl": "Niskie-średnie. Matematyka jest deterministyczna i testowalna. Główne ryzyko to oszacowanie wartości auta i kosztów napraw, rozwiązywane jawnymi zakresami. Temat YMYL (finanse) wymaga disclaimerów, ale nie licencji. Zależność od polityki mała, z wyjątkiem odliczenia odsetek 2025-2028.",
+   "catalog_potential_pl": "Bardzo wysoki. Przykłady decyzji: naprawa vs wymiana, wyjście z ujemnego kapitału, koniec leasingu, buyout, refinansowanie, rebate vs APR, wcześniejsza spłata, auto dla nastolatka, sprzedaż prywatna vs trade-in, przedłużona gwarancja, redukcja do jednego auta.",
+   "ad_fit_pl": "Bardzo dobre: ubezpieczenia, kredyty, dealerzy, marketplace'y (hipoteza). Ryzyko dominacji reklam lead-gen o niskiej jakości.",
+   "expert_cost_pl": "Niski. Matematykę weryfikują testy jednostkowe; opcjonalny jednorazowy przegląd przez osobę z doświadczeniem F&I.",
+   "scores": {
+    "demand": 5,
+    "commercial": 5,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 2,
+    "low_error_risk": 4,
+    "catalog": 5,
+    "ad_fit": 5,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Najsilniejsza rodzina w tym temacie dla modelu reklamowego i automatyzacji: duży przepływ decyzji, mała zależność od polityki, niski koszt ekspercki, wspólny silnik. Ryzyka: asystent łatwo odpowiada na proste przypadki, a tanich danych o wartości aut brak. Priorytet nr 1 do weryfikacji konkurencji."
+  },
+  {
+   "family": "Samochody: EV vs ICE vs hybryda, ładowanie domowe, ubezpieczenie",
+   "demand_pl": "Dane pośrednie (search-summary):\n- 30D i 25E zakończone dla pojazdów nabytych po 30.09.2025 (wyjątek: wiążąca umowa z płatnością do tej daty). 30C nie obejmuje ładowarek oddanych do użytku po 30.06.2026 (Coltura, EnergySage, eviqo.io).\n- Artykuły 'last chance' EnergySage wskazują na falę zainteresowania przed terminem.\nHipoteza (niezweryfikowane): po terminie popyt na EV spadł, a znaczenie hybryd wzrosło. Pytanie 'EV vs hybryda' pozostaje częste, ale bez ulgi mniej pilne.\nŁadowanie domowe: najem i brak garażu to bariera (wiedza treningowa).",
+   "demand_sources": [
+    {
+     "url": "https://coltura.org/ev-tax-credit/",
+     "title": "The Federal EV Tax Credit and Other EV Incentives In 2026",
+     "publisher": "Coltura",
+     "published": "niezweryfikowane (2026)"
+    },
+    {
+     "url": "https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/",
+     "title": "Last chance to save $7,500 on an EV—your burning questions answered",
+     "publisher": "EnergySage",
+     "published": "niezweryfikowane (2025)"
+    },
+    {
+     "url": "https://eviqo.io/blogs/news/federal-ev-charger-tax-credit-2026-how-to-claim-30-back-section-30c",
+     "title": "Federal EV Charger Tax Credit Ended June 30, 2026: What You Can Still Claim",
+     "publisher": "eviqo",
+     "published": "niezweryfikowane (2026)"
+    },
+    {
+     "url": "https://recharged.com/articles/ev-tax-credit-2026-guide",
+     "title": "ev tax credit 2026 guide",
+     "publisher": "Recharged",
+     "published": "niezweryfikowane (2026)"
+    }
+   ],
+   "commercial_pl": "Wysoki: dealerzy, producenci, ubezpieczenia, instalatorzy ładowarek (np. Qmerit – wiedza treningowa), programy EV utility. Ubezpieczenia to bardzo komercyjny, ale zatłoczony lead-gen.",
+   "integrated_competition_pl": "Zatłoczone (wiedza treningowa, niezweryfikowane):\n- DOE AFDC Vehicle Cost Calculator: TCO pojazdów o różnych napędach, darmowe.\n- fueleconomy.gov.\n- Edmunds TCO.\n- Kalkulatory EV vs gas w utility i mediach.\n- Recurrent: zdrowie baterii używanych EV.\n- Recharged: marketplace używanych EV; w wynikach tylko jako artykuł o ulgach.\n- Ubezpieczenia: The Zebra, Insurify.\nLuka istnieje najwyżej w węższych decyzjach: flota dwóch aut w gospodarstwie, ładowanie bez garażu.",
+   "ai_fit_pl": "Niski-średni. 'Is an EV cheaper than a hybrid for 12k miles/yr?' asystent policzy sam (koszt na milę), więc ryzyko samodzielnej odpowiedzi jest wysokie. Asystenci z nieaktualną wiedzą mogą wciąż wspominać 7 500 USD, ale to tymczasowa przewaga aktualnego narzędzia.",
+   "shared_modeling_pl": "Wysoki z rodziną samochodową (TCO, finansowanie) i energetyczną (taryfy, PV, panel, backup V2H).",
+   "data_cost_pl": "fueleconomy.gov i AFDC mają darmowe API (wiedza treningowa). Ceny energii z EIA. Ceny ładowania publicznego są zmienne i trudne do pozyskania. Stawek ubezpieczeń brak w danych publicznych (składki zależą od danych osobowych).",
+   "error_risk_pl": "Średnie: niepewna deprecjacja EV, degradacja baterii, składki ubezpieczeń. Ulgi zmienione (potwierdzone): model z 2024 dziś dałby błędne wyniki.",
+   "catalog_potential_pl": "Średni. Przykłady: EV vs hybryda, używany EV, PHEV, drugi samochód, ładowanie u najemcy, V2H, PV + EV.",
+   "ad_fit_pl": "Dobre: dealerzy, ubezpieczenia, ładowarki (hipoteza).",
+   "expert_cost_pl": "Niski-średni.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Ogólne 'EV vs gas' odrzucić: rynek zatłoczony, asystent odpowie sam. Rodzinę traktować jako moduł silnika samochodowego i rozwijać tylko w węższych decyzjach (flota dwóch aut, ładowanie bez garażu). Ubezpieczenia jako produkt odrzucić z powodu braku danych."
+  }
+ ],
+ "ideas": [
+  {
+   "temp_id": "G3-01",
+   "name_en": "Roof + Solar Timing Planner (with home-sale horizon)",
+   "family": "Energia domowa: PV i magazyny energii",
+   "user_and_moment": "Właściciel domu z dachem w wieku 15-22 lat, który dostał ofertę PV albo wycenę dachu i planuje sprzedaż za 2-8 lat.",
+   "sample_prompt_en": "My roof needs replacing within a few years. Should I install solar now, replace the roof and add solar together, or postpone since I plan to sell the house in about 5 years?",
+   "decision_problem": "Kolejność i łączenie dwóch inwestycji o różnych cyklach życia (dach ok. 20-30 lat, PV 25+). Do uwzględnienia:\n- koszt demontażu i ponownego montażu PV przy późniejszej wymianie dachu,\n- brak 25D od 2026 (solar.com, SEIA),\n- horyzont sprzedaży: czy kupujący zapłaci za PV i co z przeniesieniem leasingu lub zabezpieczenia kredytu.",
+   "combined_domains": "Dekarstwo (żywotność, koszt), produkcja PV, taryfa i net metering, finansowanie (gotówka, kredyt solarny, HELOC, lease/PPA), rynek nieruchomości (premia za PV, obciążenia), podatki (brak 25D, 48E przez TPO).",
+   "variants_compared": "(A) PV teraz na starym dachu, dach później z detach/reset; (B) dach i PV razem teraz; (C) dach teraz, PV później albo wcale; (D) nic, sprzedaż z dyskontem za dach; (E) dach teraz i PV w lease/PPA (48E do 2027 wg SEIA).",
+   "key_dependencies": "- Pozostała żywotność dachu wyznacza, kiedy i ile kosztuje detach/reset.\n- Horyzont sprzedaży decyduje, ile wartości PV wraca w cenie domu.\n- Forma własności określa dostęp do 48E i komplikacje przy sprzedaży.\n- Taryfa eksportowa wpływa na optymalną wielkość systemu.",
+   "main_outputs": "- NPV i przepływy roczne każdego wariantu do momentu sprzedaży i w 25 latach.\n- Break-even horyzontu sprzedaży.\n- Wrażliwość na premię PV w cenie domu, inflację cen energii, koszt detach/reset i żywotność dachu.\n- Lista założeń i co odwraca wynik.",
+   "reason_external_site": "Potrzebne są dane produkcji dla adresu, kurowane zasady net meteringu i porównanie 4-5 wariantów w czasie z wykresami. W rozmowie z asystentem wyniki są niespójne i bez aktualnych danych lokalnych.",
+   "data_sources": "NREL PVWatts API, EIA (ceny energii per stan), kurowane zasady NEM dla top stanów, zakresy kosztów dachu i PV z raportów branżowych (niezweryfikowane), stan ulg (solar.com, SEIA – search-summary).",
+   "user_data": "ZIP, wiek i rodzaj dachu, wycena dachu (opcjonalnie), zużycie lub rachunek, horyzont sprzedaży, oferta PV (opcjonalnie), finansowanie.",
+   "nearest_competition": [
+    {
+     "name": "EnergySage (solar calculator / marketplace)",
+     "url": "https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: szacunek oszczędności PV i porównanie ofert instalatorów. W wynikach widoczny tylko artykuł o ulgach EV.",
+     "notes": "Funkcje dot. dachu i sprzedaży domu niezweryfikowane; strona nie otwarta.",
+     "paid": "darmowe (lead-gen) – niezweryfikowane"
+    },
+    {
+     "name": "SolarReviews solar calculator",
+     "url": "https://www.solarreviews.com/blog/ev-incentives",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: kalkulator oszczędności i payback PV. URL to artykuł o zachętach EV, nie strona kalkulatora.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe (lead-gen) – niezweryfikowane"
+    },
+    {
+     "name": "NREL PVWatts",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: produkcja energii PV dla lokalizacji, prosta ekonomika.",
+     "notes": "Brak modelu dachu, sprzedaży i formy własności.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Kontraktorzy roof + solar / Tesla Solar Roof",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: oferty łączone dachu i PV.",
+     "notes": "Niezależność wątpliwa; funkcje niezweryfikowane.",
+     "paid": "oferta handlowa"
+    },
+    {
+     "name": "ChatGPT/Claude/Gemini + arkusz",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Rozmowa i przybliżone obliczenia.",
+     "notes": "Brak danych lokalnych; ryzyko nieaktualnej wiedzy o 25D.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "Produkcja i ogólny payback PV są rozwiązane (PVWatts, kalkulatory lead-gen; wiedza treningowa). Artykuły 'solar before roof replacement' istnieją (wiedza treningowa, niezweryfikowane). Budżet wyszukiwań wyczerpany, więc w tej sesji nic nie zostało sprawdzone.",
+   "gap": "Hipoteza: brak narzędzia łączącego żywotność dachu, koszt detach/reset, horyzont sprzedaży i formę własności po 25D. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (0 zapytań konkurencyjnych; pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: koniec 25D 31.12.2025 i okno 48E dla TPO (solar.com, SEIA – search-summary) zmieniły ekonomikę decyzji. Wolumen zapytań i promptów niezweryfikowany (hipoteza).",
+   "ad_environment": "Dekarze, instalatorzy PV, HELOC/banki, lead-gen solarny (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Najbliższy przykładowi właściciela i realnie integracyjny. Przed pilotem trzeba zweryfikować konkurencję (EnergySage, instalatorzy, Tesla), dane o premii PV przy sprzedaży oraz koszt przeglądu eksperckiego.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-02",
+   "name_en": "Solar After the 25D Credit: Cash vs Loan vs Lease vs PPA",
+   "family": "Energia domowa: PV i magazyny energii",
+   "user_and_moment": "Właściciel domu w latach 2026-2027 z ofertą '$0 down' lease/PPA i ofertą zakupu, który dowiaduje się, że ulga 30% zniknęła.",
+   "sample_prompt_en": "The solar tax credit is gone. Is a solar lease or PPA now better than buying with a loan if I might move in 7 years?",
+   "decision_problem": "Wybór formy własności, gdy ulga jest dostępna pośrednio tylko przez TPO (48E: rozpoczęcie budowy do 4.07.2026 albo oddanie do 31.12.2027 wg SEIA), a zakup gotówkowy lub kredytowy jej nie ma. Do uwzględnienia: eskalatory, dealer fee, wykup, przeniesienie umowy przy sprzedaży domu.",
+   "combined_domains": "Finanse (NPV, koszt kapitału, dealer fee), umowy TPO (stawka $/kWh, eskalator, buyout), produkcja PV, inflacja taryf, sprzedaż domu, podatki (48E; ograniczenia FEOC – niezweryfikowane).",
+   "variants_compared": "Gotówka; kredyt solarny z dealer fee i bez; HELOC; lease o stałej racie; PPA z eskalatorem 0-3,9%; prepaid lease; brak PV.",
+   "key_dependencies": "- Eskalator vs przyszła inflacja taryfy utility.\n- Horyzont przeprowadzki decyduje o transferze lub wykupie.\n- Dealer fee zmienia efektywny koszt kredytu.\n- Termin 48E decyduje o dostępności ofert TPO.",
+   "main_outputs": "- Koszt skumulowany po 5/10/20/25 latach.\n- Break-even eskalatora względem inflacji taryf.\n- Scenariusz sprzedaży domu w roku N.\n- Wrażliwość i lista założeń z datą stanu prawnego.",
+   "reason_external_site": "Strukturalne porównanie umów i taryfy z aktualnymi terminami ulg. Asystent może pomóc, ale bez powtarzalnego modelu i aktualnych danych lokalnych.",
+   "data_sources": "PVWatts, historyczna inflacja cen energii per stan z EIA, terminy ulg (SEIA, solar.com – search-summary), parametry umowy wpisywane przez użytkownika.",
+   "user_data": "Oferty (cena, $/kWh, eskalator, roczne kWh, dealer fee), ZIP, rachunek, horyzont, oprocentowanie.",
+   "nearest_competition": [
+    {
+     "name": "EnergySage (lease vs buy content/tools)",
+     "url": "https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: porównania lease vs buy i marketplace ofert. W wynikach tylko artykuł o EV.",
+     "notes": "Strona nie otwarta; funkcje niezweryfikowane.",
+     "paid": "darmowe – niezweryfikowane"
+    },
+    {
+     "name": "Solar.com (learn center / calculator)",
+     "url": "https://solar.com/learn/whats-next-for-the-residential-clean-energy-tax-credit-and-what-can-solar-proponenets-do/",
+     "type": "partial",
+     "features_claimed": "Search-summary: aktualne artykuły o 25D i 48E. Kalkulator znany tylko z wiedzy treningowej.",
+     "notes": "Sprzedawca PV; funkcje niezweryfikowane.",
+     "paid": "darmowe – niezweryfikowane"
+    },
+    {
+     "name": "Oferty instalatorów TPO (np. Sunrun)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: własne symulacje oszczędności w ofercie.",
+     "notes": "Konflikt interesów.",
+     "paid": "oferta handlowa"
+    },
+    {
+     "name": "Arkusz / asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Obliczenia NPV na danych z oferty.",
+     "notes": "Wymaga umiejętności i aktualnej wiedzy o 48E.",
+     "paid": "—"
+    }
+   ],
+   "already_solved": "Poradniki 'lease vs buy' są powszechne (wiedza treningowa). Aktualne artykuły o końcu 25D istnieją (solar.com, SEIA – search-summary).",
+   "gap": "Hipoteza: brak jednego modelu z eskalatorem, dealer fee, sprzedażą domu i oknem 48E. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (0 zapytań konkurencyjnych; pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Zmiana prawa potwierdzona (solar.com, SEIA). Hipoteza: przesunięcie rynku w stronę TPO. Brak danych wolumenowych.",
+   "ad_environment": "Instalatorzy TPO, lead-gen solarny, kredytodawcy (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Silny wyzwalacz czasowy w latach 2026-2027, ale krótki cykl życia: po końcu 2027 wartość spada, chyba że model przejdzie na 'buy vs TPO bez ulg'. Dobry jako moduł G3-01.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-03",
+   "name_en": "Add a Battery to Existing Solar? (net billing, TOU, VPP, backup value)",
+   "family": "Energia domowa: PV i magazyny energii",
+   "user_and_moment": "Właściciel PV po zmianie zasad net meteringu w stanie albo przed końcem okresu legacy, który dostał ofertę baterii.",
+   "sample_prompt_en": "I have a 7 kW solar system on an older net metering plan in California. Does adding a home battery make sense, or should I switch rate plans or do nothing?",
+   "decision_problem": "Dołożenie magazynu vs zmiana planu taryfowego vs rozbudowa PV vs nic. Wartość baterii składa się z arbitrażu TOU, samokonsumpcji, programów VPP i backupu. Bez 25D od 2026 zakup jest droższy (koniec 25D potwierdzony; objęcie baterii przez 25D wg wiedzy treningowej).",
+   "combined_domains": "Taryfy TOU i eksportowe, model baterii (sprawność, degradacja, rezerwa backupu), VPP, przerwy w zasilaniu, finansowanie.",
+   "variants_compared": "Bateria kupiona; bateria w lease (48E – niezweryfikowane dla storage); bateria z rozbudową PV; zmiana taryfy bez baterii; power station jako tani backup; nic.",
+   "key_dependencies": "- Rezerwa na backup ogranicza arbitraż.\n- Koniec okresu legacy NEM wyznacza moment opłacalności.\n- Udział w VPP przyspiesza degradację.\n- Struktura taryfy wpływa na wszystkie strumienie wartości.",
+   "main_outputs": "- Roczna wartość per strumień (arbitraż, samokonsumpcja, VPP, godziny backupu).\n- Payback i break-even ceny baterii.\n- Wpływ końca legacy NEM w roku X.",
+   "reason_external_site": "Wymaga symulacji godzinowej (8760 h) z kurowaną taryfą, której asystent nie wykona wiarygodnie.",
+   "data_sources": "PVWatts (dane godzinowe), kurowane taryfy kilku utility (CA, HI, AZ – do wyboru), specyfikacje baterii, programy VPP (zmienne).",
+   "user_data": "Wielkość PV, data przyłączenia i taryfa, zużycie lub plik Green Button, cena baterii.",
+   "nearest_competition": [
+    {
+     "name": "Tesla / Enphase (narzędzia doboru i aplikacje)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: dobór baterii i szacunek oszczędności w procesie zakupu.",
+     "notes": "Porównują tylko własny produkt.",
+     "paid": "oferta handlowa"
+    },
+    {
+     "name": "EnergySage (battery calculator)",
+     "url": "https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: szacunek wartości baterii. URL to artykuł o EV.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe – niezweryfikowane"
+    },
+    {
+     "name": "NREL SAM",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: szczegółowe modelowanie PV i storage.",
+     "notes": "Narzędzie eksperckie, desktopowe.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Instalatorzy liczą wartość baterii w ofertach, a SAM modeluje dokładnie dla ekspertów (wiedza treningowa).",
+   "gap": "Hipoteza: neutralne porównanie baterii z alternatywami (zmiana taryfy, power station) w czasie, z końcem legacy NEM. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza: istotne głównie w kilku stanach ze zmienionym net meteringiem. Brak danych w tej sesji.",
+   "ad_environment": "Instalatorzy baterii, producenci, lead-gen (hipoteza).",
+   "ai_self_solve_risk": "low",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Wysoka wartość analityczna, ale ograniczona geograficznie i kosztowna w utrzymaniu (kurowanie taryf). Wrócić, jeśli G3-01 lub G3-04 potwierdzą popyt; zacząć od jednego stanu.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-04",
+   "name_en": "Backup Power Strategy Simulator: Portable Generator vs Standby vs Battery vs Power Station",
+   "family": "Energia domowa: przerwy w zasilaniu i zasilanie awaryjne",
+   "user_and_moment": "Właściciel domu tuż po wielogodzinnej lub wielodniowej przerwie (huragan, burza zimowa, PSPS), z sump pump, studnią, urządzeniem medycznym lub pracą zdalną.",
+   "sample_prompt_en": "We lost power for 3 days twice last year. Should I get a whole-home generator, a portable generator with a transfer switch, or a battery?",
+   "decision_problem": "Wybór technologii i zakresu zasilania (krytyczne obwody vs cały dom) przy danym profilu przerw, dostępnym paliwie, budżecie i ograniczeniach (HOA, hałas, miejsce, gaz ziemny vs propan), z kosztem 10-letnim.",
+   "combined_domains": "Profil przerw (częstotliwość, długość, sezon), obciążenia i moce rozruchowe, paliwo (logistyka, magazynowanie, ceny), bateria (pojemność, ładowanie z PV zimą), instalacja (transfer switch, interlock), bezpieczeństwo.",
+   "variants_compared": "Nic; power station; power station z panelem przenośnym; przenośny generator z interlockiem; inwerterowy dual-fuel; standby na gaz lub propan; 1-2 baterie z PV lub bez; hybryda bateria + mały generator.",
+   "key_dependencies": "- Długość przerwy: pojemność baterii vs zapas paliwa.\n- Zima: obciążenie grzewcze rośnie, a ładowanie z PV słabnie.\n- Dostęp do gazu ziemnego obniża koszt eksploatacji standby.\n- Budżet wyznacza zakres obwodów.",
+   "main_outputs": "- Godziny pokrycia krytycznych obciążeń przy przerwie typowej i ekstremalnej.\n- Koszt 10-letni i koszt na godzinę uniknięcia przerwy.\n- Ryzyka: hałas, CO, paliwo.\n- Wrażliwość na długość przerwy i ceny paliw.",
+   "reason_external_site": "Łączy dane o niezawodności lokalnego utility z bilansem obciążeń i kosztami wielu technologii, z wizualizacją pokrycia. Kalkulatory producentów porównują tylko własną technologię.",
+   "data_sources": "EIA-861 (SAIDI/SAIFI), ORNL EAGLE-I (opcjonalnie), ceny paliw EIA, specyfikacje i ceny urządzeń (aktualizacja kwartalna), typowe moce urządzeń.",
+   "user_data": "ZIP lub utility, historia przerw, lista krytycznych urządzeń, dostęp do gazu, PV tak/nie, budżet.",
+   "nearest_competition": [
+    {
+     "name": "Generac (generator sizing tools)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: dobór mocy generatora standby.",
+     "notes": "Jedna technologia; niezweryfikowane.",
+     "paid": "darmowe (lead do dealera)"
+    },
+    {
+     "name": "BLUETTI / EcoFlow / Jackery (runtime calculators)",
+     "url": "https://www.bluettipower.com/blogs/knowledge/understanding-obbb-homeowners-guide",
+     "type": "partial",
+     "features_claimed": "Search-summary: BLUETTI publikuje przewodnik OBBB dla właścicieli domów. Kalkulatory czasu pracy znane z wiedzy treningowej.",
+     "notes": "Porównują własne produkty; niezweryfikowane.",
+     "paid": "darmowe (e-commerce)"
+    },
+    {
+     "name": "NREL REopt",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: optymalizacja PV i storage z analizą resilience.",
+     "notes": "Eksperckie, zorientowane na obiekty komercyjne.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Suma watów i ogólne porady.",
+     "notes": "Brak danych o lokalnych przerwach i kosztach 10-letnich.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "Dobór mocy generatora i czas pracy power station są rozwiązane w kalkulatorach producentów (wiedza treningowa).",
+   "gap": "Porównanie międzytechnologiczne w funkcji profilu przerw i kosztu 10-letniego. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (0 zapytań konkurencyjnych; pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Popyt epizodyczny i regionalny (hipoteza). Producenci backupu aktywnie publikują treści (BLUETTI – search-summary). Brak danych wolumenowych.",
+   "ad_environment": "E-commerce power stations, dealerzy generatorów, instalatorzy baterii, sieci DIY (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Priorytet nr 1 w energetyce do weryfikacji: tanie dane, umiarkowana ekspertyza, hipotetycznie duża luka. Przed pilotem sprawdzić funkcje Generac, EcoFlow i REopt.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-05",
+   "name_en": "AC or Furnace Just Died: Repair vs Like-for-Like vs Heat Pump vs Dual-Fuel",
+   "family": "Energia domowa: ogrzewanie/chłodzenie i ciepła woda",
+   "user_and_moment": "Właściciel w momencie awarii albo wyceny dużej naprawy (sprężarka, wyciek czynnika) systemu w wieku 12-20 lat.",
+   "sample_prompt_en": "My 15-year-old AC needs a $2,800 compressor repair. Should I fix it, replace it with a new AC, or switch to a heat pump and keep my gas furnace as backup?",
+   "decision_problem": "Naprawa vs wymiana 1:1 vs pełna pompa ciepła vs dual-fuel vs mini-split. Do uwzględnienia:\n- wiek drugiego urządzenia (pieca),\n- klimat, ceny gazu i prądu,\n- koszt czynnika (transition 2025 – niezweryfikowane),\n- brak 25C od 2026 (IRS – search-summary) i lokalne rebaty.",
+   "combined_domains": "Niezawodność i żywotność, model obciążenia (stopniodni), COP w funkcji temperatury, ceny paliw, tablica elektryczna, finansowanie, rebaty stanowe i utility.",
+   "variants_compared": "Naprawa i odroczenie o 1-3 lata; AC 1:1; pompa ciepła z istniejącym piecem (dual-fuel); pompa ciepła z grzałką; cold-climate HP jako jedyne źródło; wymiana obu urządzeń razem.",
+   "key_dependencies": "- Wiek pieca decyduje o opłacalności wymiany łącznej.\n- Balance point wyznacza pracę dual-fuel.\n- Relacja cen gazu i prądu decyduje o kosztach rocznych.\n- Pojemność panelu wpływa na koszt instalacji.",
+   "main_outputs": "- Koszt 10-15-letni każdego wariantu.\n- Oczekiwany koszt kolejnych awarii.\n- Break-even ceny gazu.\n- Orientacyjny punkt przełączania dual-fuel.\n- Założenia i co zmienia wynik.",
+   "reason_external_site": "Potrzebne są lokalne dane klimatyczne i ceny paliw oraz model awaryjności. Asystent daje ogólnik albo nieaktualną informację o 25C.",
+   "data_sources": "EIA (ceny paliw, miesięcznie), NOAA normals, NEEP ccASHP (licencja niezweryfikowana), zakresy kosztów instalacji (szacunki), status 25C (IRS – search-summary).",
+   "user_data": "ZIP, wiek urządzeń, wycena naprawy lub wymiany, paliwo, metraż i izolacja (uproszczone), rachunki.",
+   "nearest_competition": [
+    {
+     "name": "Rewiring America (calculator / electrification planner)",
+     "url": "https://www.esgdive.com/news/with-home-electrification-tax-credits-expiring-rewiring-america-starts-national-campaign/759286/",
+     "type": "partial",
+     "features_claimed": "Search-summary: kampania krajowa w związku z wygasaniem ulg. Kalkulator zachęt i planer znane z wiedzy treningowej.",
+     "notes": "Funkcje w 2026 niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "ENERGY STAR savings calculators",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: szacunek oszczędności urządzeń.",
+     "notes": "Bez decyzji repair vs replace.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Trane i kontraktorzy HVAC",
+     "url": "https://www.trane.com/residential/en/resources/glossary/energy-efficient-home-improvement-credit/",
+     "type": "substitute",
+     "features_claimed": "Search-summary: treści o 25C. Wyceny kontraktorów z wiedzy treningowej.",
+     "notes": "Konflikt interesów.",
+     "paid": "oferta handlowa"
+    }
+   ],
+   "already_solved": "Reguła kciuka '$5,000 rule' (wiek × koszt naprawy) jest powszechna w artykułach; kalkulatory oszczędności pomp ciepła istnieją (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: brak narzędzia łączącego moment awarii, wiek drugiego urządzenia, dual-fuel i lokalne ceny paliw. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Przepływ wymian HVAC to miliony rocznie (wiedza treningowa, niezweryfikowane). Status 25C potwierdzony (IRS, instead.com, pv magazine).",
+   "ad_environment": "Kontraktorzy HVAC, producenci, finansowanie (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Duży przepływ decyzji i mniejsza zależność od polityki. Pilnie zweryfikować Rewiring America i narzędzia kontraktorów; podgrzewacz wody dołączyć jako moduł.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-06",
+   "name_en": "Home Electrification Roadmap with Panel Capacity Constraint",
+   "family": "Energia domowa: ogrzewanie/chłodzenie i ciepła woda",
+   "user_and_moment": "Właściciel z panelem 100 A, który planuje w ciągu kilku lat EV, pompę ciepła, indukcję i HPWH, a kontraktor zasugerował upgrade panelu lub przyłącza.",
+   "sample_prompt_en": "I have a 100-amp panel and want a heat pump, an EV charger and eventually an induction stove. Do I need a panel upgrade or can I use load management, and in what order should I do things?",
+   "decision_problem": "Sekwencja wymian (replace-on-failure) przy ograniczonej pojemności przyłącza. Opcje: upgrade, urządzenia niskomocowe (120 V), smart panel lub load sharing, etapowanie z budżetem rocznym. 30C wygasła 30.06.2026 (eviqo – search-summary).",
+   "combined_domains": "Uproszczone obciążenie (orientacyjnie wg NEC 220.83), żywotność i awaryjność urządzeń, koszty, budżet roczny, taryfy, ulgi.",
+   "variants_compared": "Upgrade do 200 A teraz; smart panel; urządzenia niskomocowe (120 V HPWH, ograniczona moc L2); etapowanie z upgrade'em w roku X; nic.",
+   "key_dependencies": "- Kolejność awarii urządzeń wyznacza, kiedy limit amperów zostaje przekroczony.\n- Moc ładowania EV wpływa na obciążenie szczytowe.\n- Budżet determinuje etapy.",
+   "main_outputs": "- Oś czasu z kosztami dla każdej strategii.\n- Punkty przekroczenia limitu.\n- Koszt łączny.\n- Wrażliwość na kolejność awarii.",
+   "reason_external_site": "Wieloetapowa sekwencja z ograniczeniem jest nietrywialna w rozmowie i wymaga wizualizacji osi czasu.",
+   "data_sources": "Typowe obciążenia urządzeń, zakresy kosztów, żywotność; tabele NEC tylko orientacyjnie.",
+   "user_data": "Amperaż, lista urządzeń i ich wiek, plany, budżet.",
+   "nearest_competition": [
+    {
+     "name": "Rewiring America (planner / panel guidance)",
+     "url": "https://www.esgdive.com/news/with-home-electrification-tax-credits-expiring-rewiring-america-starts-national-campaign/759286/",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: planowanie elektryfikacji i treści o optymalizacji panelu.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "SPAN (smart panel)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: zarządzanie obciążeniem jako alternatywa dla upgrade'u.",
+     "notes": "Producent.",
+     "paid": "produkt płatny"
+    },
+    {
+     "name": "Qmerit / elektrycy",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: wyceny instalacji ładowarek i load calc.",
+     "notes": "Niezweryfikowane.",
+     "paid": "usługa"
+    }
+   ],
+   "already_solved": "Kontraktorzy wykonują load calc; treści o 'panel optimization' istnieją (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: sekwencja w czasie z budżetem i prawdopodobieństwem awarii. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza. Moment pojawia się, gdy kontraktor wskazuje upgrade. Brak danych w tej sesji.",
+   "ad_environment": "Elektrycy, smart panele, HVAC, ładowarki (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Integracyjnie bardzo dobry, ale ryzyko treści wysokie (bezpieczeństwo elektryczne; narzędzie nie może zastąpić load calc licencjonowanego elektryka), a natychmiastowy popyt mniejszy. Wrócić po walidacji G3-05.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-07",
+   "name_en": "Water Heater Replacement Chooser (gas tank vs heat pump vs tankless)",
+   "family": "Energia domowa: ogrzewanie/chłodzenie i ciepła woda",
+   "user_and_moment": "Właściciel w dniu awarii (przeciek) podgrzewacza w wieku 10-15 lat.",
+   "sample_prompt_en": "My 12-year-old gas water heater is leaking. Should I replace it with another gas tank, a heat pump water heater, or a tankless unit?",
+   "decision_problem": "Wybór technologii w trybie awaryjnym, z ograniczeniami miejsca, wentylacji i panelu.",
+   "combined_domains": "Koszty urządzeń i instalacji, klimat i lokalizacja (piwnica, garaż), panel lub 120 V, rachunki.",
+   "variants_compared": "Gazowy zasobnikowy, gazowy tankless, HPWH 240 V, HPWH 120 V, elektryczny oporowy.",
+   "key_dependencies": "Miejsce i wentylacja ograniczają opcje; relacja cen gazu i prądu decyduje o kosztach rocznych; pojemność panelu decyduje o dostępności HPWH 240 V.",
+   "main_outputs": "Koszt 10-letni i payback.",
+   "reason_external_site": "Słaby: mało zależności, a asystent odpowiada dobrze.",
+   "data_sources": "EIA, ENERGY STAR, zakresy cen.",
+   "user_data": "Paliwo, liczba osób, miejsce, panel, ZIP.",
+   "nearest_competition": [
+    {
+     "name": "ENERGY STAR water heater calculators",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: oszczędności HPWH vs standard.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Producenci (Rheem, A. O. Smith)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: kalkulatory doboru i oszczędności.",
+     "notes": "Konflikt interesów; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Porównanie technologii.",
+     "notes": "Wystarczający dla większości przypadków.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "Wiedza treningowa: problem w dużej mierze rozwiązany przez artykuły, kalkulatory i asystentów.",
+   "gap": "Mała. Brak istotnych zależności między domenami, a różnice to głównie cosmetic fields.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Wymiany co ok. 10-15 lat (wiedza treningowa, niezweryfikowane).",
+   "ad_environment": "Hydraulicy, sieci DIY (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Jako samodzielny produkt to raczej kalkulator niż symulator decyzji, a asystent łatwo odpowiada. Zachować jako moduł G3-05 i G3-06.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-08",
+   "name_en": "Utility Rate Plan Optimizer (TOU, EV and solar rates)",
+   "family": "Energia domowa: taryfy energii",
+   "user_and_moment": "Klient utility po wysokim rachunku albo zakupie EV.",
+   "sample_prompt_en": "Which electricity rate plan should I choose now that I have an EV and might get a heat pump next year?",
+   "decision_problem": "Wybór planu taryfowego przy obecnym i przyszłym profilu zużycia.",
+   "combined_domains": "Taryfy, profil zużycia, EV, urządzenia przyszłe.",
+   "variants_compared": "Plan flat, TOU różnych typów, plan EV, plan detaliczny (stany deregulowane).",
+   "key_dependencies": "Godziny ładowania EV i przesuwalność obciążeń decydują o wyborze; przyszłe urządzenia zmieniają profil.",
+   "main_outputs": "Koszt roczny per plan.",
+   "reason_external_site": "Słaby: utility ma rzeczywiste dane klienta.",
+   "data_sources": "OpenEI URDB (luki), tariff sheets (PDF), Green Button.",
+   "user_data": "Dane interwałowe, urządzenia.",
+   "nearest_competition": [
+    {
+     "name": "Narzędzia porównania planów utility (np. PG&E, SCE)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "direct",
+     "features_claimed": "Wiedza treningowa: porównanie planów na rzeczywistych danych klienta.",
+     "notes": "Klasyfikacja jako direct jest hipotezą; funkcje niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Power to Choose / EnergyBot",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: porównanie planów detalicznych w TX i innych stanach.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Wiedza treningowa: utility i porównywarki rozwiązują większość przypadków.",
+   "gap": "Mała. Przyszłe urządzenia to jedyna możliwa luka, za słaba wobec kosztu danych.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza (rosnące rachunki).",
+   "ad_environment": "Sprzedawcy energii w stanach deregulowanych (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Koszt utrzymania tysięcy taryf jest sprzeczny z celem automatyzacji, a utility ma przewagę danych. Zostaje jako uproszczona warstwa wspólna dla innych symulatorów.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-09",
+   "name_en": "Car Repair Shock: Fix, Sell As-Is, Trade In, or Replace",
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "user_and_moment": "Właściciel auta w wieku 8-15 lat, który właśnie dostał wycenę dużej naprawy (skrzynia, silnik, hybrydowa bateria).",
+   "sample_prompt_en": "My 2014 Honda needs a $3,800 transmission repair. It's worth maybe $6k once fixed. Should I repair it, sell it as-is, or buy a used or new car?",
+   "decision_problem": "Porównanie ścieżek: naprawić i jeździć N lat, sprzedać as-is i kupić używany, trade-in i nowy, leasing. Do uwzględnienia:\n- ryzyko kolejnych napraw,\n- stopy w 2026,\n- ubezpieczenie,\n- podatek (trade-in credit w wielu stanach),\n- płynność gotówkowa,\n- odliczenie odsetek dla nowych aut montowanych w USA w latach 2025-2028 (niezweryfikowane).",
+   "combined_domains": "Niezawodność i koszty napraw wg wieku i przebiegu, deprecjacja, finansowanie, ubezpieczenie, podatki, paliwo, ryzyko unieruchomienia.",
+   "variants_compared": "Naprawa i keep na 1/3/5 lat; sprzedaż as-is i używany za gotówkę; używany na kredyt; nowy na kredyt; leasing; naprawa i sprzedaż.",
+   "key_dependencies": "- Wartość po naprawie decyduje o sensie naprawy.\n- Stopy procentowe wyznaczają koszt wymiany.\n- Płynność określa, które warianty są wykonalne.\n- Ryzyko kolejnej awarii wpływa na wartość oczekiwaną.",
+   "main_outputs": "- Koszt na miesiąc i na milę w horyzoncie dla każdego wariantu.\n- Break-even kosztu kolejnych napraw.\n- Wrażliwość na stopę i wartość auta.\n- Wykonalność przy budżecie.\n- Założenia.",
+   "reason_external_site": "Asystent poda regułę kciuka; narzędzie daje porównanie w czasie, scenariusze napraw i strukturalne dane wejściowe.",
+   "data_sources": "Krzywe deprecjacji z publicznych raportów (szacunki), stopy z Fed G.19, podatki stanowe, fueleconomy.gov, zakresy kosztów napraw (brak darmowej bazy – niezweryfikowane).",
+   "user_data": "Rok, model, przebieg, wycena naprawy, wartość auta (wpisana z wyceny online), saldo kredytu, budżet, mile rocznie, stan.",
+   "nearest_competition": [
+    {
+     "name": "Edmunds True Cost to Own",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: 5-letni TCO modelu.",
+     "notes": "Brak decyzji o naprawie bieżącego auta; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Kelley Blue Book (values, 5-Year Cost to Own)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: wyceny i koszty posiadania.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Carvana / CarMax instant offers",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: oferta odkupu (wartość as-is).",
+     "notes": "Jedna zmienna.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "AAA Your Driving Costs",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: średnie koszty posiadania.",
+     "notes": "Średnie, nie decyzja.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "TCO modeli, wyceny i artykuły 'repair or replace' istnieją (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: brak narzędzia, w którym wycena naprawy, ryzyko kolejnych awarii, saldo kredytu i finansowanie wymiany wpływają na siebie w jednym porównaniu. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Wiedza treningowa (niezweryfikowane): średni wiek auta ponad 12,5 roku, dziesiątki mln transakcji rocznie.",
+   "ad_environment": "Dealerzy, kredyty, ubezpieczenia, przedłużone gwarancje, warsztaty (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wysoki priorytet: duży przepływ, niski koszt ekspercki, silny moment decyzyjny. Do weryfikacji: konkurencja i dostępność danych o kosztach napraw.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-10",
+   "name_en": "Negative Equity Exit Planner",
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "user_and_moment": "Kierowca z kredytem (często 72-84 miesiące) przewyższającym wartość auta, który chce zmienić auto albo ma problem z ratą.",
+   "sample_prompt_en": "I owe $24,000 on my car but it's only worth $17,000. Should I keep paying, refinance, roll it into a new loan, or sell privately and cover the difference?",
+   "decision_problem": "Jak najtaniej i z jakim ryzykiem wyjść z ujemnego kapitału. Ścieżki: keep (kiedy kapitał wyjdzie na zero), refinansowanie, nadpłaty, sprzedaż prywatna z pożyczką na różnicę, trade-in z rolowaniem, zamiana na tańsze auto. Konsekwencje dobrowolnego oddania auta tylko informacyjnie.",
+   "combined_domains": "Amortyzacja, deprecjacja, refinansowanie (stopy wg scoringu), gap insurance, trade-in credit, koszty napraw i gwarancja, budżet miesięczny.",
+   "variants_compared": "Keep; keep z nadpłatą; refinansowanie; sprzedaż prywatna z pożyczką osobistą na różnicę; trade-in z rolowaniem do nowego lub używanego; zamiana na tańsze auto.",
+   "key_dependencies": "- Tempo spłaty vs deprecjacja wyznacza miesiąc crossover.\n- Stopa refinansowania decyduje o oszczędności.\n- Rolowanie podnosi LTV i wydłuża okres ujemnego kapitału.\n- Gap insurance zmienia ryzyko szkody całkowitej.",
+   "main_outputs": "- Miesiąc wyjścia na zero dla każdego wariantu.\n- Łączny koszt odsetek i strat.\n- Gotówka wymagana teraz.\n- Wrażliwość na wartość auta i stopę.\n- Ostrzeżenia, np. limity LTV kredytodawców (niezweryfikowane).",
+   "reason_external_site": "Kluczowa jest krzywa crossover w czasie dla kilku ścieżek. Asystent liczy pojedyncze scenariusze, ale bez struktury i wizualizacji.",
+   "data_sources": "Stopy (Fed G.19 i publiczne średnie), krzywe deprecjacji (szacunki), podatki stanowe.",
+   "user_data": "Saldo, APR, pozostałe miesiące, wartość auta, przedział scoringu, budżet, zamiary.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory negative equity / rollover (Edmunds, NerdWallet, Bankrate)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: rata po rolowaniu ujemnego kapitału.",
+     "notes": "Jedna ścieżka; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Kalkulatory refinansowania pożyczkodawców",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: oszczędność z refinansowania.",
+     "notes": "Lead-gen; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Carvana / CarMax instant offers",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: wartość auta.",
+     "notes": "Jedna zmienna.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Amortyzacja i porady.",
+     "notes": "Brak danych o wartości rynkowej.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "Matematyka rolowania i refinansowania istnieje w kalkulatorach jednocelowych (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: porównanie wszystkich ścieżek wyjścia z krzywą crossover w czasie. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Wiedza treningowa (niezweryfikowane): ok. 1/4 aut oddawanych w rozliczeniu przy zakupie nowego z ujemnym kapitałem (Edmunds 2025), średnio ok. 6-7 tys. USD.",
+   "ad_environment": "Refinansowanie, kredyty, dealerzy, gap insurance (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Tani w budowie, silnie komercyjny, wspólny silnik z G3-09 i G3-11. Ryzyko YMYL dla osób w trudnej sytuacji finansowej wymaga ostrożnego języka i disclaimerów.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-11",
+   "name_en": "Lease-End Decision: Buy Out, Return, Re-Lease, or Sell the Lease Equity",
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "user_and_moment": "Leasingobiorca 3-6 miesięcy przed końcem umowy.",
+   "sample_prompt_en": "My lease ends in March. The buyout is $21,500 and similar cars sell for $24,000. Should I buy it out, sell it to a dealer for the equity, or return it and lease something new?",
+   "decision_problem": "Wykorzystanie ewentualnego kapitału w leasingu przy uwzględnieniu nadprzebiegu, uszkodzeń, podatku od wykupu i finansowania wykupu. Alternatywa: koszt nowego leasingu (money factor, residual) lub zakupu.",
+   "combined_domains": "Wycena rynkowa, struktura leasingu, finansowanie, podatek od wykupu (stanowy), nadprzebieg i uszkodzenia, plany użytkownika (mile, horyzont), gwarancja.",
+   "variants_compared": "Zwrot; wykup za gotówkę; wykup na kredyt i keep N lat; wykup i sprzedaż (ograniczenia third-party buyout – niezweryfikowane); nowy leasing; zakup nowego lub używanego; przedłużenie.",
+   "key_dependencies": "- Kapitał w leasingu decyduje o opłacalności sprzedaży.\n- Nadprzebieg podnosi atrakcyjność wykupu.\n- Stopy procentowe wyznaczają koszt wykupu na kredyt.\n- Polityka captive lendera ogranicza dostępne warianty.",
+   "main_outputs": "- Koszt netto wariantów w horyzoncie 1-5 lat.\n- Wartość kapitału w leasingu.\n- Break-even wartości rynkowej.\n- Wrażliwość.",
+   "reason_external_site": "Wiele zmiennych z umowy w jednym, strukturalnym porównaniu. Leasehackr skupia się na negocjowaniu nowych leasingów (wiedza treningowa).",
+   "data_sources": "Podatki stanowe, stopy, money factor i wartości wpisywane przez użytkownika, polityki captive lenderów (trudne w utrzymaniu – niezweryfikowane).",
+   "user_data": "Buyout, residual, przebieg vs limit, uszkodzenia, oferty rynkowe, plany.",
+   "nearest_competition": [
+    {
+     "name": "Leasehackr (calculator + forum)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: kalkulator struktury leasingu i forum o wykupach.",
+     "notes": "Społeczność, nie decyzja end-of-lease; niezweryfikowane.",
+     "paid": "freemium – niezweryfikowane"
+    },
+    {
+     "name": "Kalkulatory lease buyout (NerdWallet, Edmunds)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: koszt wykupu vs wartość.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Carvana / CarMax / dealerzy",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: oferta odkupu leasingowanego auta.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Kalkulatory wykupu i dyskusje forumowe istnieją (wiedza treningowa, niezweryfikowane).",
+   "gap": "Hipoteza: kapitał w leasingu, nadprzebieg i wszystkie alternatywy w jednym porównaniu w czasie. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "low",
+   "demand_evidence": "Wiedza treningowa (niezweryfikowane): miliony kończących się leasingów rocznie.",
+   "ad_environment": "Dealerzy, kredyty na wykup, marketplace'y (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźny moment decyzyjny i wspólny silnik z G3-09 i G3-10. Utrzymanie polityk third-party buyout może wymagać pracy ręcznej, więc warto rozważyć ich pominięcie.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-12",
+   "name_en": "EV vs Hybrid vs Gas Total Cost Comparator",
+   "family": "Samochody: EV vs ICE vs hybryda, ładowanie domowe, ubezpieczenie",
+   "user_and_moment": "Kupujący nowe auto po wygaśnięciu 30D.",
+   "sample_prompt_en": "Without the $7,500 tax credit, is an EV still cheaper than a hybrid if I drive 12,000 miles a year?",
+   "decision_problem": "Porównanie TCO napędów po wygaśnięciu 30D i 25E (Coltura, EnergySage – search-summary).",
+   "combined_domains": "TCO, energia, paliwo, deprecjacja.",
+   "variants_compared": "EV, HEV, PHEV, ICE.",
+   "key_dependencies": "Przebieg, ceny energii i paliwa, deprecjacja.",
+   "main_outputs": "Koszt na milę i TCO.",
+   "reason_external_site": "Słaby: rynek zatłoczony.",
+   "data_sources": "fueleconomy.gov, AFDC, EIA.",
+   "user_data": "Mile, ZIP, modele.",
+   "nearest_competition": [
+    {
+     "name": "DOE AFDC Vehicle Cost Calculator",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "direct",
+     "features_claimed": "Wiedza treningowa: porównanie kosztów pojazdów o różnych napędach.",
+     "notes": "Klasyfikacja direct dla tej wąskiej decyzji jest hipotezą; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "fueleconomy.gov",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: koszty paliwa i energii per model.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Edmunds True Cost to Own",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: TCO modeli.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Wiedza treningowa: wiele darmowych porównań, w tym rządowe.",
+   "gap": "Brak istotnej luki: znany substytut rządowy plus asystent.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "low",
+   "demand_evidence": "Zmiana ulg potwierdzona (Coltura, EnergySage). Popyt po terminie – hipoteza spadku.",
+   "ad_environment": "Dealerzy, producenci (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Zatłoczone, łatwe dla asystenta i bez prawdziwej integracji. Zachować jako moduł w G3-09 i G3-13.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-13",
+   "name_en": "Two-Car Household: Which Car to Replace, and Should It Be an EV?",
+   "family": "Samochody: EV vs ICE vs hybryda, ładowanie domowe, ubezpieczenie",
+   "user_and_moment": "Gospodarstwo z dwoma autami w różnym wieku, z których jedno trzeba wymienić w ciągu 1-2 lat. Codzienne dojazdy plus dalekie wyjazdy, niepewny dostęp do ładowania (dom lub najem).",
+   "sample_prompt_en": "We have a 2012 minivan and a 2019 sedan. Which one should we replace first, and does an EV make sense as our commuter if we keep a gas car for road trips?",
+   "decision_problem": "Optymalizacja floty gospodarstwa: które auto wymienić, kiedy, na jaki napęd i z jaką infrastrukturą ładowania (L1, L2, publiczne), przy podziale mil między autami. Bez 30D, 25E i 30C (30C koniec 30.06.2026 – eviqo; 30D i 25E koniec 30.09.2025 – Coltura).",
+   "combined_domains": "Wzorce przejazdów, TCO pojazdów, deprecjacja, koszty napraw starszego auta, ładowanie (taryfa, koszt instalacji), ubezpieczenie dwóch aut, finansowanie.",
+   "variants_compared": "Wymiana starszego na ICE, HEV, PHEV lub EV; wymiana nowszego; wymiana obu; zostawienie obu z wynajmem na wyjazdy; redukcja do jednego auta.",
+   "key_dependencies": "- Podział mil decyduje o oszczędnościach EV.\n- Dostęp do ładowania określa koszt energii i wykonalność.\n- Wiek auta wyznacza ryzyko napraw.\n- Zasięg wpływa na potrzebę drugiego auta.",
+   "main_outputs": "- Koszt floty na rok i na milę dla każdej konfiguracji.\n- Wykonalność ładowania.\n- Próg mil, przy którym EV się zwraca.\n- Rekomendowana kolejność wymian.\n- Wrażliwość na ceny energii i paliwa.",
+   "reason_external_site": "Decyzja na poziomie gospodarstwa, a kalkulatory porównują modele 1:1. Wymaga strukturalnych danych o dwóch autach i przejazdach.",
+   "data_sources": "fueleconomy.gov API, AFDC API (stacje), EIA (energia i paliwa), deprecjacja (szacunki), stopy.",
+   "user_data": "Auta (rok, model, przebieg), mile i wzorce przejazdów, parking i ładowanie, ZIP, budżet.",
+   "nearest_competition": [
+    {
+     "name": "DOE AFDC Vehicle Cost Calculator",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: TCO pojedynczych pojazdów.",
+     "notes": "Brak poziomu floty; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Recurrent (EV battery reports)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: zdrowie baterii i zasięg używanych EV.",
+     "notes": "Niezweryfikowane.",
+     "paid": "freemium – niezweryfikowane"
+    },
+    {
+     "name": "Recharged (used EV marketplace / guides)",
+     "url": "https://recharged.com/articles/ev-tax-credit-2026-guide",
+     "type": "substitute",
+     "features_claimed": "Search-summary: przewodnik po ulgach EV 2026. Marketplace znany z wiedzy treningowej.",
+     "notes": "Sprzedawca; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Rozważania jakościowe.",
+     "notes": "Brak danych o modelach i stacjach.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "TCO pojedynczych aut i porównania EV vs gas (wiedza treningowa).",
+   "gap": "Poziom floty i kolejność wymian. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (0 zapytań konkurencyjnych; pewność niska).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Hipoteza: gospodarstwa z dwoma autami są powszechne (wiedza treningowa). Brak danych o zapytaniach.",
+   "ad_environment": "Dealerzy, ubezpieczenia, ładowarki, wynajem aut (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Odróżnia się od zatłoczonego 'EV vs gas' poziomem decyzji (flota) i sekwencją. Ryzyko: popyt może być mniejszy, niż sugeruje liczba gospodarstw.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-14",
+   "name_en": "Car Choice by Insurance Cost (incl. adding a teen driver)",
+   "family": "Samochody: EV vs ICE vs hybryda, ładowanie domowe, ubezpieczenie",
+   "user_and_moment": "Rodzic dodający nastolatka do polisy albo kupujący auto z myślą o składce.",
+   "sample_prompt_en": "Which car should we buy for our 16-year-old to keep insurance costs down, and should we add them to our policy or get a separate one?",
+   "decision_problem": "Wybór auta i struktury polisy pod kątem składki.",
+   "combined_domains": "Ubezpieczenia, TCO, bezpieczeństwo.",
+   "variants_compared": "Modele aut, warianty polisy.",
+   "key_dependencies": "Składka zależy od profilu kierowcy, ZIP i modelu.",
+   "main_outputs": "Szacunek składek i TCO.",
+   "reason_external_site": "Słaby: brak danych.",
+   "data_sources": "Brak publicznych danych o stawkach; filingi stanowe trudne do użycia (niezweryfikowane).",
+   "user_data": "Dane osobowe kierowców (wrażliwe).",
+   "nearest_competition": [
+    {
+     "name": "The Zebra / Insurify",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: porównanie ofert ubezpieczeń.",
+     "notes": "Lead-gen; niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Narzędzia ofertowe ubezpieczycieli",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: rzeczywiste wyceny.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Wiedza treningowa: porównywarki i ubezpieczyciele.",
+   "gap": "Brak możliwości wiarygodnego modelowania bez danych.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza: wysoka (rosnące składki – wiedza treningowa, niezweryfikowane).",
+   "ad_environment": "Ubezpieczenia, bardzo komercyjne (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Brak publicznych danych o stawkach, wysokie ryzyko błędu i zatłoczony lead-gen. Ubezpieczenie zostaje jako pole wpisywane w innych symulatorach.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-15",
+   "name_en": "Car Financing Structure: 0% APR vs Cash Rebate vs Credit Union Loan vs Cash (with car-loan interest deduction)",
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "user_and_moment": "Kupujący nowe auto z ofertą dealera '0% APR albo $3,000 rebate'.",
+   "sample_prompt_en": "Should I take 0% financing or the $3,000 cash rebate with a credit union loan, and does the new car loan interest deduction change the answer?",
+   "decision_problem": "Wybór struktury finansowania z kosztem alternatywnym gotówki i odliczeniem odsetek dla nowych aut montowanych w USA (2025-2028, limity dochodowe – wiedza treningowa, niezweryfikowane).",
+   "combined_domains": "Finanse, podatki.",
+   "variants_compared": "0% APR, rebate z kredytem, gotówka, leasing.",
+   "key_dependencies": "Stopa alternatywna, krańcowa stopa podatkowa, kwalifikowalność odliczenia.",
+   "main_outputs": "Koszt netto wariantów.",
+   "reason_external_site": "Słaby.",
+   "data_sources": "Stopy, reguły odliczenia (niezweryfikowane w tej sesji).",
+   "user_data": "Oferty, stopa, dochód.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory rebate vs low APR (Bankrate, NerdWallet, Edmunds)",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "direct",
+     "features_claimed": "Wiedza treningowa: porównanie rebate vs niskie APR.",
+     "notes": "Odliczenie odsetek prawdopodobnie nieuwzględnione (niezweryfikowana, nie 'brak').",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL (substytut ogólny)",
+     "type": "substitute",
+     "features_claimed": "Proste porównanie.",
+     "notes": "Wystarczający.",
+     "paid": "freemium"
+    }
+   ],
+   "already_solved": "Wiedza treningowa: rebate vs APR to klasyczny, szeroko dostępny kalkulator.",
+   "gap": "Jedynie odliczenie odsetek, element czasowy i niewystarczający jako nisza.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza.",
+   "ad_environment": "Kredyty, dealerzy (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Fragment zatłoczony, model prosty, łatwy dla asystenta. Odliczenie odsetek dodać jako moduł do G3-09, G3-10 i G3-11.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G3-16",
+   "name_en": "Go Down to One Car? Sell the Second Car vs Keep (rideshare, rentals, transit, e-bike)",
+   "family": "Samochody: keep vs replace, finansowanie, leasing, negative equity",
+   "user_and_moment": "Gospodarstwo po przeprowadzce, przejściu na pracę zdalną albo przed kosztowną naprawą lub odnowieniem ubezpieczenia drugiego auta.",
+   "sample_prompt_en": "We both work from home now. Should we sell our second car and use rideshare, rentals and an e-bike instead?",
+   "decision_problem": "Utrzymanie drugiego auta vs mieszanka rideshare, wynajmu, transportu publicznego i e-bike'a, z kosztami stałymi, ryzykiem niedostępności i saldem kredytu.",
+   "combined_domains": "Koszty stałe i zmienne auta, deprecjacja, saldo kredytu (ewentualnie negative equity), ceny alternatyw, wzorce przejazdów.",
+   "variants_compared": "Keep; sprzedaż i rideshare; sprzedaż i wynajem na weekendy; e-bike z transportem publicznym; tańsze drugie auto.",
+   "key_dependencies": "- Liczba i rodzaj przejazdów decyduje o koszcie alternatyw.\n- Saldo kredytu określa wykonalność sprzedaży.\n- Lokalna dostępność usług ogranicza warianty.",
+   "main_outputs": "Koszt roczny wariantów, próg przejazdów, wrażliwość.",
+   "reason_external_site": "Porównanie kilku alternatyw z danymi o przejazdach.",
+   "data_sources": "AAA i publiczne średnie (niezweryfikowane), dane wpisywane przez użytkownika.",
+   "user_data": "Przejazdy, saldo, koszty auta, ZIP.",
+   "nearest_competition": [
+    {
+     "name": "AAA Your Driving Costs",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "substitute",
+     "features_claimed": "Wiedza treningowa: średnie koszty posiadania auta.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Kalkulatory 'car vs Uber'",
+     "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Wiedza treningowa: porównanie kosztu auta i rideshare.",
+     "notes": "Niezweryfikowane.",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Częściowo: artykuły i proste kalkulatory (wiedza treningowa).",
+   "gap": "Hipoteza: integracja z saldem kredytu i wieloma alternatywami. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Hipoteza; brak danych.",
+   "ad_environment": "Słabsze: wynik często brzmi 'nie kupuj' (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Decyzja realna i tania w budowie na wspólnym silniku, ale słabsze środowisko reklamowe i niepewny popyt. Wrócić po walidacji G3-09 i G3-10.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "30D EV tax credit ended September 30 2025 30C charger credit June 30 2026",
+   "url": "https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/",
+   "competitor": "EnergySage",
+   "related_idea": "G3-01, G3-02, G3-03",
+   "features_checked": "W wynikach tylko artykuł o końcu ulgi EV. Kalkulator PV i baterii oraz marketplace ofert znane z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta (WebFetch zablokowany); dowód = search-summary; funkcje narzędzi niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (lead-gen z kalkulatorem oszczędności). Integracja dach / sprzedaż / forma własności niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "30D EV tax credit ended September 30 2025 30C charger credit June 30 2026",
+   "url": "https://www.solarreviews.com/blog/ev-incentives",
+   "competitor": "SolarReviews",
+   "related_idea": "G3-01, G3-02",
+   "features_checked": "W wynikach artykuł o zachętach EV. Kalkulator PV znany z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary; strona kalkulatora nie pojawiła się w wynikach.",
+   "conclusion": "Prawdopodobnie konkurent częściowy (payback PV, lead-gen). Niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "One Big Beautiful Bill 25D residential clean energy credit ends December 31 2025 solar",
+   "url": "https://solar.com/learn/update-senate-proposes-solar-tax-credit-policy-changes/",
+   "competitor": "Solar.com",
+   "related_idea": "G3-01, G3-02",
+   "features_checked": "W wynikach aktualne artykuły o 25D i 48E. Kalkulator i oferty znane z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary.",
+   "conclusion": "Konkurent treściowy i częściowy (sprzedawca PV). Funkcje narzędzi niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "NREL PVWatts",
+   "related_idea": "G3-01, G3-02, G3-03",
+   "features_checked": "Wiedza treningowa: produkcja PV dla lokalizacji, prosta ekonomika.",
+   "access_limits": "Strona nie otwarta, nie wyszukana; brak search-summary; wszystko niezweryfikowane.",
+   "conclusion": "Częściowy: dobre źródło danych (API) i substytut dla produkcji, bez decyzji sekwencyjnych.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Google Project Sunroof",
+   "related_idea": "G3-01",
+   "features_checked": "Wiedza treningowa: szacunek potencjału dachu i oszczędności.",
+   "access_limits": "Nie otwarto i nie wyszukano; status działania w 2026 niezweryfikowany.",
+   "conclusion": "Częściowy, jeśli nadal działa.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Aurora Solar / OpenSolar (oprogramowanie instalatorów)",
+   "related_idea": "G3-01, G3-02, G3-03",
+   "features_checked": "Wiedza treningowa: projektowanie systemów i propozycje finansowe dla instalatorów.",
+   "access_limits": "Nie otwarto i nie wyszukano; prawdopodobnie płatne B2B; niezweryfikowane.",
+   "conclusion": "Substytut (konsument dostaje wynik w ofercie instalatora).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "NREL SAM / NREL REopt",
+   "related_idea": "G3-03, G3-04",
+   "features_checked": "Wiedza treningowa: szczegółowe modelowanie PV i storage; REopt z analizą resilience.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Substytut ekspercki, mało dostępny dla laika.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Tesla (solar, Powerwall, Solar Roof – narzędzia zakupowe)",
+   "related_idea": "G3-01, G3-03, G3-04",
+   "features_checked": "Wiedza treningowa: dobór systemu i szacunek oszczędności w ścieżce zakupu.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy lub substytut, porównuje tylko własne produkty.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Enphase (system estimator)",
+   "related_idea": "G3-03",
+   "features_checked": "Wiedza treningowa: szacunek systemu PV i baterii.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy (producent).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Generac (generator sizing)",
+   "related_idea": "G3-04",
+   "features_checked": "Wiedza treningowa: dobór mocy generatora standby, lead do dealera.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy, jedna technologia.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "One Big Beautiful Bill 25D residential clean energy credit ends December 31 2025 solar",
+   "url": "https://www.bluettipower.com/blogs/knowledge/understanding-obbb-homeowners-guide",
+   "competitor": "BLUETTI",
+   "related_idea": "G3-04",
+   "features_checked": "W wynikach przewodnik OBBB dla właścicieli domów. Kalkulatory czasu pracy power stations znane z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary; funkcje kalkulatora niezweryfikowane.",
+   "conclusion": "Częściowy (e-commerce, własna technologia); producent aktywnie targetuje decyzje energetyczne domów.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "EcoFlow / Jackery (kalkulatory power stations)",
+   "related_idea": "G3-04",
+   "features_checked": "Wiedza treningowa: czas pracy urządzeń na power station.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "25C energy efficient home improvement credit heat pump expires 2025 OBBBA",
+   "url": "https://www.esgdive.com/news/with-home-electrification-tax-credits-expiring-rewiring-america-starts-national-campaign/759286/",
+   "competitor": "Rewiring America",
+   "related_idea": "G3-05, G3-06",
+   "features_checked": "Search-summary (ESG Dive): krajowa kampania w związku z wygasaniem ulg na elektryfikację. Kalkulator i planer znane z wiedzy treningowej.",
+   "access_limits": "Strona Rewiring America nie otwarta i nie pojawiła się bezpośrednio; dowód = artykuł prasowy w search-summary.",
+   "conclusion": "Najbliższy konkurent częściowy dla G3-05 i G3-06; funkcje w 2026 niezweryfikowane. Weryfikacja priorytetowa.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "ENERGY STAR (savings calculators)",
+   "related_idea": "G3-05, G3-07",
+   "features_checked": "Wiedza treningowa: kalkulatory oszczędności urządzeń.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy, bez decyzji repair vs replace.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "25C energy efficient home improvement credit heat pump expires 2025 OBBBA",
+   "url": "https://www.trane.com/residential/en/resources/glossary/energy-efficient-home-improvement-credit/",
+   "competitor": "Trane (oraz kontraktorzy HVAC)",
+   "related_idea": "G3-05",
+   "features_checked": "Search-summary: strona słownikowa o 25C. Sieć dealerów i wyceny znane z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary.",
+   "conclusion": "Substytut (wycena kontraktora).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Rheem / A. O. Smith (narzędzia producentów podgrzewaczy)",
+   "related_idea": "G3-07",
+   "features_checked": "Wiedza treningowa: kalkulatory doboru i oszczędności.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Narzędzia porównania planów utility (np. PG&E, SCE)",
+   "related_idea": "G3-08, G3-03",
+   "features_checked": "Wiedza treningowa: porównanie planów na rzeczywistych danych interwałowych klienta.",
+   "access_limits": "Nie otwarto i nie wyszukano; prawdopodobnie za logowaniem klienta; niezweryfikowane.",
+   "conclusion": "Hipotetycznie direct dla G3-08 (przewaga danych).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Power to Choose (TX) / EnergyBot",
+   "related_idea": "G3-08",
+   "features_checked": "Wiedza treningowa: porównanie planów detalicznych.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "SPAN (smart panel)",
+   "related_idea": "G3-06",
+   "features_checked": "Wiedza treningowa: zarządzanie obciążeniem jako alternatywa upgrade'u.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Substytut (produkt).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Qmerit (instalacje ładowarek, elektrycy)",
+   "related_idea": "G3-06, G3-13",
+   "features_checked": "Wiedza treningowa: wyceny instalacji ładowarek.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Substytut (usługa).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "30D EV tax credit ended September 30 2025 30C charger credit June 30 2026",
+   "url": "https://eviqo.io/blogs/news/federal-ev-charger-tax-credit-2026-how-to-claim-30-back-section-30c",
+   "competitor": "eviqo (treści i sprzedaż ładowarek)",
+   "related_idea": "G3-06, G3-13",
+   "features_checked": "Search-summary: artykuł o końcu 30C 30.06.2026 i warunkach.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary; brak informacji o narzędziach.",
+   "conclusion": "Substytut treściowy, nie narzędzie decyzyjne.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Edmunds (True Cost to Own, kalkulatory)",
+   "related_idea": "G3-09, G3-10, G3-11, G3-12",
+   "features_checked": "Wiedza treningowa: 5-letni TCO, kalkulatory rat, leasingu i rebate vs APR.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy (fragmenty, nie decyzja keep vs replace z bieżącym kredytem).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Kelley Blue Book",
+   "related_idea": "G3-09, G3-10",
+   "features_checked": "Wiedza treningowa: wyceny aut, 5-Year Cost to Own.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy; kluczowe źródło wartości wpisywanej przez użytkownika.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "NerdWallet / Bankrate (kalkulatory auto)",
+   "related_idea": "G3-10, G3-11, G3-15",
+   "features_checked": "Wiedza treningowa: rata, lease vs buy, rebate vs APR, rollover.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy (katalog jednocelowych kalkulatorów); dla G3-15 hipotetycznie direct.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Leasehackr",
+   "related_idea": "G3-11",
+   "features_checked": "Wiedza treningowa: kalkulator leasingu i forum.",
+   "access_limits": "Nie otwarto i nie wyszukano; część funkcji może wymagać konta; niezweryfikowane.",
+   "conclusion": "Częściowy (silny w strukturze nowego leasingu).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Carvana / CarMax (instant offers)",
+   "related_idea": "G3-09, G3-10, G3-11",
+   "features_checked": "Wiedza treningowa: oferty odkupu aut, w tym leasingowanych.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy (jedna zmienna: wartość).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "AAA Your Driving Costs",
+   "related_idea": "G3-09, G3-16",
+   "features_checked": "Wiedza treningowa: średnie koszty posiadania auta.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Substytut (średnie, nie decyzja).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "DOE AFDC Vehicle Cost Calculator",
+   "related_idea": "G3-12, G3-13",
+   "features_checked": "Wiedza treningowa: porównanie kosztów pojazdów o różnych napędach.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Hipotetycznie direct dla G3-12; częściowy dla G3-13 (brak poziomu floty – niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "fueleconomy.gov",
+   "related_idea": "G3-12, G3-13",
+   "features_checked": "Wiedza treningowa: koszty paliwa i energii per model, darmowe API.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy i jednocześnie źródło danych.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Recurrent",
+   "related_idea": "G3-13",
+   "features_checked": "Wiedza treningowa: raporty zdrowia baterii używanych EV.",
+   "access_limits": "Nie otwarto i nie wyszukano; niezweryfikowane.",
+   "conclusion": "Częściowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "30D EV tax credit ended September 30 2025 30C charger credit June 30 2026",
+   "url": "https://recharged.com/articles/ev-tax-credit-2026-guide",
+   "competitor": "Recharged",
+   "related_idea": "G3-13",
+   "features_checked": "Search-summary: przewodnik po ulgach EV 2026. Marketplace używanych EV znany z wiedzy treningowej.",
+   "access_limits": "Strona nie otwarta; dowód = search-summary.",
+   "conclusion": "Substytut (sprzedawca z treściami).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – zapytanie konkurencyjne nie wykonane (budżet wyszukiwań wyczerpany); konkurent z wiedzy treningowej",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "The Zebra / Insurify",
+   "related_idea": "G3-14",
+   "features_checked": "Wiedza treningowa: porównanie ofert ubezpieczeń.",
+   "access_limits": "Nie otwarto i nie wyszukano; wyceny wymagają danych osobowych; niezweryfikowane.",
+   "conclusion": "Częściowy; dominujący lead-gen.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – substytut ogólny",
+   "url": "brak URL (substytut ogólny)",
+   "competitor": "Asystenci AI (ChatGPT, Claude, Gemini, Perplexity, Copilot) + arkusze kalkulacyjne",
+   "related_idea": "wszystkie (G3-01 – G3-16)",
+   "features_checked": "Wiedza ogólna: rozmowa, obliczenia z wykonaniem kodu, tryby z wyszukiwaniem.",
+   "access_limits": "Nie testowano w tej sesji; brak danych o odsetku odesłań do narzędzi zewnętrznych.",
+   "conclusion": "Główny substytut. Najsilniejszy dla G3-07, G3-12, G3-15; najsłabszy tam, gdzie potrzebne są dane lokalne, symulacja godzinowa lub sekwencja w czasie (G3-03, G3-04, G3-01).",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "[WYKONANE, standard] One Big Beautiful Bill 25D residential clean energy credit ends December 31 2025 solar",
+  "[WYKONANE, standard] 30D EV tax credit ended September 30 2025 30C charger credit June 30 2026",
+  "[WYKONANE, standard] 25C energy efficient home improvement credit heat pump expires 2025 OBBBA",
+  "[NIE WYKONANE – odrzucone: wyczerpany limit 200 wyszukiwań/turę współdzielony przez agentów] SEIA Solar Market Insight 2026 residential solar installations decline 25D expiration",
+  "[NIE WYKONANE – limit wyczerpany] Edmunds negative equity trade-in 2026 share underwater average amount",
+  "[NIE WYKONANE – limit wyczerpany] residential electricity rates increase 2026 EIA average price per kWh",
+  "UWAGA: z powodu wyczerpania budżetu nie wykonano żadnych zapytań o konkurencję dla poszczególnych pomysłów (wymagane 2-4 na pomysł). Zgodnie z instrukcją nie obchodzono limitu (curl, przeglądarka, proxy). Wszystkie pomysły mają poziom 'koncepcyjny', a konkurenci spoza 3 wykonanych zapytań pochodzą z wiedzy treningowej i są oznaczeni jako niezweryfikowane. Aby dokończyć weryfikację, użytkownik może wysłać kolejną wiadomość (nowa tura) albo podnieść CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION."
+ ]
+}

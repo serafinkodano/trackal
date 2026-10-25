@@ -1,0 +1,434 @@
+{
+ "id": "ENER-03",
+ "competitors": [
+  {
+   "name": "Home Energy Planner – Backup Power Calculator: Compare Battery & Generator Needs",
+   "url": "https://homeenergyplanner.com/backup-power-calculator/",
+   "type": "partial",
+   "access": "Prawdopodobnie darmowy (strona z kalkulatorem wg tytułu wyniku); strona nieotwierana",
+   "covers_pl": "Wg tytułu porównuje zapotrzebowanie na baterię i generator, czyli dobór mocy i pojemności obu technologii w jednym narzędziu",
+   "misses_or_unverified_pl": "Niezweryfikowane: profil przerw (typowa vs ekstremalna), zapas paliwa, zima i ładowanie z PV, koszt 10-letni, warianty power station, interlock, dual-fuel i hybryda, wrażliwość. To najbliższy kandydat; trzeba go sprawdzić ręcznie"
+  },
+  {
+   "name": "Home Outage Backup Planner (homepowercalc.com)",
+   "url": "https://homepowercalc.com/tools/home-outage-backup-planner",
+   "type": "partial",
+   "access": "Darmowy (wg podsumowania); strona nieotwierana",
+   "covers_pl": "Planuje zasilanie krytycznych obciążeń przez 24, 48, 72 h lub własny czas. Podaje rozmiar baterii (z korektą na sprawność i rezerwę) oraz rozmiar generatora (moc rozruchowa plus zapas)",
+   "misses_or_unverified_pl": "Wg podsumowania nie obejmuje planowania paliwa. Koszty, horyzont 10 lat, wpływ zimy i PV, hałas i CO oraz porównanie wariantów: niezweryfikowane (prawdopodobnie poza zakresem)"
+  },
+  {
+   "name": "ToolMitra – Battery versus generator calculator",
+   "url": "https://www.toolmitra.net/calculators/battery-vs-generator/",
+   "type": "partial",
+   "access": "Darmowy (wg tytułu: 'Free, with Worked Examples'); strona nieotwierana",
+   "covers_pl": "Porównuje koszt baterii i generatora z przykładami liczbowymi",
+   "misses_or_unverified_pl": "Jeden z kalkulatorów w wynikach sam zastrzega, że nie wycenia hałasu, emisji, dostaw paliwa, ryzyka długości przerwy, żywotności cykli baterii ani wartości rezydualnej. Przypisanie tego zastrzeżenia do ToolMitra jest prawdopodobne, ale niepewne. Brak modelu godzin pokrycia w funkcji profilu przerw (niezweryfikowane)"
+  },
+  {
+   "name": "Home Battery Backup Prioritization Tool (simulations4all.com)",
+   "url": "https://simulations4all.com/simulations/home-battery-backup-prioritization-tool",
+   "type": "partial",
+   "access": "Darmowy (wg tytułu); strona nieotwierana",
+   "covers_pl": "Liczy czas pracy baterii według poziomów priorytetu obciążeń i pokazuje efekt odłączania obciążeń niekrytycznych. Ma presety baterii kilku marek",
+   "misses_or_unverified_pl": "Tylko bateria: brak generatorów, paliwa, kosztów i porównania technologii (wg podsumowania). Zima i PV niezweryfikowane"
+  },
+  {
+   "name": "Home Resilience Hub – Planning Tools for Household Resilience",
+   "url": "https://homeresiliencehub.com/calculators/",
+   "type": "partial",
+   "access": "Darmowe (wg podsumowania); strona nieotwierana",
+   "covers_pl": "Zestaw kalkulatorów: czas pracy baterii (ze stałej mocy lub zmierzonego zużycia 24 h), sprawdzenie mocy wyjściowej oraz czas pracy generatora z danych producenta o zużyciu paliwa",
+   "misses_or_unverified_pl": "Osobne kalkulatory, które wyglądają na niepołączone (wyniki jednego nie zasilają drugiego). Koszt 10-letni, porównanie wariantów, zima i PV oraz wrażliwość niezweryfikowane"
+  },
+  {
+   "name": "Backup Energy Guide – Backup Power Planning Workflow",
+   "url": "https://backupenergyguide.com/backup-power-planning/",
+   "type": "partial",
+   "access": "Darmowy przewodnik z narzędziami (wg podsumowania); strona nieotwierana",
+   "covers_pl": "Prowadzi krok po kroku: estymator obciążeń urządzeń, potem czas pracy i dobór. Najbliżej formuły 'prowadzenia przez decyzję'",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy kroki są zintegrowane, czy obejmuje generator, paliwo, koszt 10-letni i porównanie 8 wariantów. Wymaga ręcznej weryfikacji"
+  },
+  {
+   "name": "Disaster Prep Calc – Whole House Generator Calculator",
+   "url": "https://disasterprepcalc.com/calculators/whole-house-generator-calculator",
+   "type": "partial",
+   "access": "Darmowy (wg tytułu); strona nieotwierana",
+   "covers_pl": "Dobór generatora dla całego domu (wg tytułu)",
+   "misses_or_unverified_pl": "Bateria, power station, koszt, profil przerw i paliwo niezweryfikowane (prawdopodobnie poza zakresem)"
+  },
+  {
+   "name": "Kohler – residential generator sizing calculator (wskazany w broszurze Kohler)",
+   "url": "https://www.kohler.com/content/dam/kohler-com-NA/Lifestyle/PDF/g12429.pdf",
+   "type": "partial",
+   "access": "Darmowy kalkulator producenta (wg broszury: KohlerEnergy.com); link do kalkulatora może być nieaktualny; strona nieotwierana",
+   "covers_pl": "Dobór mocy (kW) generatora standby Kohler na podstawie obciążeń; broszura dotyczy też domowej energii",
+   "misses_or_unverified_pl": "Tylko produkty jednego producenta. Brak porównania z baterią, portable i power station, kosztu 10-letniego i profilu przerw (niezweryfikowane). Producent zaleca potwierdzenie przez wykonawcę"
+  },
+  {
+   "name": "Generac – kalkulatory doboru u dealerów i stron trzecich (np. callaaatoday.com)",
+   "url": "https://callaaatoday.com/services/generators/residential-generators-replacement/generator-size-calculator/",
+   "type": "partial",
+   "access": "Darmowe (dealer); strona nieotwierana",
+   "covers_pl": "Dobór mocy generatora standby Generac: suma mocy roboczych plus rozruch największego silnika plus zapas",
+   "misses_or_unverified_pl": "W wynikach nie znaleziono oficjalnego kalkulatora Generac ani narzędzia do doboru PWRcell (Generac: dobór przez instalatora). Brak porównania technologii i kosztu (niezweryfikowane). Wcześniejsza notatka o 'Generac sizing tools' pozostaje niezweryfikowana co do oficjalnego narzędzia"
+  },
+  {
+   "name": "PNNL/FEMP – Generator Runtime Calculator (Technical Resilience Navigator)",
+   "url": "https://trn.pnnl.gov/toolkit/generator-runtime-calculator",
+   "type": "substitute",
+   "access": "Darmowy, narzędzie rządowe dla organizacji; strona nieotwierana",
+   "covers_pl": "Szacuje, ile dni generator utrzyma obciążenia krytyczne podczas przerwy",
+   "misses_or_unverified_pl": "Skierowany do organizacji (metoda TRN), nie do gospodarstw domowych. Brak baterii i kosztu 10-letniego dla domu (niezweryfikowane). Zastępuje w wynikach wcześniejszą notatkę o NREL REopt, która nie pojawiła się w żadnym zapytaniu"
+  },
+  {
+   "name": "Aurora Solar – Battery backup vs. generator (2026 cost guide)",
+   "url": "https://aurorasolar.com/home-solar/blog/energy-101/battery-backup-vs-generator",
+   "type": "substitute",
+   "access": "Darmowy artykuł firmy solarnej; strona nieotwierana",
+   "covers_pl": "Redakcyjne porównanie kosztów i zalet baterii i generatora w 2026",
+   "misses_or_unverified_pl": "Treść, nie symulator: brak personalizacji profilu przerw i wariantów. Interes sprzedażowy (solar)"
+  },
+  {
+   "name": "Solar Waypoint – Generator vs. Portable Power Station vs. Home Battery",
+   "url": "https://www.solarwaypoint.com/generator-vs-portable-power-station-vs-home-battery/",
+   "type": "substitute",
+   "access": "Darmowy artykuł; strona nieotwierana",
+   "covers_pl": "Trójstronne porównanie redakcyjne obejmujące też power station, czyli zakres wariantów najbliższy produktowi",
+   "misses_or_unverified_pl": "Artykuł bez modelu: brak godzin pokrycia, kosztu 10-letniego i wrażliwości (niezweryfikowane)"
+  },
+  {
+   "name": "poweroutage.us – Home Battery Backup vs Whole House Generator",
+   "url": "https://poweroutage.us/home-battery-backup/home-battery-backup-vs-whole-house-generator",
+   "type": "substitute",
+   "access": "Darmowy artykuł; strona nieotwierana",
+   "covers_pl": "Porównanie baterii i standby na stronie znanego trackera przerw (silna marka w niszy); osobno przegląd PWRcell z ROI",
+   "misses_or_unverified_pl": "Narzędzie interaktywne łączące dane o przerwach z wyborem technologii niezweryfikowane"
+  },
+  {
+   "name": "Portable Power – Battery Backup vs Generator 2026 Comparison (portablepower.io)",
+   "url": "https://portablepower.io/home-battery-vs-generator",
+   "type": "substitute",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Porównanie baterii i generatora 2026; pojawia się w 3 z 7 zapytań (silna widoczność SERP)",
+   "misses_or_unverified_pl": "W wynikach jest '10-letni kalkulator sprzedawcy' pokazujący przewagę generatora o ok. 7 500 USD, ale nie da się go pewnie przypisać do tej strony. Integracja z profilem przerw niezweryfikowana"
+  },
+  {
+   "name": "Tesla – Powerwall vs. Backup Generator",
+   "url": "https://tesla.com/support/energy/powerwall-vs-backup-generator",
+   "type": "substitute",
+   "access": "Darmowa strona wsparcia producenta; strona nieotwierana",
+   "covers_pl": "Porównanie Powerwall z generatorem z perspektywy producenta baterii",
+   "misses_or_unverified_pl": "Stronnicze, bez symulacji i bez wariantów portable, power station i hybrydy"
+  },
+  {
+   "name": "Fora: Mike Holt, TractorByNet, Reddit (wątek o domku w Sierra, opisany przez The Cooldown)",
+   "url": "https://forums.mikeholt.com/threads/generator-interlock-vs-manual-transfer-switch-panel.140077/post-2305752",
+   "type": "substitute",
+   "access": "Darmowe fora; strona nieotwierana",
+   "covers_pl": "Praktyczne kompromisy: interlock vs przełącznik ręczny, zarządzanie obciążeniem, wymagania inspektorów (UL), niekompatybilność ładowania Powerwall z generatora",
+   "misses_or_unverified_pl": "Rozproszona wiedza bez kalkulacji; nie znaleziono w wynikach konkretnego szablonu arkusza"
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "brak URL (substytut ogólny)",
+   "type": "substitute",
+   "access": "Darmowe/powszechne; od 7.10.2026 ChatGPT renderuje kalkulatory w odpowiedziach, od 19.08.2026 Google AI Mode generuje interaktywne narzędzia (EN)",
+   "covers_pl": "Jakościowa odpowiedź na pytanie z przykładowego promptu (sam asystent wyszukiwania podał kompletne 'bottom line'), szybkie kalkulatory ad hoc",
+   "misses_or_unverified_pl": "Spójny, audytowalny model wielookresowy z lokalnymi danymi (przerwy wg stanu, ceny paliw, produkcja PV zimą) i z porównaniem 8 wariantów jest niezweryfikowany. Wyniki ad hoc są niestabilne między sesjami"
+  },
+  {
+   "name": "Własny arkusz kalkulacyjny (sugerowany przez wyniki wyszukiwania)",
+   "url": "brak URL (nie znaleziono konkretnego szablonu)",
+   "type": "substitute",
+   "access": "Darmowy, wymaga wiedzy użytkownika",
+   "covers_pl": "Wynik wyszukiwania wprost sugeruje arkusz z wejściami: częstotliwość i długość przerw, obciążenie kWh, cena paliwa, serwis, żywotność baterii, ładowanie PV, ulgi",
+   "misses_or_unverified_pl": "Brak gotowego szablonu w wynikach; ciężar modelowania spada na użytkownika"
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 zapytań WebSearch (US, tryb extended), różne sformułowania (problem językiem naturalnym, kategoria 'calculator', terminologia 'resilience planner / critical loads', narzędzia producentów i dealerów, Reddit/fora, TCO z paliwem i zimą, popyt EIA). Dowody wyłącznie z podsumowań wyszukiwania, strony nieotwierane. Pewność niska do średniej. Rynek nie jest pusty, tylko rozdrobniony na fragmenty: (a) dobór mocy generatora (Kohler, kalkulatory dealerów Generac, disasterprepcalc, everycalculators); (b) czas pracy baterii i power station oraz priorytetyzacja obciążeń (simulations4all, homeresiliencehub); (c) planery krytycznych obciążeń na 24/48/72 h, które dobierają baterię i generator, ale wg podsumowania nie planują paliwa (homepowercalc); (d) kalkulatory kosztu generator vs bateria, które same zastrzegają, że pomijają ryzyko długości przerwy, dostawy paliwa, hałas, emisje i żywotność cykli (toolmitra lub podobne); (e) dużo treści redakcyjnych i sprzedażowych (Aurora, Tesla, poweroutage.us, Solar Waypoint, portablepower.io). Jedno z podsumowań wprost stwierdza, że nie znalazło darmowego kalkulatora łączącego wszystkie wejścia, i sugeruje arkusz. Precyzyjna luka: jeden model, który dla profilu przerw użytkownika (typowa vs ekstremalna, lato vs zima, częstotliwość) porównuje warianty od 'nic' przez power station (± panel), portable z interlockiem, inwerter dual-fuel, standby na gaz ziemny lub propan, 1–2 baterie ± PV, aż po hybrydę bateria + mały generator. Model łączy pojemność baterii z zapasem paliwa i ładowaniem PV, wzrost obciążenia grzewczego zimą przy słabszym PV, dostęp do gazu ziemnego (koszt eksploatacji) i budżet (zakres obwodów). Zwraca godziny pokrycia, koszt 10-letni, koszt na godzinę uniknięcia przerwy, ryzyka (hałas, CO, paliwo) i wrażliwość. Zastrzeżenia: homeenergyplanner.com (tytuł: 'Compare Battery & Generator Needs') i backupenergyguide.com (workflow krok po kroku) mogą być bliższe, niż pokazują podsumowania; ich zakres jest niezweryfikowany i trzeba go sprawdzić ręcznie przed decyzją. Luka dotyczy integracji, nie braku narzędzi, a nisza jest gęsto obsadzona tanimi stronami z kalkulatorami.",
+ "search_scope_pl": "7/7 zapytań WebSearch (limit wyczerpany), wszystkie w trybie extended, wyniki US, data 2026-10-25. WebFetch zablokowany: żadnej strony nie otwarto ani nie przetestowano formularza, a paywalle i loginy są nieznane. Dowody to wyłącznie podsumowania i tytuły wyników. Mix zapytań: (1) problem językiem naturalnym, (2) krótka kategoria 'backup power calculator', (3) terminologia alternatywna (resilience planner, critical loads, outage duration), (4) narzędzia producentów i dealerów (Generac, Kohler, PWRcell), (5) Reddit/fora, (6) TCO z paliwem, PV i zimą, (7) popyt (EIA). Ponowna weryfikacja wcześniejszych notatek: Aurora Solar potwierdzona jako artykuł (substytut). Oficjalnego narzędzia Generac nie znaleziono, są tylko kalkulatory dealerów i stron trzecich. Wcześniejszy URL BLUETTI ('understanding-obbb-homeowners-guide') wygląda na poradnik o ustawie OBBB, a nie kalkulator czasu pracy, więc klasyfikacja jest wątpliwa; w tej rundzie niezweryfikowana. NREL REopt, Anker SOLIX i pv magazine nie pojawiły się w wynikach, więc nie zostały zweryfikowane ponownie. Nie badano: App Store i Google Play, płatnego oprogramowania instalatorów (np. narzędzia do projektowania solar+storage), kalkulatorów EcoFlow i Jackery w tej rundzie ani YouTube.",
+ "demand_signals": [
+  {
+   "signal_pl": "EIA: w 2024 przeciętny odbiorca w USA miał ok. 11 h przerw, prawie dwa razy więcej niż średnia z poprzedniej dekady. Huragany (Beryl, Helene, Milton) odpowiadały za 80% godzin bez prądu. To realny i rosnący problem, ale nie miara popytu na narzędzie",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=66744",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Silne zróżnicowanie stanowe: Karolina Płd. ok. 53 h w 2024, część stanów poniżej 2 h. Popyt jest skoncentrowany regionalnie i wywoływany zdarzeniami (huragany, burze zimowe)",
+   "url": "https://www.utilitydive.com/news/hurricane-power-outage-electricity-climate-change-helene-milton/806771/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele stron afiliacyjnych i z generatorami publikuje statystyki przerw wg stanu z danymi na 2026 (generatorforhouse.org, wattstationhq, theuptimereport). Wydawcy widzą ruch i monetyzację w tym temacie",
+   "url": "https://generatorforhouse.org/power-outages-by-state",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Gęsta podaż porównań '2026' od sprzedawców i serwisów treści (energyscout, portablepower.io, energysavvyhomes, youcompare, superfastelectric). To sygnał komercyjnego zainteresowania frazami 'battery backup vs generator'",
+   "url": "https://energyscout.org/blog/whole-home-battery-backup-vs-generator-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Liczne niezależne strony z kalkulatorami celują w tę niszę (homepowercalc, homeresiliencehub, disasterprepcalc, simulations4all, toolmitra). Potwierdza to popyt na narzędzia, ale też wysoką konkurencję w SERP",
+   "url": "https://homepowercalc.com/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wątki forów o interlockach, przełącznikach i zasilaniu domu z portable (Mike Holt, TractorByNet) oraz wątek Reddit o Powerwall i generatorze opisany przez media. Użytkownicy zadają pytania o wybór i kompatybilność",
+   "url": "https://thecooldown.com/green-home/powerwall-generator-compatibility-california",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: zapytania rosną skokowo po huraganach, burzach zimowych i PSPS. Ruch byłby sezonowy i zdarzeniowy, nie stały. Brak danych o wolumenach wyszukiwań",
+   "url": "brak URL (hipoteza)",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko wysokie dla prostej wersji pytania i średnie dla pełnej symulacji. Na przykładowy prompt ('3 dni bez prądu dwa razy w roku – standby, portable z przełącznikiem czy bateria?') sam asystent wyszukiwania dał kompletną odpowiedź: standby przy długich przerwach, bateria przy PV lub krótkich przerwach, portable jako opcja budżetowa, hybryda. To wystarczy większości użytkowników na etapie wstępnym. ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) potrafią wygenerować w odpowiedzi prosty kalkulator czasu pracy lub kosztu. Szansa na kierowanie do zewnętrznego narzędzia istnieje tam, gdzie AI jest słaba: spójny model na wiele wariantów i okresów (10 lat) z lokalnymi danymi (przerwy wg stanu i zakładu, ceny propanu, gazu i benzyny, produkcja PV zimą), z wrażliwością i audytowalnymi założeniami. Wyniki pokazują też, że 10-letnie kalkulatory dają sprzeczne werdykty (bateria tańsza vs generator tańszy o ok. 7 500 USD), co uzasadnia przejrzyste narzędzie. Nie ma dowodu, że asystenci faktycznie linkują do takich narzędzi.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Problem jest powszechny i narasta: rekordowe godziny przerw w 2024, huragany, burze zimowe, PSPS. Widoczna jest duża podaż treści i kalkulatorów na frazy 'battery backup vs generator' i 'whole house generator calculator'. Decyzja zakupowa nie jest jednak coroczna dla każdego gospodarstwa: wywołują ją zdarzenia i jest skoncentrowana regionalnie",
+   "evidence_pl": "EIA: 11 h średnio w 2024, ok. 2x średnia dekady, Karolina Płd. ok. 53 h. Wiele porównań '2026' i stron z kalkulatorami, wątki forów i Reddit",
+   "gaps_pl": "Brak danych o wolumenach wyszukiwań i sprzedaży generatorów i baterii (wyniki nie podały danych o popycie na standby). Nie wolno utożsamiać liczby gospodarstw dotkniętych przerwą z miesięcznym popytem",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Fragmenty są dobrze obsadzone: dobór generatora, czas pracy baterii, planery 24/48/72 h, kalkulatory kosztu generator vs bateria. Żadne znalezione narzędzie nie łączy wg podsumowań profilu przerw, paliwa, zimy i PV, dostępu do gazu, zakresu obwodów i kosztu 10-letniego dla 8 wariantów. Najbliższe kandydaty (homeenergyplanner, backupenergyguide) są niezweryfikowane",
+   "evidence_pl": "homepowercalc bez planowania paliwa. Kalkulator kosztu sam pomija ryzyko długości przerwy i dostawy paliwa. Osobne kalkulatory homeresiliencehub. Podsumowanie wyszukiwania: 'nie znaleziono jednego darmowego kalkulatora obejmującego wszystkie wejścia'",
+   "gaps_pl": "Strony nieotwierane; homeenergyplanner.com i backupenergyguide.com mogą być bliżej integracji. Nie sprawdzono aplikacji mobilnych ani narzędzi instalatorów",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Podstawowe pytanie jest w pełni rozwiązywalne przez asystenta, a ChatGPT i Google AI Mode same generują kalkulatory. Zewnętrzne narzędzie ma sens tylko dla wersji z lokalnymi danymi i długim modelem, ale to mniejszość zapytań",
+   "evidence_pl": "Asystent wyszukiwania sam podał kompletny werdykt na przykładowy prompt. Funkcje Intelligent UI i AI Mode z kontekstu zadania",
+   "gaps_pl": "Brak danych, czy i jak często asystenci cytują lub linkują kalkulatory w tej niszy",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumenci w USA w wysokowartościowych branżach: instalacja generatorów (usługi domowe, elektrycy), solar + baterie, power stations (afiliacje), propan i gaz. Brak ograniczeń kategorii wrażliwych (urządzenia medyczne są tylko kontekstem). Obniżka o 1 pkt za skokowy, zdarzeniowy i sezonowy ruch oraz niski CTR AdSense na stronach z kalkulatorami",
+   "evidence_pl": "Gęstość treści sprzedażowych i afiliacyjnych od firm solarnych, sprzedawców baterii i generatorów oraz dealerów Generac i Kohler w wynikach",
+   "gaps_pl": "Brak zweryfikowanych CPC i RPM; brak danych o sezonowości ruchu",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Dane są w większości darmowe i stabilne: moce urządzeń (statyczne), przerwy wg stanu (EIA, rocznie), ceny paliw (EIA), produkcja PV (publiczne modele), zużycie paliwa generatorów z kart producentów. Model jest umiarkowanie złożony (krzywe zużycia paliwa, obciążenie grzewcze zimą, sprawność baterii), ale bez częstych zmian przepisów",
+   "evidence_pl": "Wyniki pokazują, że dane o przerwach EIA i parametry sprzętu (np. PWRcell: 3 kWh na moduł, 9–36 kWh, 5,2–11,5 kW) są publicznie dostępne",
+   "gaps_pl": "Ceny sprzętu i instalacji szybko się zmieniają i są rozbieżne między źródłami. Status ulgi federalnej na baterie jest sporny (koniec 31.12.2025 vs do 2032) i wymaga monitoringu",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd doboru może mieć poważne skutki przy urządzeniach medycznych, pompie zatapialnej czy studni. CO z generatorów przenośnych to ryzyko zdrowotne, a legalność interlocków i przełączników zależy od lokalnych przepisów i inspektorów. Wymaga mocnych zastrzeżeń i zaleceń konsultacji z elektrykiem",
+   "evidence_pl": "Fora: inspektorzy odrzucają interlocki bez UL. Producenci (Kohler, Generac) zalecają dobór przez wykonawcę. Wątek o niekompatybilności ładowania Powerwall z generatora",
+   "gaps_pl": "Nie zbadano odpowiedzialności prawnej ani wymogów kodeksów (NEC, lokalne) w szczegółach",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś czasu przepływów pieniężnych (10 lat), energię (PV, bateria, taryfy), ceny paliw, finansowanie i ulgi. Daje produkty pokrewne: solar + magazyn ROI, V2H/EV jako backup, planer PSPS, backup dla urządzeń medycznych i pomp, porównanie taryf TOU z baterią. Słabiej wykorzystuje moduły podatkowe i wartości domu",
+   "evidence_pl": "Rodzina 'Energia domowa'. Wejścia wskazane w wynikach (przerwy, kWh, paliwo, żywotność baterii, PV, ulgi) pokrywają się z modułami innych produktów energetycznych",
+   "gaps_pl": "Wartość dla wyceny domu (resale z generatorem) niezbadana",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony to ok. 3,4/5. Popyt jest realny i rosnący, a reklama atrakcyjna (usługi domowe, solar, generatory), ale luka dotyczy wyłącznie integracji: fragmenty są gęsto obsadzone przez tanie strony z kalkulatorami, a podstawowe pytanie AI rozwiązuje sama, z kalkulatorami generowanymi w ChatGPT i AI Mode. Przed pilotem trzeba ręcznie otworzyć homeenergyplanner.com/backup-power-calculator, backupenergyguide.com, homepowercalc.com i portablepower.io (WebFetch był zablokowany) i sprawdzić, czy któryś łączy profil przerw, paliwo, zimę i koszt 10-letni. Trzeba też zweryfikować CPC dla fraz 'whole house generator' i 'battery backup' oraz sezonowość ruchu. Jeśli żaden nie integruje tych zależności, produkt nadaje się na pilota jako 'audytowalny model wielowariantowy z lokalnymi danymi', z mocnymi zastrzeżeniami (CO, urządzenia medyczne, przepisy).",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "should I get a whole home generator, portable generator with transfer switch, or battery backup for multi-day outages",
+   "url": "https://poweroutage.us/home-battery-backup/home-battery-backup-vs-whole-house-generator",
+   "competitor": "poweroutage.us – Home Battery Backup vs Whole House Generator",
+   "features_checked": "porównanie standby vs bateria, czas pracy, automatyczne przełączanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (treść); brak dowodu na interaktywny symulator",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I get a whole home generator, portable generator with transfer switch, or battery backup for multi-day outages",
+   "url": "https://www.solarwaypoint.com/generator-vs-portable-power-station-vs-home-battery/",
+   "competitor": "Solar Waypoint – Generator vs Portable Power Station vs Home Battery",
+   "features_checked": "trójstronne porównanie technologii, w tym power station",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (artykuł) o zakresie wariantów najbliższym produktowi; bez modelu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I get a whole home generator, portable generator with transfer switch, or battery backup for multi-day outages",
+   "url": "https://aurorasolar.com/home-solar/blog/energy-101/battery-backup-vs-generator",
+   "competitor": "Aurora Solar – Battery backup vs generator (2026 cost guide)",
+   "features_checked": "koszty, porównanie bateria vs generator; weryfikacja notatki z fali 1",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Potwierdzono jako substytut redakcyjny (firma solarna)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "backup power calculator generator vs battery cost comparison",
+   "url": "https://homeenergyplanner.com/backup-power-calculator/",
+   "competitor": "Home Energy Planner – Backup Power Calculator",
+   "features_checked": "porównanie zapotrzebowania bateria vs generator (tylko tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Częściowy, najbliższy kandydat; integracja z profilem przerw i kosztem 10-letnim niezweryfikowana, wymaga ręcznego sprawdzenia",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "backup power calculator generator vs battery cost comparison",
+   "url": "https://www.toolmitra.net/calculators/battery-vs-generator/",
+   "competitor": "ToolMitra – Battery versus generator calculator",
+   "features_checked": "porównanie kosztów; zakres pominięć (hałas, emisje, paliwo, ryzyko długości przerwy, cykle, wartość rezydualna)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; przypisanie cytowanego zastrzeżenia do tej strony niepewne",
+   "conclusion": "Częściowy (koszt), bez modelu ryzyka długości przerwy",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "backup power calculator generator vs battery cost comparison",
+   "url": "https://portablepower.io/home-battery-vs-generator",
+   "competitor": "Portable Power – Battery Backup vs Generator 2026",
+   "features_checked": "porównanie 2026; możliwy 10-letni kalkulator (przypisanie niepewne)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut lub częściowy; wysoka widoczność w SERP (3 z 7 zapytań). Wyniki 10-letnie między źródłami są sprzeczne (bateria tańsza vs generator tańszy o ok. 7 500 USD)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home energy resilience planner critical loads outage duration tool battery generator",
+   "url": "https://homepowercalc.com/tools/home-outage-backup-planner",
+   "competitor": "Home Outage Backup Planner (homepowercalc.com)",
+   "features_checked": "24/48/72 h lub własny czas, krytyczne obciążenia, rozmiar baterii (sprawność, rezerwa), rozmiar generatora (rozruch + zapas), planowanie paliwa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: dobór obu technologii dla czasu przerwy, ale wg podsumowania bez planowania paliwa; koszt niezweryfikowany",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home energy resilience planner critical loads outage duration tool battery generator",
+   "url": "https://simulations4all.com/simulations/home-battery-backup-prioritization-tool",
+   "competitor": "Home Battery Backup Prioritization Tool",
+   "features_checked": "czas pracy baterii wg priorytetów, odłączanie obciążeń, presety marek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: tylko bateria",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home energy resilience planner critical loads outage duration tool battery generator",
+   "url": "https://homeresiliencehub.com/calculators/",
+   "competitor": "Home Resilience Hub – Planning Tools",
+   "features_checked": "czas pracy baterii, sprawdzenie mocy, czas pracy generatora ze zużycia paliwa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: osobne kalkulatory, brak dowodu integracji i kosztu 10-letniego",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home energy resilience planner critical loads outage duration tool battery generator",
+   "url": "https://backupenergyguide.com/backup-power-planning/",
+   "competitor": "Backup Energy Guide – Backup Power Planning Workflow",
+   "features_checked": "workflow krok po kroku: estymator obciążeń, czas pracy, dobór",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy; integracja i koszt niezweryfikowane, do ręcznego sprawdzenia",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home energy resilience planner critical loads outage duration tool battery generator",
+   "url": "https://trn.pnnl.gov/toolkit/generator-runtime-calculator",
+   "competitor": "PNNL/FEMP Generator Runtime Calculator",
+   "features_checked": "dni pracy generatora dla obciążeń krytycznych; grupa docelowa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut dla organizacji, nie dla domów. NREL REopt z notatek fali 1 nie pojawił się w wynikach (niezweryfikowany)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Generac Kohler home generator sizing tool online estimate PWRcell battery backup sizing",
+   "url": "https://www.kohler.com/content/dam/kohler-com-NA/Lifestyle/PDF/g12429.pdf",
+   "competitor": "Kohler – residential sizing calculator (wskazany w broszurze)",
+   "features_checked": "dobór kW standby; zalecenie konsultacji z wykonawcą",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; sam kalkulator na KohlerEnergy.com nieotwierany, link może być nieaktualny",
+   "conclusion": "Częściowy: tylko dobór generatora jednego producenta",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Generac Kohler home generator sizing tool online estimate PWRcell battery backup sizing",
+   "url": "https://callaaatoday.com/services/generators/residential-generators-replacement/generator-size-calculator/",
+   "competitor": "Generac – kalkulatory dealerów i stron trzecich",
+   "features_checked": "oficjalny kalkulator Generac, dobór PWRcell",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Nie znaleziono oficjalnego narzędzia Generac ani kalkulatora PWRcell (dobór przez instalatora); są tylko kalkulatory dealerów (częściowe, dobór mocy). Notatka z fali 1 pozostaje niezweryfikowana",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Generac Kohler home generator sizing tool online estimate PWRcell battery backup sizing",
+   "url": "https://disasterprepcalc.com/calculators/whole-house-generator-calculator",
+   "competitor": "Disaster Prep Calc – Whole House Generator Calculator",
+   "features_checked": "dobór generatora (tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Częściowy (dobór mocy); reszta niezweryfikowana",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit portable generator interlock vs standby generator vs Powerwall which did you choose outages",
+   "url": "https://tesla.com/support/energy/powerwall-vs-backup-generator",
+   "competitor": "Tesla – Powerwall vs Backup Generator",
+   "features_checked": "porównanie producenta, automatyczne przełączanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut stronniczy (producent baterii)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit portable generator interlock vs standby generator vs Powerwall which did you choose outages",
+   "url": "https://forums.mikeholt.com/threads/generator-interlock-vs-manual-transfer-switch-panel.140077/post-2305752",
+   "competitor": "Fora (Mike Holt, TractorByNet, Reddit przez The Cooldown)",
+   "features_checked": "interlock vs przełącznik, zarządzanie obciążeniem, wymóg UL, kompatybilność ładowania Powerwall z generatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut; potwierdza złożoność zależności (hybryda bateria + generator nie zawsze kompatybilna) i ryzyka przepisów",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "backup power options calculator outage length fuel cost propane natural gas battery solar recharge winter total cost of ownership homeowner",
+   "url": "https://www.portlandiaelectric.supply/blogs/energy-solutions/battery-backup-vs-generator",
+   "competitor": "Kalkulatory i porównania TCO sprzedawców (portlandiaelectric, solartechonline, superfastelectric i in.)",
+   "features_checked": "koszt 10-letni, paliwo, serwis, zima, ulgi, integracja wszystkich wejść",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Podsumowanie: nie znaleziono jednego darmowego kalkulatora obejmującego wszystkie wejścia; sugeruje arkusz. Dane o zimie i ładowaniu PV nieznalezione. Status ulgi federalnej sporny",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EIA average US electricity customer outage hours 2024 major events home standby generator demand",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=66744",
+   "competitor": "(sygnał popytu) EIA – godziny przerw 2024",
+   "features_checked": "średnie godziny przerw, udział zdarzeń ekstremalnych, zróżnicowanie stanowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "11 h średnio w 2024 (ok. 2x średnia dekady), 80% z huraganów; SC ok. 53 h. Sygnał problemu, nie wolumenu wyszukiwań",
+   "confidence": "high"
+  }
+ ],
+ "queries_run": [
+  "should I get a whole home generator, portable generator with transfer switch, or battery backup for multi-day outages",
+  "backup power calculator generator vs battery cost comparison",
+  "home energy resilience planner critical loads outage duration tool battery generator",
+  "Generac Kohler home generator sizing tool online estimate PWRcell battery backup sizing",
+  "reddit portable generator interlock vs standby generator vs Powerwall which did you choose outages",
+  "backup power options calculator outage length fuel cost propane natural gas battery solar recharge winter total cost of ownership homeowner",
+  "EIA average US electricity customer outage hours 2024 major events home standby generator demand"
+ ]
+}

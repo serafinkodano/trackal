@@ -1,0 +1,424 @@
+{
+ "id": "HOME-04",
+ "competitors": [
+  {
+   "name": "BusinessCaseGuy – Should I Stay, Renovate, Or Move? (calculator)",
+   "url": "https://businesscaseguy.com/stay-or-move-financial-calculator/",
+   "type": "partial",
+   "access": "online, prawdopodobnie bezpłatny (niezweryfikowane; strona nieotwierana)",
+   "covers_pl": "Wg podsumowania: trzy ścieżki (zostać, wyremontować, przeprowadzić się) w horyzoncie 10 lat; wzrost kapitału (equity), koszty transakcyjne, miesięczne rachunki. Pokrewna strona tego samego autora liczy 10-letni wpływ decyzji 'move or stay put'. To najbliższy kandydat na konkurenta bezpośredniego.",
+   "misses_or_unverified_pl": "Niezweryfikowane: warianty finansowania remontu (HELOC ze zmienną stopą, home equity loan, cash-out refi z utratą niskiej stopy), kredyt assumable, ponowna wycena podatku od nieruchomości przy zakupie, basis/sekcja 121, przekroczenia budżetu, scenariusz spadku stóp i refinansu, break-even, analiza wrażliwości. Jeśli te funkcje są obecne, narzędzie byłoby konkurentem bezpośrednim."
+  },
+  {
+   "name": "Dr. Brian Jones Realtor – Move-Up vs Stay Put calculator",
+   "url": "https://www.drbrianjonesrealtor.com/move-up-vs-stay-put-home-calculator",
+   "type": "partial",
+   "access": "online, bezpłatny, narzędzie agenta nieruchomości (lead-gen, nieneutralne)",
+   "covers_pl": "Wg podsumowania: dwie ścieżki w czasie: Stay Put (z opcjonalnym remontem i wzrostem wartości po remoncie) oraz Move Up (sprzedaż i zakup). Uwzględnia koszty sprzedaży i zakupu. Wyniki: equity, potrzebna gotówka, różnica rat, różnica majątku netto.",
+   "misses_or_unverified_pl": "Niezweryfikowane: sposób finansowania remontu (HELOC zmienny vs cash-out refi), assumable, ponowna wycena podatku, basis/121, przekroczenie budżetu, scenariusze stóp, break-even. Tylko 2 ścieżki zamiast 6 wariantów."
+  },
+  {
+   "name": "TrueHomeCosts – Move or Stay Calculator",
+   "url": "https://truehomecosts.com/move",
+   "type": "partial",
+   "access": "online, prawdopodobnie bezpłatny (niezweryfikowane)",
+   "covers_pl": "Wg podsumowania: pięć opcji (stay put, sell and buy, sell and rent, keep and buy, keep and rent) w horyzoncie 10 lat. W przykładzie zachowuje niską stopę (3.25%) przy pozostaniu, więc modeluje utratę niskiej stopy przy przeprowadzce.",
+   "misses_or_unverified_pl": "W podsumowaniu nie widać wariantu remontu ani rozbudowy (niezweryfikowane). Niezweryfikowane: HELOC, cash-out refi, podatek od nieruchomości, basis/121, przekroczenia budżetu."
+  },
+  {
+   "name": "FinHome Contracting – Remodel or Move? Calculator",
+   "url": "https://finhomecontracting.com/tools/remodel-or-move-calculator/",
+   "type": "partial",
+   "access": "online, bezpłatny, narzędzie wykonawcy (lead-gen)",
+   "covers_pl": "Dane wejściowe: wartość domu, saldo kredytu, obecna stopa, budżet remontu, cena docelowego domu, dzisiejsza stopa, prowizja agenta, koszty zamknięcia i przeprowadzki. Pokazuje zmianę raty po przeprowadzce i wprost wskazuje karę za utratę niskiej stopy (rate penalty).",
+   "misses_or_unverified_pl": "Niezweryfikowane: model wielookresowy, majątek netto, koszt finansowania remontu (HELOC), podatek od nieruchomości, basis, przekroczenia budżetu, scenariusze stóp. Najpewniej porównanie jednookresowe."
+  },
+  {
+   "name": "MovingCalculator.io – Renovate or Move Calculator",
+   "url": "https://movingcalculator.io/renovate-or-move-calculator",
+   "type": "partial",
+   "access": "online, bezpłatny",
+   "covers_pl": "Budżet remontu plus stały bufor 20% na przekroczenie, zestawiony z kosztami transakcyjnymi przeprowadzki (prowizja, koszty zamknięcia kupującego, sama przeprowadzka).",
+   "misses_or_unverified_pl": "W podsumowaniu nie ma różnicy stóp ani lock-in (niezweryfikowane). Niezweryfikowane: finansowanie, horyzont wielookresowy, podatek, majątek netto. Ryzyko budżetu to stały procent, a nie scenariusze. Narzędzie samo podaje, że nie uwzględnia czynników stylu życia."
+  },
+  {
+   "name": "RemodelOrMove.com (opisany przez JLC Online)",
+   "url": "https://www.jlconline.com/business/sales-marketing/remodel-or-move-calculator/",
+   "type": "partial",
+   "access": "bezpłatny kalkulator i usługa lead-gen; strona ok. 17 lat (wg podsumowania)",
+   "covers_pl": "Ankieta z 70 pytaniami o czynnikach finansowych i emocjonalnych, kończona rekomendacją.",
+   "misses_or_unverified_pl": "Narzędzie przestarzałe (sprzed szoku stóp), więc najpewniej bez logiki lock-in. Niezweryfikowane: czy nadal działa, czy liczy kredyt, podatek, majątek netto."
+  },
+  {
+   "name": "Figure – HELOC vs Cash-Out Refinance Calculator",
+   "url": "https://www.figure.com/home-equity-line/heloc-vs-cash-out-refinance-calculator/",
+   "type": "partial",
+   "access": "online, bezpłatny, kalkulator pożyczkodawcy",
+   "covers_pl": "Fragment finansowy: porównanie wariantów 1 (HELOC) i 3 (cash-out refi z utratą niskiej stopy).",
+   "misses_or_unverified_pl": "Brak porównania z przeprowadzką i remontem jako decyzją (nie jest to cel narzędzia). Szczegóły (zmienna stopa w czasie, horyzont) niezweryfikowane: podsumowanie nie opisało funkcji."
+  },
+  {
+   "name": "RenoFi – Home Improvement Calculator",
+   "url": "https://www.renofi.com/learn/home-improvement-calculator/",
+   "type": "partial",
+   "access": "online, bezpłatny, lead-gen pożyczkodawcy; podobno bez sprawdzania historii kredytowej",
+   "covers_pl": "Szacuje stopę, maksymalną kwotę kredytu (do 90% wartości po remoncie) i ratę kredytu remontowego, który zachowuje pierwszą hipotekę. Potwierdza notatkę z fali 1: istnieje, ale jest tylko fragmentem finansowym.",
+   "misses_or_unverified_pl": "Nie porównuje z przeprowadzką ani cash-out refi w modelu majątku. Stopy nie są publikowane. Podatek, basis i przekroczenia budżetu poza zakresem."
+  },
+  {
+   "name": "ProjectionLab / Boldin (planery finansowe)",
+   "url": "https://www.boldin.com/retirement/boldin-vs-projectionlab/",
+   "type": "substitute",
+   "access": "freemium: ProjectionLab Premium ok. $129/rok, Boldin PlannerPlus ok. $168/rok (wg podsumowań porównań)",
+   "covers_pl": "Porównywanie scenariuszy w pełnym planie finansowym (ProjectionLab Compare Mode). Wg tabeli porównawczej ProjectionLab przy sprzedaży nieruchomości uwzględnia prowizję, basis i wyłączenie z sekcji 121, a Boldin przenosi kwotę brutto. Można ręcznie zbudować scenariusz remontu i scenariusz przeprowadzki.",
+   "misses_or_unverified_pl": "Nie potwierdzono dedykowanego modułu remont vs przeprowadzka. Użytkownik buduje scenariusze sam, co wymaga wysiłku i płatnego planu. HELOC ze zmienną stopą, ponowna wycena podatku i przekroczenia budżetu niezweryfikowane."
+  },
+  {
+   "name": "Zillow – Should You Remodel or Move? (poradnik)",
+   "url": "https://www.zillow.com/learn/should-you-remodel-or-move/",
+   "type": "substitute",
+   "access": "bezpłatny artykuł",
+   "covers_pl": "Poradnik, nie kalkulator. Sugeruje sprawdzić, ile kosztów remontu wraca przy sprzedaży, według raportu Cost vs. Value (Remodeling Magazine/Zonda). Zonda pojawia się tylko pośrednio; własnego URL raportu nie było w wynikach.",
+   "misses_or_unverified_pl": "Brak obliczeń, brak lock-in i modelu wielookresowego (wg podsumowania)."
+  },
+  {
+   "name": "BuyOrRent.ai – Renovate vs Move guide",
+   "url": "https://www.buyorrent.ai/guides/home-buying/renovate-vs-move",
+   "type": "substitute",
+   "access": "bezpłatny poradnik",
+   "covers_pl": "Przykłady liczbowe: koszty transakcyjne 6-10% wartości, zachowanie niskiej stopy, wzrost raty o ok. $1,314/mies. przy przejściu z 3.5% na 7.0%, HELOC 7.5% na $80k remontu.",
+   "misses_or_unverified_pl": "Treść, a nie interaktywny model wielowariantowy. Niezweryfikowane: czy serwis ma osobny kalkulator renovate vs move (marka sugeruje narzędzia kupno vs najem)."
+  },
+  {
+   "name": "Block Renovation / Buy Right Borrow Smart / blogi wykonawców (treści)",
+   "url": "https://buyrightborrowsmart.com/questions/i-have-a-very-low-rate-but-have-outgrown-my-home-should-i-sell-and-buy-bigger-or",
+   "type": "substitute",
+   "access": "bezpłatne artykuły i Q&A",
+   "covers_pl": "Omawiają kompromis HELOC na rozbudowę kontra zakup większego domu: lock-in, koszty sprzedaży 4-6%, czas budowy, zmianę podatku od nieruchomości (ponowna wycena w Kalifornii), ograniczenia działki. Źródła: blockrenovation.com, thornappleconstruction.com, taralenneydesign.com.",
+   "misses_or_unverified_pl": "Treści statyczne i lokalne, bez spójnego modelu, wrażliwości ani break-even."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode) oraz doradcy (agent, wykonawca, loan officer)",
+   "url": "nie dotyczy",
+   "type": "substitute",
+   "access": "bezpłatny lub w ramach usługi; doradcy z konfliktem interesów (prowizja, zlecenie)",
+   "covers_pl": "AI odpowiada jakościowo i liczy prosty scenariusz. Od 2026 może też wygenerować interaktywny kalkulator w odpowiedzi. W tym badaniu AI-podsumowanie wyszukiwarki samo zbudowało ramę decyzji i stwierdziło, że jedno narzędzie nie obejmuje scenariusza. Doradcy dostarczają lokalne wyceny i koszty.",
+   "misses_or_unverified_pl": "Spójność wielookresowego modelu z 6 wariantami, lokalne reguły ponownej wyceny podatku, basis/121 i ścieżka zmiennej stopy HELOC są podatne na błędy. Brak audytowalności. Doradcy nie są neutralni."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 zapytań WebSearch, rynek US, język angielski, wyłącznie podsumowania wyników). Pewność: niska do średniej. Ocena opiera się na podsumowaniach wyszukiwarki, a żadnej strony nie otwarto (WebFetch zablokowany).\n\nPierwotną hipotezę trzeba zawęzić. Porównanie 'zostać/wyremontować vs przeprowadzić się' w horyzoncie wieloletnim z equity i majątkiem netto już istnieje u co najmniej trzech częściowych konkurentów: BusinessCaseGuy (stay/renovate/move, 10 lat), Dr. Brian Jones (stay put z remontem vs move up, net worth) i TrueHomeCosts (5 opcji, 10 lat, zachowanie stopy 3.25%). Prostą 'karę za utratę niskiej stopy' liczy FinHome Contracting.\n\nMożliwa luka dotyczy łącznego modelu, w którym wyniki wariantów na siebie wpływają:\n(a) porównanie sposobów finansowania remontu (HELOC ze ścieżką zmiennej stopy, home equity loan, cash-out refi z utratą 3%) obok przeprowadzki z nowym kredytem i przejęcia kredytu assumable;\n(b) ponowna wycena podatku od nieruchomości przy zakupie (np. Prop 13 w CA), wspomniana tylko w treściach;\n(c) wpływ remontu na basis i sekcję 121;\n(d) przekroczenia budżetu jako scenariusze, a nie stały bufor 20% jak w movingcalculator.io;\n(e) scenariusz spadku stóp i refinansu, lata do break-even oraz wrażliwość na stopy i ceny domów.\n\nTych elementów nie widać w podsumowaniach narzędzi. Są niezweryfikowane, co nie znaczy, że ich brak. Jeśli BusinessCaseGuy lub Dr. Brian Jones je mają, luka zanika.",
+ "search_scope_pl": "Data: 2026-10-25. Wykonano 7 zapytań WebSearch (6 extended, 1 standard), wyniki tylko z US i po angielsku. Mieszanka zapytań:\n- pytanie w języku naturalnym (renovate or move with low mortgage rate);\n- kategoria (remodel vs move calculator);\n- alternatywna terminologia (stay put / move up, HELOC addition vs bigger house);\n- weryfikacja RenoFi;\n- płatne aplikacje i narzędzia doradców (Homebot, Boldin, ProjectionLab);\n- Reddit, fora i arkusze;\n- sygnały popytu (lock-in 2026).\n\nDowody to wyłącznie podsumowania wyszukiwarki. Stron nie otwierano, formularzy nie testowano, paywalli i logowań nie sprawdzano.\n\nNie zbadano:\n- sklepów z aplikacjami;\n- kalkulatorów dużych portali (Bankrate, NerdWallet, CNET Money): nie pojawiły się z narzędziem remont vs przeprowadzka;\n- Homebot: wynik bez danych;\n- szablonów Google Sheets/Excel: wyszukiwarka nie zwróciła gotowego arkusza;\n- wątków Reddit: wątek nie pojawił się, był tylko Blind 2023.\n\nBrak danych o wolumenach wyszukiwań.",
+ "demand_signals": [
+  {
+   "signal_pl": "Ankieta Redfin (listopad 2025, 4 000 osób z US, opisana w kwietniu 2026): 43% wykonało remont w ostatnim roku, 33% planuje remont w ciągu 12 miesięcy. Ok. 65% ostatnich remontujących wybrało ulepszenie obecnego domu zamiast przeprowadzki, a wśród planujących 71%. Dowód częstości decyzji, a nie wolumenu wyszukiwań.",
+   "url": "https://themortgagepoint.com/2026/04/23/survey-u-s-homeowners-are-renovating-their-homes-instead-of-relocating/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Badanie Point (maj 2026): 49% potencjalnych przeprowadzających się planuje zamiast tego remont, a 65% właścicieli planuje jakiś remont w ciągu 18 miesięcy.",
+   "url": "https://point.com/blog/point-movers-study-press-release-2026",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Realtor.com, II kw. 2026: 49% kredytów hipotecznych ma stałą stopę poniżej 4%, a średnia stopa wzrosła do 7.4% (najwyżej od 3 lat). To wielkość populacji objętej lock-in, a nie miesięczny popyt.",
+   "url": "https://www.noradarealestate.com/blog/housing-market-stalls-half-homeowners-mortgage-rates-below-4/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Dane FHFA cytowane przez Wolf Street (październik 2026): udział kredytów 3-3.99% wynosi 29.9%, a 4-4.99% wynosi 16.5%. Stopy rynkowe przekroczyły 7%. Liczby nie zgadzają się z Realtor.com (inna metodologia), ale oba źródła wskazują na duży lock-in.",
+   "url": "https://wolfstreet.com/2026/10/02/homeowners-are-clinging-to-their-below-4-mortgages-for-dear-life-as-mortgage-rates-went-over-7/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Jedna trzecia właścicieli nie odda stopy poniżej 6% 'z żadnego powodu' (kwiecień 2026). Inman (kwiecień 2026) pisze, że właściciele remontują zamiast się przeprowadzać.",
+   "url": "https://www.realestatenews.com/2026/04/27/a-third-of-homeowners-wont-give-up-sub-6-rate-for-any-reason",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pytanie w Q&A sformułowane niemal jak przykładowy prompt: 'I have a very low rate but have outgrown my home -- should I sell and buy bigger, or use a HELOC to expand instead?'. To widoczny popyt na pytania o tę decyzję.",
+   "url": "https://buyrightborrowsmart.com/questions/i-have-a-very-low-rate-but-have-outgrown-my-home-should-i-sell-and-buy-bigger-or",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Rynek dostarcza dużo treści i narzędzi o tej decyzji: kilka kalkulatorów remodel or move (wykonawcy, agenci, niszowe serwisy), poradniki Zillow i Block Renovation, blogi wykonawców ('add on or buy bigger') oraz A Wealth of Common Sense o koszcie oddania niskiej stopy. To pośredni sygnał popytu wyszukiwań i zainteresowania reklamodawców; wolumeny nieznane.",
+   "url": "https://www.zillow.com/learn/should-you-remodel-or-move/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wątek na Blind (2023): para z Bay Area rozważa dobudowę piętra zamiast nowego kredytu na 7%. Pokazuje realny problem, ale to pojedynczy wątek forum.",
+   "url": "https://www.teamblind.com/post/buy-vs-build-in-bay-area-zox3vgb3",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Hipoteza: miesięczny wolumen zapytań typu 'remodel or move', 'add addition or buy bigger house' i 'keep 3% mortgage or move' jest umiarkowany i rośnie razem z różnicą stóp. Brak danych o wolumenach; wymaga sprawdzenia w narzędziu SEO.",
+   "url": "nie dotyczy",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest średnio-wysokie dla prostej wersji i średnie dla pełnej.\n\nAI dobrze sobie radzi z prostą wersją. Na prompt 'mortgage 3%, rates 6%, add on or buy bigger' asystent odpowiada jakościowo i liczy uproszczony scenariusz: różnicę rat, koszty transakcyjne 6-10% i ratę HELOC. AI-podsumowania wyszukiwarki w tym badaniu robiły to samo. Od 7 października 2026 ChatGPT Intelligent UI, a od 19 sierpnia 2026 Google AI Mode potrafią wyrenderować prosty dwuścieżkowy kalkulator w odpowiedzi.\n\nPełna wersja jest dla AI trudniejsza. Chodzi o spójny model wielookresowy z 6 wariantami, ścieżką zmiennej stopy HELOC, cash-out refi kontra zachowanie 3%, assumable, ponowną wyceną podatku zależną od stanu i hrabstwa, basis i sekcją 121, scenariuszami przekroczeń budżetu i refinansu przy spadku stóp, break-even oraz wrażliwością. Tu AI jest podatne na błędy i nieaudytowalne, a użytkownik podejmuje decyzję wartą ponad $100k.\n\nSygnał dystrybucyjny: w jednym z wyników AI wprost napisało, że nie znalazło jednego kalkulatora dla tego scenariusza i trzeba łączyć kilka narzędzi. Wiarygodne, dobrze opisane narzędzie mogłoby więc być cytowane. Wartość zewnętrznego narzędzia zależy od głębi modelu i lokalnych danych podatkowych, a nie od samego porównania.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja jest częsta wśród właścicieli domów w US w warunkach dużego lock-in, a pytania o nią są widoczne online w różnych formach.",
+   "evidence_pl": "Redfin: ok. 65% ostatnich remontujących wybrało remont zamiast przeprowadzki. Point: 49% potencjalnych przeprowadzających się planuje remont zamiast tego. 29.9-49% kredytów ma stopę poniżej 4% (FHFA lub Realtor.com) przy stopach rynkowych powyżej 7% w 2026. Q&A z pytaniem niemal identycznym z promptem. Wiele kalkulatorów i poradników (Zillow, Block, wykonawcy).",
+   "gaps_pl": "Brak wolumenów wyszukiwań. Liczba gospodarstw to nie miesięczny popyt na narzędzie. Część remontów to drobne prace, a nie decyzja remont vs przeprowadzka. Nie wiadomo, ile osób szuka kalkulatora, a ile odpowiedzi tekstowej.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Częściowi konkurenci pokrywają większość fragmentów, a kilku z nich ma nawet model wieloletni stay/renovate/move. Integracja wariantów finansowania, podatku, basis, przekroczeń budżetu i scenariuszy stóp nie jest widoczna, ale też niezweryfikowana.",
+   "evidence_pl": "BusinessCaseGuy: stay/renovate/move, 10 lat, equity, koszty transakcyjne. Dr. Brian Jones: stay put z remontem vs move up, net worth, cash needed. TrueHomeCosts: 5 opcji, 10 lat, zachowanie 3.25%. FinHome: kara za utratę stopy. movingcalculator.io: bufor przekroczenia 20%. Figure: HELOC vs cash-out refi. RenoFi: finansowanie remontu.",
+   "gaps_pl": "Żadnej strony nie otwarto. Najbliżsi konkurenci mogą już mieć HELOC, podatek lub break-even; wtedy wynik spadłby do 2. Nie sprawdzono dużych portali finansowych, aplikacji mobilnych ani Homebot.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Prostą wersję asystent rozwiąże sam albo wygeneruje do niej kalkulator. Pełny model wielookresowy z lokalnym podatkiem i ścieżką zmiennej stopy daje powód do odesłania do zewnętrznego, audytowalnego narzędzia.",
+   "evidence_pl": "AI-podsumowanie wyszukiwarki samo stwierdziło brak jednego kalkulatora dla scenariusza i zaproponowało łączenie narzędzi. ChatGPT Intelligent UI i Google AI Mode generują interaktywne kalkulatory (kontekst zadania).",
+   "gaps_pl": "Brak danych o tym, jak często ChatGPT, Perplexity czy AI Mode linkują kalkulatory w tej niszy. Nie zbadano, które źródła cytują teraz.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Odbiorcy to konsumenci z US w najdroższych wertykałach reklamowych: remonty i rozbudowy (home services), HELOC, home equity, cash-out refi, kredyty hipoteczne, agenci nieruchomości, przeprowadzki, ubezpieczenia domu. Brak kategorii wrażliwych.",
+   "evidence_pl": "Większość znalezionych narzędzi to lead-gen pożyczkodawców (RenoFi, Figure), wykonawców (FinHome, blogi budowlane) i agentów (Dr. Brian Jones), co pośrednio potwierdza wartość tego ruchu dla reklamodawców.",
+   "gaps_pl": "Brak danych CPC i RPM. Finansowe treści YMYL mogą mieć niższe zaufanie w AdSense bez widocznej autorskiej wiarygodności.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Rdzeń jest prosty do zbudowania: amortyzacja, HELOC, refi, koszty transakcyjne, wzrost cen. Dane rynkowe są bezpłatne. Utrzymanie obciążają reguły ponownej wyceny podatku w 50 stanach i brak bezpłatnych, aktualnych kosztów remontu.",
+   "evidence_pl": "Konkurenci opierają się głównie na danych wpisywanych przez użytkownika (budżet remontu, cena domu, stopy), więc da się wystartować bez płatnych danych. Treści wskazują reassessment (np. CA) jako istotny i zmienny lokalnie element.",
+   "gaps_pl": "Nie sprawdzono licencji danych Cost vs Value (Zonda) ani dostępności reguł podatkowych w formie maszynowej. Zakładane źródła stóp (Freddie Mac PMMS, prime) to wiedza modelu, niezweryfikowana w tym badaniu.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd nie jest katastrofalny, bo użytkownik weryfikuje wyceny z wykonawcą i pożyczkodawcą. Decyzja jest jednak duża (dziesiątki do setek tysięcy USD) i obejmuje interpretacje podatkowe (sekcja 121, basis, reassessment) oraz kwalifikację kredytową.",
+   "evidence_pl": "Źródła ostrzegają, że wnioski zależą od założeń (np. BuyOrRent.ai: 'renovating usually wins' to opinia oparta na założonych liczbach). Treści wskazują dużą zmienność kosztów rozbudowy ($90-140k za 500 sq ft w jednym przykładzie).",
+   "gaps_pl": "Nie oceniono ryzyka prawnego w poszczególnych stanach. Potrzebne wyraźne zastrzeżenia i domyślne wartości z zakresami.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Produkt bezpośrednio używa wspólnych modułów: oś przepływów pieniężnych, finansowanie (mortgage, HELOC, cash-out refi, assumable), podatki (sekcja 121, basis, property tax), wartość domu, opcjonalnie energia dla rozbudowy. Otwiera też naturalne produkty siostrzane.",
+   "evidence_pl": "Pokrewne narzędzia z wyników pokazują rodzinę decyzji: keep vs sell (BiggerPockets), sell and rent vs keep and buy (TrueHomeCosts), HELOC vs cash-out refi (Figure). Można je zbudować na tym samym silniku, podobnie jak ADU vs move i downsizing.",
+   "gaps_pl": "Rzeczywisty stopień ponownego użycia zależy od architektury innych produktów rodziny 'Zakup, posiadanie i sprzedaż domu', której tu nie oceniano.",
+   "confidence": "high"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważona suma ok. 3.7: popyt 4, luka 3, dystrybucja AI 3, reklama 5, wykonalność 3, niezawodność 3, wspólny silnik 5. Potencjał reklamowy i wspólny silnik są bardzo mocne, a popyt wyraźny dzięki lock-in w 2026.\n\nKluczowa niepewność to luka. Istnieją co najmniej trzy wieloletnie kalkulatory stay/renovate/move (BusinessCaseGuy, Dr. Brian Jones, TrueHomeCosts), których nie dało się otworzyć. Przewaga musi więc wynikać z głębi modelu, a nie z samego porównania.\n\nPrzed pilotem trzeba ręcznie sprawdzić (ok. 1-2 godz.) te trzy narzędzia oraz FinHome i movingcalculator.io. Sprawdzić, czy mają:\n- HELOC ze zmienną stopą lub cash-out refi;\n- przejęcie kredytu (assumable);\n- ponowną wycenę podatku od nieruchomości;\n- basis/sekcję 121;\n- scenariusze przekroczeń budżetu;\n- refinansowanie przy spadku stóp;\n- break-even i wrażliwość.\n\nDodatkowo warto sprawdzić Bankrate i NerdWallet oraz wolumeny SEO. Jeśli najbliżsi konkurenci nie łączą tych elementów, produkt warto pilotować jako flagowy element rodziny 'dom' na wspólnym silniku. Jeśli BusinessCaseGuy lub Dr. Brian Jones mają większość z nich, trzeba zejść do 'później' albo wyróżnić się wariantem lokalnym (podatek wg stanu).",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://businesscaseguy.com/stay-or-move-financial-calculator/",
+   "competitor": "BusinessCaseGuy – Should I Stay, Renovate, Or Move?",
+   "features_checked": "warianty stay/renovate/move, horyzont, equity, koszty transakcyjne, rachunki miesięczne; HELOC, refi, podatek, basis, overrun, scenariusze stóp",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; formularza nie testowano",
+   "conclusion": "Partial (najbliższy kandydat na direct): 3 ścieżki w horyzoncie 10 lat z equity i kosztami transakcyjnymi. Finansowanie, podatek, basis, overrun i scenariusze stóp niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "\"stay put\" or \"move up\" calculator keep 3% mortgage HELOC addition vs buying bigger house",
+   "url": "https://businesscaseguy.com/living-situation/decide-to-move-or-stay-put-calculate-your-10-year-financial-impact/",
+   "competitor": "BusinessCaseGuy – Decide to Move or Stay Put (10-year impact)",
+   "features_checked": "10-letni wpływ finansowy move vs stay put",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Pokrewne narzędzie lub artykuł tego samego autora. Potwierdza nacisk na model wieloletni. Szczegóły niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://www.drbrianjonesrealtor.com/move-up-vs-stay-put-home-calculator",
+   "competitor": "Dr. Brian Jones Realtor – Move-Up vs Stay Put",
+   "features_checked": "stay put z opcjonalnym remontem i wzrostem wartości, move up, koszty sprzedaży i zakupu, equity, cash needed, różnica rat, różnica net worth",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie agenta (lead-gen)",
+   "conclusion": "Partial (mocny): 2 ścieżki w czasie z majątkiem netto. Brak potwierdzenia wariantów finansowania remontu, podatku i scenariuszy stóp.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "\"stay put\" or \"move up\" calculator keep 3% mortgage HELOC addition vs buying bigger house",
+   "url": "https://truehomecosts.com/move",
+   "competitor": "TrueHomeCosts – Move or Stay Calculator",
+   "features_checked": "5 opcji (stay, sell&buy, sell&rent, keep&buy, keep&rent), 10 lat, zachowanie niskiej stopy; wariant remontu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: modeluje lock-in i przeprowadzkę w horyzoncie 10 lat. Wariant remontu niewidoczny w podsumowaniu (niezweryfikowany).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I renovate or move calculator with low mortgage rate",
+   "url": "https://finhomecontracting.com/tools/remodel-or-move-calculator/",
+   "competitor": "FinHome Contracting – Remodel or Move? Calculator",
+   "features_checked": "wartość domu, saldo, obecna i dzisiejsza stopa, budżet remontu, cena docelowa, prowizja, koszty zamknięcia i przeprowadzki, zmiana raty, rate penalty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie wykonawcy",
+   "conclusion": "Partial: uwzględnia lock-in w racie. Model wielookresowy, majątek netto, HELOC i podatek niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://movingcalculator.io/renovate-or-move-calculator",
+   "competitor": "MovingCalculator.io – Renovate or Move Calculator",
+   "features_checked": "budżet remontu z buforem 20%, koszty transakcyjne (prowizja, closing, przeprowadzka); lock-in, finansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: porównanie kosztów jednorazowych ze stałym buforem przekroczeń. Lock-in i finansowanie niewidoczne (niezweryfikowane).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://www.jlconline.com/business/sales-marketing/remodel-or-move-calculator/",
+   "competitor": "RemodelOrMove.com (via JLC Online)",
+   "features_checked": "ankieta 70 pytań (finanse i emocje), rekomendacja, wiek narzędzia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wg podsumowania strona ok. 17 lat; lead-gen",
+   "conclusion": "Partial, przestarzały: najpewniej bez logiki lock-in. Nie wiadomo, czy nadal działa.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "\"stay put\" or \"move up\" calculator keep 3% mortgage HELOC addition vs buying bigger house",
+   "url": "https://www.figure.com/home-equity-line/heloc-vs-cash-out-refinance-calculator/",
+   "competitor": "Figure – HELOC vs Cash-Out Refinance Calculator",
+   "features_checked": "porównanie HELOC vs cash-out refi",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł, bez opisu funkcji); kalkulator pożyczkodawcy",
+   "conclusion": "Partial (fragment finansowy, warianty 1 vs 3). Nie porównuje z przeprowadzką.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "RenoFi renovate or move calculator borrowing power rate lock-in",
+   "url": "https://www.renofi.com/learn/home-improvement-calculator/",
+   "competitor": "RenoFi – Home Improvement Calculator",
+   "features_checked": "szacunek stopy, maksymalnej kwoty (do 90% ARV), raty; zachowanie pierwszej hipoteki; porównanie z przeprowadzką",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; źródła głównie marketing RenoFi; stopy niepublikowane",
+   "conclusion": "Notatka z fali 1 potwierdzona częściowo: narzędzie istnieje, ale to tylko kalkulator finansowania remontu (partial), bez porównania remont vs przeprowadzka.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial planning app or advisor tool compare renovate vs move scenario home equity (Homebot, Boldin, ProjectionLab)",
+   "url": "https://www.boldin.com/retirement/boldin-vs-projectionlab/",
+   "competitor": "ProjectionLab / Boldin",
+   "features_checked": "porównanie scenariuszy, traktowanie sprzedaży nieruchomości (prowizja, basis, wyłączenie 121), cena, dedykowany moduł remont vs przeprowadzka",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatne plany (ok. $129-168/rok); szczegół o basis/121 pochodzi z tabeli porównawczej nieprecyzyjnie przypisanej w podsumowaniu",
+   "conclusion": "Substitute: można ręcznie zbudować scenariusze. Dedykowanego modułu nie potwierdzono.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial planning app or advisor tool compare renovate vs move scenario home equity (Homebot, Boldin, ProjectionLab)",
+   "url": "https://www.bankrate.com/home-equity/home-equity-for-improvement-renovation",
+   "competitor": "Homebot (brak wyniku) / Bankrate (artykuł)",
+   "features_checked": "istnienie narzędzia remont vs przeprowadzka w Homebot; treść Bankrate o finansowaniu remontu equity",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; o Homebot nic nie zwrócono",
+   "conclusion": "Homebot: funkcje niezweryfikowane. Bankrate: artykuł potwierdza trend remontu zamiast przeprowadzki; kalkulatora remont vs przeprowadzka nie znaleziono.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://www.zillow.com/learn/should-you-remodel-or-move/",
+   "competitor": "Zillow – Should You Remodel or Move? (odwołanie do Cost vs. Value)",
+   "features_checked": "czy jest kalkulator; odwołanie do zwrotu kosztów remontu (Cost vs. Value)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (poradnik). Notatka z fali 1 o Cost vs Value (Zonda) potwierdzona tylko pośrednio, bez URL raportu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I renovate or move calculator with low mortgage rate",
+   "url": "https://www.buyorrent.ai/guides/home-buying/renovate-vs-move",
+   "competitor": "BuyOrRent.ai – Renovate vs Move guide",
+   "features_checked": "przykłady: koszty transakcyjne 6-10%, różnica raty 3.5% vs 7.0%, HELOC 7.5%",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść z przykładami). Istnienie osobnego kalkulatora niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://www.blockrenovation.com/guides/renovate-or-move-calculating-comparing-costs",
+   "competitor": "Block Renovation – Renovate or Move guide",
+   "features_checked": "porównanie kosztów remontu i przeprowadzki",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Substitute (poradnik firmy remontowej, lead-gen).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit need more space add addition or sell and buy bigger house 3% mortgage spreadsheet",
+   "url": "https://buyrightborrowsmart.com/questions/i-have-a-very-low-rate-but-have-outgrown-my-home-should-i-sell-and-buy-bigger-or",
+   "competitor": "Buy Right Borrow Smart – Q&A",
+   "features_checked": "HELOC na rozbudowę vs zakup, lock-in, koszty sprzedaży, reassessment (CA), czas budowy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; przypisanie poszczególnych tez do źródeł w podsumowaniu częściowo niejasne",
+   "conclusion": "Substitute (treść). Dowodzi, że problem jest zadawany wprost. Gotowego arkusza ani wątku Reddit nie znaleziono.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit need more space add addition or sell and buy bigger house 3% mortgage spreadsheet",
+   "url": "https://www.thornappleconstruction.com/blog/home-addition-vs-moving-grand-rapids",
+   "competitor": "Thornapple Construction – Home Addition vs. Moving (blog wykonawcy)",
+   "features_checked": "lokalne porównanie rozbudowy i przeprowadzki",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Substitute (lokalna treść wykonawcy). Sygnał, że wykonawcy inwestują w ten temat.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit need more space add addition or sell and buy bigger house 3% mortgage spreadsheet",
+   "url": "https://www.biggerpockets.com/blog/money-572",
+   "competitor": "BiggerPockets – Should You Keep or Sell Your House? Use This Tool",
+   "features_checked": "narzędzie keep vs sell (inwestorskie)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Poza zakresem, decyzja pokrewna (zachować i wynająć vs sprzedać). Potencjalny produkt siostrzany, nie konkurent.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit need more space add addition or sell and buy bigger house 3% mortgage spreadsheet",
+   "url": "https://awealthofcommonsense.com/2022/08/the-cost-benefit-of-giving-up-a-low-mortgage-for-a-new-house/",
+   "competitor": "A Wealth of Common Sense – Cost/Benefit of Giving Up a Low Mortgage Rate",
+   "features_checked": "analiza kosztu utraty niskiej stopy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł); artykuł z 2022",
+   "conclusion": "Substitute (treść analityczna). Pokazuje, że temat lock-in jest stały od 2022.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "remodel vs move calculator",
+   "url": "https://www.remodelum.com/renovation-cost-estimator",
+   "competitor": "Remodelum – Whole House Renovation Cost Estimator (2026)",
+   "features_checked": "szacunek kosztów remontu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (tylko fragment wejściowy: koszt remontu). Brak porównania z przeprowadzką.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "nie dotyczy (kontekst zadania + zachowanie AI-podsumowań w wynikach)",
+   "url": "nie dotyczy",
+   "competitor": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode) i doradcy (agent, wykonawca, loan officer)",
+   "features_checked": "zdolność do jakościowej odpowiedzi, prostych obliczeń i generowania kalkulatora; spójność modelu wielookresowego",
+   "access_limits": "nie testowano bezpośrednio; dowód: kontekst zadania i AI-podsumowania wyszukiwarki w tym badaniu",
+   "conclusion": "Substitute: prosta wersja jest rozwiązywana przez AI. AI-podsumowanie wskazało brak jednego narzędzia dla pełnego scenariusza.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "should I renovate or move calculator with low mortgage rate",
+  "remodel vs move calculator",
+  "\"stay put\" or \"move up\" calculator keep 3% mortgage HELOC addition vs buying bigger house",
+  "RenoFi renovate or move calculator borrowing power rate lock-in",
+  "financial planning app or advisor tool compare renovate vs move scenario home equity (Homebot, Boldin, ProjectionLab)",
+  "reddit need more space add addition or sell and buy bigger house 3% mortgage spreadsheet",
+  "2026 mortgage rate lock-in share of homeowners with rate below 4% renovating instead of moving remodeling spending"
+ ]
+}

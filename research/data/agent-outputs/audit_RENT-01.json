@@ -1,0 +1,370 @@
+{
+ "id": "RENT-01",
+ "competitors": [
+  {
+   "name": "OverlineIQ - Keep vs. Sell a Rental Property calculator (+ artykuł 1031 Exchange vs. Selling Outright)",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "type": "partial",
+   "access": "Publiczna strona bloga z kalkulatorem; czy darmowy i czy wymaga logowania - niezweryfikowane. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Wg podsumowań: decyzja keep vs sell oparta na 6 zmiennych finansowych; net cash ze sprzedaży; zysk liczony od bazy skorygowanej (zakup + ulepszenia - amortyzacja); rozbicie podatku na składniki (recapture itd.); zawieszone straty pasywne (passive loss carryforwards) odblokowywane przy sprzedaży; wcześniejsza bonus depreciation. Osobny wpis porównuje 1031 vs sprzedaż (także z cost segregation na nieruchomości zastępczej). Najbliższy fragment produktu.",
+   "misses_or_unverified_pl": "Niezweryfikowane: model step-up przy śmierci i majątek spadkobierców, sprzedaż ratalna (seller financing), capex przed sprzedażą (baza + pustostan), 1031 do DST lub do nieruchomości z PM w jednym wspólnym porównaniu, NPV/IRR wielu wariantów, break-even horyzontu, tornado. Nie wiadomo, czy 1031 jest w tym samym modelu, czy tylko w osobnym artykule. Ryzyko: strona może mieć więcej funkcji, niż widać w podsumowaniu."
+  },
+  {
+   "name": "Resideline - Sell or Keep Calculator: Net Sheet vs Hold Return",
+   "url": "https://resideline.com/sell-or-keep-calculator",
+   "type": "partial",
+   "access": "Publiczna strona; dostęp/rejestracja niezweryfikowane. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Seller net sheet (prowizja, spłata kredytu, recapture, podatek od zysków kapitałowych) porównany ze zwrotem z trzymania (cash flow, spłata kredytu, aprecjacja); wynik w postaci rocznego zwrotu.",
+   "misses_or_unverified_pl": "W podsumowaniu brak: 1031, DST, step-up/majątek spadkobierców, sprzedaż ratalna, capex przed sprzedażą, zawieszone straty, break-even, tornado - wszystkie niezweryfikowane (nie 'brak')."
+  },
+  {
+   "name": "top1031.com - Compare 5 Investment-Property Sale Paths",
+   "url": "https://www.top1031.com/tools/compare-1031-options/",
+   "type": "partial",
+   "access": "Publiczne narzędzie na stronie firmy 1031 (prawdopodobnie lead-gen, niezweryfikowane). Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Porównuje 5 ścieżek: bezpośredni 1031, 1031 do DST, sprzedaż ratalna, Qualified Opportunity Fund, sprzedaż wprost - wg terminu opodatkowania, kontroli, terminów, płynności i ryzyka. Pokrywa najwięcej wariantów wyjścia z badanych narzędzi.",
+   "misses_or_unverified_pl": "Z podsumowania wynika porównanie raczej jakościowe; model liczbowy po podatkach - niezweryfikowany. Brak w podsumowaniu wariantu hold do śmierci/step-up, capex, zawieszonych strat, majątku spadkobierców, wieloletniego cash flow, break-even. Źródło ma interes komercyjny w 1031/DST."
+  },
+  {
+   "name": "top1031.com - Installment Sale vs 1031: Advisor Decision Framework (arkusz per klient)",
+   "url": "https://www.top1031.com/learn/installment-sale-vs-1031-advisor/",
+   "type": "substitute",
+   "access": "Treść publiczna; opisuje arkusz budowany przez doradcę, a nie gotowe narzędzie. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Opisuje wejścia modelu: cena sprzedaży, baza skorygowana z amortyzacją, stawki federalne + stanowe, stopa reinwestycji, oprocentowanie seller note, horyzont trzymania. Dobry wzorzec struktury wejść.",
+   "misses_or_unverified_pl": "To framework dla doradców, nie gotowy kalkulator dla konsumenta; step-up, capex, PM/DST fee drag i majątek spadkobierców - niezweryfikowane."
+  },
+  {
+   "name": "NorthPoint Asset Management - Rent vs Sell Calculator",
+   "url": "https://northpointam.com/rent-sell-calculator",
+   "type": "partial",
+   "access": "Publiczna strona firmy; dostęp niezweryfikowany. Strona nieotwierana, dowód: search-summary (tylko tytuł w wynikach).",
+   "covers_pl": "Pojawił się ponownie w wynikach dla 'rental property exit strategy calculator'; z tytułu: porównanie wynajmuj vs sprzedaj.",
+   "misses_or_unverified_pl": "Podsumowanie nie opisało funkcji: podatki, recapture, 1031, step-up, sprzedaż ratalna, capex - wszystko niezweryfikowane. Notatka z fali 1 (partial) utrzymana, ale bez nowych dowodów."
+  },
+  {
+   "name": "Lumo Calculator - Depreciation Recapture Calculator (hold vs sell)",
+   "url": "https://lumocalculator.com/finance/recapture-depreciation-calculator",
+   "type": "partial",
+   "access": "Publiczny kalkulator; dostęp niezweryfikowany. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Wg podsumowania: wykorzystuje bazę skorygowaną, przychód ze sprzedaży i założenia stawek do porównania scenariuszy hold vs sell z widokiem wpływu podatkowego; recapture 1245/1250.",
+   "misses_or_unverified_pl": "Jednofunkcyjny moduł podatkowy; 1031, step-up, sprzedaż ratalna, capex, wieloletni cash flow - niezweryfikowane."
+  },
+  {
+   "name": "Klaster kalkulatorów depreciation recapture (ustax.tools, mydepreciation.org, Universal Pacific 1031, Inside1031, CalculatorHub, FigureNerd, SuperCalc)",
+   "url": "https://ustax.tools/depreciation-recapture-calculator/",
+   "type": "partial",
+   "access": "Publiczne, w większości darmowe kalkulatory (niezweryfikowane). Strony nieotwierane, dowód: search-summary.",
+   "covers_pl": "Rozbicie zysku na recapture §1245 (stawka zwykła), unrecaptured §1250 (do 25%), LTCG i NIIT 3,8%; część od pośredników 1031 wskazuje odroczenie przez 1031.",
+   "misses_or_unverified_pl": "Jednofunkcyjne: liczą podatek przy sprzedaży, nie porównują strategii w czasie; brak w podsumowaniach step-up, sprzedaży ratalnej, capex, majątku spadkobierców. Zgodnie z definicją nie są konkurentem bezpośrednim."
+  },
+  {
+   "name": "Singh PWM - Real Estate Rental Opportunity Cost Calculator",
+   "url": "https://www.singhpwm.com/calculators/real-estate-rental-opportunity-cost-calculator",
+   "type": "partial",
+   "access": "Kalkulator na stronie doradcy majątkowego; dostęp niezweryfikowany. Strona nieotwierana, dowód: search-summary (tylko tytuł).",
+   "covers_pl": "Z tytułu: koszt alternatywny trzymania kapitału w nieruchomości na wynajem (zależność 'stopa alternatywy' z opisu produktu).",
+   "misses_or_unverified_pl": "Funkcje nieopisane w podsumowaniu - podatki, 1031, step-up, sprzedaż ratalna, capex niezweryfikowane."
+  },
+  {
+   "name": "GCA 1031 - Real Estate Exit Analysis (usługa)",
+   "url": "https://www.gca1031.com/our-services/real-estate-exit-analysis/",
+   "type": "substitute",
+   "access": "Usługa doradcza firmy 1031 (prawdopodobnie bezpłatna konsultacja/lead-gen lub płatna - niezweryfikowane). Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Analiza wyjścia porównująca 1031, DST, fundusze Opportunity Zone, hold-and-refinance i sprzedaż gotówkową; strona przyznaje, że czasem najlepsza jest zwykła sprzedaż z zapłatą podatku.",
+   "misses_or_unverified_pl": "Nie jest samoobsługowym narzędziem; czy uwzględnia step-up, sprzedaż ratalną, capex - niezweryfikowane. Konflikt interesów (sprzedaż produktów 1031/DST)."
+  },
+  {
+   "name": "Doradcy/CPA/firmy 1031 i DST - treści o step-up i 'swap till you drop' (JTC Group, Anderson Advisors, Baker Wealth Strategies, Anchor1031, Realized1031, Sera Capital, Goldstein & Co.)",
+   "url": "https://www.jtcgroup.com/insights/1031-exchange-estate-planning/",
+   "type": "substitute",
+   "access": "Treści publiczne; właściwa analiza przez płatnego doradcę/CPA lub sprzedawcę produktu. Strony nieotwierane, dowód: search-summary.",
+   "covers_pl": "Wyjaśniają kompromis odroczenie (1031) vs eliminacja podatku (step-up §1014), strategię swap-till-you-drop, pułapkę sprzedaży ratalnej przy śmierci sprzedającego, porównania 1031 vs 721 vs 453, DST. Doradca może zbudować pełny model indywidualnie.",
+   "misses_or_unverified_pl": "Treści, nie kalkulatory; pełne modelowanie wymaga płatnego doradcy; źródła w dużej mierze sprzedażowe (DST, Deferred Sales Trust). Narzędzia liczbowe tych firm - niezweryfikowane (Kay Properties, IPX1031, Asset Preservation nie pojawiły się w wynikach)."
+  },
+  {
+   "name": "Generyczne kalkulatory Rent vs Sell (Rental Profit Playbook, OC Good Life, NARPM, Paranova Buyers)",
+   "url": "https://rentalprofitplaybook.com/tools/rent-vs-sell-calculator/",
+   "type": "partial",
+   "access": "Publiczne strony; NARPM w sekcji 'members/resources' - możliwy wymóg członkostwa (niezweryfikowane). Strony nieotwierane, dowód: search-summary.",
+   "covers_pl": "Podstawowe porównanie wynajmuj vs sprzedaj (cash flow vs przychód ze sprzedaży).",
+   "misses_or_unverified_pl": "Wg podsumowania wyszukiwarki 'generyczne, bez tego rodzaju modelowania podatkowego'; 1031, step-up, sprzedaż ratalna niezweryfikowane. Część pochodzi od kupców gotówkowych (lead-gen)."
+  },
+  {
+   "name": "Financial Samurai - 'Remain A Landlord Or Sell Investment Property To Simplify Life?' (+ komentarze)",
+   "url": "https://www.financialsamurai.com/the-moment-of-truth-has-arrived-gut-it-out-as-a-landlord-or-sell/",
+   "type": "substitute",
+   "access": "Artykuł publiczny. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Opis dylematu 'tired landlord': trzymać dla dziecka (step-up) vs sprzedać i uprościć życie; komentarze podzielone (ryzyko najemców).",
+   "misses_or_unverified_pl": "Narracja i dyskusja, bez narzędzia liczbowego. Wątki Reddit nie pojawiły się w wynikach."
+  },
+  {
+   "name": "Bogleheads - wątek Sell or Rent Out (notatka z fali 1)",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=174713",
+   "type": "substitute",
+   "access": "Forum publiczne. URL z notatek fali 1 - nie pojawił się ponownie w tej sesji; strona nieotwierana.",
+   "covers_pl": "Dyskusja forumowa o sprzedaży vs wynajmie (wg notatki z fali 1).",
+   "misses_or_unverified_pl": "Nie potwierdzono w tej sesji; treść i aktualność niezweryfikowane."
+  },
+  {
+   "name": "Asystenci AI: ChatGPT (Intelligent UI od 7.10.2026) i Google AI Mode (interaktywne narzędzia od 19.08.2026)",
+   "url": "n/d (nie wyszukiwano; kontekst z zadania)",
+   "type": "substitute",
+   "access": "Darmowe dla wszystkich użytkowników (wg kontekstu zadania); nie testowano.",
+   "covers_pl": "Mogą wyjaśnić 4-6 wariantów, policzyć przybliżony podatek przy sprzedaży i wygenerować ad hoc kalkulator/formularz w odpowiedzi; nawet podsumowania wyszukiwarki w tej sesji dały poprawny jakościowy framework (deferral vs step-up, pułapka ratalna).",
+   "misses_or_unverified_pl": "Niezweryfikowane: spójność wieloletniego modelu po podatkach dla 6 wariantów, poprawne recapture w roku 1 przy sprzedaży ratalnej (§453(i)), audytowalność założeń, tornado, zapisywanie scenariuszy."
+  },
+  {
+   "name": "CRE Daily - Renovation ROI Calculator (notatka z fali 1)",
+   "url": "https://www.credaily.com/briefs/return-on-investment-roi-calculator-your-guide-to-maximizing-profits-in-multifamily-renovations",
+   "type": "partial",
+   "access": "URL z notatek fali 1 - nie pojawił się w tej sesji; strona nieotwierana.",
+   "covers_pl": "Fragment capex/remont ROI (multifamily) - wg notatki z fali 1.",
+   "misses_or_unverified_pl": "Nie potwierdzono w tej sesji; dotyczy multifamily, nie decyzji wyjścia; podatki, baza, pustostan niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań extended po angielsku, rynek US; wyłącznie podsumowania wyników, żadna strona nie została otwarta ani przetestowana; pewność: średnia). Najbliższe narzędzia częściowe: OverlineIQ (keep vs sell z recapture i zawieszonymi stratami pasywnymi oraz osobny wpis 1031 vs sprzedaż), Resideline (net sheet vs hold return), top1031 'Compare 5 Investment-Property Sale Paths' (1031, 1031 do DST, sprzedaż ratalna, QOF, sprzedaż wprost - wygląda na porównanie jakościowe), NorthPoint Rent vs Sell (funkcje niezweryfikowane), Lumo i klaster kalkulatorów recapture (jednofunkcyjne). Hipotetyczna luka: jedno wielookresowe porównanie po podatkach (NPV/IRR, roczny cash flow) wszystkich 6 wariantów, w którym zależności wpływają na siebie nawzajem: (a) hold do śmierci ze step-up i majątkiem spadkobierców zależnym od wieku/horyzontu, (b) sprzedaż ratalna z recapture rozpoznawanym w roku 1 (§453(i)) i ryzykiem śmierci sprzedającego, (c) capex przed sprzedażą (wzrost bazy i ceny vs koszt i pustostan), (d) opłaty PM/DST obniżające yield po 1031, (e) zawieszone straty jako offset, (f) break-even horyzontu i tornado. W podsumowaniach żaden kalkulator nie łączył step-up z porównaniem sprzedaży, 1031 i sprzedaży ratalnej. Główne ryzyko dla tezy: OverlineIQ i top1031 mogą mieć więcej funkcji, niż widać w podsumowaniach (step-up i model liczbowy - niezweryfikowane). Substytutami są płatni doradcy, CPA, firmy 1031/DST (konflikt interesów) i asystenci AI.",
+ "search_scope_pl": "7 wywołań WebSearch (wszystkie w trybie extended, wyniki tylko dla US, zapytania po angielsku): 1 pytanie w języku naturalnym, 1 krótkie zapytanie kategorii, 1 z alternatywną terminologią (after-tax hold vs sell, recapture, step-up, installment), 1 o oprogramowanie i narzędzia doradcze, 1 o Reddit i arkusze, 1 weryfikujące funkcje OverlineIQ, 1 o kalkulatorach sprzedaży ratalnej vs 1031. WebFetch zablokowany: żadna strona nie została otwarta, nie testowano formularzy, nie sprawdzano paywalli ani logowania; dowodem są tylko podsumowania wyszukiwarki. Nie sprawdzono: DealCheck, BiggerPockets calculators, Stessa, A.CRE hold/sell models, narzędzi Kay Properties, IPX1031 i Asset Preservation, aplikacji w sklepach, szablonów Excel/Google Sheets na marketplace'ach (Etsy, Gumroad) ani wątków Reddit (nie pojawiły się w wynikach). Nie testowano ChatGPT ani Google AI Mode na przykładowym prompcie. Brak danych o wolumenie wyszukiwań.",
+ "demand_signals": [
+  {
+   "signal_pl": "W jednym wyszukiwaniu pojawiło się co najmniej 8 osobnych kalkulatorów depreciation recapture z 2026 r. (ustax.tools, Lumo, mydepreciation.org, Universal Pacific 1031, CalculatorHub, FigureNerd, SuperCalc, Inside1031). Wydawcy inwestują w ten fragment problemu, co pośrednio sugeruje realny popyt w wyszukiwarce.",
+   "url": "https://ustax.tools/depreciation-recapture-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Nowe w 2026 r. dedykowane kalkulatory i poradniki keep vs sell dla właścicieli nieruchomości na wynajem (OverlineIQ, Resideline): inni gracze widzą popyt na tę decyzję.",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele poradników 'when to sell a rental property' z 2026 r. (ibuyer.com, HonestCasa, Alpine Kansas City, poradniki kalifornijskie) wskazuje na stały popyt informacyjny w momencie decyzji.",
+   "url": "https://ibuyer.com/blog/when-to-sell-rental-property/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Firmy 1031 i DST oraz doradcy (JTC, Anchor1031, top1031, Baker Wealth, Anderson Advisors) publikują treści o step-up vs 1031 i 'swap till you drop', a top1031 udostępnia narzędzie porównujące 5 ścieżek sprzedaży. To komercyjny popyt ze strony starszych inwestorów planujących wyjście.",
+   "url": "https://www.top1031.com/tools/compare-1031-options/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kancelarie prawne w różnych stanach (TX, GA) piszą o tym, jak zostawić nieruchomości na wynajem dzieciom bez podatku od zysków kapitałowych (step-up vs darowizna za życia). Pytanie o spadkobierców pojawia się regularnie.",
+   "url": "https://burch-law.com/how-do-i-avoid-capital-gains-for-my-kids-if-i-leave-them-rental-properties-in-texas/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wpis Financial Samurai o dylemacie 'zostać landlordem czy sprzedać, żeby uprościć życie' z podzielonymi komentarzami czytelników: bezpośredni ślad dokładnie tego momentu decyzji ('tired landlord').",
+   "url": "https://www.financialsamurai.com/the-moment-of-truth-has-arrived-gut-it-out-as-a-landlord-or-sell/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Hipoteza: starzejąca się kohorta drobnych właścicieli (55-75 lat) z dużym niezrealizowanym zyskiem tworzy coroczny strumień takich decyzji. Wolumenu nie zweryfikowano; liczby gospodarstw domowych nie są miesięcznym popytem.",
+   "url": "https://www.jtcgroup.com/insights/1031-exchange-estate-planning/",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI oceniam jako średnie. Już podsumowania wyszukiwarki w tej sesji dały poprawny jakościowy framework: 1031 odracza podatek, a step-up go eliminuje; pułapka sprzedaży ratalnej przy śmierci sprzedającego; recapture w roku 1 przy sprzedaży ratalnej; terminy 45/180 dni. ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą wygenerować ad hoc kalkulator podatku przy sprzedaży albo prosty sell-vs-hold. Pytanie z przykładowego promptu ma jednak wiele okresów i wiele wariantów. Trzeba w nim połączyć recapture §1250, NIIT, podatek stanowy, zawieszone straty, harmonogram sprzedaży ratalnej, step-up zależny od horyzontu, opłaty PM/DST, capex z pustostanem, break-even i tornado. W jednorazowej odpowiedzi czatu łatwo o niespójne założenia i brak audytowalności, dlatego asystent może odesłać użytkownika do zewnętrznego narzędzia lub do CPA. Ryzyko dystrybucyjne: asystenci chętnie cytują treści firm 1031/DST i doradców (top1031, JTC), a nie kalkulatory. Nie testowano asystentów na przykładowym prompcie, więc ta ocena jest niezweryfikowana.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja dotyczy dużej grupy drobnych właścicieli i ma bardzo wysoką stawkę, ale każdy właściciel podejmuje ją zwykle raz. Widać silny popyt na fragmenty (recapture, when to sell, 1031 vs sell) i bezpośrednie ślady dylematu 'tired landlord'. Nie ma danych o wolumenie dla zintegrowanego pytania.",
+   "evidence_pl": "Co najmniej 8 kalkulatorów recapture w jednym wyniku; nowe kalkulatory keep vs sell z 2026 r. (OverlineIQ, Resideline); wiele poradników 'when to sell rental' z 2026 r.; treści kancelarii o zostawianiu nieruchomości na wynajem dzieciom; wpis Financial Samurai z dyskusją.",
+   "gaps_pl": "Brak wolumenów wyszukiwań (np. 'should I sell my rental property', 'depreciation recapture calculator', '1031 vs sell'); brak wątków Reddit w wynikach; nie zweryfikowano liczby właścicieli 55-75 lat.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po różnorodnych zapytaniach nie widać narzędzia, które w jednym modelu łączy hold do śmierci ze step-up, 1031 (PM/DST), sprzedaż ratalną i capex przed sprzedażą. Narzędzia częściowe pomijają kluczowe zależności (step-up i majątek spadkobierców, recapture w roku 1 przy sprzedaży ratalnej, capex z bazą i pustostanem). Nie daję 5, bo OverlineIQ i top1031 mogą być bliżej, niż pokazują podsumowania.",
+   "evidence_pl": "OverlineIQ: keep vs sell z recapture i zawieszonymi stratami, 1031 w osobnym wpisie, step-up nie potwierdzony. Resideline: net sheet vs hold, roczny zwrot. top1031: 5 ścieżek, w tym installment i DST, porównanie według kryteriów jakościowych, bez wariantu hold/step-up. Wyszukiwanie o installment vs 1031 vs cash sale: 'nie znaleziono dedykowanego kalkulatora porównującego wszystkie trzy'.",
+   "gaps_pl": "Strony nieotwierane; nie sprawdzono DealCheck, BiggerPockets, Stessa, A.CRE, narzędzi QI/DST sponsorów, szablonów płatnych. Funkcje OverlineIQ i top1031 niezweryfikowane.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Problem wymaga długiego, wieloletniego modelu i jawnych założeń, więc asystent ma powód, by wskazać narzędzie zewnętrzne. Asystenci dobrze jednak radzą sobie z jakościowym wyjaśnieniem i prostym kalkulatorem w odpowiedzi, a nie potrzeba tu świeżych danych lokalnych poza stawkami podatkowymi.",
+   "evidence_pl": "Podsumowania wyszukiwarki w tej sesji same dawały poprawny framework i odsyłały do CPA. Według kontekstu zadania ChatGPT Intelligent UI i Google AI Mode generują interaktywne narzędzia.",
+   "gaps_pl": "Nie testowano ChatGPT/AI Mode na przykładowym prompcie; nie wiadomo, czy cytują zewnętrzne kalkulatory w tej niszy.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Odbiorcy to amerykańscy konsumenci o wysokim majątku (nieruchomości za około 500 tys. USD, wiek 55-75) w drogich wertykałach: nieruchomości i kupcy gotówkowi, pośrednicy 1031, doradcy majątkowi, zarządcy nieruchomości, home services (dach, HVAC), estate planning, refi/HELOC. Nie daję 5, bo widownia jest niszowa, a reklamy DST/papierów wartościowych mogą podlegać ograniczeniom (niezweryfikowane).",
+   "evidence_pl": "W wynikach liczni gracze komercyjni: kupcy gotówkowi (ibuyer.com, Paranova Buyers), firmy 1031/DST (top1031, Realized1031, Anchor1031, GCA 1031), doradcy (Sera Capital, Goldstein, Singh PWM), kancelarie prawne.",
+   "gaps_pl": "Brak danych o RPM/CPC; nie zweryfikowano polityk Google Ads/AdSense wobec reklam DST i usług finansowych.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Dane są darmowe (stawki IRS, reguły §1031, §1014, §453, §469), a obliczenia deterministyczne. Model jest jednak złożony (6 wariantów, wiele okresów, recapture, NIIT, harmonogram sprzedaży ratalnej, step-up) i wymaga corocznej aktualizacji progów oraz stawek stanowych (można je przyjmować od użytkownika).",
+   "evidence_pl": "Źródła opisują stałą strukturę reguł: recapture §1245/§1250 do 25%, NIIT 3,8%, terminy 1031 45/180 dni, recapture w roku 1 przy sprzedaży ratalnej (§453(i)). Jedno źródło podaje, że §1031 pozostaje nienaruszony po OBBBA 2025.",
+   "gaps_pl": "Nie oceniono kosztu utrzymania 50 stanowych reżimów podatkowych ani zmian legislacyjnych (np. propozycji ograniczenia step-up lub 1031).",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Wysokie ryzyko treści: decyzje warte setki tysięcy USD, a interpretacja prawna jest istotna (kwalifikacja 1031, recapture przy sprzedaży ratalnej, step-up przy współwłasności/LLC/community property, ryzyko DST). Błąd może skłonić użytkownika do kosztownej, nieodwracalnej decyzji. Zastrzeżenie o konsultacji z CPA łagodzi ryzyko, ale go nie usuwa.",
+   "evidence_pl": "Źródła ostrzegają przed pułapką sprzedaży ratalnej przy śmierci, komplikacjami step-up w spółkach/LLC i niejasnym statusem prawnym Deferred Sales Trust. Źródła nie zgadzają się co do ryzyka struktur DST.",
+   "gaps_pl": "Nie analizowano odpowiedzialności prawnej wydawcy narzędzia; nie sprawdzono, jak konkurenci formułują zastrzeżenia.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Produkt w dużej mierze wykorzystuje wspólne moduły: oś czasu cash flow, finansowanie (amortyzacja seller note), podatek (LTCG, recapture, NIIT), wartość nieruchomości i aprecjacja, capex. Może dać rodzeństwo: wynająć vs sprzedać dom przy przeprowadzce, dziedziczona nieruchomość (sprzedać czy trzymać), cost segregation vs brak, downsizing seniora ze step-up, refi vs sprzedaż.",
+   "evidence_pl": "Wyniki pokazują pokrewne zapytania i narzędzia (rent vs sell przy przeprowadzce, nieruchomości dziedziczone, recapture, opportunity cost), co potwierdza naturalną rodzinę produktów.",
+   "gaps_pl": "Moduł energii jest tu nieistotny; nie zweryfikowano popytu na produkty siostrzane.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważony wynik to około 3,35/5 (demand 3, gap 4, ai_distribution 3, ad_potential 4, feasibility 3, reliability 2, shared_engine 4). Luka w integracji (step-up + 1031/DST + sprzedaż ratalna + capex + majątek spadkobierców w jednym modelu) jest prawdopodobna, ale oparta wyłącznie na podsumowaniach wyszukiwarki. Najbliżsi gracze (OverlineIQ, top1031, Resideline, NorthPoint) mogą mieć więcej funkcji, niż widać. Ryzyko treści jest wysokie, a popyt na zintegrowane pytanie nie został zmierzony. Przed pilotem: (1) ręcznie otworzyć i przetestować OverlineIQ, top1031 Compare 5 Paths, Resideline, NorthPoint; (2) sprawdzić DealCheck, BiggerPockets, Stessa, A.CRE, narzędzia QI/DST sponsorów i płatne szablony; (3) zmierzyć wolumen fraz typu 'should I sell my rental property', 'depreciation recapture calculator', '1031 vs sell', 'step up basis rental property'; (4) przetestować przykładowy prompt w ChatGPT i Google AI Mode. Jeśli luka się potwierdzi, warto rozważyć pilot w okrojonej wersji MVP (sprzedaż teraz vs hold do step-up vs 1031 vs sprzedaż ratalna, stawka stanowa wpisywana przez użytkownika, mocne zastrzeżenia).",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "rental property exit strategy calculator sell vs 1031 vs hold",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "competitor": "OverlineIQ - Keep vs. Sell a Rental Property calculator",
+   "features_checked": "keep vs sell, net cash ze sprzedaży, baza skorygowana, rozbicie podatku, recapture, zawieszone straty pasywne, bonus depreciation, 1031 (osobny wpis), step-up, sprzedaż ratalna, capex",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; darmowość/logowanie niezweryfikowane",
+   "conclusion": "Partial, najbliższy fragment. Potwierdzone w podsumowaniu: recapture i zawieszone straty; 1031 w osobnym artykule. Step-up, sprzedaż ratalna i capex niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "overlineiq keep vs sell rental property calculator passive loss carryforward step-up 1031 features",
+   "url": "https://overlineiq.com/blog",
+   "competitor": "OverlineIQ - blog (1031 Exchange vs. Selling Outright)",
+   "features_checked": "porównanie 1031 vs sprzedaż wprost, cost segregation na nieruchomości zastępczej, step-up",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Osobny model 1031 vs sprzedaż; nie potwierdzono integracji z keep vs sell ani modelu step-up. Partial.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rental property exit strategy calculator sell vs 1031 vs hold",
+   "url": "https://resideline.com/sell-or-keep-calculator",
+   "competitor": "Resideline - Sell or Keep Calculator",
+   "features_checked": "seller net sheet (prowizja, spłata, recapture, cap gains) vs zwrot z trzymania; 1031, step-up, sprzedaż ratalna",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: dwa warianty (sprzedaj/trzymaj), wynik jako roczny zwrot; pozostałe warianty niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "real estate investor exit planning software compare 1031 DST, outright sale, installment sale, hold advisor tool",
+   "url": "https://www.top1031.com/tools/compare-1031-options/",
+   "competitor": "top1031.com - Compare 5 Investment-Property Sale Paths",
+   "features_checked": "1031, 1031 do DST, sprzedaż ratalna, QOF, sprzedaż wprost; kryteria: termin podatku, kontrola, terminy, płynność, ryzyko; model liczbowy; hold/step-up",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; możliwy lead-gen (niezweryfikowane)",
+   "conclusion": "Partial: najszersze pokrycie wariantów wyjścia, ale porównanie wygląda na jakościowe; brak w podsumowaniu wariantu hold/step-up i capex.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "installment sale vs 1031 exchange vs cash sale calculator rental property",
+   "url": "https://www.top1031.com/learn/installment-sale-vs-1031-advisor/",
+   "competitor": "top1031.com - Installment Sale vs 1031 Advisor Decision Framework",
+   "features_checked": "opis arkusza doradcy: baza z amortyzacją, stawki fed+stan, stopa reinwestycji, oprocentowanie seller note, horyzont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: framework arkusza dla doradców, nie gotowe narzędzie konsumenckie. Wyszukiwanie nie znalazło kalkulatora porównującego sprzedaż ratalną, 1031 i sprzedaż gotówkową obok siebie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rental property exit strategy calculator sell vs 1031 vs hold",
+   "url": "https://northpointam.com/rent-sell-calculator",
+   "competitor": "NorthPoint Asset Management - Rent vs Sell Calculator",
+   "features_checked": "tytuł narzędzia; funkcje podatkowe, 1031, step-up niezweryfikowane",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Notatka z fali 1 (partial) utrzymana; brak nowych dowodów o funkcjach.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "after-tax hold vs sell investment property analysis depreciation recapture step-up heirs installment sale comparison tool",
+   "url": "https://lumocalculator.com/finance/recapture-depreciation-calculator",
+   "competitor": "Lumo Calculator - Depreciation Recapture Calculator",
+   "features_checked": "recapture 1245/1250, porównanie hold vs sell z wpływem podatkowym; step-up, sprzedaż ratalna",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: moduł podatkowy hold vs sell, bez potwierdzonych pozostałych wariantów.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "after-tax hold vs sell investment property analysis depreciation recapture step-up heirs installment sale comparison tool",
+   "url": "https://ustax.tools/depreciation-recapture-calculator/",
+   "competitor": "Klaster kalkulatorów recapture (ustax.tools, mydepreciation.org, Universal Pacific 1031, Inside1031, CalculatorHub, FigureNerd, SuperCalc)",
+   "features_checked": "§1245, §1250 do 25%, LTCG, NIIT 3,8%; porównanie strategii w czasie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, jednofunkcyjne; nie są konkurentem bezpośrednim. Sygnał popytu na fragment podatkowy.",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rental property exit strategy calculator sell vs 1031 vs hold",
+   "url": "https://www.singhpwm.com/calculators/real-estate-rental-opportunity-cost-calculator",
+   "competitor": "Singh PWM - Real Estate Rental Opportunity Cost Calculator",
+   "features_checked": "koszt alternatywny kapitału w nieruchomości (z tytułu); podatki i warianty wyjścia niezweryfikowane",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial (fragment: stopa alternatywy); funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "real estate investor exit planning software compare 1031 DST, outright sale, installment sale, hold advisor tool",
+   "url": "https://www.gca1031.com/our-services/real-estate-exit-analysis/",
+   "competitor": "GCA 1031 - Real Estate Exit Analysis",
+   "features_checked": "usługa porównująca 1031, DST, Opportunity Zone, hold-and-refinance, sprzedaż gotówkową",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; usługa doradcza, cena/warunki niezweryfikowane",
+   "conclusion": "Substitute (doradca z konfliktem interesów); nie jest samoobsługowym narzędziem.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I sell my rental property, do a 1031 exchange, or hold until death for step-up in basis",
+   "url": "https://www.jtcgroup.com/insights/1031-exchange-estate-planning/",
+   "competitor": "JTC Group i inni doradcy/firmy 1031 (Anderson Advisors, Baker Wealth, Anchor1031, top1031 learn, Realized1031)",
+   "features_checked": "treści o step-up §1014, swap till you drop, DST, pułapce sprzedaży ratalnej przy śmierci, LLC/spółkach",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: treści edukacyjne i lead-gen doradców; brak potwierdzonego narzędzia liczbowego dla wszystkich wariantów.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "overlineiq keep vs sell rental property calculator passive loss carryforward step-up 1031 features",
+   "url": "https://rentalprofitplaybook.com/tools/rent-vs-sell-calculator/",
+   "competitor": "Generyczne kalkulatory Rent vs Sell (Rental Profit Playbook, OC Good Life, NARPM, Paranova Buyers)",
+   "features_checked": "rent vs sell; modelowanie podatkowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; NARPM pod ścieżką members/resources - możliwy wymóg członkostwa (niezweryfikowane)",
+   "conclusion": "Partial: według podsumowania generyczne, bez tego rodzaju modelowania podatkowego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit tired landlord sell rental or keep for kids step-up basis spreadsheet",
+   "url": "https://www.financialsamurai.com/the-moment-of-truth-has-arrived-gut-it-out-as-a-landlord-or-sell/",
+   "competitor": "Financial Samurai - Remain A Landlord Or Sell",
+   "features_checked": "opis dylematu, step-up dla dziecka, komentarze czytelników; arkusz",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść i dyskusja). Brak wątków Reddit i szablonów arkuszy w wynikach (nie potwierdzono istnienia ani braku).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "installment sale vs 1031 exchange vs cash sale calculator rental property",
+   "url": "https://www.realized1031.com/blog/using-an-installment-sale-with-a-1031-exchange",
+   "competitor": "Realized1031 (sponsor/dystrybutor DST) - treści o 1031 i sprzedaży ratalnej",
+   "features_checked": "łączenie sprzedaży ratalnej z 1031 (boot), plusy i minusy 1031 po sprzedaży nieruchomości na wynajem; narzędzia liczbowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Notatka z fali 1 o treściach sponsorów DST częściowo potwierdzona (Realized); narzędzia kalkulacyjne niezweryfikowane. Kay Properties nie pojawiło się.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I sell my rental property, do a 1031 exchange, or hold until death for step-up in basis",
+  "rental property exit strategy calculator sell vs 1031 vs hold",
+  "after-tax hold vs sell investment property analysis depreciation recapture step-up heirs installment sale comparison tool",
+  "real estate investor exit planning software compare 1031 DST, outright sale, installment sale, hold advisor tool",
+  "reddit tired landlord sell rental or keep for kids step-up basis spreadsheet",
+  "overlineiq keep vs sell rental property calculator passive loss carryforward step-up 1031 features",
+  "installment sale vs 1031 exchange vs cash sale calculator rental property"
+ ]
+}

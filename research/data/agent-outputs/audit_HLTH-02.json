@@ -1,0 +1,433 @@
+{
+ "id": "HLTH-02",
+ "competitors": [
+  {
+   "name": "CareCredit Payment Calculator (Synchrony), także osadzany na stronach gabinetów",
+   "url": "https://www.napervillepodiatrist.com/carecredit-payment-calculator/",
+   "type": "partial",
+   "access": "darmowy; wg podsumowania wyszukiwania kalkulator jest na carecredit.com (bezpośredni URL kalkulatora nie pojawił się w wynikach), a gabinety go osadzają; strona nieotwierana",
+   "covers_pl": "Rata miesięczna dla promocji deferred interest (kwota / liczba miesięcy promocji, np. 1200 USD / 6 = 200 USD). CareCredit sam ostrzega, że minimalna płatność może nie spłacić salda w terminie (https://www.carecredit.com/well-u/financial-health/deferred-interest-vs-apr/). Wg summary APR po promocji to 32,99%.",
+   "misses_or_unverified_pl": "Liczy tylko jeden produkt finansowania. Nie uwzględnia ubezpieczenia, deductible, OOP, roku planu, HSA/FSA ani planu szpitala 0%. Niezweryfikowane: czy pokazuje kwotę odsetek naliczonych wstecz i czy porównuje z innymi produktami."
+  },
+  {
+   "name": "Surgery Cost Estimator",
+   "url": "https://surgerycosteestimator.com/calculator",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Koszt własny zabiegu w jednym roku planu: pozostały deductible, potem coinsurance, na końcu limit pozostałego OOP.",
+   "misses_or_unverified_pl": "Wg summary liczy jeden okres. Brak porównania tego roku z przyszłym, zmiany planu w OE, przeniesienia opieki pooperacyjnej na nowy rok i finansowania. Wszystkie pola są niezweryfikowane."
+  },
+  {
+   "name": "Health Cost Hub – Out-of-pocket cost calculator",
+   "url": "https://healthcosthub.com/tools/out-of-pocket-cost-calculator",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Kalkulator 'ile naprawdę zapłacisz': deductible, coinsurance, limit OOP.",
+   "misses_or_unverified_pl": "Wielookresowość, scenariusze timing × plan i finansowanie niezweryfikowane; najpewniej ich nie ma (summary opisuje jeden okres)."
+  },
+  {
+   "name": "Surgery Claim Deductible Calculator (codingace.net)",
+   "url": "https://codingace.net/finance/surgery_claim_deductible.html",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Allowed amount, pozostały deductible, coinsurance i limit OOP. To jedyny wynik zapytania o 'this year vs next year' z opisem typu kalkulator.",
+   "misses_or_unverified_pl": "Summary nie wspomina o porównaniu dwóch lat planu, zmianie planu ani finansowaniu. Porównanie lat trzeba by liczyć ręcznie dwoma przebiegami."
+  },
+  {
+   "name": "ProcedureRates – Health Insurance Deductible Calculator",
+   "url": "https://www.procedurerates.com/calculator",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Koszt własny po deductible i coinsurance. Wg summary część narzędzi ma też opcjonalne pole na osobny deductible chirurgiczny.",
+   "misses_or_unverified_pl": "Timing, OE, HSA/FSA i finansowanie niezweryfikowane."
+  },
+  {
+   "name": "FinCalcs – Medical Bill Calculator and Negotiation Guide 2026",
+   "url": "https://fincalcs.co/tools/medical-bill-estimator",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Szacunek rachunku medycznego po ubezpieczeniu plus poradnik negocjacji.",
+   "misses_or_unverified_pl": "Wielookresowość, zmiana planu i porównanie finansowania niezweryfikowane."
+  },
+  {
+   "name": "HealthCostTools – Medical Procedure Cost Estimator 2026",
+   "url": "https://healthcosttools.com/procedure-cost.html",
+   "type": "partial",
+   "access": "darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Szacunek kosztu procedury. Wg summary podaje limity OOP ACA 2026: 10 600 / 21 200 USD.",
+   "misses_or_unverified_pl": "Timing względem resetu, OE i finansowanie niezweryfikowane."
+  },
+  {
+   "name": "Nayya (benefits decision support)",
+   "url": "https://www.nayya.com/blog/how-does-a-benefits-decision-support-tool-work",
+   "type": "substitute",
+   "access": "B2B: dostęp tylko przez pracodawcę lub ubezpieczyciela (login), konsument nie kupi go sam; strona nieotwierana",
+   "covers_pl": "Rekomendacja planu w OE na podstawie profilu i, wg summary, historii roszczeń. Wg recenzji z 2026 r. narzędzie przechodzi w działanie za pracownika (claims, zapisy, odwołania).",
+   "misses_or_unverified_pl": "Niezweryfikowane: obsługa planowanego zabiegu, jego timingu względem resetu i finansowania. Nie obsługuje osób spoza programu pracodawcy (np. marketplace)."
+  },
+  {
+   "name": "Jellyvision ALEX (po przejęciu Picwell)",
+   "url": "https://coverager.com/jellyvision-acquires-insurer-backed-picwell/",
+   "type": "substitute",
+   "access": "B2B, dostęp przez pracodawcę; strona nieotwierana",
+   "covers_pl": "Konwersacyjny wybór planu w OE. Picwell daje modelowanie aktuarialne i porównanie planów; funkcja HSA z 2018 r. pokazuje oszczędności podatkowe (https://www.prweb.com/releases/Picwell_Launches_Health_Savings_Account_Solution_for_its_Predictive_Decision_Support_to_Improve_Consumer_Health_Plan_Selection/prweb15653556.htm).",
+   "misses_or_unverified_pl": "Niezweryfikowane: scenariusz zabiegu w grudniu vs w styczniu i porównanie finansowania (CareCredit, pożyczka). Narzędzie niedostępne dla ogółu konsumentów."
+  },
+  {
+   "name": "TreatmentLedger – Medical Financing Options Compared (2026)",
+   "url": "https://treatmentledger.com/2026/09/12/medical-financing-options-compared/",
+   "type": "substitute",
+   "access": "darmowy artykuł; strona nieotwierana",
+   "covers_pl": "Porównanie opisowe: plany szpitalne 0%, HSA/FSA, karty deferred interest, pożyczki osobiste.",
+   "misses_or_unverified_pl": "Wg summary wyszukiwanie nie znalazło żadnego kalkulatora porównującego finansowanie, tylko artykuły. Brak powiązania z timingiem i ubezpieczeniem."
+  },
+  {
+   "name": "Cherry (withcherry.com) – porównania 'X vs CareCredit'",
+   "url": "https://withcherry.com/blog/cherry-vs-carecredit",
+   "type": "substitute",
+   "access": "darmowe treści pożyczkodawcy (stronnicze); strona nieotwierana",
+   "covers_pl": "Porównania produktów finansowania medycznego, m.in. podkreślanie braku deferred interest.",
+   "misses_or_unverified_pl": "Treść marketingowa bez kalkulatora (wg summary). Nie uwzględnia ubezpieczenia ani timingu."
+  },
+  {
+   "name": "Strony ośrodków chirurgicznych 'Schedule before your deductible resets' (np. MVHSC, St. Elizabeth, Mason City Surgery Center)",
+   "url": "https://mvhsc.com/news/schedule-your-elective-knee-or-hip-procedure-before-your-deductible-resets",
+   "type": "substitute",
+   "access": "darmowe treści marketingowe; strony nieotwierane",
+   "covers_pl": "Argumentacja za zabiegiem przed 31 grudnia, gdy deductible jest spełniony.",
+   "misses_or_unverified_pl": "Treści stronnicze, bez liczenia wariantów. Nie liczą opieki pooperacyjnej w nowym roku, zmiany planu ani finansowania."
+  },
+  {
+   "name": "Przewodniki o resecie deductible (np. CH Wellness Group 'Annual Deductible Reset: Planning Guide', GoodRx)",
+   "url": "https://www.chwellnessgroup.com/insurance/situations/deductible-reset",
+   "type": "substitute",
+   "access": "darmowe; strony nieotwierane",
+   "covers_pl": "Lista pytań do ubezpieczyciela: ile już zapłacono, jakie będą kwoty w przyszłym roku, kiedy reset. Wg summary 'żadna data nie gwarantuje niższego kosztu'.",
+   "misses_or_unverified_pl": "Czy CH Wellness Group ma interaktywny kalkulator, nie wiadomo (niezweryfikowane). Finansowania nie obejmuje."
+  },
+  {
+   "name": "Kalkulatory HDHP vs PPO (healthplancompare.app – notatka z fali 1)",
+   "url": "n/d (URL z fali 1 nie pojawił się w wynikach tej fali)",
+   "type": "partial",
+   "access": "niezweryfikowany w tej fali",
+   "covers_pl": "Wg notatki z fali 1: porównanie planów w OE.",
+   "misses_or_unverified_pl": "W 7 wyszukiwaniach tej fali narzędzie się nie pojawiło. Wszystkie funkcje niezweryfikowane, w tym timing zabiegu i finansowanie."
+  },
+  {
+   "name": "Estymatory cen / price transparency (Turquoise Health, FAIR Health Consumer – notatka z fali 1)",
+   "url": "n/d (nie wyszukano w tej fali)",
+   "type": "partial",
+   "access": "niezweryfikowany w tej fali",
+   "covers_pl": "Wg wiedzy modelu: ceny i allowed amounts procedur, czyli dane wejściowe do kalkulacji.",
+   "misses_or_unverified_pl": "W tej fali nie sprawdzano. Według wiedzy modelu narzędzia nie obejmują timingu, OE ani finansowania (niezweryfikowane)."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z Intelligent UI od 7.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026)",
+   "url": "n/d (kontekst zadania)",
+   "type": "substitute",
+   "access": "darmowe, masowe",
+   "covers_pl": "Odpowiedź tekstowa, a dziś także wyrenderowany kalkulator lub formularz. Już summary pierwszego wyszukiwania udzieliło sensownej odpowiedzi na prompt z wariantami.",
+   "misses_or_unverified_pl": "Niezweryfikowane: jakość wyliczeń dla 12 kombinacji (timing × finansowanie), uwzględnienie odsetek naliczanych wstecz i opieki pooperacyjnej w nowym roku, spójność z regułami HSA 2026."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie: 7 wyszukiwań po angielsku na rynek US, ocena wyłącznie z podsumowań wyników, bez otwierania stron; pewność niska–średnia.\n\nPrecyzyjna luka (hipoteza): brak darmowego narzędzia B2C, które w jednym modelu wielookresowym łączy trzy zależne od siebie elementy:\n(1) miesiąc zabiegu względem resetu deductible i OOP, łącznie z przesunięciem kosztów opieki pooperacyjnej (PT, kontrole, powikłania) na nowy rok planu;\n(2) wybór planu na przyszły rok w OE, w tym kwalifikowalność HSA (np. bronze od 2026 – wiedza z fali 1, niezweryfikowana tutaj) i FSA typu use-it-or-lose-it;\n(3) koszt i miesięczny przepływ gotówki dla finansowania: HSA, plan szpitala 0%, CareCredit z odsetkami naliczanymi wstecz przy niespłaceniu, pożyczka.\n\nFragmenty są dobrze pokryte. Jednookresowe kalkulatory OOP są liczne (surgerycosteestimator.com, healthcosthub.com, codingace.net, procedurerates.com). Kalkulator rat CareCredit liczy jeden produkt. B2B decision support (Nayya, ALEX/Picwell) robi wybór planu, ale tylko przez pracodawcę, a obsługa planowanego zabiegu jest niezweryfikowana. Porównania finansowania istnieją tylko jako artykuły, często od pożyczkodawców.\n\nZastrzeżenie: luka dotyczy integracji, a nie danych. Wszystkie wejścia podaje użytkownik, więc asystent AI może tę integrację łatwo odtworzyć. Jest to wąska nisza z wysokim ryzykiem samodzielnego rozwiązania przez AI.",
+ "search_scope_pl": "7 wywołań WebSearch (6 extended, 1 standard), 2026-10-25, wyniki US. Zapytania objęły: pytanie w języku naturalnym, krótką kategorię 'surgery out-of-pocket cost calculator', alternatywną terminologię 'deductible reset calculator' i 'medical financing comparison', narzędzia płatne/B2B (Nayya, ALEX, Picwell), Reddit/forum oraz CareCredit.\n\nWebFetch był zablokowany, więc żadnej strony nie otwierano ani nie testowano formularzy. Dowodem są wyłącznie podsumowania wyszukiwarki.\n\nCzego nie sprawdzono:\n- portali członkowskich ubezpieczycieli (login);\n- Turquoise Health, FAIR Health i healthplancompare.app (notatki z fali 1, nie wyszukiwane ponownie);\n- arkuszy i szablonów (wyszukiwanie Reddit/forum nie zwróciło wątków Reddit);\n- wolumenów słów kluczowych;\n- rzeczywistych odpowiedzi ChatGPT i Google AI Mode na przykładowy prompt.\n\nPewność ustaleń: niska–średnia.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wiele ośrodków chirurgicznych i okulistycznych publikuje sezonowe treści 'Schedule before your deductible resets' (kolano/biodro, zaćma, GI). Jedna z nich jest datowana 2026-10-01 (Mason City Surgery Center). To wskazuje na powtarzalny jesienny problem decyzyjny i na reklamodawców zainteresowanych tym momentem.",
+   "url": "https://mvhsc.com/news/schedule-your-elective-knee-or-hip-procedure-before-your-deductible-resets",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Artykuł prasowy (IBJ): pacjenci po spełnieniu deductible tłoczą się na zabiegi przed 31 grudnia. Zjawisko jest udokumentowane, choć bez liczb w summary.",
+   "url": "https://www.ibj.com/articles/61339-patients-rush-to-surgery-before-insurance-deductibles-reset",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Świeży artykuł 247wallst (2026-09-28) o resecie limitu Medicare Advantage 9250 USD i zabiegu zaplanowanym na styczeń. Temat jest aktualny także dla seniorów (MA).",
+   "url": "https://247wallst.com/personal-finance/2026/09/28/your-advantage-plans-9250-cap-resets-january-1-the-surgery-scheduled-for-the-second-week-of-january-starts-the-count-over-from-zero/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieje wiele komercyjnych kalkulatorów kosztu zabiegu i OOP (co najmniej 8 w jednym wyszukiwaniu). Sugeruje to popyt wyszukiwaniowy na sam fragment kalkulacji, ale wolumeny są nieznane.",
+   "url": "https://surgerycosteestimator.com/calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg podsumowania wyszukiwania (CFPB, źródło nieprzypisane do konkretnego wyniku) w latach 2018–2020 sfinansowano 23 mld USD wydatków zdrowotnych kartami lub pożyczkami z deferred interest. Skala korzystania z CareCredit-podobnych produktów jest duża.",
+   "url": "n/d (stwierdzenie z summary wyszukiwania o finansowaniu medycznym; konkretne źródło nieustalone)",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Rynek B2B decision support na OE (Nayya, ALEX, Picwell, rankingi 'best benefits decision support tools 2026') pokazuje, że pracodawcy płacą za pomoc w wyborze planu. Konsumenci spoza pracodawcy, np. marketplace, tego wsparcia nie mają.",
+   "url": "https://www.ignitionbenefits.com/blog/benefits-decision-support-tools",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Gęsta treść porównawcza pożyczkodawców (Cherry: wiele stron 'X vs CareCredit', Gerald, Mystic, FairVisit) wskazuje na konkurencję reklamodawców w medycznym finansowaniu konsumenckim.",
+   "url": "https://withcherry.com/blog/carecredit-vs-lendingclub",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wolumen zapytań typu 'surgery before deductible resets' i 'CareCredit or payment plan' jest nieznany. Brak danych o wolumenach i nie znaleziono wątków Reddit w tej fali.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko wysokie (średnio-wysokie dla pełnej wersji z 12 kombinacjami).\n\nRdzeń logiki jest prosty i w pełni opisany publicznie: pozostały deductible, coinsurance, limit OOP oraz rata = kwota / liczba miesięcy promocji. Nie wymaga świeżych ani lokalnych danych, bo wszystkie parametry (allowed amount, plan bieżący i przyszły, saldo HSA/FSA) zna tylko użytkownik i i tak musi je podać. Już summary pierwszego wyszukiwania dało poprawną jakościowo odpowiedź na przykładowy prompt (reset 1 stycznia, nowy plan może być lepszy, opieka pooperacyjna w nowym roku, FSA może przepaść). Od 7.10.2026 ChatGPT Intelligent UI renderuje kalkulatory i formularze w odpowiedzi, a Google AI Mode od 19.08.2026 generuje interaktywne narzędzia, więc asystent może zbudować ten sam kalkulator ad hoc.\n\nGdzie zewnętrzne narzędzie mogłoby wygrać (hipotezy, niezweryfikowane):\n- audytowalna tabela 3 timingów × 4 sposoby finansowania z miesięcznym przepływem gotówki;\n- poprawne odsetki naliczane wstecz przy niespłaceniu promocji;\n- aktualne limity IRS (HSA, FSA carry-over) i reguły kwalifikowalności HSA 2026;\n- zapis i udostępnienie scenariusza.\n\nAsystent ma mało powodów, żeby odsyłać do zewnętrznego narzędzia.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja o terminie zabiegu względem resetu deductible jest powtarzalna co roku i sezonowa (wrzesień–grudzień). Potwierdzają to treści ośrodków, prasa (IBJ) i świeże artykuły z 2026 r. Pełna kombinacja timing + zmiana planu w OE + wybór finansowania dotyczy jednak węższej grupy: osób z planowanym, nienagłym zabiegiem i świadomością OE.",
+   "evidence_pl": "Wiele stron 'schedule before deductible resets' (mvhsc.com, stelizabeth.com, scnetx.com, mcsurgerycenter.com 2026-10-01); IBJ 'Patients rush to surgery'; 247wallst 2026-09-28 (MA); summary o 23 mld USD w medycznym deferred interest 2018–2020 (CFPB, źródło nieprzypisane).",
+   "gaps_pl": "Brak wolumenów wyszukiwań i liczby osób z planowanymi zabiegami rocznie. Nie znaleziono wątków Reddit. Udziału zapytań łączących finansowanie z timingiem nie znamy.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po 7 zróżnicowanych wyszukiwaniach nie znaleziono narzędzia, które łączy timing względem resetu, zmianę planu w OE i koszt finansowania. Elementy są od siebie zależne: timing → kwota OOP → kwota do sfinansowania → koszt finansowania; plan → kwalifikowalność HSA. Partiale (jednookresowe kalkulatory OOP, kalkulator CareCredit) nie obejmują kluczowych zależności między latami planu. Nie daję 5, bo narzędzia B2B (Nayya, ALEX/Picwell) mogą częściowo modelować oczekiwane koszty planowanego zabiegu (niezweryfikowane), a fragmenty łatwo skleić ręcznie.",
+   "evidence_pl": "surgerycosteestimator.com, healthcosthub.com, codingace.net, procedurerates.com: jeden okres (summary). CareCredit: tylko rata promocyjna. Wyszukiwanie o finansowaniu zwróciło tylko artykuły, bez kalkulatora. Wyszukiwanie o B2B nie znalazło opisu obsługi planowanego zabiegu.",
+   "gaps_pl": "Strony nieotwierane. Niesprawdzone: healthplancompare.app, Turquoise Health, FAIR Health, portale ubezpieczycieli (login), szablony arkuszy. Funkcje Nayya i ALEX ukryte za loginem pracodawcy.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent rozwiązuje problem sam na danych podanych przez użytkownika, a od X 2026 renderuje też kalkulatory (ChatGPT Intelligent UI, Google AI Mode). Nie trzeba świeżych ani lokalnych danych. Odesłanie do zewnętrznego narzędzia jest możliwe głównie dla audytowalnej tabeli wielu wariantów i aktualnych limitów IRS, czyli słaby argument.",
+   "evidence_pl": "Summary pierwszego wyszukiwania samo poprawnie zrelacjonowało logikę decyzji. Logika (deductible → coinsurance → limit OOP; rata = kwota / miesiące) jest jawna w wynikach.",
+   "gaps_pl": "Nie testowano realnych odpowiedzi ChatGPT, Claude ani AI Mode na przykładowy prompt (12 kombinacji, odsetki naliczane wstecz).",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 3,
+   "rationale_pl": "Konsumencka publiczność US w wertykałach o wysokiej wartości: finansowanie medyczne i pożyczki osobiste (Cherry, CareCredit-podobne), ubezpieczenia zdrowotne w okresie OE, kosztowne procedury (LASIK, implanty, IVF). Ograniczenia: zdrowie to kategoria wrażliwa (personalizacja reklam ograniczona, IVF szczególnie), treść YMYL, a część ruchu B2B-owego (pracodawcy) odpada.",
+   "evidence_pl": "Gęste treści porównawcze pożyczkodawców (withcherry.com, joingerald.com, mystic.health, fairvisithealth.com). Marketing ośrodków chirurgicznych celuje w ten moment sezonowy.",
+   "gaps_pl": "Brak danych o CPC i RPM. Nie sprawdzono wprost polityk AdSense dla treści o procedurach medycznych i IVF w tej fali (wiedza modelu).",
+   "confidence": "low"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Dane wejściowe podaje użytkownik, nie trzeba bazy cen. Reguły stałe lub coroczne: limity HSA/FSA/OOP z IRS i HHS, warunki deferred interest. Model ma jednak sporo wariantów konstrukcji planów: rok planu niekalendarzowy, deductible embedded vs aggregate, osobny deductible chirurgiczny, copay, Medicare Advantage, COBRA. To podnosi złożoność i koszt testów.",
+   "evidence_pl": "Summary: część planów resetuje się w innym terminie niż 1 stycznia; osobny deductible chirurgiczny bywa opcjonalnym polem; limity OOP ACA 2026 to 10 600 / 21 200 USD; MA ma własną strukturę limitu.",
+   "gaps_pl": "Nie zweryfikowano aktualnych limitów FSA carry-over ani reguł HSA 2026 w źródłach IRS w tej fali.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Błędy mogą być kosztowne: odsetki 32,99% naliczane wstecz, utrata FSA, utrata kwalifikowalności HSA, wybór planu poza siecią lekarza. Wynik może też zachęcać do odkładania zabiegu, co niesie ryzyko zdrowotne. Wymaga interpretacji reguł planów, COBRA i prior authorization. Treść YMYL z koniecznością mocnych zastrzeżeń.",
+   "evidence_pl": "Summary: 'medical urgency should drive the decision'; nowy plan może mieć inną sieć i prior auth; APR CareCredit 32,99% wg umowy Synchrony (apply.syf.com); źródła ostrzegają, że żadna data nie gwarantuje niższego kosztu.",
+   "gaps_pl": "Brak analizy prawnej (np. czy symulacja to porada finansowa lub medyczna).",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś przepływów miesięcznych, finansowanie (deferred interest, 0% APR, pożyczka, plan ratalny) i podatki (HSA/FSA). Otwiera produkty siostrzane: wybór planu w OE pod znane wydatki, HSA/FSA na koniec roku, COBRA vs marketplace przy zmianie pracy, finansowanie stomatologii, ortodoncji i IVF, timing porodu względem roku planu. Nie wykorzystuje modułów wartości domu i energii.",
+   "evidence_pl": "Te same zależności (reset, OE, finansowanie) występują w wynikach dla rehabilitacji, MA i procedur stomatologicznych (midwestrecoverycenters.com, 247wallst, flocoms.com).",
+   "gaps_pl": "Rodzina zdrowotna jest odrębna od modułów domowych i energetycznych, więc reuse jest ograniczony do finansowania i przepływów.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony to około 3,05/5. Luka integracyjna jest wiarygodna: nie znaleziono bezpośredniego konkurenta w badanym zakresie, partiale są jednookresowe lub jednoproduktowe, a B2B jest dostępne tylko przez pracodawcę. Popyt jest sezonowy i udokumentowany pośrednio. Słabości: wysokie ryzyko, że AI rozwiąże problem samo, bo dane podaje użytkownik, a asystenci renderują już kalkulatory; ryzyko YMYL i błędów kosztownych dla użytkownika; wrażliwa kategoria reklamowa (zdrowie, IVF).\n\nPrzed decyzją o pilocie:\n(1) sprawdzić wolumeny zapytań typu 'surgery before deductible resets' i 'CareCredit vs payment plan';\n(2) przetestować odpowiedzi ChatGPT i Google AI Mode na przykładowy prompt (czy liczą 12 kombinacji i odsetki naliczane wstecz);\n(3) zweryfikować ręcznie healthplancompare.app, Turquoise Health, FAIR Health i opisy Nayya/ALEX;\n(4) sprawdzić polityki AdSense dla treści o procedurach medycznych.\n\nRozważyć wdrożenie raczej jako moduł szerszej rodziny 'OE / koszty leczenia' niż jako samodzielny produkt.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "surgery out-of-pocket cost calculator deductible coinsurance",
+   "url": "https://surgerycosteestimator.com/calculator",
+   "competitor": "Surgery Cost Estimator",
+   "features_checked": "deductible, coinsurance, limit OOP, wielookresowość, zmiana planu, finansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: kalkulator jednego okresu. Timing między latami planu i finansowanie niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "surgery out-of-pocket cost calculator deductible coinsurance",
+   "url": "https://healthcosthub.com/tools/out-of-pocket-cost-calculator",
+   "competitor": "Health Cost Hub OOP calculator",
+   "features_checked": "deductible, coinsurance, limit OOP",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: tylko koszt własny w jednym roku planu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible reset calculator surgery this year vs next year compare cost",
+   "url": "https://codingace.net/finance/surgery_claim_deductible.html",
+   "competitor": "Surgery Claim Deductible Calculator (codingace.net)",
+   "features_checked": "allowed amount, pozostały deductible, coinsurance, limit OOP, porównanie lat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: jedyny kalkulator w wynikach zapytania 'this year vs next year'. Summary nie opisuje porównania dwóch lat ani finansowania.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "surgery out-of-pocket cost calculator deductible coinsurance",
+   "url": "https://www.procedurerates.com/calculator",
+   "competitor": "ProcedureRates Health Insurance Deductible Calculator",
+   "features_checked": "deductible, coinsurance",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: fragment kalkulacji kosztu; pozostałe funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "surgery out-of-pocket cost calculator deductible coinsurance",
+   "url": "https://fincalcs.co/tools/medical-bill-estimator",
+   "competitor": "FinCalcs Medical Bill Calculator and Negotiation Guide 2026",
+   "features_checked": "szacunek rachunku po ubezpieczeniu, negocjacja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: fragment; timing i finansowanie niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "surgery out-of-pocket cost calculator deductible coinsurance",
+   "url": "https://healthcosttools.com/procedure-cost.html",
+   "competitor": "HealthCostTools Medical Procedure Cost Estimator 2026",
+   "features_checked": "koszt procedury, limity OOP ACA 2026",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: dane i szacunek kosztu; integracja niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CareCredit payment calculator deferred interest promotional period monthly payment to avoid interest",
+   "url": "https://www.napervillepodiatrist.com/carecredit-payment-calculator/",
+   "competitor": "CareCredit Payment Calculator (osadzony u gabinetu; wg summary dostępny na carecredit.com)",
+   "features_checked": "rata promocyjna, deferred interest, APR 32,99%, minimalna płatność vs rata pozwalająca uniknąć odsetek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; bezpośredni URL kalkulatora na carecredit.com nie pojawił się w wynikach",
+   "conclusion": "Partial (potwierdza notatkę z fali 1, teraz z URL): liczy ratę dla jednego produktu, bez ubezpieczenia i timingu. Wyliczanie kwoty odsetek naliczanych wstecz niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "CareCredit payment calculator deferred interest promotional period monthly payment to avoid interest",
+   "url": "https://www.carecredit.com/well-u/financial-health/deferred-interest-vs-apr/",
+   "competitor": "CareCredit – treści edukacyjne o deferred interest vs 0% APR",
+   "features_checked": "mechanika deferred interest, zalecana rata = kwota / miesiące",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy: potwierdza mechanikę, którą produkt musi modelować (odsetki od daty zakupu przy niespłaceniu).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "medical financing comparison calculator CareCredit deferred interest vs hospital payment plan vs personal loan",
+   "url": "https://treatmentledger.com/2026/09/12/medical-financing-options-compared/",
+   "competitor": "TreatmentLedger – Medical Financing Options Compared",
+   "features_checked": "porównanie planu szpitala, HSA/FSA, deferred interest, pożyczki; obecność kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (artykuł). Summary: w wynikach nie znaleziono kalkulatora porównującego finansowanie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "medical financing comparison calculator CareCredit deferred interest vs hospital payment plan vs personal loan",
+   "url": "https://withcherry.com/blog/cherry-vs-carecredit",
+   "competitor": "Cherry (pożyczkodawca) – porównania z CareCredit",
+   "features_checked": "porównanie finansowania, deferred interest",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; treść stronnicza (pożyczkodawca)",
+   "conclusion": "Substytut marketingowy; jednocześnie sygnał reklamodawców w wertykale finansowania medycznego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "open enrollment decision support tool planned surgery compare plans HSA recommendation Nayya ALEX Jellyvision Picwell",
+   "url": "https://www.nayya.com/blog/how-does-a-benefits-decision-support-tool-work",
+   "competitor": "Nayya",
+   "features_checked": "rekomendacja planu w OE, dane z roszczeń, obsługa planowanego zabiegu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; produkt B2B dostępny przez login pracodawcy",
+   "conclusion": "Substytut B2B. Obsługa timingu zabiegu i finansowania niezweryfikowana; niedostępny dla konsumentów spoza programu pracodawcy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "open enrollment decision support tool planned surgery compare plans HSA recommendation Nayya ALEX Jellyvision Picwell",
+   "url": "https://coverager.com/jellyvision-acquires-insurer-backed-picwell/",
+   "competitor": "Jellyvision ALEX + Picwell",
+   "features_checked": "porównanie planów, modelowanie aktuarialne, HSA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; produkt B2B, login pracodawcy; data przejęcia niepewna",
+   "conclusion": "Substytut B2B do wyboru planu. Scenariusze grudzień vs styczeń i finansowanie niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I schedule surgery before end of year deductible met or wait until January new plan",
+   "url": "https://mvhsc.com/news/schedule-your-elective-knee-or-hip-procedure-before-your-deductible-resets",
+   "competitor": "Treści ośrodków chirurgicznych 'schedule before deductible resets'",
+   "features_checked": "rekomendacja timingu, uwzględnienie zmiany planu i finansowania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy, stronniczy (zachęca do zabiegu przed końcem roku), bez kalkulacji wariantów. Sygnał popytu sezonowego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible reset calculator surgery this year vs next year compare cost",
+   "url": "https://www.chwellnessgroup.com/insurance/situations/deductible-reset",
+   "competitor": "CH Wellness Group – Annual Deductible Reset: Planning Guide",
+   "features_checked": "lista pytań do ubezpieczyciela, porównanie bieżącego i przyszłego roku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (przewodnik). Interaktywny kalkulator niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit surgery December vs January deductible reset changing plan open enrollment",
+   "url": "https://247wallst.com/personal-finance/2026/09/28/your-advantage-plans-9250-cap-resets-january-1-the-surgery-scheduled-for-the-second-week-of-january-starts-the-count-over-from-zero/",
+   "competitor": "247wallst – artykuł o resecie limitu MA",
+   "features_checked": "reset limitu, opieka pooperacyjna w nowym roku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy i sygnał aktualności tematu (IX 2026). Wątków Reddit nie znaleziono.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit surgery December vs January deductible reset changing plan open enrollment",
+   "url": "https://joingerald.com/learn/financial-wellness/how-deductible-timing-affects-out-of-pocket-cost-control",
+   "competitor": "Gerald – artykuł o timingu deductible",
+   "features_checked": "timing względem resetu, OE",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wydawca to firma finansowa",
+   "conclusion": "Substytut treściowy; brak opisu kalkulatora w summary.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (notatka z fali 1; nie pojawił się w 7 wyszukiwaniach)",
+   "url": "n/d",
+   "competitor": "healthplancompare.app (HDHP vs PPO)",
+   "features_checked": "porównanie planów w OE (wg fali 1)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: brak w search-summary tej fali; notatka z fali 1",
+   "conclusion": "Status partial niezweryfikowany w tej fali; wymaga ręcznego sprawdzenia.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (notatka z fali 1; nie wyszukano)",
+   "url": "n/d",
+   "competitor": "Turquoise Health / FAIR Health Consumer",
+   "features_checked": "ceny procedur (wg wiedzy modelu)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: brak search-summary; wiedza modelu",
+   "conclusion": "Prawdopodobnie źródło danych wejściowych (partial); timing i finansowanie niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I schedule surgery before end of year deductible met or wait until January new plan",
+   "url": "n/d (kontekst zadania: ChatGPT Intelligent UI od 2026-10-07, Google AI Mode od 2026-08-19)",
+   "competitor": "Asystenci AI",
+   "features_checked": "jakość odpowiedzi na pytanie o timing (summary wyszukiwarki jako przybliżenie)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; nie testowano bezpośrednio ChatGPT ani AI Mode",
+   "conclusion": "Silny substytut: summary samo dało poprawną odpowiedź jakościową. Wysokie ryzyko samodzielnego rozwiązania przez AI.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "should I schedule surgery before end of year deductible met or wait until January new plan",
+  "surgery out-of-pocket cost calculator deductible coinsurance",
+  "medical financing comparison calculator CareCredit deferred interest vs hospital payment plan vs personal loan",
+  "open enrollment decision support tool planned surgery compare plans HSA recommendation Nayya ALEX Jellyvision Picwell",
+  "reddit surgery December vs January deductible reset changing plan open enrollment",
+  "deductible reset calculator surgery this year vs next year compare cost",
+  "CareCredit payment calculator deferred interest promotional period monthly payment to avoid interest"
+ ]
+}

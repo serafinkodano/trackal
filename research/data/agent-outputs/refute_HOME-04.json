@@ -1,0 +1,103 @@
+{
+ "id": "HOME-04",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "AgentCalc – Renovate vs Move Cost Calculator (Home Upgrade Decision Tool)",
+   "url": "https://agentcalc.com/renovate-vs-move-cost-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator ma 5 pól: koszt remontu, obecny miesięczny koszt mieszkania (rata, podatki, ubezpieczenie, HOA), przewidywany miesięczny koszt nowego domu, łączne koszty przeprowadzki i zamknięcia transakcji oraz horyzont w latach. Sumuje obie ścieżki. Nie ma wariantów finansowania (HELOC, cash-out, assumable), zmiennej stopy, ponownej wyceny podatku, basis/121 ani przekroczeń budżetu. Różnicę stóp wprowadza się tylko pośrednio, przez miesięczny koszt.",
+   "what_to_check_manually_pl": "Czy kalkulator ma ukryte pola zaawansowane (stopa, equity, aprecjacja, wynik w majątku netto) i czy porównuje więcej niż dwa warianty. Czy strona to farma kalkulatorów (silny konkurent SEO na frazę 'renovate vs move cost calculator')."
+  },
+  {
+   "name": "CalculatorHub – Renovation Financing Cost Calculator",
+   "url": "https://calculatorhub.com/tools/renovation-financing-cost-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: tytuł mówi 'Compare Loan Options for Home Improvements'. Porównuje sposoby finansowania remontu, czyli jeden podproblem (warianty 1–3). Nic nie wskazuje na wariant przeprowadzki, koszty transakcji sprzedaży ani lock-in stopy pierwszego kredytu.",
+   "what_to_check_manually_pl": "Czy uwzględnia utratę niskiej stopy przy cash-out refi (blended rate) i zmienną ścieżkę HELOC. Czy ma tryb 'or move'."
+  },
+  {
+   "name": "Mortgage-Info.com – HELOC vs. Cash-Out Refinance: The 2026 Math (Calculator Included)",
+   "url": "https://mortgage-info.com/blog/heloc-vs-cash-out-refinance-2026-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: wpis z 2026 roku z kalkulatorem HELOC vs cash-out refi. Przykład: HELOC daje 66 340 USD oszczędności w 10 lat, bo zachowuje niską stopę. Obejmuje tylko finansowanie remontu, bez wariantu przeprowadzki, podatku i niepewności kosztów.",
+   "what_to_check_manually_pl": "Czy kalkulator modeluje scenariusz zmiany stopy HELOC i czy ma wariant sprzedaży lub zakupu."
+  },
+  {
+   "name": "HomeCostLab – HELOC vs Cash-Out Refinance for Home Remodel 2026",
+   "url": "https://homecostlab.com/guides/heloc-vs-cashout-refi/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: poradnik z 2026 roku o finansowaniu remontu (zakresy stóp HELOC 7.5–10.5%, cash-out 6.5–7.5%, koszty zamknięcia). Nie ma informacji, że jest to interaktywne narzędzie obejmujące przeprowadzkę.",
+   "what_to_check_manually_pl": "Czy strona ma osadzony kalkulator i czy domena ma inne narzędzia (np. remodel vs move), bo nazwa sugeruje serwis kalkulatorów kosztów domu."
+  },
+  {
+   "name": "Refi.com – Is It Time to Move or Renovate? Compare Selling vs. Tapping Home Equity",
+   "url": "https://www.refi.com/learn/selling-home-vs-tapping-equity-to-renovate/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: artykuł porównujący sprzedaż z wykorzystaniem equity na remont. Tytuł pokrywa się z decyzją, ale podsumowanie opisuje treść poradnikową (koszt sprzedaży do 10%, HELOC vs cash-out), a nie kalkulator.",
+   "what_to_check_manually_pl": "Czy na stronie jest interaktywny kalkulator porównujący warianty (zawsze sprawdzić u brokerów i agregatorów kredytowych)."
+  },
+  {
+   "name": "MoveAdvisor – The 3% Mortgage Prison: Is Staying Put Costing You More Than Moving?",
+   "url": "https://moveadvisor.com/move/the-3-mortgage-prison-is-staying-put-costing-you-more-than-moving/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: tylko tytuł i URL, temat to dokładnie lock-in stopy przy decyzji 'zostać czy się przenieść'. Nic nie wskazuje na kalkulator. Ten sam serwis ma kalkulatory przeprowadzki.",
+   "what_to_check_manually_pl": "Czy artykuł zawiera kalkulator 'stay vs move' z różnicą stóp i czy uwzględnia remont."
+  },
+  {
+   "name": "4 Seasons Home – Renovate or Relocate? A Data-Driven Guide for DMV Homeowners",
+   "url": "https://www.4seasonshome.com/resources/renovate-or-relocate-dmv-homeowners-guide",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: wykonawca opisuje jedno modelowe gospodarstwo: saldo 400 tys. USD przy 3.5% vs 6.36%, różnica 695 USD/mies., ponad 83 tys. USD w 10 lat. Wniosek: przy naprawialnym problemie remont zwykle wygrywa. To treść lead-gen, nie narzędzie.",
+   "what_to_check_manually_pl": "Czy wykonawca oferuje interaktywny kalkulator (lead-gen, jak FinHome)."
+  },
+  {
+   "name": "The List Realty – Three Housing Paths for the Next Ten Years in Maryland: Move, Renovate, or Stay the Course",
+   "url": "https://thelistrealty.com/blog/three-housing-paths-for-the-next-ten-years-in-maryland-move-renovate-or-stay-the-course",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: tylko tytuł. Trzy ścieżki w horyzoncie 10 lat to struktura zbliżona do produktu, ale to wpis na blogu agencji, prawdopodobnie bez narzędzia.",
+   "what_to_check_manually_pl": "Czy wpis ma kalkulator lub arkusz do pobrania z trzema scenariuszami i różnicą stóp."
+  },
+  {
+   "name": "HSH – Should You Stay or Go: Home Renovation vs. Relocation",
+   "url": "https://www.hsh.com/homeowner/home-renovation-or-relocation.html",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: poradnik zaleca porównać koszt remontu (projekt plus finansowanie) z kosztem przeprowadzki (nowy kredyt pomniejszony o equity) za pomocą osobnych kalkulatorów kredytowych. To wzorzec 'sklejonych kalkulatorów', a nie zintegrowane narzędzie.",
+   "what_to_check_manually_pl": "Brak. To treść, istotna jako konkurent SEO."
+  },
+  {
+   "name": "Clark.com – Financing a Home Addition vs. Buying a Bigger House",
+   "url": "https://clark.com/homes-real-estate/financing-a-home-addition-vs-buying-a-bigger-house/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: porada jakościowa Clarka Howarda dokładnie na prompt produktu (rozbudowa vs większy dom przy niskiej stopie). Przy przeprowadzce cały dom dostaje podwójną stopę. Bez kalkulatora.",
+   "what_to_check_manually_pl": "Brak. To konkurent treściowy na naturalne frazy użytkownika."
+  },
+  {
+   "name": "Bogleheads / r/RealEstate – wątki 'golden handcuffs' i 'Cash or HELOC for Home Addition'",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=473894",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: wątki forumowe z ręcznymi wyliczeniami (HELOC vs gotówka, podatek od zysków kapitałowych jako alternatywny koszt). Wątek r/RealEstate (2023) pyta, jak ludzie ze 'złotymi kajdankami' niskiej stopy radzą sobie, gdy dom robi się za mały. W wynikach nie pojawił się polecany kalkulator ani arkusz.",
+   "what_to_check_manually_pl": "Ręcznie przeszukać r/personalfinance i r/RealEstate pod 'remodel vs move spreadsheet', czy użytkownicy udostępniają szablony Google Sheets."
+  },
+  {
+   "name": "SpreadsheetDaddy – szablony budżetu przeprowadzki (Google Sheets/Excel)",
+   "url": "https://spreadsheetdaddy.com/templates/moving-budget",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: w wynikach nie znaleziono dedykowanego szablonu 'remodel vs move'. Są tylko osobne szablony budżetu przeprowadzki i remontu, które użytkownik musiałby sam połączyć.",
+   "what_to_check_manually_pl": "Sprawdzić Etsy i Gumroad pod 'remodel or move spreadsheet' (płatne szablony nie pojawiły się w wynikach)."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres to 8 zapytań WebSearch (rynek US, język angielski, wyłącznie podsumowania wyników), uzupełniające 7 zapytań poprzedniego audytora. Pewność: średnia.\n\nPróba obalenia hipotezy dała tylko kolejne konkurencje częściowe:\n- AgentCalc: prosty kalkulator 'renovate vs move' z 5 polami i horyzontem.\n- CalculatorHub, Mortgage-Info.com 2026, HomeCostLab: porównania sposobów finansowania remontu.\n- Dużo treści poradnikowych: HSH, Clark, refi.com, MoveAdvisor, wykonawcy i agencje.\n\nW żadnym podsumowaniu nie pojawiło się narzędzie, które w jednym modelu łączy:\n(a) wybór finansowania remontu: HELOC ze zmienną ścieżką stopy, cash-out refi z utratą niskiej stopy, ADU lub piwnica;\n(b) przeprowadzkę z nowym kredytem oraz wariant assumable;\n(c) ponowną wycenę podatku od nieruchomości przy zakupie;\n(d) przekroczenia budżetu remontu i wpływ remontu na basis (sekcja 121);\n(e) scenariusz spadku stóp i refinansu.\n\nKilka wyszukiwań wprost potwierdziło brak:\n- brak dedykowanego szablonu arkusza 'remodel vs move';\n- brak oprogramowania dla loan officerów, które zestawia te scenariusze dla klienta;\n- brak kalkulatora 'stay or move', który modeluje assumable i podatek od nieruchomości łącznie;\n- brak polecanego kalkulatora w wątkach Reddit i Bogleheads.\n\nNajwiększe ryzyko nadal stanowią kandydaci z poprzedniego audytu: TrueHomeCosts (5 opcji, 10 lat, zachowanie stopy), BusinessCaseGuy i Dr. Brian Jones. Ich zakresu nie dało się zweryfikować bez otwierania stron. Zalecam ręczny przegląd tych trzech oraz AgentCalc pod kątem ukrytych pól zaawansowanych.\n\nLuka produktu jest więc węższa niż ogólne 'remodel vs move'. Polega na zintegrowanym, wariantowym modelu z zależnościami (rate lock-in, finansowanie, podatek, niepewność kosztów), a nie na samym porównaniu.\n\nKonkurencja treściowa i SEO na naturalne frazy ('add on or buy bigger', '3% mortgage prison') jest silna. Wysokie jest też ryzyko, że użytkownik zapyta o prostą wersję asystenta AI.",
+ "search_scope_pl": "8 zapytań WebSearch (4 extended, 4 standard), rynek US, język angielski, 2026-10-25. Wyłącznie podsumowania wyników (search-summary), bez otwierania stron, bo WebFetch jest zablokowany. Zakres zapytań:\n- naturalne sformułowania użytkownika ('keep my 3% mortgage', 'add an addition vs buy bigger house');\n- Reddit i fora ('golden handcuffs');\n- aplikacje, narzędzia AI i 'decision tool';\n- assumable, lock-in i podatek od nieruchomości;\n- szablony Excel i Google Sheets;\n- oprogramowanie dla loan officerów i prezentacje dla klientów;\n- kalkulatory na 2026 rok z majątkiem netto, HELOC vs cash-out i reassessment;\n- ADU lub wykończenie piwnicy vs większy dom.\n\nNie badano wprost: Etsy i Gumroad (płatne arkusze), sklepów z aplikacjami mobilnymi, platform doradców (np. Homebot, Mortgage Coach) z nazwy.",
+ "confidence": "medium",
+ "queries_run": [
+  "keep my 3% mortgage calculator add an addition vs buy bigger house HELOC",
+  "reddit remodel or move calculator spreadsheet low interest rate golden handcuffs",
+  "renovate or move decision tool app AI homeowner compare cost of moving vs renovating mortgage rate",
+  "\"stay or move\" calculator \"assumable\" OR \"lock-in\" \"property tax\" renovation homeowner",
+  "remodel vs move spreadsheet template excel google sheets buy bigger house or renovate",
+  "loan officer software compare stay and renovate vs move up scenario HELOC cash-out purchase client presentation homeowner",
+  "renovate or move calculator 2026 net worth 10-year HELOC vs cash-out refinance vs selling property tax reassessment",
+  "ADU or finish basement vs buy bigger house calculator mortgage rate"
+ ]
+}

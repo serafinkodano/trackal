@@ -1,0 +1,719 @@
+{
+ "topic": "Popyt na poziomie rodzin decyzji (USA): populacje, wolumeny transakcji i trendy 2025-2026, które pokazują, ile gospodarstw domowych staje rocznie przed daną decyzją",
+ "summary_pl": "Wykonano 25/25 wyszukiwań. Wszystkie dowody pochodzą ze streszczeń wyników wyszukiwania (search-summary); żadnej strony nie otwierano. Każda liczba poniżej mierzy zdarzenia roczne, zasób (stock), kwoty w USD albo sztuki urządzeń. Żadna nie mierzy miesięcznego popytu w wyszukiwarce ani chęci kliknięcia.\n\nNajmocniejsze wolumeny roczne:\n- auta: prognoza 16,1 mln nowych i 38,5 mln używanych pojazdów w 2026 (Cox); 29,1% wymian z kredytem przy zakupie nowego auta ma ujemny kapitał (negative equity), średnio 7 107 USD (Edmunds, Q3 2026);\n- home equity: 1,4-2,6 mln nowych kredytów hipotecznych drugiego rzędu w 2025, zależnie od dostawcy danych (TransUnion, Cotality, Equifax);\n- sprzedaż istniejących domów: 4,06 mln w 2025, najniżej od 1995;\n- wymiany dachów: ok. 5 mln rocznie, ale to szacunek modelowy o niskiej pewności;\n- dostawy klimatyzatorów i pomp ciepła: 7,75 mln sztuk w 2025 (-20%);\n- ok. 4,1 mln osób rocznie kończy 65 lat (do 2027).\n\nDuże zasoby (stock, nie roczne decyzje):\n- 63 mln opiekunów rodzinnych;\n- inwestorzy indywidualni mają ok. 59% nieruchomości na wynajem;\n- 75% osób 50+ chce zostać w obecnym domu.\n\nWspólny trend 2025-2026 to efekt zamrożenia (lock-in):\n- mediana czasu posiadania domu wynosi 12 lat;\n- tylko 23% kredytobiorców ma oprocentowanie powyżej 6%, więc pula do refinansowania jest mała, a MBA prognozuje spadek refinansowania o 17% w 2027;\n- sprzedaż domów stoi w miejscu;\n- rośnie wypłata kapitału z domu (HELOC) i kredyty gotówkowe (7,6 mln w Q4 2025).\n\nWniosek (hipoteza): ciężar decyzji przesuwa się z „przeprowadzić się / refinansować” na „zostać, remontować, uruchomić kapitał z domu, spłacić dług”.\n\nEnergia osłabła:\n- domowa fotowoltaika w Q2 2026 spadła o 12% r/r, a prognozy na 2026 mówią o spadku 18-23% po wygaśnięciu ulgi 25D;\n- sprzedaż Generac dla domów w Q4 2025 spadła o 23%.\n\nPopyt na generatory i magazyny energii jest skokowy, napędzany awariami. EIA podaje średnio 11 godzin przerw na odbiorcę w 2024, w 80% przez zdarzenia ekstremalne.\n\nDowody na częstotliwość pytań online są słabe:\n- nie znaleziono żadnych opublikowanych wolumenów wyszukiwań ani danych Google Trends z lat 2025-2026 dla badanych tematów;\n- istnieją tylko dowody pośrednie: historyczny szczyt wyszukiwań „mortgage refinance” w 2020 przy spadku stóp, wiele treści instalatorów na pytanie „roof before solar” oraz wzmianka o „generators” w gorących wyszukiwaniach Google w czasie huraganu w 2011.\n\nWolumenów promptów do asystentów AI nie da się zaobserwować w tym badaniu.\n\nBraki (nie znaleziono): udział sprzedaży warunkowych (contingent) i produktów buy-before-sell, wolumen rynku home equity investment, krajowa stopa nieodnowień polis, oprocentowanie kredytów samochodowych, liczba wymian 1031, liczba wynajmujących jako osób, pakiety relokacyjne, finansowanie zapasów małych firm.",
+ "findings": [
+  {
+   "question": "1. Finansowanie: ile refinansowań w latach 2025-2026 i jaka jest pula z bodźcem do refinansowania?",
+   "claim_pl": "MBA (październik 2025) szacowało refinansowanie w 2025 na ok. 694 mld USD i prognozowało 737 mld USD na 2026. W sierpniu 2026 obniżyło prognozę na 2026 do 713 mld USD. W październiku 2026 przewiduje spadek do 571 mld USD w 2027 (-17%), bo tylko 23% kredytobiorców ma oprocentowanie powyżej 6%, a stopy rynkowe są w okolicach 7%. Liczby mierzą kwotę w USD, nie liczbę gospodarstw. Rzeczywistej wartości za 2025 nie znaleziono.",
+   "evidence_type": "estimate",
+   "numbers": "2025 ok. 694 mld USD (szacunek); 2026: 737 mld (X 2025) -> 713 mld (VIII 2026); 2027: 571 mld (-17%); 23% kredytobiorców z oprocentowaniem >6%. Szacunek własny, niezweryfikowany: przy średniej kwocie kredytu 300-400 tys. USD to rząd ok. 2 mln kredytów rocznie.",
+   "sources": [
+    {
+     "url": "https://www.mba.org/news-and-research/newsroom/news/2025/10/19/mba-forecast--total-single-family-mortgage-originations-to-increase-8-percent-to--2.2-trillion-in-2026",
+     "title": "MBA Forecast: Total Single-Family Mortgage Originations to Increase 8 percent to $2.2 Trillion in 2026",
+     "publisher": "MBA",
+     "published": "2025-10-19"
+    },
+    {
+     "url": "https://www.scotsmanguide.com/news/mba-raises-rate-forecast-slashes-refinance-outlook/",
+     "title": "MBA raises rate forecast, slashes refinance outlook",
+     "publisher": "Scotsman Guide"
+    },
+    {
+     "url": "https://newslink.mba.org/mba-newslinks/2026/october/mba-newslink-tuesday-oct-20-2026/chart-of-the-week-mortgage-originations-forecast/",
+     "title": "MBA Chart of the Week: Mortgage Originations Forecast",
+     "publisher": "MBA Newslink",
+     "published": "2026-10-20"
+    },
+    {
+     "url": "https://www.nationalmortgagenews.com/news/mba-adjust-forecasts-for-a-2027-federal-rate-hike",
+     "title": "MBA adjust forecasts for a 2027 federal rate hike",
+     "publisher": "National Mortgage News"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Pytanie „refinansować czy nie” dotyczy dziś małej puli i pojawia się falami, gdy spadają stopy. Lepiej celować w decyzje typu „cash-out refi vs HELOC vs zostawić niską stopę i wziąć osobny kredyt”. Symulator refinansowania nie powinien być filarem ruchu, bo jego popyt zależy od cyklu stóp."
+  },
+  {
+   "question": "1. Finansowanie: wolumen HELOC i kredytów pod zastaw domu w latach 2025-2026",
+   "claim_pl": "Dane o nowych kredytach home equity za 2025 różnią się między dostawcami, ale wszystkie wskazują na wzrost. TransUnion liczy 2,554 mln kredytów home equity łącznie (HELOC i HELOAN), wobec 2,254 mln w 2024. Cotality liczy ok. 1,5 mln HELOC na 271 mld USD. Equifax liczy 1,409 mln HELOC na 198,3 mld USD. Saldo HELOC w Q1 2026 wynosi 446 mld USD (NY Fed, 16. kwartał wzrostu z rzędu). Kapitał możliwy do wypłaty (tappable equity) osiągnął ok. 11,6 bln USD w połowie 2025. Jednostka to jeden kredyt, co w przybliżeniu odpowiada jednemu gospodarstwu.",
+   "evidence_type": "direct",
+   "numbers": "TransUnion 2025: 2,554 mln (2024: 2,254 mln); Q3 2025: 714 tys. (+14,3%), w tym HELOC 352 tys. (+15,8%); Cotality: ok. 1,5 mln HELOC / 271 mld USD; Equifax: 1,409 mln / 198,3 mld USD; I-II 2026: 190,1 tys. HELOC (Equifax); saldo HELOC Q1 2026: 446 mld USD",
+   "sources": [
+    {
+     "url": "https://newsroom.transunion.com/q4-2025-ciir/",
+     "title": "TransUnion 2026 Originations Forecast Shows Continued Positive Momentum Amidst Moderate Expansion",
+     "publisher": "TransUnion"
+    },
+    {
+     "url": "https://www.hel.news/articles/bank-home-equity-news/study-originations-040726/",
+     "title": "Study: HELOC Lending Share Up as Limits Top $1T",
+     "publisher": "HELN News"
+    },
+    {
+     "url": "https://www.hel.news/articles/risk/stats-062226/",
+     "title": "HELOC Utilization Climbs as Line Sizes Grow",
+     "publisher": "HELN News"
+    },
+    {
+     "url": "https://www.hel.news/articles/remodel/stats-051826/",
+     "title": "Home Equity Stats Point to Vibrant Market",
+     "publisher": "HELN News"
+    },
+    {
+     "url": "https://www.experian.com/blogs/ask-experian/research/home-equity-line-of-credit-study/",
+     "title": "Average HELOC Balances Surpass $50K in 2026",
+     "publisher": "Experian"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Co roku 1,4-2,6 mln gospodarstw faktycznie zaciąga dług pod zastaw domu, a rozważających jest więcej (hipoteza). Ta rodzina pasuje do symulatora: HELOC vs HELOAN vs cash-out refi vs home equity investment vs kredyt gotówkowy, z horyzontem sprzedaży domu i ryzykiem zmiennej stopy. Uwaga na mocną konkurencję kalkulatorów kredytodawców i monetyzację przez lead-gen. To dowód popytu, nie dowód braku konkurencji."
+  },
+  {
+   "question": "1. Finansowanie: kredyty gotówkowe i konsolidacja długu",
+   "claim_pl": "Według TransUnion liczba nowych niezabezpieczonych kredytów gotówkowych osiągnęła rekordy: 5,4 mln w Q1 2025 (+18% r/r), 7,2 mln w Q3 2025 i 7,6 mln w Q4 2025 (+21,7%). Wzrost napędzają klienci subprime pod presją płynności oraz klienci super prime konsolidujący salda. Udziału konsolidacji w kredytach gotówkowych nie znaleziono. Dane MBA cytowane przez The Mortgage Reports pokazują, że konsolidacja długu wzrosła z 25% do 39% celów kredytów (w kontekście home equity) do 2024.",
+   "evidence_type": "direct",
+   "numbers": "Q1 2025: 5,4 mln; Q3 2025: 7,2 mln; Q4 2025: 7,6 mln (+21,7% r/r); udział fintechów ok. 40%; konsolidacja 25% -> 39% (MBA via TMR, 2024)",
+   "sources": [
+    {
+     "url": "https://newsroom.transunion.com/q2-2025-ciir/",
+     "title": "TransUnion Finds U.S. Consumer Credit Market Showing Signs of Stability and Measured Growth at Mid-Point of 2025",
+     "publisher": "TransUnion"
+    },
+    {
+     "url": "https://newsroom.transunion.com/q4-2025-ciir/",
+     "title": "TransUnion 2026 Originations Forecast Shows Continued Positive Momentum Amidst Moderate Expansion",
+     "publisher": "TransUnion"
+    },
+    {
+     "url": "https://themortgagereports.com/132532/home-equity-gap-index",
+     "title": "The Mortgage Reports 2026 Home Equity Gap Index: $11 Trillion in Home Equity Is Going Untapped, Is Yours?",
+     "publisher": "The Mortgage Reports"
+    },
+    {
+     "url": "https://www.meridianlink.com/blog/home-equity-lending-in-2026-trends-opportunities-and-what-lenders-need-to-know/",
+     "title": "Home Equity Lending in 2026: Trends, Opportunities, and What Lenders Need To Know",
+     "publisher": "MeridianLink"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Rocznie zaciąga się ponad 20 mln kredytów gotówkowych. Jeden konsument może mieć kilka, więc to nie jest liczba gospodarstw. Decyzja „konsolidować czym” (kredyt gotówkowy, HELOC, karta z 0% na transfer salda, plan spłat) jest masowa, ale hipoteza: zdominowana przez porównywarki z lead-genem o wysokich stawkach CPC, więc darmowy symulator na AdSense konkuruje z bardzo silnym SEO."
+  },
+  {
+   "question": "2. Kupno i sprzedaż domu: transakcje 2025-2026",
+   "claim_pl": "Sprzedaż istniejących domów w 2025 wyniosła 4,06 mln, bez zmian wobec 2024 i najmniej od 1995. NAR w listopadzie 2025 prognozował +14% na 2026, potem obniżył prognozę do ok. +4%. Liczba mierzy zamknięte transakcje, czyli po jednej decyzji sprzedającego i kupującego na transakcję. To nie jest liczba rozważających ani popyt miesięczny.",
+   "evidence_type": "direct",
+   "numbers": "2025: 4,06 mln (2024: 4,06 mln); prognoza 2026: +14% (XI 2025) -> +4% (wiosna/VI 2026)",
+   "sources": [
+    {
+     "url": "https://eyeonhousing.org/2026/01/existing-home-sales-climb-to-near-3-year-high-in-december/",
+     "title": "Existing Home Sales Climb to Near 3-Year High in December",
+     "publisher": "NAHB Eye on Housing",
+     "published": "2026-01"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/01/14/existing-home-sales-end-2025-stronger-than-expected.html",
+     "title": "Existing home sales end 2025 with a strong beat, as prices ease further",
+     "publisher": "CNBC",
+     "published": "2026-01-14"
+    },
+    {
+     "url": "https://www.inman.com/2026/06/16/nar-predicts-home-sales-will-increase-4-in-2026/",
+     "title": "NAR Predicts Home Sales Will Increase 4 Percent In 2026",
+     "publisher": "Inman",
+     "published": "2026-06-16"
+    },
+    {
+     "url": "https://www.nar.realtor/press-releases/nar-forecast-home-sales-expected-to-jump-14-in-2026",
+     "title": "NAR Forecast: Home Sales Expected to Jump 14% in 2026",
+     "publisher": "NAR"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Około 4 mln zamkniętych decyzji sprzedaży i zakupu rocznie, przy najniższym obrocie od 30 lat. Decyzje „sprzedać teraz czy czekać”, „kupić przed sprzedażą” i „wynająć zamiast sprzedać” są realne, ale rynek jest zamrożony. Popytu na sekwencję kup-sprzedaj nie należy szacować na podstawie liczby właścicieli domów."
+  },
+  {
+   "question": "2. Kupno i sprzedaż domu: mediana czasu posiadania domu",
+   "claim_pl": "Według Redfin typowy właściciel trzymał dom 12 lat w 2025, wobec 11,8 roku w 2024. W 2005 było to 6,5 roku, a szczyt 13,4 roku przypadł na 2020. Czas posiadania wzrósł w 28 z 41 metropolii. Redfin wiąże to z wysokimi stopami i cenami, które zamrażają podaż. Udziału sprzedaży warunkowych (contingent) i produktów buy-before-sell nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "Mediana 2025: 12 lat; 2024: 11,8; 2005: 6,5; szczyt 2020: 13,4; Los Angeles 20,0; Louisville 8,3. Szacunek własny: odwrotność mediany to ok. 8% właścicieli sprzedających rocznie (przybliżenie, nie wskaźnik)",
+   "sources": [
+    {
+     "url": "https://www.redfin.com/news/homeowner-tenure-12-years/",
+     "title": "The Typical U.S. Homeowner Hangs Onto Their House For 12 Years. In Los Angeles, It’s 20 Years.",
+     "publisher": "Redfin"
+    },
+    {
+     "url": "https://newslink.mba.org/servicing-newslink/2025/march/typical-homeowner-stays-in-house-for-11-8-years-redfin-reports/",
+     "title": "Typical Homeowner Stays in House for 11.8 Years, Redfin Reports",
+     "publisher": "MBA Newslink",
+     "published": "2025-03"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Długi czas posiadania przesuwa decyzje z „przeprowadzić się” na „zostać i remontować / dostosować dom / wypłacić kapitał”. Przykład właściciela z pytaniem o dach i fotowoltaikę przy planowanej sprzedaży dotyczy mniejszej grupy niż sugerowałaby liczba właścicieli. Horyzont sprzedaży jako zmienna symulatora jest jednak bardzo istotny."
+  },
+  {
+   "question": "3. Sekwencja remontów: wydatki na remonty (Harvard JCHS LIRA)",
+   "claim_pl": "Wskaźnik LIRA Harvard JCHS prognozuje roczne wydatki właścicieli na remonty i naprawy na poziomie ok. 522-526 mld USD. Wzrost spowalnia: do +1,2% r/r w Q2 2026 według jednego komunikatu i do +1,6% na koniec 2026 według późniejszego. JCHS wspomina, że cięcia federalnych zachęt do modernizacji energetycznej mogą chwilowo podbić aktywność. Liczba mierzy dolary, nie gospodarstwa. Daty poszczególnych komunikatów są niejasne.",
+   "evidence_type": "estimate",
+   "numbers": "522 mld USD (nowszy komunikat), 524 mld (X 2025), 526 mld (wiosna 2025); wzrost r/r 2,9% -> 1,6% na koniec 2026",
+   "sources": [
+    {
+     "url": "https://www.jchs.harvard.edu/press-releases/slower-growth-projected-remodeling-next-year",
+     "title": "Slower Growth Projected for Remodeling into Next Year",
+     "publisher": "Harvard JCHS"
+    },
+    {
+     "url": "https://newsletter.rismedia.com/news/view/126153/",
+     "title": "RISMedia newsletter (LIRA update)",
+     "publisher": "RISMedia"
+    },
+    {
+     "url": "https://hardwoodfloorsmag.com/2025/10/31/remodeling-expected-to-continue-slow-but-steady-growth-into-next-year/",
+     "title": "Remodeling Expected to Continue Slow but Steady Growth into Next Year",
+     "publisher": "Hardwood Floors Magazine",
+     "published": "2025-10-31"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wydatki na remonty to ponad 0,5 bln USD rocznie i płaski trend. To duża pula decyzji o kolejności prac i finansowaniu (dach, HVAC, okna, energia), ale liczba nie mówi, ile gospodarstw rocznie remontuje. Potrzebne są dane AHS lub JCHS o liczbie projektów."
+  },
+  {
+   "question": "3. Sekwencja remontów: ile dachów wymienia się rocznie?",
+   "claim_pl": "Nie istnieje oficjalna rządowa statystyka wymian dachów. Najczęściej cytuje się ok. 5 mln dachów mieszkalnych rocznie (rynek ok. 20 mld USD), przypisując tę liczbę NRCA. Nie potwierdzono jej w publikacji NRCA, a blogi wyprowadzają ją z niezweryfikowanego założenia 7% z 75 mln domów jednorodzinnych. Koszt rośnie: Verisk podaje średnio 17 631 USD w 2025, a ServiceTitan medianę 18 050 USD (V 2025) i 24 354 USD (IV 2026).",
+   "evidence_type": "estimate",
+   "numbers": "ok. 5 mln dachów/rok (szacunek modelowy, nisko wiarygodny); Verisk 2025: 17 631 USD; mediana ServiceTitan: 18 050 USD -> 24 354 USD",
+   "sources": [
+    {
+     "url": "https://owlroofing.com/blog/how-many-roofs-are-replaced-each-year-in-the-us-reroofing-market-size/",
+     "title": "How Many Roofs Are Replaced Each Year in the US? (Reroofing Market Size)",
+     "publisher": "Owl Roofing"
+    },
+    {
+     "url": "https://www.rakeml.com/articles/american-homeowner-roof-replacement-statistics-a-deep-dive-into-the-20-billion-industry",
+     "title": "American Homeowner Roof Replacement Statistics: A Deep Dive into the $20 Billion Industry",
+     "publisher": "RAKE ML"
+    },
+    {
+     "url": "https://www.servicetitan.com/toolbox/state-of-the-trades/trends/residential-roof-replacement-costtial-roof-replacement",
+     "title": "Cost of a Residential Roof Replacement",
+     "publisher": "ServiceTitan"
+    },
+    {
+     "url": "https://theroofingbrief.com/2026-roofing-cost-report/",
+     "title": "2026 Roofing Cost Report: National + Regional Data",
+     "publisher": "The Roofing Brief"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Rząd kilku milionów gospodarstw rocznie staje przed wymianą dachu, a koszt powyżej 17-24 tys. USD sprzyja porównywaniu wariantów. Pasuje to do flagowego przykładu (dach, fotowoltaika, sprzedaż), ale liczba 5 mln jest niepewna. Część wymian to szkody ubezpieczeniowe (grad, wiatr), gdzie decyzję częściowo przejmuje ubezpieczyciel (hipoteza)."
+  },
+  {
+   "question": "3. Sekwencja remontów: wymiany HVAC (klimatyzatory i pompy ciepła)",
+   "claim_pl": "Według AHRI dostawy central AC i powietrznych pomp ciepła w 2025 spadły o 20%, do 7,75 mln sztuk (2024: 9,68 mln). Centralne AC spadły o 26,2% do 4,10 mln, pompy ciepła o 11,6% do 3,64 mln. Branża wiąże spadek ze słabym popytem, stopami, cłami i przejściem na czynniki chłodnicze A2L. Udziału wymian w stosunku do nowego budownictwa nie znaleziono. Sztuki to nie gospodarstwa, bo dom może mieć kilka jednostek.",
+   "evidence_type": "direct",
+   "numbers": "2025: 7 749 529 szt. (-20,0%); AC: 4 104 933 (-26,2%); pompy ciepła: 3 644 596 (-11,6%); XII 2025: AC -35,9%, HP -2,4%",
+   "sources": [
+    {
+     "url": "https://www.contractingbusiness.com/industry-news/news/55358865/heat-pumps-hold-steady-air-conditioners-slide-breaking-down-ahris-2025-year-end-shipment-numbers",
+     "title": "Heat Pumps Hold Steady, Air Conditioners Slide: Breaking Down AHRI’s 2025 Year-End Shipment Numbers",
+     "publisher": "Contracting Business"
+    },
+    {
+     "url": "https://iifiir.org/en/news/united-states-december-2025-heating-and-cooling-equipment-shipment-data",
+     "title": "United States: December 2025 heating and cooling equipment shipment data",
+     "publisher": "IIR"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Rocznie kilka milionów gospodarstw podejmuje decyzję o HVAC: naprawa vs wymiana, AC vs pompa ciepła, teraz vs później. Spadek dostaw w 2025 sugeruje odkładanie wymian (hipoteza), co samo jest wariantem decyzyjnym. Udział wymian jest niezweryfikowany."
+  },
+  {
+   "question": "4. Ubezpieczenia: częstotliwość szkód, udziały własne, nieodnowienia",
+   "claim_pl": "Wtórne źródło cytujące Triple-I/ISO (2019-2023) podaje, że roczną szkodę zgłasza ok. 5,3-5,6% ubezpieczonych domów. Najczęstsze są szkody od wiatru i gradu, najdroższe od ognia. Typowy standardowy udział własny wynosi 500-2 000 USD, ale rośnie użycie procentowych udziałów wiatr/grad lub named-storm (1-5% wartości domu). Krajowej stopy nieodnowień polis w latach 2025-2026 nie znaleziono. Źródła to głównie blogi ubezpieczeniowe.",
+   "evidence_type": "indirect",
+   "numbers": "Szkody: 5,3-5,6% ubezpieczonych domów rocznie (ISO 2019-2023, via blog); udział własny 500-2 000 USD; procentowy wiatr/grad 1-5% wartości domu",
+   "sources": [
+    {
+     "url": "https://www.pnwresidences.com/blog/home-insurance-claims-statistics-2026/",
+     "title": "Home Insurance Claims Statistics 2026: Frequency, Severity, Costs",
+     "publisher": "PNW Residences"
+    },
+    {
+     "url": "https://www.hippo.com/learn-center/average-home-insurance-deductible",
+     "title": "Average home insurance deductible in 2026: What Most Homeowners Pay",
+     "publisher": "Hippo"
+    },
+    {
+     "url": "https://www.billlayneinsurance.com/blog/blogs/2026-north-carolina-homeowners-insurance-top-5-reasons-for-policy-non-renewal",
+     "title": "2026 North Carolina Homeowners Insurance: Top 5 Reasons for Policy Non-Renewal",
+     "publisher": "Bill Layne Insurance"
+    },
+    {
+     "url": "https://www.usnews.com/insurance/homeowners/unpaid-homeowner-insurance-claims-2026",
+     "title": "The 5 Biggest Home Insurers Didn't Pay 44% of Claims Last Year. Here's How to Protect Yourself in 2026",
+     "publisher": "US News"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Rocznie ok. 5% ubezpieczonych właścicieli zgłasza szkodę. Decyzje „zgłaszać czy płacić samemu” oraz wybór udziału własnego dotyczą milionów, ale przy niskiej pewności danych. Blogi wskazują wiek dachu (15+ lat) i historię szkód jako czynniki nieodnowienia. To łączy ubezpieczenia z rodziną dach/remont, co sprzyja symulatorom łączącym obie rodziny."
+  },
+  {
+   "question": "5. Energia: domowa fotowoltaika po wygaśnięciu 25D i magazyny energii",
+   "claim_pl": "Według Wood Mackenzie i SEIA instalacje domowe wyniosły 1 179 MWdc w Q1 2026 (+6% r/r, -15% kw/kw po wyprzedzeniu terminu ulgi) i 995 MWdc w Q2 2026 (-12% r/r, -10% kw/kw). Prognozy spadku na cały 2026 wynoszą 18-23%, zależnie od źródła. Koszt pozyskania klienta (CAC) ma wzrosnąć o 40% do 0,84 USD/W. Udział nowych systemów z magazynem w 2025 wyniósł 37% (2024: 25%, Berkeley Lab via źródło wtórne). Wartości dla 2026 nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "Q1 2026: 1 179 MWdc; Q2 2026: 995 MWdc (-12% r/r); prognoza 2026: -18% / -19% / -23%; CAC +40% do 0,84 USD/W; magazyny 37% (2025). Szacunek własny, niezweryfikowany: przy ok. 7-8 kW na system 995 MW to ok. 120-140 tys. instalacji na kwartał",
+   "sources": [
+    {
+     "url": "https://solarquarter.com/2026/06/16/wood-mackenzie-reports-us-solar-installations-declined-in-q1-2026-despite-continued-dominance-in-new-power-capacity/",
+     "title": "Wood Mackenzie Reports US Solar Installations Declined In Q1 2026 Despite Continued Dominance In New Power Capacity",
+     "publisher": "SolarQuarter",
+     "published": "2026-06-16"
+    },
+    {
+     "url": "https://seia.org/research-resources/us-solar-market-insight/",
+     "title": "Solar Market Insight Report",
+     "publisher": "SEIA"
+    },
+    {
+     "url": "https://www.surgepv.com/blog/us-residential-solar-market-trends-2026",
+     "title": "US Residential Solar Market Trends 2026: Growth, Policy & Challenges",
+     "publisher": "SurgePV"
+    },
+    {
+     "url": "https://leads4build.com/insights/solar-industry-statistics-trends",
+     "title": "Solar Industry Statistics 2026: Market & Storage Data",
+     "publisher": "Leads4Build"
+    },
+    {
+     "url": "https://www.vahorizon.site/solar/guides/state-of-residential-solar-2026/",
+     "title": "The State of Residential Solar in 2026: An Honest Look at a Contracting Market",
+     "publisher": "VA Horizon"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Liczba gospodarstw kupujących fotowoltaikę w 2026 spada, co oznacza mniej decydujących i mniejszą pulę wyszukiwań transakcyjnych (hipoteza). Złożoność decyzji rośnie: brak 25D, leasing lub PPA vs zakup, magazyn, taryfy net billing. Flagowy przykład (dach i fotowoltaika) ma realny, ale kurczący się rynek. Symulator powinien uwzględniać wariant „nie instalować / tylko magazyn”."
+  },
+  {
+   "question": "5. Energia: godziny przerw w dostawie prądu (EIA)",
+   "claim_pl": "Według EIA odbiorcy w USA mieli w 2024 średnio 11 godzin przerw w dostawie prądu, prawie dwa razy więcej niż średnia z poprzedniej dekady. 80% godzin przypadło na zdarzenia ekstremalne (huragany Beryl, Helene, Milton): ok. 9 godzin wobec ok. 4 godzin rocznie w latach 2014-2023. Przerwy poza zdarzeniami ekstremalnymi to ok. 2 godziny rocznie. Generac podawał, że w drugiej połowie 2025 łączne godziny awarii były najniższe od dekady.",
+   "evidence_type": "direct",
+   "numbers": "2024: 11 h/odbiorcę; zdarzenia ekstremalne ok. 9 h (80%); średnia 2014-2023 ok. 4 h; bez zdarzeń ekstremalnych ok. 2 h",
+   "sources": [
+    {
+     "url": "https://www.eia.gov/todayinenergy/detail.php?id=66744",
+     "title": "Hurricanes in 2024 led to the most hours without power (Today in Energy)",
+     "publisher": "EIA"
+    },
+    {
+     "url": "https://cleantechnica.com/2025/12/01/hurricanes-in-2024-led-to-the-most-hours-without-power-in-the-united-states-in-10-years/",
+     "title": "Hurricanes in 2024 Led to the Most Hours without Power in the United States in 10 Years",
+     "publisher": "CleanTechnica",
+     "published": "2025-12-01"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Ekspozycja na awarie jest skrajnie zmienna z roku na rok i regionalnie skoncentrowana. Popyt na decyzje typu generator vs magazyn vs nic jest epizodyczny, więc ruch będzie skokowy, a nie stały. To ryzyko dla modelu opartego na stałym napływie nowych użytkowników."
+  },
+  {
+   "question": "5. Energia: sprzedaż generatorów domowych (standby)",
+   "claim_pl": "Sprzedaż Generac dla domów w Q4 2025 spadła o ok. 23% do 572 mln USD. Spółka wiąże to ze słabą aktywnością awarii i zmianą platformy. W Q2 2026 przychody z segmentu domowego spadły o 2% do 621 mln USD: magazyny energii i generatory przenośne słabły, standby rosło. Zarząd opisuje konsultacje domowe jako odporne. Penetracja generatorów standby to ok. 6,75% rynku adresowalnego (szacunek strony trzeciej, niepotwierdzony w raportach Generac).",
+   "evidence_type": "direct",
+   "numbers": "Q4 2025 domowe: 572 mln USD (-23%); Q2 2026: 621 mln USD (-2%); prognoza 2026: ok. +10% (bez dużej awarii); penetracja ok. 6,75% (szacunek zewnętrzny)",
+   "sources": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926003700/ex_919348.htm",
+     "title": "GENERAC HOLDINGS INC. - Form 8-K - FY2026",
+     "publisher": "SEC"
+    },
+    {
+     "url": "https://www.aol.com/articles/generac-gnrc-q4-2025-earnings-180912821.html",
+     "title": "Generac (GNRC) Q4 2025 Earnings Call Transcript",
+     "publisher": "AOL/Motley Fool"
+    },
+    {
+     "url": "https://www.panabee.com/news/generac-earnings-q2-2026-report",
+     "title": "Generac C&I Revenue Rises 29% Amidst Residential Contraction and Regulatory Risks",
+     "publisher": "Panabee"
+    },
+    {
+     "url": "https://walnutinvest.com/stocks/gnrc/forecast",
+     "title": "Generac Holdings (GNRC) Stock Forecast: What Could Drive It in 2026",
+     "publisher": "Walnut"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Liczba decyzji o zakupie generatora zależy od awarii (lider rynku jawnie tak to opisuje). Niska penetracja oznacza dużą pulę potencjalną, ale popyt jest okresowy. Ruch na symulator „generator vs bateria” będzie sezonowy i zależny od pogody."
+  },
+  {
+   "question": "6. Auta: sprzedaż nowych i używanych pojazdów, udział EV w 2026",
+   "claim_pl": "Cox Automotive podniósł prognozę sprzedaży nowych aut w 2026 do 16,1 mln (z 15,8 mln, co wcześniej oznaczało -2,4% wobec 2025). Na 2026 prognozuje 38,5 mln używanych aut łącznie, w tym 20,5 mln w sprzedaży detalicznej, czyli nieco poniżej 2025. Udział nowych EV ustabilizował się po wygaśnięciu ulgi: ok. 5,8% w Q1 2026 i 6,5% we wrześniu 2026. Szczyt w Q3 2025 wynosił 7,5% według Electrek albo 10,6% według transkryptu Cox. Używane EV miały rekordowe 3,3% sprzedaży we wrześniu 2026. Liczby mierzą pojazdy, nie gospodarstwa, a sprzedaż nowych obejmuje floty.",
+   "evidence_type": "direct",
+   "numbers": "Nowe 2026: 16,1 mln (prognoza); używane 2026: 38,5 mln łącznie / 20,5 mln detal; EV Q1 2026: 5,8%; EV IX 2026: 6,5%; używane EV IX 2026: 3,3%",
+   "sources": [
+    {
+     "url": "https://www.coxautoinc.com/press-releases/q3-september-2026-cox-automotive-new-vehicle-sales-forecast-press-release/",
+     "title": "Cox Automotive Raises Full-Year New-Vehicle Sales Forecast; September Sales Expected to Increase 6.5% Year Over Year",
+     "publisher": "Cox Automotive",
+     "published": "2026-09"
+    },
+    {
+     "url": "https://www.coxautoinc.com/insights/cox-automotive-2026-outlook/",
+     "title": "Cox Automotive Forecasts New-Vehicle Sales at 15.8 Million, Down From 2025 as Market Fragmentation Slows Growth",
+     "publisher": "Cox Automotive"
+    },
+    {
+     "url": "https://electrek.co/2026/03/27/used-ev-sales-boom-new-ev-sales-drop-28-percent-q1-2026/",
+     "title": "New EV sales drop 28% in Q1 2026, but used EVs surge 12% to near-record levels",
+     "publisher": "Electrek",
+     "published": "2026-03-27"
+    },
+    {
+     "url": "https://www.coxautoinc.com/insights/ev-market-monitor-september-2026/",
+     "title": "EV Market Monitor (September 2026)",
+     "publisher": "Cox Automotive"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Auta mają największy roczny wolumen transakcji (ponad 50 mln pojazdów), ale decyzje często zapadają u dealera i w porównywarkach. Pytanie „EV czy spalinowy” straciło na wadze po wygaśnięciu ulgi, a zyskały warianty „kupić używane EV / hybrydę / zostać przy obecnym aucie”. Oprocentowania kredytów samochodowych w 2026 nie badano (luka)."
+  },
+  {
+   "question": "6. Auta: wymiany z ujemnym kapitałem (Edmunds)",
+   "claim_pl": "Według Edmunds w Q3 2026 ujemny kapitał miało 29,1% wymian z niespłaconym kredytem przy zakupie nowego auta. To mniej niż 30,9% w Q1 2026, ale więcej niż 28,1% w Q3 2025. Średni niedobór wyniósł 7 107 USD (rekord 7 214 USD w Q4 2025). Kupujący, którzy wliczają ten dług w nowy kredyt, finansują średnio 57 235 USD i płacą 952 USD miesięcznie. Ponad 90% z nich ma kredyty na 72 miesiące lub dłużej (dane z Q1).",
+   "evidence_type": "direct",
+   "numbers": "Q3 2026: 29,1% / -7 107 USD; Q1 2026: 30,9% / -7 183 USD; Q4 2025: 29,3% / -7 214 USD; finansowanie 57 235 USD, rata 952 USD/mies.; ponad 90% kredytów na 72+ mies.",
+   "sources": [
+    {
+     "url": "https://www.edmunds.com/car-news/Q3-2026-negative-equity-report.html",
+     "title": "America's Negative Equity Problem Is Fueling a New Cycle of Record Auto Loan Debt",
+     "publisher": "Edmunds",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://www.edmunds.com/car-news/edmunds-insights-q1-2026-report.html",
+     "title": "Car Debt Grows Deeper as Loan Terms Stretch Wider",
+     "publisher": "Edmunds"
+    },
+    {
+     "url": "https://www.cbtnews.com/negative-equity-rises-to-29-percent",
+     "title": "Negative equity hits 29.1% of trade-ins, rollover loans top $57,000",
+     "publisher": "CBT News"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/01/15/underwater-car-trade-ins.html",
+     "title": "Underwater car trade-ins are on the rise — and drivers owe a record amount, Edmunds finds",
+     "publisher": "CNBC",
+     "published": "2026-01-15"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Silny sygnał wielowymiarowej decyzji pod ograniczeniem budżetowym: zatrzymać i spłacać, sprzedać prywatnie, wymienić i wliczyć dług w nowy kredyt, czy dopłacić. W grę wchodzą amortyzacja, koszt napraw i stopa. Nie wyliczono liczby osób, bo udział dotyczy tylko wymian z kredytem przy zakupie nowego auta."
+  },
+  {
+   "question": "7. Zmiana pracy: ile odejść i zatrudnień rocznie (BLS JOLTS)",
+   "claim_pl": "Według BLS JOLTS w 2025 było 38,0 mln dobrowolnych odejść (quits), o 1,3 mln mniej niż w 2024, co stanowi 60,6% wszystkich 62,8 mln rozstań z pracą. Zatrudnień było 63,0 mln (-1,5 mln). To zdarzenia, nie unikalne osoby, a quits nie oznaczają przejścia do innego pracodawcy. Liczby osób zmieniających pracę ani danych o pakietach relokacyjnych nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "Quits 2025: 38,0 mln (-1,3 mln); rozstania: 62,8 mln; zatrudnienia: 63,0 mln (-1,5 mln)",
+   "sources": [
+    {
+     "url": "https://www.bls.gov/news.release/archives/jolts_03132026.htm",
+     "title": "Job Openings and Labor Turnover Survey (archived release, March 2026)",
+     "publisher": "BLS",
+     "published": "2026-03-13"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Co roku zachodzą dziesiątki milionów zdarzeń zatrudnienia, ale decyzja „przyjąć ofertę z relokacją czy nie” dotyczy tylko ich części (hipoteza). Trend spadkowy (mniej odejść) zmniejsza pulę. Pewność dotyczy liczb BLS, nie ich przełożenia na decyzje."
+  },
+  {
+   "question": "7. Relokacja: przeprowadzki międzystanowe",
+   "claim_pl": "Według ACS 2024 do innego stanu przeprowadziło się 2,1% populacji (2023: 2,3%), a w obrębie stanu 8,9% (2023: 9,1%). Seria CPS pokazuje długoterminowy spadek mobilności od 1948. Tablic CPS ASEC za 2025 nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "Międzystanowo 2024: 2,1% osób (2023: 2,3%); w obrębie stanu: 8,9% (9,1%). Szacunek własny: 2,1% z ok. 330 mln to ok. 7 mln osób, czyli mniej gospodarstw",
+   "sources": [
+    {
+     "url": "https://www.census.gov/topics/population/migration/guidance/acs-1yr.html",
+     "title": "United States Migration/Geographic Mobility At A Glance: American Community Survey 1-Year Estimates",
+     "publisher": "US Census Bureau"
+    },
+    {
+     "url": "https://www.census.gov/data/tables/time-series/demo/geographic-mobility/historic.html",
+     "title": "CPS Historical Migration/Geographic Mobility Tables",
+     "publisher": "US Census Bureau"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Kilka milionów osób rocznie przeprowadza się między stanami, a trend jest spadkowy. Decyzje relokacyjne łączą pracę, mieszkanie (sprzedać, wynająć, kupić), podatki i koszty życia, więc pasują do symulatorów. To jednak mniejsza i kurcząca się pula niż sugerują ogólne liczby przeprowadzek."
+  },
+  {
+   "question": "8. Emerytura: Peak 65 i salda kont emerytalnych",
+   "claim_pl": "Według Retirement Income Institute (Alliance for Lifetime Income) ok. 4,1 mln Amerykanów rocznie kończy 65 lat do 2027, czyli ponad 11 200 dziennie, wobec ok. 10 000 dziennie w poprzedniej dekadzie. Średnie saldo 401(k) w Fidelity w Q2 2026 wyniosło 155 800 USD (+13% r/r, ok. +10% kw/kw), a 403(b) 145 000 USD. Liczby mierzą osoby, nie gospodarstwa. Średnia saldo zawyżają duże konta.",
+   "evidence_type": "direct",
+   "numbers": "Ok. 4,1 mln osób/rok kończy 65 lat (2024-2027); ponad 11 200/dzień; 401(k) Q2 2026: 155 800 USD; 403(b): 145 000 USD",
+   "sources": [
+    {
+     "url": "https://www.protectedincome.org/wp-content/uploads/2024/01/Peak-65-Release-final-011024.pdf",
+     "title": "Peak 65 Release",
+     "publisher": "Alliance for Lifetime Income",
+     "published": "2024-01-10"
+    },
+    {
+     "url": "https://www.empower.com/the-currency/money/silver-wave-4-million-americans-will-turn-65-2024",
+     "title": "The silver wave: 4.1 million Americans will turn 65 in 2024",
+     "publisher": "Empower"
+    },
+    {
+     "url": "https://about.fidelity.com/data-and-insights/q2-2026-retirement-analysis",
+     "title": "Fidelity Q2 2026 Retirement Analysis",
+     "publisher": "Fidelity"
+    },
+    {
+     "url": "https://www.planadviser.com/?p=122772",
+     "title": "PlanAdviser (Fidelity Q2 2026 balances coverage)",
+     "publisher": "PlanAdviser"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "To jedna z najlepiej udokumentowanych rocznych kohort decyzyjnych: ok. 4,1 mln osób rocznie przechodzi decyzje o Medicare, wieku zgłoszenia do Social Security, wypłatach i konwersjach Roth. Konkurencja ze strony instytucji finansowych jest bardzo silna (hipoteza), a szczyt kohorty mija po 2027."
+  },
+  {
+   "question": "9. Nieruchomości na wynajem: inwestorzy indywidualni i 1031",
+   "claim_pl": "Według Rental Housing Finance Survey 2024 (Census/HUD, cytowane wtórnie) inwestorzy indywidualni mają ok. 59% nieruchomości na wynajem, ale tylko ok. 32% mieszkań na wynajem. W 2021 było to 70% nieruchomości i 38% mieszkań, przy łącznie 49,5 mln mieszkań w 19,3 mln nieruchomości. Nieruchomości 1-4 lokalowe w 70% (15,9 mln) należały do osób fizycznych (2021). Liczby wynajmujących jako osób ani liczby wymian 1031 rocznie nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "RHFS 2024: 59% nieruchomości / 32% mieszkań (osoby fizyczne); 2021: 70% / 38%; 49,5 mln mieszkań, 19,3 mln nieruchomości; 1-4 lokale: 15,9 mln (70%) u osób fizycznych. Szacunek własny: ponad 11 mln nieruchomości u osób fizycznych",
+   "sources": [
+    {
+     "url": "https://www.chandan.com/post/census-data-show-individual-investors-still-dominate-single-family-rental-ownership",
+     "title": "Census Data Show Individual Investors Still Dominate Single-Family Rental Ownership",
+     "publisher": "Chandan Economics"
+    },
+    {
+     "url": "https://archives.hud.gov/news/2022/pr22-242.cfm",
+     "title": "HUD and Census Bureau Release Findings of 2021 Rental Housing Finance Survey",
+     "publisher": "HUD"
+    },
+    {
+     "url": "https://www.congress.gov/crs-product/R47332",
+     "title": "Ownership of the U.S. Rental Housing Stock by Investor Type: In Brief",
+     "publisher": "Congressional Research Service"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Indywidualnych właścicieli są miliony (zasób), ale roczna liczba decyzji („sprzedać czy dalej wynajmować”, 1031 vs podatek od zysku, refinansowanie najmu) jest nieznana. To rodzina o dużej złożoności i niskiej częstotliwości. Wymaga dodatkowych danych, np. IRS Schedule E lub Form 8824."
+  },
+  {
+   "question": "10. Starzenie się i opieka: opiekunowie rodzinni i koszty opieki",
+   "claim_pl": "Według AARP i National Alliance for Caregiving w 2025 było 63 mln opiekunów rodzinnych (ok. 1 na 4 dorosłych), o ok. 20 mln więcej niż w 2015. 59 mln opiekuje się dorosłym. Średnie wydatki z własnej kieszeni to ok. 7 200 USD rocznie. Według CareScout (Genworth), dane za 2025 opublikowane w marcu 2026: assisted living kosztuje w medianie 6 200 USD miesięcznie (74 400 USD rocznie, +5%), opieka domowa 35 USD/h (80 080 USD rocznie przy 44 h tygodniowo), dom opieki w pokoju dwuosobowym 114 975 USD rocznie, opieka dzienna 24 700 USD rocznie. 63 mln to zasób, nie liczba decyzji rocznie.",
+   "evidence_type": "direct",
+   "numbers": "63 mln opiekunów (2025); ok. 7 200 USD/rok z własnej kieszeni; assisted living 74 400 USD/rok; opieka domowa 80 080 USD/rok; dom opieki 114 975 USD/rok; opieka dzienna 24 700 USD/rok",
+   "sources": [
+    {
+     "url": "https://www.aarp.org/press/releases/2025-07-24-new-report-reveals-crisis-point-for-americas-63-million-family-caregivers.html",
+     "title": "New Report Reveals Crisis Point for America’s 63 million Family Caregivers",
+     "publisher": "AARP",
+     "published": "2025-07-24"
+    },
+    {
+     "url": "https://investor.genworth.com/news-events/press-releases/detail/1054",
+     "title": "CareScout Releases 2025 Cost of Care Survey Results",
+     "publisher": "Genworth"
+    },
+    {
+     "url": "https://www.businesswire.com/news/home/20260302283881/en/CareScout-Releases-2025-Cost-of-Care-Survey-Results",
+     "title": "CareScout Releases 2025 Cost of Care Survey Results",
+     "publisher": "Business Wire",
+     "published": "2026-03-02"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Stawka finansowa jest bardzo wysoka (75-115 tys. USD rocznie), a dane kosztowe są publiczne i porównywalne między stanami. To dobra baza dla symulatorów: opieka domowa vs assisted living vs przeprowadzka do rodziny vs dostosowanie domu. Ruch może jednak przejmować lead-gen domów opieki, a temat ma charakter YMYL."
+  },
+  {
+   "question": "10. Starzenie się: preferencja starzenia się w domu (aging in place)",
+   "claim_pl": "Według AARP Home and Community Preferences 2024 (badanie VI-VII 2024) 75% osób 50+ chce zostać w obecnym domu, a 73% w obecnej społeczności. Tylko ok. połowa uważa, że dom i otoczenie są przygotowane na ich potrzeby. 44% spodziewa się w przyszłości przeprowadzki (koszty najmu i kredytu, podatki, utrzymanie). Wśród potrzebnych zmian badani wymieniają uchwyty, kuchnię i bezpieczne wejście. Danych o wydatkach na adaptacje domów nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "75% (dom) / 73% (społeczność) wśród 50+; 18-49 lat: 60% / 63%; ok. 50% uważa dom za przygotowany; 44% oczekuje przeprowadzki",
+   "sources": [
+    {
+     "url": "https://www.aarp.org/pri/topics/livable-communities/housing/2024-home-community-preferences/",
+     "title": "Home and Community Preferences and Future Possibilities",
+     "publisher": "AARP Research",
+     "published": "2024-12"
+    },
+    {
+     "url": "https://www.hcaoa.org/newsletters/aarp-home-community-preferences-survey-supports-desire-to-age-in-place",
+     "title": "AARP Home & Community Preferences Survey Supports Desire to Age in Place",
+     "publisher": "Home Care Association of America"
+    },
+    {
+     "url": "https://newslink.mba.org/mba-newslinks/2024/december/mba-newslink-friday-dec-13-2024/americans-want-to-age-in-place-aarp-survey-finds/",
+     "title": "Most Older Americans Want to Age in Place, AARP Survey Finds",
+     "publisher": "MBA Newslink",
+     "published": "2024-12-13"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Deklarowana preferencja nie jest decyzją ani popytem. Luka między chęcią a gotowością domu sugeruje jednak powtarzalny problem: „dostosować dom czy się przenieść”, w połączeniu z kapitałem z domu, reverse mortgage i kosztami opieki. To rodzina łącząca 1, 3 i 10."
+  },
+  {
+   "question": "11. Mała firma i e-commerce: sprzedawcy na Amazon w USA",
+   "claim_pl": "Amazon nie publikuje liczby sprzedawców. Najlepiej udokumentowany szacunek to ok. 500 tys. aktywnych sprzedawców na Amazon.com przy ścisłej definicji (Marketplace Pulse via AMZ Prep, III 2026). Na świecie było ok. 1,65 mln na koniec 2025. Liczby 1,1 mln i 1,9 mln dla USA są słabo udokumentowane. Liczba nowych sprzedawców spadła w 2025 o 44% do ok. 165 tys. Sprzedawcy zewnętrzni (3P) mają ok. 61-62% sprzedanych sztuk. Liczby wszystkich sprzedawców online w USA ani danych o finansowaniu zapasów nie badano lub nie znaleziono.",
+   "evidence_type": "estimate",
+   "numbers": "USA ok. 500 tys. (ścisła definicja, III 2026); świat ok. 1,65 mln (koniec 2025); nowi sprzedawcy 2025: ok. 165 tys. (-44%); 3P ok. 61-62% sztuk",
+   "sources": [
+    {
+     "url": "https://amzprep.com/how-many-active-amazon-sellers/",
+     "title": "How Many Amazon Sellers Are There in 2026?",
+     "publisher": "AMZ Prep"
+    },
+    {
+     "url": "https://www.smartscout.com/blog/amazon-seller-statistics",
+     "title": "Amazon seller statistics",
+     "publisher": "SmartScout"
+    },
+    {
+     "url": "https://helium10.com/blog/how-many-sellers-are-on-amazon-in-february-2025/",
+     "title": "How many sellers are on Amazon in February 2025",
+     "publisher": "Helium 10"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Populacja jest mała (setki tysięcy) i kurczy się po stronie nowych wejść. Decyzje (FBA vs FBM, finansowanie zapasów, zamówienia przy cłach) obsługują płatne narzędzia SaaS. Jako źródło wielu nowych użytkowników z AdSense ta rodzina jest słabsza niż rodziny konsumenckie (hipoteza)."
+  },
+  {
+   "question": "Częstotliwość pytań online (refinansowanie): czy wyszukiwania śledzą bodźce stóp?",
+   "claim_pl": "Opublikowanych danych Google Trends ani wolumenów wyszukiwań dla „refinance” z lat 2025-2026 nie znaleziono. Najlepszy udokumentowany precedens to analiza NerdWallet z 2020: wyszukiwania „mortgage refinance” rosły tydzień po tygodniu i w połowie marca 2020 osiągnęły najwyższy poziom od co najmniej 15 lat, gdy spadały stopy. Proxy zachowań z 2026: indeks refinansowania MBA spadł o 19% w tygodniu do 13.03.2026, gdy stopa 30-letnia wzrosła do 6,30% (źródło wtórne).",
+   "evidence_type": "indirect",
+   "numbers": "2020: szczyt wyszukiwań „mortgage refinance” najwyższy od ponad 15 lat (NerdWallet); MBA Refinance Index -19% tydzień do 13.03.2026",
+   "sources": [
+    {
+     "url": "https://www.nerdwallet.com/article/mortgages/relief-data-coronavirus",
+     "title": "Mortgage ‘Relief’ and ‘Refinance’ Searches Spike During Outbreak",
+     "publisher": "NerdWallet",
+     "published": "2020"
+    },
+    {
+     "url": "https://www.noradarealestate.com/blog/mortgage-refinance-demand-drops-sharply-by-19-in-march-2026/",
+     "title": "Mortgage refinance demand drops sharply by 19% in March 2026",
+     "publisher": "Norada Real Estate",
+     "published": "2026-03"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Popyt na pytania o refinansowanie jest skokowy i zależy od stóp, więc nie można zakładać stałego popytu miesięcznego. Dane o wyszukiwaniach w Google nie przenoszą się automatycznie na prompty w ChatGPT, Perplexity, Claude czy Gemini. Wolumenu promptów nie zmierzono."
+  },
+  {
+   "question": "Częstotliwość pytań online (dach i fotowoltaika): czy flagowy przykład to realnie zadawane pytanie?",
+   "claim_pl": "Pytanie „should I replace my roof before going solar” ma wiele odpowiedzi od wydawców: Panasonic, instalatorzy (Citadel, Krumm Exteriors, NRG), GreenLancer i Checkbook w kilku wydaniach metropolitalnych. Odpowiedzi są heurystykami: dach poniżej 15 lat zwykle nie wymaga wymiany, wymienić najpierw, jeśli zostało mniej niż 10 lat życia, a demontaż i ponowny montaż paneli jest drogi. To dowód podaży treści (SEO instalatorów), a nie zmierzonego wolumenu pytań. Wątku z Reddita zapytanie nie zwróciło. Wolumenów nie znaleziono.",
+   "evidence_type": "indirect",
+   "numbers": "Brak wolumenów. Heurystyki z wyników: dach poniżej 15 lat zwykle OK; mniej niż 10 lat życia = wymienić najpierw",
+   "sources": [
+    {
+     "url": "https://green-living.na.panasonic.com/articles/can-you-replace-or-repair-your-roof-after-going-solar",
+     "title": "Can you replace — or repair — your roof after going solar?",
+     "publisher": "Panasonic"
+    },
+    {
+     "url": "https://blog.citadelrs.com/should-i-replace-my-roof-before-going-solar",
+     "title": "Should I replace my roof before going solar",
+     "publisher": "Citadel Roofing & Solar"
+    },
+    {
+     "url": "https://www.checkbook.org/chicago-area/roofers/articles/Should-You-Reroof-with-Solar-Shingles-7825",
+     "title": "Should You Reroof with Solar Shingles",
+     "publisher": "Checkbook"
+    },
+    {
+     "url": "https://krummexteriors.com/?p=12246",
+     "title": "krummexteriors.com (roof before solar)",
+     "publisher": "Krumm Exteriors"
+    },
+    {
+     "url": "https://www.greenlancer.com/post/how-to-replace-a-roof-with-solar-panels",
+     "title": "How to replace a roof with solar panels",
+     "publisher": "GreenLancer"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Pytanie istnieje i powraca, ale wyniki zajmują treści sprzedażowe z prostymi regułami kciuka. Symulator musi dać więcej niż heurystykę: horyzont sprzedaży, koszt demontażu, brak 25D, kapitał z domu jako finansowanie. Popytu nie da się tu skwantyfikować bez Keyword Planner lub Google Trends."
+  },
+  {
+   "question": "Częstotliwość pytań online (generatory i awarie, home equity): dowody pośrednie",
+   "claim_pl": "Podczas huraganu Irene (2011) Google odnotował skoki wyszukiwań „power outage” na smartfonach, a „generators” pojawiły się w Hot Searches. To stare dane i tylko wzmianka, bez pomiaru. Generac w latach 2025-2026 opisuje konsultacje domowe jako odporne, co jest wskaźnikiem wyprzedzającym zainteresowania, ale nie wyszukiwań. Dla HELOC i konsolidacji długu nie znaleziono żadnych danych Google Trends ani opublikowanych wolumenów z lat 2025-2026.",
+   "evidence_type": "indirect",
+   "numbers": "Brak wolumenów; skoki „power outage” 23.08 i 28.08.2011 (Google)",
+   "sources": [
+    {
+     "url": "https://search.googleblog.com/2011/10/hurricane-irene-through-eyes-of-mobile.html",
+     "title": "Hurricane Irene through the eyes of mobile (Inside Search)",
+     "publisher": "Google",
+     "published": "2011-10"
+    },
+    {
+     "url": "https://searchenginewatch.com/?p=27712",
+     "title": "Search Engine Watch (Hurricane Irene hot searches)",
+     "publisher": "Search Engine Watch"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/generac-q4-earnings-call-highlights-210524433.html",
+     "title": "Generac Q4 earnings call highlights",
+     "publisher": "Yahoo Finance"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Wyszukiwania dotyczące energii awaryjnej są wyzwalane zdarzeniami. Dla home equity nie ma publicznych dowodów częstotliwości pytań, więc właściciel powinien sam sprawdzić Google Trends i Keyword Planner przed budową. Wolumen promptów LLM pozostaje nieobserwowalny."
+  }
+ ],
+ "contradictions_pl": [
+  "Prognoza łącznych kredytów hipotecznych na 2026: 2,2 bln USD (MBA, X 2025) vs ok. 2,1 bln USD (MBA, X 2026). Prognoza refinansowania na 2026: 737 mld vs 713 mld USD.",
+  "Liczba HELOC w 2025 zależy od dostawcy: Cotality ok. 1,5 mln / 271 mld USD, Equifax 1,409 mln / 198,3 mld USD, a TransUnion 2,554 mln dla całego home equity (HELOC i HELOAN). Metodologie się różnią i nie wolno ich sumować.",
+  "NAR na 2026: +14% (XI 2025) vs +4% (po słabym marcu 2026).",
+  "LIRA: 522 vs 524 vs 526 mld USD; daty komunikatów niejasne.",
+  "Szczyt udziału EV w Q3 2025: 10,6% (transkrypt Cox) vs 7,5% (Electrek). Spadek sprzedaży nowych aut 2026 vs 2025: -2,4% vs -2,6%.",
+  "Spadek domowej fotowoltaiki w 2026: -18% (SEIA via źródło wtórne) vs -19% (Leads4Build) vs -23% (Wood Mackenzie).",
+  "Liczba sprzedawców Amazon w USA: ok. 500 tys. (ścisła definicja) vs 1,1 mln vs 1,9 mln (prawdopodobnie liczba globalna).",
+  "Wymiany dachów: ok. 5 mln przypisane NRCA (niezweryfikowane) vs wyprowadzenie z niezweryfikowanego założenia 7% x 75 mln domów. Dwa źródła mogą powtarzać tę samą liczbę zamiast ją potwierdzać.",
+  "AARP: 44% oczekujących przeprowadzki opisywane raz jako osoby 50+, raz jako starsi dorośli ogółem."
+ ],
+ "open_questions_pl": [
+  "Rzeczywisty wolumen i liczba kredytów refinansowych w 2025 (nie tylko szacunek w USD); udział cash-out.",
+  "Wolumen rynku home equity investment (Point, Hometap, Unlock) w latach 2025-2026: nie znaleziono.",
+  "Udział sprzedaży warunkowych (contingent) i skala produktów buy-before-sell (np. Knock, Orchard, Homeward) w latach 2025-2026: nie znaleziono.",
+  "Oficjalna lub przemysłowa liczba wymian dachów (raporty NRCA, Freedonia, Verisk) oraz udział wymian w dostawach HVAC (AHRI/ACCA).",
+  "Krajowa stopa nieodnowień polis domowych w latach 2025-2026 i częstotliwość szkód komunikacyjnych: nie znaleziono (np. dane Senate Budget Committee lub NAIC nie były przeszukiwane).",
+  "Średnie oprocentowanie kredytów samochodowych w 2026 (Edmunds, Cox): nie badano z powodu limitu wyszukiwań.",
+  "Liczba osób zmieniających pracę (np. ADP Pay Insights), relokacje firmowe i pakiety relokacyjne: nie znaleziono.",
+  "Liczba wynajmujących jako osób (np. IRS Schedule E) i roczna liczba wymian 1031 (IRS Form 8824): nie znaleziono.",
+  "Łączna liczba sprzedawców online w USA (Etsy, eBay, Shopify) i skala finansowania zapasów małych firm: nie badano lub nie znaleziono.",
+  "Wolumeny wyszukiwań i Google Trends z lat 2025-2026 dla kluczowych pytań (np. „solar or roof first”, „sell or rent house”, „trade in negative equity”, „assisted living vs home care”): nie znaleziono w opublikowanych źródłach. Właściciel musi je zmierzyć sam w Keyword Planner lub Google Trends. Wolumen promptów w asystentach AI pozostaje nieobserwowalny.",
+  "Liczba gospodarstw rozważających decyzję vs ją realizujących: wszystkie znalezione liczby mierzą transakcje lub zasoby, nie rozważających ani chętnych do kliknięcia."
+ ],
+ "queries_run": [
+  "MBA mortgage refinance originations 2025 total forecast 2026 refinance volume (extended)",
+  "existing home sales 2025 annual total NAR 2026 forecast median homeowner tenure years (extended)",
+  "HELOC originations 2025 TransUnion ICE home equity lending volume 2026 (extended)",
+  "Harvard JCHS Leading Indicator of Remodeling Activity LIRA 2026 homeowner improvement spending (standard)",
+  "how many roof replacements per year United States residential reroofing million homes (extended)",
+  "AHRI central air conditioner heat pump shipments 2025 replacement share US HVAC 2026 refrigerant transition (standard)",
+  "homeowners insurance non-renewals 2025 2026 claims frequency higher deductibles percentage homeowners (extended)",
+  "residential solar installations 2026 decline after 25D tax credit expiration SEIA Wood Mackenzie Q3 2026 battery attachment rate (extended)",
+  "EIA average electricity interruption hours per customer 2024 major events SAIDI (standard)",
+  "Edmunds negative equity trade-in share 2026 average amount underwater new vehicle (extended)",
+  "Cox Automotive 2025 new vehicle sales total used vehicle sales 2025 EV share 2026 after tax credit (extended)",
+  "Generac home standby generator sales 2025 2026 residential penetration rate outage (standard)",
+  "Census 2025 mover rate interstate moves CPS ASEC geographic mobility number of people moved between states (extended)",
+  "Peak 65 4.1 million Americans turning 65 each year 2024-2027 Retirement Income Institute; Fidelity 401(k) average balance Q2 2026 (standard)",
+  "number of individual landlords United States Rental Housing Finance Survey individual investors own rental units; 1031 exchanges per year number (extended)",
+  "AARP Caregiving in the US 2025 63 million family caregivers; Genworth CareScout cost of care 2025 assisted living median annual cost (standard)",
+  "number of US-based Amazon third-party sellers 2025 active sellers United States marketplace small businesses selling (standard)",
+  "BLS JOLTS quits 2025 annual total million job switchers per year 2026 great stay (standard)",
+  "Google Trends searches for refinance spike 2025 2026 mortgage rates drop search interest (standard)",
+  "reddit should I replace roof before installing solar panels roof is 15 years old (standard)",
+  "TransUnion personal loan originations 2025 debt consolidation share; home equity investment HEI market volume 2025 Point Hometap Unlock (extended)",
+  "median homeowner tenure 2025 years Redfin owners staying longer; share of contingent sales buy before you sell 2026 (extended)",
+  "Google Trends search interest home equity loan OR HELOC OR debt consolidation record high 2025 2026 article (extended)",
+  "Google searches for generators spike after hurricane power outage Google Trends home generator (standard)",
+  "AARP Home and Community Preferences survey 2024 percent of adults 50+ want to remain in their homes as they age; home modifications needed aging in place (extended)"
+ ]
+}

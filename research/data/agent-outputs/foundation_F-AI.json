@@ -1,0 +1,1071 @@
+{
+ "topic": "Dowody dotyczące dystrybucji przez asystentów AI (USA, 2024-2026): wolumen referencji, wpływ AI Overviews/AI Mode na CTR, wzorce cytowań (w tym kalkulatory/narzędzia), zero-click, pomiar, mechanizmy retrieval, aplikacje w asystentach, reklamy w ChatGPT, jakość ruchu",
+ "summary_pl": "Cała analiza opiera się na streszczeniach wyników wyszukiwania (search-summary). Strony nie były otwierane, bo WebFetch jest zablokowany. Wszystkie liczby to panele lub estymacje dostawców, chyba że zaznaczono inaczej.\n\n1) Wolumen. Ruch z asystentów AI szybko rośnie, ale bazę ma małą. Typowa witryna dostaje z AI 0,1–1% ruchu: Ahrefs podaje 0,17% ruchu i 0,1% ruchu referencyjnego, Conductor 1,08% (domeny enterprise). Google wysyła ok. 345x więcej ruchu niż ChatGPT, Perplexity i Gemini razem. W mierzalnych referencjach AI dominuje ChatGPT: BrightEdge podaje 95,1% w VIII 2026, inne trackery 63–92%. Claude to ok. 1%.\n\n2) Zmienność. Ruch skacze o ±50–150% w wyniku decyzji produktowych OpenAI: spadek o 52% w VII–VIII 2025 po przeważeniu cytowań na Reddit i Wikipedię oraz wzrost o 158% WoW w V 2026 po zmianie formatu linków. Po tej zmianie ok. 62% ruchu z ChatGPT trafia na strony główne marek.\n\n3) Google. AI Overviews obniżają CTR organiczny o 35–61% (Pew, Ahrefs, Seer). AI Mode w eksperymencie RCT obniżył CTR zewnętrzny o 18,8 pp. AI Overviews pojawiają się najczęściej przy długich zapytaniach: 73,9% zapytań z 7+ słowami. To dokładnie ten typ zapytań decyzyjnych, w który celuje projekt.\n\n4) Kalkulatory. Nie znaleziono badania, które klasyfikowałoby cytowane URL-e jako kalkulatory lub narzędzia interaktywne. Cytowania trafiają głównie do listicles, stron produktowych, Reddita i YouTube. Pośredni sygnał jest negatywny: omnicalculator.com dostaje z ChatGPT, Claude i Gemini ok. 0,05% swojego ruchu (estymacja Semrush).\n\n5) Zagrożenie strukturalne. Asystenci zaczęli sami generować interaktywne kalkulatory i symulacje w odpowiedzi. Gemini 3 robi to w AI Mode od XI 2025 (np. kalkulator porównujący dwie pożyczki). ChatGPT ma Intelligent UI od X 2026, choć to potwierdzają tylko źródła wtórne. To bezpośredni substytut produktu.\n\n6) Pomiar jest zawodny. Aplikacje mobilne gubią referrer. W X 2026 błąd po stronie OpenAI przez kilka dni wrzucał ruch z ChatGPT do Direct. Kanał AI Assistant w GA4 działa od V 2026 i zależy od referrera. Search Console nie wydziela kliknięć z AI Mode. Narzędzia do monitoringu widoczności w AI pracują na próbkach i dają niestabilne wyniki.\n\n7) Apki i reklamy. Aplikacje w ChatGPT (Apps SDK) i MCP Apps przenoszą interakcję do wnętrza czatu, a model display ads nie ma tam ścieżki monetyzacji. Zatwierdzana jest tylko sprzedaż dóbr fizycznych przez zewnętrzny checkout. Reklamy w ChatGPT (od 9 II 2026, Free/Go, USA) oznaczają, że OpenAI monetyzuje intencję komercyjną w samym czacie. Reklam nie ma przy tematach zdrowotnych.\n\n8) Jakość ruchu. Ruch z AI jest zwykle bardziej zaangażowany: niższy bounce, więcej stron na wizytę. Dane o konwersji są sprzeczne: Adobe +31%, Kaiser i Schulze -13% względem organic. Lepsza jakość nie rekompensuje wolumenu rzędu 0,1–1%.\n\nWniosek dla projektu: dystrybucja przez asystentów nie może być założeniem bazowym strony z AdSense. To potencjalny bonus, a nie fundament. Twierdzenie, że referencje AI są kluczowym aktywem (healthscorer.com), trzeba zweryfikować w logach serwera, oddzielając pobrania przez boty (ChatGPT-User, Claude-User) od wizyt ludzi.",
+ "findings": [
+  {
+   "question": "1. Wielkość i wzrost ruchu referencyjnego z asystentów AI",
+   "claim_pl": "[search-summary] Similarweb (estymacja panelowa, źródła wtórne) podaje, że platformy AI wysyłały globalnie średnio 770,7 mln wizyt referencyjnych miesięcznie w okresie VI 2025–V 2026, +117,4% r/r. Skokowy wzrost w maju 2026 wynikał z decyzji produktowej: od 7 V 2026 ChatGPT pokazuje bardziej widoczne linki do marek. Referencje z ChatGPT wzrosły wtedy o 157,7% tydzień do tygodnia, a udział ruchu lądującego na stronach głównych urósł z ok. 26–29% do ok. 62–63% i utrzymał się.",
+   "evidence_type": "indirect",
+   "numbers": "770,7 mln wizyt/mies. globalnie (VI 2025–V 2026); +117,4% r/r; +157,7% WoW po 7 V 2026; udział stron głównych 26–29% -> 62–63%",
+   "sources": [
+    {
+     "url": "https://seranking.com/blog/chatgpt-referral-traffic-may-2026/",
+     "title": "Referral Traffic from ChatGPT Hit an All-Time High in May 2026",
+     "publisher": "SE Ranking",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/",
+     "title": "AI Search Stats in 2026",
+     "publisher": "Similarweb",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.seroundtable.com/chatgpt-links-up-referrals-41383.html",
+     "title": "OpenAI Shows More Links In ChatGPT Leading To 150% Increase In Referrals",
+     "publisher": "Search Engine Roundtable",
+     "published": "2026-05"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wzrost jest realny, ale napędzają go decyzje UI jednej firmy. Przesunięcie ruchu na strony główne oznacza, że ChatGPT coraz częściej kieruje do rozpoznawalnych marek, a nie do głębokich podstron narzędziowych. To niekorzystne dla nowej domeny z setkami podstron-symulatorów bez rozpoznawalnej marki."
+  },
+  {
+   "question": "1. Udział ruchu z AI w całym ruchu witryn",
+   "claim_pl": "[search-summary] Ruch z asystentów AI to od ułamka procenta do ok. 1% ruchu witryny. Conductor (2026 AEO/GEO Benchmarks; 13 770 domen enterprise, 3,3 mld sesji, V–IX 2025) podaje średnio 1,08%: IT 2,80%, Communication Services 0,25%, sektor finansowy ok. 0,5%. Ahrefs podaje 0,17% ruchu przeciętnej strony (3 000 stron) i 0,1% ruchu referencyjnego (~35 tys. stron); Google wysyła 345x więcej ruchu niż ChatGPT, Perplexity i Gemini łącznie. Datos/SparkToro: narzędzia AI to 0,77% całej aktywności desktopowej w USA w XII 2025 (+~50% r/r).",
+   "evidence_type": "direct",
+   "numbers": "1,08% (Conductor, enterprise); 0,17% ruchu / 0,1% ruchu referencyjnego (Ahrefs); Google 345x więcej niż 3 główne AI; 0,77% aktywności desktop USA (Datos XII 2025)",
+   "sources": [
+    {
+     "url": "https://www.businesswire.com/news/home/20251113364791/en/Conductor-Unveils-2026-AEO-GEO-Benchmarks-Report-How-AI-Shapes-Brand-Visibility-in-a-Zero-Click-World",
+     "title": "Conductor Unveils 2026 AEO / GEO Benchmarks Report",
+     "publisher": "Business Wire / Conductor",
+     "published": "2025-11-13"
+    },
+    {
+     "url": "https://www.conductor.com/academy/financials-aeo-geo-benchmarks/",
+     "title": "Financials Industry: 2026 AEO / GEO Benchmarks",
+     "publisher": "Conductor"
+    },
+    {
+     "url": "https://ahrefs.com/blog/ai-traffic-research",
+     "title": "AI Makes Up 0.1% of Traffic, but Clicks Aren't Everything",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://anicca.co.uk/blog/the-state-of-search-in-2025-key-takeaways-from-the-datos-sparktoro-q4-report/",
+     "title": "The State of Search in 2025 - Datos and SparkToro Q4 Report",
+     "publisher": "Anicca"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Nawet przy dobrej widoczności w AI ten kanał daje w latach 2025–2026 rząd wielkości 0,1–1% ruchu. Model AdSense oparty głównie na referencjach z asystentów wymagałby skali, której nie widać w żadnym benchmarku. Głównym (choć erodującym) źródłem nowych użytkowników z konkretnym zadaniem pozostaje Google organic."
+  },
+  {
+   "question": "1. Podział referencji między asystentów (ChatGPT, Gemini, Perplexity, Claude, Copilot)",
+   "claim_pl": "[search-summary] BrightEdge (24 IX 2026): w sierpniu 2026 ChatGPT wysłał 95,1% ruchu referencyjnego z chatbotów AI, a jego referencje wzrosły o 101% między I a VIII 2026. Gemini miał 2,4%, Perplexity 1,1%, Claude 0,8%. W I kw. 2026 ten sam dostawca raportował spadek udziału ChatGPT do 81,4% i wzrost Gemini do 11,6% (13,2% w IV). Dane BrightEdge są wewnętrznie niespójne co do kwietnia. Inne trackery dają ChatGPT od ok. 63% (Goodie, B2B) do ok. 92%. Conductor podaje 87,4%.",
+   "evidence_type": "indirect",
+   "numbers": "ChatGPT 95,1% / Gemini 2,4% / Perplexity 1,1% / Claude 0,8% (BrightEdge VIII 2026); Q1 2026: ChatGPT 81,4%, Gemini 11,6%; rozrzut trackerów 63–95%",
+   "sources": [
+    {
+     "url": "https://www.brightedge.com/news/press-releases/brightedge-data-chatgpt-referral-traffic-doubles-in-2026",
+     "title": "BrightEdge Data: ChatGPT Referral Traffic More Than Doubles in 2026, Reaching Record 95.1% Share of AI Traffic",
+     "publisher": "BrightEdge",
+     "published": "2026-09-24"
+    },
+    {
+     "url": "https://www.brightedge.com/news/press-releases/brightedge-data-gemini-second-largest-ai-referral-source-q1-2026",
+     "title": "BrightEdge Data: Gemini Becomes No. 2 Consumer AI Referral Source in Q1 2026",
+     "publisher": "BrightEdge",
+     "published": "2026-05-20"
+    },
+    {
+     "url": "https://thenextweb.com/news/chatgpt-ai-referral-traffic-95-percent-brightedge",
+     "title": "ChatGPT now sends 95.1% of AI referral traffic to websites, BrightEdge says",
+     "publisher": "The Next Web"
+    },
+    {
+     "url": "https://higoodie.com/blog/ai-search-traffic-report-2026/",
+     "title": "ChatGPT's AI Referral Share Fell From 89% to 63%",
+     "publisher": "Goodie"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W praktyce liczy się jeden dystrybutor, czyli ChatGPT. Claude i Perplexity dają pojedyncze procenty kanału, który sam jest ułamkiem procenta. Strategia AI to w praktyce zależność od jednej platformy, co oznacza wysokie ryzyko koncentracji."
+  },
+  {
+   "question": "1. Zmienność ruchu z ChatGPT (ryzyko platformowe)",
+   "claim_pl": "[search-summary] Profound (Josh Blyskal) na zbiorze ponad 1 mld cytowań i ponad 1 mln wizyt referencyjnych odnotował spadek referencji z ChatGPT o 52% od 21 VII 2025 do końca VIII 2025. Cytowania Reddita wzrosły w tym czasie o 87% (ponad 10% udziału), Wikipedii o 62% (blisko 13%), a top 3 domeny miały razem 22% cytowań. Blyskal przypisał to przeważeniu cytowań przez OpenAI. W maju 2026 kolejna zmiana formatu linków dała +150–158% WoW (patrz wyżej).",
+   "evidence_type": "indirect",
+   "numbers": "-52% (21 VII – koniec VIII 2025); Reddit +87% (>10% cytowań); Wikipedia +62% (~13%); top 3 domeny = 22% cytowań",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/chatgpt-traffic-referrals-plummet-461027",
+     "title": "ChatGPT traffic referrals plummet",
+     "publisher": "Search Engine Land",
+     "published": "2025-08"
+    },
+    {
+     "url": "https://martech.org/chatgpt-traffic-to-websites-is-down-52-in-a-month/",
+     "title": "ChatGPT traffic to websites is down 52% in a month",
+     "publisher": "MarTech",
+     "published": "2025-08"
+    },
+    {
+     "url": "https://ppc.land/chatgpt-referral-traffic-drops-52-as-citation-patterns-shift-dramatically/",
+     "title": "ChatGPT referral traffic drops 52% as citation patterns shift dramatically",
+     "publisher": "PPC Land"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Jedna zmiana wag w systemie retrieval potrafi w kilka tygodni obciąć lub zwielokrotnić ruch. Najbardziej tracą mniejsze, rzadko cytowane domeny. Nie da się na tym zbudować przewidywalnego budżetu przychodów z reklam."
+  },
+  {
+   "question": "1. Cloudflare: stosunek crawl-to-referral i wzrost botów działających na zlecenie użytkownika",
+   "claim_pl": "[search-summary] Metryka crawl-to-refer na Cloudflare Radar wystartowała 1 VII 2025. Raportowane wartości bardzo się różnią. Anthropic: od 286 930:1 (I 2025) do 38 065:1 (VII 2025), w innych relacjach 25–100 tys.:1. OpenAI: ok. 1 100–1 700:1. Perplexity: poniżej 200:1. Google: 3,8–22,5:1. Kompilacja z VIII 2026 (niezweryfikowana bezpośrednio) podaje za VII 2026: Anthropic ok. 1 917:1, OpenAI 251:1, Google 4,7:1. Według Year in Review 2025 Cloudflare ruch botów działających na zlecenie użytkownika (user action bots) wzrósł ponad 15-krotnie. Crawlery AI generowały 4,2% żądań HTML, Googlebot 4,5%.",
+   "evidence_type": "indirect",
+   "numbers": "Anthropic 38 065:1 (VII 2025) -> ~1 917:1 (VII 2026, niezweryfikowane); OpenAI ~1 100–1 700:1 -> 251:1; Perplexity <200:1; Google 3,8–22,5:1; boty user-action x15 w 2025; AI crawlery 4,2% żądań HTML",
+   "sources": [
+    {
+     "url": "https://ppc.land/crawl-to-referral-ratio/",
+     "title": "crawl to referral ratio",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://seomator.com/blog/crawl-to-refer-ratio-ai-crawlers-llm-bots",
+     "title": "GEO Data Report 2026: Which AI Crawlers & LLM Bots Take the Most and Give the Least?",
+     "publisher": "SEOmator"
+    },
+    {
+     "url": "https://www.digitalapplied.com/blog/ai-crawl-economics-pay-per-crawl-referral-data-2026",
+     "title": "AI crawl economics: pay-per-crawl referral data 2026",
+     "publisher": "Digital Applied",
+     "published": "2026-08-06"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/everyone-is-quoting-the-same-number-and-getting-different-answers/588659/",
+     "title": "Everyone is quoting the same number and getting different answers",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://www.medianama.com/2025/12/223-user-driven-ai-bots-crawling-grows-15x-in-2025-cloudflare-report/",
+     "title": "User-driven AI bots crawling grows 15x in 2025: Cloudflare report",
+     "publisher": "MediaNama",
+     "published": "2025-12"
+    },
+    {
+     "url": "https://ppc.land/ai-crawlers-now-consume-4-2-of-web-traffic-as-internet-grows-19-in-2025/",
+     "title": "AI crawlers now consume 4.2% of web traffic as internet grows 19% in 2025",
+     "publisher": "PPC Land"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Asystenci pobierają treść wielokrotnie częściej, niż odsyłają ludzi. Rośnie przy tym liczba botów pobierających stronę na żądanie użytkownika. Ta odpowiedź trafia do czatu, a nie na stronę z reklamami. Dla serwisu na VPS oznacza to koszt serwerowy bez przychodu. Dla właściciela healthscorer.com: nawet duży ruch botów AI w logach nie oznacza wizyt ludzi."
+  },
+  {
+   "question": "2. Wpływ AI Overviews na kliknięcia (Pew Research 2025)",
+   "claim_pl": "[search-summary] Pew Research Center (22 VII 2025) przeanalizował 68 879 wyszukiwań 900 dorosłych z USA (panel KnowledgePanel, III 2025). Gdy pojawiało się podsumowanie AI, użytkownicy klikali tradycyjny wynik w 8% wizyt, bez podsumowania w 15%. Link wewnątrz podsumowania kliknięto w 1% wizyt. Sesja kończyła się na stronie wyników w 26% przypadków z podsumowaniem AI wobec 16% bez niego.",
+   "evidence_type": "direct",
+   "numbers": "8% vs 15% kliknięć; 1% kliknięć w linki w podsumowaniu; zakończenie sesji 26% vs 16%; n=68 879 wyszukiwań, 900 osób",
+   "sources": [
+    {
+     "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+     "title": "Google users are less likely to click on links when an AI summary appears in the results",
+     "publisher": "Pew Research Center",
+     "published": "2025-07-22"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/pew-research-confirms-google-ai-overviews-is-eroding-web-ecosystem/551825/",
+     "title": "Pew Research Confirms Google AI Overviews Is Eroding Web Ecosystem",
+     "publisher": "Search Engine Journal"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Najlepsze niezależne dane behawioralne pokazują, że podsumowania AI w Google prawie o połowę obniżają klikalność. Bycie cytowanym w podsumowaniu daje ok. 1% kliknięć, więc cytowanie nie zastępuje rankingu."
+  },
+  {
+   "question": "2. Wpływ AI Overviews na CTR pozycji 1 (Ahrefs)",
+   "claim_pl": "[search-summary] Ahrefs: w IV 2025 obecność AI Overview na 300 tys. słów kluczowych korelowała z 34,5% niższym średnim CTR strony na pozycji 1. W aktualizacji z II 2026 (XII 2023 vs XII 2025) różnica wynosi już 58%: CTR pozycji 1 dla fraz z AI Overview spadł z 0,073 do 0,016, a bazowy CTR fraz informacyjnych bez AI Overview z 0,076 do 0,039. Pozycja 2 straciła ok. połowę kliknięć, pozycja 10 blisko 20%. To korelacja, a nie dowód przyczynowości.",
+   "evidence_type": "indirect",
+   "numbers": "-34,5% (IV 2025); -58% (XII 2025); CTR poz. 1: 0,073 -> 0,016 (z AIO) vs 0,076 -> 0,039 (bez AIO)",
+   "sources": [
+    {
+     "url": "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+     "title": "Update: AI Overviews Reduce Clicks by 58%",
+     "publisher": "Ahrefs",
+     "published": "2026-02"
+    },
+    {
+     "url": "https://ahrefs.com/it/blog/ai-overviews-reduce-clicks/",
+     "title": "AI Overviews Reduce Clicks by 34.5%",
+     "publisher": "Ahrefs",
+     "published": "2025-04"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Nawet pozycja 1 w Google dla zapytań informacyjnych daje dziś ok. 1,6% CTR, gdy pojawia się AI Overview. Prognozy ruchu dla symulatorów oparte na historycznych krzywych CTR będą zawyżone 2–4 razy."
+  },
+  {
+   "question": "2. Wpływ AI Overviews na CTR organiczny i płatny (Seer Interactive) oraz odbicie w 2026",
+   "claim_pl": "[search-summary] Seer Interactive (aktualizacja z IX 2025; 3 119 zapytań, 42 organizacje, 25,1 mln wyświetleń organicznych): CTR organiczny zapytań informacyjnych z AI Overview spadł od połowy 2024 o 61% (z 1,76% do 0,61%), a płatny o 68% (z 19,7% do 6,34%). Bez AI Overview CTR także spadł, o 41% r/r do 1,62%. Raport z 2026 r. pokazuje częściowe odbicie: z 1,3% (XII 2025) do 2,4% (II 2026), nadal poniżej bazy 3,82%. Marki cytowane w AI Overview miały więcej kliknięć organicznych: +35% w 2025, +120% na wyświetlenie w 2026. Przyczynowości nie udowodniono.",
+   "evidence_type": "indirect",
+   "numbers": "organic CTR z AIO 1,76% -> 0,61% (-61%); paid 19,7% -> 6,34% (-68%); bez AIO -41% r/r do 1,62%; odbicie 1,3% -> 2,4% (XII 2025–II 2026) vs baza 3,82%",
+   "sources": [
+    {
+     "url": "https://seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update",
+     "title": "AIO Impact on Google CTR: September 2025 Update",
+     "publisher": "Seer Interactive",
+     "published": "2025-11"
+    },
+    {
+     "url": "https://searchengineland.com/google-ai-overviews-drive-61-drop-organic-paid-ctr-464212",
+     "title": "Google AI Overviews drive 61% drop in organic, paid CTR",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update",
+     "title": "AIO Impact on Google CTR: 2026 Update",
+     "publisher": "Seer Interactive",
+     "published": "2026"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Spadek jest duży, ale nie liniowy, a w 2026 widać częściowe odbicie. Bycie cytowanym w AI Overview koreluje z wyraźnie wyższym CTR, więc warto o to zabiegać jako uzupełnienie SEO. Samo w sobie nie rozwiązuje to jednak problemu wolumenu."
+  },
+  {
+   "question": "2. Wpływ Google AI Mode na kliknięcia zewnętrzne",
+   "claim_pl": "[search-summary] Randomizowany eksperyment terenowy UPenn i Northeastern (1 100 uczestników, Chrome, III 2026; relacja SEJ z IX 2026): przypisanie do AI Mode obniżyło CTR zewnętrzny o 18,8 pp względem zwykłego Google, bez wzrostu satysfakcji. Ukrycie AI Overviews podniosło CTR o ok. 8,8 pp. iPullRank (V–VIII 2025): kliknięciem kończy się 24% sesji Google Search i 4,5% sesji AI Mode. Google twierdzi (Press Gazette, V 2026), że AI Mode nie jest domyślnym doświadczeniem. 6 V 2026 Google zapowiedział więcej linków inline w AI Overviews i AI Mode.",
+   "evidence_type": "direct",
+   "numbers": "-18,8 pp CTR zewnętrznego (RCT, n=1 100); +8,8 pp po ukryciu AIO; sesje z kliknięciem: 24% (Search) vs 4,5% (AI Mode)",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/google-ai-mode-cuts-clicks-satisfaction-study-490494",
+     "title": "Google AI Mode cuts clicks without boosting satisfaction: Study",
+     "publisher": "Search Engine Land",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/research-shows-google-ai-mode-sends-less-clicks-is-a-poor-user-experience/590221/",
+     "title": "Research Shows Google AI Mode Sends Less Clicks & Is A Poor User Experience",
+     "publisher": "Search Engine Journal",
+     "published": "2026-09"
+    },
+    {
+     "url": "https://ipullrank.com/early-referral-data-ai-mode",
+     "title": "Signals in the Clickstream: Early Referral Data on Google's AI Mode",
+     "publisher": "iPullRank"
+    },
+    {
+     "url": "https://pressgazette.co.uk/platforms/what-google-ai-mode-push-means-for-publishers/",
+     "title": "Google update set to move users from AI Overviews to AI Mode",
+     "publisher": "Press Gazette",
+     "published": "2026-05"
+    },
+    {
+     "url": "https://9to5google.com/2026/05/06/google-ai-mode-overviews-direct-links/",
+     "title": "Google making links in AI Mode and AI Overviews a bit more direct",
+     "publisher": "9to5Google",
+     "published": "2026-05-06"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Jeśli Google będzie przesuwał użytkowników z AI Overviews do AI Mode, ruch organiczny do narzędzi spadnie jeszcze bardziej. Ryzyko jest największe przy złożonych zapytaniach konwersacyjnych, czyli dokładnie przy pytaniach decyzyjnych typu 'should I install solar now or wait'."
+  },
+  {
+   "question": "2. Zero-click w Google i spadki ruchu wydawców; stanowisko Google",
+   "claim_pl": "[search-summary] Similarweb: udział wyszukiwań newsowych zakończonych bez kliknięcia wzrósł z 56% (V 2024) do 69% (V 2025). Chartbeat (cytowany w raporcie Reuters Institute 2026): ruch organiczny z Google do ponad 2 500 serwisów spadł między XI 2024 a XI 2025 o 33% globalnie i o 38% w USA. Liz Reid z Google (VIII 2025) twierdzi, że całkowity wolumen kliknięć organicznych jest stabilny r/r, a jakość kliknięć wzrosła. Google nie opublikował danych, które by to potwierdzały.",
+   "evidence_type": "indirect",
+   "numbers": "zero-click (news) 56% -> 69%; ruch z Google do wydawców -33% globalnie, -38% USA (XI 2024–XI 2025)",
+   "sources": [
+    {
+     "url": "https://www.seroundtable.com/similarweb-google-zero-click-search-growth-39706.html?cid=482",
+     "title": "Similarweb: No Clicks From Google Grew From 56% to 69% Since AI Overviews",
+     "publisher": "Search Engine Roundtable",
+     "published": "2025"
+    },
+    {
+     "url": "https://pressgazette.co.uk/platforms/google-search-clicks-traffic-2025-ai-overviews/",
+     "title": "Google search clicks traffic 2025 AI Overviews",
+     "publisher": "Press Gazette"
+    },
+    {
+     "url": "https://www.techwyse.com/news/search-news/google-liz-reid-bounce-clicks-ai-overviews-traffic-data",
+     "title": "Google's Liz Reid Repeats 'Bounce Clicks' Argument on Bloomberg, Still Without Supporting Data",
+     "publisher": "TechWyse"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Dane dotyczą głównie wydawców newsowych, a nie narzędzi. Kierunek jest jednak spójny: maleje bazowa pula kliknięć z wyszukiwarki, z której nowy serwis musiałby czerpać. Zapytania transakcyjne i narzędziowe mogą tracić mniej, ale to hipoteza, niezweryfikowana dla kalkulatorów."
+  },
+  {
+   "question": "2. Częstość AI Overviews: YMYL i długie zapytania",
+   "claim_pl": "[search-summary] Szacunki udziału zapytań w USA z AI Overview mocno się różnią: ok. 20% (jeden tracker), 30% (Semrush, III 2026), 48–50% (BrightEdge, Q1 2026). Ochrona zdrowia: 88% (BrightEdge) lub 51% (WebFX, ponad 130 tys. zapytań). Finanse: nagłówkowo 21–28%, ale zapytania edukacyjne o finansach ok. 67%. Zapytania z 7 lub więcej słowami wywołują AI Overview w 73,9% przypadków (WebFX).",
+   "evidence_type": "indirect",
+   "numbers": "20–50% zapytań w USA; zdrowie 51–88%; finanse edukacyjne 67%; zapytania 7+ słów: 73,9%",
+   "sources": [
+    {
+     "url": "https://www.brightedge.com/resources/weekly-ai-search-insights/ai-overviews-healthcare-insights-for-finance",
+     "title": "18 Months of AI Overviews: What Healthcare Tells Us About Where Finance Is Headed",
+     "publisher": "BrightEdge"
+    },
+    {
+     "url": "https://stacker.com/stories/business-economy/ai-overviews-healthcare-what-study-more-130k-health-queries-reveals",
+     "title": "AI overviews in healthcare: What a study of more than 130K health queries reveals",
+     "publisher": "Stacker / WebFX"
+    },
+    {
+     "url": "https://serps.io/blog/ai-overview-prevalence-by-industry",
+     "title": "AI Overview Prevalence by Industry: 2026 Benchmarks",
+     "publisher": "serps.io"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Długie, opisowe zapytania decyzyjne z obszarów finansów domowych, zdrowia i nieruchomości to dokładnie te, w których AI Overview pojawia się najczęściej. Nisza 'złożonych decyzji' jest więc szczególnie wystawiona na odpowiedzi AI w Google."
+  },
+  {
+   "question": "3. Jakie domeny cytują asystenci (Reddit, YouTube, Wikipedia)",
+   "claim_pl": "[search-summary] Semrush (325 tys. promptów, I–II 2026; za eMarketer): Reddit jest najczęściej cytowaną domeną w ChatGPT Search, Google AI Mode i Perplexity. LLM Pulse (28 dni, VII 2026): łącznie YouTube 20,86% odpowiedzi, Reddit 12,34%; w samym ChatGPT prowadzi Reddit z 11,9%. Ahrefs (1,4 mln promptów): ChatGPT cytuje ok. 50% pobranych URL-i, a Reddit często pobiera, ale rzadko cytuje. Częściej cytowane są strony ściśle dopasowane do węższych pod-zapytań i z czytelnymi, opisowymi URL-ami.",
+   "evidence_type": "indirect",
+   "numbers": "Reddit #1 (Semrush, 325k promptów); YouTube 20,86% / Reddit 12,34% (LLM Pulse VII 2026); ChatGPT cytuje 49,98% pobranych URL-i",
+   "sources": [
+    {
+     "url": "https://www.emarketer.com/chart/c/368764",
+     "title": "Reddit Is the Top Cited Domain Across ChatGPT Search, Google AI Mode, and Perplexity (chart)",
+     "publisher": "eMarketer / Semrush",
+     "published": "2026-03"
+    },
+    {
+     "url": "https://llmpulse.ai/data-studies/top-cited-domains",
+     "title": "Top Cited Domains",
+     "publisher": "LLM Pulse",
+     "published": "2026-07"
+    },
+    {
+     "url": "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+     "title": "Why ChatGPT Cites One Page Over Another (Study of 1.4M Prompts)",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/chatgpt-often-retrieves-but-rarely-cites-reddit-pages/572243/",
+     "title": "ChatGPT often retrieves but rarely cites Reddit pages",
+     "publisher": "Search Engine Journal"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Cytowania skupiają się na kilku platformach UGC i wideo. Nowa domena z narzędziami konkuruje o resztę. Dopasowanie strony do wąskiego pod-zapytania (jeden problem decyzyjny = jedna podstrona z opisowym URL-em) jest zgodne z tym, co premiuje retrieval ChatGPT."
+  },
+  {
+   "question": "3. Typy treści najczęściej cytowane",
+   "claim_pl": "[search-summary] Evertune (25 tys. URL-i; za AirOps): listicles stanowią 21,9% cytowań AI, artykuły 16,7%, strony produktowe 13,7%. Zero Click Labs: listicles 33,8%, strony produktowe 28%; ChatGPT skłania się ku stronom produktowym, AI Overviews ku listicles. Wix AI Search Lab: listicles prowadzą we wszystkich branżach, a samodzielne strony porównań i alternatyw to poniżej 3% cytowań. Żadne z tych badań nie wyodrębnia kategorii 'kalkulator / narzędzie interaktywne'.",
+   "evidence_type": "indirect",
+   "numbers": "listicles 21,9–33,8%; artykuły 16,7%; strony produktowe 13,7–28%; strony porównawcze <3% (Wix)",
+   "sources": [
+    {
+     "url": "https://www.airops.com/blog/aeo-content-types",
+     "title": "Which Content Types Perform Best for AEO: A Data-Backed Comparison",
+     "publisher": "AirOps"
+    },
+    {
+     "url": "https://www.wix.com/studio/ai-search-lab/research/content-types-most-cited-by-llms",
+     "title": "The content types most cited by LLMs",
+     "publisher": "Wix Studio AI Search Lab"
+    },
+    {
+     "url": "https://zeroclicklabs.ai/ai-seo-study-content-types-ai-search/",
+     "title": "AI SEO Study: What Types of Content Appear in AI Search in 2026?",
+     "publisher": "Zero Click Labs"
+    },
+    {
+     "url": "https://blog.hubspot.com/marketing/content-format-types-that-earn-citations",
+     "title": "On-page content formats answer engines actually favor",
+     "publisher": "HubSpot"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Asystenci cytują głównie tekst w formatach list, rankingów i opisów produktów. Strona-symulator, której wartością jest interakcja, a nie tekst, nie wpisuje się w udokumentowane wzorce cytowań. Strona musiałaby mieć silną warstwę tekstową (założenia, wnioski, scenariusze), co podnosi koszt utrzymania."
+  },
+  {
+   "question": "3. Dowody specyficzne dla kalkulatorów i narzędzi interaktywnych",
+   "claim_pl": "[search-summary] Nie znaleziono badania, które klasyfikowałoby cytowane lub linkowane URL-e jako kalkulatory czy narzędzia interaktywne (zakres: ok. 8 zapytań o kalkulatory, narzędzia, free tools, ChatGPT i AI Overviews; pewność średnia). Dowody pośrednie są negatywne lub słabe. Semrush (estymacja, VI 2026) przypisuje omnicalculator.com ok. 14,29 mln wizyt, z czego ok. 4 tys. z ChatGPT, 1 tys. z Claude i 835 z Gemini, czyli ok. 0,05% ruchu. Ruch calculator.net według Semrush spadał w 2025 (62,84 mln w VII, 56,12 mln w IX), bez ustalonej przyczyny. Jedyny pozytywny sygnał to case study Seer z jednej strony: konwersje z Gemini zachodziły na stronach praktycznych narzędzi i kalkulatorów. Około 44% cytowań ChatGPT pochodzi z pierwszych 30% treści dokumentu. Hipoteza: narzędzia z małą ilością tekstu na początku strony są w gorszej pozycji.",
+   "evidence_type": "estimate",
+   "numbers": "omnicalculator.com: AI ≈0,05% ruchu (~4K ChatGPT, ~1K Claude, ~835 Gemini z 14,29 mln, VI 2026, estymacja Semrush); calculator.net 62,84 mln (VII 2025) -> 56,12 mln (IX 2025); 44% cytowań z pierwszych 30% tekstu",
+   "sources": [
+    {
+     "url": "https://www.semrush.com/website/omnicalculator.com/overview/",
+     "title": "omnicalculator.com Website Traffic, Ranking, Analytics [June 2026]",
+     "publisher": "Semrush",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.similarweb.com/website/omnicalculator.com/",
+     "title": "omnicalculator.com Traffic Analytics, Ranking & Audience [June 2026]",
+     "publisher": "Similarweb",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://cw.semrush.com/website/calculator.net/overview",
+     "title": "calculator.net overview",
+     "publisher": "Semrush",
+     "published": "2025-10-12"
+    },
+    {
+     "url": "https://www.seerinteractive.com/insights/case-study-6-learnings-about-how-traffic-from-chatgpt-converts",
+     "title": "Case Study: 6 Learnings, 1 site - How Traffic from ChatGPT Converts",
+     "publisher": "Seer Interactive"
+    },
+    {
+     "url": "https://almcorp.com/blog/chatgpt-citations-study-44-percent-first-third-content/",
+     "title": "ChatGPT Citations: 44% Come From the First Third of Content According to Landmark Study",
+     "publisher": "ALM Corp"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "To najważniejsze ostrzeżenie dla tezy projektu. Największy katalog kalkulatorów w sieci dostaje z asystentów AI pomijalny ruch (estymacja). Brak jakichkolwiek dowodów, że asystenci szczególnie chętnie linkują do narzędzi. Hipotezę 'AI poleca symulatory' trzeba sprawdzić własnym panelem promptów, zanim cokolwiek zostanie zbudowane."
+  },
+  {
+   "question": "3. Cytowania AI Overviews a ranking organiczny; zbieżność silników",
+   "claim_pl": "[search-summary] Ahrefs (VII 2025, 1,9 mln cytowań): 76,1% stron cytowanych w AI Overviews rankuje w top 10. Nowsza analiza Ahrefs (863 tys. słów kluczowych, 4 mln URL-i) podaje ok. 38%, częściowo z powodu lepszego parsowania. Wśród cytowanych spoza top 100 18,2% to YouTube. Semrush (VII 2025): Perplexity pokrywa się z domenami z top 10 Google w ponad 91%, ChatGPT tylko w ok. 45%.",
+   "evidence_type": "indirect",
+   "numbers": "76,1% (VII 2025) -> ~38% cytowań AIO z top 10; zbieżność domen z top 10 Google: Perplexity >91%, ChatGPT ~45%",
+   "sources": [
+    {
+     "url": "https://ahrefs.com/blog/search-rankings-ai-citations",
+     "title": "76% of AI Overview Citations Pull From the Top 10",
+     "publisher": "Ahrefs",
+     "published": "2025-07"
+    },
+    {
+     "url": "https://news.designrush.com/ai-overview-citations-drop-ahrefs",
+     "title": "Ahrefs Study: Only 38% of Google AI Overview Citations Come From Top 10 Pages",
+     "publisher": "DesignRush"
+    },
+    {
+     "url": "https://www.dynadot.com/blog/how-ai-understands-domain-names",
+     "title": "How AI understands domain names",
+     "publisher": "Dynadot"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W Google AI Overviews i w Perplexity klasyczne SEO pozostaje głównym wejściem do cytowań. ChatGPT działa w dużej mierze niezależnie od rankingu Google, więc wymaga osobnej, trudno przewidywalnej optymalizacji."
+  },
+  {
+   "question": "4. Jak często ChatGPT w ogóle szuka w sieci i linkuje",
+   "claim_pl": "[search-summary] Similarweb (US desktop, model): odsetek odpowiedzi ChatGPT z co najmniej jednym linkiem wzrósł z ok. 1,3–1,6% (VI 2025) do 6,8% (V 2026). Według branż: podróże 22,6%, retail 13,5%, sport 10,7%, finanse 8,0%, edukacja 4,8%. Wartości wahały się, np. ok. 4,5% w II 2026. Semrush (clickstream): wyszukiwanie w sieci uruchamiało się w 34,5% zapytań w II 2026, wobec 46% pod koniec 2024. Profound: ok. 18% rozmów. Nectiv: 31% promptów.",
+   "evidence_type": "indirect",
+   "numbers": "odpowiedzi z linkiem: ~1,3–1,6% -> 6,8%; finanse 8,0%; podróże 22,6%; web search w 34,5% zapytań (II 2026) vs 46% (koniec 2024); 18% rozmów (Profound)",
+   "sources": [
+    {
+     "url": "https://searchenginejournal.com/chatgpt-links-out-most-on-travel-questions/583824",
+     "title": "ChatGPT links out most on travel questions",
+     "publisher": "Search Engine Journal",
+     "published": "2026"
+    },
+    {
+     "url": "https://letsdatascience.com/news/chatgpt-cites-sources-most-often-in-travel-answers-similarwe-a0e6890f",
+     "title": "ChatGPT Cites Sources Most Often in Travel Answers, Similarweb Finds",
+     "publisher": "Let's Data Science"
+    },
+    {
+     "url": "https://searchengineland.com/chatgpt-search-prompts-data-463407",
+     "title": "ChatGPT performs a search in 31% of prompts, new data reveals",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://otterly.ai/blog/how-often-does-chatgpt-trigger-a-web-search/",
+     "title": "How often does ChatGPT trigger a Web Search? (2026 Data)",
+     "publisher": "Otterly.AI"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ponad 90% odpowiedzi ChatGPT nie zawiera żadnego linku, a od 2024 r. ChatGPT coraz rzadziej uruchamia wyszukiwanie. W odpowiedziach o finanse link pojawia się w ok. 8%. Teoretyczny lejek do symulatora jest więc bardzo wąski już na etapie 'czy w ogóle jest link'."
+  },
+  {
+   "question": "4. Zero-click w asystentach: generowanie kalkulatorów i symulacji w samej odpowiedzi",
+   "claim_pl": "[search-summary] Google (blog, 18 XI 2025): Gemini 3 w AI Mode dynamicznie generuje układ odpowiedzi 'z interaktywnymi narzędziami i symulacjami', kodując je w czasie rzeczywistym. Przykłady to własny interaktywny kalkulator porównujący dwie opcje pożyczki oraz kalkulator hipoteczny ze zmienną stopą i wkładem własnym. Funkcja startowała dla subskrybentów AI Pro/Ultra w USA, a następnie miała trafić do darmowego AI Mode. Źródła wtórne (bez pierwotnego ogłoszenia OpenAI) podają, że 7–8 X 2026, razem z GPT-6, ChatGPT dostał 'Intelligent UI': kalkulatory, wykresy, mapy i przyciski w odpowiedzi, w demo m.in. kalkulator oszczędności.",
+   "evidence_type": "direct",
+   "numbers": "Gemini 3 generative UI w AI Mode: XI 2025 (USA, AI Pro/Ultra, potem free); ChatGPT Intelligent UI: ~7–8 X 2026 (źródła wtórne)",
+   "sources": [
+    {
+     "url": "https://blog.google/products-and-platforms/products/search/gemini-3-search-ai-mode/",
+     "title": "Google brings Gemini 3 AI model to Search and AI Mode",
+     "publisher": "Google",
+     "published": "2025-11-18"
+    },
+    {
+     "url": "https://9to5google.com/2025/11/18/gemini-3-launch/",
+     "title": "Google launches Gemini 3 with SOTA reasoning, generative UI responses",
+     "publisher": "9to5Google",
+     "published": "2025-11-18"
+    },
+    {
+     "url": "https://9to5google.com/2025/11/25/gemini-generative-uis-apps/",
+     "title": "Gemini's generative UIs are the future of 'there's an app for that'",
+     "publisher": "9to5Google",
+     "published": "2025-11-25"
+    },
+    {
+     "url": "https://aiweekly.co/alerts/openai-rolls-gpt-6-to-all-chatgpt-tiers-with-intelligent-ui-that-renders-charts",
+     "title": "OpenAI Launches ChatGPT 'Intelligent UI' Alongside GPT-6",
+     "publisher": "AI Weekly",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://almcorp.com/news/chatgpt-answers-get-visual-and-interactive/",
+     "title": "ChatGPT Answers Get Visual and Interactive (GPT-6 UI)",
+     "publisher": "ALM Corp",
+     "published": "2026-10"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "To bezpośredni substytut (kategoria C) produktu. Asystent sam buduje interaktywny kalkulator czy symulator dopasowany do pytania i niczego nie linkuje. Przewaga symulatora musiałaby leżeć w zweryfikowanych danych (stawki, ulgi podatkowe, koszty lokalne), wiarygodności i spójności metodyki, a nie w samej interaktywności. Danych o wpływie tych funkcji na kliknięcia jeszcze nie ma."
+  },
+  {
+   "question": "4. Do czego ludzie używają ChatGPT (popyt na porady decyzyjne wewnątrz asystenta)",
+   "claim_pl": "[search-summary] Badanie OpenAI i NBER (D. Deming i in., 2025; za źródłami wtórnymi): ok. 80% użycia ChatGPT przypada na trzy kategorie, czyli 'practical guidance' (ok. 28–29% wiadomości), 'seeking information' (wzrost z ok. 14% do 24%) i pisanie (28,1%). Użycie niezwiązane z pracą wzrosło z ok. 53% do 73% między połową 2024 a VI 2025.",
+   "evidence_type": "indirect",
+   "numbers": "practical guidance ~28–29%; seeking information ~24%; writing 28,1%; non-work 73% (VI 2025)",
+   "sources": [
+    {
+     "url": "https://gizmodo.com/openai-how-people-use-chatgpt-2000658906",
+     "title": "OpenAI: how people use ChatGPT",
+     "publisher": "Gizmodo",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://thehustle.co/news/most-people-use-chatgpt-for-practical-guidance",
+     "title": "Most people use ChatGPT for 'practical guidance'",
+     "publisher": "The Hustle"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Popyt na pomoc w decyzjach życiowych istnieje i jest masowy, ale realizuje się wewnątrz asystenta, jako rozmowa. Istnienie problemu nie oznacza chęci kliknięcia w zewnętrzne narzędzie."
+  },
+  {
+   "question": "4/5. Wzmianka vs kliknięcie: jak rekomendacja w ChatGPT przekłada się na wizyty",
+   "claim_pl": "[search-summary] Similarweb ('The Downstream Impact of AI Visibility'; panel desktop USA, VII–XII 2025; finanse, podróże, beauty): użytkownicy, którym ChatGPT polecił markę, odwiedzali jej stronę w ciągu 7 dni ok. 2,5 razy częściej niż stronę bezpośredniego konkurenta. Wizyty pod wpływem AI przychodziły głównie przez wyszukiwarkę (55,9% vs 40,4%), rzadziej bezpośrednio (19,9% vs 38,8%). Takie wizyty to średnio 12 stron i 11,8 minuty, wobec 6,5 strony i 5,6 minuty. To korelacja.",
+   "evidence_type": "indirect",
+   "numbers": "2,5x więcej wizyt w 7 dni; 55,9% wizyt AI-influenced przez search; 12 stron / 11,8 min vs 6,5 / 5,6",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/chatgpt-recommendations-brand-website-visits-study-480989",
+     "title": "ChatGPT recommendations drive brand website visits: study",
+     "publisher": "Search Engine Land",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.seo-day.de/news/article/chatgpt-recommendations-drive-more-brand-website-visits?lang=en",
+     "title": "ChatGPT recommendations drive more brand visits",
+     "publisher": "SEO-Day"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wartość wzmianki działa głównie przez markę: użytkownik zapamiętuje nazwę i szuka jej później w Google. Generyczny serwis z setkami symulatorów bez rozpoznawalnej marki z tego mechanizmu prawie nie skorzysta. To uderza w założenie 'bez powracających użytkowników i bez budowy marki'."
+  },
+  {
+   "question": "5. Pomiar: referrer, utm_source=chatgpt.com, ruch ukryty w Direct",
+   "claim_pl": "[search-summary] ChatGPT dokleja utm_source=chatgpt.com do wielu, ale nie wszystkich linków. Kliknięcia z aplikacji natywnych (WKWebView na iOS, Custom Tabs na Androidzie), kopiowanie linków i rel=noreferrer gubią referrer, a wizyta trafia do Direct lub Unassigned w GA4. Ok. 14 X 2026 SER/SEL opisały zniknięcie tagów UTM i otwieranie linków z noopener,noreferrer po wdrożeniu GPT-6. Analiza C. Hueslera (Adobe) na ok. 500 stronach: ok. 31 tys. wizyt dziennie z ChatGPT mniej, ok. 26 tys. więcej w Direct. Według części relacji OpenAI potwierdził błąd i UTM wrócił, ale referrer nadal brakuje przy większości kliknięć. Szacunki dostawców (niezweryfikowane): wizyty UTM bez referrera to 35,7% ruchu AI; na każdą wykrytą sesję AI przypada 2,5–3 sesji w Direct.",
+   "evidence_type": "indirect",
+   "numbers": "~31 tys./dzień przesunięcia ChatGPT -> Direct (~500 stron, X 2026); 35,7% ruchu AI tylko z UTM (szacunek dostawcy); mnożnik 2,5–3x (szacunek dostawcy)",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552",
+     "title": "ChatGPT drop in UTM tracking was a bug",
+     "publisher": "Search Engine Land",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://almcorp.com/news/chatgpt-bug-sent-ai-referral-traffic-to-direct-after-gpt-6/",
+     "title": "ChatGPT Bug Sent AI Referral Traffic to Direct After GPT-6",
+     "publisher": "ALM Corp",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://www.relevantaudience.com/analytics/chatgpt-gpt-6-utm-referrer-dropped-direct-traffic/",
+     "title": "ChatGPT drops UTM tags? Clicks now show as Direct",
+     "publisher": "Relevant Audience",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://clickport.io/blog/chatgpt-direct-traffic-ga4",
+     "title": "Why ChatGPT Traffic Shows as Direct in GA4 (2026)",
+     "publisher": "Clickport"
+    },
+    {
+     "url": "https://getairefs.com/learn/why-ga4-under-reports-chatgpt-traffic",
+     "title": "Why GA4 under reports ChatGPT traffic",
+     "publisher": "AIRefs"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Każda ocena kanału AI (także obecna ocena ruchu healthscorer.com) jest obciążona dużym błędem w obie strony. Potrzebne są: zapis parametru utm_source po stronie serwera, logi z user-agentami, analiza Direct na podstronach cytowanych przez AI oraz ostrożność wobec mnożników sprzedawanych przez dostawców."
+  },
+  {
+   "question": "5. Narzędzia raportowe platform: GA4, Google Search Console, Bing Webmaster Tools",
+   "claim_pl": "[search-summary] GA4 dodał 13 V 2026 kanał 'AI Assistant' w Default Channel Group (medium ai-assistant). Działa bez konfiguracji, nie przelicza danych wstecz i zależy od referrera, więc wizyty z aplikacji bez referrera trafiają do Direct. Status Perplexity w definicji jest niejasny. Google Search Console wlicza kliknięcia z AI Mode do sum w raporcie Performance bez osobnego filtra. Raport 'Generative AI' (3 VI 2026, beta) pokazuje tylko wyświetlenia z AI Overviews i AI Mode łącznie, bez kliknięć i zapytań. Bing Webmaster Tools ma od 10 II 2026 raport 'AI Performance' (cytowania, cytowane strony, grounding queries jako próbka) dla Copilota i podsumowań Bing, bez kliknięć.",
+   "evidence_type": "indirect",
+   "numbers": "GA4 AI Assistant: 13 V 2026; GSC Generative AI report: 3 VI 2026 (tylko wyświetlenia); Bing AI Performance: 10 II 2026 (cytowania, bez kliknięć)",
+   "sources": [
+    {
+     "url": "https://brandoncaples.com/martech/2026/ga4-ai-assistant-channel",
+     "title": "AI Assistant added to Default Channel Group in Google Analytics",
+     "publisher": "Brandon Caples",
+     "published": "2026"
+    },
+    {
+     "url": "https://cliquestudios.com/university/resources/ga4-ai-assistant-channel",
+     "title": "GA4 AI Assistant Channel: What It Misses",
+     "publisher": "Clique Studios"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/google-adds-ai-mode-traffic-to-search-console-reports/549089/",
+     "title": "Google adds AI Mode traffic to Search Console reports",
+     "publisher": "Search Engine Journal",
+     "published": "2025-06"
+    },
+    {
+     "url": "https://pasqualepillitteri.it/en/news/4116/search-console-generative-ai-report-ai-overviews-ai-mode",
+     "title": "Search Console generative AI report: AI Overviews and AI Mode",
+     "publisher": "Pasquale Pillitteri",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/bing-webmaster-tools-adds-ai-citation-performance-data/566874/",
+     "title": "Bing Webmaster Tools Adds AI Citation Performance Data",
+     "publisher": "Search Engine Journal",
+     "published": "2026-02"
+    },
+    {
+     "url": "https://www.searchinfluence.com/blog/bing-ai-performance-report-copilot-citations/",
+     "title": "Inside Bing's New AI Performance Report: What 20,000 Copilot Citations Taught Us",
+     "publisher": "Search Influence"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Lejek trzeba mierzyć warstwami. Cytowania są mierzalne tylko w Bing/Copilot. Wyświetlenia w AI Google widać zbiorczo w GSC. Wizyty widać przez GA4 i UTM, z niedoszacowaniem. Wizyt przynoszących przychód (sesji z wyświetleniami reklam) nie raportuje żadna platforma AI, więc trzeba je łączyć samodzielnie z danymi AdSense."
+  },
+  {
+   "question": "5/6. Crawlery i user-agenty: kontrola dostępu oraz odróżnianie botów od ludzi",
+   "claim_pl": "[search-summary] OpenAI (dokumentacja): GPTBot służy do treningu, OAI-SearchBot do indeksu i widoczności w ChatGPT Search (zmiana robots.txt działa po ok. 24 h), a ChatGPT-User do pobrań na żądanie użytkownika; robots.txt może go nie obejmować i nie decyduje on o obecności w wyszukiwaniu. Anthropic (help center): ClaudeBot (trening), Claude-User (pobrania na pytanie użytkownika), Claude-SearchBot (indeksowanie pod wyszukiwanie); boty respektują robots.txt i Crawl-delay, a Anthropic nie publikuje zakresów IP. Google: Google-Extended dotyczy treningu i groundingu Gemini, nie Search ani AI Overviews; nosnippet blokuje użycie strony w AI Overviews i AI Mode. Cloudflare (VIII 2025) zarzucił Perplexity ukryte crawlery (generyczny UA Chrome, rotacja IP) po zablokowaniu PerplexityBot i Perplexity-User; Perplexity zaprzecza. ChatGPT Atlas ma UA identyczny z Chrome na Macu i brak potwierdzonego nagłówka trybu agenta.",
+   "evidence_type": "direct",
+   "numbers": "OAI-SearchBot: ~24 h na zmianę robots.txt; Cloudflare: zachowanie Perplexity na dziesiątkach tys. domen, miliony żądań dziennie (zarzut)",
+   "sources": [
+    {
+     "url": "https://developers.openai.com/api/docs/bots",
+     "title": "Overview of OpenAI Crawlers",
+     "publisher": "OpenAI"
+    },
+    {
+     "url": "https://support.claude.com/en/articles/8896518",
+     "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler?",
+     "publisher": "Anthropic"
+    },
+    {
+     "url": "https://ppc.land/nosnippet/",
+     "title": "nosnippet",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://searchenginejournal.com/google-updates-robots-meta-tag-document-to-include-ai-mode/541371/",
+     "title": "Google updates robots meta tag document to include AI Mode",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://tech.co/news/cloudflare-perplexity-bots-ignore-no-crawl-directives",
+     "title": "Cloudflare Says Perplexity's AI Bots Ignore No-Crawl Directives",
+     "publisher": "Tech.co",
+     "published": "2025-08"
+    },
+    {
+     "url": "https://kpplaybook.com/resources/google-analytics-chatgpt-atlas/",
+     "title": "Google Analytics and ChatGPT Atlas",
+     "publisher": "KP Playbook",
+     "published": "2025-10-24"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Aby być widocznym, trzeba wpuścić OAI-SearchBot, Claude-SearchBot, Claude-User, PerplexityBot i Googlebota; GPTBot i ClaudeBot można blokować bez utraty widoczności w wyszukiwaniu. W logach wpisy ChatGPT-User i Claude-User to pobrania strony do odpowiedzi, a nie wizyty ludzi ani wyświetlenia reklam. Ruch agentów (Atlas) wygląda jak ludzki i może zawyżać metryki oraz zaśmiecać ruch reklamowy (ryzyko invalid traffic w AdSense to hipoteza, niezweryfikowana)."
+  },
+  {
+   "question": "5. Narzędzia do monitoringu widoczności w AI i ich ograniczenia",
+   "claim_pl": "[search-summary] Profound: od ok. 99 USD/mies. (plan wejściowy, wg jednego źródła tylko ChatGPT) i 399 USD. Ahrefs Brand Radar: dodatek ok. 129–199 USD/mies. (AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Copilot). Semrush AI Visibility Toolkit: w planach Semrush. Ceny są niespójne między źródłami. Metodyka: testy dostawców pokazują, że UI ChatGPT zwracał źródła dla 84% promptów, a API dla 26%, z pokryciem źródeł ok. 1/4 (Promptwatch); w innym teście API pokazało 135 marek, a UI 845 (paprik.ai). Badanie SparkToro i Gumshoe (600 ochotników, 2 961 uruchomień, XI–XII 2025): szansa na identyczną listę rekomendacji to poniżej 1 na 100. Bardziej stabilny jest odsetek odpowiedzi z marką niż pozycja.",
+   "evidence_type": "indirect",
+   "numbers": "Profound od $99/mies.; Brand Radar $129–199/mies.; UI 84% vs API 26% promptów ze źródłami; 135 vs 845 marek; identyczna lista <1/100 (SparkToro)",
+   "sources": [
+    {
+     "url": "https://www.datadab.com/research/ahrefs-brand-radar-vs-semrush-ai-toolkit-vs-profound",
+     "title": "Ahrefs Brand Radar vs Semrush AI Toolkit vs Profound",
+     "publisher": "Datadab"
+    },
+    {
+     "url": "https://trakkr.ai/compare/ahrefs-vs-profound",
+     "title": "Ahrefs vs Profound: Pricing & Fit",
+     "publisher": "Trakkr"
+    },
+    {
+     "url": "https://promptwatch.com/blog/ui-vs-api-for-ai-search-visibility",
+     "title": "ChatGPT UI vs API tracking for AI search visibility",
+     "publisher": "Promptwatch"
+    },
+    {
+     "url": "https://paprik.ai/blog/accurate-api-based-ai-visibility-tracking-chatgpt-ui",
+     "title": "API vs ChatGPT UI AI Visibility Tracking: Accuracy & Limits",
+     "publisher": "paprik.ai"
+    },
+    {
+     "url": "https://searchengineland.com/ai-recommendation-lists-rarely-repeat-study-468076",
+     "title": "AI recommendation lists repeat less than 1% of the time: Study",
+     "publisher": "Search Engine Land",
+     "published": "2026-02"
+    },
+    {
+     "url": "https://www.warc.com/content/feed/llms-produce-random-results-when-listing-brand-recommendations/en-GB/11352",
+     "title": "LLMs produce random results when listing brand recommendations",
+     "publisher": "WARC"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Narzędzia do monitoringu dają szacunki z próbek, wrażliwe na metodę (API vs UI), lokalizację i personalizację. Przy budżecie właściciela tańszy i bardziej wiarygodny jest własny panel promptów uruchamiany wielokrotnie przez UI oraz logi serwera i GA4. Metryką powinien być odsetek odpowiedzi z cytowaniem lub linkiem, a nie pozycja."
+  },
+  {
+   "question": "6. Skąd ChatGPT pobiera źródła",
+   "claim_pl": "[search-summary] Obraz jest mieszany i nieoficjalny. Peec AI zidentyfikował w danych serwerowych ChatGPT własny indeks OpenAI o nazwie 'Labrador' (IX 2026, niepotwierdzone przez OpenAI): rodzinę indeksów dla web, news, PDF, YouTube, zakupów i lokalnych wyników. Tylko 1,5% URL-i z Labradora występowało w top 20 Binga dla tych samych zapytań. Bing nadal jest używany: Microsoft Web IQ deklaruje zasilanie ChatGPT, a badanie logów z VI 2026 pokazało, że Deep Research wykonywał wszystkie wyszukiwania w Bingu. Porady z 2024 ('bez Binga nie ma ChatGPT') są prawdopodobnie nieaktualne. Warunek konieczny według OpenAI: dopuszczenie OAI-SearchBot.",
+   "evidence_type": "indirect",
+   "numbers": "1,5% URL-i Labrador w top 20 Binga (Peec, niezweryfikowane)",
+   "sources": [
+    {
+     "url": "https://blumint.co/blog/chatgpt-search-index",
+     "title": "ChatGPT built its own search index: why Bing visibility isn't a ChatGPT strategy anymore",
+     "publisher": "Blumint",
+     "published": "2026"
+    },
+    {
+     "url": "https://tilionew.vercel.app/blog/chatgpt-has-built-its-own-search-index",
+     "title": "ChatGPT's Labrador index: what it means for your brand",
+     "publisher": "Tilio"
+    },
+    {
+     "url": "https://searchengineland.com/chatgpt-search-microsoft-bing-seo-448019",
+     "title": "ChatGPT Search makes Microsoft Bing an SEO priority",
+     "publisher": "Search Engine Land",
+     "published": "2024"
+    },
+    {
+     "url": "https://geotoolbox.ai/blog/how-chatgpt-search-works",
+     "title": "How ChatGPT Search Works",
+     "publisher": "GEO Toolbox"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Nie ma stabilnej, udokumentowanej recepty na retrieval w ChatGPT. Minimum to dopuszczenie OAI-SearchBot, indeksacja w Bing i treść czytelna jako tekst. Czy symulatory renderowane w JS są czytane przez OAI-SearchBot, nie sprawdzono (hipoteza). Bezpieczniej renderować założenia i wyniki przykładowych scenariuszy po stronie serwera."
+  },
+  {
+   "question": "6. Retrieval w Perplexity, Claude, Gemini/AI Mode i Copilot",
+   "claim_pl": "[search-summary] Perplexity ma własny indeks: Search API (25 IX 2025) daje dostęp do tego samego indeksu co silnik odpowiedzi, według Perplexity 'setki miliardów stron'. Indeksuje PerplexityBot, a domeny cytowane przez Perplexity w ponad 91% pokrywają się z top 10 Google. Claude: Anthropic dodał Brave Search do listy podprocesorów (TechCrunch, III 2025); według analizy z 2 VII 2026 Brave nadal tam jest, obok drugiego dostawcy (turbopuffer). Brave ma własny indeks, niezależny od Binga. Gemini i AI Mode opierają się na indeksie Google (grounding with Google Search); Google-Extended reguluje użycie treści w groundingu Gemini Apps. Copilot korzysta z Binga, a cytowania widać w Bing Webmaster Tools.",
+   "evidence_type": "indirect",
+   "numbers": "indeks Perplexity: 'setki miliardów stron' (deklaracja); Search API $5 / 1000 zapytań; zbieżność Perplexity z top 10 Google >91%",
+   "sources": [
+    {
+     "url": "https://hub-prod.perplexity.ai/hub/blog/introducing-the-perplexity-search-api",
+     "title": "Introducing the Perplexity Search API",
+     "publisher": "Perplexity",
+     "published": "2025-09-25"
+    },
+    {
+     "url": "https://alternativeto.net/news/2025/9/perplexity-launches-search-api-offering-web-scale-indexed-search-and-public-developer-access/",
+     "title": "Perplexity launches Search API offering web-scale indexed search",
+     "publisher": "AlternativeTo",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://techcrunch.com/2025/03/21/anthropic-appears-to-be-using-brave-to-power-web-searches-for-its-claude-chatbot/",
+     "title": "Anthropic appears to be using Brave to power web searches for its Claude chatbot",
+     "publisher": "TechCrunch",
+     "published": "2025-03-21"
+    },
+    {
+     "url": "https://xponent21.com/insights/claude-web-search-brave-turbopuffer/",
+     "title": "Anthropic Lists Two Web-Search Subprocessors Behind Claude",
+     "publisher": "Xponent21",
+     "published": "2026-07"
+    },
+    {
+     "url": "https://ai.google.dev/gemini-api/docs/google-search",
+     "title": "Grounding with Google Search | Gemini API",
+     "publisher": "Google AI for Developers"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Pełna widoczność wymaga bycia w czterech niezależnych indeksach: Google, Bing, Brave i Perplexity, oraz w możliwie własnym indeksie OpenAI. Dla nowej domeny z setkami podstron kluczowe jest szybkie indeksowanie w Google i Bing. Obsługa IndexNow i zgłaszanie do Brave nie zostały zweryfikowane w tym badaniu."
+  },
+  {
+   "question": "7. Aplikacje w ChatGPT (Apps SDK): zasady monetyzacji",
+   "claim_pl": "[search-summary] OpenAI przyjmuje zgłoszenia aplikacji i uruchomił App Directory (XII 2025). Dokumentacja Apps SDK wskazuje zewnętrzny checkout na domenie dewelopera jako zalecaną i ogólnie dostępną ścieżkę. Zatwierdzane są obecnie tylko zakupy dóbr fizycznych, a checkout w aplikacji jest w becie dla wybranych partnerów. Pracownik OpenAI na forum deweloperów (I 2026): nie można zgłosić aplikacji z monetyzacją produktów lub usług cyfrowych. Według źródła wtórnego z 2026 r. możliwe jest logowanie istniejących subskrybentów, ale nie ma natywnych subskrypcji ani dojrzałego modelu reklam w aplikacjach.",
+   "evidence_type": "direct",
+   "numbers": "App Directory: XII 2025; monetyzacja: tylko dobra fizyczne przez zewnętrzny checkout; in-app checkout: beta dla wybranych partnerów",
+   "sources": [
+    {
+     "url": "https://developers.openai.com/apps-sdk/build/monetization",
+     "title": "Monetization (Apps SDK)",
+     "publisher": "OpenAI"
+    },
+    {
+     "url": "https://community.openai.com/t/chatgpt-app-monetization-apps-sdk/1372343",
+     "title": "ChatGPT App Monetization (Apps SDK)",
+     "publisher": "OpenAI Developer Community",
+     "published": "2026-01"
+    },
+    {
+     "url": "https://venturebeat.com/technology/openai-now-accepting-chatgpt-app-submissions-from-third-party-devs-launches",
+     "title": "OpenAI now accepting ChatGPT app submissions from third-party devs, launches App Directory",
+     "publisher": "VentureBeat",
+     "published": "2025-12"
+    },
+    {
+     "url": "https://stealwhatworks.com/blogs/news/chatgpt-apps-make-money-now",
+     "title": "Can ChatGPT apps make money yet?",
+     "publisher": "Steal What Works",
+     "published": "2026"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Symulator jako aplikacja w ChatGPT to dla modelu AdSense raczej zagrożenie niż szansa: interakcja odbywa się w czacie, bez odsłon i reklam, a monetyzacja usług cyfrowych jest zablokowana. Ewentualną rolę może pełnić tylko jako lejek na stronę, a skuteczności tego lejka nie udokumentowano. Nie znaleziono wiarygodnych danych o ruchu czy odkrywalności aplikacji zewnętrznych."
+  },
+  {
+   "question": "7. MCP Apps i interaktywne narzędzia w innych asystentach",
+   "claim_pl": "[search-summary] 26 I 2026 MCP Apps wystartowało jako pierwsze oficjalne rozszerzenie Model Context Protocol. Narzędzia mogą zwracać interaktywne UI (dashboardy, formularze, wizualizacje, wieloetapowe przepływy) renderowane w czacie w sandboxowanych iframe. Claude obsługuje to w katalogu aplikacji 'interactive' (web i desktop, plany Pro/Max/Team/Enterprise), z partnerami takimi jak Slack, Canva, Figma i Box. Obsługę zgłoszono też w VS Code Insiders, Goose i ChatGPT. Obsługi w aplikacji Gemini nie potwierdzono.",
+   "evidence_type": "direct",
+   "numbers": "start MCP Apps: 26 I 2026; Claude: plany płatne",
+   "sources": [
+    {
+     "url": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/",
+     "title": "MCP Apps - Bringing UI Capabilities To MCP Clients",
+     "publisher": "Model Context Protocol blog",
+     "published": "2026-01-26"
+    },
+    {
+     "url": "https://www.theregister.com/special-features/2026/01/26/claude-supports-mcp-apps-presents-ui-within-chat-window/4645652",
+     "title": "Claude supports MCP Apps, presents UI within chat window",
+     "publisher": "The Register",
+     "published": "2026-01-26"
+    },
+    {
+     "url": "https://workos.com/blog/2026-01-27-mcp-apps",
+     "title": "MCP Apps are here: Rendering interactive UIs in AI clients",
+     "publisher": "WorkOS",
+     "published": "2026-01-27"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Standard 'interaktywne narzędzie wewnątrz asystenta' staje się wspólny dla wielu hostów. Technicznie łatwo spiąć to ze stosem Claude Code i n8n, ale nie ma ścieżki przychodu z reklam. Rynek przesuwa interakcję z narzędziami do czatu, co podważa model 'wizyta na stronie z reklamami'."
+  },
+  {
+   "question": "8. Reklamy w ChatGPT (2026) i ich wpływ na kliknięcia wychodzące",
+   "claim_pl": "[search-summary] OpenAI od 9 II 2026 testuje w USA reklamy dla zalogowanych dorosłych w planach Free i Go. Reklamy są oznaczone jako sponsorowane i wyświetlane pod odpowiedzią, gdy w rozmowie pojawia się powiązany produkt lub usługa. OpenAI deklaruje, że reklamy nie wpływają na odpowiedzi, a reklamodawcy nie widzą rozmów. Reklam nie ma dla osób poniżej 18 lat ani przy tematach wrażliwych: zdrowie, zdrowie psychiczne, polityka. Plany płatne są bez reklam. Według źródeł wtórnych: samoobsługowy Ads Manager od 5–6 V 2026; CPM spadł z ok. 60 USD (minimum 200 tys. USD) do ok. 25 USD; CPC z progami 3–5 USD; od IX 2026 test 'Sponsored Agents'; ekspansja do UK, MX, BR, JP, KR i dalej. Nie znaleziono danych o wpływie reklam na organiczne linki wychodzące.",
+   "evidence_type": "direct",
+   "numbers": "start 9 II 2026 (USA, Free/Go); CPM ~$60 -> ~$25; CPC progi $3–5 (źródła wtórne); brak reklam przy zdrowiu i polityce",
+   "sources": [
+    {
+     "url": "https://openai.com/index/testing-ads-in-chatgpt/",
+     "title": "Testing ads in ChatGPT",
+     "publisher": "OpenAI",
+     "published": "2026"
+    },
+    {
+     "url": "https://axios.com/2026/02/09/chatgpt-ads-testing-go-free",
+     "title": "OpenAI tests ads in ChatGPT",
+     "publisher": "Axios",
+     "published": "2026-02-09"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/openai-begins-testing-ads-in-chatgpt-for-free-and-go-users/",
+     "title": "OpenAI begins testing ads in ChatGPT for Free and Go users",
+     "publisher": "Search Engine Journal",
+     "published": "2026-02"
+    },
+    {
+     "url": "https://launchcodex.com/blog/performance-marketing/chatgpt-ads-breakdown/",
+     "title": "ChatGPT ads are live: A complete breakdown",
+     "publisher": "Launchcodex",
+     "published": "2026"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "OpenAI ma teraz własny interes w monetyzowaniu intencji komercyjnej w czacie. Tematy o wysokim CPC (finanse, nieruchomości, energia), w których symulatory zarabiałyby najlepiej na display i lead-gen, to te, gdzie sponsorowane karty będą konkurować o kliknięcie. Wykluczenie tematów zdrowotnych z reklam jest istotne dla healthscorer.com, ale nie oznacza więcej linków organicznych (niezweryfikowane)."
+  },
+  {
+   "question": "8. Monetyzacja Google AI Mode/AI Overviews i Perplexity",
+   "claim_pl": "[search-summary] Google ogłosił reklamy w AI Mode na Marketing Live 2025 (V 2025, najpierw USA). Wyświetlają się pod lub w odpowiedzi AI, rozszerzono je też na desktopowe AI Overviews. Kampanie Performance Max, broad-match Search, Shopping i AI Max kwalifikują się automatycznie. Według bloga dostawcy (niezweryfikowane) w 2026 sponsorowane umieszczenia występują w ok. 25,5% odpowiedzi AI Mode, a aplikacja Gemini pozostaje bez reklam. Perplexity przestał przyjmować nowych reklamodawców; reklamy dawały poniżej 0,1% przychodu. Program wydawców zastąpił Comet Plus (5 USD/mies., 80% przychodu dla wydawców, wypłaty za wizyty, cytowania i akcje agentów); jeden wydawca nazwał dochód 'barely material'.",
+   "evidence_type": "indirect",
+   "numbers": "reklamy w AI Mode: od V 2025 (USA); ~25,5% odpowiedzi AI Mode z reklamą (niezweryfikowane); Perplexity: reklamy <0,1% przychodu; Comet Plus $5/mies., 80% dla wydawców",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/2025/05/21/google-is-bringing-ads-to-ai-mode/",
+     "title": "Google is bringing ads to AI Mode",
+     "publisher": "TechCrunch",
+     "published": "2025-05-21"
+    },
+    {
+     "url": "https://www.emarketer.com/content/google-adds-ads-ai-mode--reshaping-search",
+     "title": "Google adds ads to AI mode, reshaping search",
+     "publisher": "eMarketer"
+    },
+    {
+     "url": "https://influencermarketinghub.com/perplexitys-ad-pause-exposes-the-challenges-of-monetizing-generative-search",
+     "title": "Perplexity's Ad Pause Exposes the Challenges of Monetizing Generative Search",
+     "publisher": "Influencer Marketing Hub"
+    },
+    {
+     "url": "https://pressgazette.co.uk/news/perplexity-launches-ai-subscription-revenue-share-scheme-for-publishers/",
+     "title": "Perplexity launches AI subscription revenue share scheme for publishers",
+     "publisher": "Press Gazette",
+     "published": "2025"
+    },
+    {
+     "url": "https://getcoai.com/news/perplexity-launches-5-monthly-comet-plus-sharing-80-revenue-with-publishers",
+     "title": "Perplexity launches $5 monthly Comet Plus, sharing 80% revenue with publishers",
+     "publisher": "CO/AI",
+     "published": "2025-10"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Platformy AI monetyzują uwagę u siebie (Google, OpenAI) albo przez subskrypcje (Perplexity). Żadna nie ma bodźca, by zwiększać darmowe kliknięcia wychodzące do stron z AdSense. Programy podziału przychodu dla wydawców są marginalne i nie zastąpią ruchu."
+  },
+  {
+   "question": "9. Jakość ruchu z AI vs organic: zaangażowanie i konwersja",
+   "claim_pl": "[search-summary] Adobe (ponad 1 bln wizyt): ruch z generatywnej AI do sklepów w USA wzrósł o 693% r/r w sezonie świątecznym XI–XII 2025 (+1 300% w sezonie 2024). Konwertował o 31% lepiej, z niższym bounce i większą liczbą stron. W VII 2025 ten sam ruch był według Adobe o 23% mniej skłonny do konwersji, a Adobe zaznacza, że jest mały wobec paid search i e-maila. Kaiser i Schulze (Hamburg / Frankfurt School; 973 sklepy, 12 miesięcy, ponad 50 tys. transakcji z ChatGPT wobec 164 mln): ChatGPT konwertuje ok. 13% gorzej niż organic i ok. 86% gorzej niż afiliacja, ma niższy bounce i daje poniżej 0,2% sesji. Ahrefs (własna strona, VI 2025): 0,5% ruchu z AI dało 12,1% rejestracji (23x lepsza konwersja). Seer (jedna strona): ChatGPT 16% vs Google organic 1,8%, przy ruchu AI równym 0,07% organic.",
+   "evidence_type": "direct",
+   "numbers": "Adobe: +693% r/r (święta 2025), konwersja +31%; VII 2025: -23%; Kaiser i Schulze: -13% vs organic, <0,2% sesji; Ahrefs: 0,5% ruchu -> 12,1% rejestracji; Seer: 16% vs 1,8%, AI = 0,07% organic",
+   "sources": [
+    {
+     "url": "https://e-commerce.news/story/adobe-sees-surge-in-ai-driven-traffic-conversions",
+     "title": "Adobe sees surge in AI-driven traffic & conversions",
+     "publisher": "E-Commerce News",
+     "published": "2026-01"
+    },
+    {
+     "url": "https://blog.adobe.com/en/publish/2025/03/17/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200-percent",
+     "title": "Adobe Analytics: Traffic to U.S. retail websites from Generative AI sources jumps 1,200 percent",
+     "publisher": "Adobe",
+     "published": "2025-03-17"
+    },
+    {
+     "url": "https://digiday.com/marketing/e-commerce-sites-see-low-sales-from-chatgpt-traffic-new-study-finds/",
+     "title": "E-commerce sites see low sales from ChatGPT traffic, new study finds",
+     "publisher": "Digiday",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://www.bwl.uni-hamburg.de/en/ueber-die-fakultaet/aktuelles/2025/1106-chatgpt-und-e-commerce.html",
+     "title": "ChatGPT redirects to e-commerce websites: Are LLMs more powerful than traditional channels?",
+     "publisher": "Universität Hamburg",
+     "published": "2025-11-06"
+    },
+    {
+     "url": "https://ahrefs.com/blog/ai-search-traffic-conversions-ahrefs/",
+     "title": "Does AI Search Traffic Convert Better Than Traditional Search? For Ahrefs, Yes: 0.5% of Visitors Drove 12.1% of Signups",
+     "publisher": "Ahrefs",
+     "published": "2025-06-16"
+    },
+    {
+     "url": "https://www.seerinteractive.com/insights/case-study-6-learnings-about-how-traffic-from-chatgpt-converts",
+     "title": "Case Study: 6 Learnings, 1 site - How Traffic from ChatGPT Converts",
+     "publisher": "Seer Interactive"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ruch z AI jest zwykle bardziej zaangażowany (niższy bounce, więcej stron), ale wyniki konwersji są sprzeczne i zależą od branży oraz metody. W modelu display ads liczą się odsłony, a nie konwersje. Wyższa jakość nie zrekompensuje udziału rzędu 0,1–1% ruchu. Użytkownik, który przychodzi z gotową odpowiedzią z czatu, może wręcz robić mniej odsłon w symulatorze (hipoteza, niezweryfikowana)."
+  }
+ ],
+ "contradictions_pl": [
+  "Konwersja ruchu z AI: Adobe podaje +31% wobec innych źródeł w sezonie świątecznym 2025, ale -23% w VII 2025. Kaiser i Schulze (973 sklepy): ChatGPT konwertuje ok. 13% gorzej niż organic. Similarweb (w relacji mediów): 11,4% vs 5,3% na korzyść ChatGPT. Ahrefs i Seer (pojedyncze strony): 16–23x lepiej. Różnice wynikają z próby, branży i atrybucji.",
+  "Udział ChatGPT w referencjach AI: od ok. 63% (Goodie, B2B) przez 81,4% (BrightEdge Q1 2026) i 87,4% (Conductor) do 95,1% (BrightEdge VIII 2026). Dane BrightEdge są wewnętrznie niespójne co do kwietnia 2026 (89,5% vs 79,0%).",
+  "Udział ruchu z AI w całym ruchu: 0,17% (Ahrefs, 3 000 stron) vs 1,08% (Conductor, domeny enterprise). Pojawił się zarzut, że średnia Conductora pochodzi z 1 215, a nie z 13 770 domen. Datos/SparkToro podaje 0,77% aktywności desktopowej lub 3,2% interakcji wyszukiwawczych, przy różnych mianownikach.",
+  "Crawl-to-referral Anthropic według Cloudflare raportowano jako 286 930:1, 70 900:1, 38 065:1, 23 951:1 i ok. 1 917:1 (VII 2026). Wartości zależą od okna pomiaru, a wypowiedzi CEO nie zgadzają się z danymi Radar.",
+  "Cytowania AI Overviews z top 10 Google: 76,1% (Ahrefs VII 2025) vs ok. 38% (nowsza analiza Ahrefs, częściowo z powodu zmiany parsowania) vs ok. 17% (inne badanie).",
+  "Google (Liz Reid, VIII 2025) twierdzi, że całkowite kliknięcia organiczne są stabilne r/r, bez opublikowanych danych. Pew (8% vs 15%), Ahrefs (-58% CTR poz. 1), Seer (-61%) i Chartbeat (-33% globalnie, -38% USA dla wydawców) pokazują spadki.",
+  "Trend CTR przy AI Overviews: Ahrefs mówi o pogłębieniu spadku do -58% w XII 2025, Seer o odbiciu z 1,3% do 2,4% w XII 2025–II 2026.",
+  "Czy AI Mode jest domyślny: rzecznik Google (Press Gazette, V 2026) mówi, że nie. Blogi dostawców twierdzą, że od I/O 2026 lub od 10 VII 2026 jest domyślny.",
+  "Kierunek referencji z ChatGPT: Profound -52% (VII–VIII 2025) vs Similarweb +117% r/r (VI 2025–V 2026) i +158% WoW (V 2026). Okresy się różnią, ale pokazuje to skalę wahań.",
+  "Błąd UTM w ChatGPT (X 2026): część relacji mówi, że OpenAI potwierdziło błąd i przywróciło utm_source; inne, że poprawki nie ogłoszono. Brak referrera przy większości kliknięć trwa."
+ ],
+ "open_questions_pl": [
+  "Brak jakiegokolwiek badania, które klasyfikowałoby cytowane lub linkowane URL-e jako kalkulatory, narzędzia interaktywne czy symulatory. Kluczowy test do wykonania przed budową: panel 50–100 promptów decyzyjnych (np. 'My roof needs replacing within a few years. Should I install solar now, replace roof and solar together, or wait since I plan to sell?') uruchamianych wielokrotnie w UI ChatGPT, Gemini/AI Mode, Perplexity, Copilot i Claude, z rejestracją, czy pojawia się link, do jakiego typu strony i czy asystent sam liczy lub generuje narzędzie.",
+  "Rzeczywisty CTR cytowań w ChatGPT, Perplexity, Claude i Gemini jest nieznany. Żadna platforma nie publikuje danych o kliknięciach; dla AI Overviews Pew podaje ok. 1%.",
+  "Wpływ Gemini 3 generative UI (AI Mode) i ChatGPT Intelligent UI (X 2026) na kliknięcia wychodzące przy zapytaniach typu kalkulator lub symulacja. Funkcje są zbyt nowe, nie znaleziono danych.",
+  "Czy OAI-SearchBot, Claude-SearchBot, PerplexityBot i ChatGPT-User renderują JavaScript i czy potrafią odczytać wyniki symulatora renderowanego po stronie klienta (hipoteza: trzeba renderować tekst po stronie serwera; niezweryfikowane).",
+  "Wartość RPM (AdSense) ruchu z AI w porównaniu z organic. Brak danych; dostępne badania mierzą konwersje e-commerce, a nie przychód z reklam display.",
+  "Czy ruch AI właściciela healthscorer.com to w istocie wizyty ludzi (utm_source=chatgpt.com, referrery), czy pobrania przez boty ChatGPT-User i Claude-User. Do sprawdzenia w logach serwera przed oparciem na tym tezy biznesowej.",
+  "Wpływ reklam w ChatGPT (sponsorowane karty, CPC, Sponsored Agents) na liczbę i rozkład organicznych linków wychodzących w zapytaniach komercyjnych (finanse, energia, nieruchomości). Brak danych.",
+  "Czy ChatGPT faktycznie korzysta z własnego indeksu 'Labrador' i jaki ma on udział względem Binga. To ustalenia Peec z IX 2026, niepotwierdzone przez OpenAI. Nie zbadano też roli IndexNow i Bing Webmaster Tools dla widoczności w ChatGPT.",
+  "Polityka monetyzacji Apps SDK w 2027 (dobra cyfrowe, subskrypcje, ewentualne reklamy w aplikacjach) oraz realna odkrywalność aplikacji zewnętrznych w ChatGPT. Brak wiarygodnych danych o ruchu.",
+  "Udział ruchu z AI specyficznie w USA w porównaniu z globalnym. Część liczb (Similarweb 770,7 mln) jest globalna, część dotyczy desktopu w USA."
+ ],
+ "queries_run": [
+  "Similarweb ChatGPT referral traffic to websites 2026",
+  "Adobe Analytics generative AI traffic to US retail sites 2025 holiday season",
+  "Cloudflare crawl-to-referral ratio Anthropic OpenAI Perplexity",
+  "Pew Research Center AI summary Google users less likely to click links 2025",
+  "Ahrefs AI Overviews reduce clicks CTR study position 1",
+  "Seer Interactive AI Overviews organic CTR drop study 2025",
+  "Pew AI summary 8% of visits clicked link vs 15% without summary 1% clicked link in summary",
+  "Conductor AI referral traffic share of total website traffic benchmark 2025 2026",
+  "Ahrefs AI traffic share percent of website traffic study ChatGPT Perplexity Gemini",
+  "BrightEdge AI search referral traffic report 2026 ChatGPT Perplexity Gemini share",
+  "SparkToro Datos AI tools share of search activity desktop 2025",
+  "Profound study most cited domains ChatGPT Perplexity Google AI Overviews Reddit Wikipedia",
+  "do ChatGPT or AI Overviews cite calculators interactive tools pages study citations tool pages",
+  "calculator websites traffic decline AI Overviews 2025 calculator sites ChatGPT computes answers",
+  "ChatGPT citation click-through rate how often users click sources study 2025",
+  "Google AI Mode click-through rate external links study 2025 2026",
+  "utm_source=chatgpt.com referrer GA4 ChatGPT app missing referrer direct traffic dark AI traffic",
+  "OAI-SearchBot ChatGPT-User GPTBot difference robots.txt OpenAI crawlers documentation",
+  "OpenAI ChatGPT interactive charts maps calculators in answers launch",
+  "Anthropic Claude-User Claude-SearchBot ClaudeBot crawler documentation robots.txt",
+  "Perplexity-User PerplexityBot robots.txt Cloudflare stealth crawling undeclared",
+  "Claude web search Brave Search provider index",
+  "ChatGPT search uses Bing index or own index OpenAI 2026 Bing Webmaster Tools IndexNow",
+  "Google-Extended does not affect AI Overviews AI Mode Googlebot blocking nosnippet",
+  "ChatGPT Apps SDK app directory monetization rules developers 2026",
+  "ChatGPT ads launch 2026 sponsored placements outbound clicks advertisers",
+  "MCP Apps extension interactive UI Claude Gemini apps third-party tools inside assistant 2026",
+  "SparkToro AI brand recommendations inconsistent study prompts same answer rarely",
+  "Similarweb AI referral traffic engagement pages per visit bounce rate vs Google organic",
+  "ChatGPT referral conversion rate lower than organic study Kaiser Schulze",
+  "OpenAI How People Use ChatGPT study practical guidance seeking information share of messages",
+  "Similarweb zero-click searches rose 56% to 69% AI Overviews news publishers",
+  "Bing Webmaster Tools AI Performance report Copilot citations 2026",
+  "Omni Calculator traffic decline AI calculator sites Similarweb 2025 2026",
+  "which content types get cited most by AI search listicles comparison pages tools study Semrush Ahrefs 2026",
+  "Google Liz Reid AI Overviews clicks higher quality total organic click volume stable blog August 2025",
+  "OpenAI Testing ads in ChatGPT ads at bottom of answers Free Go tiers principles answer independence",
+  "ChatGPT stopped passing referrer utm_source October 2026 Search Engine Roundtable",
+  "Similarweb AI Mode external referrals 1.6% of queries vs traditional search",
+  "Google AI Overviews expand into AI Mode by default follow-up 2026 organic links pushed down",
+  "free online tools calculators AI referral traffic ChatGPT recommends tools case study SaaS free tool pages cited",
+  "Cloudflare 2025 year in review user-driven AI bots ChatGPT-User 15x crawling",
+  "share of ChatGPT prompts that trigger web search 2026 study percentage queries search enabled",
+  "ChatGPT apps usage discovery low developers traffic 2026 apps in ChatGPT adoption",
+  "AI visibility tracking tools API vs ChatGPT UI results differ personalization prompt sampling limitations Profound Peec",
+  "Ahrefs AI Overview citations top 10 organic ranking share 2025 2026 study 76%",
+  "Perplexity Comet Plus publisher revenue share ads paused 2025 2026",
+  "AI referral traffic personal finance sites NerdWallet Bankrate ChatGPT citations finance calculators 2026",
+  "Gemini 3 AI Mode generative UI builds interactive calculator simulation on the fly dynamic view",
+  "GA4 AI assistant default channel group 2026 Google Analytics new channel ChatGPT",
+  "Perplexity Search API own index billions of pages PerplexityBot launch",
+  "Gemini app grounding Google Search citations referral traffic growth 2026 Gemini sends traffic",
+  "ChatGPT Atlas browser user agent traffic attribution agent mode visits websites analytics",
+  "AI Overviews prevalence share of US queries 2026 health finance YMYL Semrush BrightEdge",
+  "Seer Interactive AI Overviews CTR 2026 update rebound organic CTR February 2026",
+  "Ahrefs AI search visitors convert 23x better signups 0.5% of traffic 12.1% signups",
+  "Apps in ChatGPT digital goods subscriptions allowed 2026 OpenAI update app monetization agentic commerce protocol developers",
+  "Ahrefs Brand Radar Semrush AI Visibility Toolkit Profound pricing features AI mentions citations tracking 2026",
+  "Microsoft Copilot Search Bing grounding citations referral traffic publishers 2026",
+  "Similarweb brands recommended by ChatGPT 2.5 times more visits seven days study",
+  "Ahrefs why ChatGPT cites 1.4M prompts findings retrieved pages cited title match freshness",
+  "calculator.net traffic 2026 Similarweb decline AI Overviews calculator queries",
+  "Google Search Console AI Mode clicks impressions included performance report no separate filter",
+  "ads in Google AI Mode and AI Overviews expansion 2026 advertisers US",
+  "ChatGPT referral traffic dropped 52% July December 2025 Profound Josh Blyskal citations concentrated Reddit Wikipedia",
+  "Similarweb citations in ChatGPT answers rose 6.8% May 2026 travel automotive share of prompts with links"
+ ]
+}

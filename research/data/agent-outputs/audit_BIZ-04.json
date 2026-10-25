@@ -1,0 +1,382 @@
+{
+ "id": "BIZ-04",
+ "competitors": [
+  {
+   "name": "AskBiz – Bulk Order Discounts: When to Buy More to Save and When to Hold Tight (artykuł + opisywany 'evaluator')",
+   "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+   "type": "partial",
+   "access": "Strona nieotwierana, dowód: search-summary. Artykuł publiczny. Czy 'evaluator' to osobne narzędzie wymagające konta AskBiz: niezweryfikowane.",
+   "covers_pl": "Rdzeń decyzji: porównuje rabat za większe zamówienie z kosztem utrzymania zapasu (carrying rate ok. 20%/rok × miesiące zapasu) i rekomenduje przyjęcie lub odrzucenie. Przykład liczbowy: rabat 5% na 500 szt. (5 mies. zapasu) daje 250 SGD, carrying cost 396 SGD, czyli strata netto; break-even ok. 2,5 mies. zapasu.",
+   "misses_or_unverified_pl": "Niezweryfikowane: osobne warianty finansowania (gotówka / pożyczka z miesięcznym oprocentowaniem / terminy dostawcy / RBF), struktura storage FBA vs 3PL vs własny, opłaty za stary zapas (aged fees) i szczyt Q4, scenariusz spadku popytu, który wydłuża zaleganie, najniższy punkt gotówki vs bufor, macierz wariantów 2/4/6 mies. Z opisu wynika jedna stopa carrying cost zamiast kosztów zależnych od czasu."
+  },
+  {
+   "name": "MetricGate – EOQ with All-Units Quantity Discount Calculator / EOQ with Incremental Quantity Discount Calculator",
+   "url": "https://metricgate.com/docs/eoq-quantity-discount-allunit/",
+   "type": "partial",
+   "access": "Strona nieotwierana, dowód: search-summary. Wygląda na darmowe (dokumentacja z kalkulatorem), ale logowanie i limity niezweryfikowane. Wariant incremental: https://metricgate.com/docs/eoq-incremental-discount/",
+   "covers_pl": "Klasyczny model EOQ z progami cenowymi: osobne EOQ dla każdego progu, holding cost liczony od ceny progu, wybór progu o najniższym rocznym koszcie całkowitym (zakup + zamówienie + utrzymanie). Dwa warianty rabatu: all-units i incremental.",
+   "misses_or_unverified_pl": "Model roczny w stanie ustalonym, a nie wielookresowy. Brak (wg podsumowania) kosztu konkretnego instrumentu finansowania, opłat FBA zależnych od wieku zapasu i sezonu, niepewności popytu i spadku sprzedaży, osi czasu gotówki i bufora, break-even sell-through. Język i grupa docelowa: operacje i nauka, nie sprzedawca e-commerce."
+  },
+  {
+   "name": "Ogólne kalkulatory EOQ (Nventory, CISS, MiniWebtool, Perimattic, Firgelli)",
+   "url": "https://nventory.io/tools/eoq-calculator",
+   "type": "partial",
+   "access": "Strony nieotwierane, dowód: search-summary. Darmowe narzędzia jednocelowe.",
+   "covers_pl": "Optymalna wielkość zamówienia przy koszcie zamówienia i holding cost (część z holding cost jako % ceny, typowo 15–35%/rok). Jedno źródło zauważa, że krzywa kosztu jest płaska w pobliżu optimum.",
+   "misses_or_unverified_pl": "Pojedyncze kalkulatory: większość bez progów rabatowych (niezweryfikowane dla każdego z nich), bez finansowania, aged fees, scenariuszy popytu i przepływów gotówki. To nie są bezpośredni konkurenci."
+  },
+  {
+   "name": "Kalkulatory bulk discount / bulk buy (CalcScope Bulk Buy Savings, NormalEdu Bulk Order Discount, Calculator Academy, DiscountCalculator.org)",
+   "url": "https://www.calcscope.com/finance/comparisons/bulk-buy-savings/",
+   "type": "partial",
+   "access": "Strony nieotwierane, dowód: search-summary. Darmowe.",
+   "covers_pl": "Matematyka ceny przy rabacie ilościowym. CalcScope (konsumencki, warehouse club) dolicza członkostwo, storage, straty z przeterminowania i zamrożoną gotówkę oraz liczy break-even.",
+   "misses_or_unverified_pl": "Fragment marginalny: konsumenckie albo czysto cenowe. Wg podsumowań niektóre wprost pomijają podatki, wysyłkę i rabaty progowe. Brak kontekstu MOQ i e-commerce, finansowania, aged fees i scenariuszy popytu."
+  },
+  {
+   "name": "Sellerboard – blog 'FBA Storage Fees: The Silent Margin Killer (and How to Model Them Per SKU)' + płatne narzędzie analityki zysku",
+   "url": "https://blog.sellerboard.com/2026/07/14/fba-storage-fees-the-silent-margin-killer-and-how-to-model-them-per-sku/",
+   "type": "partial",
+   "access": "Strona nieotwierana, dowód: search-summary. Artykuł publiczny. Sellerboard jako aplikacja jest płatna (wiedza modelu, niezweryfikowane w tej sesji), funkcje za loginem niezweryfikowane.",
+   "covers_pl": "Treść (lipiec 2026) dokładnie o tym dylemacie: modelowanie opłat FBA za storage per SKU. W wynikach pada teza, że 'rabat dostawcy za zamówienie na 6 miesięcy często przegrywa z kosztem przechowania', oraz zalecenie zamawiania pod pokrycie zapasu zamiast pod progi cenowe (przypisanie cytatu do tego URL lub do ReplenishRadar jest niepewne).",
+   "misses_or_unverified_pl": "To poradnik, a nie interaktywny symulator (wg podsumowania). Brak finansowania (pożyczka, terminy, RBF), najniższego punktu gotówki i wrażliwości na spadek popytu. Czy aplikacja sellerboard ma moduł scenariuszy zakupowych: niezweryfikowane."
+  },
+  {
+   "name": "ReplenishRadar – FBA Long-Term Storage Fees: Complete Guide to Avoiding Them in 2026",
+   "url": "https://replenishradar.com/blog/fba-long-term-storage-fees",
+   "type": "partial",
+   "access": "Strona nieotwierana, dowód: search-summary. Artykuł publiczny. ReplenishRadar to prawdopodobnie płatne oprogramowanie do uzupełniania zapasów (wiedza modelu, niezweryfikowane).",
+   "covers_pl": "Opłaty za stary zapas FBA: dopłaty od 181 dni, rosnące stromo; powyżej 365 dni do 6,90 USD/ft³ lub 0,15 USD/szt. Przykład w wynikach: rabat na 1000 szt. daje ok. 500 USD oszczędności, a dopłaty za nadmiarowe sztuki ok. 900 USD, czyli strata netto (przypisanie do konkretnego URL niepewne).",
+   "misses_or_unverified_pl": "Treść, a nie symulator. Brak kosztu kapitału i finansowania, 3PL vs własny magazyn, osi czasu gotówki i break-even sell-through (wg podsumowania). Funkcje płatnej aplikacji niezweryfikowane."
+  },
+  {
+   "name": "Inventory Optimizer (inventoryoptimizer.ai)",
+   "url": "https://inventoryoptimizer.ai/",
+   "type": "substitute",
+   "access": "Strona nieotwierana, dowód: search-summary. Płatny SaaS od 79,95 USD/mies. (wg podsumowania), funkcje za loginem i demo.",
+   "covers_pl": "Zamówienia zakupowe uwzględniają lead time, MOQ, safety stock i prognozowany popyt. Integracja z Amazon Seller Central (osobna strona: https://inventoryoptimizer.ai/amazon-seller-central-integration/).",
+   "misses_or_unverified_pl": "Niezweryfikowane: porównanie rabatu z kosztem finansowania, warianty finansowania, aged fees w scenariuszu zakupowym, najniższy punkt gotówki. Narzędzie operacyjne dla zalogowanego sprzedawcy, a nie publiczny symulator decyzji."
+  },
+  {
+   "name": "Amazon inventory forecasting SaaS (SoStocked, Jungle Scout Inventory Manager, Prediko – porównania)",
+   "url": "https://www.prediko.io/blog/amazon-inventory-forecasting-tools",
+   "type": "substitute",
+   "access": "Strony nieotwierane, dowód: search-summary (strony porównawcze i marketing vendorów). Aplikacje płatne, funkcje za loginem. Zob. też https://www.junglescout.com/resources/articles/amazon-inventory-forecasting/",
+   "covers_pl": "SoStocked: prognozy z sezonowością, skokami sprzedaży, limitami pojemności FBA i złożonymi lead time'ami. Jungle Scout Inventory Manager: koszty produktu, lead time dostawcy i wartość zapasu. Prediko: porównanie narzędzi (2026).",
+   "misses_or_unverified_pl": "Samo podsumowanie wyszukiwania stwierdza, że nie znalazło narzędzia łączącego MOQ, opłaty za storage i scenariusze cash flow w jednym miejscu. Rabat vs koszt kapitału i warianty finansowania: niezweryfikowane. Cogsy i Float z notatek fali 1 nie pojawiły się w tej sesji: niezweryfikowane."
+  },
+  {
+   "name": "Drivepoint (FP&A dla marek CPG) – przewodnik po prognozowaniu zapasów Amazon",
+   "url": "https://www.drivepoint.ai/post/amazon-inventory-forecasting",
+   "type": "substitute",
+   "access": "Strona nieotwierana, dowód: search-summary. To, że Drivepoint jest płatną platformą planowania finansowego, to wiedza modelu, niezweryfikowane.",
+   "covers_pl": "Stawki storage FBA (0,87 USD/ft³ w styczniu–wrześniu, 2,40 USD w październiku–grudniu), dopłata za zapas 271–365 dni, scenariusze per kanał (FBA, DTC, wholesale) z różnymi MOQ i lead time.",
+   "misses_or_unverified_pl": "Interaktywny symulator rabat vs finansowanie vs storage: niezweryfikowany. Stawki w artykule mogą być nieaktualne; źródła podają różne stawki (0,78, 0,87 i 0,99 USD/ft³)."
+  },
+  {
+   "name": "Kickfurther – finansowanie zapasów + 'Kickfurther calculator'",
+   "url": "https://www.kickfurther.com/",
+   "type": "partial",
+   "access": "Strona nieotwierana, dowód: search-summary. Według wyników kalkulator kosztów, zarobków i harmonogramu istnieje, ale nie był dostępny w wyszukiwaniu: niezweryfikowany. Progi kwalifikacji: 150–200 tys. USD przychodu TTM (sprzeczne strony).",
+   "covers_pl": "Koszt własnego instrumentu finansowania (wg porównania: origination ok. 5% COGS, potem ok. 2%, plus serwis od ok. 2,2%/mies., koszt rośnie przy wolnej sprzedaży). Marketing wprost łączy finansowanie z rabatem ilościowym: 'order bigger, get volume discounts'.",
+   "misses_or_unverified_pl": "Kalkulator jednego dostawcy, a nie neutralne porównanie gotówka / pożyczka / terminy / RBF. Storage, aged fees, spadek popytu i bufor gotówki niezweryfikowane. Konflikt interesów (finansujący). MFE Business Loans z fali 1 nie pojawił się w tej sesji: niezweryfikowane."
+  },
+  {
+   "name": "Porównania finansowania e-commerce (Uncapped, Onramp Funds)",
+   "url": "https://www.weareuncapped.com/blog/ecommerce-inventory-financing-options",
+   "type": "partial",
+   "access": "Strony nieotwierane, dowód: search-summary. Treści publiczne vendorów finansowania. Zob. też https://www.onrampfunds.com/resources/comparing-5-inventory-financing-options-for-sellers",
+   "covers_pl": "Porównanie struktur kosztów finansowania zapasów (Kickfurther, Wayflyer ze stałą opłatą 5–10% i spłatą jako procent sprzedaży itp.) oraz wymagań kwalifikacyjnych.",
+   "misses_or_unverified_pl": "Treść, a nie kalkulator (wg podsumowania). Brak powiązania z rabatem, storage i scenariuszem popytu."
+  },
+  {
+   "name": "Arkusze i szablony (eFinancialModels, Spendflo TCO Template, Damodaran NYU; LedgerGurus z fali 1)",
+   "url": "https://www.spendflo.com/template/total-cost-of-ownership-template",
+   "type": "substitute",
+   "access": "Strony nieotwierane, dowód: search-summary. Darmowe szablony. Zob. też https://www.efinancialmodels.com/free-spreadsheet-templates/ i https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm. LedgerGurus Inventory Forecasting Template (fala 1) nie pojawił się w tej sesji.",
+   "covers_pl": "Szablon TCO z break-even i zdyskontowanym porównaniem opcji, arkusze kosztu kapitału i capital budgeting z kapitałem obrotowym. Można je zaadaptować do analizy forward buy.",
+   "misses_or_unverified_pl": "Wyszukiwanie nie znalazło szablonu stworzonego do forward buying ani do rabatu ilościowego. Wymaga samodzielnej budowy modelu: aged fees, warianty finansowania i spadek popytu."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z Intelligent UI od 07.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026)",
+   "url": "n/d (brak URL w wynikach)",
+   "type": "substitute",
+   "access": "Nie testowano w tej sesji. Funkcje według kontekstu zadania.",
+   "covers_pl": "Same podsumowania wyszukiwarki w tej sesji wygenerowały gotową regułę: oszczędność z rabatu minus (stopa carrying × wartość zakupu × miesiące zapasu / 12) plus opłaty dodatkowe, i zaproponowały układ arkusza. Asystent z Intelligent UI może wyrenderować formularz z tymi polami.",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy asystent poprawnie zamodeluje wielookresowo progi aged fees FBA (181+/271+/365+ dni), szczyt Q4, malejące saldo pożyczki, macierz 36 wariantów i najniższy punkt gotówki; aktualność stawek FBA."
+  },
+  {
+   "name": "Toolsque / ActiveCalculator Bulk Discount Calculator (z notatek fali 1)",
+   "url": "https://toolsque.com/tools/bulk-discount-calculator/",
+   "type": "partial",
+   "access": "URL z notatek fali 1, nie pojawił się w wynikach tej sesji. Strona nieotwierana. ActiveCalculator: https://activecalculator.com/templates/bulk-discount-calculator (również z fali 1).",
+   "covers_pl": "Prawdopodobnie liczenie ceny po rabacie ilościowym (kategoria jak w wynikach tej sesji).",
+   "misses_or_unverified_pl": "Wszystkie funkcje niezweryfikowane w tej sesji. Na tle kategorii raczej bez finansowania, storage i scenariuszy."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań, wyniki US, tylko podsumowania, strony nieotwierane). Pewność: średnia dla darmowych narzędzi webowych, niska dla płatnych SaaS za loginem (Inventory Optimizer, SoStocked, Drivepoint, Float, Cogsy).\n\nLuka, precyzyjnie: brak publicznego narzędzia, które w jednym wielookresowym modelu łączy cztery elementy:\n(1) próg rabatu lub MOQ, czyli zamówienie na 2, 4 lub 6 miesięcy;\n(2) koszt konkretnego instrumentu finansowania zależny od czasu: gotówka i koszt alternatywny, pożyczka z miesięcznym oprocentowaniem od malejącego salda, terminy dostawcy, RBF lub Kickfurther z opłatą rosnącą przy wolnej sprzedaży;\n(3) strukturę storage zależną od wieku zapasu i sezonu: FBA z dopłatami od 181 dni i szczytem w październiku–grudniu, 3PL, własny magazyn;\n(4) scenariusz spadku popytu, który wydłuża zaleganie i jednocześnie podnosi koszt storage i kapitału.\n\nNa wyjściu takie narzędzie dawałoby zysk netto każdego scenariusza, najniższy punkt gotówki vs bufor, break-even sell-through i maksymalny tolerowany spadek popytu.\n\nCzęściowe rozwiązania pokrywają fragmenty:\n- AskBiz i Pro-Graad: rabat vs jedna stopa carrying cost;\n- MetricGate: EOQ z progami rabatowymi;\n- sellerboard i ReplenishRadar: aged fees FBA, ale jako treść, nie jako narzędzie;\n- Kickfurther: koszt własnego finansowania.\n\nZastrzeżenie: luka jest wąska wartościowo. Prosta reguła (rabat minus carrying rate × miesiące) daje odpowiedź 'wystarczająco dobrą' i asystenci AI ją podają, więc przewaga integracji ujawnia się głównie przy aged fees, finansowaniu malejącym saldem i wrażliwości na popyt.",
+ "search_scope_pl": "7 wyszukiwań WebSearch w trybie extended, w języku angielskim, wyniki US, 2026-10-25:\n- pytanie w języku naturalnym;\n- kategoria 'bulk purchase discount vs carrying cost calculator';\n- terminologia alternatywna (quantity discount EOQ / price breaks, forward buy);\n- płatne SaaS dla Amazon FBA;\n- Reddit i fora;\n- kalkulatory finansowania zapasów (Kickfurther, Wayflyer);\n- arkusze i szablony.\n\nOgraniczenia:\n- WebFetch zablokowany: żadna strona nie była otwierana, formularzy nie testowano, paywalli i loginów nie widziano. Dowodem są wyłącznie podsumowania wyszukiwarki.\n- Wątki Reddit nie pojawiły się w wynikach (ograniczenie wyszukiwarki, a nie dowód braku dyskusji).\n- Funkcje płatnych narzędzi (Inventory Optimizer, SoStocked, Jungle Scout, Drivepoint, sellerboard, ReplenishRadar) i kalkulatora Kickfurther są niezweryfikowane.\n- Nie sprawdzano: Float, Cogsy, Prediko jako aplikacji, Shopify Capital, kalkulatorów banków i SBA, szablonów Etsy/Gumroad, narzędzi w języku innym niż angielski.\n- Pozycje z fali 1 (Toolsque, ActiveCalculator, MFE Business Loans, LedgerGurus, Cogsy, Float) nie pojawiły się ponownie i pozostają niezweryfikowane.",
+ "demand_signals": [
+  {
+   "signal_pl": "Sellerboard opublikował w lipcu 2026 poradnik o modelowaniu opłat FBA za storage per SKU. W wynikach pada wprost teza, że rabat dostawcy za zamówienie na 6 miesięcy często przegrywa z kosztem przechowania. To niemal dokładnie przykładowy prompt produktu, a vendorzy piszą treści pod ten dylemat.",
+   "url": "https://blog.sellerboard.com/2026/07/14/fba-storage-fees-the-silent-margin-killer-and-how-to-model-them-per-sku/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "ReplenishRadar: przewodnik 2026 o long-term storage fees z przykładem rabatu 1000 szt. (ok. +500 USD) vs dopłaty (ok. -900 USD); przypisanie przykładu do URL niepewne. Kolejny vendor tworzący treść pod tę decyzję.",
+   "url": "https://replenishradar.com/blog/fba-long-term-storage-fees",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "AskBiz prowadzi artykuł i opisywany 'evaluator' o tym, kiedy przyjąć rabat za większe zamówienie; Pro-Graad ma podobną treść dla zakupów branżowych. Treści o tym problemie istnieją poza Amazonem (detal, B2B).",
+   "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieją osobne kalkulatory EOQ z rabatami all-units i incremental (MetricGate) oraz wiele ogólnych kalkulatorów EOQ. Podaż narzędzi sugeruje stały popyt wyszukiwawczy, głównie operacyjny i edukacyjny.",
+   "url": "https://metricgate.com/docs/eoq-quantity-discount-allunit/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Nova Data (panel kilkuset sprzedawców): koszt storage FBA to 1,31% sprzedaży w kwietniu i 2,84% w listopadzie. Wymiar kosztu storage jest materialny i sezonowy, co uzasadnia model wielookresowy.",
+   "url": "https://novadata.io/resources/blog/inventory-management",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kickfurther reklamuje finansowanie hasłem 'order bigger, get volume discounts'. Finansujący używają rabatu ilościowego jako motywu sprzedażowego, czyli decyzja rabat vs finansowanie jest realna i komercyjnie wartościowa.",
+   "url": "https://www.kickfurther.com/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Zapytanie o Reddit nie zwróciło wątków. Wolumenu wyszukiwań fraz typu 'bulk order discount calculator' czy 'MOQ worth it' nie ustalono. Hipoteza: popyt jest stały, ale niszowy (B2B, mali sprzedawcy), wielokrotny w roku na jednego sprzedawcę.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko wysokie dla pojedynczego przypadku, średnie dla pełnej macierzy. Przykładowy prompt asystent rozwiązuje sam: oszczędność 10% od wartości zamówienia, odsetki 1,5%/mies. od malejącego salda 40 tys. USD przez ok. 6 miesięcy, dodatkowy storage. Podsumowania wyszukiwarki w tej sesji same wygenerowały regułę 'rabat minus carrying rate × miesiące / 12' i zaproponowały układ arkusza. Od 07.10.2026 ChatGPT Intelligent UI renderuje formularze i kalkulatory w odpowiedzi, a Google AI Mode od 19.08.2026 generuje interaktywne narzędzia.\n\nGdzie zewnętrzne narzędzie ma jeszcze przewagę:\n- aktualne i niespójne między źródłami stawki FBA (0,78, 0,87 lub 0,99 USD/ft³; dopłaty od 181 dni; mnożnik Q4);\n- macierz 3 ilości × 4 finansowania × 3 storage, liczona miesiąc po miesiącu;\n- najniższy punkt gotówki;\n- siatka wrażliwości na spadek popytu;\n- zapis i porównanie scenariuszy.\n\nAsystent może jednak to obliczyć kodem. Odesłanie do zewnętrznego narzędzia jest możliwe, ale nie konieczne.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja 'większe zamówienie za rabat lub MOQ' powtarza się przy każdym PO u małych sprzedawców e-commerce, hurtowników i detalistów, więc występuje wiele razy w roku na firmę. Widoczna jest podaż treści i narzędzi pod ten problem. Populacją są jednak firmy, a nie gospodarstwa domowe, a widocznego popytu pytań konsumenckich (np. Reddit) nie potwierdzono.",
+   "evidence_pl": "Poradnik sellerboard 07.2026 z tezą o 6-miesięcznym zamówieniu; ReplenishRadar z przykładem liczbowym; AskBiz i Pro-Graad; kalkulatory EOQ z rabatami (MetricGate); Kickfurther używa motywu rabatu w marketingu; Nova Data pokazuje materialny koszt storage.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań (Keyword Planner, GSC), brak liczby aktywnych sprzedawców US z wyników, Reddit nie wyszedł w wynikach. Nie wiadomo, ile osób szuka narzędzia, a ile tylko reguły.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Częściowe rozwiązania pokrywają większość fragmentów: rabat vs carrying cost (AskBiz), EOQ z progami (MetricGate), aged fees FBA (sellerboard, ReplenishRadar, treści), koszt finansowania jednego dostawcy (Kickfurther). Nie pokrywają zintegrowanej sekwencji: spadek popytu, dłuższe zaleganie, wyższe progi aged fees i koszt kapitału, najniższy punkt gotówki vs bufor. Nie znaleziono bezpośredniego konkurenta w badanym zakresie.",
+   "evidence_pl": "7 zróżnicowanych zapytań. Podsumowanie zapytania o SaaS FBA wprost stwierdza brak narzędzia łączącego MOQ, opłaty storage i scenariusze cash flow. Zapytanie o szablony nie znalazło szablonu forward buy. Kalkulatory bulk discount są czysto cenowe albo konsumenckie.",
+   "gaps_pl": "Funkcje płatnych SaaS za loginem (Inventory Optimizer, SoStocked, Drivepoint, Float, Cogsy) i kalkulatora Kickfurther są niezweryfikowane. 'Evaluator' AskBiz mógł być bliższy, niż wynika z podsumowania. Reddit i szablony z marketplace'ów niesprawdzone.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Typowe pytanie (jeden rabat, jedna pożyczka, storage) asystent rozwiązuje sam i może wyrenderować formularz. Odesłanie do zewnętrznego narzędzia jest prawdopodobne tylko przy potrzebie aktualnych stawek FBA, wielookresowej macierzy wariantów i audytowalności, a to wymaga już zaawansowanego użytkownika.",
+   "evidence_pl": "Podsumowania wyszukiwarki w tej sesji same podały formułę i układ arkusza. Funkcje ChatGPT Intelligent UI (07.10.2026) i Google AI Mode (19.08.2026) według kontekstu zadania. Niespójne stawki FBA między źródłami pokazują ryzyko błędu asystenta.",
+   "gaps_pl": "Nie testowano realnych odpowiedzi ChatGPT i AI Mode na przykładowy prompt ani tego, czy linkują zewnętrzne kalkulatory.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 2,
+   "rationale_pl": "Odbiorcy to wąska grupa B2B (sprzedawcy e-commerce, hurtownicy), a nie masowy konsument US. Wertykały powiązane (finansowanie małych firm, RBF, 3PL, SaaS dla sprzedawców Amazon) mają wysoką wartość, ale lepiej monetyzują się przez afiliację lub leady niż przez AdSense przy małym ruchu.",
+   "evidence_pl": "Obecność wielu vendorów finansowania (Kickfurther, Wayflyer, Uncapped, Onramp) i SaaS (Inventory Optimizer od 79,95 USD/mies., SoStocked, Jungle Scout, sellerboard) świadczy o komercyjnej wartości niszy.",
+   "gaps_pl": "Brak danych o CPC i RPM dla tej niszy oraz o polityce AdSense wobec reklam pożyczek dla firm (finansowanie konsumenckie bywa ograniczane; B2B: niezweryfikowane).",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Model matematyczny jest prosty: wielookresowa oś czasu zapasu, saldo pożyczki, koszt storage zależny od wieku i sezonu, scenariusze popytu. Większość danych wprowadza użytkownik. Utrzymania wymagają tylko opcjonalne presety FBA (stawki storage, dopłaty od 181/271/365 dni, Q4) i ewentualnie szablony struktur RBF.",
+   "evidence_pl": "Wyniki pokazują, że stawki FBA się zmieniają (tytuł 'April 17 Surcharge Update' w AMZ Prep, różne stawki w źródłach), a progi aged fees są publikowane przez Amazon. Struktury finansowania są różnorodne, ale dają się sparametryzować.",
+   "gaps_pl": "Częstotliwość zmian stawek FBA w 2026 i dostępność oficjalnej tabeli do automatycznego monitoringu: niezweryfikowane.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 4,
+   "rationale_pl": "Błąd nie jest katastrofalny i nie wymaga interpretacji prawnej ani podatkowej. To decyzja biznesowa, w której wynik zależy głównie od założeń użytkownika o popycie, co narzędzie pokazuje przez wrażliwość. Ryzyko leży w nieaktualnych presetach FBA i uproszczeniu struktur finansowania (np. opłaty Kickfurther rosną przy wolnej sprzedaży).",
+   "evidence_pl": "Rozbieżne stawki storage w źródłach (0,78, 0,87 i 0,99 USD/ft³) oraz sprzeczne progi kwalifikacji Kickfurther pokazują, że presety muszą mieć datę i źródło.",
+   "gaps_pl": "Nie zweryfikowano aktualnej oficjalnej tabeli opłat FBA ani warunków konkretnych produktów finansowych.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 3,
+   "rationale_pl": "Produkt korzysta z modułów osi czasu cash flow, finansowania (pożyczka, terminy, RBF) i wrażliwości. Nie korzysta z modułów podatku, wartości domu ani energii. Może dać rodzeństwo w rodzinie BIZ: rabat za wcześniejszą płatność (2/10 net 30) vs linia kredytowa, zapas na Q4, FBA vs 3PL vs własny magazyn, RBF vs pożyczka vs Kickfurther.",
+   "evidence_pl": "Rodzina produktów 'Mała firma, e-commerce, zapas i płynność' z zadania. Wyniki pokazują osobne tematy finansowania i storage, które da się wydzielić jako moduły.",
+   "gaps_pl": "Słabe powiązanie z konsumenckimi modułami (dom, energia, podatek PIT), więc ograniczony transfer do rodzin konsumenckich.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "później",
+ "recommendation_reason_pl": "Wynik ważony to ok. 2,9/5. Luka integracyjna istnieje: nie znaleziono bezpośredniego konkurenta w badanym zakresie, przy średniej pewności dla darmowych narzędzi i niskiej dla SaaS. Model jest łatwy do zbudowania i utrzymania.\n\nPrzeważają jednak trzy słabości dla tego modelu biznesowego:\n- wąska grupa B2B o słabym dopasowaniu do AdSense;\n- wysokie ryzyko, że asystent AI rozwiąże typowy przypadek sam;\n- popyt potwierdzony tylko pośrednio (treści vendorów), bez danych wolumenowych.\n\nLepiej zbudować to później jako moduł rodzeństwa na wspólnym silniku cash flow i finansowania, z monetyzacją afiliacyjną (finansowanie zapasów, 3PL, SaaS), niż jako pierwszy produkt.\n\nWarunek awansu do 'zbadać':\n- wolumeny fraz 'bulk order discount calculator', 'MOQ calculator', 'FBA aged inventory surcharge calculator' i 'inventory financing calculator';\n- test 5–10 promptów w ChatGPT i Google AI Mode;\n- demo Inventory Optimizer, SoStocked i Drivepoint oraz kalkulatora Kickfurther.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "supplier offers discount for larger inventory order, is it worth it with loan interest and storage costs",
+   "url": "https://gpx.co/blog/inventory-carrying-cost/",
+   "competitor": "Treści o carrying cost (GPX, XoroSoft, WorkShelter, Dummies, UserSolutions)",
+   "features_checked": "Czy istnieje narzędzie rabat vs odsetki vs storage; składniki carrying cost; typowe stopy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Tylko treści edukacyjne: carrying cost 20–30%/rok (rozbicie: kapitał 10–15%, storage 5–10%, obsolescence 3–8%, markdown 5–10%). Brak interaktywnego symulatora w wynikach. Zapytanie w języku naturalnym prowadzi do artykułów, nie do narzędzi.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs carrying cost calculator",
+   "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+   "competitor": "AskBiz – Bulk Order Discounts",
+   "features_checked": "Rabat vs carrying cost, break-even w miesiącach zapasu, rekomendacja przyjąć/odrzucić, finansowanie, aged fees, scenariusze popytu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; czy 'evaluator' wymaga konta: niezweryfikowane",
+   "conclusion": "Partial, potwierdzony ponownie (był w fali 1). Pokrywa rdzeń: rabat vs jedna stopa carrying i break-even 2,5 mies. w przykładzie. Wielookresowe finansowanie, aged fees, spadek popytu i bufor gotówki niezweryfikowane, z opisu raczej nieobecne.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs carrying cost calculator",
+   "url": "https://www.calcscope.com/finance/comparisons/bulk-buy-savings/",
+   "competitor": "CalcScope Bulk Buy Savings (oraz NormalEdu, Calculator Academy, DiscountCalculator.org, DEV Community Bulk Buy Calculator)",
+   "features_checked": "Kontekst (konsumencki vs B2B), storage, zamrożona gotówka, break-even",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial marginalny: CalcScope to kalkulator konsumencki (warehouse club) z break-even liczby zakupów; pozostałe liczą tylko cenę po rabacie (część wprost pomija podatki, wysyłkę i progi). Nie są konkurencją dla decyzji MOQ i finansowania.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs carrying cost calculator",
+   "url": "https://pro-graad.com/blogs/blog-1/bulk-abrasive-purchasing",
+   "competitor": "Pro-Graad – Calculate Bulk Abrasive Purchasing Savings",
+   "features_checked": "Reguła rabat vs carrying cost, źródło stopy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Treść branżowa z regułą ISM 20–30%/rok (rabat 25% przy carrying 25% to netto ok. 0). Sygnał popytu poza e-commerce. To nie narzędzie integrujące.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "quantity discount EOQ calculator price breaks holding cost",
+   "url": "https://metricgate.com/docs/eoq-quantity-discount-allunit/",
+   "competitor": "MetricGate EOQ with All-Units / Incremental Quantity Discount",
+   "features_checked": "Progi cenowe, holding cost od ceny, koszt całkowity na progu, wielookresowość, finansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie niezweryfikowane",
+   "conclusion": "Partial: najbliższy matematycznie fragment (wybór progu rabatowego), ale model roczny w stanie ustalonym, bez instrumentu finansowania, aged fees, scenariusza popytu i gotówki.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "quantity discount EOQ calculator price breaks holding cost",
+   "url": "https://nventory.io/tools/eoq-calculator",
+   "competitor": "Ogólne kalkulatory EOQ (Nventory, CISS, MiniWebtool, Perimattic, Firgelli, Six Sigma Material)",
+   "features_checked": "EOQ, holding cost jako % ceny, progi rabatowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (jednocelowe). Kategoria 'kalkulatory EOQ' z fali 1 potwierdzona konkretnymi URL. Progi rabatowe w poszczególnych narzędziach niezweryfikowane. Nie są bezpośrednimi konkurentami.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+   "url": "https://inventoryoptimizer.ai/",
+   "competitor": "Inventory Optimizer",
+   "features_checked": "MOQ w PO, lead time, safety stock, prognoza popytu, cena, finansowanie, cash flow",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatny SaaS od 79,95 USD/mies., funkcje za loginem",
+   "conclusion": "Substytut (płatny SaaS operacyjny). MOQ-aware PO potwierdzone w opisie vendora. Rabat vs koszt finansowania i scenariusze gotówki niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+   "url": "https://www.prediko.io/blog/amazon-inventory-forecasting-tools",
+   "competitor": "SoStocked / Jungle Scout Inventory Manager / Prediko (porównanie)",
+   "features_checked": "Prognozy, sezonowość, limity FBA, lead time, koszt produktu, cash flow, MOQ, storage",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; aplikacje płatne, za loginem",
+   "conclusion": "Substytuty. Podsumowanie wyszukiwania stwierdziło, że nie znalazło narzędzia łączącego MOQ, opłaty storage i scenariusze cash flow, ani niezależnego porównania. Funkcje vendorów niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+   "url": "https://www.drivepoint.ai/post/amazon-inventory-forecasting",
+   "competitor": "Drivepoint",
+   "features_checked": "Stawki storage FBA, dopłata za zapas 271–365 dni, scenariusze per kanał i MOQ",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; produkt FP&A prawdopodobnie płatny (wiedza modelu)",
+   "conclusion": "Substytut / źródło danych: stawki 0,87 USD/ft³ (styczeń–wrzesień) i 2,40 USD (październik–grudzień), dopłata +0,50 USD/ft³ dla 271–365 dni; stawki mogą być nieaktualne. Interaktywny symulator niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+   "url": "https://amzprep.com/fba-inventory-forecast-tool/",
+   "competitor": "AMZ Prep FBA Inventory Forecast Tool (free)",
+   "features_checked": "Darmowa prognoza zapasu FBA; rabat, finansowanie, storage",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Możliwy partial (prognoza i reorder), funkcje niezweryfikowane. Brak dowodu na integrację rabatu i finansowania.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit FBA seller bigger order supplier discount vs storage fees inventory loan worth it",
+   "url": "https://blog.sellerboard.com/2026/07/14/fba-storage-fees-the-silent-margin-killer-and-how-to-model-them-per-sku/",
+   "competitor": "Sellerboard (blog + aplikacja)",
+   "features_checked": "Modelowanie storage per SKU, teza rabat 6 mies. vs storage, finansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; aplikacja płatna (wiedza modelu), funkcje za loginem",
+   "conclusion": "Partial (treść): temat niemal identyczny z przykładowym promptem, ale w formie poradnika. Przypisanie cytatu o 6-miesięcznym zamówieniu do tego URL lub do ReplenishRadar niepewne. Brak finansowania i bufora gotówki.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit FBA seller bigger order supplier discount vs storage fees inventory loan worth it",
+   "url": "https://replenishradar.com/blog/fba-long-term-storage-fees",
+   "competitor": "ReplenishRadar",
+   "features_checked": "Progi aged fees (181+/365+ dni), stawki long-term, przykład rabat vs dopłaty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; aplikacja vendora niezweryfikowana",
+   "conclusion": "Partial (treść). Dopłaty od 181 dni, powyżej 365 dni do 6,90 USD/ft³ lub 0,15 USD/szt. Przykład: rabat ok. +500 USD vs dopłaty ok. -900 USD. Reddit nie pojawił się w wynikach (ograniczenie wyszukiwarki).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator volume discount ROI ecommerce Kickfurther Wayflyer",
+   "url": "https://www.kickfurther.com/",
+   "competitor": "Kickfurther (kalkulator kosztów)",
+   "features_checked": "Kalkulator kosztów i harmonogramu, struktura opłat, powiązanie z rabatem, porównanie z innymi źródłami",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; kalkulator niedostępny w wyszukiwaniu, progi kwalifikacji 150–200 tys. USD TTM (sprzeczne)",
+   "conclusion": "Partial: kalkulator jednego finansującego (koszt własnego produktu), marketing 'order bigger, get volume discounts'. Opłaty wg porównania: ok. 5% origination plus od ok. 2,2%/mies. Brak neutralnego porównania z pożyczką, terminami i gotówką oraz storage i popytu (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator volume discount ROI ecommerce Kickfurther Wayflyer",
+   "url": "https://www.weareuncapped.com/blog/ecommerce-inventory-financing-options",
+   "competitor": "Uncapped / Onramp Funds – porównania finansowania",
+   "features_checked": "Struktury kosztów finansowania, wymagania, kalkulator",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (treść): porównanie 5 dostawców (Wayflyer: stała opłata 5–10%, wymagane 20 tys. USD przychodu miesięcznie i 6+ mies. działalności). Kalkulatora nie znaleziono. Uncapped był w fali 1 pod innym URL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "forward buy analysis template spreadsheet discount vs cost of capital inventory cash flow",
+   "url": "https://www.spendflo.com/template/total-cost-of-ownership-template",
+   "competitor": "Szablony arkuszy (Spendflo TCO, eFinancialModels, Damodaran NYU, Smartsheet DCF)",
+   "features_checked": "Szablon forward buy, break-even, koszt kapitału, kapitał obrotowy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut: brak szablonu dedykowanego forward buying lub rabatowi ilościowemu. Istnieją ogólne szablony TCO, kosztu kapitału i DCF do adaptacji. Terminologia 'forward buy' nie ujawniła ukrytej kategorii narzędzi.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+   "url": "https://novadata.io/resources/blog/inventory-management",
+   "competitor": "Nova Data (treść o cash flow FBA)",
+   "features_checked": "Udział kosztu storage w sprzedaży, wpływ nadmiaru zapasu na kapitał",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "To nie konkurent, tylko sygnał popytu i dane: storage FBA to 1,31% sprzedaży w kwietniu vs 2,84% w listopadzie (panel kilkuset sprzedawców), a nadmiar zapasu zamraża kapitał.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "supplier offers discount for larger inventory order, is it worth it with loan interest and storage costs",
+  "bulk purchase discount vs carrying cost calculator",
+  "quantity discount EOQ calculator price breaks holding cost",
+  "Amazon FBA inventory planning software MOQ cash flow forecast storage fees scenario",
+  "reddit FBA seller bigger order supplier discount vs storage fees inventory loan worth it",
+  "inventory financing calculator volume discount ROI ecommerce Kickfurther Wayflyer",
+  "forward buy analysis template spreadsheet discount vs cost of capital inventory cash flow"
+ ]
+}

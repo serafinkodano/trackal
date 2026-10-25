@@ -1,0 +1,487 @@
+{
+ "topic": "Regulacje USA i dane dla symulatorów decyzyjnych (zmiany 2025-2026), źródła danych, licencje i koszt utrzymania",
+ "summary_pl": "OGRANICZENIE METODYCZNE (najważniejsze): wykonałem tylko 5 wyszukiwań. Szóste i kolejne zablokował wspólny limit 200 wywołań WebSearch na turę, dzielony przez wszystkich agentów workflow. 4 dalsze zapytania nie zostały wykonane. WebFetch nie był używany. Wyszukiwaniem (search-summary) zweryfikowałem tylko blok ulg energetycznych: 25D/48E/Notice 2025-42/EV/30C. Pozostałe ustalenia (student loans, SALT, senior deduction, HSA/529/Trump accounts, ACA, Medicare/SS, net metering, ubezpieczenia, NFIP, FORTIFIED, API danych, ryzyko prawne) pochodzą z wiedzy modelu (stan na około VI 2026). Są oznaczone 'hipoteza / niezweryfikowane', mają evidence_type hypothesis/estimate i puste źródła. Przed decyzją trzeba je zweryfikować w kolejnej rundzie wyszukiwań.\n\nWnioski:\n(1) Zmienność przepisów w latach 2025-2026 była skrajna dokładnie w domenach flagowych dla pomysłu (solar, EV, modernizacja domu, kredyty studenckie, ACA). OBBBA (4.07.2025) zakończyła 25D i 25C z końcem 2025 r. EV credits 30D/25E/45W wygasły 30.09.2025, a 30C 30.06.2026. Kredyt 48E dla leasingu/PPA zostaje tylko do 2027 r. Reguła 'beginning of construction' zmieniła się dwukrotnie w około 10 miesięcy: najpierw Notice 2025-42, potem jej uchylenie przez sąd 6.06.2026. Status apelacji jest nieznany.\n(2) To tworzy realny popyt na pytania typu 'co teraz?'. Zmiana zwykle przebudowuje strukturę decyzji, a nie ją usuwa. Przykład: solar w 2026 to głównie 'lease/PPA vs zakup bez ulgi vs czekanie' plus taryfy net billing. Zarazem wiele symulatorów traci centralną dźwignię albo ma krótką przydatność (okno 48E do 2027, tymczasowe odliczenia OBBBA na lata 2025-2028).\n(3) Same dane są tanie. NREL PVWatts/URDB/AFDC, EIA, FRED, BLS, Census, OpenFEMA, fueleconomy.gov, HUD i PMMS to w praktyce koszt 0 USD za API przy darmowych kluczach. Są jednak ryzyka ciągłości: cięcia i reorganizacje agencji federalnych, przerwy w danych podczas shutdownu X-XI 2025. Licencje serii z FRED, CareScout, Zillow i Redfin trzeba sprawdzić osobno.\n(4) Najdroższa część utrzymania to parametry prawne bez API: IRS Rev. Proc., noty IRS, wyroki, taryfy stanowe, rabaty stanowe, zniżki ubezpieczeniowe. Zmieniają się w nieprzewidywalnych momentach: ustawa w połowie roku z mocą wsteczną, vacatur sądowy, shutdown. Automatyzacja (n8n) może wykrywać zmiany, ale interpretacja wymaga człowieka. To stoi w napięciu z założeniem 'bez kosztownej pracy redakcyjnej'.\n(5) Ryzyko prawne darmowego, edukacyjnego symulatora wydaje się umiarkowane i do opanowania (hipoteza). Zasady: nie rekomendować konkretnych papierów wartościowych (publisher exclusion), nie 'solicit' ubezpieczeń bez licencji, ujawniać afiliację, liczyć po stronie klienta i nie przechowywać danych finansowych (stanowe privacy laws), budować pod WCAG AA (pozwy ADA).\n\nRekomendacja dla projektu: priorytet dla symulatorów, których wartość wynika ze stabilnych danych fizycznych/rynkowych i sytuacji użytkownika, z centralnym rejestrem parametrów z datami obowiązywania. Ostrożnie z symulatorami, których jedynym sensem jest tymczasowy 'tax cliff'.",
+ "findings": [
+  {
+   "question": "1. OBBBA – 25D residential clean energy credit (status 2026)",
+   "claim_pl": "Ulga 25D (30% kosztu solaru, baterii i geotermii kupionych przez właściciela domu) nie przysługuje dla wydatków poniesionych po 31.12.2025. Podstawa: OBBBA, P.L. 119-21, podpisana 4.07.2025. Wydatek uznaje się za poniesiony w momencie zakończenia instalacji, nie podpisania umowy. Ostateczna ustawa przyspieszyła koniec ulgi względem wcześniejszej wersji Senatu, która przewidywała 180 dni od podpisania. Ulga dotyczyła zakupu za gotówkę lub na kredyt, nie leasingu ani PPA. [search-summary]",
+   "evidence_type": "direct",
+   "numbers": "30% -> 0% dla instalacji zakończonych po 31.12.2025 (wcześniej, wg IRA, 30% do 2032)",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-act-obbb",
+     "title": "FAQs for modification of sections 25C, 25D, 25E, 30C, 30D, 45L, 45W and 179D under Public Law 119-21 (OBBB)",
+     "publisher": "IRS",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.eidebailly.com/insights/alerts/2025/individual-solar-electric-credits",
+     "title": "Individual solar electric credits",
+     "publisher": "Eide Bailly",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.solar.com/learn/senate-releases-updated-one-big-beautiful-bill-text-what-it-means-for-solar/",
+     "title": "Senate Releases Updated One Big Beautiful Bill Text – What It Means for Solar",
+     "publisher": "Solar.com",
+     "published": "2025"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Przykład z briefu (dach + solar) ma w 2026 inną strukturę. Zniknął argument 'zdążyć przed końcem ulgi' przy zakupie. Ważne stają się lease/PPA (kredyt 48E po stronie właściciela systemu), ulgi stanowe i taryfy net billing. Stare kalkulatory pokazujące 30% dowodzą szybkiej dezaktualizacji treści, ale same nie tworzą niszy. Każdy parametr ulgi musi mieć datę obowiązywania (effective-dated)."
+  },
+  {
+   "question": "1. 48E / third-party-owned solar (lease, PPA) po OBBBA",
+   "claim_pl": "Systemy w leasingu lub PPA nadal mogą generować kredyt 48E, ale dostaje go właściciel systemu, nie domownik. Według źródeł branżowych projekty solar/wind, których budowa ruszyła po 4.07.2026, muszą zostać oddane do użytku do 31.12.2027. Od 2028 r. leasing i PPA nie mają się kwalifikować. Nowe ograniczenie leasingowe w 48E dotyczy solarnego podgrzewania wody i małego wiatru, nie typowego PV. Jedno źródło wtórne wspomina Notice 2026-15 (FEOC, zakaz komponentów od 'prohibited foreign entity'). [search-summary; prawie wyłącznie blogi instalatorów, w wynikach brak strony Treasury/IRS]",
+   "evidence_type": "indirect",
+   "numbers": "bazowo 30%; marketing 'do 70%' z adderami (domestic content, energy community, prevailing wage) to deklaracje sprzedażowe; placed-in-service do 31.12.2027",
+   "sources": [
+    {
+     "url": "https://www.greenlancer.com/post/solar-energy-tax-credit-2025",
+     "title": "Federal Solar Tax Credit 2026: What Ended, What Remains",
+     "publisher": "GreenLancer"
+    },
+    {
+     "url": "https://nuwattenergy.com/en/solar-lease-ppa-2026/section-48e-homeowner-guide",
+     "title": "Section 48E Solar ITC for Homeowners 2026",
+     "publisher": "NuWatt Energy"
+    },
+    {
+     "url": "https://www.solarinsure.com/final-changes-to-solar-tax-credit-from-h-r-1",
+     "title": "The Final Version of the Solar Tax Credit Changes from the One Big Beautiful Bill",
+     "publisher": "SolarInsure"
+    },
+    {
+     "url": "https://ocsolar.com/resources/guides/solar-lease-vs-buy-2026",
+     "title": "Solar Lease vs Buy in 2026: The Flip",
+     "publisher": "OC Solar"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Decyzja 'buy vs lease vs PPA' odwróciła się w 2026 r. To realny problem z zależnościami: cena leasingu, eskalator, sprzedaż domu z umową leasingu, wymiana dachu pod istniejącym systemem. Pasuje do koncepcji symulatora. Okno 48E zamyka się jednak w 2027 r., więc symulator w tej formie ma krótką przydatność. Temat jest też silnie obsadzony treściami instalatorów nastawionymi na lead-gen."
+  },
+  {
+   "question": "6. Częstotliwość zmian – reguła 'beginning of construction' (Notice 2025-42 i vacatur)",
+   "claim_pl": "IRS Notice 2025-42 (sierpień 2025) zniosła 5% safe harbor dla 'beginning of construction' w projektach wiatrowych i solarnych powyżej 1,5 MW. Jedyną metodą został Physical Work Test. 6.06.2026 sąd okręgowy dla D.C. w sprawie Oregon Environmental Council v. IRS uchylił notę w całości (vacatur o skutku ogólnokrajowym) jako arbitrary and capricious w rozumieniu APA i przekazał sprawę IRS. Kancelarie oczekiwały apelacji i wniosku rządu o stay. Obecnego statusu apelacji nie znalazłem. [search-summary, 6+ kancelarii]",
+   "evidence_type": "direct",
+   "numbers": "próg 1,5 MW; wyrok 6.06.2026; termin rozpoczęcia budowy 4.07.2026",
+   "sources": [
+    {
+     "url": "https://www.troutman.com/insights/district-court-vacates-irs-notice-2025-42-restoring-five-percent-safe-harbor-option-for-beginning-of-construction/",
+     "title": "District Court Vacates IRS Notice 2025-42, Restoring Five Percent Safe Harbor Option for Beginning of Construction",
+     "publisher": "Troutman Pepper Locke",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/federal-court-vacates-irs-notice-2025-42-restores-5-safe-harbor-for-wind-and-solar-projects/",
+     "title": "Federal Court Vacates IRS Notice 2025-42, Restores 5% Safe Harbor for Wind and Solar Projects",
+     "publisher": "McGuireWoods",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.hklaw.com/en/insights/publications/2026/06/court-vacates-irs-notice-2025-42",
+     "title": "Court Vacates IRS Notice 2025-42: '5% Safe Harbor' for Wind and Solar Facilities Reinstated",
+     "publisher": "Holland & Knight",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.nixonpeabody.com/insights/alerts/2026/06/10/court-restores-five-percent-safe-harbor-before-july-4-2026-deadline",
+     "title": "Court restores Five Percent Safe Harbor before July 4, 2026, deadline",
+     "publisher": "Nixon Peabody",
+     "published": "2026-06-10"
+    },
+    {
+     "url": "https://taxnews.ey.com/news/2026-1285-district-court-vacates-irs-notice-eliminating-5-percent-safe-harbor-for-clean-energy-projects",
+     "title": "District court vacates IRS notice eliminating 5% safe harbor for clean energy projects",
+     "publisher": "EY Tax News",
+     "published": "2026"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Konkretny dowód obciążenia utrzymaniem: reguła dla tego samego kredytu zmieniła się w około 10 miesięcy trzy razy (ustawa, nota, sąd), a stan po apelacji jest niepewny. Na instalacje domowe (zwykle poniżej 1,5 MW) wpływ bezpośredni jest mały, pośrednio dotyczy cen leasingu i PPA. Takiej zmiany nie wykryje żadne API danych. Potrzebna jest interpretacja prawna."
+  },
+  {
+   "question": "1. EV credits 30D / 25E / 45W",
+   "claim_pl": "Kredyty 30D (nowe EV), 25E (używane EV) i 45W (commercial clean vehicle, w praktyce furtka leasingowa) nie przysługują dla pojazdów nabytych po 30.09.2025. 'Nabycie' oznacza wiążącą pisemną umowę plus wpłatę; wystarczy symboliczna zaliczka albo trade-in. Pojazd nabyty do 30.09 może zostać oddany do użytku później. [search-summary: IRS FAQ, Plante Moran, Arnold & Porter, Dean Dorton]",
+   "evidence_type": "direct",
+   "numbers": "do $7,500 (30D), do $4,000 (25E), 45W przez leasing -> 0 dla nabyć po 30.09.2025 (kwoty z wiedzy modelu, data z wyników)",
+   "sources": [
+    {
+     "url": "https://www.plantemoran.com/explore-our-thinking/insight/2025/09/the-obbb-and-the-end-of-ev-tax-credits",
+     "title": "The OBBB and the end of EV tax credits",
+     "publisher": "Plante Moran",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://www.arnoldporter.com/en/perspectives/advisories/2025/07/from-ira-to-obbba-a-new-era-for-clean-energy-tax-credits",
+     "title": "From IRA to OBBBA: A New Era for Clean Energy Tax Credits",
+     "publisher": "Arnold & Porter",
+     "published": "2025-07"
+    },
+    {
+     "url": "https://deandorton.com/articles/obbba-insight-termination-of-energy-credits/",
+     "title": "OBBBA Insight: Termination of Energy Credits",
+     "publisher": "Dean Dorton"
+    },
+    {
+     "url": "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-act-obbb",
+     "title": "IRS FAQs OBBB energy credits",
+     "publisher": "IRS",
+     "published": "2025"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Symulatory 'EV vs hybrid vs ICE' i 'lease vs buy EV' straciły główną dźwignię federalną. Zostają koszt paliwa i prądu (fueleconomy.gov, EIA), ulgi stanowe i utility, ładowarka, ubezpieczenie, deprecjacja. Okno około 3 miesięcy (lipiec–wrzesień 2025) pokazuje, jak szybko treść trzeba przepisać."
+  },
+  {
+   "question": "1. 30C – kredyt na infrastrukturę ładowania",
+   "claim_pl": "OBBBA przesunęła koniec 30C z 31.12.2032 na 30.06.2026. Kredytu nie można stosować do mienia oddanego do użytku po 30.06.2026. Stawki przed terminem: dom 30% do $1,000 na element; biznes 6% albo 30% przy spełnieniu prevailing wage/apprenticeship, do $100,000 na element. Wymóg lokalizacji w eligible census tract pochodzi z wiedzy modelu i jest niezweryfikowany. [search-summary: IRS Instructions for Form 8911 (12/2025), EY]",
+   "evidence_type": "direct",
+   "numbers": "30% / max $1,000 (dom); 6% lub 30% / max $100,000 (biznes); termin 30.06.2026",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/node/41121",
+     "title": "Instructions for Form 8911 (12/2025)",
+     "publisher": "IRS",
+     "published": "2025-12"
+    },
+    {
+     "url": "https://taxnews.ey.com/news/2025-1434-final-reconciliation-legislation-modifies-some-ira-energy-credits-repeals-others",
+     "title": "Final reconciliation legislation modifies some IRA energy credits, repeals others",
+     "publisher": "EY Tax News",
+     "published": "2025-07-14"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Na dziś (X 2026) ulga jest historyczna. To wzorcowy parametr z twardą datą wygaśnięcia, który rejestr parametrów powinien wyłączać automatycznie. Symulator 'home EV charger' musi ją usunąć."
+  },
+  {
+   "question": "1. 25C, 45L, 179D i rabaty HOMES/HEAR",
+   "claim_pl": "Tytuł IRS FAQ (FS-2025-05) potwierdza modyfikację 25C, 45L i 179D [search-summary]. Szczegóły z wiedzy modelu, niezweryfikowane w tej sesji. 25C (pompy ciepła, okna, drzwi, izolacja, audyt; limit $3,200 rocznie, w tym $2,000 na pompy ciepła) kończy się dla mienia oddanego do użytku po 31.12.2025. 45L dotyczy domów nabytych do 30.06.2026. 179D dotyczy budów rozpoczętych do 30.06.2026. Stanowe rabaty IRA HOMES/HEAR nie są kredytami podatkowymi. Ich dostępność różni się między stanami (hipoteza / niezweryfikowane).",
+   "evidence_type": "indirect",
+   "numbers": "25C: $3,200/rok -> 0 po 31.12.2025 (niezweryfikowane)",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-act-obbb",
+     "title": "IRS FAQs OBBB (25C, 25D, 25E, 30C, 30D, 45L, 45W, 179D)",
+     "publisher": "IRS",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.accountingtoday.com/news/irs-provides-faqs-on-expiring-clean-energy-tax-breaks",
+     "title": "IRS provides FAQs on expiring clean energy tax breaks",
+     "publisher": "Accounting Today",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12625/IN12625.2.pdf",
+     "title": "CRS Insight IN12625",
+     "publisher": "Congressional Research Service"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Symulatory remontowe ('furnace vs heat pump', 'windows now or later') w 2026 opierają się na rabatach stanowych i utility. Są rozproszone, nie mają jednolitego API i zmieniają się per stan. Koszt utrzymania rośnie wraz z liczbą stanów."
+  },
+  {
+   "question": "1. Odliczenie odsetek od kredytu samochodowego (OBBBA)",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu, wyszukiwanie zablokowane limitem] Odliczenie do $10,000 rocznie odsetek od kredytu na nowy pojazd osobowy z final assembly w USA. Kredyt musi być zaciągnięty po 31.12.2024 i zabezpieczony pojazdem. Obowiązuje w latach podatkowych 2025-2028. Dostępne także dla osób, które nie itemizują. Wygasza się powyżej MAGI $100,000 (single) / $200,000 (joint). Leasing się nie kwalifikuje. Pożyczkodawcy mają obowiązki raportowe.",
+   "evidence_type": "hypothesis",
+   "numbers": "$10,000/rok; phase-out od $100k/$200k MAGI; 2025-2028 (niezweryfikowane)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Wprowadza zależność 'gdzie zmontowano auto' do symulatora 'buy vs lease, new vs used'. Weryfikację final assembly da się teoretycznie oprzeć na dekoderze VIN NHTSA vPIC (darmowe API; hipoteza). Ulga jest czasowa (do 2028), więc symulator ma krótki horyzont."
+  },
+  {
+   "question": "1. SALT cap 2025-2029",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Limit SALT wynosi $40,000 w 2025 i $40,400 w 2026, rośnie o 1% rocznie do 2029, a w 2030 wraca do $10,000. Dla MAGI powyżej $500,000 (2025) / $505,000 (2026) limit spada do poziomu minimalnego $10,000. Dla MFS obowiązuje połowa.",
+   "evidence_type": "hypothesis",
+   "numbers": "$40,000 (2025), $40,400 (2026), +1%/rok, $10,000 od 2030; próg MAGI $500k/$505k",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Zmienia decyzje 'itemize vs standard deduction' w symulatorach 'pay off mortgage vs invest' i 'buy vs rent' w stanach o wysokich podatkach. Strefa około $500-600k MAGI ma efektywnie podwyższoną krańcową stawkę. To wąska nisza, ale dobra do analizy wrażliwości."
+  },
+  {
+   "question": "1. Senior deduction i standard deduction 2026",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Dodatkowe odliczenie $6,000 na osobę w wieku 65+ w latach 2025-2028. Wygasza się o 6% nadwyżki MAGI ponad $75,000 (single) / $150,000 (joint). Standard deduction 2026 wynosi $16,100 (single) i $32,200 (MFJ) według IRS Rev. Proc. 2025-32 z października 2025.",
+   "evidence_type": "hypothesis",
+   "numbers": "$6,000/os.; phase-out 6% powyżej $75k/$150k; std. deduction 2026 $16,100/$32,200",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Symulatory emerytalne (Roth conversion, moment startu SS, IRMAA) dostają tymczasową warstwę 'cliff' do 2028 r. To kolejna zależność od roku podatkowego, przy której silnik musi liczyć wieloletnio z parametrami per rok."
+  },
+  {
+   "question": "1. Estate tax, bonus depreciation, Section 179",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Zwolnienie z estate tax wynosi $15 mln na osobę od 2026 r., jest indeksowane i nie ma daty wygaśnięcia. 100% bonus depreciation stało się stałe dla mienia nabytego po 19.01.2025. Section 179: limit $2,5 mln, próg wygaszania $4 mln, dla mienia oddanego do użytku po 31.12.2024 (od 2026 indeksowane).",
+   "evidence_type": "hypothesis",
+   "numbers": "$15M/os. (2026); bonus 100% stały; §179 $2.5M / $4M",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Przy zwolnieniu $15M symulatory planowania spadkowego dotyczą ułamka gospodarstw, więc popyt na nie jest niski. Bonus i §179 mają znaczenie dla małych firm ('buy vs lease equipment/vehicle', ciężkie SUV powyżej 6,000 lbs). To osobny segment B2B z innym ryzykiem prawnym (doradztwo podatkowe)."
+  },
+  {
+   "question": "1. Kredyty studenckie: RAP, koniec SAVE, nowe limity, Parent PLUS",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Repayment Assistance Plan (RAP) działa od 1.07.2026: raty 1-10% AGI, minimum $10, obniżka za dziecko na utrzymaniu. Kolejne etapy końca SAVE: injunction 8th Circuit (2025), odsetki od 1.08.2025, ugoda ED z Missouri (XII 2025) kończąca plan. Nowe kredyty od 1.07.2026 mają do wyboru tylko Standard albo RAP. Grad PLUS zlikwidowano dla nowych kredytobiorców. Limity: graduate $20,500 rocznie / $100,000 łącznie; professional $50,000 / $200,000. Parent PLUS: $20,000 rocznie / $65,000 na studenta. Parent PLUS zaciągnięte po 1.07.2026 nie kwalifikują się do RAP.",
+   "evidence_type": "hypothesis",
+   "numbers": "RAP 1-10% AGI; grad $20.5k/$100k; professional $50k/$200k; Parent PLUS $20k/$65k (niezweryfikowane)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "To jedna z najsilniejszych domen 'decyzja pod zmianę przepisów': wybór planu IDR, PSLF, termin konsolidacji, refinansowanie prywatne, finansowanie studiów przy nowych limitach. Jest tu jednak oficjalny substytut (Federal Student Aid Loan Simulator; aktualizacja pod RAP niezweryfikowana). Zmienność jest bardzo wysoka, a stawka wysoka, więc ryzyko błędu też."
+  },
+  {
+   "question": "1. HSA, 529, Trump accounts",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] HSA: od 2026 plany bronze i catastrophic z giełd ACA są HSA-eligible. Dopuszczono direct primary care do około $150 miesięcznie, a telehealth safe harbor jest stały. Limity HSA 2026: $4,400 (self) i $8,750 (family). 529: limit wydatków K-12 wzrósł od 2026 z $10,000 do $20,000, rozszerzono też listę wydatków (m.in. credentialing). Trump accounts (sekcja 530A): pilotażowe $1,000 od rządu dla dzieci obywateli USA urodzonych w latach 2025-2028. Wpłaty od 4.07.2026, limit $5,000 rocznie, pracodawca do $2,500.",
+   "evidence_type": "hypothesis",
+   "numbers": "HSA $4,400/$8,750; 529 K-12 $20,000; Trump account $1,000 seed, $5,000/rok",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Pojawiają się nowe porównania ('Trump account vs 529 vs custodial Roth', 'bronze+HSA vs silver'), ale kwoty są małe, a odpowiedzi łatwo dostać od asystenta AI. Wartość symulatora jest niższa niż przy decyzjach mieszkaniowych lub energetycznych."
+  },
+  {
+   "question": "2. ACA enhanced premium tax credits 2026",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu do około VI 2026; status na X 2026 wymaga weryfikacji] Rozszerzone dopłaty PTC wygasły 31.12.2025, więc w 2026 wrócił klif dochodowy na 400% FPL. Spór o nie był osią shutdownu 1.10–12.11.2025. Izba przegłosowała w styczniu 2026 trzyletnie przedłużenie (discharge petition), ale Senat go nie uchwalił. Wymagany udział w składce na 2026 r. to około 9,96% dochodu (niezweryfikowane).",
+   "evidence_type": "hypothesis",
+   "numbers": "klif 400% FPL od 2026; applicable percentage około 9.96% (niezweryfikowane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Symulatory 'early retirement przed 65', 'ACA vs COBRA' i 'zarządzanie MAGI pod klif' zyskują na wartości, bo skutki są nieliniowe. Ryzyko: Kongres może zmienić reguły na rok planu 2027, więc wymagany jest monitoring."
+  },
+  {
+   "question": "2. Social Security COLA 2026, Medicare Part B, IRMAA 2026",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] COLA na 2026 wynosi 2,8%. Ogłoszenie przesunięto na 24.10.2025 z powodu shutdownu. Taxable maximum 2026: $184,500. Medicare Part B 2026: składka standardowa $202.90 (wobec $185 w 2025), deductible $283. Progi IRMAA 2026 zaczynają się od $109,000 (single) / $218,000 (joint), liczone od MAGI z 2024 r. Wartości na 2027 (COLA ogłaszana około X 2026, Medicare około XI 2026) nie zostały sprawdzone.",
+   "evidence_type": "hypothesis",
+   "numbers": "COLA 2.8%; $184,500; Part B $202.90 / $283; IRMAA $109k/$218k",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Parametry mają przewidywalny roczny cykl (X–XI), więc da się je obsłużyć półautomatycznie (n8n plus checklist plus ręczne zatwierdzenie). Dwuletni lookback IRMAA to klasyczna zależność międzyokresowa: Roth conversion dziś podnosi IRMAA za 2 lata. Dobry przykład wartości symulatora ponad prosty kalkulator."
+  },
+  {
+   "question": "3. Net metering: CA NEM 3.0 i inne stany",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] W Kalifornii Net Billing Tariff ('NEM 3.0') obowiązuje od 15.04.2023. Kredyt za eksport opiera się na Avoided Cost Calculator i jest średnio o około 75% niższy niż w NEM 2.0. CPUC wprowadziła income-graduated fixed charge (około $24 miesięcznie dla większości klientów PG&E/SCE/SDG&E) z wdrożeniem w latach 2025-2026. Obniża ona stawki za kWh, a więc oszczędność z solaru. Kolejne stany i utilities przechodzą z net metering na net billing lub avoided cost (szczegóły per stan niezweryfikowane).",
+   "evidence_type": "hypothesis",
+   "numbers": "eksport około -75% vs NEM 2.0; fixed charge około $24/mies. (niezweryfikowane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Wynik symulatora solarnego zależy bardziej od taryfy utility (TOU, eksport, opłaty stałe) niż od samej instalacji. Wymaga to danych taryfowych per utility (OpenEI URDB) i modelowania baterii. To główny koszt i ryzyko jakości, bo taryfy zmieniają się decyzjami komisji stanowych bez API powiadomień."
+  },
+  {
+   "question": "3. Trend cen energii elektrycznej",
+   "claim_pl": "[hipoteza / niezweryfikowane] W latach 2025-2026 detaliczne ceny prądu dla gospodarstw domowych w USA rosły według prognoz EIA STEO szybciej niż inflacja w wielu stanach. Czynniki: popyt centrów danych, inwestycje sieciowe, ceny gazu, koszty pożarowe w CA. Konkretnych liczb w tej sesji nie zweryfikowałem.",
+   "evidence_type": "hypothesis",
+   "numbers": "brak zweryfikowanych liczb",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Założenie o eskalacji cen prądu to dominująca zmienna wrażliwości w symulatorach solar, pompa ciepła, EV i bateria. Symulator powinien ją eksponować jako jawne założenie ze scenariuszami (np. 2% / 4% / 6%), a nie ukryty parametr. To pasuje do wymogu 'explicit assumptions'."
+  },
+  {
+   "question": "3. Kryzys ubezpieczeń domów: Kalifornia, Floryda, trend krajowy",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Po pożarach w LA (I 2025) State Farm General złożył wniosek o awaryjną podwyżkę. CDI zatwierdził tymczasowo około 17% (V 2025). Kalifornijska Sustainable Insurance Strategy dopuszcza modele katastroficzne i koszty reasekuracji w taryfach w zamian za zobowiązania do pisania polis w strefach ryzyka. FAIR Plan rośnie. Na Florydzie po reformach z lat 2022-2023 rynek się stabilizuje, a Citizens zmniejsza portfel przez depopulację. Krajowo składki homeowners rosły w latach 2021-2025 znacznie szybciej niż inflacja (liczby niezweryfikowane).",
+   "evidence_type": "hypothesis",
+   "numbers": "CA State Farm interim około +17% (niezweryfikowane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Koszt ubezpieczenia to ważna i niestabilna zmienna w decyzjach 'stay vs sell vs harden home vs relocate'. Nie ma publicznego API wycen, więc symulator musi pracować na przedziałach plus wpis użytkownika. Lead-gen ubezpieczeniowy jest kuszący, ale ogranicza go licencjonowanie (osobne ustalenie)."
+  },
+  {
+   "question": "3. NFIP Risk Rating 2.0 i reautoryzacja",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Risk Rating 2.0 obowiązuje od X 2021 (nowe polisy) i IV 2022 (odnowienia). Roczny wzrost składki dla primary residence jest ograniczony do 18%, więc wiele starszych polis przez lata dochodzi do pełnej stawki (glide path). Autoryzacja NFIP jest przedłużana krótkoterminowo w ustawach budżetowych i CR. Wygasła na czas shutdownu 1.10–12.11.2025. Status po 30.09.2026 (FY2027) nie został sprawdzony.",
+   "evidence_type": "hypothesis",
+   "numbers": "cap +18%/rok (primary residence) (niezweryfikowane)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Symulator 'buy in flood zone / elevate / NFIP vs private flood' ma dane geograficzne (OpenFEMA, NFHL), ale składka jest liczona per budynek i nie ma publicznego API wyceny (hipoteza). Luki w autoryzacji NFIP to kolejne zdarzenie, które trzeba śledzić ręcznie."
+  },
+  {
+   "question": "3. FORTIFIED roof: programy i zniżki ubezpieczeniowe",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Standard IBHS FORTIFIED Roof daje ustawowo wymagane zniżki ubezpieczeniowe m.in. w Alabamie. Działają też granty do około $10,000: Strengthen Alabama Homes, Louisiana Fortify Homes Program, podobne programy w Oklahomie, Missisipi i Karolinie Płd. Na Florydzie działa My Safe Florida Home (inspekcja plus grant). Programy otwierają rundy okresowo, a środki szybko się wyczerpują.",
+   "evidence_type": "hypothesis",
+   "numbers": "granty do około $10,000 (niezweryfikowane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "'Standard vs FORTIFIED roof przy wymianie dachu' to mocny zintegrowany problem: koszt dodatkowy kontra zniżka w ubezpieczeniu kontra grant kontra wartość przy sprzedaży kontra plan sprzedaży domu. Łączy się z przykładem dach + solar. Dane są stanowe i zmienne, a rundy grantów bez API wymagają ręcznej kontroli."
+  },
+  {
+   "question": "4. Źródła danych NREL: PVWatts, OpenEI URDB, AFDC",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] PVWatts v8, OpenEI Utility Rate Database i AFDC (stacje oraz Laws & Incentives) są dostępne bezpłatnie z kluczem developer.nrel.gov. Domyślny limit to około 1,000 zapytań na godzinę na klucz. URDB to baza zasilana wpisami i weryfikacją, w której wiele taryf bywa nieaktualnych. Według mojej wiedzy NREL przemianowano w XII 2025 na 'National Laboratory of the Rockies' w kontekście cięć budżetowych DOE (niska pewność). Jest więc ryzyko zmian domen, limitów lub ciągłości.",
+   "evidence_type": "hypothesis",
+   "numbers": "$0; około 1,000 req/h (niezweryfikowane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Infrastruktura danych dla symulatorów energii jest w praktyce darmowa. Trzeba jednak cache'ować wyniki (PVWatts jest deterministyczny per lokalizacja i parametry, więc można liczyć wstępnie per ZIP) i mieć fallback na wypadek wyłączenia API. Jakość URDB to ryzyko merytoryczne: zła taryfa daje zły wynik."
+  },
+  {
+   "question": "4. EIA API, FRED, BLS CPI, Census ACS – koszt, cykl, licencje",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] EIA API v2 jest darmowe z kluczem (dane miesięczne, STEO miesięcznie), ale EIA straciła część personelu w 2025 r. FRED API jest darmowe z kluczem. Część serii ma prawa autorskie podmiotów trzecich ('copyrighted: citation required' lub wymagana zgoda), więc licencję trzeba sprawdzać per seria. BLS API v2 jest darmowe po rejestracji (około 500 zapytań dziennie). Danych CPI za X 2025 nie opublikowano z powodu shutdownu. Census API (ACS 1-year około IX, 5-year około XII) jest darmowe z kluczem. Wydanie ACS 5-year 2020-2024 zostało opóźnione.",
+   "evidence_type": "hypothesis",
+   "numbers": "koszt API $0; BLS około 500 zapytań/dzień (niezweryfikowane)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Koszt bezpośredni jest bliski zera. Pipeline musi jednak obsługiwać luki i opóźnienia (shutdown wstrzymał publikacje), wersjonować dane i sprawdzać licencję każdej serii z FRED przed komercyjnym (reklamowym) użyciem."
+  },
+  {
+   "question": "4. HUD FMR, OpenFEMA/NFHL, fueleconomy.gov, Freddie Mac PMMS, IRS/SSA/CMS",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] HUD FMR: publikacja roczna, obowiązuje od 1.10, API HUD User wymaga darmowego tokenu. OpenFEMA: darmowe, bez klucza, zawiera zbiory NFIP policies/claims. NFHL udostępniane jest przez usługi ArcGIS REST. fueleconomy.gov: darmowe web services bez klucza. Freddie Mac PMMS: publikacja co tydzień w czwartek, dostępna też na FRED jako MORTGAGE30US, z wymogiem atrybucji. Parametry IRS (roczne Rev. Proc. około X–XI), SSA (COLA około X) i CMS (składki Medicare około XI) ukazują się jako komunikaty i PDF-y, bez ustrukturyzowanego API.",
+   "evidence_type": "hypothesis",
+   "numbers": "koszt $0; cykle: tygodniowy (PMMS), roczny (FMR, IRS, SSA, CMS)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Najdroższe w utrzymaniu nie są dane z API, tylko parametry prawne bez API. n8n może monitorować Federal Register API, newsroom IRS i komunikaty SSA/CMS w celu wykrycia zmian. Ekstrakcja i zatwierdzenie parametru wymaga jednak człowieka (lub LLM plus obowiązkowa weryfikacja). To realny koszt stały."
+  },
+  {
+   "question": "4. CareScout (Genworth) Cost of Care, Zillow, Redfin – licencje",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Badanie Cost of Care prowadzi obecnie CareScout (spółka Genworth). Dane są chronione prawem autorskim, a komercyjne ponowne użycie prawdopodobnie wymaga zgody. Zillow Research udostępnia ZHVI i ZORI do pobrania z wymogiem atrybucji, ale API Zillow jest ograniczone, a scraping zakazany. Redfin Data Center ma dane do pobrania z wymogiem cytowania i linku. Warunków licencyjnych nie mogłem sprawdzić, więc oznaczam je jako niezweryfikowane, nie jako brak.",
+   "evidence_type": "hypothesis",
+   "numbers": "brak",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Symulatory opieki długoterminowej ('home care vs assisted living vs family care') i mieszkaniowe wymagają przed budową weryfikacji prawnej ścieżki danych. Publiczne zamienniki: FHFA HPI, Census, HUD, CMS. Licencja danych może zablokować skalowanie do setek stron."
+  },
+  {
+   "question": "5. Investment Advisers Act – 'publisher exclusion'",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] Wyłączenie wydawcy z sekcji 202(a)(11)(D) Advisers Act, w interpretacji Lowe v. SEC (1985), wymaga treści bona fide, bezosobowej (impersonal) i w regularnym, ogólnym obiegu. Interaktywne narzędzie dające spersonalizowane rekomendacje konkretnych papierów wartościowych może wyjść poza to wyłączenie. To szara strefa. FINRA Rule 2214 reguluje narzędzia analityczne brokerów. Decyzje niezwiązane z papierami (dach, solar, auto, ubezpieczenie) zasadniczo leżą poza Advisers Act.",
+   "evidence_type": "hypothesis",
+   "numbers": "brak",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Symulator powinien porównywać scenariusze i pokazywać czynniki zmieniające wynik bez rekomendowania konkretnych funduszy czy alokacji. Disclaimer 'educational, not advice' pomaga, ale nie przesądza. Symulatory inwestycyjne (Roth, 529, alokacja) są obszarem podwyższonego ryzyka względem decyzji domowych i energetycznych."
+  },
+  {
+   "question": "5. Stanowe przepisy dla producentów ubezpieczeniowych",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] 'Solicit, negotiate or sell' ubezpieczenia wymaga licencji producenta w każdym stanie (NAIC Producer Licensing Model Act). Ogólne treści edukacyjne i porównania koncepcyjne zwykle nie. Wynagrodzenie zależne od sprzedaży polisy (prowizja) wymaga licencji. Opłaty referencyjne niezależne od sprzedaży są w wielu stanach dopuszczalne z ograniczeniami.",
+   "evidence_type": "hypothesis",
+   "numbers": "brak",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Jeśli dodatkiem miałby być insurance lead-gen, potrzebny jest model z licencjonowanym partnerem (płatność za lead niezależna od sprzedaży). To potwierdza założenie właściciela, że dodatki nie powinny ratować modelu bazowego, bo każdy wymaga pracy prawnej per stan."
+  },
+  {
+   "question": "5. FTC – endorsement i ujawnianie afiliacji",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] FTC zaktualizowała Endorsement Guides (16 CFR 255) w czerwcu 2023 r. Consumer Review and Testimonials Rule (16 CFR 465) obowiązuje od 21.10.2024 i przewiduje kary cywilne za fałszywe recenzje i testimoniale. Ujawnienie afiliacji musi być 'clear and conspicuous', blisko linku lub rekomendacji.",
+   "evidence_type": "hypothesis",
+   "numbers": "brak",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Koszt zgodności jest niski i da się go wpisać w szablon (stały komponent disclosure). Ryzyko pojawia się dopiero przy afiliacjach i przy rankingu ofert w wyniku symulatora. Wtedy trzeba uważać, by wynik nie był stronniczy na rzecz partnera."
+  },
+  {
+   "question": "5. Stanowe przepisy o prywatności przy danych finansowych",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] W 2026 r. około 19 stanów ma kompleksowe ustawy o prywatności. Indiana, Kentucky i Rhode Island weszły w życie 1.01.2026. Progi to zwykle 100,000 konsumentów; w Teksasie i Nebrasce nie ma progu wolumenowego, a obowiązek zależy od statusu małej firmy według SBA. Kilka stanów wymaga honorowania Global Privacy Control. Regulacje CCPA dotyczące ADMT, ocen ryzyka i audytów cyberbezpieczeństwa (sfinalizowane IX 2025) obowiązują od 1.01.2026 z etapowaniem. Wydawca narzędzia nie korzysta z wyłączenia GLBA. AdSense ma tryb restricted data processing dla stanów USA.",
+   "evidence_type": "hypothesis",
+   "numbers": "około 19 stanów; próg typowo 100,000 konsumentów (niezweryfikowane)",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Rekomendacja architektoniczna: obliczenia po stronie klienta (w przeglądarce), bez zapisu danych finansowych na serwerze, bez kont i PII, z CMP obsługującym GPC i stany USA. To obniża ryzyko i koszt zgodności niemal do zera i pasuje do modelu bez powracających użytkowników."
+  },
+  {
+   "question": "5. ADA – pozwy o dostępność stron",
+   "claim_pl": "[hipoteza / niezweryfikowane – wiedza modelu] W USA składa się kilka tysięcy pozwów o dostępność cyfrową rocznie (federalne plus stanowe; szacunki firm monitorujących, np. UsableNet, niezweryfikowane). Najczęściej dotyczą e-commerce, głównie w NY, CA i FL. Title III nie ma formalnego standardu dla stron, de facto obowiązuje WCAG 2.1/2.2 AA. California Unruh Act przewiduje $4,000 odszkodowania ustawowego za naruszenie. Reguła DOJ Title II (2024) dotyczy tylko sektora publicznego.",
+   "evidence_type": "hypothesis",
+   "numbers": "kilka tysięcy pozwów/rok (niezweryfikowane); Unruh $4,000/naruszenie",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Interaktywne suwaki, wykresy i formularze to typowe punkty naruszeń. Dostępne komponenty (klawiatura, ARIA, tabelaryczna alternatywa dla wykresów) trzeba zbudować raz w szablonie. Przy setkach symulatorów z jednego frameworka koszt krańcowy jest niski, a ryzyko systemowe przy błędzie w szablonie wysokie."
+  },
+  {
+   "question": "6. Oś czasu zmian 2025-2026 (obciążenie utrzymaniem)",
+   "claim_pl": "Konkretne zdarzenia zmieniające parametry symulatorów w około 15 miesiącach. Zweryfikowane wyszukiwaniem [search-summary]: 4.07.2025 OBBBA; VIII 2025 Notice 2025-42; 30.09.2025 koniec 30D/25E/45W; 31.12.2025 koniec 25D (i 25C); 6.06.2026 vacatur Notice 2025-42; 30.06.2026 koniec 30C; 4.07.2026 termin rozpoczęcia budowy dla wind/solar. Z wiedzy modelu (niezweryfikowane): wsteczne od 1.01.2025 odliczenia OBBBA (SALT, tips, overtime, car loan, senior); shutdown 1.10–12.11.2025 (brak CPI za X 2025, opóźnione COLA, luka NFIP); Rev. Proc. 2025-32 (X 2025, parametry 2026); 1.01.2026 wygaśnięcie enhanced PTC; 1.07.2026 RAP i nowe limity kredytów studenckich; 4.07.2026 start wpłat do Trump accounts.",
+   "evidence_type": "indirect",
+   "numbers": "około 7 zweryfikowanych i około 6+ niezweryfikowanych zdarzeń w około 15 miesiącach",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-act-obbb",
+     "title": "IRS FAQs OBBB energy credits",
+     "publisher": "IRS",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.irs.gov/node/41121",
+     "title": "Instructions for Form 8911 (12/2025)",
+     "publisher": "IRS",
+     "published": "2025-12"
+    },
+    {
+     "url": "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/june/federal-court-vacates-irs-notice-2025-42-restoring-five-percent-safe-harbor-for-beginning-of-const/",
+     "title": "Federal Court Vacates IRS Notice 2025-42, Restoring Five Percent Safe Harbor ... For Now",
+     "publisher": "Foley Hoag",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://legislature.vermont.gov/Documents/2026/Workgroups/House%20Energy%20and%20Digital/Energy/Energy%20Updates%20October%202025/W~Rebecca%20Ellis~Federal%20Update,%20October%202025~10-30-2025.pdf",
+     "title": "Federal Update, October 2025",
+     "publisher": "Vermont Legislature",
+     "published": "2025-10-30"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Właśnie we flagowych domenach (solar, EV, modernizacja domu, kredyty studenckie, zdrowie) nastąpiło ponad 10 istotnych zmian w około roku, część w połowie roku i z mocą wsteczną. Każdy symulator potrzebuje parametrów z datą obowiązywania, wspólnego rejestru parametrów (jedna zmiana trafia do wielu symulatorów) i monitoringu z zatwierdzeniem przez człowieka. Zmiany generują jednocześnie popyt na treści 'co teraz?', ale bez szybkiej aktualizacji symulator staje się szkodliwy."
+  },
+  {
+   "question": "6. Szacunek kosztu utrzymania setek symulatorów",
+   "claim_pl": "[szacunek / hipoteza] Opłaty za API danych wynoszą około $0 (darmowe API federalne). Koszt to czas weryfikacji. Założenia przykładowe, nie dane: przy 200 symulatorach, 5-15 parametrach prawnych lub taryfowych na symulator i 20-40% parametrów zmieniających się w roku wychodzi kilkaset aktualizacji rocznie. Wspólny rejestr może zredukować je do kilkudziesięciu-stu unikalnych zmian. W latach przełomu (jak 2025) liczba ta rośnie skokowo.",
+   "evidence_type": "estimate",
+   "numbers": "ilustracyjnie: 200 x (5-15) x (20-40%) = około 200-1,200 zmian parametrów/rok przed deduplikacją (założenia, nie dane)",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Model 'w pełni automatyczny' jest realistyczny dla symulatorów opartych na stabilnych danych fizycznych i rynkowych (nasłonecznienie, zużycie paliwa, stopy procentowe, czynsze, koszty budowy). Dla symulatorów opartych na ulgach i klifach podatkowych potrzebny jest stały, choć mały, budżet weryfikacji eksperckiej. Wpływa to na dobór kolejności budowy: najpierw stabilne domeny."
+  },
+  {
+   "question": "1/3. Nasycenie wyników wyszukiwania treściami instalatorów (solar 2026)",
+   "claim_pl": "Na zapytanie o 48E i lease/PPA 2026 wyniki zdominowały strony instalatorów i firm solarnych (NuWatt, OC Solar, Terra Sol, GreenWatt, NRG Clean Power, GreenLancer). Wiele z nich szybko opublikowało treści '2026: what ended, what remains' i 'lease vs buy 2026'. Strony z wynikami Treasury ani IRS nie pojawiły się na tej liście. [search-summary: tytuły wyników; to nie jest miara wolumenu ani konkurencji bezpośredniej]",
+   "evidence_type": "indirect",
+   "numbers": "w 1 zapytaniu 9 wyników, w tym około 8 od sprzedawców lub instalatorów",
+   "sources": [
+    {
+     "url": "https://nrgcleanpower.com/learning-center/federal-solar-tax-credit-updates/",
+     "title": "Federal Solar Tax Credit 2026: Is It Gone? What Homeowners Can Still Claim",
+     "publisher": "NRG Clean Power"
+    },
+    {
+     "url": "https://www.thegreenwatt.com/solar-tax-credit/",
+     "title": "Solar Tax Credit 2026: The Federal Credit Expired — What Homeowners Can Still Get",
+     "publisher": "GreenWatt"
+    },
+    {
+     "url": "https://terrasolenergies.com/solar-ownership-vs-lease/",
+     "title": "Solar Ownership vs Lease in 2026: A Solar Pro's Honest Take",
+     "publisher": "Terra Sol Energies"
+    },
+    {
+     "url": "https://nuwattenergy.com/en/solar-tax-credit-2026",
+     "title": "Solar Tax Credit 2026: How Homeowners Still Get 30% (Lease/PPA + State)",
+     "publisher": "NuWatt Energy"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Temat 'co teraz z solarem' jest szybko obsadzany przez podmioty z silną motywacją lead-gen (stronnicze, często bez obliczeń). Nowy serwis może się wyróżnić niezależnym rachunkiem scenariuszy. Popyt informacyjny jest już jednak zagospodarowany tekstowo, więc to, że problem istnieje, nie oznacza, że ktoś kliknie. Nie zbadałem pełnej konkurencji symulatorów (poza zakresem tej rundy)."
+  }
+ ],
+ "contradictions_pl": [
+  "25D: Eide Bailly i IRS FAQ uznają wydatek za poniesiony w momencie zakończenia instalacji. Część blogów solarnych pisze o 'placed in service'. Dla instalacji granicznych (koniec XII 2025) to różnica operacyjna.",
+  "48E TPO: blogi instalatorów różnią się w szczegółach terminów (rozpoczęcie budowy do 4.07.2026 vs oddanie do użytku do 31.12.2027 vs 'od 2028 leasing nie kwalifikuje się') i reklamują 'do 70%'. Bazowa stawka to 30%, a addery zależą od domestic content, energy community i prevailing wage. Brak potwierdzenia w źródle Treasury/IRS w wynikach.",
+  "Notice 2025-42: sąd uchylił notę 6.06.2026, ale kancelarie spodziewały się wniosku o stay i apelacji. Nie wiadomo, czy 5% safe harbor faktycznie obowiązywał w kluczowym terminie 4.07.2026 i jaki jest stan obecny.",
+  "Notice 2026-15 (FEOC) pojawia się tylko w jednym źródle wtórnym (blog instalatora). Wymaga potwierdzenia.",
+  "Większość ustaleń spoza bloku ulg energetycznych pochodzi z wiedzy modelu (stan na około VI 2026). Mogą się różnić od stanu na X 2026, np. jeśli Kongres zmienił ACA PTC, reautoryzację NFIP albo przyjął kolejną ustawę podatkową."
+ ],
+ "open_questions_pl": [
+  "Jaki jest aktualny (X 2026) status apelacji i ewentualnego stay w sprawie Oregon Environmental Council v. IRS (Notice 2025-42)?",
+  "Czy w 2026 r. uchwalono jakiekolwiek przedłużenie lub zmianę enhanced ACA premium tax credits na rok planu 2027?",
+  "Jaka jest COLA na 2027 (ogłoszenie około X 2026) oraz składka Part B i progi IRMAA na 2027?",
+  "Czy NFIP został reautoryzowany po 30.09.2026 (FY2027) i czy znów była luka?",
+  "Czy RAP, nowe limity kredytów i zmiany Parent PLUS weszły 1.07.2026 zgodnie z planem? Czy Federal Student Aid Loan Simulator uwzględnia RAP (substytut / konkurent częściowy)?",
+  "Czy IRS wydał końcowe regulacje do odliczenia odsetek od kredytu samochodowego i do Trump accounts (sekcja 530A)? Jak działa start wpłat od 4.07.2026?",
+  "Czy API NREL (PVWatts, URDB, AFDC) zmieniły domenę, limity lub warunki po reorganizacji i przemianowaniu laboratorium? Czy EIA utrzymała wszystkie potrzebne serie?",
+  "Jakie są dokładne warunki licencyjne CareScout Cost of Care, Zillow Research i Redfin Data Center dla komercyjnej strony z reklamami?",
+  "Które stany i utilities zmieniły net metering lub net billing w latach 2025-2026 (poza CA)? Jaka jest aktualność taryf w OpenEI URDB?",
+  "Jakie są aktualne liczby pozwów ADA o dostępność cyfrową w 2025-2026 i czy obejmują strony treściowe z narzędziami (nie tylko e-commerce)?",
+  "Wymagana jest ponowna runda wyszukiwań dla wszystkich ustaleń oznaczonych 'hipoteza / niezweryfikowane'. Limit wyszukiwań wyczerpał się po 5 zapytaniach."
+ ],
+ "queries_run": [
+  "One Big Beautiful Bill Act 25D residential clean energy credit ends December 31 2025 (standard)",
+  "OBBBA 30D 25E 45W EV credit terminated September 30 2025 IRS (standard)",
+  "30C alternative fuel vehicle refueling property credit June 30 2026 termination (standard)",
+  "48E solar lease PPA third-party owned residential One Big Beautiful Bill 25D 2026 Treasury guidance (extended)",
+  "court vacates IRS Notice 2025-42 beginning of construction 5% safe harbor 2026 (extended)",
+  "[NIE WYKONANO - limit wyszukiwań] 25C energy efficient home improvement credit terminated December 31 2025 heat pump 2026",
+  "[NIE WYKONANO - limit wyszukiwań] no tax on car loan interest deduction $10,000 final regulations 2026 VIN reporting lenders",
+  "[NIE WYKONANO - limit wyszukiwań] SALT cap $40,000 2026 $40,400 phase-down MAGI $505,000 senior deduction $6,000"
+ ]
+}

@@ -1,0 +1,1619 @@
+{
+ "families": [
+  {
+   "family": "Fulfillment i logistyka e-commerce (FBA vs 3PL vs in-house, inbound shipping)",
+   "demand_pl": "Dane pośrednie (search-summary): jedno wyszukiwanie (extended) zwróciło co najmniej 9 stron o FBA vs 3PL, w tym kalkulatory (ecomcalculators.io, Calcbee, PackPro dla rynku UK, AMZ Prep jako formularz leadowy) i przewodnik oznaczony jako 2026 (warehousingcosts.com). To sygnał od strony podaży: dostawcy 3PL i prep inwestują w to zapytanie, bo daje im leady. NIE jest to pomiar wolumenu wyszukiwań ani promptów w asystentach. Populacji (aktywni sprzedawcy Amazon w USA, marki DTC z własnym zapasem) nie zweryfikowano w tej sesji. Hipoteza: w danym miesiącu zmianę modelu fulfillment rozważa niewielki ułamek tej populacji. Moment decyzji powtarza się (zmiany opłat FBA, przygotowanie do Q4, start drugiego kanału), ale pojedyncza firma przechodzi przez niego rzadko. ZASTRZEŻENIE: wspólny limit wyszukiwań (200 na turę, dzielony między agentów) wyczerpał się po 4 zapytaniach, więc nie sprawdzono Reddita, forów ani danych o wolumenie.",
+   "demand_sources": [
+    {
+     "url": "https://warehousingcosts.com/guides/amazon-fba-vs-3pl",
+     "title": "Amazon FBA vs 3PL: Full Cost Comparison (2026)",
+     "publisher": "WarehousingCosts.com",
+     "published": "2026 (wg tytułu; dokładna data niezweryfikowana)"
+    },
+    {
+     "url": "https://ecomcalculators.io/fulfillment-cost-comparison",
+     "title": "Fulfillment Cost Comparison — In-House vs 3PL vs FBA",
+     "publisher": "ecomcalculators.io",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://amzprep.com/3pl-assessment-tool/",
+     "title": "Free 3PL Cost Comparison Calculator: FBA, D2C & Storage",
+     "publisher": "AMZ Prep",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://calcbee.com/calculators/ecommerce/fulfillment/3pl-cost-calculator/",
+     "title": "3PL Cost Calculator",
+     "publisher": "Calcbee",
+     "published": "niezweryfikowane"
+    }
+   ],
+   "commercial_pl": "Silnie komercyjne: wynikiem decyzji jest wybór płatnego dostawcy (3PL, prep center, przewoźnik, WMS/IMS). Pośrednio potwierdza to search-summary: 'Most calculators are run by 3PL vendors', a narzędzie AMZ Prep to formularz lead-capture. Lead-gen do 3PL pasuje jako dodatek, ale zgodnie z założeniem właściciela nie może ratować modelu opartego na reklamach.",
+   "integrated_competition_pl": "PARTIAL: ecomcalculators.io porównuje koszt na zamówienie dla in-house, 3PL i FBA (labor, storage, pick/pack, shipping). Calcbee sprowadza opłaty 3PL do kosztu na zamówienie i ma osobne porównanie FBA vs FBM. PackPro (UK) liczy miesięczny koszt i marżę z wolumenu, rozmiaru produktu i stopy zwrotów. Amazon Revenue Calculator podaje koszty FBA dla pojedynczego ASIN. SUBSTITUTE: przewodniki vendorów (AMZ Prep, Atomix Logistics, Ledgerport, warehousingcosts.com, codept.de), arkusz kalkulacyjny, handlowiec 3PL, asystent AI. Nie znaleziono bezpośredniego konkurenta w badanym zakresie, czyli narzędzia łączącego podział kanałów (Amazon + DTC/MCF), sezonowość z opłatami Q4, aged inventory i inbound placement, koszt i czas migracji oraz gotówkę zamrożoną w zapasie w kilku węzłach. Zakres: 1 wyszukiwanie extended plus wzmianki w podsumowaniu. Pewność niska do średniej. Funkcji narzędzi ukrytych za formularzem (AMZ Prep) nie zweryfikowano. Podstawowe porównanie per-order jest już dobrze pokryte, więc nisza istnieje tylko dla wersji sekwencyjnej i sezonowej.",
+   "ai_fit_pl": "Hipoteza / niezweryfikowane: 'FBA or 3PL?' to naturalne pytanie do asystenta, który najpewniej odpowie sam ogólną ramą (zalety, wady, progi wolumenu). Zewnętrzne narzędzie wygrywa dwiema rzeczami: aktualnymi, datowanymi tabelami opłat FBA i modelem miesiąc po miesiącu z sezonowością i migracją. Bez aktualnych stawek asystent łatwo poda nieaktualne liczby. Nie sprawdzono, czy ChatGPT, Perplexity, Gemini lub Copilot cytują takie kalkulatory. Reguł Google nie przenoszę na asystentów.",
+   "shared_modeling_pl": "Wysoki. Profil SKU (wymiary, waga, tier), profil zamówień według kanału i miesiąca, kubatura magazynowa, biblioteka rate cards i silnik gotówki są wspólne z rodzinami zapasów, landed cost, reklamy i płynności. Jeden silnik 'tygodniowy ledger zapasu i gotówki' plus biblioteka stawek obsłuży wiele symulatorów.",
+   "data_cost_pl": "Średni. Opłaty FBA trzeba aktualizować co najmniej raz w roku, do tego dochodzą zmiany w trakcie roku. Benchmarki 3PL są nieprzejrzyste, a źródła sobie przeczą (search-summary: jeden przewodnik podaje $3,50–8,00 za zamówienie, inne źródło $5–15; przewodnik 2026 podaje FBA $3,22–$89,98 za sztukę). Rozwiązanie: domyślne przedziały, które użytkownik nadpisuje stawkami z własnej oferty, oraz aktualizacja półautomatyczna (n8n wykrywa zmiany na stronach opłat Amazon, człowiek weryfikuje).",
+   "error_risk_pl": "Umiarkowane. Błąd kosztuje pieniądze, ale nie grozi konsekwencjami regulacyjnymi. Największe ryzyka to nieaktualne opłaty FBA i fałszywa precyzja benchmarków 3PL, skoro źródła się nie zgadzają. Potrzebne są jawne założenia, daty stawek i przedziały zamiast pojedynczych liczb.",
+   "catalog_potential_pl": "Średni. Odrębne decyzje to m.in.: FBA vs 3PL, FBA vs hub 3PL lub AWD, overflow tylko na Q4, przejście na własny magazyn, inbound air vs ocean, reverse logistics, Walmart WFS vs 3PL (niezweryfikowane). Realnie kilkanaście odrębnych modeli decyzji, nie setki.",
+   "ad_fit_pl": "Hipoteza / niezweryfikowane: reklamodawcami byliby 3PL, prep centers, software do zapasów i przewoźnicy. To wąskie środowisko B2B z wysoką wartością leadu. Nie wiadomo, jaka część tego popytu reklamowego trafia do sieci AdSense, a jaka zostaje w kampaniach w wyszukiwarce. RPM nieznany, nie wnioskuję go.",
+   "expert_cost_pl": "Niski. Właściciel ma doświadczenie w e-commerce i logistyce (founder-market fit), więc review może robić sam. Zewnętrzny ekspert potrzebny tylko okazjonalnie do walidacji benchmarków 3PL.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Rodzina priorytetowa do pilota (G6-01, G6-15) dzięki founder-market fit i wspólnemu silnikowi zapasu i gotówki. Ryzyka: populacja mała w porównaniu z serwisami konsumenckimi, mocne treści vendorów 3PL, częściowa konkurencja w podstawowym porównaniu per-order. Budować tylko wersję sekwencyjną (sezonowość, migracja, gotówka), a nie kolejny kalkulator per-order. Dowody popytu są słabe (wyłącznie sygnały podażowe), więc przed budową trzeba sprawdzić fora, Reddita i sygnały o promptach."
+  },
+  {
+   "family": "Import, cła i landed cost (tariffs timing)",
+   "demand_pl": "Dane pośrednie (search-summary): jedno wyszukiwanie zwróciło co najmniej 9 kalkulatorów taryf i landed cost z rokiem 2026 w tytule (ustariffrates.com, ustariffcalc.com, calcmytariff.com, zentriaflow.com, tariffschart.com, tariffstool.com, AMZ Prep, importcostcalculator.com, importcostpro.com). Fala nowych narzędzi sugeruje wzrost zainteresowania po zmianach taryf w latach 2025–2026, ale to sygnał podażowy, nie pomiar popytu. Populacja to importerzy i marki e-commerce sprowadzające towar (liczby nie zweryfikowano). Sama zmienność przepisów (zapowiedzi stawek, orzeczenia sądów) wywołuje kolejne momenty decyzji. Obecnego statusu taryf (IEEPA, Section 122, Section 301) nie zweryfikowano niezależnie, bo dedykowane wyszukiwanie zablokował limit.",
+   "demand_sources": [
+    {
+     "url": "https://ustariffrates.com/calculator",
+     "title": "US Import Duty Calculator 2026 - HTS Tariff & Landed Cost",
+     "publisher": "ustariffrates.com",
+     "published": "2026 (wg tytułu)"
+    },
+    {
+     "url": "https://www.tariffstool.com/tariff-calculator",
+     "title": "US Customs Duty Calculator — Tariff & Import Duty - TariffsTool",
+     "publisher": "TariffsTool",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://ustariffcalc.com/",
+     "title": "US Import Tariff Calculator 2026 — Calculate Your Real Import Duty",
+     "publisher": "ustariffcalc.com",
+     "published": "2026 (wg tytułu)"
+    },
+    {
+     "url": "https://zentriaflow.com/",
+     "title": "Free Landed Cost & Tariff Calculator 2026",
+     "publisher": "Zentriaflow",
+     "published": "2026 (wg tytułu)"
+    },
+    {
+     "url": "https://amzprep.com/us-reciprocal-tariffs-calculator/",
+     "title": "US Tariff Calculator 2026",
+     "publisher": "AMZ Prep",
+     "published": "2026 (wg tytułu)"
+    }
+   ],
+   "commercial_pl": "Wysoki. Wokół decyzji działają brokerzy celni, spedytorzy, operatorzy FTZ, finansowanie handlu i agenci sourcingowi. Search-summary wskazuje, że kalkulatory prowadzą głównie podmioty komercyjne.",
+   "integrated_competition_pl": "Obliczanie cła i landed cost na dany dzień jest zatłoczone: co najmniej 9 narzędzi w jednym wyszukiwaniu, które według search-summary łączą stawkę bazową, Section 301 i 232, MPF i HMF. To jednak kalkulatory punktowe, a nie symulatory decyzji w czasie. Dla decyzji 'kupić na zapas przed zmianą vs czekać vs przenieść produkcję vs FTZ/bonded' nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 1 wyszukiwanie extended nastawione na kalkulatory landed cost; nie szukano fraz o pull-forward, China+1 ani FTZ. Pewność niska. Substytuty: broker celny, arkusz, asystent AI.",
+   "ai_fit_pl": "Hipoteza: użytkownicy pytają asystentów o taryfy, ale wiedza modeli o bieżącym stosie taryf jest z natury nieaktualna. Nawet kalkulatory w wynikach przeczą sobie co do Section 122: ustariffrates.com uznaje ją za wygasłą i wyłączoną, tariffstool.com podaje, że 24.07.2026 zastąpiła ją Section 301 forced-labor, a calcmytariff.com nadal ją uwzględnia w warstwach (search-summary). Asystent z wyszukiwaniem może zacytować kalkulator, a bez wyszukiwania odpowie ogólnie. Symulator scenariuszowy, w którym użytkownik sam wpisuje stawki, jest mniej zależny od świeżości danych.",
+   "shared_modeling_pl": "Wysoki. Landed cost na sztukę zasila modele zapasu, ceny, marży i gotówki, wspólne z rodzinami F1, F3 i F7.",
+   "data_cost_pl": "Bardzo wysoki przy dokładnych stawkach. Taryfy zmieniały się w 2026 r. często, a źródła są sprzeczne (patrz wyżej). MPF ma parametry aktualizowane co rok fiskalny: ustariffrates.com podaje 0,3464%, minimum $34,58 i maksimum $670,86 od 1.10.2026 (search-summary). Wynik zależy od klasyfikacji HTS (zentriaflow.com zaleca weryfikację u licencjonowanego brokera). Koszt danych spada drastycznie, jeśli narzędzie nie liczy stawek HTS, tylko przyjmuje je jako dane wejściowe lub scenariusze.",
+   "error_risk_pl": "Wysokie. Błędna stawka lub warstwa oznacza realną stratę i ryzyko compliance, a dane szybko się dezaktualizują. Potrzebne są mocne disclaimery, daty i scenariusze zamiast jednej liczby.",
+   "catalog_potential_pl": "Średni. Odrębne decyzje: timing zakupu, zmiana kraju pochodzenia, FTZ/bonded, pass-through cenowy, zmiana Incoterms, DDP dla DTC (status de minimis po 2025 r. niezweryfikowany w tej sesji).",
+   "ad_fit_pl": "Hipoteza: spedytorzy, brokerzy celni i software compliance. Środowisko B2B wąskie, ale wartościowe. RPM nieznany.",
+   "expert_cost_pl": "Wysoki, jeśli narzędzie podaje stawki: przy każdej istotnej zmianie przepisów potrzebna walidacja przez licencjonowanego brokera celnego. Niższy przy samych scenariuszach.",
+   "scores": {
+    "demand": 4,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 1,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Popyt tematyczny jest silny, ale sam kalkulator cła odrzucam (G6-03). Sens ma tylko symulator timingu i scenariuszy (G6-02), który nie udaje autorytatywnego źródła stawek. Ryzyko dezaktualizacji i błędu jest tu najwyższe w całym zestawie. Ocena luki ma niską pewność, bo nie wykonano wyszukiwań fraz o timingu i FTZ."
+  },
+  {
+   "family": "Zakupy i finansowanie zapasów (bulk buying, inventory financing)",
+   "demand_pl": "Brak bezpośrednich danych z tej sesji: wyszukiwanie dla tej rodziny nie zostało wykonane, bo wspólny limit (200 na turę, dzielony między agentów) był wyczerpany. Hipoteza / niezweryfikowane: dylemat 'większe zamówienie z rabatem vs koszt finansowania i magazynowania' jest typowy dla sprzedawców z MOQ i dostawcami z Azji. Populację stanowią firmy z fizycznym zapasem, czyli mniej niż ogół małych firm. Liczby firm nie należy mylić z miesięcznym popytem.",
+   "demand_sources": [],
+   "commercial_pl": "Hipoteza: wysoki. Wokół decyzji działają dostawcy finansowania zapasów (inventory loans, revenue-based financing, Amazon Lending; nazwy z wiedzy treningowej, niezweryfikowane), software do planowania zapasów oraz 3PL i magazyny.",
+   "integrated_competition_pl": "Niezweryfikowane w tej sesji. Hipoteza: istnieją osobne proste kalkulatory EOQ i rat, płatne systemy planowania zapasów (częściowe, za loginem) oraz kalkulatory dostawców finansowania. Połączenie rabatu, finansowania, storage, sell-through i minimalnego buforu gotówki jest prawdopodobnie rzadkie, ale wymaga weryfikacji. Ocena luki ma niską pewność.",
+   "ai_fit_pl": "Hipoteza: użytkownik zapyta asystenta, a ten poda ramę i policzy prosty przypadek, jeśli dostanie liczby. Narzędzie wygrywa przy wielookresowym przepływie gotówki z niepewną sprzedażą i porównaniu kilku źródeł finansowania. To jednak przewaga UX i struktury, nie danych, więc ryzyko, że asystent zrobi to sam, jest średnie.",
+   "shared_modeling_pl": "Bardzo wysoki. To rdzeń wspólnego silnika: tygodniowy ledger zapasu, zamówień, płatności dla dostawcy, sprzedaży i instrumentów finansowania.",
+   "data_cost_pl": "Niski. Głównie dane użytkownika. Przedziały kosztów finansowania i storage można aktualizować kwartalnie lub rocznie (hipoteza).",
+   "error_risk_pl": "Umiarkowane. Wynik zależy od prognozy sprzedaży, więc trzeba pokazywać scenariusze i break-even sell-through, a nie jedną liczbę.",
+   "catalog_potential_pl": "Wysoki. Wiele odrębnych decyzji na wspólnym silniku: rabat ilościowy, MOQ, safety stock vs stockout, finansowanie sezonowego PO, likwidacja nadwyżek, bundling.",
+   "ad_fit_pl": "Hipoteza: fintech, pożyczkodawcy i software do zapasów. Środowisko umiarkowanie dobre.",
+   "expert_cost_pl": "Niski dzięki founder-market fit (e-commerce, logistyka). Część finansowania może wymagać okazjonalnego przeglądu przez doradcę.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 4,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 4,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 3,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Najlepszy rdzeń modelowy całego zestawu. G6-04 i G6-05 warto zbadać jako drugi etap pilota po G6-01. Przed budową trzeba uzupełnić dowody popytu i konkurencji, bo obecne oceny opierają się na hipotezach."
+  },
+  {
+   "family": "Finansowanie małej firmy (SBA vs MCA vs line of credit)",
+   "demand_pl": "Brak danych z tej sesji: wyszukiwanie 'SBA loan vs merchant cash advance vs line of credit...' nie zostało wykonane z powodu limitu. Hipoteza / niezweryfikowane: finansowanie małych firm to duża kategoria wyszukiwań, mocno obsadzona przez marketplace'y pożyczkowe i portale finansowe. Populacja potencjalnie szeroka (wszystkie małe firmy), ale moment decyzji pojawia się epizodycznie.",
+   "demand_sources": [],
+   "commercial_pl": "Bardzo wysoki (hipoteza): pożyczkodawcy i brokerzy płacą dużo za leady. Jednocześnie MCA to segment z agresywnym marketingiem.",
+   "integrated_competition_pl": "Niezweryfikowane. Hipoteza: marketplace'y (np. Lendio, Nav, Fundera, NerdWallet; nazwy z wiedzy treningowej, bez URL w tej sesji) i liczne kalkulatory MCA/APR pokrywają porównanie produktów. Luka może istnieć tylko w sekwencji czasowej: most finansowy do decyzji SBA, refinansowanie, stacking. Ocena: rynek zatłoczony, pewność niska.",
+   "ai_fit_pl": "Hipoteza: asystenci dobrze odpowiadają ogólnie na porównania SBA vs MCA vs LOC. Zewnętrzne narzędzie przydaje się dopiero przy konkretnym przepływie gotówki. Ryzyko, że asystent odpowie sam, jest wysokie.",
+   "shared_modeling_pl": "Wysoki. Instrumenty (amortyzacja, LOC, holdback MCA/RBF) to moduły wspólnego silnika gotówki.",
+   "data_cost_pl": "Średni. Stawki zależą od Prime; dochodzą zmiany SOP SBA i stanowe przepisy o ujawnieniach przy finansowaniu komercyjnym (hipoteza, niezweryfikowane w tej sesji).",
+   "error_risk_pl": "Wysokie. To finanse typu YMYL: szanse na zatwierdzenie są nieznane, przeliczenie factor rate na APR bywa sporne, mogą obowiązywać wymogi stanowe.",
+   "catalog_potential_pl": "Średni. Kilka odrębnych decyzji: most do SBA, LOC vs term loan, refinansowanie MCA, faktoring vs LOC.",
+   "ad_fit_pl": "Hipoteza: wysoka wartość reklam, ale ryzyko reputacyjne reklam MCA i możliwe ograniczenia polityk reklamowych dla usług finansowych (niezweryfikowane).",
+   "expert_cost_pl": "Wysoki. Potrzebny przegląd przez doradcę finansowego lub prawnika.",
+   "scores": {
+    "demand": 4,
+    "commercial": 5,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 4,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Komercyjnie najsilniejsza rodzina, ale zatłoczona i ryzykowna, a właściciel nie ma w niej przewagi. Tylko jako moduł finansowania w symulatorach zapasów (G6-05) albo później (G6-06). Wszystkie oceny to hipotezy, bo brak wyszukiwań."
+  },
+  {
+   "family": "Sprzęt i pojazdy: buy vs lease vs loan",
+   "demand_pl": "Dane pośrednie (search-summary): kalkulatory lease vs buy (SurePayroll) i kilka przewodników beancount.io z lipca i października 2026 o lease vs buy z Section 179, co pokazuje, że wydawcy celują w ten temat. Brak danych o wolumenie. Hipoteza: decyzja o sprzęcie lub pojeździe dotyczy szerokiego przekroju firm (budownictwo, gastronomia, transport, medycyna, rolnictwo, magazyny). Pojedyncza firma podejmuje ją epizodycznie, ale w skali populacji powtarza się stale.",
+   "demand_sources": [
+    {
+     "url": "https://beancount.io/blog/2026/10/16/lease-vs-buy-business-equipment-analysis-after-tax-cash-flows-guide",
+     "title": "lease vs buy business equipment analysis after tax cash flows guide",
+     "publisher": "beancount.io",
+     "published": "2026-10-16 (wg URL)"
+    },
+    {
+     "url": "https://beancount.io/blog/2026/07/08/lease-vs-buy-equipment-section-179-total-cost-of-ownership",
+     "title": "lease vs buy equipment section 179 total cost of ownership",
+     "publisher": "beancount.io",
+     "published": "2026-07-08 (wg URL)"
+    },
+    {
+     "url": "https://www.surepayroll.com/resources/calculator/small-business/lease-vs-buy",
+     "title": "lease vs buy",
+     "publisher": "SurePayroll",
+     "published": "niezweryfikowane"
+    }
+   ],
+   "commercial_pl": "Wysoki. Wokół decyzji działają leasingodawcy, banki, dealerzy, finansowanie sprzętu, tax software i CPA.",
+   "integrated_competition_pl": "PARTIAL: SurePayroll lease vs buy oraz equipment lease calculator (ogólne kalkulatory). SUBSTITUTE: przewodniki beancount.io z ramą TCO (cena plus odsetki, minus korzyść podatkowa i wartość rezydualna, kontra suma rat minus korzyść podatkowa plus koszt zastąpienia sprzętu). Search-summary: nie znaleziono dedykowanego, autorytatywnego kalkulatora lease-vs-buy-vs-loan z wbudowanym Section 179. Zakres: 1 wyszukiwanie standard, pewność niska. Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Kalkulatory leasingodawców i dealerów mogą istnieć (niezweryfikowane).",
+   "ai_fit_pl": "Hipoteza: asystent policzy NPV, ale parametry podatkowe się zmieniają, a źródła sobie przeczą. Przewodnik beancount.io (2026) podaje 40% bonus depreciation i limit Section 179 $1,25M. Według mojej wiedzy treningowej przeczy to zmianom z ustawy OBBBA z 2025 r. (przywrócenie 100% bonus depreciation, wyższy limit Section 179). Tego nie zweryfikowano w tej sesji, bo wyszukiwanie zablokował limit, ale sama sprzeczność pokazuje wartość aktualnego, datowanego narzędzia i jednocześnie ryzyko błędu.",
+   "shared_modeling_pl": "Wysoki. Silnik przepływów po opodatkowaniu (MACRS, Section 179, bonus, odsetki, raty leasingu, wartość rezydualna) jest wspólny dla pojazdów, floty, sprzętu magazynowego i najmu powierzchni.",
+   "data_cost_pl": "Niski do średniego. Limity podatkowe są indeksowane raz w roku (IRS Pub 946). Krzywe wartości rezydualnej mogą być danymi użytkownika lub domyślnymi założeniami. Najtrudniejsza jest zgodność stanowa (conformity); można ograniczyć się do poziomu federalnego z ostrzeżeniem.",
+   "error_risk_pl": "Umiarkowane. Kwestie podatkowe: Section 179 ograniczony dochodem podatkowym (search-summary, SurePayroll), wymóg >50% użycia służbowego, recapture. Potrzebne coroczne review CPA i jawne założenia z rokiem podatkowym.",
+   "catalog_potential_pl": "Wysoki. Klasy sprzętu różnią się modelem: pojazdy z limitami amortyzacji i progiem wagowym, sprzęt budowlany z wynajmem godzinowym, IT z krótkim cyklem, sprzęt medyczny, gastronomiczny, rolniczy. Do tego decyzje nowy vs używany, naprawić vs wymienić, wynająć vs kupić.",
+   "ad_fit_pl": "Hipoteza: finansowanie sprzętu, dealerzy i ubezpieczenia tworzą dobre środowisko B2B. RPM nieznany.",
+   "expert_cost_pl": "Średni. Coroczne review przez CPA to koszt stały i przewidywalny.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 4,
+    "data_cost_ease": 4,
+    "low_error_risk": 3,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Druga rodzina do pilota (G6-07). Za: niski koszt danych, roczny cykl aktualizacji pasujący do automatyzacji, szeroki katalog z realnymi różnicami modelu. Przeciw: słabszy founder-market fit niż w F1 i F3 (poza sprzętem magazynowym i flotą), ocena luki oparta na jednym wyszukiwaniu."
+  },
+  {
+   "family": "Zatrudnienie: employee vs contractor vs outsourcing",
+   "demand_pl": "Dane pośrednie (search-summary): co najmniej 5 kalkulatorów kosztu pracownika i contractora (Terms.Law, Toptal, ClickTime, xGenious, Asanify; QuickBooks wspomniany przez Pilot) oraz liczne przewodniki. Temat jest popularny i obsadzony przez vendorów HR i payroll. Hipoteza: większość małych firm w USA nie zatrudnia pracowników, więc decyzja o pierwszym zatrudnieniu dotyczy tylko części populacji (liczb nie zweryfikowano w tej sesji).",
+   "demand_sources": [
+    {
+     "url": "https://terms.law/AB5/tools/ic-employee-calculator.html",
+     "title": "Terms.Law IC vs Employee Cost Calculator",
+     "publisher": "Terms.Law",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://www.toptal.com/finance/business-consultants/don-t-be-fooled-the-real-cost-of-employees-and-consultants",
+     "title": "Don’t Be Fooled: Calculate the Real Cost of Employees and Consultants",
+     "publisher": "Toptal",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://xgenious.com/free-tools/employee-cost-calculator",
+     "title": "Free Employee Total Cost Calculator — True Cost of Hiring",
+     "publisher": "xGenious",
+     "published": "niezweryfikowane"
+    },
+    {
+     "url": "https://pilot.com/blog/independent-contractor-vs-employee",
+     "title": "Startups 101",
+     "publisher": "Pilot",
+     "published": "niezweryfikowane"
+    }
+   ],
+   "commercial_pl": "Wysoki. Payroll, PEO, EOR i platformy freelance prowadzą takie kalkulatory jako lead-gen.",
+   "integrated_competition_pl": "PARTIAL, rynek zatłoczony. Terms.Law ma kalkulator IC vs employee z payroll burden, benefitami i analizą ryzyka (najbliższy). xGenious porównuje z dzienną stawką contractora. Toptal ma 'Real Employee Cost Calculator'. Luka istnieje tylko po stronie przychodów i pojemności (uwolnione godziny właściciela, ramp-up, rotacja) oraz outsourcingu procesu (np. 3PL zamiast pakowacza). Dla tej wersji nie znaleziono bezpośredniego konkurenta w badanym zakresie (1 wyszukiwanie standard, niska pewność).",
+   "ai_fit_pl": "Hipoteza: asystent często odpowie sam. Reguła 1,25–1,4× pensji (Pilot powołuje się na MIT) jest powszechnie znana, więc asystent nie musi odsyłać do narzędzia.",
+   "shared_modeling_pl": "Średni. Koszt pracy jako moduł w symulatorach fulfillment i floty.",
+   "data_cost_pl": "Wysoki. Roczne limity podatków payroll, SUTA i płaca minimalna dla każdego stanu, stanowe testy klasyfikacji (np. kontekst AB5 w Kalifornii u Terms.Law). Ruul cytuje limity z 2025 r., co pokazuje, jak szybko treści się dezaktualizują.",
+   "error_risk_pl": "Wysokie. Ryzyko misclassification i prawo pracy różne w każdym stanie.",
+   "catalog_potential_pl": "Średni. Odrębne decyzje: pierwszy pracownik, part-time vs full-time, agencja vs zatrudnienie, sezonowi pracownicy magazynowi.",
+   "ad_fit_pl": "Hipoteza: dobre środowisko (payroll i HR SaaS). RPM nieznany.",
+   "expert_cost_pl": "Wysoki. Przy 50 stanach potrzebny prawnik prawa pracy lub CPA.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 3,
+    "data_cost_ease": 2,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Wersję kosztową odrzucam (G6-10). Wersja z pojemnością i outsourcingiem (G6-09) dopiero później, jako moduł silnika. Właściciel nie ma tu przewagi eksperckiej."
+  },
+  {
+   "family": "Płynność i cykl konwersji gotówki (cash conversion cycle)",
+   "demand_pl": "Brak danych z tej sesji: wyszukiwanie nie zostało wykonane z powodu limitu. Hipoteza: użytkownicy rzadko wpisują 'cash conversion cycle' jako problem decyzyjny. Opisują go raczej słowami 'profitable but no cash', 'can I afford to grow', 'should I accept net 60 terms'. Popyt na sam termin CCC jest prawdopodobnie edukacyjny (studenci), a nie decyzyjny.",
+   "demand_sources": [],
+   "commercial_pl": "Średni. Wokół decyzji działają factoring, PO financing i software do prognoz cash flow (hipoteza).",
+   "integrated_competition_pl": "Niezweryfikowane. Hipoteza: kalkulatory CCC są trywialne i liczne, a zintegrowane prognozy cash flow to płatne SaaS podpinane do księgowości (częściowe konkurencje lub substytuty). Luka może istnieć w decyzjach scenariuszowych, np. przyjęcie dużego PO albo negocjacja terminów płatności.",
+   "ai_fit_pl": "Hipoteza: niski do średniego. Asystent łatwo policzy CCC, a przy pełnym przepływie użytkownik może woleć arkusz. Wartość zewnętrznego narzędzia to gotowa struktura sekwencji zdarzeń i stres testy.",
+   "shared_modeling_pl": "Bardzo wysoki. To silnik dla całego zestawu.",
+   "data_cost_pl": "Bardzo niski. Dane użytkownika.",
+   "error_risk_pl": "Umiarkowane. Wynik zależy od prognoz.",
+   "catalog_potential_pl": "Średni. Odrębne decyzje: przyjęcie dużego zamówienia, warunki płatności, early-pay discount, faktoring, granica wzrostu z własnej gotówki.",
+   "ad_fit_pl": "Hipoteza: umiarkowane.",
+   "expert_cost_pl": "Niski.",
+   "scores": {
+    "demand": 2,
+    "commercial": 3,
+    "integrated_gap": 3,
+    "ai_fit": 2,
+    "shared_modeling": 5,
+    "data_cost_ease": 5,
+    "low_error_risk": 3,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 4
+   },
+   "verdict_pl": "Nie budować stron typu 'CCC calculator'. Ta rodzina to silnik plus 2–3 symulatory nazwane językiem problemu (G6-11, G6-16). Dowody popytu do uzupełnienia."
+  },
+  {
+   "family": "Reklama, zwroty i unit economics (ad spend and returns)",
+   "demand_pl": "Brak danych z tej sesji: wyszukiwań nie wykonano z powodu limitu. Hipoteza: kalkulatorów ROAS i break-even ROAS jest bardzo dużo. Sprzedawcy e-commerce pytają na forach o skalowanie reklam i polityki zwrotów, ale tego nie zweryfikowano w tej sesji.",
+   "demand_sources": [],
+   "commercial_pl": "Średni. Ad-tech, agencje, platformy zwrotów (hipoteza).",
+   "integrated_competition_pl": "Hipoteza: proste kalkulatory są zatłoczone. Połączenie reklamy, zapasu, gotówki i lead time jest prawdopodobnie rzadkie, ale wymaga weryfikacji.",
+   "ai_fit_pl": "Niski przy prostych kalkulacjach: asystent natychmiast policzy break-even ROAS ze zwrotami. Wyższy przy symulacji z ograniczeniem zapasu i lead time.",
+   "shared_modeling_pl": "Wysoki dzięki wspólnemu silnikowi zapasu i gotówki.",
+   "data_cost_pl": "Bardzo niski.",
+   "error_risk_pl": "Niskie do umiarkowanego. Kluczowe parametry (krzywa odpowiedzi reklam, elastyczność konwersji) to założenia użytkownika, więc wynik jest tak dobry jak te założenia.",
+   "catalog_potential_pl": "Średni.",
+   "ad_fit_pl": "Hipoteza: umiarkowane (marketing SaaS, agencje).",
+   "expert_cost_pl": "Bardzo niski. Właściciel ma kompetencje marketingowe.",
+   "scores": {
+    "demand": 3,
+    "commercial": 3,
+    "integrated_gap": 2,
+    "ai_fit": 2,
+    "shared_modeling": 4,
+    "data_cost_ease": 5,
+    "low_error_risk": 4,
+    "catalog": 3,
+    "ad_fit": 3,
+    "low_expert_cost": 5
+   },
+   "verdict_pl": "Proste kalkulatory ROAS odrzucam (G6-13). Do zbadania G6-14 (skalowanie reklam przy ograniczonym zapasie), bo najlepiej łączy kompetencje marketingowe i logistyczne właściciela."
+  }
+ ],
+ "ideas": [
+  {
+   "temp_id": "G6-01",
+   "name_en": "Multi-channel Fulfillment Strategy Simulator (FBA vs FBA+MCF vs 3PL hub vs in-house)",
+   "family": "Fulfillment i logistyka e-commerce (FBA vs 3PL vs in-house, inbound shipping)",
+   "user_and_moment": "Właściciel marki e-commerce sprzedającej na Amazon i Shopify (orientacyjnie 300–5000 zamówień miesięcznie) w jednym z momentów: zmiana opłat FBA, limity pojemności, zbliżający się Q4, wzrost kanału DTC albo oferta od 3PL.",
+   "sample_prompt_en": "I sell on Amazon and Shopify, about 1,500 orders a month, mostly small standard items. Should I keep everything in FBA and use Multi-Channel Fulfillment for Shopify, or move to a 3PL that also preps and replenishes FBA? Q4 storage fees are killing me.",
+   "decision_problem": "Wybór konfiguracji fulfillment i momentu migracji przy sezonowości, kilku kanałach sprzedaży i ograniczonej gotówce.",
+   "combined_domains": "Opłaty FBA (fulfillment, storage, Q4, aged inventory, inbound placement, low-inventory-level fee), stawki 3PL (receiving, pick/pack, storage paletowe lub binowe, kitting), wysyłki według stref i wagi, zwroty, koszty przejścia (podwójny zapas, przestój), kapitał zamrożony w zapasie w kilku węzłach, wpływ utraty Prime lub szybkości dostawy na konwersję (parametr wrażliwości).",
+   "variants_compared": "(A) Tylko FBA, Shopify obsługiwany przez MCF; (B) FBA dla Amazon, 3PL dla DTC; (C) 3PL jako hub z uzupełnianiem FBA (lub AWD); (D) FBM/in-house; (E) hybryda z overflow tylko na Q4.",
+   "key_dependencies": "Sezonowość i wolumen wpływają na storage Q4 i aged surcharges. Podział kanałów decyduje o koszcie MCF vs 3PL na zamówienie. Wymiary SKU wyznaczają tier FBA. Liczba węzłów podnosi zapas bezpieczeństwa i zamrożoną gotówkę. Migracja oznacza okres podwójnych kosztów. Utrata Prime zmienia konwersję.",
+   "main_outputs": "Miesięczny i roczny koszt całkowity każdego wariantu, koszt na zamówienie w każdym kanale, profil gotówki zamrożonej w zapasie, wolumen break-even dla przejścia na 3PL, wykres tornado (konwersja przy FBM, stawka storage, sezonowość), lista założeń z datą stawek.",
+   "reason_external_site": "Opłaty FBA zmieniają się co roku, a benchmarki 3PL są sprzeczne ($3,50–8 vs $5–15 za zamówienie według search-summary), więc potrzebne są datowane tabele stawek. Model miesiąc po miesiącu z sezonowością i migracją trudno policzyć wiarygodnie w czacie bez aktualnych stawek.",
+   "data_sources": "Harmonogram opłat Amazon Seller Central (aktualizacja 1–2 razy w roku, monitoring przez n8n, weryfikacja przez człowieka); przedziały stawek 3PL z publicznych cenników (niezweryfikowane); tabele stref przewoźników (publiczne); oferta 3PL wpisana przez użytkownika.",
+   "user_data": "Zamówienia według kanału i miesiąca, wymiary i waga top SKU, średni zapas, stawki z oferty 3PL, stopa zwrotów, koszt kapitału.",
+   "nearest_competition": [
+    {
+     "name": "Ecomcalculators.io – Fulfillment Cost Comparison",
+     "url": "https://ecomcalculators.io/fulfillment-cost-comparison",
+     "type": "partial",
+     "features_claimed": "Porównanie kosztu na zamówienie dla in-house, 3PL i FBA (labor, storage, pick/pack, shipping); wynik zależy od AOV, wagi i wolumenu (search-summary)",
+     "notes": "Strona nie otwierana. Obsługa sezonowości, multi-channel i migracji niezweryfikowana.",
+     "paid": "niezweryfikowane (prawdopodobnie darmowe)"
+    },
+    {
+     "name": "AMZ Prep – 3PL Cost Comparison Calculator / assessment tool",
+     "url": "https://amzprep.com/3pl-assessment-tool/",
+     "type": "partial",
+     "features_claimed": "Formularz lead-capture: szacunek z wolumenu prep FBA, zamówień Shopify i storage paletowego; NA i EU",
+     "notes": "Wynik prawdopodobnie po podaniu danych kontaktowych (niezweryfikowane)",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "Calcbee – 3PL Cost Calculator",
+     "url": "https://calcbee.com/calculators/ecommerce/fulfillment/3pl-cost-calculator/",
+     "type": "partial",
+     "features_claimed": "Sumuje opłaty 3PL do kosztu na zamówienie i porównuje z FBA i self-fulfillment; osobne porównanie FBA vs FBM",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "PackPro – Amazon FBA vs 3PL Fulfilment Calculator",
+     "url": "https://packprofulfilment.co.uk/amazon-fba-vs-3pl-calculator/",
+     "type": "partial",
+     "features_claimed": "Rynek UK: z wolumenu, rozmiaru i stopy zwrotów liczy miesięczny koszt i marżę; domyślne opłaty FBA według size band, które można nadpisać",
+     "notes": "Rynek UK, nie USA",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Amazon Revenue Calculator",
+     "url": "brak URL w wynikach – wzmianka w search-summary",
+     "type": "partial",
+     "features_claimed": "Dla pojedynczego ASIN: koszt, zysk netto, marża netto (tylko Amazon)",
+     "notes": "Nie porównuje z 3PL",
+     "paid": "darmowe"
+    },
+    {
+     "name": "WarehousingCosts.com – Amazon FBA vs 3PL (2026)",
+     "url": "https://warehousingcosts.com/guides/amazon-fba-vs-3pl",
+     "type": "substitute",
+     "features_claimed": "Przewodnik z benchmarkami: FBA $3,22–$89,98 za sztukę, 3PL $3,50–8,00 za zamówienie; Q4 storage, aged inventory surcharges",
+     "notes": "Treść, nie narzędzie",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Ledgerport – 3PL vs FBA vs Self-Fulfillment: Total Cost Compared",
+     "url": "https://ledgerport.com/3pl-vs-fba-vs-self-fulfillment/",
+     "type": "substitute",
+     "features_claimed": "Porównanie kosztów całkowitych (czy to artykuł, czy narzędzie, niezweryfikowane)",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Porównanie na zamówienie (in-house vs 3PL vs FBA) już istnieje (ecomcalculators.io, Calcbee). Amazon Revenue Calculator podaje koszty FBA dla pojedynczego ASIN. Vendorzy 3PL publikują przewodniki i formularze.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (1 wyszukiwanie extended, pewność niska do średniej), który łączyłby podział kanałów, sezonowość Q4, opłaty aged i inbound placement, koszt i czas migracji, gotówkę w zapasie w wielu węzłach oraz konwersję po utracie Prime. Funkcje narzędzi za formularzami są niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: liczne kalkulatory i przewodniki vendorów 3PL, w tym przewodnik z 2026 r., co sugeruje wartość leadową zapytania. Brak danych o wolumenie wyszukiwań, promptów i wątków na forach (niezweryfikowane z powodu limitu wyszukiwań).",
+   "ad_environment": "Hipoteza: 3PL, prep centers, IMS/WMS, przewoźnicy. Środowisko B2B wąskie, ale z wysoką wartością leadu. RPM nieznany.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "pilot",
+   "status_reason": "Najlepszy founder-market fit (logistyka i e-commerce) i realna luka integracyjna (sezonowość, migracja, gotówka) mimo częściowej konkurencji w porównaniu per-order. Ryzyka: mała grupa odbiorców, silna treść vendorów, popyt potwierdzony tylko pośrednio. Pilot powinien zweryfikować ruch z asystentów AI.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-02",
+   "name_en": "Tariff Timing & Sourcing Shift Simulator (buy ahead vs wait vs move production vs bonded/FTZ)",
+   "family": "Import, cła i landed cost (tariffs timing)",
+   "user_and_moment": "Importer lub marka sprowadzająca towar (np. z Chin) przed zapowiadaną lub spodziewaną zmianą stawki, po orzeczeniu sądu albo po nowej decyzji administracji.",
+   "sample_prompt_en": "Tariffs on my product from China might go up again next quarter. Should I place a double order now and pay the current duty, wait, or move production to Vietnam even though unit cost is 12% higher and the MOQ is bigger?",
+   "decision_problem": "Kiedy i gdzie kupować, gdy ścieżka stawek celnych jest niepewna, przy ograniczonej gotówce i pojemności magazynu.",
+   "combined_domains": "Scenariusze stawek (wpisywane przez użytkownika, bez autorytatywnego HTS), MPF/HMF, fracht, lead time, koszt storage i kapitału dla zapasu kupionego z wyprzedzeniem, ryzyko nadmiaru i obsolescencji, koszty zmiany dostawcy (próbki, tooling, QC), odroczenie cła w FTZ lub składzie celnym (hipoteza: wymaga dostępu do operatora), przeniesienie ceny na klienta i elastyczność popytu.",
+   "variants_compared": "(A) Zamawianie bez zmian; (B) pull-forward 2–3 cykli; (C) częściowe przeniesienie produkcji do innego kraju; (D) pełne przeniesienie z okresem przejściowym; (E) bonded/FTZ, jeśli dostępne; (F) podwyżka ceny bez zmian w zakupach.",
+   "key_dependencies": "Ścieżka stawek ważona prawdopodobieństwem daje oczekiwany landed cost. Pull-forward oznacza storage, koszt kapitału i żal, jeśli stawka spadnie. Przeniesienie produkcji to wyższe FOB, dłuższy lead time i gotówka na MOQ. Elastyczność ceny wpływa na wolumen.",
+   "main_outputs": "Oczekiwana, najgorsza i najlepsza marża każdego wariantu, szczyt zapotrzebowania na gotówkę, zmiana stawki uzasadniająca pull-forward (break-even), tabela żalu (regret), wrażliwość.",
+   "reason_external_site": "Wiedza LLM o bieżącym stosie taryf jest zawodna. Search-summary pokazuje, że nawet kalkulatory przeczą sobie co do Section 122. Sekwencyjny model scenariuszy z kosztami storage i kapitału trudno przeprowadzić w czacie. Narzędzie NIE powinno podawać stawki HTS jako pewnej.",
+   "data_sources": "USITC HTS (oficjalne, tylko jako odnośnik), parametry MPF i HMF z CBP (ustariffrates.com podaje MPF 0,3464%, min $34,58, max $670,86 od 1.10.2026; search-summary), indeksy frachtu (hipoteza, niezweryfikowane), wyceny dostawców od użytkownika.",
+   "user_data": "Obecna i scenariuszowe stawki cła, FOB z obu krajów, MOQ, lead time, miesięczna sprzedaż, koszt storage, koszt kapitału, wolna gotówka.",
+   "nearest_competition": [
+    {
+     "name": "US Import Duty Calculator 2026 (ustariffrates.com)",
+     "url": "https://ustariffrates.com/calculator",
+     "type": "partial",
+     "features_claimed": "Cło według HTS i landed cost; wyklucza wygasłą Section 122; MPF i HMF (search-summary)",
+     "notes": "Kalkulator punktowy; timing i scenariusze niezweryfikowane",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Zentriaflow – Free Landed Cost & Tariff Calculator 2026",
+     "url": "https://zentriaflow.com/",
+     "type": "partial",
+     "features_claimed": "Landed cost i taryfy; zaleca weryfikację klasyfikacji u licencjonowanego brokera",
+     "notes": "Strona nie otwierana",
+     "paid": "darmowe (wg tytułu)"
+    },
+    {
+     "name": "AMZ Prep – US Tariff Calculator 2026",
+     "url": "https://amzprep.com/us-reciprocal-tariffs-calculator/",
+     "type": "partial",
+     "features_claimed": "Kalkulator taryf USA na 2026 r. (szczegóły niezweryfikowane)",
+     "notes": "Vendor 3PL/prep",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Importcostpro – Landed Cost & Import Cost Calculator",
+     "url": "https://importcostpro.com/",
+     "type": "partial",
+     "features_claimed": "Landed cost i koszt importu (szczegóły niezweryfikowane)",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Broker celny / arkusz / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Doradztwo klasyfikacyjne i scenariusze ręczne",
+     "notes": "Płatne (broker) lub pracochłonne",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Obliczenie cła i landed cost na dany dzień: zatłoczone (co najmniej 9 kalkulatorów w jednym wyszukiwaniu).",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie dla decyzji o timingu i przeniesieniu produkcji pod niepewnością stawek. Zakres: 1 wyszukiwanie nastawione na kalkulatory landed cost; nie szukano 'tariff pull forward', 'China plus one cost comparison', 'FTZ savings calculator'. Pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Pośrednie: fala kalkulatorów taryf z 2026 r. (sygnał podażowy). Sprzeczności między nimi potwierdzają zmienność przepisów. Brak danych o wolumenie.",
+   "ad_environment": "Hipoteza: spedytorzy, brokerzy celni, sourcing agents, finansowanie handlu.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Silny popyt tematyczny i dobry founder-market fit (logistyka), ale wysoka zmienność przepisów. Ma sens tylko jako narzędzie scenariuszowe niezależne od dokładnego stosu HTS. Przed decyzją potrzebne 3–4 wyszukiwania (pull-forward, China+1, FTZ, sygnały z forów).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-03",
+   "name_en": "HTS Duty Stacking & Landed Cost Calculator",
+   "family": "Import, cła i landed cost (tariffs timing)",
+   "user_and_moment": "Importer sprawdzający całkowite cło dla konkretnego kodu HTS i kraju pochodzenia.",
+   "sample_prompt_en": "What is the total duty on steel furniture under HTS 9403.20 imported from China right now, including Section 301 and 232?",
+   "decision_problem": "Ile wyniesie cło i landed cost dla danego kodu i kraju. To w zasadzie obliczenie, nie decyzja z wariantami.",
+   "combined_domains": "Stawka bazowa HTS, Section 301, 232 i warstwy nadzwyczajne, MPF, HMF, fracht, ubezpieczenie.",
+   "variants_compared": "W praktyce brak wariantów decyzji, co najwyżej porównanie krajów pochodzenia.",
+   "key_dependencies": "Klasyfikacja HTS determinuje wynik, a reguły nakładania warstw zmieniają się często.",
+   "main_outputs": "Cło i landed cost na jednostkę.",
+   "reason_external_site": "Słaby powód: tę samą funkcję oferuje już co najmniej 9 narzędzi.",
+   "data_sources": "USITC HTS, Chapter 99, CBP. Wymaga ciągłej aktualizacji i nadzoru brokera.",
+   "user_data": "Kod HTS, kraj pochodzenia, wartość celna, fracht.",
+   "nearest_competition": [
+    {
+     "name": "ustariffcalc.com – US Import Tariff Calculator 2026",
+     "url": "https://ustariffcalc.com/",
+     "type": "direct",
+     "features_claimed": "Stawki średnie dla kategorii; deklarowana dokładność 1–3%; Section 301 forced-labor 10–12,5% (search-summary)",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "calcmytariff.com – US Import Tariff Calculator 2026",
+     "url": "https://www.calcmytariff.com/",
+     "type": "direct",
+     "features_claimed": "Nakładanie warstw taryf, nadal z Section 122 (możliwie nieaktualne)",
+     "notes": "Sprzeczność z innymi narzędziami",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "TariffsTool – US Customs Duty Calculator",
+     "url": "https://www.tariffstool.com/tariff-calculator",
+     "type": "direct",
+     "features_claimed": "Kalkulator cła; podaje, że 24.07.2026 Section 301 forced-labor zastąpiła Section 122",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "tariffschart.com – US Import Duty Calculator 2026",
+     "url": "https://tariffschart.com/tariff-calculator",
+     "type": "direct",
+     "features_claimed": "Kalkulator cła importowego 2026",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "China Import Duty & Cost Calculator",
+     "url": "https://www.importcostcalculator.com/",
+     "type": "direct",
+     "features_claimed": "Cło i koszt importu z Chin",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Tak, wielokrotnie: co najmniej 9 kalkulatorów w jednym wyszukiwaniu.",
+   "gap": "Brak istotnej luki. Ewentualne różnice w dokładności wynikają z jakości danych, a nie z integracji.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Wysoki popyt tematyczny (pośrednio z liczby narzędzi), ale wyjątkowo zatłoczony.",
+   "ad_environment": "Hipoteza: spedytorzy i brokerzy.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "high",
+   "status": "odrzucić",
+   "status_reason": "Rynek zatłoczony, najwyższy koszt danych, ryzyko prawne, przepisy, co do których narzędzia się nie zgadzają, i brak integracji decyzji. Moduł landed cost wystarczy wbudować do G6-02 jako pole wejściowe.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-04",
+   "name_en": "Bulk Buy vs Financing vs Storage Simulator (volume discount / MOQ decision)",
+   "family": "Zakupy i finansowanie zapasów (bulk buying, inventory financing)",
+   "user_and_moment": "Sprzedawca e-commerce lub hurtownik, któremu dostawca proponuje rabat za większe zamówienie albo wyższy próg MOQ.",
+   "sample_prompt_en": "My supplier offers 10% off if I order 6 months of inventory instead of 2. I'd have to use a $40k inventory loan at 1.5% per month and pay extra storage. Is it worth it?",
+   "decision_problem": "Ile zamówić i czym to sfinansować, gdy rabat konkuruje z kosztem kapitału, storage i ryzykiem wolniejszej sprzedaży.",
+   "combined_domains": "Progi cenowe dostawcy, finansowanie (gotówka, inventory loan, terminy dostawcy, RBF), storage (FBA, 3PL lub własny), sell-through i jego niepewność, obsolescencja, ryzyko stockoutu, minimalny bufor gotówki.",
+   "variants_compared": "Zamówienie na 2, 4 lub 6 miesięcy; finansowanie gotówką, pożyczką, terminami dostawcy lub RBF; storage FBA, 3PL lub własny.",
+   "key_dependencies": "Rabat porównywany z kosztem finansowania, storage i aged fees. Spadek sprzedaży wydłuża czas zalegania zapasu, co podnosi storage i koszt kapitału. Najniższy punkt gotówki porównywany z wymaganym buforem.",
+   "main_outputs": "Zysk netto każdego scenariusza, najniższy punkt gotówki, break-even sell-through, maksymalny tolerowany spadek popytu, wrażliwość.",
+   "reason_external_site": "Wielookresowy przepływ gotówki z kilkoma instrumentami finansowania i scenariuszami sprzedaży. Przewaga to struktura i UX, a nie unikalne dane, więc ryzyko, że asystent zrobi to sam, jest średnie.",
+   "data_sources": "Głównie dane użytkownika. Domyślne przedziały kosztu finansowania i storage (aktualizacja kwartalna, źródła do ustalenia).",
+   "user_data": "Cennik progowy, prognoza sprzedaży, warunki finansowania, stawki storage, wolna gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory EOQ / reorder (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: ilość zamówienia przy stałym popycie, bez finansowania i niepewności",
+     "notes": "Niezweryfikowane",
+     "paid": "zwykle darmowe (hipoteza)"
+    },
+    {
+     "name": "Inventory planning SaaS (kategoria; konkretne produkty niezweryfikowane)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: prognozy i PO; model finansowania niezweryfikowany",
+     "notes": "Za loginem i paywallem (hipoteza)",
+     "paid": "płatne (hipoteza)"
+    },
+    {
+     "name": "Arkusz kalkulacyjny / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Ręczny model scenariuszy",
+     "notes": "Pracochłonne",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Niezweryfikowane. Hipoteza: osobne kalkulatory EOQ i rat istnieją, a płatne systemy planowania zapasów pokrywają część problemu.",
+   "gap": "Hipoteza: integracja rabatu, finansowania, storage, niepewności sprzedaży i bufora gotówki. W tej sesji nie wykonano dla tego pomysłu żadnego wyszukiwania (limit wyczerpany), więc konkurencji nie zweryfikowano.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: fintech, inventory lenders, software do zapasów.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Rdzeń wspólnego silnika i dobry founder-market fit, ale zero weryfikacji konkurencji i popytu w tej sesji. Potrzebne 3–4 wyszukiwania (bulk discount vs financing calculator, inventory loan calculator, Reddit FBA bulk order).",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-05",
+   "name_en": "Peak Season Inventory Funding Simulator (inventory loan vs revenue-based financing vs LOC vs supplier terms)",
+   "family": "Zakupy i finansowanie zapasów (bulk buying, inventory financing)",
+   "user_and_moment": "Sprzedawca przygotowujący zamówienie na Q4 w lipcu lub sierpniu, który musi zapłacić fabryce kilka miesięcy przed sprzedażą.",
+   "sample_prompt_en": "I need $80k for Q4 inventory, paid to the factory in August and sold October to December. Compare an inventory loan, revenue-based financing that takes 15% of daily sales, a line of credit, and asking my supplier for 60-day terms.",
+   "decision_problem": "Jak sfinansować z góry ustaloną potrzebę zakupową, żeby przetrwać szczyt gotówkowy i zminimalizować koszt w dolarach.",
+   "combined_domains": "Harmonogram płatności dla dostawcy, transport i lead time, krzywa sprzedaży Q4, mechanika instrumentów (odsetki, opłata stała, holdback procentowy od sprzedaży, prepayment), scenariusze wolniejszej sprzedaży.",
+   "variants_compared": "Inventory loan, RBF z holdbackiem, LOC z wypłatą i spłatą, terminy dostawcy (net 60), kombinacja dwóch źródeł.",
+   "key_dependencies": "Holdback RBF zmniejsza gotówkę w szczycie. Opłata stała sprawia, że wcześniejsza spłata nie obniża kosztu (hipoteza dla typowych umów). Wolniejsza sprzedaż zmienia efektywny koszt i może spowodować niedobór gotówki.",
+   "main_outputs": "Całkowity koszt w dolarach i efektywne APR każdej opcji w scenariuszu bazowym, wolnym i szybkim; tygodniowy najniższy punkt gotówki; stres test.",
+   "reason_external_site": "Porównanie instrumentów o różnej mechanice na tygodniowej osi czasu; asystent zwykle porównuje je opisowo.",
+   "data_sources": "Dane użytkownika (warunki ofert). Typowe przedziały warunków jako założenia (do zweryfikowania).",
+   "user_data": "Kwota, daty płatności, prognoza sprzedaży, warunki ofert finansowania.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory dostawców finansowania zapasów i RBF (np. Kickfurther, Settle, Wayflyer, Clearco – nazwy z wiedzy treningowej)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: koszt własnego produktu, bez porównania z konkurencją",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen, hipoteza)"
+    },
+    {
+     "name": "Arkusz / CPA / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Ręczne porównanie",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Niezweryfikowane. Hipoteza: kalkulatory pojedynczych produktów u dostawców finansowania.",
+   "gap": "Hipoteza: niezależne porównanie różnych mechanik finansowania na osi czasu sezonowej sprzedaży. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: silne (fintech i pożyczkodawcy), ale z ryzykiem reklam agresywnych produktów finansowych.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Mocny moduł wspólnego silnika i wysoka wartość komercyjna, ale treść finansowa typu YMYL, możliwe wymogi stanowe dla ujawnień i brak weryfikacji. Zbadać po G6-01.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-06",
+   "name_en": "SBA Wait vs Bridge Financing Simulator (SBA 7(a)/Express vs MCA vs term loan vs LOC with refinance timeline)",
+   "family": "Finansowanie małej firmy (SBA vs MCA vs line of credit)",
+   "user_and_moment": "Właściciel małej firmy, który złożył wniosek o kredyt SBA, a potrzebuje gotówki natychmiast (płace, zapas).",
+   "sample_prompt_en": "I applied for an SBA 7(a) loan but approval may take 2-3 months. I need $50k now for payroll and inventory. Should I take a merchant cash advance and refinance it later, use a business credit card, or wait?",
+   "decision_problem": "Czy brać drogie finansowanie pomostowe teraz, czy czekać na tańsze i niepewne.",
+   "combined_domains": "Czas i prawdopodobieństwo decyzji SBA (wpisywane przez użytkownika), factor rate i dzienny holdback MCA, brak rabatu za wcześniejszą spłatę (hipoteza), ryzyko stackingu, możliwość refinansowania (zasady niezweryfikowane), utracone przychody przy czekaniu.",
+   "variants_compared": "Czekać; MCA i refinansowanie przez SBA; krótki term loan; LOC lub karta firmowa; kombinacja.",
+   "key_dependencies": "Prawdopodobieństwo zatwierdzenia wpływa na oczekiwany koszt. Holdback MCA obniża dzienną gotówkę. Opóźnienie SBA wydłuża okres płacenia drogiego finansowania.",
+   "main_outputs": "Koszt całkowity, ścieżka gotówki, stany porażki (gotówka poniżej zera), prawdopodobieństwo zatwierdzenia, przy którym opłaca się czekać.",
+   "reason_external_site": "Sekwencja zdarzeń z niepewnością, której marketplace'y zwykle nie modelują (hipoteza).",
+   "data_sources": "Prime rate (FRED), SOP SBA (zmiany niezweryfikowane w tej sesji), oferty użytkownika.",
+   "user_data": "Potrzeba gotówki, oferty, oczekiwany czas decyzji SBA, przychody dzienne.",
+   "nearest_competition": [
+    {
+     "name": "Marketplace'y pożyczkowe i portale (np. Lendio, Nav, Fundera, NerdWallet – nazwy z wiedzy treningowej)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: porównanie produktów i dopasowanie ofert, bez symulacji pomostu",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "Kalkulatory MCA / factor rate to APR (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: przeliczenie kosztu pojedynczej oferty",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Doradca finansowy / CPA / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Porada",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Hipoteza: porównanie produktów i przeliczenia APR są powszechne.",
+   "gap": "Hipoteza: sekwencja pomost, decyzja SBA i refinansowanie z prawdopodobieństwem. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: bardzo wartościowe, ale z ryzykiem reklam MCA.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Treść finansowa typu YMYL, ryzyko regulacyjne, nieznane szanse zatwierdzenia, dominacja marketplace'ów i portali, brak przewagi właściciela, wysokie ryzyko samodzielnej odpowiedzi asystenta. Wrócić, gdy silnik gotówki będzie działał.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-07",
+   "name_en": "Equipment Acquisition Simulator: cash vs loan vs $1-buyout lease vs FMV lease vs rent (after-tax)",
+   "family": "Sprzęt i pojazdy: buy vs lease vs loan",
+   "user_and_moment": "Właściciel małej firmy (magazyn, budownictwo, gastronomia, usługi), który musi pozyskać sprzęt: wózek widłowy, maszynę, piec, sprzęt medyczny.",
+   "sample_prompt_en": "I need a $65,000 forklift for my warehouse. Should I pay cash, take a 5-year equipment loan at 9%, do a $1 buyout lease, or an FMV lease I can return after 3 years? I'm in the 24% bracket and might upgrade in 3 years.",
+   "decision_problem": "Jak pozyskać sprzęt, żeby zminimalizować koszt po opodatkowaniu przy ograniczeniach gotówki, niepewnym wykorzystaniu i planie wymiany.",
+   "combined_domains": "Matematyka finansowania (raty, odsetki, wartość rezydualna), podatki (Section 179, bonus depreciation, MACRS, limit dochodu, >50% użycia służbowego, recapture), utrzymanie i gwarancja, wykorzystanie (wynająć vs posiadać), koszt alternatywny gotówki, moment wymiany.",
+   "variants_compared": "Gotówka, kredyt, capital lease ($1 buyout), FMV/operating lease, wynajem na żądanie, sprzęt używany vs nowy.",
+   "key_dependencies": "Odliczenie zależy od własności i dochodu podatkowego (Section 179 ograniczony dochodem; search-summary SurePayroll). Wartość odsprzedaży wpływa na wynik zakupu. Niskie wykorzystanie przemawia za wynajmem. Ograniczenie gotówki może wykluczyć zakup za gotówkę.",
+   "main_outputs": "NPV po opodatkowaniu, skumulowana gotówka w kolejnych latach, break-even wykorzystania i wartości rezydualnej, wrażliwość na stopę podatkową i dyskonto, założenia z rokiem podatkowym i limitami.",
+   "reason_external_site": "Parametry podatkowe się zmieniają, a źródła są sprzeczne: przewodnik beancount.io z 2026 r. podaje 40% bonus i limit $1,25M, co według wiedzy treningowej przeczy ustawie OBBBA z 2025 r. (niezweryfikowane w tej sesji). Wieloetapowe NPV z podatkami i wrażliwością łatwo w czacie popsuć.",
+   "data_sources": "IRS Publication 946 i coroczne Rev. Proc. (aktualizacja raz w roku plus review CPA), Prime rate (FRED), krzywe wartości rezydualnej jako dane użytkownika lub domyślne założenia, zgodność stanowa jako ostrzeżenie.",
+   "user_data": "Cena, oferty finansowania i leasingu, stawka podatkowa, dochód podatkowy, planowany okres użytkowania, wykorzystanie, wolna gotówka.",
+   "nearest_competition": [
+    {
+     "name": "SurePayroll – Lease vs Buy calculator",
+     "url": "https://www.surepayroll.com/resources/calculator/small-business/lease-vs-buy",
+     "type": "partial",
+     "features_claimed": "Ogólny kalkulator lease vs buy (search-summary)",
+     "notes": "Section 179 i porównanie z kredytem niezweryfikowane",
+     "paid": "darmowe"
+    },
+    {
+     "name": "SurePayroll – Equipment Lease Calculator",
+     "url": "https://www.surepayroll.com/resources/calculators/equipment-lease-calculator",
+     "type": "partial",
+     "features_claimed": "Kalkulator leasingu sprzętu (rata)",
+     "notes": "Strona nie otwierana",
+     "paid": "darmowe"
+    },
+    {
+     "name": "beancount.io – lease vs buy after-tax cash flows guide",
+     "url": "https://beancount.io/blog/2026/10/16/lease-vs-buy-business-equipment-analysis-after-tax-cash-flows-guide",
+     "type": "substitute",
+     "features_claimed": "Przewodnik z ramą TCO i przykładem liczbowym",
+     "notes": "Treść, nie narzędzie; parametry podatkowe możliwie nieaktualne",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Kalkulatory leasingodawców i dealerów (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: rata leasingu, czasem Section 179",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen)"
+    }
+   ],
+   "already_solved": "Proste kalkulatory lease vs buy i rat leasingu (SurePayroll), przewodniki z ramą TCO.",
+   "gap": "Search-summary: nie znaleziono dedykowanego, autorytatywnego kalkulatora lease-vs-buy-vs-loan z wbudowanym Section 179. Zakres: 1 wyszukiwanie standard, pewność niska. Wersja z wynajmem, wartością rezydualną i break-even wykorzystania także niezweryfikowana.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: kilka przewodników z 2026 r. i kalkulatory vendorów payroll. Brak danych o wolumenie.",
+   "ad_environment": "Hipoteza: finansowanie sprzętu, dealerzy, ubezpieczenia, tax software.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "pilot",
+   "status_reason": "Niski koszt danych (aktualizacja raz w roku), szeroki katalog z realnymi różnicami modelu dla klas sprzętu, potencjalna luka w integracji z podatkami. Wymaga corocznego review CPA i mocnych disclaimerów. Founder-market fit częściowy (sprzęt magazynowy, flota).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-08",
+   "name_en": "Local Delivery Fleet Decision: own vans vs lease vs courier per-drop vs 3PL last-mile",
+   "family": "Sprzęt i pojazdy: buy vs lease vs loan",
+   "user_and_moment": "Lokalna firma (dystrybutor, sklep meblowy, piekarnia, hurtownia), której rośnie liczba dostaw.",
+   "sample_prompt_en": "We do about 40 local deliveries a day. Should we buy two cargo vans and hire drivers, lease vans, or keep using a courier service that charges $14 per drop?",
+   "decision_problem": "Insourcing vs outsourcing dostaw lokalnych przy rosnącym wolumenie.",
+   "combined_domains": "TCO pojazdu (finansowanie, amortyzacja z limitami dla pojazdów, ubezpieczenie, paliwo lub ładowanie EV, serwis), praca kierowców (pracownik vs contractor), gęstość tras, poziom usług, szczyty sezonowe, podatki (reguły dla pojazdów, próg wagowy GVWR; hipoteza na podstawie wiedzy treningowej).",
+   "variants_compared": "Zakup vanów z własnymi kierowcami; leasing; kurier płatny za dostawę; 3PL last-mile; hybryda (własne w bazie, kurier w szczycie).",
+   "key_dependencies": "Wolumen dzienny decyduje o koszcie na dostawę. Utylizacja pojazdu i kierowcy. Sezonowość wymaga hybrydy. Lokalne stawki ubezpieczeń i płac.",
+   "main_outputs": "Koszt na dostawę w funkcji wolumenu, break-even liczby dostaw dziennie, nakład gotówki, wrażliwość.",
+   "reason_external_site": "Łączy modele sprzętu, pracy i logistyki; asystent musiałby zebrać wiele parametrów.",
+   "data_sources": "Dane użytkownika, stawka IRS za milę i limity amortyzacji pojazdów (aktualizacja roczna), lokalne przedziały płac (BLS; do zweryfikowania).",
+   "user_data": "Liczba dostaw, dystans, oferty kurierów, oferty pojazdów, płace lokalne.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory firm leasingu flot i kurierów (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: TCO pojazdu lub wycena kuriera osobno",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "Arkusz / konsultant logistyczny",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Ręczny model",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Niezweryfikowane.",
+   "gap": "Hipoteza: połączenie TCO floty, pracy i outsourcingu. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: leasing flot, ubezpieczenia, oprogramowanie do tras.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Dobry founder-market fit (logistyka), ale wymaga danych z trzech rodzin (sprzęt, praca, fulfillment) i dużej zmienności lokalnej. Budować po ustabilizowaniu silnika G6-07 i G6-01.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-09",
+   "name_en": "First Hire Simulator: W-2 employee vs 1099 contractor vs agency/VA vs outsourcing the process (cost, capacity, risk)",
+   "family": "Zatrudnienie: employee vs contractor vs outsourcing",
+   "user_and_moment": "Jednoosobowa lub bardzo mała firma e-commerce, w której właściciel przestaje nadążać z obsługą klienta i pakowaniem.",
+   "sample_prompt_en": "I'm a one-person Shopify business doing $400k a year and drowning in customer service and packing. Should I hire a part-time employee, use a contractor, or outsource to a VA and a 3PL?",
+   "decision_problem": "Jak zwiększyć pojemność operacyjną: zatrudnić, zlecić czy zautomatyzować lub oddać proces na zewnątrz.",
+   "combined_domains": "Koszt pracownika (payroll taxes, benefity, workers' comp), koszt contractora, ryzyko misclassification według stanu, ramp-up i rotacja, wartość uwolnionych godzin właściciela, alternatywa 3PL dla pakowania.",
+   "variants_compared": "Pracownik W-2 part-time lub full-time; contractor 1099; agencja lub VA; 3PL dla fulfillment plus VA dla obsługi klienta; bez zmian.",
+   "key_dependencies": "Wolumen pracy według typu zadania, stan prowadzenia działalności (reguły klasyfikacji), uwolnione godziny przeliczone na przychód, okres wdrożenia.",
+   "main_outputs": "Koszt całkowity i koszt na zamówienie każdego wariantu, wpływ na przepływ pieniędzy, flagi ryzyka klasyfikacji, break-even przychodu z uwolnionego czasu.",
+   "reason_external_site": "Strona kosztowa jest dobrze pokryta. Wartość dodana to połączenie z pojemnością i outsourcingiem procesu.",
+   "data_sources": "Limity SSA i FUTA (roczne), SUTA i płaca minimalna dla każdego stanu, reguły klasyfikacji (stanowe), BLS ECEC dla benefitów (do zweryfikowania).",
+   "user_data": "Godziny pracy według zadania, stawki, stan, wolumen zamówień.",
+   "nearest_competition": [
+    {
+     "name": "Terms.Law – IC vs Employee Cost Calculator",
+     "url": "https://terms.law/AB5/tools/ic-employee-calculator.html",
+     "type": "partial",
+     "features_claimed": "Payroll burden, benefity, analiza skorygowana o ryzyko (search-summary); kontekst AB5",
+     "notes": "Najbliższy w badanym zakresie; strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "xGenious – Employee Total Cost Calculator",
+     "url": "https://xgenious.com/free-tools/employee-cost-calculator",
+     "type": "partial",
+     "features_claimed": "Koszt całkowity z software, overhead i szkoleniami; porównanie z dzienną stawką contractora",
+     "notes": "Strona nie otwierana",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Toptal – Real Employee Cost Calculator",
+     "url": "https://www.toptal.com/finance/business-consultants/don-t-be-fooled-the-real-cost-of-employees-and-consultants",
+     "type": "partial",
+     "features_claimed": "Metoda rachunku kosztów pracownika vs konsultanta",
+     "notes": "Vendor platformy freelance",
+     "paid": "darmowe"
+    },
+    {
+     "name": "QuickBooks Employee Cost Calculator",
+     "url": "brak URL w wynikach – wzmianka w search-summary (Pilot)",
+     "type": "partial",
+     "features_claimed": "Koszt pracownika",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (hipoteza)"
+    }
+   ],
+   "already_solved": "Porównanie kosztowe pracownika i contractora: wiele narzędzi.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie dla wersji łączącej pojemność, uwolniony czas, outsourcing procesu (3PL) i ryzyko stanowe (1 wyszukiwanie standard, niska pewność).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Pośrednie: wiele kalkulatorów vendorów HR i payroll, czyli temat popularny i komercyjny. Brak danych o wolumenie.",
+   "ad_environment": "Hipoteza: payroll, PEO, HR SaaS, platformy freelance; dobre.",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "później",
+   "status_reason": "Strona kosztowa jest zatłoczona, asystent często odpowie sam, a dane i ryzyko prawne dla 50 stanów są drogie. Ma sens dopiero jako moduł pracy w silniku fulfillment (porównanie z 3PL).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-10",
+   "name_en": "Employee vs Contractor True Cost Calculator (cost-only)",
+   "family": "Zatrudnienie: employee vs contractor vs outsourcing",
+   "user_and_moment": "Właściciel firmy porównujący stawkę contractora z pensją pracownika.",
+   "sample_prompt_en": "What does a $60k employee really cost compared to a contractor at $45 an hour?",
+   "decision_problem": "Porównanie kosztów, a nie pełna decyzja.",
+   "combined_domains": "Payroll taxes, benefity, overhead.",
+   "variants_compared": "Pracownik vs contractor.",
+   "key_dependencies": "Mnożnik kosztu pracownika.",
+   "main_outputs": "Koszt roczny i godzinowy.",
+   "reason_external_site": "Słaby: reguła 1,25–1,4× jest powszechnie znana.",
+   "data_sources": "SSA, FUTA, SUTA.",
+   "user_data": "Pensja, stawka, benefity.",
+   "nearest_competition": [
+    {
+     "name": "Terms.Law – IC vs Employee Cost Calculator",
+     "url": "https://terms.law/AB5/tools/ic-employee-calculator.html",
+     "type": "direct",
+     "features_claimed": "Payroll burden, benefity, ryzyko",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "ClickTime – Employee Cost Calculator",
+     "url": "https://www.clicktime.com/resources/employee-cost-calculator",
+     "type": "partial",
+     "features_claimed": "Koszt całkowity pracownika",
+     "notes": "Strona nie otwierana",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asanify – Contractor vs Employee Salary Calculator guide",
+     "url": "https://asanify.com/blog/contractor-management/contractor-vs-employee-salary-calculator-a-guide-to-accurate-cost-comparison/",
+     "type": "partial",
+     "features_claimed": "Przewodnik i kalkulator porównania",
+     "notes": "Strona nie otwierana",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Pilot – Independent contractor vs employee",
+     "url": "https://pilot.com/blog/independent-contractor-vs-employee",
+     "type": "substitute",
+     "features_claimed": "Mnożnik 1,25–1,4× (powołanie na MIT)",
+     "notes": "Treść",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Tak, wielokrotnie (co najmniej 5 narzędzi w jednym wyszukiwaniu).",
+   "gap": "Brak istotnej luki. Różnice kosmetyczne nie tworzą niszy.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: wiele kalkulatorów vendorów.",
+   "ad_environment": "Hipoteza: payroll i HR SaaS.",
+   "ai_self_solve_risk": "high",
+   "confidence": "high",
+   "status": "odrzucić",
+   "status_reason": "Rynek zatłoczony, prosty kalkulator, a nie symulator decyzji, i wysokie ryzyko samodzielnej odpowiedzi asystenta.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G6-11",
+   "name_en": "Self-Funded Growth Ceiling Simulator (cash conversion cycle, supplier terms, early-pay discounts)",
+   "family": "Płynność i cykl konwersji gotówki (cash conversion cycle)",
+   "user_and_moment": "Rosnąca, rentowna marka z zapasem, której ciągle brakuje gotówki.",
+   "sample_prompt_en": "We're profitable on paper but always out of cash. We pay suppliers 50% upfront and 50% before shipping, inventory takes 90 days to sell, and marketplace payouts come every two weeks. How fast can we grow without outside funding, and what if I negotiate net 30 or take a 2% early-payment discount?",
+   "decision_problem": "Które dźwignie (terminy, rotacja zapasu, finansowanie) dają najwięcej wzrostu przy danym kapitale.",
+   "combined_domains": "CCC (DIO, DSO, DPO), marża, tempo wzrostu, harmonogramy wypłat z marketplace'ów (do weryfikacji), depozyty dla dostawców, early-pay discount, finansowanie.",
+   "variants_compared": "Status quo; negocjacja terminów; skrócenie DIO (mniejsze, częstsze zamówienia); przyjęcie lub odrzucenie early-pay discount; dodanie LOC.",
+   "key_dependencies": "Wzrost zwiększa zapotrzebowanie na kapitał obrotowy. Wydłużenie DPO uwalnia gotówkę. Rabat za wcześniejszą płatność porównywany z kosztem finansowania.",
+   "main_outputs": "Maksymalne tempo wzrostu finansowane własną gotówką, najniższy punkt gotówki w kolejnych miesiącach, wartość każdego dnia DPO lub DIO, break-even early-pay discount.",
+   "reason_external_site": "Sekwencja płatności i wzrostu z dźwigniami; asystent poda wzór CCC, ale rzadko zbuduje symulację.",
+   "data_sources": "Dane użytkownika.",
+   "user_data": "Marża, warunki płatności, rotacja, harmonogram wypłat, cel wzrostu.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory CCC (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: oblicza wskaźnik, nie symuluje wzrostu",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Cash flow forecasting SaaS (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: prognoza z danych księgowych",
+     "notes": "Płatne, za loginem (hipoteza)",
+     "paid": "płatne"
+    },
+    {
+     "name": "Arkusz / CPA / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Ręczny model",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Hipoteza: obliczanie samego CCC jest trywialne i powszechne.",
+   "gap": "Hipoteza: granica wzrostu z własnej gotówki i wycena dźwigni. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych z tej sesji. Hipoteza: problem opisywany jako 'profitable but no cash'.",
+   "ad_environment": "Hipoteza: factoring, LOC, księgowość.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Zerowy koszt danych i rdzeń silnika, ale popyt nieznany; ryzyko, że użytkownik woli arkusz. Zbadać frazy problemowe.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-12",
+   "name_en": "Returns Policy Change Simulator (free vs paid returns vs returnless refunds vs exchange-first)",
+   "family": "Reklama, zwroty i unit economics (ad spend and returns)",
+   "user_and_moment": "Marka DTC z wysoką stopą zwrotów, która rozważa zmianę polityki zwrotów.",
+   "sample_prompt_en": "Should I stop offering free returns? Our return rate is 22% and each return costs us about $11 in shipping and handling, but I'm afraid conversion will drop.",
+   "decision_problem": "Która polityka zwrotów maksymalizuje marżę netto, gdy konwersja reaguje na zmianę polityki.",
+   "combined_domains": "Konwersja i jej elastyczność (założenie), stopa zwrotów, koszt reverse logistics (3PL), odzysk wartości przy odsprzedaży, retencja przez wymiany, CAC.",
+   "variants_compared": "Darmowe zwroty; opłata za zwrot; returnless refunds dla tanich SKU; najpierw wymiana; skrócone okno.",
+   "key_dependencies": "Spadek konwersji porównywany z oszczędnością na zwrotach. Stopa odzysku wpływa na koszt zwrotu.",
+   "main_outputs": "Marża netto na 1000 sesji dla każdej polityki, break-even spadku konwersji, wrażliwość.",
+   "reason_external_site": "Łączy logistykę zwrotów z marketingiem; kluczowy parametr pozostaje jednak założeniem.",
+   "data_sources": "Dane użytkownika; benchmarki stóp zwrotów (źródła do ustalenia).",
+   "user_data": "Stopa zwrotów, koszty, konwersja, AOV.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory ROI platform zwrotów (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: ROI własnego software",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "Asystent AI / arkusz",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Tabela wrażliwości",
+     "notes": "",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Niezweryfikowane.",
+   "gap": "Hipoteza: niezależne porównanie polityk. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych z tej sesji.",
+   "ad_environment": "Hipoteza: platformy zwrotów, 3PL, e-commerce SaaS.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Wynik zależy głównie od nieznanej elastyczności konwersji, którą wpisuje sam użytkownik, więc narzędzie sprowadza się do tabeli wrażliwości, którą asystent zrobi sam. Jako moduł w G6-01 może mieć wartość.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-13",
+   "name_en": "Break-even ROAS Calculator with Returns",
+   "family": "Reklama, zwroty i unit economics (ad spend and returns)",
+   "user_and_moment": "Marketer e-commerce sprawdzający, jaki ROAS jest potrzebny do zysku.",
+   "sample_prompt_en": "What's my break-even ROAS if my margin is 45% and 15% of orders get returned?",
+   "decision_problem": "Proste obliczenie progu, nie decyzja z wariantami.",
+   "combined_domains": "Marża, zwroty, ROAS.",
+   "variants_compared": "Brak.",
+   "key_dependencies": "Wzór algebraiczny.",
+   "main_outputs": "Break-even ROAS.",
+   "reason_external_site": "Brak: asystent poda wynik natychmiast.",
+   "data_sources": "Dane użytkownika.",
+   "user_data": "Marża, stopa zwrotów, koszty.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory ROAS i break-even ROAS (kategoria, liczne – hipoteza)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "direct",
+     "features_claimed": "Hipoteza: break-even ROAS, czasem ze zwrotami",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Obliczenie wzoru",
+     "notes": "",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Hipoteza: tak, powszechnie.",
+   "gap": "Brak istotnej luki (hipoteza).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych z tej sesji.",
+   "ad_environment": "Hipoteza: marketing SaaS.",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Trywialny kalkulator, który asystent rozwiąże natychmiast. Nie spełnia definicji symulatora decyzji. Ewentualnie jako pole pomocnicze w G6-14.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-14",
+   "name_en": "Ad Scale-Up vs Inventory Runway Simulator",
+   "family": "Reklama, zwroty i unit economics (ad spend and returns)",
+   "user_and_moment": "Sprzedawca e-commerce, któremu reklamy zaczęły działać, ale zapas i lead time ograniczają skalowanie.",
+   "sample_prompt_en": "My ads are profitable at 3x ROAS and I want to double the budget, but I only have 7 weeks of inventory and the next shipment takes 10 weeks. Should I scale now, scale slowly, air-ship a top-up, or raise prices?",
+   "decision_problem": "Jak skalować reklamy, nie wywołując stockoutu ani kryzysu gotówki.",
+   "combined_domains": "Krzywa odpowiedzi na wydatki reklamowe z malejącymi przychodami (założenie), runway zapasu, lead time, koszt stockoutu (utracona sprzedaż, utrata rankingu na Amazon – hipoteza), premia za fracht lotniczy, gotówka na kolejne PO, finansowanie, cena.",
+   "variants_compared": "Skalowanie od razu; stopniowe; ograniczenie budżetu z podwyżką ceny; skalowanie z dosyłką lotniczą; skalowanie z większym, finansowanym PO.",
+   "key_dependencies": "Większy budżet szybciej zużywa zapas, co przybliża stockout. Dosyłka lotnicza to wyższy koszt jednostkowy. Większe PO wymaga więcej gotówki lub finansowania. Wyższa cena zmniejsza sprzedaż.",
+   "main_outputs": "Zysk i gotówka w horyzoncie 16–26 tygodni dla każdego wariantu, tydzień stockoutu, break-even ROAS przy ograniczeniu zapasu, wrażliwość na odpowiedź reklam i lead time.",
+   "reason_external_site": "Łączy marketing, zapas, logistykę i gotówkę na osi czasu. Asystent zwykle nie zbuduje tygodniowej symulacji z ograniczeniami.",
+   "data_sources": "Dane użytkownika; domyślne przedziały premii frachtu (do ustalenia).",
+   "user_data": "Budżet, ROAS, zapas, lead time, koszty frachtu, marża, gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Inventory planning SaaS (kategoria; konkretne produkty niezweryfikowane)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: prognoza zapasu i PO, bez modelu reklam",
+     "notes": "Niezweryfikowane",
+     "paid": "płatne (hipoteza)"
+    },
+    {
+     "name": "Arkusz / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Ręczny model",
+     "notes": "",
+     "paid": "darmowe"
+    }
+   ],
+   "already_solved": "Niezweryfikowane.",
+   "gap": "Hipoteza: połączenie decyzji reklamowej z ograniczeniem zapasu i lead time. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: marketing SaaS, inventory software, fintech.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Najlepsze połączenie kompetencji marketingowych i logistycznych właściciela; niski koszt danych; korzysta ze wspólnego silnika. Konkurencji i popytu nie zweryfikowano.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-15",
+   "name_en": "Air vs Ocean vs Split Shipment Simulator (stockout cost vs freight cost vs cash)",
+   "family": "Fulfillment i logistyka e-commerce (FBA vs 3PL vs in-house, inbound shipping)",
+   "user_and_moment": "Importer lub sprzedawca, któremu za kilka tygodni skończy się zapas, a transport morski trwa zbyt długo.",
+   "sample_prompt_en": "I'm going to stock out in 5 weeks. Ocean takes 45 days door to door, air takes 10 days but costs about $6 per kg more. Should I split the shipment, and how much should go by air?",
+   "decision_problem": "Jaki udział transportu lotniczego minimalizuje łączny koszt frachtu i utraconej sprzedaży.",
+   "combined_domains": "Stawki frachtu (od użytkownika lub benchmarki), waga gabarytowa i chargeable weight, zmienność czasu tranzytu, koszt stockoutu (marża i ranking), storage, moment wydatku gotówki.",
+   "variants_compared": "Tylko ocean; tylko air; podział X/Y; ocean ekspresowy; ograniczenie sprzedaży (podwyżka ceny) do czasu dostawy.",
+   "key_dependencies": "Dni do stockoutu i czas tranzytu wyznaczają lukę w dostępności. Utracona marża porównywana z premią za air. Opóźnienie tranzytu zwiększa ryzyko.",
+   "main_outputs": "Optymalny udział air, koszt całkowity z utraconą marżą, break-even kosztu stockoutu, wrażliwość na opóźnienia.",
+   "reason_external_site": "Łączy logistykę z ekonomiką stockoutu; asystent policzy prosty przypadek, ale zmienność tranzytu i gotówka komplikują obliczenie.",
+   "data_sources": "Dane użytkownika; przedziały stawek air i ocean jako domyślne (źródła do weryfikacji).",
+   "user_data": "Zapas, sprzedaż dzienna, wymiary i waga, stawki, marża.",
+   "nearest_competition": [
+    {
+     "name": "Narzędzia wycen spedytorów (np. Freightos – nazwa z wiedzy treningowej)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: wyceny i czasy tranzytu air i ocean, bez modelu stockoutu",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe lub płatne (hipoteza)"
+    },
+    {
+     "name": "Kalkulatory chargeable weight (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: waga płatna",
+     "notes": "Trywialne",
+     "paid": "darmowe"
+    },
+    {
+     "name": "Arkusz / spedytor / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Porada lub ręczny model",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Hipoteza: wyceny frachtu i kalkulatory wagi są powszechne.",
+   "gap": "Hipoteza: optymalizacja podziału z kosztem stockoutu i zmiennością tranzytu. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: spedytorzy i firmy kurierskie.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Najsilniejszy founder-market fit (logistyka) i niski koszt danych, ale mała populacja i brak weryfikacji. Dobry kandydat na drugi symulator w pilocie wspólnego silnika.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G6-16",
+   "name_en": "Big Retail PO Acceptance Simulator (accept vs partial vs decline; PO financing vs factoring; net-60/90; chargebacks)",
+   "family": "Płynność i cykl konwersji gotówki (cash conversion cycle)",
+   "user_and_moment": "Mała marka, która dostała pierwsze duże zamówienie od sieci handlowej lub dystrybutora z długim terminem płatności.",
+   "sample_prompt_en": "A national retailer wants to place a $250k order with net 60 terms. My margin would be 28% before chargebacks, and I'd need to pay my manufacturer 50% upfront. Can I afford to say yes, and should I use PO financing or factoring?",
+   "decision_problem": "Czy przyjąć duże zamówienie, w jakiej skali i jak je sfinansować, nie doprowadzając firmy do utraty płynności.",
+   "combined_domains": "Finansowanie produkcji (PO financing), finansowanie należności (factoring), terminy net 60/90, potrącenia i chargebacks (założenia), CCC, pojemność produkcyjna, ryzyko anulowania lub opóźnienia płatności, kanibalizacja innych kanałów.",
+   "variants_compared": "Przyjąć w całości z PO financing; przyjąć z faktoringiem; przyjąć częściowo; odrzucić; negocjować depozyt lub krótsze terminy.",
+   "key_dependencies": "Depozyt dla producenta i termin płatności sieci tworzą lukę gotówkową. Potrącenia obniżają marżę. Koszt finansowania rośnie z długością luki. Opóźnienie płatności grozi niewypłacalnością.",
+   "main_outputs": "Najniższy punkt gotówki, zysk netto po finansowaniu i potrąceniach, break-even stopy potrąceń, wymagana kwota finansowania, scenariusz opóźnionej płatności.",
+   "reason_external_site": "Sekwencja zdarzeń z kilkoma instrumentami i ryzykami; asystent poda ogólne ostrzeżenia, ale rzadko zbuduje symulację na osi czasu.",
+   "data_sources": "Dane użytkownika; typowe przedziały kosztów faktoringu i PO financing jako założenia (do weryfikacji).",
+   "user_data": "Wartość PO, marża, warunki producenta i sieci, oferty finansowania, gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory firm faktoringowych i PO financing (kategoria)",
+     "url": "nie zweryfikowano – brak URL w wynikach (limit wyszukiwań)",
+     "type": "partial",
+     "features_claimed": "Hipoteza: koszt własnego produktu finansowego",
+     "notes": "Niezweryfikowane",
+     "paid": "darmowe (lead-gen)"
+    },
+    {
+     "name": "CPA / doradca / arkusz / asystent AI",
+     "url": "n/d – substytut ogólny",
+     "type": "substitute",
+     "features_claimed": "Porada lub ręczny model",
+     "notes": "",
+     "paid": "zależnie od wariantu"
+    }
+   ],
+   "already_solved": "Niezweryfikowane.",
+   "gap": "Hipoteza: niezależna symulacja przyjęcia zamówienia z porównaniem form finansowania i potrąceniami. Brak wyszukiwań w tej sesji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Brak danych z tej sesji (hipoteza).",
+   "ad_environment": "Hipoteza: faktoring, PO financing, software EDI i retail compliance.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźnie sekwencyjny problem z realnym ryzykiem finansowym i niskim kosztem danych; korzysta ze wspólnego silnika. Popytu i konkurencji nie zweryfikowano.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://ecomcalculators.io/fulfillment-cost-comparison",
+   "competitor": "Ecomcalculators.io – Fulfillment Cost Comparison",
+   "related_idea": "G6-01",
+   "features_checked": "Według search-summary: koszt na zamówienie dla in-house, 3PL i FBA (labor, storage, pick/pack, shipping); wynik zależy od AOV, wagi i wolumenu",
+   "access_limits": "Strony nie otwierano (WebFetch zablokowany). Dowód = search-summary; funkcje spoza podsumowania niezweryfikowane.",
+   "conclusion": "PARTIAL, najbliższy w badanym zakresie. Sezonowość, multi-channel, migracja i gotówka niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://amzprep.com/3pl-assessment-tool/",
+   "competitor": "AMZ Prep – Free 3PL Cost Comparison Calculator",
+   "related_idea": "G6-01",
+   "features_checked": "Formularz lead-capture; dane wejściowe: wolumen prep FBA, zamówienia Shopify, storage paletowe; NA i EU",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary; wynik prawdopodobnie za formularzem, niezweryfikowany.",
+   "conclusion": "PARTIAL (narzędzie leadowe vendora).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://amzprep.com/fba-vs-3pl/",
+   "competitor": "AMZ Prep – Amazon FBA vs 3PL guide",
+   "related_idea": "G6-01",
+   "features_checked": "Przewodnik o wyborze modelu fulfillment",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "SUBSTITUTE (treść vendora).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://packprofulfilment.co.uk/amazon-fba-vs-3pl-calculator/",
+   "competitor": "PackPro – Amazon FBA vs 3PL Fulfilment Calculator",
+   "related_idea": "G6-01",
+   "features_checked": "Rynek UK; wolumen, rozmiar, stopa zwrotów; miesięczny koszt i marża; domyślne opłaty FBA według size band, możliwe nadpisanie",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL, rynek UK, nie USA.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://calcbee.com/calculators/ecommerce/fulfillment/3pl-cost-calculator/",
+   "competitor": "Calcbee – 3PL Cost Calculator",
+   "related_idea": "G6-01",
+   "features_checked": "Sumuje opłaty 3PL do kosztu na zamówienie; porównanie z FBA i self-fulfillment; osobne FBA vs FBM",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://ledgerport.com/3pl-vs-fba-vs-self-fulfillment/",
+   "competitor": "Ledgerport – 3PL vs FBA vs Self-Fulfillment: Total Cost Compared",
+   "related_idea": "G6-01",
+   "features_checked": "Tytuł wskazuje na porównanie kosztów całkowitych",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł); nie wiadomo, czy to narzędzie, czy artykuł.",
+   "conclusion": "SUBSTITUTE lub PARTIAL (format niezweryfikowany).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://warehousingcosts.com/guides/amazon-fba-vs-3pl",
+   "competitor": "WarehousingCosts.com – Amazon FBA vs 3PL: Full Cost Comparison (2026)",
+   "related_idea": "G6-01",
+   "features_checked": "Benchmarki: FBA $3,22–$89,98 za sztukę, 3PL $3,50–8,00 za zamówienie; storage Q4; aged surcharges",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "SUBSTITUTE (przewodnik i źródło benchmarków).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://www.atomixlogistics.com/blog/amazon-fba-vs-fbm-which-is-right-for-your-ecommerce-business",
+   "competitor": "Atomix Logistics – FBA vs FBM vs 3PL blog",
+   "related_idea": "G6-01",
+   "features_checked": "Przewodnik wyboru modelu",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "SUBSTITUTE (treść vendora 3PL).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "https://en.codept.de/blog/3pl-vs-fba-fulfillment-costs",
+   "competitor": "Codept – Understanding Fulfilment Costs: 3PLs vs. FBA",
+   "related_idea": "G6-01",
+   "features_checked": "Blog o kosztach (rynek EU)",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "SUBSTITUTE, niska trafność dla USA.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL cost comparison calculator",
+   "url": "brak URL w wynikach – wzmianka w search-summary",
+   "competitor": "Amazon Revenue Calculator",
+   "related_idea": "G6-01",
+   "features_checked": "Dla pojedynczego ASIN: koszt, zysk netto, marża netto",
+   "access_limits": "Brak URL w wynikach, nie otwierano. Dowód = wzmianka w search-summary.",
+   "conclusion": "PARTIAL (tylko Amazon).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://amzprep.com/us-reciprocal-tariffs-calculator/",
+   "competitor": "AMZ Prep – US Tariff Calculator 2026",
+   "related_idea": "G6-02, G6-03",
+   "features_checked": "Kalkulator taryf USA 2026 (szczegóły niezweryfikowane)",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "DIRECT dla G6-03; PARTIAL dla G6-02.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://ustariffrates.com/calculator",
+   "competitor": "ustariffrates.com – US Import Duty Calculator 2026",
+   "related_idea": "G6-02, G6-03",
+   "features_checked": "Cło według HTS i landed cost; wyklucza wygasłą Section 122; MPF 0,3464%, min $34,58, max $670,86 od 1.10.2026",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-03; PARTIAL dla G6-02.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://ustariffcalc.com/",
+   "competitor": "ustariffcalc.com – US Import Tariff Calculator 2026",
+   "related_idea": "G6-03",
+   "features_checked": "Stawki średnie dla kategorii; deklarowana dokładność 1–3%; Section 301 forced-labor 10–12,5%",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-03.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://www.calcmytariff.com/",
+   "competitor": "calcmytariff.com – US Import Tariff Calculator 2026",
+   "related_idea": "G6-03",
+   "features_checked": "Warstwy taryf, nadal z Section 122 (sprzeczność z innymi narzędziami)",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-03; możliwie nieaktualne.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://zentriaflow.com/",
+   "competitor": "Zentriaflow – Free Landed Cost & Tariff Calculator 2026",
+   "related_idea": "G6-02, G6-03",
+   "features_checked": "Landed cost i taryfy; zalecenie weryfikacji klasyfikacji u brokera",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-03; PARTIAL dla G6-02.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://www.importcostcalculator.com/",
+   "competitor": "China Import Duty & Cost Calculator",
+   "related_idea": "G6-03",
+   "features_checked": "Cło i koszt importu z Chin",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "DIRECT dla G6-03.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://importcostpro.com/",
+   "competitor": "Importcostpro – Landed Cost & Import Cost Calculator",
+   "related_idea": "G6-02, G6-03",
+   "features_checked": "Landed cost i koszt importu",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "DIRECT dla G6-03; PARTIAL dla G6-02.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://tariffschart.com/tariff-calculator",
+   "competitor": "tariffschart.com – US Import Duty Calculator 2026",
+   "related_idea": "G6-03",
+   "features_checked": "Kalkulator cła 2026",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "DIRECT dla G6-03.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "landed cost calculator tariffs 2026 importer",
+   "url": "https://www.tariffstool.com/tariff-calculator",
+   "competitor": "TariffsTool – US Customs Duty Calculator",
+   "related_idea": "G6-03",
+   "features_checked": "Kalkulator cła; podaje, że 24.07.2026 Section 301 forced-labor zastąpiła Section 122",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-03.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://terms.law/AB5/tools/ic-employee-calculator.html",
+   "competitor": "Terms.Law – IC vs Employee Cost Calculator",
+   "related_idea": "G6-09, G6-10",
+   "features_checked": "Payroll burden, benefity, analiza skorygowana o ryzyko; kontekst AB5",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "DIRECT dla G6-10; PARTIAL (najbliższy) dla G6-09.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://www.toptal.com/finance/business-consultants/don-t-be-fooled-the-real-cost-of-employees-and-consultants",
+   "competitor": "Toptal – Real Employee Cost Calculator",
+   "related_idea": "G6-09, G6-10",
+   "features_checked": "Metoda rachunku kosztów pracownika vs konsultanta",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://www.clicktime.com/resources/employee-cost-calculator",
+   "competitor": "ClickTime – Employee Cost Calculator",
+   "related_idea": "G6-10",
+   "features_checked": "Koszt całkowity pracownika",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://xgenious.com/free-tools/employee-cost-calculator",
+   "competitor": "xGenious – Employee Total Cost Calculator",
+   "related_idea": "G6-09, G6-10",
+   "features_checked": "Software, overhead, szkolenia; porównanie z dzienną stawką contractora",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://asanify.com/blog/contractor-management/contractor-vs-employee-salary-calculator-a-guide-to-accurate-cost-comparison/",
+   "competitor": "Asanify – Contractor vs Employee Salary Calculator guide",
+   "related_idea": "G6-10",
+   "features_checked": "Przewodnik i kalkulator porównania wynagrodzeń",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "PARTIAL lub SUBSTITUTE.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "brak URL w wynikach – wzmianka w search-summary (Pilot)",
+   "competitor": "QuickBooks Employee Cost Calculator",
+   "related_idea": "G6-10",
+   "features_checked": "Koszt pracownika (wzmianka)",
+   "access_limits": "Brak URL w wynikach, nie otwierano.",
+   "conclusion": "PARTIAL (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://pilot.com/blog/independent-contractor-vs-employee",
+   "competitor": "Pilot – Independent contractor vs employee",
+   "related_idea": "G6-09, G6-10",
+   "features_checked": "Mnożnik 1,25–1,4× pensji (powołanie na MIT)",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "SUBSTITUTE (treść).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://ruul.io/blog/contractor-vs-employee-guide",
+   "competitor": "Ruul – Contractor vs Employee guide",
+   "related_idea": "G6-09, G6-10",
+   "features_checked": "Składniki kosztu (FICA 7,65%, FUTA, SUTA, workers' comp, benefity); limity z 2025 r.",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "SUBSTITUTE; przykład dezaktualizacji danych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://www.getontop.com/blog/dollars-and-sense-calculating-the-true-cost-of-hiring-contractors-vs-employees",
+   "competitor": "Ontop – true cost contractors vs employees",
+   "related_idea": "G6-10",
+   "features_checked": "Artykuł o kosztach",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "SUBSTITUTE.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "employee vs independent contractor true cost calculator",
+   "url": "https://www.gloroots.com/blog/cost-of-an-employee-vs-cost-of-a-contractor",
+   "competitor": "Gloroots – cost of employee vs contractor",
+   "related_idea": "G6-10",
+   "features_checked": "Artykuł o kosztach",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary (tytuł).",
+   "conclusion": "SUBSTITUTE.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "equipment lease vs buy vs loan calculator Section 179 tax",
+   "url": "https://www.surepayroll.com/resources/calculator/small-business/lease-vs-buy",
+   "competitor": "SurePayroll – Lease vs Buy calculator",
+   "related_idea": "G6-07",
+   "features_checked": "Ogólny kalkulator lease vs buy; Section 179 ograniczony dochodem podatkowym, wymóg >50% użycia służbowego (z opisu)",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "equipment lease vs buy vs loan calculator Section 179 tax",
+   "url": "https://www.surepayroll.com/resources/calculators/equipment-lease-calculator",
+   "competitor": "SurePayroll – Equipment Lease Calculator",
+   "related_idea": "G6-07",
+   "features_checked": "Rata leasingu sprzętu",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "PARTIAL.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "equipment lease vs buy vs loan calculator Section 179 tax",
+   "url": "https://beancount.io/blog/2026/10/16/lease-vs-buy-business-equipment-analysis-after-tax-cash-flows-guide",
+   "competitor": "beancount.io – lease vs buy after-tax cash flows guide (2026-10-16)",
+   "related_idea": "G6-07",
+   "features_checked": "Rama TCO i przepływy po opodatkowaniu",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary.",
+   "conclusion": "SUBSTITUTE (treść, nie narzędzie).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "equipment lease vs buy vs loan calculator Section 179 tax",
+   "url": "https://beancount.io/blog/2026/07/05/lease-vs-buy-equipment-2026-section-179-total-cost-ownership-tax-math-guide",
+   "competitor": "beancount.io – lease vs buy 2026 Section 179 TCO guide (2026-07-05; także wersja 2026-07-08)",
+   "related_idea": "G6-07",
+   "features_checked": "Przykład: skid-steer $60k, kredyt $1180 vs leasing $820 miesięcznie; podaje 40% bonus i limit Section 179 $1,25M na 2026 r.",
+   "access_limits": "Strony nie otwierano. Dowód = search-summary. Parametry podatkowe prawdopodobnie sprzeczne z OBBBA (wiedza treningowa, niezweryfikowane w tej sesji).",
+   "conclusion": "SUBSTITUTE; potencjalnie nieaktualne dane podatkowe.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – nie wyszukiwano (limit wyszukiwań wyczerpany)",
+   "url": "nie zweryfikowano – brak URL w wynikach",
+   "competitor": "Marketplace'y pożyczkowe i portale finansowe (np. Lendio, Nav, Fundera, NerdWallet – nazwy z wiedzy treningowej)",
+   "related_idea": "G6-05, G6-06",
+   "features_checked": "Brak – nie sprawdzano",
+   "access_limits": "Nie wyszukiwano i nie otwierano. Nazwy z wiedzy treningowej, bez dowodu z tej sesji.",
+   "conclusion": "Hipoteza: PARTIAL lub SUBSTITUTE; wymaga weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – nie wyszukiwano (limit wyszukiwań wyczerpany)",
+   "url": "nie zweryfikowano – brak URL w wynikach",
+   "competitor": "Dostawcy finansowania zapasów i RBF (np. Kickfurther, Settle, Wayflyer, Clearco – nazwy z wiedzy treningowej)",
+   "related_idea": "G6-04, G6-05",
+   "features_checked": "Brak – nie sprawdzano",
+   "access_limits": "Nie wyszukiwano i nie otwierano. Nazwy z wiedzy treningowej.",
+   "conclusion": "Hipoteza: PARTIAL (kalkulatory własnych produktów); wymaga weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – nie wyszukiwano (limit wyszukiwań wyczerpany)",
+   "url": "nie zweryfikowano – brak URL w wynikach",
+   "competitor": "Freightos i narzędzia wycen spedytorów (nazwa z wiedzy treningowej)",
+   "related_idea": "G6-15",
+   "features_checked": "Brak – nie sprawdzano",
+   "access_limits": "Nie wyszukiwano i nie otwierano.",
+   "conclusion": "Hipoteza: PARTIAL; wymaga weryfikacji.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "WYKONANE (extended): FBA vs 3PL cost comparison calculator",
+  "WYKONANE (extended): landed cost calculator tariffs 2026 importer",
+  "WYKONANE (standard): employee vs independent contractor true cost calculator",
+  "WYKONANE (standard): equipment lease vs buy vs loan calculator Section 179 tax",
+  "NIEWYKONANE – wspólny limit 200 wyszukiwań na turę wyczerpany przez inne agenty: One Big Beautiful Bill Section 179 limit 2026 100% bonus depreciation small business equipment",
+  "NIEWYKONANE – limit: Section 122 tariff expired July 2026 Section 301 replacement importers refunds IEEPA",
+  "NIEWYKONANE – limit: SBA loan vs merchant cash advance vs line of credit comparison calculator true APR",
+  "NIEWYKONANE – limit: cash conversion cycle calculator inventory financing ecommerce cash flow simulator",
+  "UWAGA: WebFetch celowo nie był używany (zablokowany zgodnie z instrukcją). Przy kontynuacji wykonać m.in.: 'bulk order discount vs inventory financing calculator', 'tariff pull forward inventory decision', 'FTZ savings calculator', 'air vs ocean freight split calculator stockout', 'reddit FulfillmentByAmazon 3PL vs FBA', 'PO financing vs factoring calculator', 'ad spend inventory stockout planning tool', 'return policy ROI calculator', 'IRS Publication 946 2026 Section 179 limit'."
+ ]
+}

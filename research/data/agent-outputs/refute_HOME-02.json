@@ -1,0 +1,82 @@
+{
+ "id": "HOME-02",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "Bellhaven - Rent vs Sell Calculator",
+   "url": "https://www.bellhaven.org/tools/rent-vs-sell-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: liczy oba scenariusze obok siebie: cash-flow, amortyzację kredytu, wyłączenie §121, recapture amortyzacji i koszt utraconej reinwestycji wpływów ze sprzedaży. Ma pola: pustostany, opłata property managera, stawki podatku od zysków i dochodu, stopa reinwestycji. Strona pisze, że najem powyżej ok. 3 lat odbiera §121. Z tego, co widać w summary, jest to najmocniejszy kandydat w klastrze PM/brokerów: łączy §121 i recapture w jednym modelu. Poprzedni audyt wrzucił go tylko do zbiorczego klastra, a zasługuje na osobną weryfikację. Summary nie wspominają o: wartości niskiego kredytu względem nowej stopy, powiązaniu zamrożonego kapitału z wkładem i ratą w nowym domu, wariancie 'najem N lat i sprzedaż przed terminem' liczonym od daty wyprowadzki, najmie średnioterminowym.",
+   "what_to_check_manually_pl": "Otworzyć narzędzie i sprawdzić: (1) czy pyta o datę wyprowadzki albo lata zamieszkania i samo wylicza termin §121, czy tylko ma przełącznik 'primary residence'; (2) czy recapture liczy osobno (25%) także przy sprzedaży objętej wyłączeniem; (3) czy porównuje więcej niż 2 warianty, np. sprzedaż przed terminem vs hold; (4) czy ma stopę kredytu na nowy dom i wkład własny; (5) czy pozwala porównać PM z samodzielnym zarządzaniem w jednym widoku. Jeśli (1)-(4) są spełnione, przeklasyfikować na direct."
+  },
+  {
+   "name": "TrueHomeCosts - Move or Stay Calculator",
+   "url": "https://truehomecosts.com/move",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: porównuje pięć opcji, m.in. 'Keep & Rent' (zatrzymanie i najem przy zakupie nowego domu), i pokazuje koszt rezygnacji z obecnej stopy. Koszty sprzedaży przykładowo 5,5% + 1%. To jedyny kandydat, którego summary łączy wartość niskiego kredytu z zakupem kolejnego domu, czyli zależność pominiętą przez klaster rent-vs-sell. Summary zauważa jednak, że przykładowe liczby są wewnętrznie niespójne (wartość netto 'Keep & Rent' dużo niższa niż 'Stay Put', etykiety nie pasują do liczb). Brak potwierdzenia §121, recapture i terminu sprzedaży. Poprzedni audyt go nie znalazł.",
+   "what_to_check_manually_pl": "Otworzyć /move i sprawdzić: listę 5 wariantów; czy 'Keep & Rent' modeluje cash-flow najmu z kosztami landlorda; czy liczy podatek od zysku z §121, test 2 z 5 i recapture; czy kapitał zostawiony w starym domu zmniejsza wkład i podnosi ratę nowego kredytu; jak liczy 'cost of giving up your rate' (PV różnicy rat?). Sprawdzić też, czy niespójność liczb to błąd narzędzia, czy tylko summary."
+  },
+  {
+   "name": "TeamzLab - Rent vs Sell: Keep Current Home 2027 NPV Calculator",
+   "url": "https://tool.teamzlab.com/real-estate/rent-vs-sell-keep-current-home-2027-calc/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: porównuje 10-letnie NPV najmu (cash-flow, wzrost wartości, tarcza podatkowa z amortyzacji) ze sprzedażą teraz i inwestycją w akcje lub obligacje. Zakłada utrzymanie niskooprocentowanego kredytu. Opisuje utratę §121 po ok. 3-letnim 'aging-out' (summary uznaje to za uproszczenie). Pokrywa więc trzy elementy: low-rate, §121 i sprzedaż z inwestycją. Nowe narzędzie (rocznik 2027 w nazwie), poprzedni audyt go nie znalazł. Brak potwierdzenia: osobnego recapture, wariantu sprzedaży przed terminem, powiązania z nowym domem, PM vs samodzielnie, najmu średnioterminowego.",
+   "what_to_check_manually_pl": "Sprawdzić: czy horyzont jest stały (10 lat), czy daje się ustawić N lat i sprzedaż przed końcem okna §121; czy przy sprzedaży po najmie liczy recapture osobno; czy wartość niskiej stopy jest liczona jawnie (spread vs stopa rynkowa); czy jest pole nowego domu, wkładu i raty."
+  },
+  {
+   "name": "OC Goodlife - The Ultimate Rent vs. Sell Calculator (oraz Bowman PM, Westside PM, Property Managers Seattle, Goodlife Mgmt)",
+   "url": "https://ocgoodlife.com/rent-vs-sell-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kolejne kalkulatory lead-gen firm zarządzających najmem, nieobecne w klastrze poprzedniego audytu: https://www.bowmanpropertymanagement.com/rent-sell-calculator, https://www.westsidepropertymanagement.com/rent-vs-sell-calculator/, https://propertymanagersseattle.com/rent-vs-sell-calculator/, https://www.goodlifemgmt.com/rent-vs-sell-calculator/. Wspólny schemat z summary: sprzedaż teraz (cena minus koszty, spłata kredytu, podatek) vs najem i późniejsza sprzedaż. Rok po roku: wzrost wartości, spłata kapitału, cash-flow po pustostanach, zarządzaniu i utrzymaniu. Opłatę PM można wyzerować przy samodzielnym zarządzaniu (porównanie PM vs samodzielnie wymaga dwóch przebiegów). Reinwestycja zwykle ok. 7%. Brak potwierdzenia terminu §121, recapture, low-rate i nowego domu.",
+   "what_to_check_manually_pl": "Wyrywkowo otworzyć 2-3 z nich (najpierw OC Goodlife, 'Ultimate', bo nazwa sugeruje szerszy zakres). Sprawdzić, czy któryś ma datę wyprowadzki i test 2 z 5, osobne recapture albo porównanie wariantów w jednym widoku."
+  },
+  {
+   "name": "Taxstra - Sell or Rent Your House (strategy)",
+   "url": "https://taxstra.com/strategies/sell-or-rent-your-house/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: strona strategii podatkowej. Opisuje zegar wyłączenia (ok. 3 lata od wyprowadzki na sprzedaż) i limit bazy amortyzacji (niższa z kosztu i wartości rynkowej przy konwersji). Summary nie potwierdza interaktywnego kalkulatora wariantów. Ważna jako źródło merytoryczne i potencjalny konkurent SEO, nie jako narzędzie.",
+   "what_to_check_manually_pl": "Sprawdzić, czy strona ma kalkulator lub interaktywny planer (Taxstra może mieć narzędzia za logowaniem albo płatne), czy to tylko artykuł."
+  },
+  {
+   "name": "SwitchWize - Sell vs Rent Your Home: The Real Math and Decision Framework (2026)",
+   "url": "https://www.switchwize.com/learn/sell-vs-rent-2026",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: przewodnik i framework decyzyjny na 2026, w sekcji 'learn'. Summary nie potwierdza, że strona ma kalkulator. Nie udało się znaleźć osobnego narzędzia SwitchWize. Konkurent treściowy (SEO) dla tej samej intencji.",
+   "what_to_check_manually_pl": "Sprawdzić, czy przewodnik osadza kalkulator albo czy SwitchWize ma osobne narzędzie sell-vs-rent (nazwa sugeruje platformę porównań)."
+  },
+  {
+   "name": "HomeApproach - Rent Vs Sell Home in Relocation: Cash Flow & Tax Analysis",
+   "url": "https://www.homeapproach.com/blog/rent-vs-sell-relocation-guide",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: wpis blogowy dokładnie o momencie relokacji (cash-flow i podatki). Trafia w tę samą intencję co HOME-02, ale summary pokazuje tylko artykuł, nie narzędzie.",
+   "what_to_check_manually_pl": "Sprawdzić, czy wpis zawiera kalkulator lub link do narzędzia HomeApproach i czy uwzględnia termin §121 oraz recapture."
+  },
+  {
+   "name": "Key Renter West Seattle - Keep a Low-Rate Home or Sell It? Seattle Math",
+   "url": "https://www.keyrenterwestseattle.com/keep-low-mortgage-rate-home-vs-selling",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: artykuł lead-gen PM o zatrzymaniu domu z niską stopą vs sprzedaży, z naciskiem na lokalne porównania czynszów. Podobny artykuł: https://1836propertymanagement.com/should-i-sell-or-rent-my-house/ ('Massive Advantage of a Low Mortgage Rate'). Pokazuje, że kąt 'low-rate value' jest już eksploatowany treściowo, ale jako artykuły, nie zintegrowane narzędzia.",
+   "what_to_check_manually_pl": "Sprawdzić, czy artykuły osadzają kalkulator (część sieci Keyrenter i PM ma własne rent-vs-sell) i czy liczą wartość niskiej stopy liczbowo."
+  },
+  {
+   "name": "Taxpayers.net - Home Sale Capital Gains Tax Calculator 2026 (§121 + NIIT)",
+   "url": "https://taxpayers.net/calculators/home-sale-capital-gains",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: samodzielny kalkulator podatku od sprzedaży domu z §121 i NIIT. Według summary uwzględnia też nonqualified use z §121(b)(5). To komponent (część podatkowa), nie decyzja sprzedać, wynajmować czy trzymać. Użytkownik musiałby go skleić z kalkulatorem rent-vs-sell.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma pola daty wyprowadzki i okresu najmu oraz recapture. Jeśli tak, to razem z Bellhaven lub TrueHomeCosts tworzy łatwy do sklejenia substytut."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Kategoria jest jednak gęstsza, niż podał poprzedni audyt. Doszły trzy kandydatury, z których każda domyka inną część luki. (1) Bellhaven: w jednym modelu §121, recapture, cash-flow z opłatą PM i koszt utraconej reinwestycji. To najbliżej rdzenia podatkowego. (2) TrueHomeCosts Move or Stay: 5 opcji, w tym 'Keep & Rent' przy zakupie nowego domu, plus 'koszt rezygnacji z obecnej stopy'. Jako jedyny łączy wartość niskiego kredytu z kolejnym domem, ale summary wskazują niespójne liczby. (3) TeamzLab Keep Current Home NPV: utrzymany niski kredyt, 10-letnie NPV i 'aging-out' §121. Żadne summary nie potwierdza narzędzia, które naraz: liczy termin §121 od daty wyprowadzki i traktuje 'najem N lat i sprzedaż przed terminem' jako osobny wariant, rozdziela recapture i wyłączenie, wycenia niską stopę przez różnicę stóp, wiąże zamrożony kapitał z wkładem i ratą nowego domu oraz porównuje PM z samodzielnym zarządzaniem i najem średnioterminowy. Luka dotyczy więc integracji, nie kategorii, i jest wąska. Bellhaven plus TrueHomeCosts razem pokrywają prawdopodobnie 70-80% zależności. Jeśli ręczna weryfikacja wykaże, że Bellhaven liczy termin od daty wyprowadzki, a TrueHomeCosts ma podatki, któryś z nich może okazać się direct. Pod pozycjonowanie warto rozważyć: zegar §121 z datą graniczną, wariant 'sprzedaj przed terminem' optymalizowany względem hold, jawną wartość PV niskiej stopy oraz efekt na ratę nowego domu. Tych elementów nie potwierdzono w żadnym narzędziu.",
+ "search_scope_pl": "8 wyszukiwań WebSearch (6 extended, 2 standard), indeks US, data 2026-10-25. Dowody wyłącznie z search-summary, stron nie otwierano (WebFetch niedostępny). Kąty wyszukiwania: fraza 'accidental landlord' z §121 i 3 latami; wartość niskiej stopy z wkładem w nowy dom; weryfikacja TrueHomeCosts i TeamzLab; Reddit i arkusze; PM vs samodzielnie i najem średnioterminowy; aplikacje i narzędzia AI 2026; SwitchWize i TrueHomeCosts. Nie sprawdzono płatnego oprogramowania doradczego (RightCapital, Holistiplan, ProjectionLab, Boldin), aplikacji mobilnych w sklepach ani płatnych arkuszy na Etsy. Pewność: średnia-niska. Dwa najsilniejsze tropy (Bellhaven, TrueHomeCosts) mają niezweryfikowany zakres pól.",
+ "confidence": "medium",
+ "queries_run": [
+  "accidental landlord calculator keep house rent out or sell 121 exclusion 3 years",
+  "keep low mortgage rate rent out house when moving calculator value of low rate new home down payment",
+  "truehomecosts move or stay calculator keep and rent section 121 depreciation recapture",
+  "reddit spreadsheet sell or rent out house after moving low rate mortgage depreciation recapture \"3 years\" model",
+  "rent vs sell calculator mid-term rental property manager vs self-manage compare scenarios sell before capital gains exclusion expires",
+  "\"rent vs sell\" NPV calculator \"aging out\" section 121 keep current home locked-in rate",
+  "should I sell or rent out my house when relocating app OR \"AI\" tool 2026 compare sell now, rent then sell, hold long term",
+  "switchwize sell vs rent calculator OR truehomecosts \"Move or Stay\" calculator keep and rent capital gains exclusion"
+ ]
+}

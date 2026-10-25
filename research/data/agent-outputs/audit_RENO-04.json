@@ -1,0 +1,425 @@
+{
+ "id": "RENO-04",
+ "competitors": [
+  {
+   "name": "HomeZada – Major Asset Forecasting (AI)",
+   "url": "https://www.homezada.com/press/homezada-launches-ai-powered-major-asset-forecasting-to-help-homeowners-predict-future-replacement-costs",
+   "type": "partial",
+   "access": "Aplikacja SaaS (freemium/premium – plan, w którym jest funkcja, niezweryfikowany; prawdopodobnie wymaga logowania)",
+   "covers_pl": "Wg podsumowania (kwiecień 2026): z adresu nieruchomości buduje inwentarz głównych elementów (dach, elewacja, okna, HVAC, bojler, drzwi garażowe, podjazd, taras, sprzęt basenowy, AGD) i szacuje rok oraz koszt wymiany każdego z nich. Osobno: 5-letnia prognoza kosztów utrzymania i 3-letnia prognoza finansowa (https://www.homezada.com/homeowners/home-maintenance, https://www.homezada.com/homeowners/home-finances). To najbliższy fragment: harmonogram wymian per element.",
+   "misses_or_unverified_pl": "Niezweryfikowane: optymalizacja kolejności przy twardym rocznym limicie budżetu, probabilistyczne awarie i premia za wymianę awaryjną, szkody następcze, zależności technologiczne (np. rozdzielnia przed HVAC/pompą ciepła), porównanie finansowania vs pay-as-you-go, koszt P90, wskazanie najbardziej wrażliwego terminu. Opis sugeruje prognozę deterministyczną (rok + koszt), a nie symulację strategii. Brak niezależnych testów trafności."
+  },
+  {
+   "name": "AHA Home Repair Reserve Calculator",
+   "url": "https://joinhomeowners.org/home-repair-reserve-calculator/",
+   "type": "partial",
+   "access": "Darmowy kalkulator webowy (wg podsumowania)",
+   "covers_pl": "Na podstawie wieku dachu, HVAC i bojlera porównuje regułę 1% wartości domu z sumą dużych pozycji i rekomenduje wyższą kwotę jako roczny cel oszczędzania.",
+   "misses_or_unverified_pl": "Daje jedną kwotę rezerwy, a nie plan rok po roku ani kolejność. Brak (wg podsumowania) ograniczenia budżetu, ryzyka awarii, kosztu awaryjnego, szkód następczych i finansowania. Szczegóły formularza niezweryfikowane."
+  },
+  {
+   "name": "Bellhaven Free CapEx Calculator for Rental Properties",
+   "url": "https://www.bellhaven.org/tools/capex-calculator",
+   "type": "partial",
+   "access": "Darmowy kalkulator webowy (wg podsumowania); grupa docelowa: wynajem",
+   "covers_pl": "Lista elementów z wiekiem, oczekiwaną żywotnością i kosztem; liczy rezerwę roczną per system (koszt / pozostała żywotność) i sumę miesięczną (fundusz celowy).",
+   "misses_or_unverified_pl": "Logika funduszu celowego bez sekwencjonowania przy limicie, bez symulacji awarii, kosztu awaryjnego, szkód następczych, zależności i porównania finansowania. Przeznaczony dla inwestorów w wynajem, nie dla właściciela po inspekcji."
+  },
+  {
+   "name": "InterviewGrid – Property Maintenance & Capital Expenditure Reserve Calculator",
+   "url": "https://www.interviewgrid.com/tools/property-maintenance-capital-expenditure-reserve-calculator",
+   "type": "partial",
+   "access": "Darmowy kalkulator webowy (zakładane; niezweryfikowane)",
+   "covers_pl": "Wg tytułu: rezerwa na utrzymanie i wydatki kapitałowe nieruchomości.",
+   "misses_or_unverified_pl": "Podsumowanie nie opisało funkcji, więc wszystkie funkcje są niezweryfikowane. Prawdopodobnie prosty kalkulator rezerwy bez sekwencjonowania i ryzyka (hipoteza)."
+  },
+  {
+   "name": "TidyBoss Home Maintenance Cost Calculator",
+   "url": "https://mytidyboss.com/tools/maintenance-budget-calculator/",
+   "type": "partial",
+   "access": "Darmowy (wg podsumowania)",
+   "covers_pl": "Szacuje roczny koszt utrzymania domu; podaje typowe żywotności i koszty: dach 20–30 lat / $8–25k, HVAC 15–20 lat / $5–15k, bojler 8–12 lat / $0,8–2,5k.",
+   "misses_or_unverified_pl": "Szacunek budżetu, a nie plan kolejności; brak (wg podsumowania) ryzyka awarii, P90, zależności i finansowania."
+  },
+  {
+   "name": "StateCalc – stanowe Home Maintenance Cost Calculators (np. Ohio, Florida)",
+   "url": "https://statecalc.com/home-maintenance/ohio-home-maintenance-calculator/",
+   "type": "partial",
+   "access": "Darmowe (wg podsumowania)",
+   "covers_pl": "Roczny budżet utrzymania liczony stałym procentem z korektą na koszty życia w danym stanie.",
+   "misses_or_unverified_pl": "Wg podsumowania wyniki są prawie identyczne we wszystkich stanach (tylko skalowanie). Brak harmonogramu wymian, ryzyka i sekwencjonowania. Słaby fragment."
+  },
+  {
+   "name": "InspectionIQ",
+   "url": "https://inspectioniq.app/",
+   "type": "partial",
+   "access": "Aplikacja webowa; model płatności niezweryfikowany (upload raportu inspekcji)",
+   "covers_pl": "Przypisuje usterkom z raportu inspekcji realne koszty napraw z korektą regionalną, kategoryzuje je wg wagi, daje wskazówki negocjacyjne i 'action plan'.",
+   "misses_or_unverified_pl": "Wg podsumowania brak wyraźnego harmonogramu/timeline. Wieloletni plan z limitem budżetu, ryzyko awarii, P90 i finansowanie: niezweryfikowane (raczej nieobecne). Fokus: negocjacja przed zakupem, nie plan kapitałowy."
+  },
+  {
+   "name": "InspectReply-Ai",
+   "url": "https://www.inspectreply-ai.com/",
+   "type": "partial",
+   "access": "Częściowo darmowe (darmowy Reply Builder wg podsumowania); reszta niezweryfikowana",
+   "covers_pl": "Szacunki kosztów napraw z raportu inspekcji, kolorowy system priorytetów (critical/major/minor), dopasowanie wykonawców, generator próśb o naprawę i kredyt w negocjacji.",
+   "misses_or_unverified_pl": "Nie znaleziono funkcji harmonogramu. Sekwencjonowanie w czasie przy budżecie, symulacja awarii i finansowanie niezweryfikowane. Przeznaczenie: etap negocjacji zakupu."
+  },
+  {
+   "name": "Inspection AI Analyzer (iOS) / HomeInsight AI / Inspectorvilla Free Inspection Report Analyzer",
+   "url": "https://apps.apple.com/us/app/inspection-ai-analyzer/id6575359761",
+   "type": "partial",
+   "access": "Inspection AI Analyzer: darmowy wg podsumowania (App Store); HomeInsight AI (https://homeinsightai.com/) i Inspectorvilla (https://www.inspectorvilla.com/analyzer): dostęp niezweryfikowany / analizator Inspectorvilla opisany jako darmowy",
+   "covers_pl": "Streszczenie raportu inspekcji, szacunki kosztów per sekcja, wskazanie najpoważniejszych usterek.",
+   "misses_or_unverified_pl": "Brak (w podsumowaniach) planu rok po roku, ograniczenia budżetu, modelu awarii i finansowania. Funkcje szczegółowe niezweryfikowane."
+  },
+  {
+   "name": "Planner 5D Home Repair Estimator",
+   "url": "https://planner5d.com/repairestimator",
+   "type": "partial",
+   "access": "Niezweryfikowany (prawdopodobnie freemium)",
+   "covers_pl": "Szacowanie kosztów napraw domu (wg tytułu wyniku).",
+   "misses_or_unverified_pl": "Podsumowanie nie podało funkcji, więc są niezweryfikowane. Raczej estymator kosztów pojedynczych prac, bez sekwencjonowania i ryzyka (hipoteza)."
+  },
+  {
+   "name": "Dwellin (aplikacja home management)",
+   "url": "https://realestateledger.io/guides/best-homeowner-apps",
+   "type": "partial",
+   "access": "Aplikacja; model płatności niezweryfikowany. URL to strona porównania (podsumowanie nie wskazało jednoznacznie źródła wzmianki o Dwellin; własna strona Dwellin nie pojawiła się w wynikach)",
+   "covers_pl": "Wg podsumowania: z danych adresowych (metraż, rok budowy, wiek systemów) buduje harmonogram konserwacji i szacuje roczne koszty mediów, napraw i wymian.",
+   "misses_or_unverified_pl": "Niezweryfikowane: kolejność wymian przy limicie budżetu, symulacja awarii, P90, szkody następcze, finansowanie."
+  },
+  {
+   "name": "Arkusze sinking funds (np. Financial AHA Google Sheets, ReceiptSync Excel, szablony Etsy)",
+   "url": "https://www.financialaha.com/guides/budgeting-methods/sinking-funds/",
+   "type": "substitute",
+   "access": "Darmowe i płatne szablony ($5,99–$29 wg podsumowania); inne: https://receiptsync.net/blog/sinking-funds-spreadsheet-excel-template, https://www.etsy.com/listing/892854315/sinking-funds-tracker-spreadsheet",
+   "covers_pl": "Ogólny fundusz celowy (cel, termin, miesięczna wpłata, saldo). Po dodaniu wiersza na element domu daje prosty harmonogram oszczędzania.",
+   "misses_or_unverified_pl": "Nie znaleziono szablonu dedykowanego wymianom dach/HVAC/bojler ani wątków Reddit z takim arkuszem (w badanym zakresie). Brak logiki ryzyka, sekwencji i zależności; użytkownik musi sam zbudować model."
+  },
+  {
+   "name": "Poradniki priorytetyzacji napraw (Powell Renovations, Homespections, Newrez, Synovus, RISMedia)",
+   "url": "https://powellrenovations.com/which-home-systems-deserve-your-investment-budget-first/",
+   "type": "substitute",
+   "access": "Darmowe treści; inne: https://homespections.com/blog/budgeting-for-home-repairs-and-improvements, https://www.newrez.com/blog/home-ownership/home-maintenance-checklist-how-to-prioritize-repairs-and-plan-home-improvements/, https://www.synovus.com/personal/resource-center/home-ownership/5-common-home-repairs-and-how-to-budget-for-them/",
+   "covers_pl": "Heurystyki: najpierw bezpieczeństwo, potem zapobieganie szkodom, potem ulepszenia; koszyki 'ten rok / rok 2 / rok 3+'; bufor 10–20%; pytanie 'czy odłożenie zwiększy przyszły koszt?'.",
+   "misses_or_unverified_pl": "Treść statyczna bez obliczeń na danych użytkownika; brak kwantyfikacji ryzyka, P90 i finansowania."
+  },
+  {
+   "name": "HOA reserve study (np. Association Reserves) – koncepcja/oprogramowanie dla wspólnot",
+   "url": "https://www.reservestudy.com/resources/article/reserve-study-basics-your-first-guide-to-hoa-reserve-studies/",
+   "type": "substitute",
+   "access": "Usługa profesjonalna / oprogramowanie dla HOA; niedostępne w formie konsumenckiej dla pojedynczego domu (wg wyników)",
+   "covers_pl": "Wieloletni plan kapitałowy: analiza fizyczna i finansowa, plan finansowania przyszłych wydatków (dach, kocioł, nawierzchnie).",
+   "misses_or_unverified_pl": "Skierowane do wspólnot (HOA/condo). Wyszukiwanie nie znalazło wersji dla domu jednorodzinnego. Klasyczne reserve study zwykle nie modeluje awarii probabilistycznie (wiedza modelu, niezweryfikowane)."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z 'Intelligent UI', Google AI Mode) oraz AI-podsumowania wyszukiwarki",
+   "url": "n/d (kontekst z briefu zadania; brak URL w wynikach)",
+   "type": "substitute",
+   "access": "Darmowe dla użytkowników (wg briefu: ChatGPT Intelligent UI od 7.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026)",
+   "covers_pl": "Na przykładowy prompt dają sensowną jakościową kolejność. Samo podsumowanie wyszukiwarki w zapytaniu nr 1 wygenerowało 'Practical order': dach, jeśli przecieka; inaczej bojler (tani, ryzyko zalania); potem HVAC. Mogą wyrenderować prosty formularz lub kalkulator rezerwy.",
+   "misses_or_unverified_pl": "Brak powtarzalnej, audytowalnej symulacji wielookresowej (Monte Carlo, P90, premia awaryjna, szkody następcze, limit budżetu). Jakość ad hoc kodu niezweryfikowana."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 zapytań WebSearch (extended), anglojęzyczny web US, wyłącznie podsumowania wyszukiwarki, strony nieotwierane. Pewność: średnia-niska.\n\nNajbliższe fragmenty:\n- HomeZada Major Asset Forecasting (od 04.2026): rok i koszt wymiany per element na podstawie adresu; z opisu wynika prognoza deterministyczna.\n- Kalkulatory rezerwy (AHA, Bellhaven, TidyBoss, StateCalc): kwota funduszu celowego.\n- Analizatory raportów inspekcji AI (InspectionIQ, InspectReply-Ai, Inspection AI Analyzer): koszty i priorytet wg wagi, wg podsumowań bez harmonogramu.\n- Poradniki: heurystyki \"bezpieczeństwo → szkody → ulepszenia\".\n\nLuka. W widocznym zakresie żadne narzędzie nie łączy w jednym modelu wszystkich poniższych elementów:\n(a) twardego rocznego limitu budżetu (np. $15k/rok) z przenoszeniem niewykorzystanych środków,\n(b) probabilistycznych awarii (krzywe żywotności) i strategii run-to-failure vs wymiana zapobiegawcza per element,\n(c) premii za wymianę awaryjną vs planową,\n(d) szkód następczych tylko dla wybranych elementów (przeciek dachu, zalanie z bojlera),\n(e) zależności technologicznych (np. rozdzielnia przed nowym HVAC/pompą ciepła; łączenie prac),\n(f) porównania finansowania wszystkiego od razu vs pay-as-you-go.\nWynikiem miałby być plan rok po roku z kosztem oczekiwanym i P90 każdej strategii, prawdopodobieństwem pilnej awarii i elementem o najbardziej wrażliwym terminie.\n\nZastrzeżenia:\n- Funkcje premium HomeZada i Dwellin są niezweryfikowane (mogą częściowo pokrywać plan rok po roku).\n- Asystenci AI dobrze rozwiązują jakościową część problemu, więc luka dotyczy głównie kwantyfikacji ryzyka i budżetu, a nie samej porady \"co najpierw\".\n\nKorekta wcześniejszych notatek:\n- Centriq: wg porównań wycofany (Discontinued), usunięty z listy.\n- HomeZada: potwierdzony jako najsilniejszy partial.\n- Thumbtack i Spectora: niezweryfikowane w tej fali. Faktyczną grupą partiali na etapie inspekcji są analizatory raportów AI.",
+ "search_scope_pl": "7 wyszukiwań WebSearch w trybie extended (limit wyczerpany), US/angielski, dnia 2026-10-25. WebFetch zablokowany, więc żadnej strony nie otwarto, formularzy nie testowano, a paywalli i logowań nie sprawdzano. Dowodem są wyłącznie podsumowania wyszukiwarki.\n\nPokrycie wymaganego miksu zapytań:\n- problem w języku naturalnym: nr 1 i 6;\n- kategoria kalkulatora: nr 2 (średniej długości zamiast krótkiej frazy 2–3 słowa – ograniczenie);\n- alternatywna terminologia: reserve study / capital needs / capex, nr 2 i 4;\n- płatne aplikacje i narzędzia AI: nr 3 i 7;\n- arkusze i Reddit: nr 5 (zwrócił tylko ogólne szablony sinking funds, zero wątków Reddit).\n\nNie sprawdzono:\n- Thumbtack home care plan, Spectora, Homer, BrightNest i aplikacji ubezpieczycieli/home warranty;\n- narzędzi typu repair-or-replace per system;\n- wolumenów słów kluczowych.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wątek forum 'Roof or air conditioner advice': właściciel domu pyta, co wymienić najpierw (dach czy klimatyzacja). Rady są podzielone, czyli dylemat kolejności istnieje i nie ma jednej odpowiedzi.",
+   "url": "https://www.talkofthevillages.com/forums/villages-florida-general-discussion-73/roof-air-conditioner-advice-320694/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Popularny blog DIY opisuje równoczesną konieczność wymiany starego pieca i dachu (dwa duże wydatki naraz).",
+   "url": "https://www.younghouselove.com/two-big-important-things/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wielu wydawców buduje kalkulatory rezerwy na naprawy domu, w tym StateCalc z osobnymi stronami per stan (programatyczne SEO), AHA, TidyBoss i Bellhaven. Wydawcy widzą popyt wyszukiwania na kategorię, ale to także oznaka konkurencji SEO.",
+   "url": "https://statecalc.com/home-maintenance/florida-home-maintenance-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "HomeZada uruchomił w kwietniu 2026 AI Major Asset Forecasting i promuje przekaz 'plan before things break' (podcast, lipiec 2026). Dostawca inwestuje w prognozę wymian.",
+   "url": "https://zen.homezada.com/2026/07/13/ep-058-how-homezada-helps-homeowners-plan-before-things-break/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wysyp aplikacji AI analizujących raporty inspekcji (InspectionIQ, InspectReply-Ai, Inspection AI Analyzer, HomeInsight AI, Inspectorvilla). Użytkownicy po inspekcji szukają pomocy w przełożeniu raportu na koszty i priorytety.",
+   "url": "https://inspectioniq.app/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Banki i pożyczkodawcy (Synovus, Newrez, Sammamish Mortgage) oraz RISMedia publikują w 2026 treści o priorytetyzacji i budżetowaniu napraw. Branża finansowa celuje w tę publiczność, co jest też sygnałem potencjału reklamowego.",
+   "url": "https://www.newrez.com/blog/home-ownership/home-maintenance-checklist-how-to-prioritize-repairs-and-plan-home-improvements/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wykonawca publikuje artykuł 'Which Home Systems Deserve Your Investment Budget First' bezpośrednio o kolejności inwestycji w systemy domu.",
+   "url": "https://powellrenovations.com/which-home-systems-deserve-your-investment-budget-first/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Szacunek z wiedzy modelu, niezweryfikowany w tym badaniu: co roku miliony transakcji domów w USA kończą się raportem inspekcji, a znaczna część zasobu mieszkaniowego ma systemy w wieku końca życia. To liczby gospodarstw, nie miesięczny popyt; wolumen zapytań o łączne planowanie wielu wymian jest nieznany.",
+   "url": "n/d",
+   "evidence_type": "estimate"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest wysokie dla jakościowej części pytania. Już AI-podsumowanie wyszukiwarki na zapytanie nr 1 dało gotową kolejność: dach, jeśli przecieka; inaczej bojler (najtańszy, ryzyko zalania); potem HVAC; plus orientacyjne koszty. ChatGPT z Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą dodatkowo wyrenderować prosty formularz rezerwy lub fundusz celowy, więc proste kalkulatory typu AHA czy Bellhaven są w pełni zastępowalne.\n\nRyzyko jest średnie dla pełnej symulacji, czyli:\n- wieloletnie Monte Carlo z krzywymi awarii,\n- premia awaryjna,\n- szkody następcze tylko dla wybranych elementów,\n- twardy limit budżetu z przenoszeniem środków,\n- zależności technologiczne,\n- porównanie finansowania,\n- P90 i analiza wrażliwości.\nAsystent może napisać kod ad hoc, ale wynik będzie niepowtarzalny, trudny do audytu i zależny od promptu.\n\nAsystent może odesłać do zewnętrznego narzędzia, gdy użytkownik chce zapisać lub edytować plan, porównać strategie albo podać lokalne koszty. Większość użytkowników prawdopodobnie zadowoli się jednak odpowiedzią heurystyczną. Główną wartość narzędzia (P90, wrażliwość terminu) trzeba więc umieć „sprzedać” w odpowiedzi AI, np. przez cytowalne, unikalne wyniki i dane.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Problem jest powszechny (starzejące się systemy, raporty inspekcji, ograniczony budżet). Widać pytania na forach i dużo treści oraz kalkulatorów w kategorii. Sformułowanie 'zsekwencjonuj kilka wymian przy rocznym budżecie' jest jednak węższe niż masowe pytania o pojedynczy system (repair vs replace HVAC, koszt dachu).",
+   "evidence_pl": "Wątek Talk of The Villages (dach vs AC); Young House Love (piec + dach); liczne kalkulatory rezerwy (StateCalc per stan, AHA, TidyBoss); nowa funkcja HomeZada; wiele aplikacji AI do raportów inspekcji; treści banków i pożyczkodawców 2026.",
+   "gaps_pl": "Brak danych o wolumenie słów kluczowych (np. 'roof or hvac first', 'home capex planner'). Zapytanie celujące w Reddit nie zwróciło wątków. Liczba gospodarstw z wieloma systemami na końcu życia to szacunek modelu, nie miesięczny popyt.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "W widocznym zakresie żaden partial nie łączy limitu budżetu, ryzyka awarii, kosztu awaryjnego, szkód następczych, zależności i finansowania. HomeZada daje deterministyczny rok i koszt wymiany, kalkulatory dają fundusz celowy, analizatory inspekcji dają koszty i priorytety bez harmonogramu. Partiale pomijają kluczowe zależności, a nie tylko kosmetykę.",
+   "evidence_pl": "Podsumowanie wyszukiwania nr 6: 'didn't turn up a dedicated tool that converts a home inspection report directly into a multi-year budget'. Nr 7: 'didn't find any app that explicitly builds a repair schedule or timeline'. Nr 4: brak wersji reserve study dla domu jednorodzinnego. HomeZada: prognoza rok + koszt per element.",
+   "gaps_pl": "Funkcje premium HomeZada i Dwellin niezweryfikowane (mogą zawierać plan rok po roku i budżet). Nie sprawdzono Thumbtack, Homer, BrightNest i narzędzi home warranty. Asystenci AI częściowo zastępują wartość.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystenci i AI-podsumowania wyszukiwarki odpowiadają na przykładowy prompt sami, wystarczająco dla większości użytkowników. Odesłanie do narzędzia jest prawdopodobne tylko przy chęci zapisu planu, porównania strategii, P90 czy lokalnych kosztów. Odpowiedź zależy w dużej mierze od lokalnych wycen, ale asystent i tak radzi 'get local quotes' zamiast linkować kalkulator.",
+   "evidence_pl": "Wyszukiwanie nr 1: AI-podsumowanie samo dało 'Practical order' i koszty. Brief: ChatGPT Intelligent UI i Google AI Mode renderują interaktywne kalkulatory.",
+   "gaps_pl": "Brak danych o tym, jak często asystenci cytują lub linkują kalkulatory w tej kategorii. Nie testowano odpowiedzi ChatGPT, Gemini ani Perplexity.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsumencka publiczność USA w trakcie dużych decyzji zakupowych: roofing, HVAC, bojlery, elektryk/rozdzielnia, HELOC i pożyczki na remont, home warranty, ubezpieczenie domu. To jedne z najcenniejszych wertykałów reklamowych, bez ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "Banki i pożyczkodawcy (Synovus, Newrez, Sammamish Mortgage) oraz wykonawcy (Powell Renovations, Rashid Construction) publikują treści dla tej grupy, a InspectReply-Ai monetyzuje dopasowaniem wykonawców.",
+   "gaps_pl": "Brak danych o CPC i RPM AdSense dla tych fraz (wysokie stawki to wiedza modelu, niezweryfikowane). Przychód zależy od skali ruchu, która jest niepewna (patrz demand i ai_distribution).",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Dane są stabilne i darmowe w zakresie przedziałów żywotności i kosztów (widoczne w wynikach: TidyBoss, CostMyHome). Reguły rzadko się zmieniają. Silnik obejmuje 4–8 elementów, przegląd permutacji i Monte Carlo po stronie przeglądarki, co jest wykonalne. Utrzymanie sprowadza się głównie do rocznej aktualizacji kosztów (inflacja, regiony).",
+   "evidence_pl": "Wyniki: typowe żywotności i koszty (dach 20–30 lat / $8–25k; HVAC 15–20 lat / $5–15k; bojler 8–12 lat / $0,8–2,5k; bojler 50 gal ~$1 700 zainstalowany wg CostMyHome).",
+   "gaps_pl": "Krzywe prawdopodobieństwa awarii (np. Weibull) i premie awaryjne wymagają założeń, bez publicznych twardych danych. Regionalne korekty kosztów i ewentualne ulgi podatkowe na energooszczędne systemy wymagają weryfikacji. UX dla wielu wariantów jest złożony.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy są głównie finansowe i umiarkowane. Istnieje jednak ryzyko bezpieczeństwa: optymalizacja kosztowa mogłaby 'odroczyć' niebezpieczną starą rozdzielnię lub piec gazowy. Wyniki P90 opierają się na niepewnych założeniach o awaryjności, a fałszywa precyzja może wprowadzać w błąd. Interpretacji prawnej jest mało.",
+   "evidence_pl": "Poradniki (Homespections, Newrez, Rashid Construction) stawiają bezpieczeństwo na pierwszym miejscu. Wyniki ostrzegają, że kalkulatory dają rozbieżne wyniki zależnie od założeń.",
+   "gaps_pl": "Potrzebne twarde reguły bezpieczeństwa (elementy 'safety-critical' zawsze pierwsze), jawne założenia i disclaimery. Kalibracja krzywych awarii jest nieznana.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Rdzeń produktu to oś przepływów pieniężnych wielookresowych, moduł finansowania (gotówka vs HELOC vs pożyczka), modele żywotności i awarii elementów domu, energia (efektywność HVAC), wartość domu i ewentualne podatki. Moduły bezpośrednio zasilają produkty siostrzane: repair-vs-replace per system, timing wymiany dachu, HVAC vs pompa ciepła, opłacalność home warranty, CapEx planner dla wynajmu, kredyt w negocjacji po inspekcji.",
+   "evidence_pl": "Rynek rozbija ten problem na wiele osobnych narzędzi (kalkulatory rezerwy, CapEx dla wynajmu, estymatory kosztów, analizatory inspekcji), więc wspólny silnik może obsłużyć wiele z tych nisz.",
+   "gaps_pl": "Rzeczywista reużywalność zależy od architektury rodziny RENO. Nie zweryfikowano popytu na poszczególne produkty siostrzane.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważony wynik orientacyjnie ok. 3,65/5. Silne strony: luka w integracji (gap 4), bardzo dobre wertykały reklamowe (5) i reużywalny silnik dla całej rodziny RENO (5). Słabe strony: dystrybucja przez AI (2), bo asystenci i AI-podsumowania same dają akceptowalną kolejność, oraz niepewny wolumen popytu na zintegrowane planowanie (3, niska pewność).\n\nPrzed pilotem należy:\n1. Zweryfikować funkcje premium HomeZada (plan rok po roku, budżet) oraz Dwellin, Thumbtack i Homer.\n2. Sprawdzić wolumeny fraz typu 'roof or hvac first', 'what to replace first house', 'home capex planner', 'home maintenance reserve calculator'.\n3. Przetestować odpowiedzi ChatGPT i Google AI Mode na przykładowy prompt i ocenić, czy kiedykolwiek odsyłają do narzędzia.\n4. Zaprojektować unikalne, cytowalne wyjścia (P90, element o najbardziej wrażliwym terminie, koszt odroczenia), których asystent nie odtworzy wiarygodnie.\n\nJeśli kroki 1–3 wypadną pozytywnie, warto uruchomić pilota jako huba rodziny RENO, z kalkulatorami jednosystemowymi (repair-vs-replace) jako wejściami ruchu.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app forecasts replacement costs of home systems by year HomeZada Centriq capital plan",
+   "url": "https://www.homezada.com/press/homezada-launches-ai-powered-major-asset-forecasting-to-help-homeowners-predict-future-replacement-costs",
+   "competitor": "HomeZada Major Asset Forecasting",
+   "features_checked": "inwentarz elementów z adresu; rok i koszt wymiany per element; 5-letnia prognoza utrzymania; 3-letnia prognoza finansowa; limit budżetu; symulacja awarii; P90; finansowanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; aplikacja z logowaniem, plan premium niezweryfikowany",
+   "conclusion": "Partial, najsilniejszy: deterministyczny harmonogram rok + koszt wymiany per element. Sekwencjonowanie przy budżecie, ryzyko, P90 i finansowanie niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app forecasts replacement costs of home systems by year HomeZada Centriq capital plan",
+   "url": "https://realestateledger.io/comparisons/best-home-maintenance-tracking-app",
+   "competitor": "Centriq",
+   "features_checked": "dostępność produktu; prognoza kosztów wymian",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Wg porównań oznaczony jako Discontinued (sugerowana migracja do Homer). Wcześniejsza notatka o Centriq jako partial nieaktualna; usunięty z listy konkurentów. Przypisanie wzmianki do konkretnej strony porównania jest niepewne.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app forecasts replacement costs of home systems by year HomeZada Centriq capital plan",
+   "url": "https://realestateledger.io/guides/best-homeowner-apps",
+   "competitor": "Dwellin",
+   "features_checked": "dane adresowe i wiek systemów; harmonogram konserwacji; roczne koszty napraw i wymian",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; źródło wzmianki w podsumowaniu niejednoznaczne, własna strona Dwellin nie pojawiła się w wynikach",
+   "conclusion": "Partial: harmonogram konserwacji i roczne szacunki kosztów. Brak dowodów na sekwencjonowanie przy budżecie i modelowanie ryzyka (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://joinhomeowners.org/home-repair-reserve-calculator/",
+   "competitor": "AHA Home Repair Reserve Calculator",
+   "features_checked": "wiek dachu, HVAC i bojlera; reguła 1% vs suma pozycji; roczny cel rezerwy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; formularz nietestowany",
+   "conclusion": "Partial: jedna kwota rezerwy rocznej; brak kolejności, ryzyka i finansowania (wg podsumowania).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://www.bellhaven.org/tools/capex-calculator",
+   "competitor": "Bellhaven CapEx Calculator (rental)",
+   "features_checked": "lista elementów z wiekiem, żywotnością i kosztem; rezerwa = koszt / pozostała żywotność",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (fundusz celowy dla wynajmu); bez sekwencji, ryzyka awarii i szkód następczych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://www.interviewgrid.com/tools/property-maintenance-capital-expenditure-reserve-calculator",
+   "competitor": "InterviewGrid Property Maintenance & CapEx Reserve Calculator",
+   "features_checked": "tylko tytuł wyniku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (sam tytuł)",
+   "conclusion": "Prawdopodobny partial (kalkulator rezerwy); funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://mytidyboss.com/tools/maintenance-budget-calculator/",
+   "competitor": "TidyBoss Home Maintenance Cost Calculator",
+   "features_checked": "roczny budżet utrzymania; typowe żywotności i koszty dachu, HVAC i bojlera",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (budżet utrzymania), przydatne źródło danych o żywotności i kosztach; brak sekwencjonowania.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://statecalc.com/home-maintenance/ohio-home-maintenance-calculator/",
+   "competitor": "StateCalc stanowe kalkulatory utrzymania domu",
+   "features_checked": "stały procent; skalowanie kosztów życia per stan",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Słaby partial (programatyczne SEO, wyniki prawie identyczne między stanami). Sygnał popytu i konkurencji SEO w kategorii.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+   "url": "https://costmyhome.net/calculators/hvac",
+   "competitor": "CostMyHome kalkulatory kosztów",
+   "features_checked": "koszt wymiany bojlera (tank, tankless, pompa ciepła); kalkulatory per kategoria",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial/źródło danych: estymator kosztów pojedynczych prac; nie planuje kolejności.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "AI home inspection report analyzer repair cost estimates prioritized timeline app for buyers",
+   "url": "https://inspectioniq.app/",
+   "competitor": "InspectionIQ",
+   "features_checked": "upload raportu; koszty napraw z korektą regionalną; waga usterek; wskazówki negocjacyjne; 'action plan'; timeline",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatność i logowanie niezweryfikowane",
+   "conclusion": "Partial (etap inspekcji i negocjacji): koszty i priorytet; harmonogram wieloletni niepotwierdzony.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "AI home inspection report analyzer repair cost estimates prioritized timeline app for buyers",
+   "url": "https://www.inspectreply-ai.com/",
+   "competitor": "InspectReply-Ai",
+   "features_checked": "koszty napraw z raportu; priorytety critical/major/minor; dopasowanie wykonawców; Reply Builder",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; Reply Builder opisany jako darmowy, reszta niezweryfikowana",
+   "conclusion": "Partial: priorytetyzacja i koszty bez harmonogramu i budżetu rocznego (wg podsumowania).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "AI home inspection report analyzer repair cost estimates prioritized timeline app for buyers",
+   "url": "https://apps.apple.com/us/app/inspection-ai-analyzer/id6575359761",
+   "competitor": "Inspection AI Analyzer / HomeInsight AI / Inspectorvilla Analyzer",
+   "features_checked": "streszczenie raportu; koszty per sekcja; najważniejsze usterki",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; aplikacja iOS, szczegóły modelu płatności niezweryfikowane",
+   "conclusion": "Partiale niskiego poziomu (koszt i waga), bez planu kapitałowego. Wcześniejsza notatka 'Spectora / repair request lists' dotyczy tej samej grupy, ale samej Spectory nie zweryfikowano.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "AI home inspection report analyzer repair cost estimates prioritized timeline app for buyers",
+   "url": "https://planner5d.com/repairestimator",
+   "competitor": "Planner 5D Home Repair Estimator",
+   "features_checked": "tylko tytuł wyniku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (sam tytuł)",
+   "conclusion": "Prawdopodobny partial (estymacja kosztów napraw); funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tool to prioritize repairs from home inspection report into multi-year budget plan",
+   "url": "https://homespections.com/blog/budgeting-for-home-repairs-and-improvements",
+   "competitor": "Poradniki priorytetyzacji (Homespections, Newrez, RISMedia, Rashid Construction)",
+   "features_checked": "koszyki rok 1 / 2 / 3+; kolejność bezpieczeństwo → szkody → ulepszenia; bufor 10–20%; wskazane aplikacje (HomeAdvisor, BrightNest, Mint, EveryDollar)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść). Podsumowanie wprost: brak dedykowanego narzędzia zamieniającego raport inspekcji w wieloletni budżet.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof, water heater and HVAC all near end of life which should I replace first limited budget",
+   "url": "https://powellrenovations.com/which-home-systems-deserve-your-investment-budget-first/",
+   "competitor": "Powell Renovations / Synovus / Sammamish Mortgage – treści o kolejności",
+   "features_checked": "heurystyki kolejności; orientacyjne koszty (bojler ~$1 294, HVAC $6–8,5k wg Synovus)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść). AI-podsumowanie wyszukiwarki samo złożyło 'Practical order', co jest dowodem wysokiego ryzyka AI self-solve dla części jakościowej.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof, water heater and HVAC all near end of life which should I replace first limited budget",
+   "url": "https://www.talkofthevillages.com/forums/villages-florida-general-discussion-73/roof-air-conditioner-advice-320694/",
+   "competitor": "Forum (rada społeczności)",
+   "features_checked": "pytanie dach vs AC; podzielone rady; wzmianka o home warranty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (porada forum) i bezpośredni sygnał popytu na dylemat kolejności.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reserve study for a single-family home capital needs plan homeowner",
+   "url": "https://www.reservestudy.com/resources/article/reserve-study-basics-your-first-guide-to-hoa-reserve-studies/",
+   "competitor": "HOA reserve study (Association Reserves i in.)",
+   "features_checked": "analiza fizyczna i finansowa; plan finansowania wydatków kapitałowych; dostępność dla domu jednorodzinnego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; usługa profesjonalna dla wspólnot",
+   "conclusion": "Substitute koncepcyjny (wzorzec metodologiczny). Nie znaleziono wersji dla pojedynczego domu, co wspiera hipotezę luki.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit spreadsheet template home sinking fund replacement schedule roof HVAC water heater years remaining",
+   "url": "https://www.financialaha.com/guides/budgeting-methods/sinking-funds/",
+   "competitor": "Szablony sinking funds (Financial AHA, ReceiptSync, Etsy, SpreadsheetsHub, MomMoneyMap)",
+   "features_checked": "cel, termin, wpłata miesięczna, saldo; ceny $5,99–$29; szablon dedykowany wymianom w domu; wątki Reddit",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; część szablonów płatna (Etsy, sklepy)",
+   "conclusion": "Substitute ogólny. Nie znaleziono w badanym zakresie arkusza dedykowanego wymianom dach/HVAC/bojler ani wątków Reddit.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (nie wyszukiwano – limit 7 zapytań)",
+   "url": "n/d",
+   "competitor": "Thumbtack (home care / maintenance plan)",
+   "features_checked": "brak – nie sprawdzano w tej fali",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: brak (notatka z fali 1 z wiedzy modelu)",
+   "conclusion": "Niezweryfikowane; status partial z fali 1 pozostaje hipotezą.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "roof, water heater and HVAC all near end of life which should I replace first limited budget",
+  "home replacement reserve calculator homeowner capital expenditure schedule roof HVAC water heater",
+  "homeowner app forecasts replacement costs of home systems by year HomeZada Centriq capital plan",
+  "reserve study for a single-family home capital needs plan homeowner",
+  "reddit spreadsheet template home sinking fund replacement schedule roof HVAC water heater years remaining",
+  "tool to prioritize repairs from home inspection report into multi-year budget plan",
+  "AI home inspection report analyzer repair cost estimates prioritized timeline app for buyers"
+ ]
+}

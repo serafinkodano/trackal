@@ -1,0 +1,472 @@
+{
+ "seeds": [
+  {
+   "seed_id": "I",
+   "restated_problem_pl": "Właściciel małej firmy produktowej (sklep Shopify/DTC, sprzedawca Amazon FBA, mały detalista lub hurtownik) dostał od dostawcy ofertę z progami cenowymi (MOQ, rabat ilościowy, pełny kontener zamiast LCL). Ma dwie główne drogi: (A) kupić dużą partię po niższym koszcie jednostkowym i sfinansować ją kredytem, linią kredytową, kartą firmową, finansowaniem typu revenue-based/MCA (np. Shopify Capital, 8fig), finansowaniem PO albo kredytem kupieckim od dostawcy; (B) kupić mniejszą partię za gotówkę i dokupić później, drożej i z ryzykiem przerwy w dostępności. Pełny problem decyzyjny obejmuje: harmonogram płatności (zaliczka i reszta przy wysyłce), koszt landed (fracht, cło i taryfy), czas dostawy, prognozę popytu i jej niepewność, budżet reklamowy potrzebny do sprzedania większego wolumenu (CAC/TACoS zwykle rośnie wraz z wolumenem), stopę zwrotów i odsetek zwrotów nadających się do ponownej sprzedaży, marżę po zwrotach i reklamie, koszty magazynowania (w tym opłaty FBA za starzejący się towar), ryzyko przecen i przestarzałości, mechanikę spłaty finansowania (stała rata albo % od sprzedaży, które zmniejsza gotówkę na reklamę), minimalny bufor gotówki oraz ryzyko braku towaru w wariancie B (utracona sprzedaż, na Amazonie spadek rankingu – hipoteza). Wynik: tygodniowa ścieżka gotówki dla każdego wariantu, najniższy punkt gotówki, zysk po kosztach finansowania i magazynowania, ROI na kapitale, próg opłacalności (sell-through, przy którym A przestaje się opłacać), wrażliwość na popyt, CAC, zwroty, oprocentowanie i czas dostawy.",
+   "integration_check_pl": "Integracja jest PRAWDZIWA, nie są to sklejone kalkulatory. Są realne pętle zależności: (1) budżet reklamowy → tempo sprzedaży → czas wyprzedaży partii → koszty magazynowania i naliczane odsetki (przy finansowaniu zależnym od czasu) albo szybkość spłaty (przy finansowaniu zależnym od sprzedaży); (2) spłata jako % przychodu → mniej gotówki na reklamę → wolniejsza sprzedaż → dłuższa spłata i wyższy efektywny APR. To pętla sprzężenia zwrotnego, której zwykły kalkulator pożyczki nie uchwyci; (3) zwroty → niższy przychód netto i częściowy powrót towaru do zapasu → wpływ na sell-through i cash flow; (4) w wariancie B mała partia → moment ponownego zamówienia i czas dostawy → tygodnie bez towaru → utracona marża, a do tego wyższy koszt jednostkowy drugiej partii; (5) wielkość partii → koszt frachtu na sztukę → marża. Ryzyko: moduł 'reklama' i 'zwroty' łatwo zamienić w kosmetyczne pola (stały % od przychodu), które niczego nie zmieniają. Integracja ma sens tylko wtedy, gdy CAC zależy od wolumenu albo tempa, a zwroty wracają do zapasu z opóźnieniem. Druga uwaga: model wymaga 15–25 danych wejściowych, a wielu z nich mały sprzedawca nie zna dokładnie (krzywa CAC w funkcji wolumenu, rozkład popytu). Dlatego konieczne są rozsądne wartości domyślne i analiza wrażliwości, inaczej wynik jest pozornie precyzyjny.",
+   "competitors": [
+    {
+     "name": "8fig (Growth Plan, Cash Flow Tracker, Restock Planner)",
+     "url": "https://www.8fig.co/industries/ecommerce-financing/",
+     "type": "partial",
+     "features_claimed": "Według recenzji (search-summary): Growth Plan mapuje cykle zapasów, wydatki marketingowe i prognozę sprzedaży. Finansowanie wypłaca w transzach powiązanych z kamieniami milowymi PO. Ma Cash Flow Tracker, Restock Planner (termin ponownego zamówienia w odniesieniu do harmonogramu transz) i Sales Forecasting. Pozwala zwizualizować harmonogram produkcji z zaliczkami i budżetami marketingowymi.",
+     "notes": "Najbliżej pełnej integracji, ale to narzędzie dostawcy kapitału, a więc z konfliktem interesów. Czy pokazuje neutralne porównanie z wariantem 'nie pożyczaj, kup mniej', jest niezweryfikowane. Dostęp po zalogowaniu. Wymogi według recenzji: $100K+ przychodu rocznie, ok. $12K+ miesięcznie, 6+ miesięcy działalności, podmiot z USA lub Kanady. Źródła: sellerapp.com/blog/8fig-review/, unitedcapitalsource.com (recenzja 8fig), eightx.co (recenzja 2026).",
+     "paid": "Finansowanie płatne (opłata za kapitał). Narzędzia planistyczne dla klientów lub aplikujących; dostępność bez finansowania niezweryfikowana."
+    },
+    {
+     "name": "AskBiz – Bulk Order Discounts: When to Buy More",
+     "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+     "type": "partial",
+     "features_claimed": "Artykuł z przykładem liczbowym (search-summary): rabat 5% na 500 sztuk przy sprzedaży 100 sztuk miesięcznie i koszcie utrzymania zapasu ok. 20% wartości rocznie daje stratę ok. 146 przy 5 miesiącach zapasu. Próg opłacalności wynosi ok. 2,5 miesiąca zapasu.",
+     "notes": "Treść, nie interaktywny symulator; czy AskBiz ma narzędzie, jest niezweryfikowane. W opisie nie ma finansowania, reklamy, zwrotów ani ścieżki gotówki. Założenie 20% to twierdzenie dostawcy.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Toolsque Bulk Discount Calculator (Tiered Pricing & Crossover)",
+     "url": "https://toolsque.com/tools/bulk-discount-calculator/",
+     "type": "partial",
+     "features_claimed": "Ceny progowe i punkt przecięcia: dokupienie kilku sztuk do wyższego progu może dać niższy koszt całkowity.",
+     "notes": "Tylko fragment (matematyka progów). Search-summary podaje, że jeden z kalkulatorów w wynikach wprost pomija fracht na sztukę i timing cash flow. Którego to dotyczy, niezweryfikowane.",
+     "paid": "darmowy (prawdopodobnie, niezweryfikowane)"
+    },
+    {
+     "name": "ActiveCalculator Bulk Discount Calculator",
+     "url": "https://activecalculator.com/templates/bulk-discount-calculator",
+     "type": "partial",
+     "features_claimed": "Suma po rabacie i cena jednostkowa.",
+     "notes": "Prosty kalkulator, fragment problemu. Nie jest konkurentem bezpośrednim.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "Calculator Academy Bulk Price Calculator",
+     "url": "https://calculator.academy/bulk-price-calculator/",
+     "type": "partial",
+     "features_claimed": "Cena hurtowa i jednostkowa.",
+     "notes": "Fragment; brak finansowania i cash flow (wg opisu kategorii w search-summary).",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "MFE Business Loans – Bulk purchase discounts: how to size it",
+     "url": "https://mfebusinessloans.com/uses/bulk-purchase-discounts/",
+     "type": "partial",
+     "features_claimed": "Poradnik (search-summary): policz oszczędność w dolarach i porównaj ją z kosztem kapitału za liczbę dni, przez które towar leży. Rabat 2/10 net 30 to ok. 37% w skali roku.",
+     "notes": "Treść pożyczkodawcy, prawdopodobnie lead-gen (hipoteza). Nie jest interaktywnym symulatorem (niezweryfikowane).",
+     "paid": "n/d (treść)"
+    },
+    {
+     "name": "Shopappy – Inventory financing: 6 options compared by real cost",
+     "url": "https://shopappy.com/business/scaling-d2c/inventory-financing-options",
+     "type": "partial",
+     "features_claimed": "Porównanie 6 opcji finansowania zapasów według realnego kosztu. W wynikach tego zapytania pojawiła się informacja, że finansowanie PO kosztuje zwykle 1,5–6% miesięcznie; przypisanie do konkretnej strony niepewne.",
+     "notes": "Artykuł, nie narzędzie. Brak powiązania z reklamą, zwrotami i tempem sprzedaży (niezweryfikowane).",
+     "paid": "n/d (treść)"
+    },
+    {
+     "name": "NerdWallet – Inventory Financing guide",
+     "url": "https://www.nerdwallet.com/best/small-business/inventory-financing-loans",
+     "type": "substitute",
+     "features_claimed": "Typowe APR (search-summary): kredyt terminowy 14–99% przy okresie od 6 miesięcy do 7 lat, linia kredytowa 10–99% przy 6–24 miesiącach. Odsyła do kalkulatora pożyczki biznesowej.",
+     "notes": "Treść porównawcza ofert pożyczkodawców; nie modeluje decyzji o wielkości partii.",
+     "paid": "n/d (treść, model afiliacyjny – hipoteza)"
+    },
+    {
+     "name": "Shopify Capital (blog: inventory + Shopify Capital)",
+     "url": "https://www.shopify.com/blog/inventory-shopify-capital-smb",
+     "type": "partial",
+     "features_claimed": "Finansowanie zapasów powiązane z historią sprzedaży; zatwierdzanie przez ML (search-summary).",
+     "notes": "Narzędzia oferowane przez pożyczkodawcę pokazują koszt i spłatę finansowania, nie porównanie z mniejszą partią bez długu (niezweryfikowane, panel za logowaniem).",
+     "paid": "finansowanie płatne"
+    },
+    {
+     "name": "Cleverence – Inventory financing example: scenarios, calculations",
+     "url": "https://www.cleverence.com/articles/for-business/inventory-financing-example-8396/",
+     "type": "partial",
+     "features_claimed": "Scenariusze krok po kroku z obliczeniami finansowania zapasów (wg tytułu i opisu).",
+     "notes": "Artykuł; zakres modułów niezweryfikowany.",
+     "paid": "n/d (treść)"
+    },
+    {
+     "name": "Biz2Credit Inventory Value Calculator",
+     "url": "https://www.biz2credit.com/business-essentials/financial-calculators/inventory-value",
+     "type": "partial",
+     "features_claimed": "Wartość zapasu = zapas początkowy + zakupy netto − COGS.",
+     "notes": "Marginalny fragment: wycena zapasu, nie decyzja. Opis wspomina raty kredytu, ale pola tego nie obsługują (search-summary).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Arkusze kalkulacyjne / AI assistants (ChatGPT, Claude, Gemini z wykonywaniem kodu)",
+     "url": "n/d – substytut ogólny, brak URL w wynikach",
+     "type": "substitute",
+     "features_claimed": "Użytkownik znający swoje liczby może zbudować tygodniowy model gotówki albo poprosić asystenta AI o symulację wariantów.",
+     "notes": "Hipoteza: grupa docelowa (sprzedawcy e-commerce) dobrze zna arkusze, co podnosi ryzyko samodzielnego rozwiązania problemu.",
+     "paid": "darmowe lub abonament"
+    },
+    {
+     "name": "Aplikacje do planowania zapasów i cash flow dla e-commerce (Prediko, Fabrikatör, Cogsy, Inventory Planner by Sage, SoStocked) oraz FP&A (Float, Fathom)",
+     "url": "n/d – znane z wiedzy treningowej, URL nie pojawił się w wynikach (niezweryfikowane)",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: prognoza popytu, planowanie PO, w części z nich open-to-buy lub prognoza cash flow.",
+     "notes": "Nie udało się sprawdzić w tej sesji (wyczerpany limit wyszukiwań). Trzeba to zweryfikować przed decyzją: część z nich może łączyć PO, cash flow i budżet marketingowy. Funkcje oznaczam jako niezweryfikowane, nie jako brakujące.",
+     "paid": "płatne SaaS (hipoteza)"
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane bezpośrednie: brak. W tej sesji nie zebrano żadnych wolumenów zapytań, danych z Reddit ani liczby sprzedawców. Dane pośrednie: (1) wiele stron pożyczkodawców i portali (NerdWallet, Shopify, Crestmont, MFE Business Loans, Shopappy) publikuje treści o finansowaniu zapasów i opłacalności rabatów ilościowych. To sygnał komercyjnego zainteresowania pożyczkodawców tym tematem, nie miara liczby osób, które chcą symulatora; (2) istnieje kilka prostych kalkulatorów rabatu hurtowego. Liczba stron w wynikach nie mierzy popytu ani konkurencji; (3) 8fig stawia próg $100K+ przychodu, więc mniejsi sprzedawcy prawdopodobnie zostają z arkuszami i treściami. To hipoteza o luce, nie dowód popytu. Zapytanie z frazą 'reddit' nie zwróciło wątków z Reddit, ale to ograniczenie wyszukiwarki, nie dowód braku dyskusji. Ocena: problem istnieje i jest kosztowny dla dotkniętych nim osób, ale populacja jest wąska (B2B, mali sprzedawcy produktów), decyzja zapada kilka razy w roku na firmę, a nie wiadomo, czy ci ludzie szukają darmowego narzędzia (a nie pytają księgowego, pożyczkodawcy lub AI). Popyt należy uznać za niezweryfikowany.",
+   "ai_risk_pl": "Ryzyko średnie, z tendencją do wysokiego (hipoteza). Za wysokim: użytkownik to przedsiębiorca e-commerce oswojony z arkuszami. Asystent z wykonywaniem kodu (ChatGPT, Claude) zbuduje w jednej rozmowie tygodniowy model gotówki dla dwóch wariantów, jeśli użytkownik poda dane. Obniżają ryzyko: mechanikę finansowania zależnego od sprzedaży (holdback, factor rate → efektywny APR zależny od tempa sprzedaży) asystenci często upraszczają; użytkownik rzadko sam poprosi o analizę wrażliwości, próg opłacalności i ryzyko braku towaru; strukturyzowany formularz z wartościami domyślnymi i wykresem minimalnej gotówki daje powtarzalność. Dystrybucja przez asystentów AI (cytowanie strony narzędzia w odpowiedzi na 'should I finance a bigger inventory order') to hipoteza, niezweryfikowana. Nie należy przenosić na ChatGPT, Perplexity ani Claude reguł SEO z Google.",
+   "maintenance_pl": "Rdzeń modelu oparty na danych użytkownika (ceny, oprocentowanie, CAC, zwroty) wymaga niskiego utrzymania. Utrzymanie rośnie, gdy dodaje się presety: (1) opłaty Amazon FBA (magazynowanie, starzejący się towar, opłaty inbound i low-inventory). Według wiedzy treningowej Amazon zmienia je co roku; zmiany na lata 2025–2026 niezweryfikowane w tej sesji; (2) taryfy i cła USA. Według wiedzy treningowej w latach 2025–2026 były bardzo zmienne, m.in. zniesiono zwolnienie de minimis. Status na październik 2026 niezweryfikowany w tej sesji; presety taryfowe oznaczałyby wysokie utrzymanie i ryzyko błędów; (3) typowe stawki finansowania: ranges APR 10–99% według NerdWallet (search-summary), łatwe do utrzymania jako zakresy. Regulacje: stanowe ustawy o ujawnianiu kosztu finansowania komercyjnego (np. Kalifornia, Nowy Jork) są istotne dla przeliczeń factor rate → APR. Hipoteza, niezweryfikowane w tej sesji. Gdyby doszedł lead-gen pożyczkowy, mogą wchodzić w grę stanowe wymogi dla brokerów (hipoteza). Rekomendacja: dane wejściowe od użytkownika plus wyraźnie datowane, opcjonalne presety.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Za zachowaniem: integracja jest prawdziwa (pętla reklama → sprzedaż → spłata → gotówka na reklamę, ryzyko braku towaru w małej partii), problem jest kosztowny, a w badanym zakresie (4 zapytania) nie znaleziono bezpośredniego konkurenta: darmowego, neutralnego narzędzia, które porównuje dużą partię z finansowaniem i małą partię bez finansowania razem z reklamą, zwrotami i ścieżką gotówki. Za modyfikacją: (1) najbliższe pełne integracje (np. 8fig Growth Plan + Restock Planner + Cash Flow Tracker) istnieją po stronie dostawców kapitału, za logowaniem i dla firm z $100K+ przychodu. Aplikacje do planowania zapasów (Prediko, Fabrikatör, Cogsy i in.) mogą pokrywać cash flow PO, czego nie zweryfikowano. Novelty jest więc częściowa; (2) wymagane 15–25 danych wejściowych tworzy wysoką barierę i pozorną precyzję; (3) grupa docelowa jest wąska i biegła w arkuszach i AI, a popyt na darmowy symulator niepotwierdzony; (4) model reklamowy AdSense przy niszy B2B o niskim wolumenie jest niepewny (hipoteza). Rekomendacja: rozbić seed na dwa węższe, częściej formułowane problemy: (a) wielkość zamówienia przy progach cenowych z minimalnym buforem gotówki i ryzykiem braku towaru; (b) wybór formy finansowania lub rezygnacja z niego dla konkretnego PO. Reklama i zwroty mają być opcjonalnymi modyfikatorami tempa sprzedaży, nie obowiązkowymi polami. Nie odrzucać, dopóki nie zostanie wykonane pełne wyszukiwanie (co najmniej 10 zapytań, w tym SaaS do planowania zapasów i wątki z Reddit/forów).",
+   "search_scope_pl": "WAŻNE OGRANICZENIE: wykonano tylko 4 wyszukiwania. Kolejne 4 zablokował wspólny limit wyszukiwań procesu (200 na turę dla wszystkich agentów), więc wymóg co najmniej 10 zapytań NIE został spełniony. Wykonane: 'inventory financing calculator' (standard); 'bulk purchase discount vs cost of financing calculator inventory' (extended); 'should I take a loan to buy more inventory reddit ecommerce' (extended); '8fig growth plan inventory ad spend cash flow forecast' (extended). Nie wykonano (zablokowane): zapytań o Prediko, Fabrikatör, Cogsy, Wayflyer, kalkulator ROI pożyczki na zapas, kalkulator MOQ i cash flow; nie sprawdzono też szablonów arkuszy, Amazon Lending 2026, zmian opłat FBA 2025–2026, taryf 2026 ani praktyk wpisywania tego problemu w ChatGPT. WebFetch nie był używany (polityka sieci). Cały materiał to search-summary; żadnej strony nie otwierano i żadnego narzędzia nie testowano. Produkty spoza wyników (Prediko, Fabrikatör, Cogsy, Inventory Planner, SoStocked, Float, Fathom, Wayflyer, Clearco, Payability, Settle) wymieniono z wiedzy treningowej jako niezweryfikowane. Wniosek: nie znaleziono bezpośredniego konkurenta w badanym zakresie, ale zakres był wąski, więc pewność jest niska.",
+   "confidence": "low"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "S5-R1",
+   "name_en": "Volume Discount Order Sizer: Bigger Order vs Cash Runway",
+   "family": "Small business / e-commerce – inventory & working capital",
+   "user_and_moment": "Właściciel małej firmy produktowej (sklep Shopify/Etsy/Amazon, mały detalista, także gastronomia lub wykonawca kupujący materiały) zaraz po otrzymaniu oferty dostawcy z progami cenowymi, MOQ albo wyceną kontener vs LCL, przed wpłatą zaliczki.",
+   "sample_prompt_en": "My supplier gives 12% off if I order 3,000 units instead of 1,000. I sell about 250 a month and have $18k in the bank. Is the bigger order worth it, or will it choke my cash flow?",
+   "decision_problem": "Wybór wielkości zamówienia (progu cenowego) i źródła pieniędzy (gotówka, karta, linia kredytowa, kredyt kupiecki). Trzeba zważyć rabat i niższy fracht na sztukę przeciw kosztowi utrzymania zapasu, niepewności sprzedaży, minimalnemu buforowi gotówki oraz ryzyku braku towaru i droższego dokupienia przy mniejszym zamówieniu.",
+   "combined_domains": "Progi cenowe zakupu; koszt landed i fracht; prognoza popytu z niepewnością; koszt utrzymania zapasu i magazynowania; harmonogram płatności i cash flow; koszt finansowania; koszt braku towaru i czas dostawy.",
+   "variants_compared": "A) mały próg za gotówkę; B) duży próg za gotówkę; C) duży próg finansowany (karta 0%, LOC, net 30/60 od dostawcy); D) mały próg teraz i ponowne zamówienie po X tygodniach (z czasem dostawy i ryzykiem wyższej ceny).",
+   "key_dependencies": "Tempo sprzedaży → tygodnie zapasu → koszt magazynowania i odsetki; harmonogram zaliczki i reszty płatności → najniższy punkt gotówki vs bufor; spadek popytu → nadwyżka i przecena; mały wariant → termin ponownego zamówienia i czas dostawy → tygodnie bez towaru → utracona marża; wolumen → fracht na sztukę. Reklama i zwroty jako opcjonalne modyfikatory tempa sprzedaży i marży netto.",
+   "main_outputs": "Tygodniowy wykres gotówki dla każdego wariantu; najniższy punkt gotówki i jego data; zysk po kosztach utrzymania i finansowania; próg opłacalności w miesiącach zapasu; 'rabat musi przekraczać X%'; liczba tygodni bez towaru; wykres tornado (popyt, czas dostawy, oprocentowanie, magazynowanie); jawna lista założeń i ograniczeń.",
+   "reason_external_site": "Proste kalkulatory rabatu liczą tylko sumę i cenę jednostkową, a według search-summary część wprost pomija fracht i timing cash flow. Artykuły (AskBiz, MFE) podają metodę, ale nie interaktywny model. Neutralność: strona nie jest pożyczkodawcą. Formularz z wartościami domyślnymi i wykresem minimalnej gotówki daje powtarzalny wynik, którego nie zapewnia jednorazowa rozmowa z AI.",
+   "data_sources": "Głównie dane użytkownika. Opcjonalne zakresy referencyjne z datą: koszt utrzymania zapasu (artykuł podaje ok. 20% rocznie, twierdzenie dostawcy, do oznaczenia jako założenie); zakresy APR kart i LOC (NerdWallet, search-summary). Opcjonalny preset opłat magazynowych FBA wymaga corocznej aktualizacji (niezweryfikowane).",
+   "user_data": "Progi cenowe, koszt jednostkowy, fracht, cło (%), sprzedaż miesięczna i jej zmienność, czas dostawy, gotówka, minimalny bufor, warunki finansowania, koszt magazynowania; opcjonalnie stopa zwrotów i CAC.",
+   "nearest_competition": [
+    {
+     "name": "AskBiz – Bulk Order Discounts article",
+     "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+     "type": "partial",
+     "features_claimed": "Przykład liczbowy: rabat vs koszt utrzymania zapasu, próg ok. 2,5 miesiąca zapasu.",
+     "notes": "Treść; bez cash flow i finansowania (wg search-summary).",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Toolsque Bulk Discount Calculator",
+     "url": "https://toolsque.com/tools/bulk-discount-calculator/",
+     "type": "partial",
+     "features_claimed": "Ceny progowe i punkt przecięcia.",
+     "notes": "Fragment.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "ActiveCalculator Bulk Discount Calculator",
+     "url": "https://activecalculator.com/templates/bulk-discount-calculator",
+     "type": "partial",
+     "features_claimed": "Suma po rabacie, cena jednostkowa.",
+     "notes": "Fragment.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "MFE Business Loans – bulk purchase discounts sizing",
+     "url": "https://mfebusinessloans.com/uses/bulk-purchase-discounts/",
+     "type": "partial",
+     "features_claimed": "Metoda: oszczędność w $ vs koszt kapitału za dni zalegania towaru; rabat 2/10 net 30 ≈ 37% rocznie.",
+     "notes": "Treść pożyczkodawcy.",
+     "paid": "n/d"
+    }
+   ],
+   "already_solved": "Matematyka 'rabat vs koszt utrzymania zapasu' (artykuły z przykładami), punkt przecięcia progów (kalkulatory), annualizacja rabatu za wcześniejszą płatność (MFE). Prawdopodobnie aplikacje do planowania zapasów obsługują część dla płacących klientów (niezweryfikowane).",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (4 zapytania, search-summary): darmowego narzędzia, które łączy progi cenowe, harmonogram płatności, bufor gotówki, ryzyko braku towaru przy mniejszym zamówieniu i opcje finansowania w jednym porównaniu wariantów. Pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Pośrednie: istnienie wielu kalkulatorów rabatu hurtowego i artykułów o opłacalności dużych zamówień (sygnał zainteresowania, nie wolumen). Brak danych o wolumenie wyszukiwań i promptów: hipoteza / niezweryfikowane. Szersza grupa niż seed (nie tylko e-commerce z reklamą), ale nadal B2B.",
+   "ad_environment": "Hipoteza / niezweryfikowane: reklamodawcy z obszaru finansowania małych firm, oprogramowania magazynowego, 3PL i frachtu. Stawki RPM nieznane.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Węższa i prostsza wersja seedu z niższą barierą wejścia (8–12 pól zamiast 20+), neutralna i o niskim utrzymaniu. Do weryfikacji: czy aplikacje do planowania zapasów i darmowe szablony już to robią, faktyczne frazy użytkowników (Reddit, fora sprzedawców) oraz to, czy wąska matematyka nie zostanie łatwo przejęta przez asystentów AI.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S5-R2",
+   "name_en": "Inventory Funding Offer Comparator: RBF vs Line of Credit vs Card vs Supplier Terms vs Buying Less",
+   "family": "Small business / e-commerce – financing decisions",
+   "user_and_moment": "Sprzedawca e-commerce lub mały detalista, który ma konkretne zamówienie do opłacenia i na stole oferty finansowania (np. Shopify Capital lub inna oferta revenue-based z holdbackiem, linia kredytowa w banku, karta z 0% intro, net 60 od dostawcy, finansowanie PO) i nie wie, czy finansować, czym, czy zmniejszyć zamówienie.",
+   "sample_prompt_en": "Shopify Capital offered me $40k with a 1.13 factor rate and 12% of daily sales as repayment. My bank offers a line of credit at 11%. Or I could just order half. Which is actually cheaper for a $40k inventory order, and how much ad budget will I have left?",
+   "decision_problem": "Wybór formy finansowania konkretnego PO (albo rezygnacja z niego) na podstawie rzeczywistego kosztu, który przy finansowaniu zależnym od sprzedaży zależy od tempa sprzedaży, oraz wpływu spłat na gotówkę dostępną na reklamę i kolejne zamówienia.",
+   "combined_domains": "Mechanika finansowania (factor rate, holdback %, opłaty, APR); prognoza sprzedaży; budżet reklamowy i CAC; cash flow tygodniowy; harmonogram płatności dostawcy; ryzyko braku towaru.",
+   "variants_compared": "A) finansowanie revenue-based/MCA; B) linia kredytowa lub kredyt terminowy; C) karta z 0% intro (z ryzykiem po okresie promocyjnym); D) kredyt kupiecki od dostawcy; E) finansowanie PO; F) brak finansowania i mniejsza partia.",
+   "key_dependencies": "Tempo sprzedaży → czas spłaty przy holdbacku → efektywny APR (szybsza sprzedaż = wyższy APR przy stałej opłacie); holdback → mniej gotówki na reklamę → wolniejsza sprzedaż (pętla); rata stała vs zmienna → najniższy punkt gotówki; koniec okresu 0% → skok kosztu; wariant F → braki towaru.",
+   "main_outputs": "Efektywny APR i koszt w $ dla każdej opcji przy kilku scenariuszach tempa sprzedaży; tygodniowa gotówka i gotówka dostępna na reklamę; najniższy punkt gotówki; ranking opcji z warunkami, przy których ranking się odwraca; jawne założenia i zastrzeżenie, że to nie jest porada finansowa.",
+   "reason_external_site": "Pożyczkodawcy pokazują koszt własnej oferty, a nie neutralne porównanie z alternatywami i z wariantem 'kup mniej' (niezweryfikowane, panele za logowaniem). Treści (NerdWallet, Shopappy, Crestmont) opisują opcje, ale nie liczą ich na danych użytkownika i nie wiążą z tempem sprzedaży.",
+   "data_sources": "Dane użytkownika z ofert. Zakresy referencyjne z datą: APR kredytów terminowych 14–99% i linii kredytowych 10–99% (NerdWallet, search-summary); finansowanie PO zwykle 1,5–6% miesięcznie (search-summary, źródło do potwierdzenia). Kontekst regulacyjny ujawniania kosztu finansowania komercyjnego (CA, NY): niezweryfikowane.",
+   "user_data": "Kwota, factor rate i opłaty, holdback %, oprocentowanie, okres promocyjny karty, warunki dostawcy, sprzedaż tygodniowa i jej zmienność, marża, CAC i budżet reklamowy, gotówka i bufor.",
+   "nearest_competition": [
+    {
+     "name": "Shopappy – Inventory financing: 6 options compared by real cost",
+     "url": "https://shopappy.com/business/scaling-d2c/inventory-financing-options",
+     "type": "partial",
+     "features_claimed": "Porównanie 6 opcji finansowania zapasów według realnego kosztu.",
+     "notes": "Artykuł, nie kalkulator na danych użytkownika (niezweryfikowane).",
+     "paid": "n/d"
+    },
+    {
+     "name": "NerdWallet – Inventory Financing guide",
+     "url": "https://www.nerdwallet.com/best/small-business/inventory-financing-loans",
+     "type": "substitute",
+     "features_claimed": "Zakresy APR i okresy; odsyła do kalkulatora pożyczki.",
+     "notes": "Treść porównawcza ofert.",
+     "paid": "n/d"
+    },
+    {
+     "name": "Crestmont Capital – PO financing vs inventory financing",
+     "url": "https://www.crestmontcapital.com/blog/purchase-order-financing-vs-inventory-financing",
+     "type": "substitute",
+     "features_claimed": "Różnice między finansowaniem PO a finansowaniem zapasów (wg tytułu).",
+     "notes": "Treść pożyczkodawcy.",
+     "paid": "n/d"
+    },
+    {
+     "name": "8fig Growth Plan",
+     "url": "https://www.8fig.co/industries/ecommerce-financing/",
+     "type": "partial",
+     "features_claimed": "Plan łączący zapas, marketing i prognozę sprzedaży; transze powiązane z PO (wg recenzji).",
+     "notes": "Narzędzie jednego dostawcy kapitału, za logowaniem, z progiem $100K+ przychodu.",
+     "paid": "finansowanie płatne"
+    }
+   ],
+   "already_solved": "Ogólne przeliczniki pożyczek i (z wiedzy treningowej, niezweryfikowane) liczne kalkulatory factor rate → APR dla MCA. Treści porównujące rodzaje finansowania. Narzędzia pożyczkodawców dla własnej oferty.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie: neutralnego narzędzia, które łączy efektywny koszt holdbacku z tempem sprzedaży, budżetem reklamowym i wariantem 'kup mniej' dla konkretnego PO. Zakres: 4 zapytania, pewność niska. Kalkulatory factor rate → APR mogą pokrywać część problemu (niezweryfikowane).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: duże nasycenie treściami pożyczkodawców i portali o finansowaniu zapasów (NerdWallet, Shopify, Crestmont, MFE, Shopappy) wskazuje na komercyjną wartość tematu. Wolumenu zapytań nie zweryfikowano: hipoteza.",
+   "ad_environment": "Hipoteza / niezweryfikowane: reklamodawcy z finansowania firm są zwykle aktywni w aukcjach. Pokusa lead-genu pożyczkowego jest wysoka, ale według założeń właściciela to tylko dodatek, który nie może ratować modelu, a mogą wchodzić w grę stanowe wymogi dla brokerów (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Wyraźny moment decyzji (konkretna oferta na stole), prawdziwa pętla zależności (holdback ↔ budżet reklamowy ↔ tempo sprzedaży), niskie utrzymanie przy danych od użytkownika. Do weryfikacji: istniejące kalkulatory MCA/RBF i ich zakres, neutralność wobec reklam pożyczkodawców, ryzyko treści finansowej (YMYL) i realny popyt.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "S5-R3",
+   "name_en": "Tariff Pull-Forward Order Timing Simulator",
+   "family": "Small business / importers – landed cost & timing",
+   "user_and_moment": "Mały importer lub marka DTC sprowadzająca towar spoza USA, gdy pojawia się zapowiedź zmiany ceł lub taryf (albo niepewność co do nich) i trzeba zdecydować, czy przyspieszyć i powiększyć zamówienie, czy zamawiać jak dotąd.",
+   "sample_prompt_en": "Tariffs on my product category might go up next quarter. Should I order 6 months of stock now and pay for storage and interest, or keep ordering every 6 weeks?",
+   "decision_problem": "Termin i wielkość zamówienia w warunkach niepewności co do ceł: przyspieszona duża partia (koszt magazynowania, kapitału, ryzyko przestarzałości, ryzyko, że cła spadną) vs dotychczasowy rytm (ryzyko wyższego landed cost).",
+   "combined_domains": "Scenariusze taryfowe ważone prawdopodobieństwem (wprowadza je użytkownik); koszt landed; koszt utrzymania zapasu i magazynowania; finansowanie; prognoza popytu; cash flow; ryzyko przestarzałości.",
+   "variants_compared": "A) duża partia teraz; B) dotychczasowy rytm; C) częściowe przyspieszenie (np. 50%); D) przyspieszenie z finansowaniem vs za gotówkę.",
+   "key_dependencies": "Prawdopodobieństwo i wielkość zmiany cła → oczekiwany landed cost; wielkość partii → tygodnie zapasu → magazynowanie i odsetki; gotówka → bufor; popyt → ryzyko nadwyżki; zmiana ceła w dół → strata z przyspieszenia.",
+   "main_outputs": "Oczekiwany koszt i rozkład wyników dla każdego wariantu; próg prawdopodobieństwa podwyżki, przy którym przyspieszenie się opłaca; najniższy punkt gotówki; wrażliwość na wielkość cła, popyt i koszt magazynu.",
+   "reason_external_site": "Hipoteza: brokerzy celni i doradcy liczą to indywidualnie; ogólne kalkulatory ceł liczą tylko cło, bez decyzji o terminie. Niezweryfikowane: nie wykonano wyszukiwań dla tego pomysłu.",
+   "data_sources": "Stawki i scenariusze taryfowe jako dane użytkownika (bez presetów, żeby ograniczyć ryzyko błędu). Opcjonalnie linki do oficjalnych źródeł (HTSUS/USITC, CBP) z datą. Stan taryf na październik 2026 niezweryfikowany w tej sesji.",
+   "user_data": "Koszt FOB, fracht, obecna stawka cła i scenariusze, prawdopodobieństwa, sprzedaż miesięczna, koszt magazynu, gotówka, warunki finansowania, czas dostawy.",
+   "nearest_competition": [
+    {
+     "name": "Arkusz, broker celny lub asystent AI (substytut ogólny)",
+     "url": "n/d – brak wyszukiwań dla tego pomysłu (limit), brak URL",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: indywidualne kalkulacje u brokera lub w arkuszu; asystent AI może policzyć scenariusze, jeśli dostanie dane.",
+     "notes": "Konkurencja nie została zbadana.",
+     "paid": "niezweryfikowane"
+    }
+   ],
+   "already_solved": "Niezweryfikowane: prawdopodobnie istnieją kalkulatory cła i landed cost (pojedyncze moduły).",
+   "gap": "Nie zbadano: nie wykonano wyszukiwań (wyczerpany limit). Status luki nieznany.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Brak danych w tej sesji. Hipoteza: zmienność taryf w latach 2025–2026 tworzy powracające momenty decyzji, ale popyt może być falowy i zależny od newsów.",
+   "ad_environment": "Hipoteza / niezweryfikowane: logistyka, fracht, brokerzy celni, finansowanie handlu.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Pasuje do kompetencji właściciela (logistyka, e-commerce), ale utrzymanie i ryzyko treści są wysokie (zmienne taryfy; błędne stawki szkodzą), a popyt może być krótkotrwały. Pomysł jest czysto koncepcyjny i wymaga osobnego badania: stan taryf w 2026, konkurencja (kalkulatory landed cost, narzędzia brokerów), frazy użytkowników.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "8fig growth plan inventory ad spend cash flow forecast",
+   "url": "https://www.8fig.co/industries/ecommerce-financing/",
+   "competitor": "8fig",
+   "related_idea": "Seed I; S5-R2",
+   "features_checked": "Growth Plan (zapas + marketing + prognoza sprzedaży), transze powiązane z PO, Cash Flow Tracker, Restock Planner, Sales Forecasting – według recenzji (sellerapp.com/blog/8fig-review/, unitedcapitalsource.com, eightx.co), search-summary",
+   "access_limits": "Za logowaniem. Wymogi według recenzji: $100K+ przychodu rocznie, ok. $12K+/mies., 6+ mies. działalności, podmiot US/CA. Nie otwierano strony.",
+   "conclusion": "Partial, najbliżej pełnej integracji (zapas, marketing, cash flow), ale narzędzie dostawcy kapitału. Neutralne porównanie z wariantem bez finansowania niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://askbiz.co/blog/bulk-order-discounts-optimization",
+   "competitor": "AskBiz (artykuł o rabatach hurtowych)",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Przykład: rabat 5% na 500 sztuk vs 100 sztuk/mies., koszt utrzymania ok. 20% rocznie, próg ok. 2,5 miesiąca zapasu (search-summary)",
+   "access_limits": "Nie otwierano; czy jest interaktywne narzędzie, niezweryfikowane",
+   "conclusion": "Partial (treść z metodą), brak finansowania, reklamy i cash flow w opisie",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://toolsque.com/tools/bulk-discount-calculator/",
+   "competitor": "Toolsque Bulk Discount Calculator",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Ceny progowe, punkt przecięcia progów (search-summary)",
+   "access_limits": "Nie testowano formularza",
+   "conclusion": "Partial, fragment (matematyka progów)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://activecalculator.com/templates/bulk-discount-calculator",
+   "competitor": "ActiveCalculator Bulk Discount Calculator",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Suma po rabacie i cena jednostkowa (kategoria opisana w search-summary)",
+   "access_limits": "Nie testowano",
+   "conclusion": "Partial, prosty fragment; nie jest konkurentem bezpośrednim",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://calculator.academy/bulk-price-calculator/",
+   "competitor": "Calculator Academy Bulk Price Calculator",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Cena hurtowa i jednostkowa (wg tytułu)",
+   "access_limits": "Nie testowano",
+   "conclusion": "Partial, fragment",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://discountcalculator.org/discount-type/bulk/",
+   "competitor": "DiscountCalculator.org (bulk)",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Rabat hurtowy (wg tytułu)",
+   "access_limits": "Nie testowano",
+   "conclusion": "Partial, fragment",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://mfebusinessloans.com/uses/bulk-purchase-discounts/",
+   "competitor": "MFE Business Loans (poradnik)",
+   "related_idea": "Seed I; S5-R1; S5-R2",
+   "features_checked": "Metoda: oszczędność w $ vs koszt kapitału za dni zalegania towaru; rabat 2/10 net 30 ≈ 37% rocznie (search-summary)",
+   "access_limits": "Nie otwierano; treść pożyczkodawcy",
+   "conclusion": "Partial (treść), prawdopodobnie lead-gen (hipoteza)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://shopappy.com/business/scaling-d2c/inventory-financing-options",
+   "competitor": "Shopappy – 6 opcji finansowania zapasów według realnego kosztu",
+   "related_idea": "Seed I; S5-R2",
+   "features_checked": "Porównanie opcji finansowania według kosztu (wg tytułu i search-summary)",
+   "access_limits": "Nie otwierano",
+   "conclusion": "Partial (artykuł), bez modelu na danych użytkownika (niezweryfikowane)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "bulk purchase discount vs cost of financing calculator inventory",
+   "url": "https://www.crestmontcapital.com/blog/purchase-order-financing-vs-inventory-financing",
+   "competitor": "Crestmont Capital (blog)",
+   "related_idea": "S5-R2",
+   "features_checked": "Różnice między finansowaniem PO a finansowaniem zapasów (wg tytułu)",
+   "access_limits": "Nie otwierano",
+   "conclusion": "Substitute (treść pożyczkodawcy)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator",
+   "url": "https://www.nerdwallet.com/best/small-business/inventory-financing-loans",
+   "competitor": "NerdWallet – Inventory Financing",
+   "related_idea": "Seed I; S5-R2",
+   "features_checked": "Zakresy APR: kredyt terminowy 14–99% (6 mies.–7 lat), LOC 10–99% (6–24 mies.); odesłanie do kalkulatora pożyczki (search-summary)",
+   "access_limits": "Nie otwierano",
+   "conclusion": "Substitute (treść porównawcza), nie modeluje decyzji o partii",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator",
+   "url": "https://www.biz2credit.com/business-essentials/financial-calculators/inventory-value",
+   "competitor": "Biz2Credit Inventory Value Calculator",
+   "related_idea": "Seed I",
+   "features_checked": "Wartość zapasu = zapas początkowy + zakupy netto − COGS (search-summary)",
+   "access_limits": "Nie testowano",
+   "conclusion": "Partial (marginalny), wycena zapasu, nie decyzja",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator",
+   "url": "https://www.cleverence.com/articles/for-business/inventory-financing-example-8396/",
+   "competitor": "Cleverence – przykłady finansowania zapasów",
+   "related_idea": "Seed I",
+   "features_checked": "Scenariusze i obliczenia krok po kroku (wg tytułu)",
+   "access_limits": "Nie otwierano",
+   "conclusion": "Partial (artykuł), zakres niezweryfikowany",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory financing calculator",
+   "url": "https://pop.freespeechforpeople.org/?p=28938",
+   "competitor": "'Dealer Floor Plan Calculator' (powielona treść na niepowiązanych domenach)",
+   "related_idea": "Seed I (nisza dealerów)",
+   "features_checked": "Szacowanie odsetek, opłat i marży dla finansowania floor plan (search-summary)",
+   "access_limits": "Nie otwierano; strony o niskiej wiarygodności (ten sam tekst na wielu domenach)",
+   "conclusion": "Partial dla dealerów; niewiarygodne źródło, nie traktować jako realnego konkurenta",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I take a loan to buy more inventory reddit ecommerce",
+   "url": "https://www.shopify.com/blog/inventory-shopify-capital-smb",
+   "competitor": "Shopify Capital",
+   "related_idea": "Seed I; S5-R2",
+   "features_checked": "Finansowanie zapasów powiązane z historią sprzedaży, zatwierdzanie przez ML (search-summary)",
+   "access_limits": "Panel oferty za logowaniem; nie otwierano",
+   "conclusion": "Partial: koszt własnej oferty; porównanie z alternatywami niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I take a loan to buy more inventory reddit ecommerce",
+   "url": "https://www.nbcnews.com/business/markets/amazon-offers-loans-its-online-sellers-flna6145536",
+   "competitor": "Amazon Lending (artykuł prasowy)",
+   "related_idea": "Seed I; S5-R2",
+   "features_checked": "Tylko informacja, że Amazon oferuje pożyczki sprzedawcom (stary artykuł)",
+   "access_limits": "Stan programu w 2026 niezweryfikowany",
+   "conclusion": "Partial (finansowanie z platformy), funkcje planistyczne niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d – nie wyszukano (limit wyszukiwań)",
+   "url": "n/d – brak URL w wynikach; znane z wiedzy treningowej",
+   "competitor": "Prediko, Fabrikatör, Cogsy, Inventory Planner by Sage, SoStocked (planowanie zapasów); Float, Fathom (FP&A)",
+   "related_idea": "Seed I; S5-R1",
+   "features_checked": "Niezweryfikowane: prognoza popytu, planowanie PO, możliwe open-to-buy i cash flow",
+   "access_limits": "Płatne SaaS, za logowaniem (hipoteza)",
+   "conclusion": "Potencjalnie partial lub bliżej bezpośredniego dla płacących sprzedawców. Wymaga weryfikacji przed decyzją; funkcje niezweryfikowane, nie 'brak'.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "inventory financing calculator (standard)",
+  "bulk purchase discount vs cost of financing calculator inventory (extended)",
+  "should I take a loan to buy more inventory reddit ecommerce (extended)",
+  "8fig growth plan inventory ad spend cash flow forecast (extended)",
+  "[NIE WYKONANO – wyczerpany wspólny limit wyszukiwań] ecommerce cash flow forecast inventory purchase order ad spend returns tool Prediko Fabrikator Cogsy",
+  "[NIE WYKONANO – limit] Wayflyer inventory financing ROI calculator marketing spend",
+  "[NIE WYKONANO – limit] inventory loan ROI calculator is it worth borrowing for inventory",
+  "[NIE WYKONANO – limit] MOQ minimum order quantity cash flow calculator small brand"
+ ]
+}

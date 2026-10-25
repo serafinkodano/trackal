@@ -1,0 +1,372 @@
+{
+ "id": "HOME-01",
+ "competitors": [
+  {
+   "name": "sum.money Bridge Loan Calculator 2026 (Short-Term Cost, Alternatives & Timeline)",
+   "url": "https://sum.money/us/bridge-loan-calculator/",
+   "type": "partial",
+   "access": "Darmowy kalkulator webowy, logowanie lub paywall niezweryfikowane. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Według search-summary porównuje bridge loan, HELOC, kontyngencję sprzedaży (home sale contingency), pożyczkę z 401(k) i piggyback loan. Ma zakładkę timeline z miesięcznymi i skumulowanymi kosztami utrzymania przy bridge, a jako inputy oczekiwaną liczbę miesięcy do sprzedaży, cenę ofertową i warunki rynku. Pokazuje break-even względem HELOC, scenariusze ryzyka (sprzedaż po 3/6/9/12 miesiącach) i net proceeds po spłacie bridge. To najbliższy zintegrowany odpowiednik: pokrywa warianty 1, 3, 4 i 7 oraz break-even i oś czasu.",
+   "misses_or_unverified_pl": "Search-summary wprost mówi, że nie znaleziono w nim modelowania wariantu 'sell first and rent'. Niezweryfikowane: rent-back, program buy-before-you-sell z opłatą jako input, macierz wykonalności DTI/rezerw dla dwóch rat, rozkład probabilistyczny P50/P90 (widać tylko scenariusze dyskretne), minimalna cena sprzedaży, wykres tornado, koszt contingent offer (premia cenowa lub ryzyko przegranej) oraz to, czy wyniki wariantów faktycznie na siebie wpływają."
+  },
+  {
+   "name": "CalcMoney – Simultaneous Buy/Sell (Bridge Loan Costs When Buying and Selling at the Same Time)",
+   "url": "https://calcmoney.io/blog/mortgage-simultaneous-buy-sell-calculator",
+   "type": "partial",
+   "access": "Darmowy artykuł, prawdopodobnie z kalkulatorem (slug URL sugeruje 'simultaneous buy sell calculator'), niezweryfikowane. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Matematyka kosztu bridge przy jednoczesnym kupnie i sprzedaży. Z wyniku wyszukiwania prawdopodobnie pochodzi przykład różnicy 90 vs 120 dni nakładania się (3 606,17 USD przy bridge 450 000 USD), ale przypisanie tego przykładu do tej strony jest niepewne.",
+   "misses_or_unverified_pl": "Zakres wariantów, DTI, sell-first/najem, programy BBYS i rozkład czasu sprzedaży: wszystko niezweryfikowane. Nie wiadomo, czy to interaktywne narzędzie, czy sam artykuł."
+  },
+  {
+   "name": "Stairway Mortgage Bridge Loan Calculator",
+   "url": "https://www.stairwaymortgage.com/loan-calculator/bridge-loan/",
+   "type": "partial",
+   "access": "Darmowy kalkulator lendera (lead-gen), logowanie niezweryfikowane. Strona nieotwierana, dowód: search-summary (tytuł).",
+   "covers_pl": "Według tytułu: equity transfer, rata bridge, recast nowego kredytu i oszczędność na podatku od zysków kapitałowych. Elementy kosztu ścieżki bridge, w tym recast.",
+   "misses_or_unverified_pl": "Kalkulator jednej ścieżki (bridge) jednego lendera. Porównanie z HELOC, contingent, sell-first i programami BBYS niezweryfikowane. DTI, P90 i macierz wykonalności niezweryfikowane."
+  },
+  {
+   "name": "Generyczne kalkulatory bridge loan (FinanceRateCalc, AccurateCalculators, LoanInsights, National Mortgage Center)",
+   "url": "https://financeratecalc.com/bridge-loan-calculator.html",
+   "type": "partial",
+   "access": "Darmowe kalkulatory webowe, niezweryfikowane. Strony nieotwierane, dowód: search-summary (tytuły). Inne URL z wyników: https://accuratecalculators.com/bridge-loan-calculator, https://loaninsights.com/calculators/bridge-loan-calculator/, https://nationalmortgagecenter.com/bridge-loan-calculator",
+   "covers_pl": "Koszt odsetek i opłat bridge loan dla podanej kwoty, stopy i okresu. FinanceRateCalc w tytule: 'Sell Your Home & Buy Another'.",
+   "misses_or_unverified_pl": "Kalkulatory jednozadaniowe: brak dowodu na porównanie ścieżek, DTI, sell-first/najem czy rozkład czasu sprzedaży (niezweryfikowane). To nie są bezpośredni konkurenci."
+  },
+  {
+   "name": "Redfin – Compare Buying First vs. Selling (guide)",
+   "url": "https://www.redfin.com/guides/buy-and-sell",
+   "type": "substitute",
+   "access": "Darmowy poradnik dużego portalu, interaktywność niezweryfikowana. Strona nieotwierana, dowód: search-summary (tytuł, wynik w 2 zapytaniach).",
+   "covers_pl": "Treść porównująca 'kup najpierw' i 'sprzedaj najpierw'. Silna domena SEO i prawdopodobne źródło cytowań asystentów AI.",
+   "misses_or_unverified_pl": "Nie wiadomo, czy zawiera kalkulator lub model kosztów (niezweryfikowane). Modelowanie DTI, P90 i break-even niezweryfikowane."
+  },
+  {
+   "name": "HomeLight Buy Before You Sell",
+   "url": "https://www.homelight.com/blog/best-way-to-buy-a-house-before-you-sell-yours/",
+   "type": "substitute",
+   "access": "Program komercyjny (usługa). Blog darmowy. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Realizuje wariant 5 (program BBYS). Według własnego bloga opłata wynosi 2,4% ceny sprzedaży dotychczasowego domu (według innego źródła 2,9% na Florydzie). Blog porównuje też bridge loan i HELOC (osobny wpis: https://www.homelight.com/blog/buyer-bridge-loan-vs-heloc/).",
+   "misses_or_unverified_pl": "Dostawca jednej ścieżki, nie neutralne narzędzie. Kalkulator porównawczy ścieżek na stronie niezweryfikowany. Wave-1 klasyfikował go jako partial; przeklasyfikowano na substitute (usługa, a nie narzędzie decyzyjne)."
+  },
+  {
+   "name": "Homeward (Buy Before You Sell)",
+   "url": "https://anytimeestimate.com/reviews/homeward/",
+   "type": "substitute",
+   "access": "Program komercyjny. Dowód z recenzji zewnętrznej, nie ze strony Homeward. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Wariant 5. Źródła podają sprzeczne opłaty: 3,5% (2,5% z Homeward Mortgage), do 7% albo 2,4%.",
+   "misses_or_unverified_pl": "Oficjalny URL nie pojawił się w wynikach. Narzędzie porównawcze ścieżek niezweryfikowane. Aktualne opłaty i zasięg geograficzny niezweryfikowane (źródła są sprzeczne)."
+  },
+  {
+   "name": "Knock (Bridge Loan / Home Swap)",
+   "url": "https://www.houzeo.com/blog/knock-real-estate-reviews-pros-cons-and-alternatives/",
+   "type": "substitute",
+   "access": "Program komercyjny. Dowód z recenzji zewnętrznej. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Wariant 5/3. Większość źródeł podaje opłatę około 2,25% plus opłatę kredytową (jedna recenzja: 2,25% + 1 850 USD), jedno źródło sprzecznie podaje 1,25%. Według wyników działa w 2026 (porównania z 2026).",
+   "misses_or_unverified_pl": "Oficjalny URL nie pojawił się w wynikach. Kalkulator lub porównanie ścieżek niezweryfikowane. Dostawca jednej ścieżki."
+  },
+  {
+   "name": "Orchard (Move Before You Sell)",
+   "url": "https://mortgage-info.com/blog/buy-before-you-sell-bridge-loan-alternatives-2026",
+   "type": "substitute",
+   "access": "Program komercyjny o ograniczonym zasięgu, według źródeł wymaga agenta przypisanego przez Orchard. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Wariant 5. Źródła podają około 6% opłaty serwisowej plus opłatę programu, a jedno źródło łączny koszt 9–14% (sprzeczne).",
+   "misses_or_unverified_pl": "Oficjalny URL nie pojawił się w wynikach. Aktualny status i zasięg niezweryfikowane. Narzędzie porównawcze niezweryfikowane."
+  },
+  {
+   "name": "Artykuły porównujące programy BBYS (JVM Lending 2026 Guide, mortgage-info.com 2026)",
+   "url": "https://www.jvmlending.com/blog/buy-before-you-sell-programs-compared/",
+   "type": "substitute",
+   "access": "Darmowe artykuły lendera lub serwisu treściowego. Strona nieotwierana, dowód: search-summary (tytuł).",
+   "covers_pl": "Tabelaryczne lub opisowe porównanie programów BBYS i (w mortgage-info.com) bridge loan i HELOC: opłaty, warunki.",
+   "misses_or_unverified_pl": "Treść statyczna (interaktywność niezweryfikowana). Brak obliczeń dla danych użytkownika, DTI i rozkładu czasu sprzedaży (niezweryfikowane)."
+  },
+  {
+   "name": "Kalkulatory net proceeds ze sprzedaży (Opendoor Home Sale Calculator, CrossCountry Home Sale Calculator)",
+   "url": "https://www.opendoor.com/home-sale-calculator",
+   "type": "partial",
+   "access": "Darmowe, lead-gen. Strona nieotwierana, dowód: search-summary. Drugi URL: https://crosscountrymortgage.com/mortgage/resources/mortgage-calculators/home-sale-calculator/",
+   "covers_pl": "Fragment: kwota netto ze sprzedaży (cena minus prowizje, koszty zamknięcia i spłata kredytu), czyli gotówka dostępna na wkład własny.",
+   "misses_or_unverified_pl": "Pojedynczy fragment, bez porównania ścieżek, kosztów nakładania się, DTI ani czasu sprzedaży."
+  },
+  {
+   "name": "HomeReady Calc – Mortgage Calculator Selling and Buying: 2026 Guide",
+   "url": "https://homereadycalc.com/blog/mortgage-calculator-selling-and-buying",
+   "type": "substitute",
+   "access": "Darmowy artykuł. Strona nieotwierana, dowód: search-summary.",
+   "covers_pl": "Opisuje sell-first vs buy-first jako kwestię finansowania pomostowego, z tymczasowym mieszkaniem przy sell-first i podwójną przeprowadzką. Zaleca test marginesu: net proceeds plus rezerwa na okres nakładania się.",
+   "misses_or_unverified_pl": "Poradnik, nie zintegrowany model (interaktywność niezweryfikowana). Search-summary stwierdza, że w tym zapytaniu nie znaleziono dedykowanego kalkulatora 'buy first or sell first'."
+  },
+  {
+   "name": "Poradniki lenderów i portali (Lower.com, NerdWallet, Better.com, SmartAsset, The Mortgage Reports, LendingTree)",
+   "url": "https://www.lower.com/mortgages/how-to-buy-a-house-before-selling-yours",
+   "type": "substitute",
+   "access": "Darmowe treści. Strony nieotwierane, dowód: search-summary. Inne URL: https://www.nerdwallet.com/blog/mortgages/bridge-loan, https://better.com/content/bridge-loan-vs-heloc, https://smartasset.com/mortgage/bridge-loan-vs-heloc, https://themortgagereports.com/132521/heloc-bridge-loan",
+   "covers_pl": "Jakościowe porównanie bridge, HELOC i contingent. Kwestie DTI (rata HELOC i pełny limit w CLTV), harmonogram HELOC (otwarcie przed wystawieniem domu, 2–6 tygodni) i przykłady liczbowe.",
+   "misses_or_unverified_pl": "Treść, nie kalkulacja dla danych użytkownika (kalkulatory na tych stronach niezweryfikowane). Źródła są sprzeczne co do stóp i opłat."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode) i loan officer",
+   "url": "n/a",
+   "type": "substitute",
+   "access": "ChatGPT renderuje kalkulatory w odpowiedziach dla wszystkich (od 7.10.2026), Google AI Mode generuje interaktywne narzędzia po angielsku (od 19.08.2026). Loan officer jest bezpłatny dla kredytobiorcy, ale stronniczy. Nie testowano.",
+   "covers_pl": "Na podstawie danych użytkownika asystent może zbudować tabelę kosztów bridge, HELOC i sell-first dla 3/6/9 miesięcy oraz przybliżony test DTI. Loan officer zweryfikuje faktyczną kwalifikację.",
+   "misses_or_unverified_pl": "Spójność rozkładu P90, tornado i aktualnych opłat programów u asystenta jest niezweryfikowana. Oprogramowania dla loan officerów do porównywania ścieżek BBYS nie znaleziono w wynikach (zapytanie nr 4), co nie oznacza, że nie istnieje."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań extended, angielski, rynek US, wyłącznie search-summary, bez otwierania stron i bez narzędzi za loginem lub paywallem). Pewność: średnio-niska. Najbliższy jest sum.money Bridge Loan Calculator: według streszczenia porównuje bridge, HELOC, contingency, 401(k) i piggyback, ma miesięczną oś kosztów, break-even względem HELOC i scenariusze sprzedaży po 3/6/9/12 miesiącach. Pokrywa więc znaczną część zintegrowanej sekwencji, a hipoteza z wave-1 ('neutralne porównanie wielu ścieżek') jest w dużej mierze zdezaktualizowana. Pozostała luka jest węższa: (a) wariant sell-first z najmem tymczasowym lub rent-back oraz program BBYS (opłata 2,25–7% jako input) w tym samym modelu co bridge, HELOC i contingent; streszczenie wprost mówi, że sell-first-and-rent nie jest modelowany; (b) macierz wykonalności oparta na DTI i rezerwach przy dwóch ratach oraz CLTV przy HELOC (niezweryfikowana u sum.money); (c) probabilistyczny rozkład czasu sprzedaży (P50/P90) zamiast scenariuszy dyskretnych; (d) minimalna cena sprzedaży, poniżej której ścieżka się rozpada, i wykres tornado; (e) kwantyfikacja kosztu contingent offer (premia cenowa lub ryzyko przegranej). Elementy (a) i (b) są merytorycznie istotne, bo ścieżka z przykładowego promptu i kwalifikacja kredytowa należą do sedna decyzji. Elementy (c)–(e) to raczej przewaga analityczna niż samodzielna nisza, a incumbent może je łatwo dodać.",
+ "search_scope_pl": "7 zapytań WebSearch (wszystkie extended), 25.10.2026, angielski, rynek US. Typy zapytań: problem w języku naturalnym (bridge vs HELOC vs contingent), kategoria (buy before you sell calculator, bridge loan calculator), terminologia alternatywna (buy first or sell first calculator), programy BBYS (Homeward/Knock/Orchard/HomeLight), oprogramowanie dla loan officerów, Reddit/arkusze oraz kalkulator wielu scenariuszy (bridge vs HELOC vs sell first and rent). Ograniczenia: WebFetch zablokowany, więc żadna strona nie była otwierana, a funkcje pochodzą wyłącznie ze streszczeń wyszukiwarki. Wątki Reddit i szablony arkuszy nie pojawiły się w wynikach. Nie sprawdzano narzędzi płatnych za loginem (np. platform prezentacyjnych dla loan officerów) ani aplikacji mobilnych. Oficjalne domeny Homeward, Knock i Orchard nie pojawiły się w wynikach, więc dowody pochodzą z recenzji zewnętrznych.",
+ "demand_signals": [
+  {
+   "signal_pl": "Gęsty ekosystem treści na dokładnie ten problem, pisanych przez duże portale i lenderów (Redfin, Lower, CrossCountry, NerdWallet, Better, SmartAsset, LendingTree, The Mortgage Reports). Świadczy o zainteresowaniu SEO i reklamodawców, ale nie mierzy wolumenu.",
+   "url": "https://www.redfin.com/guides/buy-and-sell",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Co najmniej 4 komercyjne programy buy-before-you-sell (HomeLight, Homeward, Knock, Orchard) i artykuły porównujące je w 2026. Biznes finansowany kapitałem sugeruje istotną liczbę transakcji 'kup przed sprzedażą'.",
+   "url": "https://www.jvmlending.com/blog/buy-before-you-sell-programs-compared/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele dedykowanych kalkulatorów bridge loan, w tym wersje datowane na 2026 (sum.money, FinanceRateCalc 'Sell Your Home & Buy Another', LoanInsights). Wydawcy kalkulatorów inwestują w tę frazę.",
+   "url": "https://sum.money/us/bridge-loan-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Lender z domeną nazwaną od problemu (buybeforeyousellmortgage.com) i blogi lokalnych agentów (Seattle, Los Angeles) o tej samej decyzji. Sygnał komercyjnej wartości frazy i lokalnych pytań.",
+   "url": "https://www.buybeforeyousellmortgage.com/blog/bridge-loan-vs-heloc-comparison",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Lokalne treści agentów o wyborze bridge vs contingent offer w konkretnym rynku sugerują, że klienci zadają to pytanie przed złożeniem oferty.",
+   "url": "https://www.homeproassociates.com/blog/buy-before-you-sell-in-seattle-bridge-loan-or-contingent-offer/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza (wiedza modelu, niezweryfikowana w tym audycie): efekt 'lock-in' niskich stóp hamuje przeprowadzki, ale ci, którzy się przeprowadzają (move-up buyers), częściej potrzebują finansowania pomostowego, bo nie chcą lub nie mogą sprzedać pierwsi. Grupa repeat buyers to duża część rynku, ale tylko jej podzbiór kupuje przed sprzedażą. Liczba gospodarstw to nie miesięczny popyt.",
+   "url": "n/a",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Brak bezpośrednich danych o wolumenie wyszukiwań. Wątki Reddit nie pojawiły się w wynikach, co jest brakiem dowodu, a nie dowodem braku.",
+   "url": "n/a",
+   "evidence_type": "estimate"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest średnio-wysokie. Pytanie z przykładowego promptu to klasyczne zapytanie z bogatą bazą treści (poradniki lenderów i portali). Asystent łatwo udzieli jakościowej odpowiedzi (koszt kontra pewność, HELOC trzeba otworzyć przed wystawieniem domu, contingent słabszy w gorącym rynku). Na podstawie danych użytkownika zbuduje też tabelę kosztów dla 3/6/9 miesięcy. Od 7.10.2026 ChatGPT renderuje w odpowiedzi interaktywny kalkulator, a od 19.08.2026 Google AI Mode generuje narzędzia po angielsku, co zmniejsza potrzebę klikania. Za zewnętrznym narzędziem przemawiają: aktualne, sprzeczne w źródłach stawki i opłaty (bridge 8,5–11,5%, programy BBYS 2,25–7%), wielookresowy model z rozkładem P90 i macierzą DTI, którego audytowalność i powtarzalność są trudne w czacie, oraz potrzeba zapisania i porównania scenariuszy z partnerem lub agentem. Asystent cytujący źródła prawdopodobnie wskaże raczej sum.money, Redfin lub NerdWallet niż nową domenę. Przewagę daje dopiero wyraźna specjalizacja (sell-first i rent-back, DTI, P90).",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja realna i kosztowna. Dotyczy podzbioru move-up buyers rocznie, a rynek treści i programów jest rozbudowany. Brak twardych danych o wolumenie zapytań.",
+   "evidence_pl": "Treści dużych portali i lenderów na tę frazę, 4 komercyjne programy BBYS z porównaniami 2026, wiele kalkulatorów bridge datowanych na 2026, lender z domeną 'buybeforeyousellmortgage', blogi lokalnych agentów.",
+   "gaps_pl": "Brak wolumenów wyszukiwań (np. 'bridge loan calculator', 'buy before you sell'), brak danych o udziale transakcji z zakupem przed sprzedażą, brak wątków Reddit w wynikach. Efekt lock-in to hipoteza.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 2,
+   "rationale_pl": "Istnieje darmowy, silny partial (sum.money) obejmujący bridge, HELOC, contingency, 401(k) i piggyback z osią czasu, break-even i scenariuszami czasu sprzedaży. Luka zawęża się do sell-first z najmem lub rent-back, programów BBYS, macierzy DTI oraz P90, minimalnej ceny i tornado. Dwa pierwsze elementy są istotne, reszta to przewaga analityczna łatwa do skopiowania.",
+   "evidence_pl": "Search-summary zapytania nr 7 opisuje funkcje sum.money i wprost stwierdza brak modelowania sell-first-and-rent. Pozostałe kalkulatory (Stairway, FinanceRateCalc, LoanInsights itd.) są jednozadaniowe. Zapytanie 'buy first or sell first calculator' nie dało dedykowanego narzędzia.",
+   "gaps_pl": "Funkcje sum.money i CalcMoney znamy tylko ze streszczeń, więc mogą być szersze lub węższe. Nie sprawdzono, czy kalkulatory programów BBYS (HomeLight, Homeward) porównują ścieżki. Nie sprawdzono płatnych narzędzi dla loan officerów.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystenci dobrze radzą sobie z jakościowym porównaniem i prostą tabelą scenariuszy, a nowe interaktywne UI w ChatGPT i Google AI Mode ogranicza odesłania. Częściowo za odesłaniem przemawiają aktualne stawki i opłaty oraz złożony model P90 z DTI.",
+   "evidence_pl": "Obfitość spójnych treści jakościowych w wynikach (łatwe do streszczenia przez AI). Konflikty w stawkach i opłatach między źródłami (potrzeba świeżych danych). Opis możliwości ChatGPT i AI Mode z kontekstu zadania.",
+   "gaps_pl": "Nie testowano realnych odpowiedzi ChatGPT, Gemini i Perplexity na przykładowy prompt ani tego, które domeny cytują.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Właściciele domów w USA w momencie transakcji, czyli najdroższe wertykale: mortgage, HELOC, bridge loan, agenci nieruchomości, przeprowadzki, ubezpieczenia domu. To nie kategoria wrażliwa w rozumieniu ograniczeń AdSense.",
+   "evidence_pl": "Lenderzy (Lower, CrossCountry, Better, Stairway), brokerzy i programy BBYS (HomeLight, Homeward, Knock) inwestują w treści i kalkulatory na tę frazę, co wskazuje na wysoką wartość komercyjną.",
+   "gaps_pl": "Brak danych CPC/RPM. Wąskie audytorium oznacza wysoką wartość na odsłonę, ale niski wolumen. Możliwe ograniczenia reklam finansowych (weryfikacja reklamodawców) nie zostały sprawdzone.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Rdzeń (oś cash-flow, koszty kredytów, net proceeds) jest prosty, a parametry może podawać użytkownik. Trudniejsze są wiarygodne wartości domyślne: stawki bridge i HELOC oraz opłaty programów BBYS zmieniają się i są sprzeczne między źródłami. Reguły DTI dla departing residence wymagają interpretacji, a rozkład czasu sprzedaży wymaga lokalnych danych DOM.",
+   "evidence_pl": "Sprzeczne opłaty programów w wynikach (Homeward 2,4–7%, Knock 1,25% vs 2,25%, Orchard 6% vs 9–14%) i rozbieżne stawki bridge (8,5–12%) oznaczają ciągłą aktualizację presetów.",
+   "gaps_pl": "Nie sprawdzono dostępności darmowych danych o czasie sprzedaży (np. lokalnych median DOM) ani stabilności wytycznych agencji co do liczenia dwóch rat.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Wynik to szacunek przed rozmową z lenderem, który i tak weryfikuje kwalifikację, więc błąd nie jest bezpośrednio katastrofalny. Komunikat 'ścieżka wykonalna' przy DTI i błędne założenia opłat mogą jednak skłonić do kosztownej decyzji (dwie raty). Wymaga ostrożnych sformułowań i disclaimerów.",
+   "evidence_pl": "Źródła różnią się nawet co do podstaw (czy HELOC można otworzyć na wystawionym domu, czas zamknięcia bridge 7–14 dni vs HELOC 2–6 tygodni). Pełny limit HELOC może wpływać na CLTV, a rata na DTI.",
+   "gaps_pl": "Nie zweryfikowano aktualnych reguł underwritingu (Fannie Mae/Freddie Mac) dla departing residence ani wymogów rezerw.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Silnie wykorzystuje wspólne moduły: oś cash-flow, finansowanie (mortgage, HELOC, bridge, recast), wartość domu i net proceeds, opcjonalnie podatek (wyłączenie zysku ze sprzedaży domu). Generuje produkty pokrewne: sprzedać czy wynająć stary dom, HELOC vs cash-out, recast po sprzedaży, affordability move-up, decyzja o rent-back. Nie korzysta z modułu energii.",
+   "evidence_pl": "Wyniki pokazują sąsiednie kategorie z popytem treściowym: sell-or-keep i rent-vs-sell (Opesway, Sarents), kalkulatory net proceeds (Opendoor, CrossCountry), recast i capital gains (Stairway), HELOC vs bridge vs margin loan (Lendmire).",
+   "gaps_pl": "Rzeczywisty stopień reużycia zależy od architektury silnika. Nie oceniano popytu na każdy produkt pokrewny.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wartość reklamowa jest wysoka (mortgage, HELOC, agenci), a silnik dobrze współdzielony z rodziną 'dom'. Luka jest jednak węższa niż zakładał wave-1: sum.money (darmowy, 2026) według streszczeń pokrywa już bridge, HELOC, contingency, 401(k) i piggyback z osią czasu, break-even i scenariuszami 3/6/9/12 miesięcy, a ryzyko samodzielnego rozwiązania przez AI jest średnio-wysokie. Średnia ważona wynosi około 3,05. Przed pilotażem: (1) ręcznie zweryfikować sum.money i CalcMoney (czy modelują DTI, rent-back, programy BBYS i czy wyniki są zintegrowane) oraz kalkulatory na stronach HomeLight i Homeward; (2) sprawdzić wolumeny i trudność fraz ('bridge loan calculator', 'buy before you sell', 'sell first or buy first'); (3) przetestować odpowiedzi ChatGPT i Google AI Mode na przykładowy prompt i sprawdzić, które domeny cytują. Jeśli luka (sell-first i rent-back plus macierz DTI plus P90) się potwierdzi, lepiej budować to jako moduł szerszego huba move-up niż jako samodzielny produkt.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "calculator compare bridge loan vs HELOC vs sell first and rent months to sell scenarios",
+   "url": "https://sum.money/us/bridge-loan-calculator/",
+   "competitor": "sum.money Bridge Loan Calculator 2026",
+   "features_checked": "Warianty (bridge, HELOC, contingency, 401(k), piggyback), timeline miesięczny, break-even vs HELOC, scenariusze 3/6/9/12 miesięcy, net proceeds, sell-first-and-rent",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; login/paywall niezweryfikowany",
+   "conclusion": "Najsilniejszy partial, blisko bezpośredniego dla części finansowej. Według streszczenia nie modeluje sell-first z najmem. DTI, P90, programy BBYS i tornado niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell calculator bridge loan cost two mortgages",
+   "url": "https://calcmoney.io/blog/mortgage-simultaneous-buy-sell-calculator",
+   "competitor": "CalcMoney simultaneous buy/sell",
+   "features_checked": "Koszt bridge przy jednoczesnym kupnie i sprzedaży, wpływ długości nakładania się (90 vs 120 dni)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; nie wiadomo, czy to artykuł, czy interaktywne narzędzie",
+   "conclusion": "Partial, zakres niezweryfikowany. Przypisanie przykładu 90/120 dni do tej strony jest niepewne.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell calculator bridge loan cost two mortgages",
+   "url": "https://www.stairwaymortgage.com/loan-calculator/bridge-loan/",
+   "competitor": "Stairway Mortgage Bridge Loan Calculator",
+   "features_checked": "Equity transfer, rata bridge, recast, oszczędność podatku od zysków kapitałowych (z tytułu)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuł); kalkulator lead-gen lendera",
+   "conclusion": "Partial: jedna ścieżka (bridge) z recastem. Porównanie ścieżek niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell calculator bridge loan cost two mortgages",
+   "url": "https://financeratecalc.com/bridge-loan-calculator.html",
+   "competitor": "Generyczne kalkulatory bridge loan (FinanceRateCalc, AccurateCalculators, LoanInsights, National Mortgage Center)",
+   "features_checked": "Koszt odsetek i opłat bridge (z tytułów i streszczenia)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuły)",
+   "conclusion": "Partial, jednozadaniowe kalkulatory, nie bezpośredni konkurenci.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I buy a new house before selling my current one bridge loan vs HELOC vs contingent offer",
+   "url": "https://www.redfin.com/guides/buy-and-sell",
+   "competitor": "Redfin – Compare Buying First vs. Selling",
+   "features_checked": "Porównanie buy-first vs sell-first (tytuł); interaktywność",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuł)",
+   "conclusion": "Substytut treściowy o silnej domenie. Obecność kalkulatora niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+   "url": "https://www.homelight.com/blog/best-way-to-buy-a-house-before-you-sell-yours/",
+   "competitor": "HomeLight Buy Before You Sell",
+   "features_checked": "Opłata programu (2,4% ceny sprzedaży, 2,9% FL według innego źródła), porównanie z bridge i HELOC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; program komercyjny",
+   "conclusion": "Substytut (usługa jednej ścieżki). Kalkulator porównawczy niezweryfikowany. Przeklasyfikowano z partial (wave-1).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+   "url": "https://anytimeestimate.com/reviews/homeward/",
+   "competitor": "Homeward",
+   "features_checked": "Opłata programu (sprzeczne: 2,4% / 3,5% / do 7%)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary z recenzji zewnętrznej; oficjalnej domeny nie było w wynikach",
+   "conclusion": "Substytut (usługa). Opłaty niepewne, narzędzie porównawcze niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+   "url": "https://www.houzeo.com/blog/knock-real-estate-reviews-pros-cons-and-alternatives/",
+   "competitor": "Knock",
+   "features_checked": "Opłata (około 2,25% + 1 850 USD; jedno źródło 1,25%), status 2026",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary z recenzji zewnętrznej",
+   "conclusion": "Substytut (usługa). Narzędzie porównawcze niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+   "url": "https://mortgage-info.com/blog/buy-before-you-sell-bridge-loan-alternatives-2026",
+   "competitor": "Orchard oraz porównanie Knock vs Orchard vs bridge vs HELOC",
+   "features_checked": "Opłata Orchard (około 6% vs 9–14%, sprzeczne), ograniczony zasięg, porównanie ścieżek w artykule",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Orchard to substytut (usługa). Artykuł to substytut treściowy bez kalkulacji dla danych użytkownika (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+   "url": "https://www.jvmlending.com/blog/buy-before-you-sell-programs-compared/",
+   "competitor": "JVM Lending – Buy Before You Sell Programs Compared 2026",
+   "features_checked": "Porównanie programów BBYS (tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuł)",
+   "conclusion": "Substytut treściowy, interaktywność niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy first or sell first calculator home",
+   "url": "https://homereadycalc.com/blog/mortgage-calculator-selling-and-buying",
+   "competitor": "HomeReady Calc guide",
+   "features_checked": "Sell-first vs buy-first, mieszkanie tymczasowe, podwójna przeprowadzka, test marginesu net proceeds plus rezerwa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy. W tym zapytaniu nie znaleziono dedykowanego kalkulatora buy-first vs sell-first.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "buy first or sell first calculator home",
+   "url": "https://www.opendoor.com/home-sale-calculator",
+   "competitor": "Opendoor Home Sale Calculator (oraz CrossCountry Home Sale Calculator)",
+   "features_checked": "Net proceeds ze sprzedaży",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie lead-gen",
+   "conclusion": "Partial (fragment: gotówka ze sprzedaży), bez porównania ścieżek.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I buy a new house before selling my current one bridge loan vs HELOC vs contingent offer",
+   "url": "https://www.lower.com/mortgages/how-to-buy-a-house-before-selling-yours",
+   "competitor": "Poradniki lenderów i portali (Lower, NerdWallet, Better, SmartAsset, The Mortgage Reports)",
+   "features_checked": "Jakościowe porównanie bridge, HELOC i contingent; DTI i CLTV przy HELOC; timing otwarcia HELOC; przykłady kosztów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy. Źródła są sprzeczne co do stawek i timingu HELOC, co jest sygnałem potrzeby aktualnych danych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "loan officer software compare buy before you sell scenarios bridge loan HELOC client presentation",
+   "url": "n/a",
+   "competitor": "Oprogramowanie dla loan officerów",
+   "features_checked": "Narzędzia do prezentacji scenariuszy BBYS dla klienta",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzia płatne lub za loginem nie były sprawdzane",
+   "conclusion": "W wynikach nie znaleziono produktów software dla loan officerów, tylko treści konsumenckie. Istnienie takich narzędzi pozostaje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit bought new house before selling old one HELOC bridge loan carrying two mortgages spreadsheet",
+   "url": "n/a",
+   "competitor": "Arkusze i wątki Reddit",
+   "features_checked": "Szablony arkuszy, narzędzia społecznościowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "W wynikach nie pojawiły się wątki Reddit ani szablony arkuszy, tylko poradniki. To brak dowodu, a nie dowód braku.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I buy a new house before selling my current one bridge loan vs HELOC vs contingent offer",
+  "buy before you sell calculator bridge loan cost two mortgages",
+  "buy before you sell programs compared 2026 Homeward Knock Orchard HomeLight fees",
+  "loan officer software compare buy before you sell scenarios bridge loan HELOC client presentation",
+  "reddit bought new house before selling old one HELOC bridge loan carrying two mortgages spreadsheet",
+  "buy first or sell first calculator home",
+  "calculator compare bridge loan vs HELOC vs sell first and rent months to sell scenarios"
+ ]
+}

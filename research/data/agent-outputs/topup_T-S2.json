@@ -1,0 +1,829 @@
+{
+ "seeds": [
+  {
+   "seed_id": "B",
+   "restated_problem_pl": "Użytkownik ma 2–4 oferty ubezpieczenia (najczęściej home lub auto; wariant health HDHP+HSA vs PPO) różniące się składką, franszyzą (kwotową albo procentową od sumy Coverage A, np. hurricane/wind deductible), limitami i sposobem wyceny szkody (RCV vs ACV). Chce wybrać kombinację oferta × franszyza × polityka zgłaszania szkód tak, by (1) nie przekroczyć swojej rezerwy gotówkowej przy jednej albo kilku szkodach w roku, (2) zminimalizować oczekiwany koszt w horyzoncie 3–5 lat w scenariuszach szkód małych, średnich i katastrofalnych, (3) uwzględnić, że zgłoszenie małej szkody podnosi składkę (surcharge zwykle na 5–7 lat, utrata zniżki claims-free, ryzyko non-renewal), więc część szkód i tak pokryje sam. Wynik ma pokazać dopuszczalne i najtańsze warianty oraz to, od jakich założeń (prawdopodobieństwo szkody, wysokość i czas trwania surcharge) zależy ranking.",
+   "integration_check_pl": "Zależności są prawdziwe, ale płytkie. Rezerwa gotówkowa wyklucza część franszyz (twarde ograniczenie), franszyza wyznacza próg opłacalności zgłoszenia szkody, a polityka niezgłaszania małych szkód zmienia oczekiwany koszt i surcharge. Całość sprowadza się jednak do jednej funkcji wartości oczekiwanej z 3–4 parametrami, a nie do łańcucha modułów, których wyniki się przenoszą. Najważniejsze wejścia (prawdopodobieństwo szkody dla konkretnego domu, % surcharge i czas jego trwania u konkretnego ubezpieczyciela) są nieznane zarówno użytkownikowi, jak i zewnętrznej stronie, więc wynik zależy głównie od założeń. Wariant health (OOP max, wkład pracodawcy do HSA, efekt podatkowy) ma zupełnie inną strukturę. Łączenie go z home/auto w jednym symulatorze to poszerzanie katalogu, a nie integracja.",
+   "competitors": [
+    {
+     "name": "Calcbee – Insurance Deductible Optimizer",
+     "url": "https://calcbee.com/calculators/insurance/specialty/insurance-deductible-optimizer/",
+     "type": "partial",
+     "features_claimed": "Optymalizacja wysokości franszyzy; według search-summary część narzędzi w tej grupie uwzględnia oczekiwaną liczbę szkód (claim frequency). Której stronie to przypisać, niezweryfikowane.",
+     "notes": "Najbliższy znaleziony odpowiednik rdzenia seedu. Strony nie otwarto (WebFetch niedostępny). Uwzględnienie rezerwy gotówkowej i surcharge: niezweryfikowana.",
+     "paid": "darmowy (prawdopodobnie, niezweryfikowane)"
+    },
+    {
+     "name": "Calcbee – Auto Deductible Break-Even Calculator",
+     "url": "https://www.calcbee.com/calculators/insurance/auto/auto-deductible-break-even/",
+     "type": "partial",
+     "features_claimed": "Break-even franszyzy auto (lata oszczędności składki potrzebne na pokrycie różnicy franszyzy).",
+     "notes": "Tylko auto, jeden wymiar decyzji.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "InsuranceCalcs – Deductible vs Premium Calculator",
+     "url": "https://insurancecalcs.com/deductible-vs-premium/",
+     "type": "partial",
+     "features_claimed": "Porównanie franszyza vs składka, break-even.",
+     "notes": "Funkcje szczegółowe niezweryfikowane.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "Calk-USA – Insurance Deductible Comparison Calculator",
+     "url": "https://calk-usa.com/calculator/deductible-comparison/",
+     "type": "partial",
+     "features_claimed": "Porównanie wariantów franszyzy.",
+     "notes": "Funkcje szczegółowe niezweryfikowane.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "CoverForge USA – Deductible Savings Calculator",
+     "url": "https://coverforgeusa.com/tools/deductible-savings-calculator",
+     "type": "partial",
+     "features_claimed": "Oszczędność składki przy wyższej franszyzie.",
+     "notes": "Funkcje szczegółowe niezweryfikowane.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "Calculators.im – Insurance Deductible Calculator",
+     "url": "https://calculators.im/insurance-deductible-calculator",
+     "type": "partial",
+     "features_claimed": "Porównanie planów według franszyzy.",
+     "notes": "Funkcje szczegółowe niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "MyCarCalc – Car Insurance Deductible Calculator",
+     "url": "https://mycarcalc.com/auto-loans-and-finance/car-insurance-deductible-calculator",
+     "type": "partial",
+     "features_claimed": "Break-even franszyzy auto.",
+     "notes": "Tylko auto.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "COUNTRY Financial – How to calculate homeowners deductible",
+     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+     "type": "partial",
+     "features_claimed": "Dobór franszyzy domowej względem rezerwy (wcześniej znalezione; w tym przebiegu znów pojawiło się w wynikach).",
+     "notes": "Narzędzie ubezpieczyciela.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Insurify app in ChatGPT",
+     "url": "https://insurify.com/press/news/insurify-chatgpt-app/",
+     "type": "partial",
+     "features_claimed": "Porównanie ofert auto w ChatGPT (od 02.2026), baza 196M wycen. Od 08.2026 real-time quotes i zakup w czacie (według trade press: w wybranych stanach).",
+     "notes": "Kluczowe dla dystrybucji AI: moment 'mam kilka ofert' jest przechwytywany wewnątrz asystenta. Brak symulacji rezerwy i scenariuszy szkód (niezweryfikowane).",
+     "paid": "darmowy dla użytkownika, prowizja agenta"
+    },
+    {
+     "name": "Bankrate – Does homeowners insurance go up after a claim",
+     "url": "https://www.bankrate.com/insurance/homeowners-insurance/does-homeowners-insurance-go-up-after-a-claim",
+     "type": "substitute",
+     "features_claimed": "Artykuł: wpływ szkody na składkę, różnice między ubezpieczycielami.",
+     "notes": "Treść, nie narzędzie.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "AARP – Should you make a home insurance claim",
+     "url": "https://www.aarp.org/money/personal-finance/should-you-make-home-insurance-claim/",
+     "type": "substitute",
+     "features_claimed": "Artykuł o progu opłacalności zgłoszenia szkody.",
+     "notes": "Treść.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Insurance.com – When to file a home insurance claim",
+     "url": "https://insurance.com/home-and-renters-insurance/when-to-file-home-insurance-claim",
+     "type": "substitute",
+     "features_claimed": "Reguły kciuka (zgłaszać, gdy szkoda przekracza 2–3× franszyzę).",
+     "notes": "Treść.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "LPL resource center – A home insurance claim: to file or not to file",
+     "url": "https://westwealth.lpl.com/resource-center/insurance/a-home-insurance-claim-to-file-or-not-to-file",
+     "type": "substitute",
+     "features_claimed": "Średni wzrost składki po szkodzie ok. 9% (cytowane badanie), metoda break-even.",
+     "notes": "Syndykowana treść doradców.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Gerald – High deductible vs PPO calculator guide",
+     "url": "https://joingerald.com/learn/financial-wellness/high-deductible-vs-ppo-calculator-guide",
+     "type": "partial",
+     "features_claimed": "Scenariusze niskiego, średniego i wysokiego zużycia dla HDHP+HSA vs PPO (2026).",
+     "notes": "Wariant health; poradnik z przykładami.",
+     "paid": "darmowy"
+    }
+   ],
+   "novelty": "pozorna",
+   "demand_pl": "Dane pośrednie: wielu dużych wydawców (AARP, Bankrate, Insurance.com, syndykowane centra LPL/Baird, MoneyCrashers) publikuje treści 'should I file a claim' i 'higher deductible worth it'. To świadczy o popycie informacyjnym, ale nie o chęci użycia rozbudowanego symulatora. Co najmniej 6 niszowych stron kalkulatorowych (insurancecalcs, calk-usa, coverforgeusa, calculators.im, calcbee, mycarcalc) walczy o te same frazy: fraza ma ruch, ale jest zatłoczona funkcjonalnymi narzędziami. Wolumenów nie mierzono (brak danych). Zapytanie typu reddit dla seedu B nie było osobno badane w tym przebiegu.",
+   "ai_risk_pl": "Wysokie. Rdzeń problemu to arytmetyka wartości oczekiwanej na 2–3 ofertach, którą asystent AI wykona w rozmowie na liczbach podanych przez użytkownika. Dodatkowo Insurify od 02.2026 działa jako aplikacja w ChatGPT (porównanie ofert auto), a od 08.2026 podaje real-time quotes z możliwością zakupu w czacie (search-summary, głównie komunikaty prasowe). Moment 'mam kilka ofert' jest więc obsługiwany wewnątrz asystenta, z danymi, których zewnętrzna strona nie ma. Nie przenoszę tego automatycznie na Perplexity/Gemini/Claude (niezweryfikowane).",
+   "maintenance_pl": "Średnie. Typowe % surcharge, zniżki claims-free i reguły non-renewal różnią się między stanami i ubezpieczycielami, a parametrów konkretnego ubezpieczyciela nie da się utrzymać automatycznie. Zmiany regulacyjne: np. Floryda HB 815 (od 1.07.2026) ogranicza non-renewal z powodu samego wieku dachu poniżej 15 lat (search-summary; konkretnej strony źródłowej nie ustalono, do weryfikacji). Wariant health wymaga corocznej aktualizacji limitów HSA i OOP (IRS/CMS), co jest łatwe, ale obowiązkowe.",
+   "verdict": "odrzucić",
+   "verdict_reason_pl": "(1) Rdzeń (franszyza vs składka vs liczba szkód) rozwiązuje kilka darmowych kalkulatorów, a calcbee ma wprost 'Insurance Deductible Optimizer'. (2) Brakujące elementy (indywidualny surcharge, prawdopodobieństwo szkody) to parametry, których zewnętrzna strona nie dostarczy wiarygodnie, a nie logika, którą warto budować. (3) Wysokie ryzyko samodzielnego rozwiązania w asystencie AI oraz obecność Insurify w ChatGPT. (4) Łączenie home/auto/health to katalog, nie integracja. Elementy warte zachowania jako moduły w innych symulatorach: limit franszyzy względem rezerwy gotówkowej (szczególnie procentowe hurricane/wind deductibles) i próg 'claim vs pay out of pocket'. Zastępstwo: T-S2-R1 (stary dach a ubezpieczenie), gdzie te moduły wpływają na decyzję inwestycyjną.",
+   "search_scope_pl": "Wcześniejsze wyniki: COUNTRY Financial, MoneyGeek, NerdWallet, Progressive, Lively, artykuły Zebra/Motley Fool/CarInsurance.com/WalletHub. W tym przebiegu 4 zapytania bezpośrednie: should-I-file-claim calculator, optimal deductible/emergency fund/break-even (extended), Insurify ChatGPT app, HDHP vs PPO HSA calculator. Do tego 1 pośrednie (roof age/ACV/FORTIFIED). Nie sprawdzono osobno: Policygenius, Experian Insurance (dawne Gabi), employer decision-support (ALEX/Jellyvision, Picwell), Healthcare.gov window shopping. Ich funkcje są niezweryfikowane. Brak WebFetch: nie otwierano stron, nie testowano formularzy; dowody to wyłącznie search-summary.",
+   "confidence": "high"
+  },
+  {
+   "seed_id": "C",
+   "restated_problem_pl": "Właściciel domu w strefie zagrożenia powodziowego (SFHA lub w jej pobliżu), z polisą NFIP lub prywatną, widzi rosnącą składkę (Risk Rating 2.0, glide path do full-risk premium) albo ma historię zalania. Według CRS i biur Kongresu polisa, która wygasła (lapse), po reautoryzacji przechodzi od razu na full-risk rate (search-summary). W horyzoncie 1–10 lat wybiera między: (1) brakiem działań i płaceniem rosnącej składki, (2) tanią mitygacją (elevation certificate, flood vents, podniesienie instalacji), (3) pełnym podniesieniem domu z dotacją (np. Elevate Florida 75% federalne / 25% właściciel, wkład płatny z góry; HMGP/FMA/BRIC o zmiennej dostępności) albo z finansowaniem (SBA loan, HELOC, kredyt), z oczekiwaniem na grant i przeprowadzką na czas budowy, (4) sprzedażą teraz albo po mitygacji, z obowiązkiem ujawnienia historii szkód i dopłat (np. FL, TX, NY) i wpływem ryzyka i kosztu ubezpieczenia na cenę oraz zdolność kredytową kupującego, (5) ograniczeniem lub rezygnacją z ubezpieczenia, jeśli nie ma kredytu hipotecznego. Wynik ma pokazać koszt netto wariantów w horyzoncie posiadania, punkt break-even mitygacji oraz wrażliwość na grant, tempo wzrostu składki, prawdopodobieństwo szkody i dyskonto przy sprzedaży.",
+   "integration_check_pl": "Integracja jest realna, to nie sklejone kalkulatory: (a) podniesienie domu zmienia jednocześnie składkę, oczekiwaną stratę roczną i atrakcyjność przy sprzedaży; (b) grant obniża koszt, ale wprowadza opóźnienie i wymóg wkładu z góry, co przesuwa moment korzyści i może kolidować z planowaną sprzedażą (Elevate Florida: nabór tylko 7.02–11.04.2025; limit hard cost podniesiony z 220 do 375 tys. USD we wrześniu 2025; obniżone udziały dla Repetitive Loss zniesione; brak stanowego wsparcia wkładu własnego, możliwy kredyt SBA; search-summary floridadisaster.org); (c) horyzont posiadania decyduje, czy payback w ogóle nastąpi (8–25 lat według Fluvenar; poniżej 5 lat w przykładzie floodprepare przy 75% grancie i składce 4000 USD/rok); (d) lapse polisy lub programu NFIP zmienia ścieżkę składki. Ograniczenie krytyczne: efekt mitygacji na składkę pod Risk Rating 2.0 nie jest publicznie wyliczalny. Congressional Record z 22.05.2025 opisuje domy, którym składka wzrosła mimo podniesienia (search-summary), a według Fluvenar NFIP nie kredytuje barier (niezweryfikowane). Najważniejsze wejście (składka po mitygacji) musi więc pochodzić z oferty agenta. Bez tego wynik zależy od założeń.",
+   "competitors": [
+    {
+     "name": "Fluvenar – Flood Mitigation ROI Analysis",
+     "url": "http://fluvenar.smarttechinvest.com/docs/mitigation",
+     "type": "partial",
+     "features_claimed": "Według search-summary: redukcja składki 20–40% za każdą stopę powyżej BFE, payback 8–25 lat, oszczędność z flood vents 200–800 USD/rok, przykład elevation certificate (800 USD kosztu, ok. 2200 USD/rok oszczędności), uwaga o braku kredytu NFIP dla barier.",
+     "notes": "Najbliższy znaleziony odpowiednik części mitygacja + ubezpieczenie. Czy uwzględnia sprzedaż, finansowanie i timeline grantu: niezweryfikowane. Zapytanie o nazwę marki nic nie zwróciło, więc widoczność jest niska. Na tej samej domenie jest blog o koszcie NFIP Zone AE dla emerytów. Prawdopodobnie mały projekt niszowy, klasyfikacja direct/partial do weryfikacji po otwarciu strony.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "FloodproofCost.com (cost guide + 'Is Flood Mitigation Worth It? Payback, ROI')",
+     "url": "https://floodproofcost.com/is-flood-mitigation-worth-it",
+     "type": "partial",
+     "features_claimed": "Koszty: vents 1,5–5 tys. USD, podniesienie 20–80 tys. USD, złożone/przybrzeżne 80–150 tys. USD; ok. 30% redukcji składki za stopę; granty FEMA; payback/ROI.",
+     "notes": "Strona główna https://floodproofcost.com/ zawiera przewodnik kosztowy 2026 z FEMA grants. Czy jest interaktywny kalkulator: niezweryfikowane.",
+     "paid": "darmowy (niezweryfikowane)"
+    },
+    {
+     "name": "FloodPrepare – How to elevate your home above flood level",
+     "url": "https://floodprepare.com/knowledge/how-to-elevate-your-home-above-flood-level",
+     "type": "partial",
+     "features_claimed": "Szacunki redukcji składki (BFE+1: 30–40%, BFE+2: 60–70%), przykład payback z grantem 75%.",
+     "notes": "Treść z przykładem liczbowym, nie symulator (niezweryfikowane).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Flood Insurance Guru – Private flood vs NFIP cost over time 2026",
+     "url": "https://www.floodinsuranceguru.com/the-flood-insurance-guru-blog/private-flood-insurance-vs-nfip-cost-over-time-in-2026",
+     "type": "partial",
+     "features_claimed": "Porównanie kosztu prywatnej polisy i NFIP w czasie.",
+     "notes": "Obejmuje tylko ścieżkę ubezpieczeniową; agent ubezpieczeniowy (konflikt interesów).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "FloodSmart (agents) – Reducing Insurance Costs",
+     "url": "https://agents.floodsmart.gov/topics/writing-policies/reducing-insurance-costs",
+     "type": "partial",
+     "features_claimed": "Oficjalne wskazówki FEMA dotyczące obniżania kosztu polis NFIP.",
+     "notes": "Materiał dla agentów, nie symulator decyzji.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "First Street (Risk Factor) – property/city flood reports",
+     "url": "https://firststreet.org/city/new-york-ny/3651000_fsid/flood",
+     "type": "partial",
+     "features_claimed": "Ryzyko powodzi na poziomie nieruchomości i miasta; raporty zawierają ocenę ubezpieczenia (według search-summary); prognozy kosztów klimatycznych.",
+     "notes": "Dostarcza danych wejściowych o ryzyku, nie porównuje mitygacji, finansowania i sprzedaży. Zillow usunął wyniki First Street z ogłoszeń w 11.2025 po sprzeciwie CRMLS, a dokładność modelu jest kwestionowana. Licencjonowanie danych do własnego narzędzia: hipoteza / niezweryfikowane.",
+     "paid": "freemium (niezweryfikowane)"
+    },
+    {
+     "name": "FloodHelpNY",
+     "url": "https://www.adaptationclearinghouse.org/resources/floodhelpny-new-york-city-new-york.html",
+     "type": "partial",
+     "features_claimed": "Kalkulator szacunku składki dla NYC i kwalifikacja do resiliency audit z elevation certificate.",
+     "notes": "Tylko NYC. Opis z 2016, aktualność niezweryfikowana.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "LSU AgCenter FloodSafeHome",
+     "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2023.1060901/pdf",
+     "type": "partial",
+     "features_claimed": "Korzyść ekonomiczna freeboard: koszt, oszczędność składki, oczekiwana strata roczna, wynik miesięczny.",
+     "notes": "Dotyczy nowej budowy, nie retrofitu istniejącego domu; aktualny URL narzędzia niezweryfikowany.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "RROIT – Risk and Return on Investment Tool for Flood Mitigation",
+     "url": "https://sustainabletechnologies.ca/risk-return-investment-tool-flood-mitigation/",
+     "type": "partial",
+     "features_claimed": "Średnia roczna szkoda w obecnym i przyszłym klimacie, ROI opcji mitygacji dla gmin i właścicieli.",
+     "notes": "Narzędzie kanadyjskie, rynek USA poza zakresem.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "Elevate Florida (FDEM)",
+     "url": "https://www.floridadisaster.org/dem/mitigation/elevate-florida",
+     "type": "substitute",
+     "features_claimed": "Program grantowy 75/25 na podniesienie, rekonstrukcję i wykup (Florida).",
+     "notes": "Program i źródło danych, nie narzędzie decyzyjne.",
+     "paid": "n/d"
+    },
+    {
+     "name": "U.S. News – How much does flood insurance cost",
+     "url": "https://www.usnews.com/insurance/flood-insurance-cost",
+     "type": "substitute",
+     "features_claimed": "Średnia polisa NFIP ok. 1122 USD/rok; strefy wysokiego ryzyka powyżej 1600 USD.",
+     "notes": "Treść.",
+     "paid": "darmowy"
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie, słabe do umiarkowanych: (1) GAO-27-108012 na danych First Street: ok. 86% nieruchomości wysokiego ryzyka bez NFIP w 04.2026 (search-summary). Duża luka ubezpieczeniowa oznacza jednak również, że większość tej populacji wcale nie stoi przed decyzją o mitygacji. (2) Elevate Florida: ponad 335 wniosków przekazanych do FEMA (02.2026); to udział w programie, nie wolumen wyszukiwań. (3) Sygnały bólu: Insurance Business 'Rocketing flood premiums', wątek BiggerPockets 'PITI went up 15k in a year', Congressional Record 2025, projekt Cassidy–Wicker chroniący przed skokami stawek. (4) Zapytanie typu reddit o 'elevate or sell' nie zwróciło wątków Reddit (search-summary), więc brak dowodu na częste pytania w tej formie. Popyt zapewne rośnie skokowo po huraganach (hipoteza). Brak wolumenów Google i danych o promptach LLM.",
+   "ai_risk_pl": "Średnie. Asystent AI wyjaśni opcje i policzy payback na liczbach użytkownika. Nie zna jednak składki po mitygacji, lokalnych grantów ani bieżącego statusu NFIP/BRIC, a strona też ich nie zna bez regularnej aktualizacji. Przewaga strony to ustrukturyzowany model wieloletni (timeline grantu, wkład z góry, horyzont sprzedaży, lapse) z aktualnymi parametrami programów. Ryzyko, że asystent zacytuje proste fakty (koszt vents i elevation) bez odesłania na stronę, jest wysokie.",
+   "maintenance_pl": "Wysokie. (1) NFIP: lapse podczas 43-dniowego shutdownu jesienią 2025, potem retroaktywna reautoryzacja; według CRS z 02.2026 autoryzacja do 30.09.2026, a statusu po tej dacie nie ustalono (stan na 25.10.2026 do sprawdzenia). (2) BRIC: anulowany 04.2025, sąd uznał to za bezprawne 11.12.2025, nakaz wykonania 6.03.2026, nowy NOFO FY24/25 na 1 mld USD z terminem 23.07.2026 (search-summary). Status FMA na 2026 niezweryfikowany. (3) Programy stanowe mają okna naboru i zmienne limity (Elevate Florida). (4) Prawo ujawniania powodzi zmienia się co roku (FL SB 948/2025, TX SB 339, NY 2024; NRDC liczy 7–8 stanów z silnymi przepisami). (5) Dostępność danych o ryzyku w portalach się zmienia (Zillow 11.2025). Monitoring da się częściowo zautomatyzować w n8n (RSS FEMA, CRS, FDEM), ale interpretacja wymaga ludzkiej oceny.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Nie odrzucam, bo integracja jest realna, a w badanym zakresie nie znaleziono bezpośredniego konkurenta. Najbliższe są Fluvenar i FloodproofCost (częściowe, funkcje niezweryfikowane), a żadne znalezione narzędzie nie łączy mitygacji, ścieżki składki, grantu lub finansowania z timeline i horyzontem sprzedaży. Pełny seed jest jednak zbyt szeroki (5 modułów, stanowe granty, nieprzewidywalny efekt RR2.0), popyt jest słabo udokumentowany, a utrzymanie drogie. Proponuję zawężenie do dwóch momentów wejścia, w których użytkownik ma twarde dane: T-S2-R2 (odnowienie polisy z wysoką podwyżką: liczby z declarations page, hold/mitigate/switch/sell) i T-S2-R3 (decyzja po powodzi przy substantial damage i ICC, na później). Pilot dopiero po walidacji popytu.",
+   "search_scope_pl": "11 zapytań w tym przebiegu na seed C: mitigation vs insurance savings calculator (extended); FloodHelpNY/LSU AgCenter; First Street/Risk Factor cost estimate (extended); nazwa Fluvenar; Zillow/Realtor.com i usunięcie First Street; Elevate Florida 2026; reautoryzacja NFIP i RR2.0; prawo ujawniania powodzi; reddit elevate-or-sell; substantial damage 50% rule i ICC; BRIC/FMA 2026. Nie sprawdzono bezpośrednio: ClimateCheck, FEMA BCA Toolkit (narzędzie dla wnioskodawców grantowych, nie konsumentów; hipoteza), konsumenckich stron FloodSmart (pojawiła się tylko strona dla agentów), narzędzi prywatnych ubezpieczycieli (np. Neptune), programów Luizjany, bieżącego stanu Realtor.com i Redfin, FMA 2026 i statusu NFIP po 30.09.2026. Brak WebFetch: wszystkie dowody to search-summary.",
+   "confidence": "medium"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "T-S2-R1",
+   "name_en": "Old Roof vs Insurance: Replace, Fortify, or Wait?",
+   "family": "Home & Insurance (decyzje dachowe; wspólny klaster z przykładem roof + solar)",
+   "user_and_moment": "Właściciel domu z dachem 12–20 lat, szczególnie w stanach z presją na wiek dachu (FL, AL, LA, NC, TX, NJ, MN według treści z 2026). Moment: notice of non-renewal, odnowienie z wyceną dachu w ACV (roof payment schedule) albo skok składki; często z planem sprzedaży za 1–5 lat.",
+   "sample_prompt_en": "My insurer says they'll only cover my 17-year-old roof at actual cash value unless I replace it. Should I replace it now with a FORTIFIED roof, wait until it fails, or sell the house next year?",
+   "decision_problem": "Wybór momentu i standardu wymiany dachu (teraz zwykły, teraz FORTIFIED, później, wcale przed sprzedażą), gdy decyzja ubezpieczeniowa (RCV vs ACV, non-renewal, zniżka wiatrowa, procentowa franszyza huraganowa) zmienia ekonomię wymiany, a rezerwa gotówkowa i horyzont posiadania ograniczają warianty.",
+   "combined_domains": "cykl życia dachu i koszty wymiany; homeowners insurance (RCV/ACV, roof age, wind/hurricane % deductible, wind mitigation credits, zniżki FORTIFIED na część wiatrową składki); granty stanowe (Strengthen Alabama Homes do 10 tys. USD według search-summary; inne programy: hipoteza); finansowanie; sprzedaż (ubezpieczalność dla kupującego, inspekcja, ustępstwo cenowe); rezerwa gotówkowa (moduł przeniesiony z seedu B).",
+   "variants_compared": "(1) zostawić dach, przyjąć ACV lub surcharge i samemu nieść ryzyko; (2) wymiana teraz w standardzie zwykłym; (3) wymiana teraz na FORTIFIED (dopłata ok. 1–3 tys. USD według IBHS cytowanego w search-summary) ze zniżką na część wiatrową; (4) zmiana ubezpieczyciela lub ubezpieczyciel ostatniej szansy (hipoteza, zależne od stanu); (5) sprzedaż as-is z ustępstwem vs wymiana przed wystawieniem.",
+   "key_dependencies": "Wiek dachu decyduje o ubezpieczalności i ACV. ACV zmienia lukę wypłaty w scenariuszu burzy (przykład z wyników: do 75% mniej przy dachu 15-letnim; ilustracyjny). Zniżka FORTIFIED dotyczy tylko części wiatrowej, wymaga certyfikatu i działa od odnowienia, więc horyzont sprzedaży decyduje, czy się zwróci. Grant zmienia koszt i termin. Procentowa franszyza huraganowa × Coverage A w zderzeniu z rezerwą gotówkową wyklucza część wariantów. Lokalne prawo (np. FL HB 815 od 1.07.2026) zmienia ryzyko non-renewal.",
+   "main_outputs": "Koszt netto każdego wariantu w horyzoncie posiadania; oczekiwana niepokryta strata w scenariuszach burzy (ACV vs RCV); zapotrzebowanie na gotówkę vs rezerwa; break-even dopłaty FORTIFIED; tabela 'co zmienia wynik' (% zniżki, prawdopodobieństwo szkody, lata do sprzedaży, grant); lista dokumentów do zebrania (deklaracje polisy, wind mitigation form, certyfikat FORTIFIED).",
+   "reason_external_site": "Dekarz ma interes w sprzedaży wymiany, a ubezpieczyciel podaje tylko własną zniżkę. Treści o zniżkach i przepisach według stanu istnieją jako artykuły, ale w jednym extended search nie znaleziono kalkulatora łączącego te elementy (search-summary). Strona może trzymać aktualne zakresy zniżek per stan jako parametry z możliwością nadpisania przez użytkownika.",
+   "data_sources": "Deklaracje polisy użytkownika (część wiatrowa składki, % franszyzy, roof schedule); stanowe tabele i ustawy o zniżkach FORTIFIED (zakresy 5–48% według stanu i ubezpieczyciela; 20–55% części wiatrowej według innego źródła; NC 10–25%; wszystko search-summary z blogów, wymaga źródeł pierwotnych); szacunki kosztów IBHS; przepisy DOI (FL HB 815); programy grantowe (Strengthen Alabama Homes).",
+   "user_data": "ZIP/stan, wiek i materiał dachu, Coverage A, % hurricane/wind deductible, składka całkowita i wiatrowa, wycena wymiany (zwykła i FORTIFIED), lata do sprzedaży, rezerwa gotówkowa, kwalifikowalność do grantu.",
+   "nearest_competition": [
+    {
+     "name": "RoofingCalculator – Does a new roof lower home insurance? Savings by state",
+     "url": "https://roofingcalculator.com/roof-replacement-insurance-guide",
+     "type": "partial",
+     "features_claimed": "Oszczędności na ubezpieczeniu po nowym dachu według stanu.",
+     "notes": "Przewodnik z witryny kalkulatorowej. Czy jest interaktywny model wariantów i sprzedaży: niezweryfikowane.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Bridgeway Insurance – FORTIFIED roof discount table by state (2026)",
+     "url": "https://bridgewayins.com/2026/09/19/does-a-fortified-roof-lower-home-insurance/",
+     "type": "partial",
+     "features_claimed": "Tabela zniżek FORTIFIED według stanów Południowego Wschodu (5–48%).",
+     "notes": "Treść agenta ubezpieczeniowego, nie symulator.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "RoofVista – Roof insurance canceled due to age (2026)",
+     "url": "https://roofvista.com/resources/guides/roof-insurance-canceled-age-2026",
+     "type": "substitute",
+     "features_claimed": "Poradnik non-renewal z powodu wieku dachu.",
+     "notes": "Treść.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "R and E Roofing – NJ roof age & insurance non-renewal 2026",
+     "url": "https://randeroofing.com/blog/nj-roof-age-insurance-non-renewal/",
+     "type": "substitute",
+     "features_claimed": "Poradnik dla NJ.",
+     "notes": "Treść dekarza (konflikt interesów).",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Harbor Insurance – New roof lowers home insurance costs in NC",
+     "url": "https://harbor-ins.com/blog/new-roof-insurance-savings-nc",
+     "type": "substitute",
+     "features_claimed": "Oszczędności po nowym dachu w NC.",
+     "notes": "Treść agenta.",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Informacje o zniżkach i przepisach stanowych, ogólne koszty wymiany dachu, wyceny ubezpieczycieli dla ich własnej polisy, poradniki dekarzy.",
+   "gap": "W badanym zakresie (1 zapytanie extended) nie znaleziono narzędzia, które w jednym modelu łączy lukę ACV w scenariuszach szkód, zniżkę FORTIFIED liczoną tylko od części wiatrowej, grant, procentową franszyzę vs rezerwę i horyzont sprzedaży w porównanie wariantów. Pewność niska, wymaga dalszego badania (np. narzędzia ubezpieczycieli, Citizens, Strengthen Alabama Homes, My Safe Florida Home).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: wiele treści z 2026 od dekarzy i agentów o non-renewal z powodu wieku dachu w różnych stanach (NJ, NC, MN, FL), a Floryda uchwaliła HB 815 (2026). To sygnał, że problem jest bieżący i komercyjnie interesujący (search-summary). Brak wolumenów wyszukiwań i danych o promptach LLM.",
+   "ad_environment": "Roofing i home insurance to tematy o wysokiej intencji komercyjnej z dużą liczbą reklamodawców lead-gen (hipoteza / niezweryfikowane). RPM AdSense nieznany. Afiliacja ofert dekarskich lub ubezpieczeniowych tylko jako dodatek.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Problem jest realny i bieżący (regulacje 2026), integracja prawdziwa (ubezpieczenie zmienia ekonomię inwestycji), a moduły z odrzuconego seedu B dostają tu sensowną rolę. Pasuje do flagowego przykładu właściciela (dach + solar + sprzedaż) jako klaster 'roof decisions'. Weryfikacja konkurencji to tylko jedno wyszukiwanie, więc przed pilotem trzeba sprawdzić narzędzia ubezpieczycieli i programy stanowe oraz zmierzyć popyt.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S2-R2",
+   "name_en": "Flood Insurance Renewal Shock: Hold, Mitigate, Switch, or Sell?",
+   "family": "Home & Climate Risk (powódź)",
+   "user_and_moment": "Właściciel z polisą NFIP (lub rozważający prywatną), który dostał odnowienie z wyraźną podwyżką albo wraca do ochrony po lapsie. Ma w ręku declarations page, często planuje sprzedaż w ciągu 1–7 lat. Koncentracja geograficzna: wybrzeża Zatoki i Atlantyku oraz obszary rzeczne.",
+   "sample_prompt_en": "My flood insurance renewal jumped again and the declarations page shows a much higher full-risk premium. Should I add flood vents, elevate with a grant, switch to private flood, or sell before it gets worse?",
+   "decision_problem": "Wybór ścieżki na kolejne N lat przy znanej bieżącej składce i składce docelowej (full-risk), niepewnym efekcie mitygacji pod Risk Rating 2.0, zmiennej dostępności grantów i planie sprzedaży.",
+   "combined_domains": "Ścieżka składki NFIP (glide path; statutowe limity rocznych podwyżek: wiedza ogólna, niezweryfikowana w tym przebiegu); prywatny rynek flood; koszty mitygacji i granty (75/25, wkład z góry, okna naboru); finansowanie (SBA, HELOC); sprzedaż (obowiązki ujawnienia w FL/TX/NY, koszt ubezpieczenia kupującego; przenoszalność polisy NFIP na kupującego: niezweryfikowane); ryzyko lapse programu NFIP.",
+   "variants_compared": "(1) zostać przy NFIP bez zmian; (2) przejście do prywatnej polisy (ryzyko utraty ścieżki glide path przy powrocie: hipoteza / niezweryfikowane); (3) elevation certificate i tania mitygacja (vents, instalacje) z ponowną wyceną; (4) podniesienie domu z grantem lub kredytem; (5) sprzedaż teraz vs po mitygacji vs za N lat.",
+   "key_dependencies": "Trajektoria składki zależy od relacji składka bieżąca / full-risk. Mitygacja zmienia full-risk premium, ale efekt jest niepewny (przypadki wzrostu po podniesieniu według Congressional Record 2025), więc wejściem jest oferta agenta lub zakres. Grant przesuwa korzyść w czasie i wymaga wkładu z góry. Horyzont sprzedaży ogranicza payback. Lapse polisy oznacza natychmiastowy full-risk rate (CRS, search-summary). Ujawnienie historii szkód wpływa na sprzedaż.",
+   "main_outputs": "Tabela składek rok po roku dla każdego wariantu; skumulowany koszt w horyzoncie; rok zwrotu mitygacji; minimalny okres posiadania, przy którym mitygacja się opłaca; wrażliwość (udział grantu, tempo wzrostu, prawdopodobieństwo zalania, dyskonto przy sprzedaży); lista ryzyk regulacyjnych z datą weryfikacji (NFIP, BRIC/FMA, okna stanowe).",
+   "reason_external_site": "W badanym zakresie FloodSmart oferuje treści dla agentów, nie projekcję składki z decyzją o sprzedaży. Agenci mają konflikt interesów (prywatne vs NFIP). Narzędzia typu Fluvenar i FloodproofCost liczą ROI mitygacji, ale (według dostępnych opisów) bez horyzontu sprzedaży, timeline grantu i lapse. Asystent AI nie ma ustrukturyzowanego modelu wieloletniego ani aktualnego statusu programów.",
+   "data_sources": "Declarations page użytkownika (składka bieżąca i full-risk: format niezweryfikowany w tym przebiegu); FEMA i CRS (autoryzacja NFIP, skutki lapse); NOFO FEMA (BRIC/FMA/HMGP); programy stanowe (FDEM Elevate Florida); trackery prawa ujawniania (NRDC); zakresy kosztów mitygacji (obecnie tylko blogi, potrzebne źródła pierwotne FEMA).",
+   "user_data": "Składka bieżąca, składka full-risk, limity i franszyza, czy dom jest primary residence, czy jest kredyt hipoteczny, planowany horyzont posiadania, oferty na mitygację, kwalifikowalność do grantu, szacunkowa wartość domu, historia szkód.",
+   "nearest_competition": [
+    {
+     "name": "Fluvenar – Flood Mitigation ROI Analysis",
+     "url": "http://fluvenar.smarttechinvest.com/docs/mitigation",
+     "type": "partial",
+     "features_claimed": "ROI i payback mitygacji, efekt elevation certificate, oszczędność z vents.",
+     "notes": "Sprzedaż, timeline grantu i lapse: niezweryfikowane. Niska widoczność marki.",
+     "paid": "niezweryfikowane"
+    },
+    {
+     "name": "FloodproofCost.com",
+     "url": "https://floodproofcost.com/",
+     "type": "partial",
+     "features_claimed": "Koszty floodproofingu 2026 i granty FEMA; osobny artykuł o payback i ROI.",
+     "notes": "Interaktywność niezweryfikowana.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Flood Insurance Guru – Private vs NFIP cost over time 2026",
+     "url": "https://www.floodinsuranceguru.com/the-flood-insurance-guru-blog/private-flood-insurance-vs-nfip-cost-over-time-in-2026",
+     "type": "partial",
+     "features_claimed": "Koszt prywatnej polisy i NFIP w czasie.",
+     "notes": "Tylko ścieżka ubezpieczeniowa; autor jest agentem.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "FloodSmart (agents) – Reducing Insurance Costs",
+     "url": "https://agents.floodsmart.gov/topics/writing-policies/reducing-insurance-costs",
+     "type": "partial",
+     "features_claimed": "Oficjalne sposoby obniżenia składki NFIP.",
+     "notes": "Treść dla agentów.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "First Street",
+     "url": "https://help.firststreet.org/hc/en-us/articles/360048256113-Learn-about-the-benefits-of-having-flood-insurance",
+     "type": "partial",
+     "features_claimed": "Ryzyko na poziomie nieruchomości, ocena potrzeby ubezpieczenia.",
+     "notes": "Dane o ryzyku kwestionowane przez część branży (Zillow 11.2025).",
+     "paid": "freemium (niezweryfikowane)"
+    }
+   ],
+   "already_solved": "Przewodniki kosztów mitygacji, proste wyliczenia ROI i payback, oceny ryzyka nieruchomości, porównania kosztu NFIP i prywatnej polisy w czasie (treści agentów).",
+   "gap": "W badanym zakresie nie znaleziono bezpośredniego konkurenta, który łączy ścieżkę składki z declarations page, niepewny re-rating po mitygacji (zakres zamiast punktu), timeline i wkład grantu, ryzyko lapse oraz horyzont sprzedaży z obowiązkiem ujawnienia. Pewność średnio-niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: artykuł Insurance Business 'Rocketing flood premiums', wątek BiggerPockets o wzroście PITI o 15 tys. USD, Congressional Record 2025 (skargi na stawki po RR2.0), projekt Cassidy–Wicker przeciw skokom stawek (salience polityczna), GAO 2026 (niskie pokrycie). Zapytanie typu reddit nie zwróciło wątków. Brak wolumenów.",
+   "ad_environment": "Ubezpieczenia i nieruchomości to wysoka intencja (hipoteza). Ruch skoncentrowany geograficznie i sezonowo (odnowienia, sezon huraganów). Lead-gen prywatnych ubezpieczycieli flood tylko jako dodatek, z ryzykiem konfliktu interesów w rekomendacji.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "To najlepsze zawężenie seedu C, bo użytkownik ma twarde liczby (declarations page), moment wejścia jest jasny, a integracja prawdziwa. Blokery: koszt utrzymania (NFIP, granty, prawo stanowe), niepewny efekt mitygacji pod RR2.0 i słabe dowody popytu. Przed pilotem trzeba zweryfikować format declarations page, przenoszalność polisy i limity podwyżek oraz zmierzyć popyt (narzędzia słów kluczowych, ręczny przegląd forów).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S2-R3",
+   "name_en": "After the Flood: Repair, Elevate, Rebuild, or Sell (Substantial Damage)",
+   "family": "Disaster recovery (powódź)",
+   "user_and_moment": "Właściciel domu po zalaniu (huragan, powódź rzeczna), który czeka na decyzję lub dostał decyzję lokalnego floodplain managera o substantial damage, ma roszczenie NFIP i ewentualnie ICC.",
+   "sample_prompt_en": "Our house took four feet of water and the county says repairs may exceed 50% of the home's value. Should we challenge the estimate, elevate using ICC money, tear down and rebuild, or sell the lot?",
+   "decision_problem": "Wybór ścieżki odbudowy, gdy reguła 50% (koszt napraw ≥ 50% przedszkodowej wartości rynkowej budynku, bez gruntu; lokalne progi mogą być ostrzejsze) wymusza dostosowanie do przepisów, a ICC (do 30 tys. USD) pokrywa tylko część kosztu podniesienia.",
+   "combined_domains": "Reguła substantial damage (decyzja lokalna); NFIP claim i ICC; koszty budowy i podniesienia; granty i wykupy (dobrowolne, według uznania gminy); kredyty SBA; koszty mieszkania zastępczego; sprzedaż as-is.",
+   "variants_compared": "(1) naprawa poniżej progu 50% (zawężenie zakresu, niezależna wycena wartości); (2) podniesienie z ICC, grantem lub kredytem; (3) rozbiórka i odbudowa zgodna z przepisami; (4) sprzedaż as-is lub samej działki; (5) oczekiwanie na wykup.",
+   "key_dependencies": "Wycena wartości budynku decyduje o przekroczeniu progu, a próg decyduje, czy podniesienie jest obowiązkowe. Limit ICC zestawiony z kosztem podniesienia daje lukę finansowania. Termin grantu lub wykupu zestawiony z kosztami mieszkania zastępczego daje lukę płynności. Ewentualny lokalny cumulative substantial damage zmienia ocenę.",
+   "main_outputs": "Drzewo decyzji z kosztami i harmonogramem; luka gotówkowa w czasie; które założenia (wycena, kosztorys) zmieniają klasyfikację substantial damage; lista pytań do floodplain managera i adjustera.",
+   "reason_external_site": "FEMA i powiaty publikują fakty i formularze (fact sheet 01.2025, formularz Columbia County FL 2025), ale w badanym zakresie nie znaleziono kalkulatora dla właściciela łączącego próg, ICC, finanse i sprzedaż (search-summary). Urzędnicy nie doradzają finansowo.",
+   "data_sources": "FEMA fact sheet 'Substantial Damage – What Does It Mean?' (01.2025); formularze lokalne; zasady ICC (do 30 tys. USD); warunki kredytów SBA (niezweryfikowane w tym przebiegu); dane użytkownika z kosztorysu i wyceny.",
+   "user_data": "Przedszkodowa wartość budynku (bez gruntu), kosztorys napraw, wypłata NFIP, ICC, oszczędności, koszty mieszkania zastępczego, oferty na podniesienie lub odbudowę, czy gmina prowadzi program wykupu.",
+   "nearest_competition": [
+    {
+     "name": "FEMA – Fact Sheet: NFIP 'Substantial Damage' – What Does It Mean?",
+     "url": "https://www.fema.gov/press-release/20250121/fact-sheet-nfip-substantial-damage-what-does-it-mean",
+     "type": "substitute",
+     "features_claimed": "Zasady reguły 50%, rola władz lokalnych, ICC, możliwość wykupu.",
+     "notes": "Treść urzędowa, nie symulator.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Columbia County FL – SI/SD FEMA 50 Percent Rule form (2025)",
+     "url": "https://bcc.columbiacountyfla.com/Downloads/Building%20&%20Zoning/Building%20Applications%20-%20Individual%20Application%20Documents/SISD%20FEMA%2050%20Percent%20Rule%20(Fillable%202025).pdf",
+     "type": "substitute",
+     "features_claimed": "Formularz obliczenia reguły 50% dla pozwolenia.",
+     "notes": "Lokalne narzędzie administracyjne.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Property Insurance Coverage Law – Helene and the FEMA 50% rule",
+     "url": "https://www.propertyinsurancecoveragelaw.com/blog/hurricane-helenes-aftermath-understanding-the-fema-50-rule-and-its-impact-on-victims/",
+     "type": "substitute",
+     "features_claimed": "Omówienie reguły 50% po Helene.",
+     "notes": "Treść kancelarii.",
+     "paid": "darmowy"
+    },
+    {
+     "name": "NCDPS – Homeowners with substantial damage/improvement have options",
+     "url": "https://www.ncdps.gov/news/press-releases/2019/01/30/homeowners-substantial-damageimprovement-homes-have-options",
+     "type": "substitute",
+     "features_claimed": "Opcje dla właścicieli po substantial damage.",
+     "notes": "Komunikat z 2019.",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Wyjaśnienia zasad (FEMA, stany, kancelarie), lokalne formularze, roszczenia przez adjusterów i agentów.",
+   "gap": "W badanym zakresie nie znaleziono symulatora dla właściciela łączącego próg 50%, lukę ICC, finansowanie, płynność i sprzedaż. Pewność niska (jedno zapytanie).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Pośrednie i epizodyczne: treści o regule 50% po huraganie Helene, komunikaty stanowe i powiatowe. Popyt pojawia się skokowo po katastrofach (hipoteza). Brak wolumenów.",
+   "ad_environment": "Treści katastrofowe mogą być mniej atrakcyjne dla reklamodawców, a ruch jest bardzo skokowy (hipoteza / niezweryfikowane). Ryzyko wizerunkowe przy reklamach obok treści dla poszkodowanych.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Integracja realna, ale ryzyko treści wysokie (ludzie w kryzysie, decyzje administracyjne lokalne, zmienne progi i lookback). Popyt epizodyczny, a środowisko reklamowe wątpliwe. Lepiej jako moduł lub ścieżka w T-S2-R2 niż jako osobny produkt na start.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://calcbee.com/calculators/insurance/specialty/insurance-deductible-optimizer/",
+   "competitor": "Calcbee – Insurance Deductible Optimizer",
+   "related_idea": "Seed B",
+   "features_checked": "Optymalizacja franszyzy; claim frequency (przypisanie niepewne); rezerwa gotówkowa i surcharge niezweryfikowane",
+   "access_limits": "WebFetch niedostępny; tylko search-summary",
+   "conclusion": "PARTIAL, najbliższy rdzeniowi seedu B; podważa nowość",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://www.calcbee.com/calculators/insurance/auto/auto-deductible-break-even/",
+   "competitor": "Calcbee – Auto Deductible Break-Even",
+   "related_idea": "Seed B",
+   "features_checked": "Break-even franszyzy auto",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (tylko auto)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://insurancecalcs.com/deductible-vs-premium/",
+   "competitor": "InsuranceCalcs – Deductible vs Premium",
+   "related_idea": "Seed B",
+   "features_checked": "Franszyza vs składka, break-even",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://calk-usa.com/calculator/deductible-comparison/",
+   "competitor": "Calk-USA – Deductible Comparison",
+   "related_idea": "Seed B",
+   "features_checked": "Porównanie franszyz",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://coverforgeusa.com/tools/deductible-savings-calculator",
+   "competitor": "CoverForge USA – Deductible Savings Calculator",
+   "related_idea": "Seed B",
+   "features_checked": "Oszczędność składki vs franszyza",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://calculators.im/insurance-deductible-calculator",
+   "competitor": "Calculators.im – Insurance Deductible Calculator",
+   "related_idea": "Seed B",
+   "features_checked": "Porównanie planów według franszyzy",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://mycarcalc.com/auto-loans-and-finance/car-insurance-deductible-calculator",
+   "competitor": "MyCarCalc – Car Insurance Deductible Calculator",
+   "related_idea": "Seed B",
+   "features_checked": "Break-even franszyzy auto",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (tylko auto)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+   "competitor": "COUNTRY Financial – homeowners deductible",
+   "related_idea": "Seed B",
+   "features_checked": "Dobór franszyzy względem rezerwy",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (narzędzie lub treść ubezpieczyciela)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+   "url": "https://joingerald.com/learn/money-basics/review-cost-options-deductible-amounts-budgets",
+   "competitor": "Gerald – deductible amounts vs budgets",
+   "related_idea": "Seed B",
+   "features_checked": "Poradnik franszyza vs budżet",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Insurify ChatGPT app insurance quotes comparison AI assistant 2026",
+   "url": "https://insurify.com/press/news/insurify-chatgpt-app/",
+   "competitor": "Insurify app in ChatGPT",
+   "related_idea": "Seed B",
+   "features_checked": "Porównanie ofert auto w ChatGPT (02.2026); real-time quotes i zakup w czacie (08.2026, wybrane stany według trade press)",
+   "access_limits": "search-summary; głównie komunikaty prasowe",
+   "conclusion": "PARTIAL; kluczowy dowód wysokiego ryzyka przechwycenia w asystencie AI",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a home insurance claim calculator surcharge premium increase deductible",
+   "url": "https://www.bankrate.com/insurance/homeowners-insurance/does-homeowners-insurance-go-up-after-a-claim",
+   "competitor": "Bankrate – home insurance after a claim",
+   "related_idea": "Seed B",
+   "features_checked": "Treść o wpływie szkody na składkę",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE; kalkulatora zgłoszenia szkody nie znaleziono w wynikach",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a home insurance claim calculator surcharge premium increase deductible",
+   "url": "https://www.aarp.org/money/personal-finance/should-you-make-home-insurance-claim/",
+   "competitor": "AARP – should you make a home insurance claim",
+   "related_idea": "Seed B",
+   "features_checked": "Próg opłacalności zgłoszenia",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a home insurance claim calculator surcharge premium increase deductible",
+   "url": "https://insurance.com/home-and-renters-insurance/when-to-file-home-insurance-claim",
+   "competitor": "Insurance.com – when to file",
+   "related_idea": "Seed B",
+   "features_checked": "Reguła 2–3× franszyza",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a home insurance claim calculator surcharge premium increase deductible",
+   "url": "https://westwealth.lpl.com/resource-center/insurance/a-home-insurance-claim-to-file-or-not-to-file",
+   "competitor": "LPL resource center – to file or not to file",
+   "related_idea": "Seed B",
+   "features_checked": "Średni wzrost składki po szkodzie ok. 9%, metoda break-even",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (syndykowana treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "health plan comparison calculator HDHP HSA vs PPO total annual cost medical usage scenarios open enrollment tool",
+   "url": "https://joingerald.com/learn/financial-wellness/high-deductible-vs-ppo-calculator-guide",
+   "competitor": "Gerald – HDHP vs PPO calculator guide",
+   "related_idea": "Seed B (wariant health)",
+   "features_checked": "Scenariusze niskiego, średniego i wysokiego zużycia, wkład HSA pracodawcy",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (poradnik z przykładami); employer tools (ALEX, Picwell) niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "http://fluvenar.smarttechinvest.com/docs/mitigation",
+   "competitor": "Fluvenar – Flood Mitigation ROI Analysis",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "ROI i payback podniesienia, vents, elevation certificate; sprzedaż, grant, timeline i lapse niezweryfikowane",
+   "access_limits": "search-summary; zapytanie o nazwę marki nic nie zwróciło",
+   "conclusion": "PARTIAL (możliwie bliżej direct w części mitygacyjnej, do weryfikacji)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "https://floodproofcost.com/is-flood-mitigation-worth-it",
+   "competitor": "FloodproofCost.com",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "Koszty mitygacji 2026, granty FEMA, payback i ROI; interaktywność niezweryfikowana",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "https://floodprepare.com/knowledge/how-to-elevate-your-home-above-flood-level",
+   "competitor": "FloodPrepare – elevation guide",
+   "related_idea": "Seed C",
+   "features_checked": "Szacunki redukcji składki według BFE, przykład payback z grantem 75%",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "https://www.floodinsuranceguru.com/the-flood-insurance-guru-blog/private-flood-insurance-vs-nfip-cost-over-time-in-2026",
+   "competitor": "Flood Insurance Guru – private vs NFIP over time",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "Koszt polis w czasie",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (tylko ubezpieczenie; agent)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "https://agents.floodsmart.gov/topics/writing-policies/reducing-insurance-costs",
+   "competitor": "FloodSmart (agents) – Reducing Insurance Costs",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "Oficjalne sposoby obniżenia składki",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (treść dla agentów)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+   "url": "https://www.usnews.com/insurance/flood-insurance-cost",
+   "competitor": "U.S. News – flood insurance cost",
+   "related_idea": "Seed C",
+   "features_checked": "Średnie składki NFIP",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FloodHelpNY OR LSU AgCenter flood elevation insurance savings calculator",
+   "url": "https://www.adaptationclearinghouse.org/resources/floodhelpny-new-york-city-new-york.html",
+   "competitor": "FloodHelpNY",
+   "related_idea": "Seed C",
+   "features_checked": "Kalkulator szacunku składki NYC, resiliency audit",
+   "access_limits": "search-summary; opis z 2016, aktualność niezweryfikowana",
+   "conclusion": "PARTIAL (tylko NYC)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FloodHelpNY OR LSU AgCenter flood elevation insurance savings calculator",
+   "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2023.1060901/pdf",
+   "competitor": "LSU AgCenter FloodSafeHome",
+   "related_idea": "Seed C",
+   "features_checked": "Freeboard: koszt, oszczędność składki, strata roczna",
+   "access_limits": "search-summary; URL narzędzia niezweryfikowany",
+   "conclusion": "PARTIAL (nowa budowa, nie retrofit)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "First Street Risk Factor flood insurance cost estimate mitigation adaptation 2026",
+   "url": "https://firststreet.org/city/new-york-ny/3651000_fsid/flood",
+   "competitor": "First Street / Risk Factor",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "Ryzyko na poziomie nieruchomości i miasta; ocena ubezpieczenia w raportach",
+   "access_limits": "search-summary; ewentualne funkcje płatne niezweryfikowane",
+   "conclusion": "PARTIAL (dane wejściowe o ryzyku, brak decyzji wariantowej)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Zillow removed First Street climate risk scores flood listings 2025 Realtor.com flood risk",
+   "url": "https://www.rismedia.com/2025/12/02/zillow-removes-climate-risk-scores/",
+   "competitor": "Zillow / Realtor.com / Redfin – wyświetlanie ryzyka powodziowego",
+   "related_idea": "Seed C",
+   "features_checked": "Zillow usunął wyniki First Street (11.2025); Realtor.com, Redfin i Homes.com według raportu z 12.2025 nadal je pokazywały",
+   "access_limits": "search-summary; bieżący stan po 12.2025 niezweryfikowany",
+   "conclusion": "PARTIAL (wyświetlanie ryzyka, nie decyzja); sygnał kontrowersji danych",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Fluvenar flood mitigation ROI tool",
+   "url": "https://sustainabletechnologies.ca/risk-return-investment-tool-flood-mitigation/",
+   "competitor": "RROIT (Kanada)",
+   "related_idea": "Seed C",
+   "features_checked": "Średnia roczna szkoda, klimat 2050/2080, ROI opcji",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (rynek kanadyjski, gminy i właściciele)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Fluvenar flood mitigation ROI tool",
+   "url": "https://www.wri.org/aqueduct/help-center/aqueduct-floods-cost-benefit-analyzer-tool",
+   "competitor": "WRI Aqueduct Floods Cost-Benefit Analyzer",
+   "related_idea": "Seed C",
+   "features_checked": "CBA infrastruktury przeciwpowodziowej",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (infrastruktura, nie gospodarstwo domowe)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Elevate Florida home elevation grant 2026 applications homeowners cost share",
+   "url": "https://www.floridadisaster.org/dem/mitigation/elevate-florida",
+   "competitor": "Elevate Florida (FDEM)",
+   "related_idea": "Seed C / T-S2-R2",
+   "features_checked": "75/25, nabór 02–04.2025, limit 375 tys. USD (09.2025), ponad 335 wniosków do FEMA (02.2026)",
+   "access_limits": "search-summary",
+   "conclusion": "Źródło danych/program (SUBSTITUTE), nie konkurent narzędziowy",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "substantial damage 50% rule after flood rebuild elevate or sell ICC $30,000 homeowner calculator 2025",
+   "url": "https://www.fema.gov/press-release/20250121/fact-sheet-nfip-substantial-damage-what-does-it-mean",
+   "competitor": "FEMA – Substantial Damage fact sheet",
+   "related_idea": "T-S2-R3",
+   "features_checked": "Reguła 50%, decyzja lokalna, ICC do 30 tys. USD, wykupy",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE; kalkulatora dla właściciela nie znaleziono",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "substantial damage 50% rule after flood rebuild elevate or sell ICC $30,000 homeowner calculator 2025",
+   "url": "https://www.propertyinsurancecoveragelaw.com/blog/hurricane-helenes-aftermath-understanding-the-fema-50-rule-and-its-impact-on-victims/",
+   "competitor": "Property Insurance Coverage Law – 50% rule po Helene",
+   "related_idea": "T-S2-R3",
+   "features_checked": "Omówienie reguły",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "old roof home insurance non-renewal ACV roof replace now FORTIFIED roof discount calculator 2026",
+   "url": "https://roofingcalculator.com/roof-replacement-insurance-guide",
+   "competitor": "RoofingCalculator – roof replacement insurance guide",
+   "related_idea": "T-S2-R1",
+   "features_checked": "Oszczędności ubezpieczeniowe po nowym dachu według stanu",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "old roof home insurance non-renewal ACV roof replace now FORTIFIED roof discount calculator 2026",
+   "url": "https://bridgewayins.com/2026/09/19/does-a-fortified-roof-lower-home-insurance/",
+   "competitor": "Bridgeway Insurance – FORTIFIED discount table",
+   "related_idea": "T-S2-R1",
+   "features_checked": "Zniżki FORTIFIED według stanów (5–48%)",
+   "access_limits": "search-summary",
+   "conclusion": "PARTIAL (treść)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "old roof home insurance non-renewal ACV roof replace now FORTIFIED roof discount calculator 2026",
+   "url": "https://roofvista.com/resources/guides/roof-insurance-canceled-age-2026",
+   "competitor": "RoofVista – roof insurance canceled due to age",
+   "related_idea": "T-S2-R1",
+   "features_checked": "Poradnik non-renewal",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (treść)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "old roof home insurance non-renewal ACV roof replace now FORTIFIED roof discount calculator 2026",
+   "url": "https://randeroofing.com/blog/nj-roof-age-insurance-non-renewal/",
+   "competitor": "R and E Roofing – NJ roof age guide",
+   "related_idea": "T-S2-R1",
+   "features_checked": "Poradnik NJ",
+   "access_limits": "search-summary",
+   "conclusion": "SUBSTITUTE (treść dekarza)",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "[extended] flood mitigation cost vs insurance savings calculator homeowner elevation flood vents NFIP premium",
+  "[standard] FloodHelpNY OR LSU AgCenter flood elevation insurance savings calculator",
+  "[extended] First Street Risk Factor flood insurance cost estimate mitigation adaptation 2026",
+  "[standard] Fluvenar flood mitigation ROI tool",
+  "[standard] Zillow removed First Street climate risk scores flood listings 2025 Realtor.com flood risk",
+  "[standard] Elevate Florida home elevation grant 2026 applications homeowners cost share",
+  "[standard] NFIP reauthorization 2026 lapse flood insurance Risk Rating 2.0 changes homeowners",
+  "[standard] flood disclosure law seller flood history new states 2025 2026",
+  "[standard] reddit should I elevate my house or sell flood zone insurance premium went up",
+  "[standard] should I file a home insurance claim calculator surcharge premium increase deductible",
+  "[extended] optimal insurance deductible calculator emergency fund claim probability break-even home auto tool",
+  "[standard] Insurify ChatGPT app insurance quotes comparison AI assistant 2026",
+  "[standard] health plan comparison calculator HDHP HSA vs PPO total annual cost medical usage scenarios open enrollment tool",
+  "[extended] old roof home insurance non-renewal ACV roof replace now FORTIFIED roof discount calculator 2026",
+  "[standard] substantial damage 50% rule after flood rebuild elevate or sell ICC $30,000 homeowner calculator 2025",
+  "[standard] FEMA BRIC cancellation court ruling FMA grants 2026 home elevation funding status"
+ ]
+}

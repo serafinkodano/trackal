@@ -1,0 +1,425 @@
+{
+ "id": "CARE-01",
+ "competitors": [
+  {
+   "name": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+   "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+   "type": "partial",
+   "access": "Darmowy wg search-summary; strona nieotwierana (WebFetch zablokowany)",
+   "covers_pl": "Najbliższy znaleziony fragment. Wg summary porównuje oba scenariusze (aging in place i assisted living) w ujęciu break-even. Strona podaje trzy progi: ponad 8 h płatnej opieki dziennie, modyfikacje za ponad 25 tys. USD, rodzinni opiekunowie tracący co najmniej 30% godzin pracy. FAQ podaje inny próg (<4 h/dzień). Benchmarki 2026: AL 5,5–8,5 tys. USD/mies., bezpieczne aging in place 2,5–6,5 tys. USD/mies.",
+   "misses_or_unverified_pl": "Niezweryfikowane: oś czasu wieloletnia, eskalacja potrzeb w czasie, sprzedaż domu jako źródło kapitału, rok wyczerpania oszczędności, warianty downsizing/rodzina/CCRC, analiza wrażliwości. Niespójne progi (4 h a 8 h) sugerują raczej heurystykę niż model. Mała firma konsultingowa, nieznany ruch."
+  },
+  {
+   "name": "seniorcarecalc.org – Home Care vs. Assisted Living Cost Calculator 2026",
+   "url": "https://seniorcarecalc.org/",
+   "type": "partial",
+   "access": "Darmowy; wg summary nie pobiera opłat za polecenia; strona nieotwierana",
+   "covers_pl": "Porównanie oparte na godzinach opieki z danymi CareScout 2025. Krajowy próg wynosi 41 h/tydz., a progi są podane osobno dla każdego stanu. Ma też artykuł porównawczy (seniorcarecalc.org/articles/home-care-vs-assisted-living.html).",
+   "misses_or_unverified_pl": "Niezweryfikowane: oszczędności i runway, sprzedaż domu, capex modyfikacji, eskalacja opieki, warianty poza home care i AL. Wygląda na kalkulator break-even w jednym okresie."
+  },
+  {
+   "name": "Eldercalc.com (Assisted Living Cost Estimator, Home Modification Cost Calculator, Continuing Care Community Cost Calculator)",
+   "url": "https://eldercalc.com/assisted-living-cost-estimator/",
+   "type": "partial",
+   "access": "Darmowy wg summary; strony nieotwierane",
+   "covers_pl": "Zestaw kalkulatorów. Assisted Living Cost Estimator porównuje sumy 5-letnie (in-home care, np. 28 USD/h × 4 h/dzień = 40 880 USD/rok, wobec AL 5000 USD/mies.). Osobny kalkulator kosztu modyfikacji domu (eldercalc.com/home-modification-cost-calculator/). Osobny kalkulator CCRC (eldercalc.com/continuing-care-community-cost-calculator/) z opłatą wpisową, typem kontraktu, rocznym wzrostem opłat 3–6% i latami pobytu. Wg summary jest też porównanie 5-letnie aging in place z AL.",
+   "misses_or_unverified_pl": "Nie wiadomo, czy wyniki kalkulatorów na siebie wpływają. Niezweryfikowane: przeniesienie capex modyfikacji do porównania ścieżek, sprzedaż domu, runway oszczędności, eskalacja opieki. Prawdopodobnie zestaw sklejonych kalkulatorów, a nie zintegrowany model."
+  },
+  {
+   "name": "A Place for Mom – Senior Living Cost Calculator",
+   "url": "https://www.aplaceformom.com/paying-for-senior-care/cost-calculator",
+   "type": "partial",
+   "access": "Darmowy; serwis typu referral/lead-gen (wiedza modelu, niezweryfikowana w sesji); strona nieotwierana; możliwe pola kontaktowe niezweryfikowane",
+   "covers_pl": "Porównuje bieżące miesięczne koszty życia w domu z kosztem assisted living i retirement communities, z lokalnymi cenami wg kodu ZIP.",
+   "misses_or_unverified_pl": "Wg summary porównuje jeden miesiąc. Niezweryfikowane: horyzont wieloletni, runway oszczędności, sprzedaż domu, break-even godzin, capex modyfikacji. Narzędzie nie jest neutralne wobec dostawców."
+  },
+  {
+   "name": "PayingForSeniorCare – Assisted Living vs. Home Care Affordability Calculator",
+   "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+   "type": "partial",
+   "access": "Darmowy (zakładany); strona nieotwierana",
+   "covers_pl": "Wg tytułu porównuje stać/nie stać na home care i assisted living.",
+   "misses_or_unverified_pl": "Wszystkie funkcje niezweryfikowane, bo summary nie opisuje mechaniki. Wymaga ręcznej weryfikacji."
+  },
+  {
+   "name": "Arbor Company – Retirement Community Cost Calculator",
+   "url": "https://www.arborcompany.com/cost-calculator",
+   "type": "partial",
+   "access": "Darmowy; kalkulator operatora senior living (stronniczy); strona nieotwierana",
+   "covers_pl": "Sumuje bieżące wydatki w domu (mieszkanie, transport, opieka domowa) i porównuje je z independent living, assisted living i memory care.",
+   "misses_or_unverified_pl": "Wg summary nie modeluje horyzontu wieloletniego. Brak runway, sprzedaży domu i eskalacji (niezweryfikowane). Narzędzie marketingowe operatora."
+  },
+  {
+   "name": "Care Cost Clarity – Long-Term Care Cost Calculator",
+   "url": "https://carecostclarity.com/",
+   "type": "partial",
+   "access": "Wersja online darmowa; płatna wersja offline z projekcjami rok po roku (cena niezweryfikowana); strona nieotwierana",
+   "covers_pl": "Porównuje scenariusze nursing home, in-home i assisted living. Płatna wersja offline dodaje projekcje rok po roku.",
+   "misses_or_unverified_pl": "Wg summary pomija inflację, zwroty z inwestycji, podatki i uprawnienia Medicare/Medicaid. Niezweryfikowane: sprzedaż domu, modyfikacje, break-even godzin, eskalacja."
+  },
+  {
+   "name": "SeniorLiving.org – Savings depletion calculator",
+   "url": "https://www.seniorliving.org/retirement/money/depletion-calculator/",
+   "type": "partial",
+   "access": "Darmowy; serwis z treściami afiliacyjnymi (niezweryfikowane); strona nieotwierana",
+   "covers_pl": "Liczy, jak długo starczą oszczędności (fragment runway). Ten sam serwis ma porównanie AL i in-home care (seniorliving.org/compare/assisted-living-vs-home-care/).",
+   "misses_or_unverified_pl": "Wg zbiorczego summary żaden z kalkulatorów runway nie modeluje wyraźnie sprzedaży domu. Nie porównuje ścieżek opieki. Eskalacja kosztów niezweryfikowana."
+  },
+  {
+   "name": "The Care Compass – Long-Term Care Cost Calculator 2026",
+   "url": "https://thecarecompass.org/care-cost-calculator",
+   "type": "partial",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Liczy, ile miesięcy pokryją oszczędności przy koszcie opieki, np. 250 tys. USD to ok. 26 mies. nursing home przy 9342 USD/mies.",
+   "misses_or_unverified_pl": "Wg summary wyłącza dom z oszczędności. Nie porównuje ścieżek, nie liczy break-even godzin ani modyfikacji (niezweryfikowane)."
+  },
+  {
+   "name": "RetirementBudget.org – Assisted Living Cost Calculator 2026 / Long-term care cost calculator 2026",
+   "url": "https://www.retirementbudget.org/calculators/assisted-living-cost-calculator",
+   "type": "partial",
+   "access": "Darmowy; strona nieotwierana",
+   "covers_pl": "Szacuje koszty dożywotnie AL i opieki długoterminowej. Podaje in-home care 2026 na poziomie 5800–6500+ USD/mies.",
+   "misses_or_unverified_pl": "Kalkulatory jednocelowe. Integracja ścieżek, sprzedaż domu i runway niezweryfikowane."
+  },
+  {
+   "name": "Waterlily – long-term care planning platform",
+   "url": "https://www.waterlily.com/resources/long-term-care-planning-software",
+   "type": "substitute",
+   "access": "Platforma komercyjna; model cenowy i dostęp (doradca/konsument) niezweryfikowane; strona nieotwierana",
+   "covers_pl": "Wg strony vendora: szacowanie kosztów opieki, modelowanie ryzyka, porównanie strategii finansowania. Ma też treść o planowaniu in-home vs facility care.",
+   "misses_or_unverified_pl": "Funkcje niezweryfikowane: czy porównuje ścieżki mieszkaniowe (dom, downsizing, AL, CCRC), break-even godzin i sprzedaż domu. Prawdopodobnie wymaga konta lub doradcy."
+  },
+  {
+   "name": "CareScout (Genworth) – Cost of Care data i poradnik",
+   "url": "https://www.carescout.com/resources/assisted-living-vs-home-care-which-option-is-right-for-you-",
+   "type": "substitute",
+   "access": "Darmowe treści; samo narzędzie Cost of Care nie pojawiło się w wynikach; strona nieotwierana",
+   "covers_pl": "Mediany CareScout 2025 (AL 6200 USD/mies., home care 35 USD/h) to źródło danych dla wielu konkurentów (seniorcarecalc, alz.org). Poradnik porównuje AL i home care.",
+   "misses_or_unverified_pl": "Narzędzie Cost of Care i jego funkcje niezweryfikowane w tej sesji. Notatka z fali 1 pozostaje niepotwierdzona."
+  },
+  {
+   "name": "Masonicare – Senior Living Comparison Worksheet",
+   "url": "https://www.masonicare.org/resources/blog/cost-senior-living-comparison-worksheet",
+   "type": "substitute",
+   "access": "Darmowy arkusz/worksheet operatora; strona nieotwierana",
+   "covers_pl": "Lista pozycji kosztowych po obu stronach: czynsz/kredyt kontra opłata bazowa, dzienna opieka, media.",
+   "misses_or_unverified_pl": "Statyczny arkusz jednego okresu. Brak dynamiki, runway i sprzedaży domu (wg summary)."
+  },
+  {
+   "name": "US News Health – Home Care vs. Assisted Living: Full Cost-Benefit Analysis and 2026 Price Guide",
+   "url": "https://health.usnews.com/home-care/articles/home-care-vs-assisted-living-a-full-cost-benefit-analysis-and-2026-price-guide",
+   "type": "substitute",
+   "access": "Darmowy artykuł; strona nieotwierana",
+   "covers_pl": "Silny treściowo konkurent w SEO i cytowaniach AI dla tego samego zapytania.",
+   "misses_or_unverified_pl": "Artykuł, nie narzędzie. Interaktywność niezweryfikowana."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "n/a – brak URL w wynikach",
+   "type": "substitute",
+   "access": "Darmowe dla użytkowników; od 7.10.2026 ChatGPT renderuje kalkulatory w odpowiedziach, od 19.08.2026 Google AI Mode generuje narzędzia interaktywne (wg briefu)",
+   "covers_pl": "Odpowiadają na pytanie pierwszego poziomu. Sam silnik wyszukiwania w tej sesji wyliczył break-even ok. 40–44 h/tydz. z medianami CareScout. Potrafią policzyć runway prostym dzieleniem.",
+   "misses_or_unverified_pl": "Niezweryfikowane: spójność wieloletniego modelu z eskalacją, możliwość zapisania i udostępnienia modelu rodzeństwu, powtarzalność wyników."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 wyszukiwań extended (wyniki US, angielski), dowody wyłącznie z search-summary, strony nieotwierane. Pewność: niska–średnia.\n\nRynek jest gęsto pokryty fragmentami:\n- break-even godzin: seniorcarecalc.org (per stan) i Riggins (z progiem modyfikacji i kosztem opiekuna rodzinnego);\n- porównanie miesięczne: A Place for Mom, Arbor;\n- sumy 5-letnie: Eldercalc;\n- runway oszczędności: SeniorLiving.org, The Care Compass, Care Cost Clarity;\n- osobne kalkulatory modyfikacji i CCRC: Eldercalc.\n\nWg summary żaden kalkulator runway wyraźnie nie modeluje sprzedaży domu jako źródła kapitału. The Care Compass wprost wyłącza dom.\n\nLuka po zawężeniu ma charakter integracyjny, nie funkcjonalny. Brakuje jednego neutralnego modelu wieloletniego, który łączy w jednej osi czasu:\n(1) trajektorię eskalacji potrzeb, łącznie z wymuszeniem placówki przy opiece 24/7;\n(2) capex modyfikacji rozłożony na oczekiwany czas w domu;\n(3) sprzedaż domu i jej moment jako zasilenie runway;\n(4) rok wyczerpania oszczędności dla każdej ścieżki A–F (w tym downsizing + home care, rodzina, CCRC);\n(5) analizę wrażliwości i sekcję 'co zmienia wynik'.\n\nKażdy pojedynczy fragment jest dostępny za darmo. Ryzyko: Riggins lub Eldercalc mogą być bliżej integracji, niż pokazują summary. Przed decyzją trzeba je ręcznie otworzyć.",
+ "search_scope_pl": "7 z 7 dozwolonych WebSearch (wszystkie extended), wyniki US, zapytania po angielsku, stan na 2026-10-25. WebFetch zablokowany: żadnej strony nie otwarto ani nie przetestowano, dowodem są wyłącznie podsumowania wyszukiwarki.\n\nPokryte typy zapytań:\n- problem w języku naturalnym;\n- krótka kategoria ('aging in place vs assisted living cost calculator');\n- alternatywna terminologia (savings runway / long-term care calculator / selling home);\n- płatne oprogramowanie i narzędzia dla doradców;\n- arkusze i Reddit (wątki z Reddit nie pojawiły się);\n- doprecyzowanie najbliższego konkurenta (Riggins);\n- operatorzy i CCRC.\n\nNie pojawiły się w wynikach, więc pozostają niezweryfikowane: narzędzie CareScout Cost of Care, Caring.com, Seniorly, kalkulatory Brookdale i Erickson, Boldin, ProjectionLab, arkusze z r/AgingParents. Nie badano wersji płatnych ani narzędzi za loginem.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wielu dużych wydawców publikuje w 2026 przewodniki 'home care vs assisted living' z cenami: US News Health (2026 price guide), A Place for Mom, CareScout, SeniorLiving.org, Brevy, Budget Seniors, HomeAdvisor. To pośredni sygnał stałego popytu wyszukiwania na tę decyzję.",
+   "url": "https://health.usnews.com/home-care/articles/home-care-vs-assisted-living-a-full-cost-benefit-analysis-and-2026-price-guide",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wysyp wyspecjalizowanych serwisów-kalkulatorów z rocznikiem 2026 (seniorcarecalc.org, eldercalc.com, thecarecompass.org, carecostclarity.com, retirementbudget.org, 4calculators). Wydawcy stawiają na ruch z tej niszy, co jednocześnie oznacza konkurencję SEO.",
+   "url": "https://seniorcarecalc.org/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Operatorzy senior living (Arbor Company, Riverton, Fountainview, Masonicare) publikują porównania kosztów 'aging in place vs community' i kalkulatory jako narzędzia sprzedażowe. Wskazuje to, że decyzja jest typowym momentem lejka.",
+   "url": "https://rivertonseniorliving.com/retirement-community-vs-aging-in-place-costs/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Sprzedawcy produktów do adaptacji domu (AmeriGlide: 'Modify My Home or Move to Assisted Living?') piszą wprost o tej decyzji. To sygnał popytu i jednocześnie potencjalny reklamodawca.",
+   "url": "https://www.ameriglide.com/blog/modify-my-home-or-move-to-assisted-living/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wysoka stawka decyzji: AL ok. 74 400 USD/rok, aide 35 USD/h (alz.org, 2025), a opieka domowa 24/7 może zbliżać się do 300 tys. USD/rok (Morningstar). Planista cytowany przez Morningstar wskazuje próg 7–8 h opieki dziennie. Duże kwoty uzasadniają korzystanie z narzędzia.",
+   "url": "https://www.morningstar.com/retirement/how-much-should-you-budget-long-term-care",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Liczba gospodarstw w USA stających co roku przed tą decyzją nie została zweryfikowana w tej sesji. Nie ma też danych o wolumenach wyszukiwań ani wątków z Reddit (wyszukiwanie nie zwróciło reddit.com). Popyt w liczbach pozostaje hipotezą.",
+   "url": "https://www.alz.org/help-support/caregiving/financial-legal-planning/planning-for-care-costs",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta jest wysokie dla pytania pierwszego poziomu i średnie dla pełnego modelu.\n\nDowód: sam silnik wyszukiwania w tej sesji odpowiedział na promptową wersję pytania. Podał break-even ok. 40–44 h/tydz. przy medianach CareScout 2025, ukryte koszty domu i rolę rodzinnych opiekunów. Każdy asystent policzy też runway dla przykładu 400 tys. USD + dom prostym dzieleniem.\n\nOd 7.10.2026 ChatGPT Intelligent UI, a od 19.08.2026 Google AI Mode potrafią wyrenderować prosty kalkulator porównawczy, więc pojedyncze kalkulatory break-even są w pełni substytuowalne.\n\nAsystentowi trudniej odtworzyć spójnie i powtarzalnie:\n- wieloletnią oś z eskalacją potrzeb i wymuszeniem placówki przy opiece 24/7;\n- moment sprzedaży domu, capex rozłożony na oczekiwany czas w domu i 4–6 ścieżek naraz;\n- analizę wrażliwości;\n- aktualne stawki stanowe;\n- trwały link do modelu, który rodzeństwo może razem przejrzeć.\n\nTo jedyne realne argumenty za odesłaniem do zewnętrznego narzędzia. Ich siła jest niezweryfikowana. Asystenci obecnie cytują raczej APFM, CareScout i US News niż niezależne symulatory.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja jest powtarzalna i kosztowna: dziesiątki tysięcy USD rocznie, opieka 24/7 do ok. 300 tys. USD/rok. Silnie pokrywają ją duzi wydawcy i wysyp kalkulatorów 2026, co wskazuje na widoczny popyt pytań online.",
+   "evidence_pl": "Wiele wyników z 2026 dla zapytań problemowych i kategorii (US News, APFM, CareScout, seniorcarecalc, eldercalc, Riggins). Operatorzy i sprzedawcy adaptacji domu publikują treści o tej decyzji.",
+   "gaps_pl": "Brak zweryfikowanych liczb gospodarstw, wolumenów wyszukiwań i dyskusji na Reddit/forach. Nie wiadomo, jaka część popytu szuka narzędzia, a jaka wystarczy jej artykuł lub odpowiedź AI.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Fragmenty są szeroko pokryte darmowymi narzędziami: break-even godzin, porównanie miesięczne, sumy 5-letnie, runway, modyfikacje, CCRC. Nie znaleziono jednak modelu, który łączy eskalację, sprzedaż domu, capex i runway dla wielu ścieżek.",
+   "evidence_pl": "Riggins: break-even, próg modyfikacji, koszt opiekuna rodzinnego. Eldercalc: 5 lat i osobne kalkulatory. seniorcarecalc: próg 41 h/tydz. per stan. Kalkulatory runway wg summary nie modelują sprzedaży domu.",
+   "gaps_pl": "Strony nieotwierane. Riggins, Eldercalc, PayingForSeniorCare i płatna wersja Care Cost Clarity mogą mieć więcej integracji, niż pokazują summary. Nie sprawdzono CareScout, Caring.com, Seniorly, Boldin ani ProjectionLab.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Pytanie podstawowe asystent rozwiązuje sam. Wartość dodana zewnętrznego narzędzia leży w wieloletnim modelu z eskalacją, sprzedażą domu i wrażliwością, w danych stanowych oraz w audytowalnym, udostępnialnym wyniku dla rodziny.",
+   "evidence_pl": "Wyszukiwarka sama wygenerowała break-even 40–44 h/tydz. i porady. Konkurencyjne kalkulatory cytują dane CareScout, które asystenci też znają.",
+   "gaps_pl": "Brak danych, czy ChatGPT lub Google AI Mode odsyłają w tej kategorii do zewnętrznych kalkulatorów i które źródła cytują.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumencka publiczność w USA (dorosłe dzieci i seniorzy z majątkiem: dom plus oszczędności) w wartościowych wertykałach reklamowych: senior living, home care, adaptacja domu, nieruchomości (sprzedaż domu), reverse mortgage/HELOC, ubezpieczenia LTC, elder law.",
+   "evidence_pl": "W wynikach aktywni są operatorzy senior living (Arbor, Masonicare, Riverton), sprzedawcy adaptacji (AmeriGlide, QuickTub) i serwisy referral (A Place for Mom), co wskazuje na komercyjną wartość ruchu.",
+   "gaps_pl": "Stawki CPC/RPM niezweryfikowane. Treści zdrowotne (memory care, Medicaid) i reklamy reverse mortgage mogą podlegać ograniczeniom polityk reklamowych (niezweryfikowane). Konkurencja z dużymi serwisami lead-gen o ruch.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Model to arytmetyka przepływów pieniężnych w czasie, bez złożonych reguł prawnych. Dane kosztowe aktualizuje się raz w roku (ankiety kosztów opieki), a wartości domów są dostępne z darmowych indeksów. Automatyczne utrzymanie jest realne.",
+   "evidence_pl": "Konkurenci (seniorcarecalc) budują per-stanowe progi na danych CareScout 2025. Benchmarki krajowe są publicznie cytowane (alz.org, Morningstar).",
+   "gaps_pl": "Licencja na ponowne użycie stanowych danych CareScout niezweryfikowana. Stawki modyfikacji domu i opłat CCRC mają dużą rozpiętość i niespójne źródła (np. średnia opłata wpisowa CCRC 300 a 480 tys. USD).",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd modelu nie jest natychmiast katastrofalny, bo narzędzie wspiera decyzję i jawnie podaje założenia. Decyzja jest jednak typu YMYL i dotyczy całego majątku seniora oraz bezpieczeństwa. Próg opieki 24/7 wymaga oceny klinicznej, a Medicaid, podatek od sprzedaży domu i VA wymagają interpretacji, jeśli zostaną włączone.",
+   "evidence_pl": "Źródła podają rozbieżne progi (4 h, 5 h, 7–8 h, 8 h/dzień, 20–30 h, 41 h/tydz.) i rozbieżne mediany AL (4995–6200 USD). Wynik jest bardzo wrażliwy na założenia.",
+   "gaps_pl": "Nie oceniono ryzyka prawnego treści o Medicaid spend-down i podatkach. Zakres modułów prawnych do ustalenia (zalecane wyłączenie lub jawne oznaczenie).",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Produkt wykorzystuje oś przepływów pieniężnych, wartość i sprzedaż domu, finansowanie (HELOC/reverse mortgage), podatek od sprzedaży domu i capex adaptacji. Moduł kosztów opieki zasila produkty siostrzane: zamieszkanie z rodziną (G5-11), downsizing, sprzedaż domu a reverse mortgage, memory care, kontrakty CCRC, ubezpieczenie LTC.",
+   "evidence_pl": "Brief wskazuje moduł G5-11 jako wariant E. Rodzina 'Starzenie się, adaptacja domu i koszty opieki' ma naturalne rozgałęzienia.",
+   "gaps_pl": "Moduł danych kosztów opieki ma ograniczone zastosowanie poza rodziną senioralną. Moduł energii nie jest używany.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony to ok. 3,55 przy popycie 4, luce 3, dystrybucji AI 3 i potencjale reklamowym 4. Popyt i wartość reklamowa wyglądają mocno. Luka jest jednak wyłącznie integracyjna i niepotwierdzona, bo najbliższych konkurentów (Riggins, Eldercalc, PayingForSeniorCare, płatna wersja Care Cost Clarity) nie dało się otworzyć. Nisza jest już zatłoczona kalkulatorami SEO z 2026, a odpowiedź pierwszego poziomu asystenci AI dają sami.\n\nPrzed pilotem trzeba:\n(1) ręcznie przetestować Riggins, Eldercalc (5 lat i CCRC), seniorcarecalc, APFM i CareScout Cost of Care, sprawdzając, czy któryś łączy eskalację, sprzedaż domu i runway;\n(2) zweryfikować licencję danych stanowych CareScout;\n(3) sprawdzić, czy ChatGPT i Google AI Mode cytują zewnętrzne narzędzia dla promptu przykładowego.\n\nJeśli integracja okaże się nieobecna, przejść do pilotu z naciskiem na trwały, udostępnialny model dla rodziny.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+   "competitor": "Riggins Strategic Solutions – Aging in Place vs Assisted Living Cost Calculator",
+   "features_checked": "porównanie dwóch scenariuszy, break-even, próg modyfikacji, koszt opiekuna rodzinnego, horyzont wieloletni, runway, sprzedaż domu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, najbliższy. Potwierdzone (summary): porównanie obu scenariuszy i progi (8 h/dzień, modyfikacje 25 tys.+, redukcja pracy opiekuna o 30%+). Wieloletnia oś, runway i sprzedaż domu niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Riggins aging in place break-even calculator home modifications assisted living",
+   "url": "https://rigginsstrategicsolutions.com/tools/aging-in-place-break-even",
+   "competitor": "Riggins Strategic Solutions (doprecyzowanie)",
+   "features_checked": "spójność progów, benchmarki kosztów 2026",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Niespójne progi na stronie (FAQ: <4 h/dzień, tekst: >8 h/dzień) sugerują heurystykę. Benchmarki: AL 5,5–8,5 tys. USD/mies., aging in place 2,5–6,5 tys. USD/mies. Brak dowodu na integrację z oszczędnościami i domem.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://seniorcarecalc.org/",
+   "competitor": "seniorcarecalc.org – Home Care vs. Assisted Living Cost Calculator 2026",
+   "features_checked": "break-even godzin, dane stanowe, źródło danych, model przychodu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: break-even 41 h/tydz. krajowo z progami stanowymi (CareScout 2025), deklaruje brak opłat za polecenia. Runway, dom i eskalacja niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://eldercalc.com/assisted-living-cost-estimator/",
+   "competitor": "Eldercalc – Assisted Living Cost Estimator",
+   "features_checked": "suma 5-letnia, stawka godzinowa, AL all-inclusive",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: 5-letnie sumy in-home a AL (przykład 28 USD/h × 4 h = 40 880 USD/rok a AL 5000 USD/mies.). Eskalacja, dom i runway niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Riggins aging in place break-even calculator home modifications assisted living",
+   "url": "https://eldercalc.com/home-modification-cost-calculator/",
+   "competitor": "Eldercalc – Home Modification Cost Calculator",
+   "features_checked": "koszt modyfikacji domu, powiązanie z porównaniem ścieżek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (fragment capex). Osobny kalkulator. Nie wiadomo, czy jego wynik zasila porównanie ścieżek, więc prawdopodobnie kalkulatory są sklejone, a nie zintegrowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "cost of staying at home vs continuing care retirement community calculator long-term projection",
+   "url": "https://eldercalc.com/continuing-care-community-cost-calculator/",
+   "competitor": "Eldercalc – Continuing Care Community Cost Calculator",
+   "features_checked": "opłata wpisowa, opłata miesięczna, typ kontraktu, roczny wzrost opłat, lata pobytu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial dla wariantu F (CCRC): składa opłatę miesięczną z inflacją w czasie. Według summary wieloletnią projekcję ma tylko ten jeden wariant.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.aplaceformom.com/paying-for-senior-care/cost-calculator",
+   "competitor": "A Place for Mom – Senior Living Cost Calculator",
+   "features_checked": "porównanie miesięczne, lokalne ceny wg ZIP, horyzont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; serwis referral – możliwy formularz kontaktowy (niezweryfikowane)",
+   "conclusion": "Partial: bieżące koszty aging in place porównane z AL i retirement community wg ZIP. Brak dowodu na wieloletnią oś i runway. Narzędzie nie jest neutralne wobec dostawców.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.payingforseniorcare.com/home-care-vs-assisted-living",
+   "competitor": "PayingForSeniorCare – Assisted Living vs. Home Care Affordability Calculator",
+   "features_checked": "funkcje nieopisane w summary",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial (zakładany na podstawie tytułu). Wszystkie funkcje niezweryfikowane, wymaga ręcznego testu.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "cost of staying at home vs continuing care retirement community calculator long-term projection",
+   "url": "https://www.arborcompany.com/cost-calculator",
+   "competitor": "Arbor Company – Retirement Community Cost Calculator",
+   "features_checked": "wydatki domowe a IL/AL/memory care, horyzont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, operatorski. Wg summary nie modeluje wielu lat. Marketingowe twierdzenie o oszczędności 500–1500 USD/mies.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how long will savings last long-term care calculator selling home to pay for senior living",
+   "url": "https://carecostclarity.com/",
+   "competitor": "Care Cost Clarity – Long-Term Care Cost Calculator",
+   "features_checked": "scenariusze nursing/in-home/AL, projekcje rok po roku, inflacja, podatki, Medicaid",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; projekcje rok po roku tylko w płatnej wersji offline (cena niezweryfikowana)",
+   "conclusion": "Partial: porównuje trzy typy opieki. Wg summary wprost pomija inflację, zwroty, podatki i Medicaid. Płatna wersja niezweryfikowana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how long will savings last long-term care calculator selling home to pay for senior living",
+   "url": "https://thecarecompass.org/care-cost-calculator",
+   "competitor": "The Care Compass – Long-Term Care Cost Calculator 2026",
+   "features_checked": "runway oszczędności, uwzględnienie domu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (runway). Wyłącza dom z oszczędności. Wg zbiorczego summary żaden kalkulator runway wyraźnie nie modeluje sprzedaży domu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how long will savings last long-term care calculator selling home to pay for senior living",
+   "url": "https://www.seniorliving.org/retirement/money/depletion-calculator/",
+   "competitor": "SeniorLiving.org – depletion calculator",
+   "features_checked": "wyczerpanie oszczędności",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (fragment runway). Ten sam serwis ma osobne porównanie AL a home care, ale nie zintegrowane (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "aging in place vs assisted living cost calculator",
+   "url": "https://www.retirementbudget.org/calculators/assisted-living-cost-calculator",
+   "competitor": "RetirementBudget.org – Assisted Living / Long-term care cost calculators 2026",
+   "features_checked": "koszty dożywotnie AL i LTC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, jednocelowe kalkulatory. Integracja ścieżek niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "eldercare financial planning software advisors long-term care cost projection home care vs facility",
+   "url": "https://www.waterlily.com/resources/long-term-care-planning-software",
+   "competitor": "Waterlily – LTC planning platform",
+   "features_checked": "szacowanie kosztów, modelowanie ryzyka, strategie finansowania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; produkt komercyjny, prawdopodobnie konto/doradca (niezweryfikowane)",
+   "conclusion": "Substitute (płatne oprogramowanie lub kanał doradczy). Porównanie ścieżek mieszkaniowych i sprzedaż domu niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "eldercare financial planning software advisors long-term care cost projection home care vs facility",
+   "url": "https://www.morningstar.com/retirement/how-much-should-you-budget-long-term-care",
+   "competitor": "Morningstar / doradcy finansowi (substytut doradczy)",
+   "features_checked": "próg opieki dziennej, koszt opieki 24/7",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; możliwy paywall Morningstar (niezweryfikowane)",
+   "conclusion": "Substitute: doradcy (np. cytowany planista) wyznaczają próg na ok. 7–8 h/dzień. Opieka 24/7 może zbliżać się do 300 tys. USD/rok.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit spreadsheet compare home care vs assisted living costs parent savings house",
+   "url": "https://www.masonicare.org/resources/blog/cost-senior-living-comparison-worksheet",
+   "competitor": "Masonicare – Senior Living Comparison Worksheet",
+   "features_checked": "pozycje kosztowe po obu stronach, dynamika",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (worksheet operatora), statyczny jeden okres. Wątki i arkusze z Reddit nie pojawiły się w wynikach, więc pozostają niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "is it cheaper to keep my parent at home with home care or move to assisted living",
+   "url": "https://www.carescout.com/resources/assisted-living-vs-home-care-which-option-is-right-for-you-",
+   "competitor": "CareScout (Genworth) – poradnik i dane Cost of Care",
+   "features_checked": "mediany kosztów, istnienie narzędzia porównawczego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute i źródło danych dla konkurentów (AL 6200 USD/mies., 35 USD/h w 2025). Samo narzędzie Cost of Care nie pojawiło się, więc pozostaje niezweryfikowane (notatka z fali 1 niepotwierdzona).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "is it cheaper to keep my parent at home with home care or move to assisted living",
+   "url": "https://health.usnews.com/home-care/articles/home-care-vs-assisted-living-a-full-cost-benefit-analysis-and-2026-price-guide",
+   "competitor": "US News Health – 2026 cost-benefit guide (oraz APFM, SeniorLiving.org, Brevy, Budget Seniors)",
+   "features_checked": "treści porównawcze, interaktywność",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute treściowy, silny w SEO i prawdopodobnie w cytowaniach AI. Nie jest narzędziem integrującym.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "is it cheaper to keep my parent at home with home care or move to assisted living",
+   "url": "n/a – odpowiedź syntetyczna wyszukiwarki",
+   "competitor": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "features_checked": "zdolność odpowiedzi na pytanie pierwszego poziomu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; asystentów nie testowano bezpośrednio",
+   "conclusion": "Substitute: sama wyszukiwarka wyliczyła break-even 40–44 h/tydz. i ukryte koszty, więc ryzyko samodzielnego rozwiązania na poziomie podstawowym jest wysokie. Model wieloletni z domem i runway niezweryfikowany.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(wszystkie 7 zapytań)",
+   "url": "n/a – brak w wynikach",
+   "competitor": "Boldin, ProjectionLab, Caring.com, Seniorly, Brookdale, Erickson (notatki z fali 1)",
+   "features_checked": "obecność w wynikach",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (brak wyników); Boldin/ProjectionLab to płatne plannery (wiedza modelu, niezweryfikowane)",
+   "conclusion": "Nie pojawiły się w żadnym wyniku, więc ich funkcje pozostają niezweryfikowane, a nie 'brak'. Notatki z fali 1 dla tych pozycji pozostają niepotwierdzone.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "is it cheaper to keep my parent at home with home care or move to assisted living",
+  "aging in place vs assisted living cost calculator",
+  "how long will savings last long-term care calculator selling home to pay for senior living",
+  "eldercare financial planning software advisors long-term care cost projection home care vs facility",
+  "reddit spreadsheet compare home care vs assisted living costs parent savings house",
+  "Riggins aging in place break-even calculator home modifications assisted living",
+  "cost of staying at home vs continuing care retirement community calculator long-term projection"
+ ]
+}

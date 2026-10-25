@@ -1,0 +1,403 @@
+{
+ "id": "HOME-03",
+ "competitors": [
+  {
+   "name": "FairOffer – Fix & List vs. Sell As-Is Calculator",
+   "url": "https://www.fairoffer.com/calculator",
+   "type": "partial",
+   "access": "Darmowy, online; operator to kupiec gotówkowy (lead-gen, oferta gotówkowa 'w 24h'). Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Porównuje zysk netto 'napraw i wystaw' vs sprzedaż za gotówkę; wg opisu uwzględnia prowizje (5–6%), koszty zamknięcia (2–3%), kredyty za naprawy, staging i koszty utrzymania (1–2% wartości/mies.). To rdzeń decyzji (warianty 1/2/5).",
+   "misses_or_unverified_pl": "Formuła niewidoczna w wynikach – szczegóły niezweryfikowane. W opisie brak śladu: usługi pay-at-closing, wariantu 'tylko systemy', seller credit, rankingu napraw z progiem opłacalności, wpływu dachu na finansowanie/ubezpieczalność i pulę kupujących, rozkładu wyników i przekroczeń budżetu (niezweryfikowane, nie 'brak'). Konflikt interesów (kupiec gotówkowy)."
+  },
+  {
+   "name": "Homestead Road – Home Sale Calculator: Sell As-Is vs Listing",
+   "url": "https://www.homesteadroad.com/home-sale-calculator/",
+   "type": "partial",
+   "access": "Darmowy, online; operator kupujący domy za gotówkę. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Porównanie sprzedaży as-is vs wystawienia po naprawach; wg podsumowań uwzględnia koszty napraw i miesiące kosztów utrzymania (połączenie zależności 'naprawy opóźniają wystawienie -> koszty utrzymania').",
+   "misses_or_unverified_pl": "Liczba wariantów, pay-at-closing, seller credit, analiza per naprawa, pula kupujących zależna od stanu dachu, niepewność/rozkład – niezweryfikowane. Konflikt interesów."
+  },
+  {
+   "name": "Cecil Jones (Keller Williams Raleigh) – Sell As-Is or Repair First? Seller Decision Guide",
+   "url": "https://www.ceciljoneskw.com/sell-as-is-or-repair-first",
+   "type": "partial",
+   "access": "Darmowy; lokalny agent (Raleigh, NC). Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Wg opisu porównuje zysk netto obu ścieżek (as-is vs po naprawach) wraz z kosztem utrzymania za miesiące trwania prac; odmawia liczenia przy brakujących danych.",
+   "misses_or_unverified_pl": "Oferta gotówkowa, pay-at-closing, seller credit, ranking napraw, wpływ na finansowanie kupujących, rozkład – niezweryfikowane. Zasięg lokalny (Raleigh), narzędzie lead-gen agenta."
+  },
+  {
+   "name": "FC Home Sale – House Repair Cost Calculator: Fix vs Sell As-Is",
+   "url": "https://fchomesale.com/house-repair-estimate-calculator/",
+   "type": "partial",
+   "access": "Darmowy; operator kupiec gotówkowy. Strona nieotwierana – dowód: search-summary (tytuł z dopiskiem 2024).",
+   "covers_pl": "Szacunek kosztów napraw i porównanie 'napraw vs sprzedaj as-is'.",
+   "misses_or_unverified_pl": "Wszystkie funkcje poza tytułem niezweryfikowane; prawdopodobnie bez wielu wariantów i bez modelu wielookresowego (niezweryfikowane). Możliwie nieaktualizowany (2024)."
+  },
+  {
+   "name": "HomeStimulus – Cash Offer vs. Listing Calculator",
+   "url": "https://www.homestimulus.com/articles/cash-offer-vs-listing-net-proceeds-calculator",
+   "type": "partial",
+   "access": "Darmowy; serwis pośrednictwa ofert gotówkowych/agentów. Strona nieotwierana – dowód: search-summary (tylko tytuł).",
+   "covers_pl": "Porównanie zysku netto: oferta gotówkowa vs wystawienie z agentem (warianty 1/2).",
+   "misses_or_unverified_pl": "Naprawy, pay-at-closing, seller credit, ranking napraw, czas, rozkład – niezweryfikowane."
+  },
+  {
+   "name": "Effective Agents – Repair ROI vs. As-Is Discounts (artykuł; kalkulator wg jednego podsumowania)",
+   "url": "https://www.effectiveagents.com/resources/is-selling-your-house-as-is-worth-it-repair-roi-vs-as-is-discounts",
+   "type": "partial",
+   "access": "Darmowy; serwis dopasowania agentów (lead-gen). Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Treść o ROI napraw vs dyskoncie as-is (15–25%), wskazania kiedy as-is ma sens (dom odziedziczony, wady konstrukcyjne, pilny termin).",
+   "misses_or_unverified_pl": "Istnienie i zakres kalkulatora niezweryfikowane (tylko wzmianka w podsumowaniu wyszukiwarki). Brak dowodu integracji wariantów."
+  },
+  {
+   "name": "HomeLight (Simple Sale + artykuły 'sell as-is' / 'how much do you lose')",
+   "url": "https://www.homelight.com/blog/how-much-do-you-lose-selling-a-house-as-is/",
+   "type": "partial",
+   "access": "Darmowe treści; Simple Sale to oferta gotówkowa (wymaga zgłoszenia, łączy z agentem z sieci). Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Checklista as-is vs naprawy, szacunek straty przy sprzedaży as-is, realna oferta gotówkowa (wariant 2) i ścieżka z agentem (wariant 1).",
+   "misses_or_unverified_pl": "Kalkulator net proceeds HomeLight nie pojawił się w wynikach – niezweryfikowany. Integracja wariantów, pay-at-closing, seller credit, ranking napraw – niezweryfikowane. Konflikt interesów (agent + cash)."
+  },
+  {
+   "name": "OfferMarket – Cash Offer Calculator",
+   "url": "https://www.offermarket.us/blog/cash-offer-calculator",
+   "type": "partial",
+   "access": "Darmowy artykuł/kalkulator; platforma inwestorska. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Szacunek oferty inwestora: ARV x 65/70/75% minus koszt remontu (tylko noga 'oferta gotówkowa').",
+   "misses_or_unverified_pl": "Nie porównuje z wariantami naprawy/listingu wg podsumowania; reszta niezweryfikowana."
+  },
+  {
+   "name": "Clever Real Estate – Cash Offer Calculator (how much will an investor pay)",
+   "url": "https://listwithclever.com/real-estate-blog/how-much-will-an-investor-pay-for-my-house/",
+   "type": "partial",
+   "access": "Darmowy; serwis dopasowania agentów/ofert. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Szacunek oferty inwestora (wariant 2); osobno analiza opłat Opendoor i rewizji ofert po inspekcji.",
+   "misses_or_unverified_pl": "Integracja z wariantami napraw i listingu niezweryfikowana."
+  },
+  {
+   "name": "Opendoor (oferta gotówkowa + poradniki 'what to fix before selling')",
+   "url": "https://www.opendoor.com/articles/things-to-repair-before-selling-a-house",
+   "type": "substitute",
+   "access": "Realna oferta wymaga podania adresu/danych (niezweryfikowane szczegóły); artykuły darmowe. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Rzeczywista oferta gotówkowa (opłata ok. 5% zastępuje prowizję wg firmy), porady co naprawiać, porównanie z ofertami innych cash buyerów.",
+   "misses_or_unverified_pl": "Nie jest neutralnym symulatorem wariantów; oferta korygowana w dół po inspekcji (wg Clever/TK Realty). Integracja niezweryfikowana."
+  },
+  {
+   "name": "Offerpad (oferta gotówkowa; porównania z Opendoor)",
+   "url": "https://ibuyer.com/blog/offerpad-vs-opendoor/",
+   "type": "substitute",
+   "access": "Oferta po zgłoszeniu; dane z serwisu porównawczego ibuyer.com. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Wariant 2: opłata do 8%, oferty średnio ok. 13,89% poniżej późniejszej ceny odsprzedaży (analiza 532 transakcji wg ibuyer.com).",
+   "misses_or_unverified_pl": "Brak narzędzia porównującego warianty napraw (niezweryfikowane). Własny URL Offerpad nie pojawił się w wynikach."
+  },
+  {
+   "name": "Compass Concierge (pay-at-closing, brokerage)",
+   "url": "https://realestate.usnews.com/real-estate/articles/spruce-up-now-pay-later-brokerage-concierge-programs-front-the-cost-of-upgrading-your-home",
+   "type": "substitute",
+   "access": "Dostępne tylko przy wystawieniu z agentem Compass. Strona nieotwierana – dowód: search-summary (artykuł U.S. News, data niepewna).",
+   "covers_pl": "Realizuje wariant 6: finansowanie poprawek z płatnością przy zamknięciu; opłata 500/750 USD lub 5,99% odsetek, limit 25 tys. USD (50 tys. w CA) wg U.S. News.",
+   "misses_or_unverified_pl": "Usługa, nie narzędzie decyzyjne; brak zarządzania projektem (wg Curbio). Aktualne warunki niezweryfikowane (wzmianka o współpracy z Revive niepotwierdzona)."
+  },
+  {
+   "name": "Curbio (pay-at-closing renovation)",
+   "url": "https://www.theoffersheet.com/p/meet-curbio-company-transforming-house-presale-max-profit",
+   "type": "substitute",
+   "access": "Usługa remontowa, płatność przy zamknięciu; wycena po kontakcie. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Wariant 6 z zarządzaniem projektem; firma deklaruje brak odsetek/opłat i ceny porównywalne z wykonawcami, brak minimum/maksimum projektu.",
+   "misses_or_unverified_pl": "Deklaracje firmy niezweryfikowane niezależnie; brak neutralnego porównania z as-is/cash; ukryty narzut w cenie możliwy (wg fastexpert) – niezweryfikowane. Ryzyko zastawów (mechanics' lien)."
+  },
+  {
+   "name": "Redfin – Should You Repair Your Roof or Sell As-Is?",
+   "url": "https://redfin.com/blog/should-you-repair-your-roof-or-sell-as-is",
+   "type": "substitute",
+   "access": "Darmowy artykuł. Strona nieotwierana – dowód: search-summary.",
+   "covers_pl": "Zależność 'stan dachu -> zatwierdzenie kredytu kupującego'; ROI wymiany dachu ok. 56,9% (badanie 2024); opcja pośrednia: certyfikat dachu.",
+   "misses_or_unverified_pl": "Treść, nie kalkulator; brak modelu ilościowego puli kupujących i czasu."
+  },
+  {
+   "name": "Remodeling Cost vs. Value Report (Zonda)",
+   "url": "brak własnego URL w wynikach – wzmianki pośrednie (np. https://www.fastexpert.com/blog/what-repairs-should-you-make-before-selling-your-house/)",
+   "type": "substitute",
+   "access": "Raport (dostęp/licencja niezweryfikowane). Strona nieotwierana – dowód: wzmianki w search-summary.",
+   "covers_pl": "Odzysk kosztów dla typowych projektów (np. drzwi garażowe ok. 194%, kuchnia midrange rozbieżnie 60–113%) – baza dla 'które naprawy się zwracają'.",
+   "misses_or_unverified_pl": "Średnie krajowe/regionalne, nie wycena konkretnego domu; nie uwzględnia kosztów utrzymania ani wariantów cash/pay-at-closing. Licencja do ponownego użycia danych niezweryfikowana."
+  },
+  {
+   "name": "ChatGPT (Intelligent UI) / Google AI Mode (generowane narzędzia)",
+   "url": "brak URL (kontekst zadania)",
+   "type": "substitute",
+   "access": "Darmowe dla wszystkich użytkowników (od 7.10.2026 ChatGPT renderuje kalkulatory/formularze; od 19.08.2026 Google AI Mode generuje interaktywne narzędzia po angielsku).",
+   "covers_pl": "Może na żądanie zbudować porównanie zysku netto 2–4 wariantów z kosztami utrzymania i prostą wrażliwością.",
+   "misses_or_unverified_pl": "Brak realnych ofert gotówkowych i lokalnych danych o dyskoncie as-is; spójność wielookresowego modelu z rozkładem i audytowalność niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań WebSearch, rynek US, darmowe kalkulatory online, narzędzia kupców gotówkowych/agentów, iBuyerzy, usługi pay-at-closing, treści/fora; strony nieotwierane, dowód wyłącznie z podsumowań wyszukiwarki; pewność: średnio-niska). Wcześniejsza hipoteza luki jest częściowo nieaktualna: rdzeń decyzji (napraw i wystaw vs sprzedaj as-is/za gotówkę, z prowizjami, kosztami zamknięcia i miesiącami kosztów utrzymania) jest już pokryty przez kilka częściowych kalkulatorów (FairOffer, Homestead Road, Cecil Jones KW, FC Home Sale, HomeStimulus), prawie wszystkie prowadzone przez kupców gotówkowych lub agentów, więc nie są neutralne. Węższa luka, której nie potwierdziłem u żadnego narzędzia: (1) jeden model z 5–7 wariantami, w tym usługą pay-at-closing (opłata/odsetki, limit, ryzyko zastawu) i seller credit zamiast naprawy; (2) ranking napraw z progiem wzrostu ceny, przy którym każda naprawa się zwraca (po uwzględnieniu kosztów utrzymania); (3) powiązanie stanu dachu/systemów z finansowaniem i ubezpieczalnością kupujących, a przez to z pulą kupujących, czasem sprzedaży i ceną; (4) niepewność: przekroczenie budżetu i terminu, korekty ofert iBuyerów po inspekcji, rozkład zysku netto i czasu do gotówki. Funkcje częściowych kalkulatorów poza ich opisem są niezweryfikowane, więc część tej luki może być już zamknięta. Neutralność to przewaga pozycjonowania, nie funkcji.",
+ "search_scope_pl": "7 wyszukiwań WebSearch (extended), 2026-10-25, wyniki US. Rodzaje zapytań: język naturalny (fix up vs as-is vs cash offer), kategoria (fix and list vs sell as-is calculator), terminologia alternatywna (pay at closing pre-listing renovation; repair ROI/cost vs value), płatne usługi i iBuyerzy (HomeLight/Opendoor/Offerpad), forum/Reddit (bez wyników z Reddita), weryfikacja jednego kalkulatora (FairOffer). WebFetch zablokowany: strony nieotwierane, formularzy nie testowano, paywalli/logowania nie da się sprawdzić; funkcje narzędzi znane tylko z podsumowań wyszukiwarki. Nie badano: aplikacji mobilnych, narzędzi CRM/CMA dla agentów za paywallem, arkuszy Google/Excel (zapytanie o fora nie zwróciło szablonów), Freemodel (brak wyników o opłatach).",
+ "demand_signals": [
+  {
+   "signal_pl": "Co najmniej 5 firm kupujących domy lub agentów zbudowało osobne kalkulatory 'fix vs as-is' albo 'cash vs listing' (FairOffer, Homestead Road, FC Home Sale, Cecil Jones KW, HomeStimulus), co sugeruje, że lead z tej decyzji ma wartość komercyjną.",
+   "url": "https://www.fairoffer.com/calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Bankrate prowadzi osobne strony stanowe 'sell house as is' (Floryda, Arizona, Kalifornia), czyli wydawca inwestuje w programmatic SEO na to zapytanie.",
+   "url": "https://www.bankrate.com/real-estate/sell-house-as-is-florida",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Redfin ma dwa artykuły wyłącznie o tym, czy wymienić dach przed sprzedażą, czy sprzedać as-is. Pokrywa się to z przykładowym promptem (dach).",
+   "url": "https://redfin.com/blog/should-you-repair-your-roof-or-sell-as-is",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Patch.com publikuje lokalne strony 'repair or sell as is' / 'can you sell a house as is'. Wyglądają na treści sponsorowane, co wskazuje na wydatki reklamowe w tej niszy.",
+   "url": "https://patch.com/california/carlsbad/repair-or-sell-as-is",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pytanie jest stare i trwałe: wątek forum 'Fix it up or sell as is?' na TractorByNet i archiwalny artykuł NBC News 'Should I fix up the house or sell as is?'.",
+   "url": "https://www.tractorbynet.com/forums/threads/fix-it-up-or-sell-as-is.68343/post-759607",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wiele stron agentów Compass promuje Concierge, a U.S. News opisuje programy pay-at-closing. Wariant 6 jest więc realny i masowo oferowany.",
+   "url": "https://realestate.usnews.com/real-estate/articles/spruce-up-now-pay-later-brokerage-concierge-programs-front-the-cost-of-upgrading-your-home",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: w USA co roku kilka milionów transakcji domów z rynku wtórnego, a znaczna część sprzedających ma zaległe naprawy. Liczba z wiedzy modelu, niezweryfikowana w tym badaniu. To nie jest miesięczny popyt wyszukiwań.",
+   "url": "brak URL (wiedza modelu)",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Wyszukiwanie ukierunkowane na Reddit nie zwróciło wątków, więc popytu forumowego nie potwierdzono w tym zakresie.",
+   "url": "brak URL (brak wyników)",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko wysokie dla wersji podstawowej, średnie dla pełnego symulatora. Rdzeń to prosta arytmetyka: cena minus prowizje, koszty zamknięcia, naprawy i miesiące kosztów utrzymania, plus typowe dyskonto as-is (10–25%) i opłaty iBuyerów (ok. 5–8%). ChatGPT z Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą na żądanie wyrenderować formularz porównujący 3–4 warianty. Kluczowe dane wejściowe (realna oferta gotówkowa, lokalne dyskonto as-is, ARV, wycena napraw) nie istnieją w darmowych, stabilnych zbiorach. Asystent odeśle raczej do Opendoor/HomeLight po realną ofertę albo do agenta po CMA niż do neutralnego symulatora. Przewagę zewnętrznego narzędzia dawałyby: spójny model wielookresowy z rozkładem (przekroczenia budżetu i terminu, korekty po inspekcji), ranking napraw z progami opłacalności, zapisywalny i audytowalny wynik. Tego asystent nie robi powtarzalnie, ale może przybliżyć.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja dotyczy dużej części corocznych sprzedaży domów w USA (zaległe naprawy, dach, HVAC). Widać silne inwestycje treściowe i narzędziowe dużych graczy i firm lead-gen.",
+   "evidence_pl": "Stanowe strony Bankrate 'sell house as is', dwa artykuły Redfin o dachu, wiele artykułów HomeLight/Opendoor, co najmniej 5 kalkulatorów kupców gotówkowych, sponsorowane strony Patch, stary wątek forum i artykuł NBC.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań. Nie znaleziono wątków Reddit. Liczba transakcji rocznych pochodzi z wiedzy modelu, a i tak nie przekłada się na miesięczny popyt.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Częściowe kalkulatory pokrywają rdzeń (fix&list vs as-is/cash z kosztami utrzymania), ale nie potwierdzono integracji: pay-at-closing, seller credit, ranking napraw z progiem, pula kupujących zależna od dachu, rozkład i czas do gotówki.",
+   "evidence_pl": "Opisy FairOffer, Homestead Road, Cecil Jones KW, FC Home Sale i HomeStimulus w wynikach. Compass Concierge i Curbio to usługi, nie narzędzia porównawcze.",
+   "gaps_pl": "Strony nieotwierane, więc zakres funkcji kalkulatorów jest niezweryfikowany. Nie sprawdzono arkuszy ani narzędzi CMA dla agentów.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Podstawowe porównanie asystent policzy sam i wyrenderuje formularz. Po realne dane (ofertę) skieruje raczej do iBuyerów lub agentów niż do neutralnego symulatora.",
+   "evidence_pl": "Prosta formuła net proceeds w wielu wynikach (ARV x %, prowizje, holding costs). Kontekst zadania: ChatGPT Intelligent UI i Google AI Mode generują narzędzia.",
+   "gaps_pl": "Brak danych o tym, czy asystenci cytują lub linkują kalkulatory w tej niszy.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsument w USA w momencie sprzedaży domu to wertykale o wysokich stawkach: dekarstwo, HVAC, remonty, agenci nieruchomości, oferty gotówkowe, przeprowadzki, kredyt na kolejny dom.",
+   "evidence_pl": "Gęstość firm lead-gen (cash buyers, matchery agentów) i treści sponsorowanych (Patch) w wynikach.",
+   "gaps_pl": "Reklamy mieszkaniowe w USA podlegają ograniczeniom targetowania personalizowanego (wiedza modelu, niezweryfikowane tu). Najwięksi reklamodawcy (iBuyerzy, cash buyers) są zarazem konkurentami. Brak danych CPC.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Mechanika modelu jest prosta, ale kluczowe parametry nie mają darmowego i stabilnego źródła: lokalne dyskonto as-is, wzrost ceny per naprawa, koszty napraw. Warunki usług (opłaty iBuyerów, Compass Concierge) się zmieniają.",
+   "evidence_pl": "Rozbieżne ROI w wynikach (kuchnia 60–113%). Opłaty Opendoor ok. 5%, Offerpad do 8%. Warunki Concierge 500/750 USD lub 5,99%, limit 25/50 tys. Licencja Cost vs Value niezweryfikowana.",
+   "gaps_pl": "Nie sprawdzono dostępności darmowych danych o kosztach napraw i podatkach od przeniesienia własności per stan.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd może kosztować dziesiątki tysięcy USD w złej decyzji, a niepewność parametrów jest duża. Interpretacji prawnej jest niewiele (obowiązki ujawnienia wad przy as-is różnią się per stan, ryzyko zastawów przy pay-at-closing), ale wymaga ostrożnych sformułowań.",
+   "evidence_pl": "Konfliktujące reguły kciuka w wynikach (próg 20–25% wartości vs 50 tys. USD; dyskonto 5–10% vs 15–25%). Ryzyko mechanics' lien opisane na fastexpert.",
+   "gaps_pl": "Nie zbadano przepisów o ujawnieniu wad per stan.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Korzysta z modułów osi przepływów pieniężnych (holding costs), wartości domu, finansowania (pay-at-closing, finansowanie kupującego), kosztów i ROI remontów oraz podatków (sprzedaż domu). Daje produkty siostrzane: dach naprawić czy wymienić, buy-before-you-sell/bridge, sprzedać czy wynająć, HELOC na naprawy, iBuyer vs agent.",
+   "evidence_pl": "Te same zmienne (prowizje, koszty zamknięcia, holding costs, dyskonto as-is) powtarzają się we wszystkich znalezionych narzędziach rodziny sprzedaży domu.",
+   "gaps_pl": "Moduł 'pula kupujących zależna od stanu' jest specyficzny i trudny do zasilenia danymi.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Popyt i potencjał reklamowy są mocne, ale luka jest węższa niż w hipotezie. Rdzeń (fix vs as-is vs cash z kosztami utrzymania) obsługuje już kilka darmowych kalkulatorów lead-gen. Asystenci AI policzą wersję podstawową sami. Wyróżnienie zostaje w integracji wariantów pay-at-closing i seller credit, w rankingu napraw z progami opłacalności oraz w modelu niepewności. Przed pilotem warto: (1) ręcznie przetestować FairOffer, Homestead Road i Cecil Jones KW poza tym środowiskiem, żeby potwierdzić brak tych funkcji; (2) sprawdzić wolumen zapytań typu 'Curbio vs Compass Concierge' i 'roof credit vs replace before selling'; (3) potwierdzić, czy istnieje darmowe, licencjonowalne źródło kosztów i ROI napraw oraz dyskonta as-is. Wynik ważony to ok. 3,3/5, czyli kolejność hipotez, nie pomiar.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+   "url": "https://www.fairoffer.com/calculator",
+   "competitor": "FairOffer – Fix & List vs. Sell As-Is Calculator",
+   "features_checked": "warianty fix&list vs cash; prowizje, koszty zamknięcia, kredyty za naprawy, staging, holding costs",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; formuła niewidoczna; operator kupiec gotówkowy",
+   "conclusion": "partial: rdzeń 2 ścieżek z kosztami utrzymania; pay-at-closing, seller credit, ranking napraw, pula kupujących niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+   "url": "https://www.homesteadroad.com/home-sale-calculator/",
+   "competitor": "Homestead Road – Home Sale Calculator: Sell As-Is vs Listing",
+   "features_checked": "as-is vs listing, koszty napraw, miesiące kosztów utrzymania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; operator kupiec gotówkowy",
+   "conclusion": "partial: łączy naprawy z kosztem czasu; brak dowodu na więcej niż 2 warianty",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "fix and list vs sell as-is calculator holding costs repairs net proceeds",
+   "url": "https://www.ceciljoneskw.com/sell-as-is-or-repair-first",
+   "competitor": "Cecil Jones KW – Sell As-Is or Repair First?",
+   "features_checked": "net proceeds obu ścieżek, carrying cost miesięcy prac, walidacja danych",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie lokalnego agenta (Raleigh)",
+   "conclusion": "partial: rdzeń 2 ścieżek; cash, pay-at-closing, seller credit niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "fix and list vs sell as-is calculator holding costs repairs net proceeds",
+   "url": "https://fchomesale.com/house-repair-estimate-calculator/",
+   "competitor": "FC Home Sale – House Repair Cost Calculator: Fix vs Sell As-Is",
+   "features_checked": "tylko tytuł: koszt napraw, fix vs as-is",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuł 2024); operator kupiec gotówkowy",
+   "conclusion": "partial: zakres niezweryfikowany",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "fix and list vs sell as-is calculator holding costs repairs net proceeds",
+   "url": "https://www.homestimulus.com/articles/cash-offer-vs-listing-net-proceeds-calculator",
+   "competitor": "HomeStimulus – Cash Offer vs. Listing Calculator",
+   "features_checked": "tylko tytuł: net proceeds cash vs listing",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial: warianty 1/2; naprawy niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+   "url": "https://www.effectiveagents.com/resources/is-selling-your-house-as-is-worth-it-repair-roi-vs-as-is-discounts",
+   "competitor": "Effective Agents – Repair ROI vs As-Is Discounts",
+   "features_checked": "dyskonto as-is 15–25%, kiedy as-is ma sens; wzmianka o kalkulatorze",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; serwis lead-gen agentów",
+   "conclusion": "partial/treść: istnienie kalkulatora niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HomeLight Opendoor Offerpad compare cash offer vs listing with agent net proceeds tool",
+   "url": "https://www.homelight.com/blog/how-much-do-you-lose-selling-a-house-as-is/",
+   "competitor": "HomeLight (Simple Sale, artykuły)",
+   "features_checked": "artykuły as-is vs naprawy; Simple Sale (oferty poniżej ceny rynkowej, łączenie z agentem)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; oferta wymaga zgłoszenia; kalkulator net proceeds nie pojawił się w wynikach",
+   "conclusion": "partial: notatka z fali 1 częściowo potwierdzona (treści, Simple Sale); kalkulator niezweryfikowany",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+   "url": "https://www.offermarket.us/blog/cash-offer-calculator",
+   "competitor": "OfferMarket – Cash Offer Calculator",
+   "features_checked": "formuła ARV x 65/70/75% minus remont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial: tylko noga gotówkowa",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+   "url": "https://listwithclever.com/real-estate-blog/how-much-will-an-investor-pay-for-my-house/",
+   "competitor": "Clever Real Estate – Cash Offer Calculator",
+   "features_checked": "szacunek oferty inwestora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial: tylko noga gotówkowa",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HomeLight Opendoor Offerpad compare cash offer vs listing with agent net proceeds tool",
+   "url": "https://www.opendoor.com/articles/companies-that-buy-houses",
+   "competitor": "Opendoor",
+   "features_checked": "opłata ok. 5% zamiast prowizji, porównanie cash buyerów, korekty po inspekcji (wg Clever/TK Realty)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; realna oferta wymaga zgłoszenia",
+   "conclusion": "substitute: daje realną ofertę i treści, nie neutralne porównanie wariantów; notatka z fali 1 skorygowana z partial na substitute/partial",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HomeLight Opendoor Offerpad compare cash offer vs listing with agent net proceeds tool",
+   "url": "https://ibuyer.com/blog/offerpad-vs-opendoor/",
+   "competitor": "Offerpad",
+   "features_checked": "opłata do 8%, oferty średnio 13,89% poniżej ceny odsprzedaży (532 transakcje)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; własny URL Offerpad nie pojawił się w wynikach",
+   "conclusion": "substitute: wariant 2; brak dowodu na narzędzie porównawcze",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "pay at closing pre-listing renovation services compared Curbio Compass Concierge Freemodel fees",
+   "url": "https://realestate.usnews.com/real-estate/articles/spruce-up-now-pay-later-brokerage-concierge-programs-front-the-cost-of-upgrading-your-home",
+   "competitor": "Compass Concierge",
+   "features_checked": "opłata 500/750 USD lub 5,99%, limit 25 tys. (50 tys. CA)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; dostępne tylko z agentem Compass; data artykułu niepewna",
+   "conclusion": "substitute (usługa wariantu 6), nie narzędzie decyzyjne",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "pay at closing pre-listing renovation services compared Curbio Compass Concierge Freemodel fees",
+   "url": "https://www.theoffersheet.com/p/meet-curbio-company-transforming-house-presale-max-profit",
+   "competitor": "Curbio",
+   "features_checked": "deklarowany brak odsetek/opłat, zarządzanie projektem, brak minimum/maksimum",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wycena po kontakcie; deklaracje firmy",
+   "conclusion": "substitute (usługa wariantu 6); Freemodel: brak danych w wynikach",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit replace roof before selling house or sell as-is credit buyer",
+   "url": "https://redfin.com/blog/should-you-repair-your-roof-or-sell-as-is",
+   "competitor": "Redfin – roof repair vs as-is guide",
+   "features_checked": "stan dachu a zatwierdzenie kredytu kupującego; ROI dachu 56,9%; certyfikat dachu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute (treść); potwierdza zależność dach -> finansowanie, bez modelu ilościowego",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "which repairs are worth doing before selling a house ROI calculator cost vs value",
+   "url": "https://www.fastexpert.com/blog/what-repairs-should-you-make-before-selling-your-house/",
+   "competitor": "Remodeling Cost vs. Value Report (Zonda) – wzmianki pośrednie",
+   "features_checked": "odzysk kosztów projektów (drzwi garażowe ok. 194%, kuchnia 60–113%)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; własny URL raportu nie pojawił się; licencja niezweryfikowana",
+   "conclusion": "substitute (źródło danych ROI), nie narzędzie decyzyjne",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit replace roof before selling house or sell as-is credit buyer",
+   "url": "brak URL (brak wyników z Reddita)",
+   "competitor": "Reddit / arkusze",
+   "features_checked": "wątki i szablony arkuszy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wyszukiwarka nie zwróciła Reddita",
+   "conclusion": "brak danych w badanym zakresie (nie oznacza braku wątków)",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I fix up my house before selling or sell as-is or take a cash offer calculator",
+  "fix and list vs sell as-is calculator holding costs repairs net proceeds",
+  "pay at closing pre-listing renovation services compared Curbio Compass Concierge Freemodel fees",
+  "HomeLight Opendoor Offerpad compare cash offer vs listing with agent net proceeds tool",
+  "reddit replace roof before selling house or sell as-is credit buyer",
+  "\"Fix & List vs. Sell As-Is\" calculator fairoffer what do you actually keep",
+  "which repairs are worth doing before selling a house ROI calculator cost vs value"
+ ]
+}

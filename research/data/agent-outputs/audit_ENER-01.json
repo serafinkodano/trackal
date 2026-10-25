@@ -1,0 +1,426 @@
+{
+ "id": "ENER-01",
+ "competitors": [
+  {
+   "name": "BAESS Solar Financing Calculator (Cash, Loan, PPA & Lease Comparison)",
+   "url": "https://www.baess.app/tools/solar-financing-calculator",
+   "type": "partial",
+   "access": "darmowy kalkulator online (wg podsumowania wyszukiwarki); strona nieotwierana",
+   "covers_pl": "Wg podsumowania: porównuje gotówkę, kredyt, PPA i lease obok siebie w horyzoncie 25 lat: korzyść netto, okres zwrotu, rata miesięczna, automatyczna rekomendacja. To pokrywa rdzeń problemu ENER-01 w jednym modelu.",
+   "misses_or_unverified_pl": "Niezweryfikowane: dealer fee w efektywnym koszcie kredytu, HELOC, prepaid lease, scenariusz sprzedaży domu w roku N (transfer/wykup), break-even eskalatora vs inflacja taryf jako osobny wynik, data stanu prawnego 25D/48E. Model ogólny, nie oparty na ofertach użytkownika."
+  },
+  {
+   "name": "SolarCalculatorHQ – Solar Lease vs. Buy Calculator (25-Year Net Position)",
+   "url": "https://solarcalculatorhq.com/calculators/solar-lease-vs-buy-calculator",
+   "type": "partial",
+   "access": "darmowy kalkulator online; strona nieotwierana",
+   "covers_pl": "Wg podsumowań: pozycja netto w 25 latach dla lease vs zakup, porównanie eskalatora z eskalacją taryf utility; w wynikach pojawia się wniosek, że wyjście w ciągu ok. 5 lat zwykle faworyzuje PPA/lease (głęboko ujemna pozycja gotówkowa przy zakupie), co sugeruje widok pozycji w czasie. Ta sama domena ma osobny kalkulator kredytu solarnego.",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy koszt wykupu/transferu przy sprzedaży w roku N jest modelowany, dealer fee, HELOC, prepaid lease, PPA z eskalatorem do 3,9%, stan prawny 48E. Kalkulator kredytu jest osobnym narzędziem (jeśli nie jest połączony, nie liczy się jako integracja)."
+  },
+  {
+   "name": "Choose My Power – 2026 Solar Lease vs Buy vs PPA Calculator",
+   "url": "https://choosemypower.us/lease-vs-buy/",
+   "type": "partial",
+   "access": "darmowy kalkulator online; strona nieotwierana",
+   "covers_pl": "Kalkulator datowany na 2026 porównujący lease, zakup i PPA; jawne założenia domyślne (np. $2,800/kW, kredyt 6,99% APR); zastrzeżenie, że wyniki zależą od eskalatora PPA, warunków lease i zachęt stanowych.",
+   "misses_or_unverified_pl": "Niezweryfikowane: dealer fee, sprzedaż domu w roku N, HELOC, prepaid lease, break-even eskalatora, data stanu prawnego 48E."
+  },
+  {
+   "name": "SolarPriceList – Solar Financing Calculator 2026: Cash vs. Loan vs. Lease",
+   "url": "https://solarpricelist.com/solar-financing-calculator",
+   "type": "partial",
+   "access": "darmowy kalkulator online; strona nieotwierana",
+   "covers_pl": "Wg podsumowań: wyniki gotówka/kredyt/lease-PPA obok siebie w 25 latach (przykład: kredyt ok. $30,6 tys., lease/PPA ok. $14,7 tys. oszczędności); możliwe, że to ten kalkulator pokazuje efektywne APR z dealer fee (atrybucja w podsumowaniu niejednoznaczna).",
+   "misses_or_unverified_pl": "Niezweryfikowane: dealer fee (atrybucja niepewna), sprzedaż domu, HELOC, prepaid lease. Jedno ze źródeł w tej grupie zakładało 30% ITC dla wszystkich opcji (nieaktualne dla zakupu w 2026) – nie wiadomo, które; ryzyko nieaktualnych założeń u konkurentów."
+  },
+  {
+   "name": "EnergySage – solar calculator / Solar Financing guide",
+   "url": "https://www.energysage.com/solar/financing",
+   "type": "partial",
+   "access": "darmowy; marketplace ofert instalatorów (lead-gen); strona nieotwierana",
+   "covers_pl": "Wg podsumowania: kalkulator szacuje oszczędności w scenariuszach finansowania: gotówka, kredyt, lease/PPA oraz prepaid lease/PPA; stanowe strony 2026 (aktualizowane 9-16 dni przed wyszukaniem) podają 25-letnie oszczędności dla gotówki, kredytu i 'rent-to-own' oraz stwierdzają, że ulga nie przysługuje przy zakupie za gotówkę/kredyt. Silna marka i dystrybucja SEO.",
+   "misses_or_unverified_pl": "Sam kalkulator nie pojawił się w wynikach – funkcje niezweryfikowane: dealer fee, sprzedaż domu w roku N z wykupem/transferem, HELOC, break-even eskalatora. Korekta wave-1: wcześniejszy URL (artykuł o EV tax credit) był nietrafiony."
+  },
+  {
+   "name": "Rate Relief CA – Solar Lease vs PPA vs Purchase (narzędzie do sumowania ofert)",
+   "url": "https://ratereliefca.com/blog/ppa-loan-vs-solar-lease-vs-cash-california",
+   "type": "partial",
+   "access": "darmowe; Kalifornia; strona nieotwierana",
+   "covers_pl": "Wg podsumowania: sumuje wyłącznie pisemne warunki ofert (gotówka, kredyt, lease, PPA) wpisane przez użytkownika, nie wybiera zwycięzcy; ostrzega przed porównywaniem ofert o różnym zakresie. Bliskie idei audytowalnego porównania ofert.",
+   "misses_or_unverified_pl": "Celowo nie dodaje założeń o rachunkach, produkcji, podatkach ani odsprzedaży – więc brak modelu eskalatora vs taryfa i scenariusza sprzedaży domu (wg opisu); zasięg CA."
+  },
+  {
+   "name": "NuWatt Energy – Solar Financing 2026 / Lender comparison (dealer fees & APRs) / payback cash vs loan vs lease vs PPA",
+   "url": "https://nuwattenergy.com/en/solar-financing-2026",
+   "type": "substitute",
+   "access": "darmowe treści (instalator/sprzedawca); strona nieotwierana",
+   "covers_pl": "Treści 2026 o wszystkich formach finansowania po 25D, porównanie pożyczkodawców z widełkami dealer fee (np. GoodLeap 19-35%, Sungage 8-18%, Propel 0%), payback cash/loan/lease/PPA, wyjaśnienie 30% przez lease/PPA (48E).",
+   "misses_or_unverified_pl": "Treść, nie zintegrowany symulator (interaktywność niezweryfikowana); źródło sprzedażowe; brak potwierdzenia modelu sprzedaży domu."
+  },
+  {
+   "name": "Solar Panel Exit – Free Solar Buyout Calculator (2026) / PPA Exit Guide",
+   "url": "https://solarpanelexit.com/solar-buyout-calculator/",
+   "type": "partial",
+   "access": "darmowy kalkulator; strona nieotwierana",
+   "covers_pl": "Szacuje koszt wyjścia/wykupu z lease/PPA (metody FMV, NPV pozostałych rat, harmonogram umowny wg treści w tej grupie wyników) – pokrywa fragment 'sprzedaż domu / wykup'.",
+   "misses_or_unverified_pl": "Nie porównuje z zakupem za gotówkę/kredyt w jednym modelu (wg podsumowania); dealer fee, eskalator vs taryfa – niezweryfikowane."
+  },
+  {
+   "name": "Solar Insure – Solar Lease vs Buy Calculator",
+   "url": "https://www.solarinsure.com/solar-lease-vs-buy-calculator",
+   "type": "partial",
+   "access": "darmowy kalkulator; strona nieotwierana",
+   "covers_pl": "Kalkulator lease vs buy z eskalatorem i projekcją 25-letnią (typowe w grupie wyników zapytania kategorii).",
+   "misses_or_unverified_pl": "Niezweryfikowane: PPA, dealer fee, sprzedaż domu, stan prawny; w tej grupie wyników jedno narzędzie podawało 30% ulgi 'through 2032' (nieaktualne) – atrybucja niepewna."
+  },
+  {
+   "name": "Inne kalkulatory lease vs buy (SolarToolsOnline lease vs buy i PPA calculator, UltimateFinanceCalculator 25-year break-even, WhatNextNow, SubcontractorHub, HyreSolar '21 tools', SHS Power PPA reality check)",
+   "url": "https://www.ultimatefinancecalculator.com/calculators/solar-lease-vs-buy-calculator/",
+   "type": "partial",
+   "access": "darmowe kalkulatory; strony nieotwierane",
+   "covers_pl": "Liczne pojedyncze kalkulatory: 25-letni koszt, break-even, eskalator lease/PPA; pokazują wysokie nasycenie SERP kategorią 'solar lease vs buy calculator'. Inne URL-e z wyników: https://solartoolsonline.com/calculators/solar-lease-vs-buy-calculator, https://solartoolsonline.com/calculators/solar-ppa-calculator, https://whatnextnow.com/home/solar/solar-buy-vs-lease-calculator, https://www.subcontractorhub.com/tools/solar-lease-vs-buy-calculator, https://hyresolar.com/tools/, https://www.shspower.com/resources/ppa-calculator",
+   "misses_or_unverified_pl": "Zwykle pojedyncze porównanie dwóch opcji; dealer fee, HELOC, sprzedaż domu, 48E – niezweryfikowane."
+  },
+  {
+   "name": "SurgePV / GreenCalcs / Solar Gardens – solar loan calculators",
+   "url": "https://www.surgepv.com/tools/solar-loan-calculator",
+   "type": "partial",
+   "access": "darmowe kalkulatory; strony nieotwierane",
+   "covers_pl": "Rata, odsetki, przepływy kredytu solarnego; jedno z narzędzi w tej grupie deklaruje pokazywanie efektywnego APR z dealer fee (atrybucja niejednoznaczna). Inne URL-e: https://greencalcs.com/solar/solar-loan-calculator/, https://solargardens.org/solar-loan-calculator/",
+   "misses_or_unverified_pl": "Pojedynczy fragment (kredyt); brak połączenia z lease/PPA i sprzedażą domu (wg podsumowań)."
+  },
+  {
+   "name": "Oprogramowanie ofertowe instalatorów (Aurora, Energy Toolbase, OpenSolar, SurgePV)",
+   "url": "https://www.surgepv.com/best-solar-software/commercial-proposal",
+   "type": "substitute",
+   "access": "płatne/B2B (od darmowego OpenSolar do ok. $4,800/rok/użytkownik Aurora wg zestawienia); dostęp dla instalatorów; strona nieotwierana",
+   "covers_pl": "Projekty i oferty z porównaniem finansowania (gotówka/kredyt/lease/PPA) generowane przez instalatora – faktyczny 'symulator' widziany przez właściciela domu w ofercie.",
+   "misses_or_unverified_pl": "Nie niezależne – wejścia kontroluje sprzedawca; brak publicznego dostępu dla konsumenta; dealer fee i sprzedaż domu – niezweryfikowane."
+  },
+  {
+   "name": "Treści instalatorów/doradców 2026 (OC Solar 'Solar Lease vs Buy in 2026: The Flip', Pacific Solar Advisors, Jouleio, Aurora Home Solar Blog)",
+   "url": "https://ocsolar.com/resources/guides/solar-lease-vs-buy-2026",
+   "type": "substitute",
+   "access": "darmowe artykuły; strony nieotwierane",
+   "covers_pl": "Odpowiadają wprost na pytanie użytkownika (ulga zniknęła – lease czy zakup), omawiają 48E, eskalatory (np. $100/mies. przy 2% → $164 w roku 25), regułę '20% wyższej raty kredytu'. Inne URL-e: https://pacificsolaradvisors.com/en/blog/solar-lease-vs-buy-2026, https://jouleio.com/blog/solar-lease-vs-buy/, https://aurorasolar.com/home-solar/blog/solar-101/solar-tax-credit-2026",
+   "misses_or_unverified_pl": "Treści, nie model; źródła sprzedażowe."
+  },
+  {
+   "name": "Consumer Reports / NerdWallet / artykuły o pułapce lease przy sprzedaży domu",
+   "url": "https://www.consumerreports.org/energy-saving/real-cost-of-leasing-vs-buying-solar-panels",
+   "type": "substitute",
+   "access": "darmowe artykuły (CR może mieć częściowy paywall – niezweryfikowane); strony nieotwierane",
+   "covers_pl": "Wyjaśnienie kosztu lease vs zakup, transferu i wykupu przy sprzedaży (opcja wykupu często po 5 latach), ryzyk HELOC o zmiennej stopie. Inny URL: https://www.nerdwallet.com/home-ownership/solar/learn/solar-leasing",
+   "misses_or_unverified_pl": "Brak narzędzia liczącego scenariusz (wg podsumowań)."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI od 7.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026)",
+   "url": "brak URL (substytut ogólny; nie pojawił się w wynikach)",
+   "type": "substitute",
+   "access": "darmowe dla użytkowników",
+   "covers_pl": "Mogą policzyć 25-letnie przepływy dla 3-4 wariantów z danymi z oferty użytkownika, wyrenderować kalkulator w odpowiedzi i wyszukać aktualny stan 25D/48E. Podsumowania wyszukiwarki w tym audycie same udzieliły merytorycznej odpowiedzi na przykładowy prompt.",
+   "misses_or_unverified_pl": "Ryzyko błędów w stanie prawnym 48E i spójności wieloletniego modelu; brak trwałego, audytowalnego zapisu scenariusza (niezweryfikowane)."
+  },
+  {
+   "name": "Solar Before Selling Home Calculator (solarsizecalculator.com) – z notatek wave-1",
+   "url": "https://solarsizecalculator.com/solar-before-selling-home-calculator/",
+   "type": "partial",
+   "access": "nie pojawił się w wynikach tej fali; strona nieotwierana",
+   "covers_pl": "Wg notatek wave-1: decyzja o PV przed sprzedażą domu (fragment 'horyzont przeprowadzki').",
+   "misses_or_unverified_pl": "Nie zweryfikowano ponownie w tej fali; porównanie lease/PPA, dealer fee – niezweryfikowane."
+  },
+  {
+   "name": "Arkusz kalkulacyjny / szablon z Reddita",
+   "url": "brak URL (nie znaleziono szablonu w wynikach)",
+   "type": "substitute",
+   "access": "darmowe/DIY",
+   "covers_pl": "Wyniki wskazały listę wejść do własnego arkusza (eskalator, rata, opłaty, wykup w roku 7, odmowa przejęcia lease przez kupującego) i wątek z Reddita o odmowie transferu lease kupującemu.",
+   "misses_or_unverified_pl": "Gotowego szablonu nie znaleziono w wynikach; wymaga samodzielnego modelowania."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 zapytań WebSearch extended, EN/US, 2026-10-25; tylko podsumowania wyszukiwarki, żadna strona nie została otwarta ani przetestowana; pewność niska-średnia). Luka jest jednak WĄSKA i przyrostowa, a nie nisza: rdzeń problemu – gotówka vs kredyt vs lease vs PPA w jednym 25-letnim modelu z eskalatorem porównywanym z inflacją taryf – jest pokryty przez co najmniej kilka darmowych narzędzi (BAESS, SolarCalculatorHQ, Choose My Power 2026, SolarPriceList, EnergySage z prepaid lease/PPA). W wynikach nie potwierdzono narzędzia, które w tym samym modelu łączy: (a) dealer fee wpływający na efektywny koszt kredytu, (b) HELOC jako wariant, (c) scenariusz sprzedaży domu w roku N z kosztem wykupu/ryzykiem odmowy transferu, (d) break-even eskalatora jako osobny wynik, (e) datowany stan prawny 25D/48E (okno TPO do 4.07.2026 / 31.12.2027). Te elementy są jednak fragmentarycznie dostępne osobno (kalkulatory dealer fee/APR, Solar Panel Exit buyout calculator, kalkulator 'before selling home'), a część może istnieć w niezweryfikowanych funkcjach istniejących kalkulatorów (np. widok pozycji netto w czasie w SolarCalculatorHQ). Hipoteza wave-1 ('brak jednego modelu z eskalatorem, dealer fee, sprzedażą domu i oknem 48E') jest podtrzymana tylko w wąskiej formie; twierdzenie o luce w samym porównaniu cash/loan/lease/PPA – odrzucone.",
+ "search_scope_pl": "7 wywołań WebSearch (wszystkie extended), rynek US, język angielski, data 2026-10-25. Mieszanka: problem w języku naturalnym (q1), krótka kategoria 'solar lease vs buy calculator' (q2), terminologia alternatywna dealer fee/true APR/PPA (q3) i third-party owned/ownership/buyout (q6), Reddit/arkusze (q4), marka EnergySage/kalkulator (q5), płatne oprogramowanie/niezależni doradcy (q7). Ograniczenia: WebFetch zablokowany – żadnej strony nie otwarto, nie testowano formularzy, nie widziano paywalli ani logowań; dowodem są wyłącznie podsumowania wyszukiwarki, często z niejednoznaczną atrybucją funkcji do konkretnego URL. Nie sprawdzano App Store/Google Play, YouTube ani bezpośrednio r/solar. Wpisy wave-1 solarsizecalculator.com, Greencalculus i Solar.com nie pojawiły się ponownie i pozostają niezweryfikowane.",
+ "demand_signals": [
+  {
+   "signal_pl": "Fala artykułów datowanych na 2026 odpowiadających dokładnie na przykładowy prompt ('tax credit gone – lease or buy'), od instalatorów, doradców i Aurora; wydawcy inwestują w ten temat, co sugeruje widoczny popyt wyszukiwań po wygaśnięciu 25D.",
+   "url": "https://pacificsolaradvisors.com/en/blog/solar-lease-vs-buy-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "OC Solar opisuje 2026 jako 'The Flip' w rachunku lease vs buy (TPO z 48E vs zakup bez ulgi) – zmiana reguł tworzy moment decyzji dla właścicieli domów z ofertami $0 down.",
+   "url": "https://ocsolar.com/resources/guides/solar-lease-vs-buy-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Aurora Home Solar Blog: 'Did the solar tax credit expire in 2026?' – pytanie w formie, w jakiej zadają je konsumenci.",
+   "url": "https://aurorasolar.com/home-solar/blog/solar-101/solar-tax-credit-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Jedno zapytanie kategorii zwróciło 9 osobnych kalkulatorów lease vs buy, a HyreSolar reklamuje '21 tools' – podaż sugeruje popyt, ale też wysokie nasycenie SERP.",
+   "url": "https://hyresolar.com/tools/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pytania czytelników w mediach finansowych o pułapkę lease przy kupnie/sprzedaży domu ('found our dream home — but it comes with a costly solar panel lease. Are we stuck?') oraz relacja z Reddita o odmowie transferu lease kupującemu – potwierdza realność wymiaru 'sprzedaż domu w roku N'.",
+   "url": "https://www.aol.com/finance/husband-found-dream-home-comes-113000432.html",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "EnergySage aktualizuje stanowe strony 2026 z 25-letnimi oszczędnościami dla gotówki/kredytu/rent-to-own (9-16 dni przed wyszukaniem) – duży gracz utrzymuje ten temat na bieżąco.",
+   "url": "https://www.energysage.com/local-data/solar-panel-cost/ca/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: rynek mieszkaniowy PV w USA kurczy się po 25D, a udział TPO rośnie; skala rocznych decyzji (setki tysięcy gospodarstw) to wiedza modelu, niezweryfikowana w tej fali – nie traktować jako popytu miesięcznego.",
+   "url": "brak URL (wiedza modelu, niezweryfikowane)",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta: WYSOKIE. Problem to 25-letni model przepływów dla 3-6 wariantów z ok. 10-15 wejściami (cena, rata, APR, dealer fee, eskalator, inflacja taryf, produkcja, rok sprzedaży, cena wykupu) – LLM z wykonaniem kodu liczy to bez trudu, a ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą wyrenderować interaktywny kalkulator w odpowiedzi. Stan prawny 25D/48E jest łatwo wyszukiwalny (podsumowania wyszukiwarki w tym audycie same podały, że 25D wygasło dla instalacji po 31.12.2025, a TPO korzysta z 48E). Kluczowe dane (eskalator, harmonogram wykupu, dealer fee) pochodzą z umowy użytkownika, więc zewnętrzne narzędzie nie ma przewagi danych. Możliwe przewagi zewnętrznego narzędzia: audytowalność i zapis scenariusza, spójność wieloletniego modelu, datowana lista założeń prawnych, lokalne stawki utility (EIA) i produkcja (PVWatts) – ale asystent może je też wyszukać. Asystent prawdopodobnie poleci link raczej do EnergySage/marek niż do nowej witryny.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja realna i aktualna w 2026-2027 (wygaśnięcie 25D, przewaga TPO z 48E, oferty $0 down), widoczny popyt na treści i kalkulatory; ale dotyczy ograniczonej grupy właścicieli domów rozważających PV w danym roku, a rynek po 25D się kurczy.",
+   "evidence_pl": "Liczne artykuły 2026 (Pacific Solar Advisors, OC Solar, Aurora, NuWatt, Jouleio); 9+ kalkulatorów w jednym zapytaniu; pytania czytelników o lease przy sprzedaży domu (AOL/Yahoo) i wątek z Reddita; aktualizowane strony stanowe EnergySage.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań i liczbie rocznych decyzji w 2026; skurczenie rynku po 25D nieskwantyfikowane; okno 48E dla TPO kończy się 2027, więc kąt '48E' jest czasowy.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 2,
+   "rationale_pl": "Rdzeń zintegrowanego porównania cash/loan/lease/PPA z eskalatorem vs inflacja taryf w 25 latach jest dostępny za darmo w kilku narzędziach; niepotwierdzona pozostaje jedynie integracja dealer fee, HELOC, sprzedaży w roku N z wykupem/transferem i datowanego stanu 48E – to różnica przyrostowa, częściowo pokryta osobnymi kalkulatorami.",
+   "evidence_pl": "BAESS (cash/loan/PPA/lease, 25 lat, payback, rekomendacja), SolarCalculatorHQ (25-letnia pozycja netto, wniosek o wyjściu w ok. 5 lat), Choose My Power 2026 (lease/buy/PPA), SolarPriceList, EnergySage (w tym prepaid lease/PPA); osobno: kalkulatory dealer fee/APR, Solar Panel Exit buyout calculator.",
+   "gaps_pl": "Funkcje konkurentów znane tylko z podsumowań; możliwe, że któryś już modeluje sprzedaż domu lub dealer fee (wtedy luka ~1). Nie sprawdzono aplikacji mobilnych ani narzędzi organizacji non-profit/stanowych.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent z kodem i renderowaniem kalkulatorów w odpowiedzi rozwiąże ten model sam; dane kluczowe pochodzą z umowy użytkownika, a stan prawny jest łatwo wyszukiwalny. Zewnętrzne odesłanie mało prawdopodobne, a jeśli już – do dużych marek (EnergySage).",
+   "evidence_pl": "Podsumowania WebSearch same odpowiedziały merytorycznie na przykładowy prompt (25D wygasło, 48E dla TPO, eskalator, reguła 20%); ChatGPT Intelligent UI i Google AI Mode generują interaktywne narzędzia (kontekst zadania).",
+   "gaps_pl": "Brak pomiaru, jak często asystenci linkują do zewnętrznych kalkulatorów solarnych; brak testu jakości odpowiedzi AI dla scenariusza sprzedaży w roku 7.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumenci-właściciele domów w USA w wertykałach o wysokiej wartości (solar, home improvement, kredyty solarne, HELOC); brak ograniczeń kategorii wrażliwych dla AdSense w typowym rozumieniu.",
+   "evidence_pl": "Rynek pełen sprzedawców/lead-gen (instalatorzy, EnergySage marketplace, pożyczkodawcy GoodLeap/Sungage/Propel w porównaniach) – sygnał, że reklamodawcy płacą za tę publiczność.",
+   "gaps_pl": "Brak danych CPC/RPM; kurczenie się rynku PV po 25D może obniżać budżety reklamowe w 2026-2027; reklamy kredytowe mogą podlegać zasadom usług finansowych.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Matematyka prosta (amortyzacja, eskalatory, NPV, pozycja netto w czasie), dane bazowe darmowe (stawki EIA, produkcja PVWatts – wiedza modelu), ale reguły zmienne: 48E (terminy, FEOC), polityki net-metering stanów, nieprzejrzyste dealer fee i harmonogramy wykupu różne w każdej umowie – utrzymanie automatyczne wymaga monitoringu prawa.",
+   "evidence_pl": "Sprzeczne założenia u konkurentów (jedno narzędzie zakłada 30% ITC dla wszystkich opcji / 'through 2032') pokazują, że stan prawny szybko się dezaktualizuje; widełki dealer fee 8-35% wg NuWatt.",
+   "gaps_pl": "Nie zweryfikowano dostępności i warunków API PVWatts/EIA w tej fali; brak źródła danych o typowych harmonogramach wykupu.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy nie są katastrofalne (narzędzie poglądowe), ale decyzja dotyczy kwot rzędu dziesiątek tysięcy dolarów i umów 20-25 lat; wymaga interpretacji 48E (czy oferta TPO rzeczywiście przekazuje ulgę – nieweryfikowalne z umowy) i warunków transferu.",
+   "evidence_pl": "Źródła wskazują, że przekazanie korzyści z 48E w cenie lease/PPA jest obietnicą nieweryfikowalną; sprzeczne wyniki 25-letnie między źródłami (PPA 40-60% mniej wartości vs podobne oszczędności); badanie Berkeley Lab bez istotnej premii cenowej domów z TPO vs twierdzenia o +4-7% dla własnych systemów.",
+   "gaps_pl": "Brak analizy ryzyka prawnego publikacji porad finansowych; wpływ na wartość domu niejednoznaczny.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś przepływów pieniężnych, finansowanie (kredyt z dealer fee, HELOC), inflacja taryf/energia, wartość domu i sprzedaż w roku N; naturalne produkty siostrzane: magazyn energii/backup, wykup lease przed sprzedażą domu, kupno domu z leasingowanym PV, pompa ciepła/taryfy TOU.",
+   "evidence_pl": "Wymiary zależności (eskalator vs taryfa, horyzont przeprowadzki, efektywny koszt kredytu) powtarzają się w całej rodzinie 'Energia domowa'; wątek 'kupno domu z drogim lease' pokazuje osobny, pokrewny moment decyzji.",
+   "gaps_pl": "Moduł 48E/25D jest specyficzny i krótkotrwały; reużywalność zależy od architektury silnika, której jeszcze nie ma.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "później",
+ "recommendation_reason_pl": "Nie jako samodzielny pilot. Średnia ważona ok. 2,9/5: dobry potencjał reklamowy (4) i reużywalność silnika (4), ale luka jest wąska (2) – rdzeń porównania cash/loan/lease/PPA z eskalatorem istnieje w kilku darmowych kalkulatorach przy wysoko nasyconym SERP (dziesiątki narzędzi lead-gen) – a ryzyko samodzielnego rozwiązania przez AI jest wysokie (2). Kąt '48E' jest czasowy (okno TPO kończy się do 31.12.2027), więc samodzielny produkt szybko by się zdezaktualizował. Sensowne: zbudować później jako moduł wspólnego silnika 'Energia domowa' (oś przepływów + finansowanie z dealer fee/HELOC + sprzedaż domu w roku N), z wyróżnikiem 'sprzedaż/przeprowadzka w roku N: wykup vs transfer vs zakup' i datowaną listą założeń; przed decyzją ręcznie sprawdzić (przeglądarką), czy BAESS, SolarCalculatorHQ i EnergySage nie modelują już roku sprzedaży i dealer fee – jeśli tak, obniżyć do 'odrzucić'.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "third-party owned solar PPA vs ownership calculator selling home year buyout",
+   "url": "https://www.baess.app/tools/solar-financing-calculator",
+   "competitor": "BAESS Solar Financing Calculator",
+   "features_checked": "cash/loan/PPA/lease obok siebie, 25-letnia korzyść netto, payback, rata, auto-rekomendacja; dealer fee, HELOC, sprzedaż w roku N, 48E",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie/paywall nieznane",
+   "conclusion": "Partial (najbliższy): pokrywa rdzeń porównania w jednym modelu; dealer fee, sprzedaż domu, HELOC, prepaid lease i stan prawny niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar lease vs buy calculator escalator",
+   "url": "https://solarcalculatorhq.com/calculators/solar-lease-vs-buy-calculator",
+   "competitor": "SolarCalculatorHQ Solar Lease vs Buy Calculator",
+   "features_checked": "25-letnia pozycja netto, eskalator vs eskalacja taryf, wyjście w ok. 5 lat; wykup/transfer, dealer fee",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: prawdopodobnie widok pozycji w czasie (umożliwia odczyt roku przeprowadzki), ale koszt wykupu/transferu i dealer fee niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "independent solar proposal review service homeowner compare lease loan PPA quotes software",
+   "url": "https://choosemypower.us/lease-vs-buy/",
+   "competitor": "Choose My Power 2026 Solar Lease vs Buy vs PPA Calculator",
+   "features_checked": "lease/buy/PPA, jawne założenia domyślne ($2,800/kW, 6,99% APR), eskalator PPA; dealer fee, sprzedaż domu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: aktualny (2026) kalkulator trzech form własności; brak potwierdzenia dealer fee i scenariusza sprzedaży.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar loan dealer fee true APR calculator vs PPA",
+   "url": "https://solarpricelist.com/solar-financing-calculator",
+   "competitor": "SolarPriceList Solar Financing Calculator 2026",
+   "features_checked": "cash/loan/lease-PPA 25 lat; efektywne APR z dealer fee (atrybucja niepewna); założenia ITC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; atrybucja funkcji do URL niejednoznaczna",
+   "conclusion": "Partial: porównanie trzech ścieżek; dealer fee możliwy, ale niezweryfikowany; w grupie wyników występowały nieaktualne założenia 30% ITC.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EnergySage solar calculator compare cash loan lease PPA 20-year savings",
+   "url": "https://www.energysage.com/solar/financing",
+   "competitor": "EnergySage solar calculator / financing guide",
+   "features_checked": "scenariusze cash, loan, lease/PPA, prepaid lease/PPA; strony stanowe 2026 z 25-letnimi oszczędnościami i informacją o braku ulgi przy zakupie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; sam kalkulator nie pojawił się w wynikach; marketplace może wymagać danych kontaktowych (niezweryfikowane)",
+   "conclusion": "Partial: silna marka, pokrywa warianty łącznie z prepaid; dealer fee/sprzedaż domu niezweryfikowane. Korekta wave-1: poprzedni URL (EV tax credit) nietrafiony.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "EnergySage solar calculator compare cash loan lease PPA 20-year savings",
+   "url": "https://www.energysage.com/local-data/solar-panel-cost/ca/",
+   "competitor": "EnergySage – strony stanowe 2026",
+   "features_checked": "25-letnie oszczędności cash/loan/rent-to-own (CA, MA), status ulgi 2026",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute/treść z danymi lokalnymi; potwierdza, że duży gracz modeluje warianty finansowania per stan.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "independent solar proposal review service homeowner compare lease loan PPA quotes software",
+   "url": "https://ratereliefca.com/blog/ppa-loan-vs-solar-lease-vs-cash-california",
+   "competitor": "Rate Relief CA – sumowanie pisemnych ofert",
+   "features_checked": "cash/loan/lease/PPA z warunków ofert; brak założeń o taryfach, produkcji, podatkach, odsprzedaży",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (CA): audytowalne zestawienie ofert bez modelu eskalatora vs taryfa i bez scenariusza sprzedaży.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar loan dealer fee true APR calculator vs PPA",
+   "url": "https://nuwattenergy.com/en/solar-financing-2026/lender-comparison",
+   "competitor": "NuWatt Energy – Solar Lenders Compared 2026: Dealer Fees & APRs",
+   "features_checked": "widełki dealer fee wg pożyczkodawcy (GoodLeap 19-35%, Sungage 8-18%, Propel 0%), efektywny koszt kredytu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść sprzedawcy): dostarcza danych o dealer fee, ale nie zintegrowany symulator (interaktywność niezweryfikowana).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar tax credit gone 2026 should I lease or buy solar panels with a loan",
+   "url": "https://nuwattenergy.com/en/solar-financing-2026",
+   "competitor": "NuWatt Energy – Solar Financing 2026: Cash vs Loan vs Lease vs PPA",
+   "features_checked": "opis 4 form finansowania po 25D, 48E dla TPO, payback",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: treść odpowiadająca na prompt; brak potwierdzonego modelu wieloletniego ze sprzedażą domu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "third-party owned solar PPA vs ownership calculator selling home year buyout",
+   "url": "https://solarpanelexit.com/solar-buyout-calculator/",
+   "competitor": "Solar Panel Exit – Free Solar Buyout Calculator (2026)",
+   "features_checked": "koszt wyjścia/wykupu lease/PPA; metody FMV/NPV/harmonogram (z grupy wyników)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: pokrywa fragment 'sprzedaż domu/wykup', bez porównania z zakupem w tym samym modelu (wg podsumowania).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar lease vs buy calculator escalator",
+   "url": "https://www.solarinsure.com/solar-lease-vs-buy-calculator",
+   "competitor": "Solar Insure Solar Lease vs Buy Calculator",
+   "features_checked": "lease vs buy, eskalator, 25 lat; aktualność założeń ITC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: typowy kalkulator dwóch opcji; w grupie wyników występowało nieaktualne założenie 30% 'through 2032' (atrybucja niepewna).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar lease vs buy calculator escalator",
+   "url": "https://www.ultimatefinancecalculator.com/calculators/solar-lease-vs-buy-calculator/",
+   "competitor": "UltimateFinanceCalculator + SolarToolsOnline, WhatNextNow, SubcontractorHub, HyreSolar",
+   "features_checked": "25-letni koszt, break-even, eskalator lease; PPA (SolarToolsOnline ma osobny PPA calculator)",
+   "access_limits": "strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (grupa): wysokie nasycenie SERP pojedynczymi kalkulatorami; integracja dealer fee/sprzedaży niezweryfikowana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar loan dealer fee true APR calculator vs PPA",
+   "url": "https://www.surgepv.com/tools/solar-loan-calculator",
+   "competitor": "SurgePV / GreenCalcs / Solar Gardens solar loan calculators",
+   "features_checked": "rata, odsetki, cash flow kredytu; efektywne APR z dealer fee (atrybucja niejednoznaczna)",
+   "access_limits": "strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: tylko fragment kredytowy, bez połączenia z lease/PPA.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "independent solar proposal review service homeowner compare lease loan PPA quotes software",
+   "url": "https://www.surgepv.com/best-solar-software/commercial-proposal",
+   "competitor": "Aurora, Energy Toolbase, OpenSolar, SurgePV (oprogramowanie ofertowe)",
+   "features_checked": "porównanie finansowania w ofertach instalatorów, cennik (OpenSolar darmowy do ok. $4,800/rok Aurora)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzia B2B dla instalatorów, płatne/z logowaniem",
+   "conclusion": "Substitute: wejścia kontroluje sprzedawca, niedostępne dla konsumenta jako niezależne narzędzie; nie znaleziono płatnej niezależnej usługi przeglądu ofert.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar tax credit gone 2026 should I lease or buy solar panels with a loan",
+   "url": "https://ocsolar.com/resources/guides/solar-lease-vs-buy-2026",
+   "competitor": "OC Solar, Pacific Solar Advisors, Jouleio, Aurora Home Solar Blog (treści 2026)",
+   "features_checked": "25D wygasło po 31.12.2025, 48E dla TPO, eskalatory, reguła 20% raty, horyzont 2027-2029",
+   "access_limits": "strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: treści odpowiadają na prompt bez zintegrowanego modelu; źródła sprzedażowe.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit solar lease vs loan spreadsheet moving in 7 years buyout transfer",
+   "url": "https://www.consumerreports.org/energy-saving/real-cost-of-leasing-vs-buying-solar-panels",
+   "competitor": "Consumer Reports / NerdWallet / Tesla support / artykuły AOL-Yahoo",
+   "features_checked": "transfer i wykup przy sprzedaży, wykup często po 5 latach, HELOC zmienny, szablon arkusza z Reddita",
+   "access_limits": "strony nieotwierane (WebFetch zablokowany), dowód: search-summary; CR możliwy częściowy paywall (niezweryfikowane)",
+   "conclusion": "Substitute: treści i historie użytkowników; gotowego szablonu arkusza ani narzędzia z Reddita nie znaleziono w wynikach.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(brak dedykowanego zapytania; ocena na podstawie kontekstu zadania i wyników q1)",
+   "url": "brak URL (substytut ogólny)",
+   "competitor": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "features_checked": "zdolność policzenia wielowariantowego modelu i renderowania kalkulatora; dostęp do aktualnego stanu 25D/48E",
+   "access_limits": "nie testowano; strona nieotwierana (WebFetch zablokowany), dowód: search-summary (podsumowania same odpowiedziały na prompt)",
+   "conclusion": "Substitute o wysokim ryzyku samodzielnego rozwiązania problemu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(wave-1; nie pojawił się ponownie w 7 zapytaniach)",
+   "url": "https://solarsizecalculator.com/solar-before-selling-home-calculator/",
+   "competitor": "Solar Before Selling Home Calculator (solarsizecalculator.com)",
+   "features_checked": "decyzja o PV przed sprzedażą domu (wg wave-1)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: wyłącznie notatka wave-1, nie potwierdzono w tej fali",
+   "conclusion": "Partial, niezweryfikowany w tej fali; Greencalculus i Solar.com z wave-1 również nie pojawiły się ponownie.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "solar tax credit gone 2026 should I lease or buy solar panels with a loan",
+  "solar lease vs buy calculator escalator",
+  "solar loan dealer fee true APR calculator vs PPA",
+  "reddit solar lease vs loan spreadsheet moving in 7 years buyout transfer",
+  "EnergySage solar calculator compare cash loan lease PPA 20-year savings",
+  "third-party owned solar PPA vs ownership calculator selling home year buyout",
+  "independent solar proposal review service homeowner compare lease loan PPA quotes software"
+ ]
+}

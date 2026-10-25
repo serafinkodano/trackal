@@ -1,0 +1,525 @@
+{
+ "topic": "Możliwości i użycie asystentów AI (top-up): linkowanie do kalkulatorów, natywne narzędzia Google/ChatGPT/Perplexity, polityki porad finansowych, ChatGPT Apps, prywatność, dane o użyciu",
+ "summary_pl": "Wszystkie dowody poniżej to search-summary. Nie dało się otworzyć ani jednej strony, a 16 z 16 wyszukiwań jest wykorzystanych.\n\n(1) Najważniejsze zagrożenie dla pomysłu: Google ogłosił 18.11.2025 (Gemini 3), że AI Mode w trybie \"Thinking\" generuje w locie interaktywne narzędzia i symulacje. Jako przykład podano własny kalkulator kredytu z suwakami parametrów. Na start funkcja była dostępna tylko dla płatnych subskrybentów AI Pro/Ultra w USA. Rollout do darmowych użytkowników na 10.2026 jest niezweryfikowany. To SUBSTYTUT dokładnie tej wartości, którą miałby dawać serwis z symulatorami. Do tego dochodzą ChatGPT agent (07.2025: wykonuje kod, tworzy edytowalne arkusze) i Perplexity Labs (05.2025: arkusze, dashboardy, proste web appy, plan Pro). Obie funkcje są płatne i wymagają wielominutowego workflow. Nie są więc natychmiastowym substytutem dla masowego użytkownika, ale ich jakość szybko rośnie.\n\n(2) Cytowania i kliknięcia. W odpowiedziach finansowych dominują Experian, NerdWallet i Bankrate (Stacker: 3,9 mln cytowań, 05–08.2026). ChatGPT podaje średnio ok. 3 linki na odpowiedź, Perplexity ok. 19 (badanie własne Slate). Wspólnych domen cytowanych przez obie platformy jest ok. 11%. Pew (07.2025): przy podsumowaniu AI w Google klika się 8% zamiast ok. 15%, a w link wewnątrz podsumowania ok. 1%. Nie znaleziono żadnych danych o tym, czy asystenci linkują konkretnie do stron-kalkulatorów, ani o tym, jakie typy stron są klikane z ChatGPT. Teza \"narzędzia zbierają kliknięcia\" to opinia, nie pomiar.\n\n(3) AI Overviews najczęściej uruchamiają się przy długich pytaniach i pytaniach w formie pytania: ok. 58% wobec ok. 15% dla pozostałych (dane Ahrefs, wtórnie). Tymczasem docelowe zapytania serwisu (\"should I install solar now or...\") to dokładnie taki typ. Krótkie frazy typu \"mortgage calculator\" uruchamiają AIO rzadziej.\n\n(4) Polityki. OpenAI ma od 29.10.2025 zakaz \"tailored advice that requires a license\" bez udziału licencjonowanego profesjonalisty; treść znana z relacji kancelarii, w oficjalnym snippecie jej nie widziałem. Finanse, kredyt, ubezpieczenia i mieszkalnictwo są tam obszarami wysokiego ryzyka. Anthropic wymaga \"human in the loop\" i ujawnienia użycia AI w aplikacjach konsumenckich, które wpływają na finanse (aktualizacja 08.10.2026, obowiązuje od 12.11.2026). Dotyczy to także samego właściciela, gdyby generował rekomendacje LLM-em w produkcie. Polityki Google nie zweryfikowano.\n\n(5) ChatGPT Apps. Katalog aplikacji ruszył 17.12.2025, zgłoszenia przez MCP. Dziś jedyna potwierdzona ścieżka monetyzacji to zewnętrzny checkout dla towarów fizycznych. Dobra cyfrowe są \"w planach\", a według forum aplikacje z płatnymi produktami cyfrowymi są odrzucane. Nie znaleziono żadnych publicznych danych o ruchu czy przychodach aplikacji zewnętrznych. Model reklamowy (AdSense) nie ma tu potwierdzonej drogi.\n\n(6) Prywatność. 40% Amerykanów deklaruje, że nigdy nie wpisze danych osobowych ani finansowych do narzędzia AI (Qlik 03.2026, kontekst podatków). W badaniu Pew z 02.2026 54% osób niekorzystających z chatbotów podaje obawy o dane jako główny powód. Jednocześnie 77% osób, które pytały chatbota o finanse, podało mu jakieś dane osobowe (NerdWallet). Deklaracje rozjeżdżają się więc z zachowaniem.\n\n(7) Dane o użyciu. W ChatGPT ok. 49% wiadomości to \"Asking\", czyli prośby o poradę, a 75–80% to praktyczne porady, wyszukiwanie informacji i pisanie (NBER/OpenAI, 09.2025). W Claude.ai udział zadań Business & Financial Operations spadł z 6% do 3% (raport 09.2025). Brak twardego udziału \"decyzji finansowych/matematyki\".\n\nWniosek dla projektu: asystenci przejmują warstwę \"policz mi scenariusz\", a Google robi to wprost w wynikach wyszukiwania. Przewaga serwisu musiałaby polegać na weryfikowalnych, deterministycznych założeniach i danych, których LLM nie generuje rzetelnie. Rozpoznawalność w cytowaniach AI to warunek wejścia, a w finansach zajmują ją dziś duzi wydawcy afiliacyjni.",
+ "findings": [
+  {
+   "question": "a) Czy asystenci AI cytują wydawców finansowych z kalkulatorami (NerdWallet, Bankrate) w odpowiedziach o pieniądzach?",
+   "claim_pl": "W odpowiedziach finansowych asystenci często cytują dużych wydawców afiliacyjnych. Goodie AI: NerdWallet, Bankrate i PCMag są cytowane równie często jak tradycyjne media informacyjne lub częściej. Stacker (3,9 mln cytowań z 6 platform, 05–08.2026): w tematach pieniężnych prowadzi Experian, NerdWallet jest drugi, Bankrate trzeci. Nie wiadomo, czy cytowane są ich podstrony-kalkulatory, czy artykuły (niezweryfikowane). Omni Calculator i calculator.net nie pojawiły się w wynikach.",
+   "evidence_type": "indirect",
+   "numbers": "3,9 mln cytowań; ranking: Experian #1, NerdWallet #2, Bankrate #3 (money topics)",
+   "sources": [
+    {
+     "url": "https://higoodie.com/blog/most-cited-finance-domains-ai-search/",
+     "title": "Most Cited & Trusted Finance Domains in AI Search - Goodie AI",
+     "publisher": "Goodie AI"
+    },
+    {
+     "url": "https://kioncentralcoast.com/stacker-ai/2026/10/19/asking-ai-for-health-or-money-advice-heres-where-it-gets-its-answers-from/",
+     "title": "Asking AI for health or money advice? Here's where it gets its answers from.",
+     "publisher": "Stacker / KION",
+     "published": "2026-10-19"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W pytaniach finansowych miejsca w cytowaniach zajmują marki o dużym autorytecie domeny i rozbudowanych katalogach kalkulatorów. Nowy serwis startuje z zerowym autorytetem, więc pozycja w cytowaniach AI nie jest dana z góry. Warto testować nisze, w których duzi wydawcy nie mają integracji (np. połączenie dachu, fotowoltaiki i sprzedaży domu)."
+  },
+  {
+   "question": "a) Ile linków podają asystenci i jak bardzo różnią się źródła między platformami?",
+   "claim_pl": "ChatGPT podaje średnio ok. 3,1 linku na odpowiedź, Perplexity ok. 19,1 (Slate, badanie własne firmy). Analiza Averi (680 mln cytowań, 03.2026) wskazuje tylko ok. 11% wspólnych domen między ChatGPT a Perplexity. Według Whitehat SEO (cytowane wtórnie) Perplexity cytuje treści zaktualizowane w ciągu 30 dni w 82% przypadków, starsze w 37%.",
+   "evidence_type": "indirect",
+   "numbers": "ChatGPT 3,10 linku/odp.; Perplexity 19,08; overlap domen 11%; świeżość 82% vs 37%",
+   "sources": [
+    {
+     "url": "https://slatehq.com/blog/how-to-get-cited-by-chatgpt-perplexity-claude-and-gemini",
+     "title": "How to Get Cited by ChatGPT, Perplexity, Claude and Gemini: A Detailed Study",
+     "publisher": "Slate"
+    },
+    {
+     "url": "https://www.averi.ai/blog/ai-citation-tracking-chatgpt-perplexity-claude",
+     "title": "AI Citation Tracking: How to Measure Citation Frequency Across ChatGPT, Perplexity, and Claude",
+     "publisher": "Averi"
+    },
+    {
+     "url": "https://authoritytech.io/curated/ai-citation-11-percent-platform-overlap-per-engine-audit-2026",
+     "title": "Track AI Visibility: ChatGPT, Perplexity, Google AI Mode",
+     "publisher": "AuthorityTech"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W ChatGPT o kilka miejsc konkuruje bardzo wielu wydawców, więc zwycięzca bierze prawie wszystko. Perplexity daje więcej miejsc na linki, ale ma mniejszy zasięg. Każdą platformę trzeba optymalizować i mierzyć osobno. Zasad Google nie wolno przenosić 1:1. Wymóg świeżości przemawia za automatyczną aktualizacją danych (n8n), ale to dane od dostawców narzędzi, a nie niezależne."
+  },
+  {
+   "question": "a) Jak często użytkownicy klikają linki w odpowiedziach AI (Google AI summaries)?",
+   "claim_pl": "Badanie Pew z 07.2025 (cytowane wtórnie): przy podsumowaniu AI użytkownik kliknął jakikolwiek link w 8% wizyt, bez podsumowania w ok. 15%. Link wewnątrz samego podsumowania kliknęło ok. 1%. To dane dla Google AI Overviews, nie dla ChatGPT czy Perplexity.",
+   "evidence_type": "indirect",
+   "numbers": "8% vs ~15% CTR; ~1% klik w link w podsumowaniu",
+   "sources": [
+    {
+     "url": "https://www.pravinkumar.co/blog/do-people-click-through-google-ai-answers-webflow-2026",
+     "title": "Do People Still Click Through When Google Shows an AI Answer in 2026?",
+     "publisher": "pravinkumar.co"
+    },
+    {
+     "url": "https://www.dataslayer.ai/blog/google-ai-overviews-the-end-of-traditional-ctr-and-how-to-adapt-in-2025",
+     "title": "AI Overviews Killed CTR 61%: 9 Strategies to Show Up (2026)",
+     "publisher": "Dataslayer"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Samo cytowanie w odpowiedzi AI nie przekłada się automatycznie na wizytę. Model, w którym serwis żyje z nowych użytkowników przychodzących przez odpowiedzi AI, musi zakładać bardzo niski współczynnik kliknięć. Kliknąć warto tylko wtedy, gdy narzędzie daje coś, czego odpowiedź nie zawiera (hipoteza)."
+  },
+  {
+   "question": "a) Jakie typy stron są cytowane i klikane z odpowiedzi AI? Czy kalkulatory wyróżniają się?",
+   "claim_pl": "Nie znaleziono badania mierzącego kliknięcia z ChatGPT według typu strony docelowej ani wyodrębniającego kalkulatory. Badania dotyczą cytowań, nie kliknięć. W B2B SaaS 66,9% cytowań przypada na poradniki, listicle i porównania (Delta V). Inne badanie: żaden typ strony nie dominuje we wszystkich branżach. Insidea (2 667 odpowiedzi, 09–10.2026): tylko 29 z 623 domen pojawia się w co najmniej 5% odpowiedzi. Teza, że „narzędzie daje powód do kliknięcia”, to opinia praktyka, nie pomiar.",
+   "evidence_type": "indirect",
+   "numbers": "66,9% cytowań = guides/listicles/comparisons (B2B SaaS); 29/623 domen w ≥5% odpowiedzi",
+   "sources": [
+    {
+     "url": "https://www.deltavdigital.com/resources/reports/ai-citation-study/",
+     "title": "AI search citations study: what 25,000+ citations reveal",
+     "publisher": "Delta V Digital"
+    },
+    {
+     "url": "https://bevisibleiq.com/what-page-types-get-cited-in-ai-answers/",
+     "title": "What Page Types Actually Get Cited in AI Answers",
+     "publisher": "BeVisibleIQ"
+    },
+    {
+     "url": "https://insidea.com/blog/seo/aeo/what-ai-answers-cite-study",
+     "title": "Which Pages Do AI Answers Cite? Data From 2,667 Answers",
+     "publisher": "INSIDEA"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Założenie, że asystenci AI chętnie linkują do symulatorów, jest na razie niezweryfikowane. Prawdopodobnie częściej cytują treści tekstowe (porównania, poradniki). Symulator może potrzebować warstwy tekstowej z jawnymi wnioskami i założeniami, którą da się zacytować. Trzeba zrobić własny test kilkudziesięciu promptów decyzyjnych na każdej platformie."
+  },
+  {
+   "question": "a) Które domeny dominują w cytowaniach i referralach z ChatGPT?",
+   "claim_pl": "Similarweb (połowa 2025): ChatGPT generuje ponad 80% ruchu z asystentów AI do 1000 największych domen świata. W cytowaniach ChatGPT w USA (01–02.2026) prowadzą Wikipedia (13,15%) i Reddit (11,97%). W wynikach nie było danych dla calculator.net, omnicalculator ani NerdWallet. Ahrefs (07.2026, wzmianki) ma inną kolejność: Reddit #1, Forbes #3 (3,3%).",
+   "evidence_type": "indirect",
+   "numbers": ">80% referrali AI z ChatGPT; Wikipedia 13,15%, Reddit 11,97% cytowań",
+   "sources": [
+    {
+     "url": "https://aisearch.similarweb.com/blog/ai-referral-traffic-by-industry/",
+     "title": "AI Referral Traffic by Industry: 2026 Data",
+     "publisher": "Similarweb"
+    },
+    {
+     "url": "https://www.similarweb.com/blog/marketing/geo/most-cited-domains-llms/",
+     "title": "The Most Cited Domains by LLMs",
+     "publisher": "Similarweb"
+    },
+    {
+     "url": "https://saasylinks.com/blog/most-cited-websites-chatgpt/",
+     "title": "Most Cited Websites in ChatGPT: 2026 Data From 7 Studies",
+     "publisher": "SaaSy Links"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ruch z AI to w praktyce ruch z ChatGPT. Cytowania koncentrują się na platformach UGC i encyklopedycznych. Strategia dystrybucji przez asystentów musi zakładać, że głównym kanałem jest ChatGPT. Brak danych dla serwisów kalkulatorowych to luka do zbadania płatnym narzędziem (Similarweb/Ahrefs)."
+  },
+  {
+   "question": "c) Czy AI Overviews pojawiają się przy zapytaniach typu kalkulator/decyzja?",
+   "claim_pl": "Nie znaleziono badania, które wyodrębnia zapytania kalkulatorowe. Dane pośrednie (Ahrefs, wtórnie): AIO pojawia się przy 57,9% zapytań w formie pytania i przy 15,5% pozostałych (baza 20,5%). Pojedyncze słowo: 9,5%, siedem i więcej słów: 46,4%. Zapytania transakcyjne: ok. 16% albo poniżej 1%, zależnie od źródła. BrightEdge podaje bazę ok. 48% śledzonych zapytań w USA.",
+   "evidence_type": "indirect",
+   "numbers": "pytania 57,9% vs 15,5%; 1 słowo 9,5% vs 7+ słów 46,4%; transakcyjne ~16% lub <1%",
+   "sources": [
+    {
+     "url": "https://neilpatel.com/marketing-stats/ai-overview-trigger-rates-by-query-length/",
+     "title": "AI Overview Trigger Rates by Query Length Across 5 Industries",
+     "publisher": "Neil Patel"
+    },
+    {
+     "url": "https://dev.to/juanauriti/google-ai-overviews-appear-in-137-of-searches-for-question-queries-its-647-heres-what-349g",
+     "title": "Google AI Overviews appear in 13.7% of searches. For question queries it's 64.7%.",
+     "publisher": "DEV Community"
+    },
+    {
+     "url": "https://presenc.ai/research/ai-overviews-query-trigger-types-2026",
+     "title": "Google AI Overviews Query Trigger Types 2026: Informational 36-39%, Commercial 22%, Transactional 16%",
+     "publisher": "Presenc AI"
+    },
+    {
+     "url": "https://www.aeo-rankings.com/blog/ai-overview-trigger-rate-statistics-which-queries-industries-and/",
+     "title": "AI Overview Trigger Rate Statistics (2026 Data)",
+     "publisher": "AEO Rankings"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Długie pytania decyzyjne („should I replace my roof and install solar together…”) należą do grupy z najwyższym odsetkiem AIO. To właśnie ruch docelowy serwisu, więc odpowiedź AI będzie go przechwytywać w Google. Krótkie frazy kalkulatorowe są mniej narażone, ale to obszar prostych kalkulatorów, który właściciel wyklucza."
+  },
+  {
+   "question": "c) Czy AI Mode w Google ma interaktywne wykresy i kalkulatory (poza akcjami)?",
+   "claim_pl": "Od 06.2025 AI Mode tworzy interaktywne wykresy dla pytań o akcje i fundusze. Na start dotyczyło to użytkowników Labs w USA, z zapowiedzią rozszerzenia np. na sport. Nie znaleziono dowodu na natywny widżet hipoteczny lub kredytowy w AI Mode w 2026. Poradnik SEO dla branży hipotecznej (2026) opisuje tylko, że AI Mode daje wyjaśnienia trendów stóp, podsumowania kwalifikowalności i porównania typów kredytów.",
+   "evidence_type": "direct",
+   "numbers": "start 06.2025, Labs US",
+   "sources": [
+    {
+     "url": "https://www.androidheadlines.com/2025/06/google-searchs-ai-mode-interactive-charts-for-finances.html",
+     "title": "Google Search's AI Mode Just Got Interactive Charts for Finances",
+     "publisher": "Android Headlines",
+     "published": "2025-06"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-ai-mode-adds-charting-39545.html",
+     "title": "Google AI Mode Adds Charting & Data Visualizations",
+     "publisher": "Search Engine Roundtable"
+    },
+    {
+     "url": "https://www.ranktracker.com/blog/google-ai-mode-for-mortgage-and-loan-sites/",
+     "title": "Google AI Mode for Mortgage & Loan Sites: SEO Strategy for 2026",
+     "publisher": "Ranktracker"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Stały widżet hipoteczny w AI Mode jest niezweryfikowany, nie „nieobecny”. Ważniejszy jest generatywny UI z Gemini 3 (następne ustalenie), który nie potrzebuje gotowych widżetów."
+  },
+  {
+   "question": "c) Czy AI Mode / Gemini generuje własne narzędzia i symulacje w odpowiedzi?",
+   "claim_pl": "Google ogłosił 18.11.2025, że Gemini 3 w AI Mode buduje w locie interaktywne narzędzia i symulacje z układem dopasowanym do zapytania. Przykład z ogłoszenia: własny kalkulator kredytu z suwakami parametrów. Na start funkcja była dostępna dla subskrybentów Google AI Pro i Ultra w USA po wybraniu „Thinking”. Aplikacja Gemini dostała eksperymenty „dynamic view” (w pełni zakodowana interaktywna odpowiedź) i „visual layout”. Status w 10.2026 (darmowi użytkownicy, zasięg) jest niezweryfikowany.",
+   "evidence_type": "direct",
+   "numbers": "ogłoszenie 2025-11-18; dostęp: AI Pro/Ultra, USA",
+   "sources": [
+    {
+     "url": "https://blog.google/products-and-platforms/products/search/gemini-3-search-ai-mode/",
+     "title": "Google brings Gemini 3 AI model to Search and AI Mode",
+     "publisher": "Google",
+     "published": "2025-11-18"
+    },
+    {
+     "url": "https://9to5google.com/2025/11/18/gemini-3-launch/",
+     "title": "Google launches Gemini 3 with SOTA reasoning, generative UI responses",
+     "publisher": "9to5Google",
+     "published": "2025-11-18"
+    },
+    {
+     "url": "https://ppc.land/google-launches-gemini-3-with-generative-ui-for-dynamic-search-experiences/",
+     "title": "Google launches Gemini 3 with generative UI for dynamic search experiences",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://9to5google.com/2025/11/25/gemini-generative-uis-apps/",
+     "title": "Gemini's generative UIs are the future of 'there's an app for that'",
+     "publisher": "9to5Google",
+     "published": "2025-11-25"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "To najpoważniejszy SUBSTYTUT dla serwisu z symulatorami. Wyszukiwarka sama generuje dopasowany kalkulator lub symulację w miejscu, z którego miał przychodzić ruch. Jeśli funkcja trafi do darmowych użytkowników, przewagą serwisu mogą zostać tylko zweryfikowane dane wejściowe (lokalne stawki, ulgi, koszty), jawne i stabilne założenia oraz audytowalna metodologia. Elastyczności interfejsu LLM już nie przebije. Ryzyko kanibalizacji jest wysokie (hipoteza co do skali)."
+  },
+  {
+   "question": "b) Co potrafi ChatGPT agent w zakresie budowy modeli scenariuszowych?",
+   "claim_pl": "OpenAI ogłosił ChatGPT agent 17.07.2025. Agent używa „własnego komputera” do zadań wieloetapowych: nawiguje po stronach, uruchamia kod, analizuje dane i tworzy edytowalne arkusze oraz prezentacje. Korzysta z przeglądarki wizualnej i tekstowej, code interpretera, terminala i konektorów (Gmail, Drive, GitHub). Wdrażano go etapami: Pro, Plus, Team. Strona OpenAI ma dziś adnotację, że post jest nieaktualny. Wczesne testy ZDNet (wg InfoQ): tylko 1 z 8 zadań wieloetapowych wykonane bez halucynacji.",
+   "evidence_type": "direct",
+   "numbers": "premiera 2025-07-17; 1/8 zadań bez halucynacji (ZDNet via InfoQ)",
+   "sources": [
+    {
+     "url": "https://openai.com/index/introducing-chatgpt-agent/",
+     "title": "Introducing ChatGPT agent",
+     "publisher": "OpenAI",
+     "published": "2025-07-17"
+    },
+    {
+     "url": "https://infoq.com/news/2025/07/openai-chatgpt-agents",
+     "title": "OpenAI ChatGPT agents",
+     "publisher": "InfoQ",
+     "published": "2025-07"
+    },
+    {
+     "url": "https://gigazine.net/gsc_news/en/20250718-chatgpt-agent-released",
+     "title": "OpenAI releases ChatGPT agent, which can execute complex tasks in multiple steps using browsers and APIs",
+     "publisher": "Gigazine",
+     "published": "2025-07-18"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Zaawansowany użytkownik może w ChatGPT zbudować własny arkusz scenariuszowy. Wymaga to jednak płatnego planu, kilku minut pracy i kontroli błędów. Dla masowego użytkownika z jednym pytaniem to SUBSTYTUT o wysokim koszcie wejścia, więc gotowy, sprawdzony symulator wciąż ma sens. Ta przewaga maleje z każdą generacją modeli (hipoteza)."
+  },
+  {
+   "question": "b) Perplexity Labs: czy buduje dashboardy i aplikacje scenariuszowe?",
+   "claim_pl": "Perplexity Labs (05.2025, plan Pro) tworzy raporty, arkusze, dashboardy i proste interaktywne web appy w zakładce „App”. Według Perplexity wykonuje ponad 10 minut samodzielnej pracy: przeglądanie sieci, wykonywanie kodu, tworzenie wykresów. Pliki trafiają do zakładki „Assets”. Canvas w ChatGPT i Gemini, pamięć ChatGPT oraz Copilot nie zostały zweryfikowane w tym top-upie.",
+   "evidence_type": "direct",
+   "numbers": "≥10 min pracy autonomicznej; plan Pro",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/2025/05/29/perplexitys-new-tool-can-generate-spreadsheets-dashboards-and-more/",
+     "title": "Perplexity's new tool can generate spreadsheets, dashboards, and more",
+     "publisher": "TechCrunch",
+     "published": "2025-05-29"
+    },
+    {
+     "url": "https://www.neowin.net/news/perplexity-labs-allows-users-to-create-dashboards-and-simple-web-apps-with-text-prompts/",
+     "title": "Perplexity Labs allows users to create dashboards and simple web apps with text prompts",
+     "publisher": "Neowin"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Kolejny dowód, że generowanie jednorazowych narzędzi decyzyjnych na żądanie staje się standardem asystentów. Na razie jest za paywallem. Serwis musi oferować coś, czego Labs nie daje od ręki: szybkość (sekundy zamiast 10 minut), brak logowania, sprawdzone dane i porównywalność wariantów."
+  },
+  {
+   "question": "d) Polityka OpenAI wobec porad finansowych, podatkowych i ubezpieczeniowych (2025–2026)",
+   "claim_pl": "Zasady użytkowania OpenAI obowiązują od 29.10.2025 i są wspólne dla wszystkich produktów. Według kancelarii KJK (12.2025) wprowadzają wyraźny zakaz udzielania „tailored advice that requires a license, such as legal or medical advice, without appropriate involvement by a licensed professional”. Ogólne wyjaśnienia zasad finansowych pozostają dozwolone. Na oficjalnej stronie obszary finansowe i kredytowe, ubezpieczenia, mieszkalnictwo i zatrudnienie figurują jako obszary wysokiej stawki. Dokładnego brzmienia klauzuli w oficjalnym snippecie nie widziałem.",
+   "evidence_type": "direct",
+   "numbers": "data wejścia w życie: 2025-10-29",
+   "sources": [
+    {
+     "url": "https://openai.com/policies/usage-policies/",
+     "title": "Usage policies",
+     "publisher": "OpenAI",
+     "published": "2025-10-29"
+    },
+    {
+     "url": "https://kjk.com/2025/12/18/openai-bans-personalized-professional-advice/",
+     "title": "OpenAI bans personalized professional advice",
+     "publisher": "KJK",
+     "published": "2025-12-18"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Polityka może popychać ChatGPT do ogólnych odpowiedzi i odsyłania do narzędzi lub ekspertów przy spersonalizowanych decyzjach finansowych. To potencjalna szansa na odesłanie do symulatora (hipoteza, nie ma dowodu, że ChatGPT faktycznie tak robi). Ta sama polityka dotyczy aplikacji na OpenAI API, więc symulator oparty na LLM powinien liczyć deterministycznie i podawać informację ogólną, a nie poradę."
+  },
+  {
+   "question": "d) Polityka Anthropic wobec zastosowań wysokiego ryzyka (finanse) 2025–2026",
+   "claim_pl": "Usage Policy Anthropic ma sekcję High-Risk Use Case Requirements. Gdy Claude może wpływać na zdrowie, prawa, finanse lub źródło utrzymania konsumenta, potrzebny jest kwalifikowany „human in the loop”, który może zmienić rekomendację, a osoba, której to dotyczy, musi wiedzieć, że użyto AI. Wymóg dotyczy zastosowań konsumenckich, nie B2B. Aktualizację z 2026 opublikowano 08.10.2026 (wg Unite.ai), obowiązuje od 12.11.2026. Wymogi się nie zmieniły, doprecyzowano tylko, które rekomendacje obejmują.",
+   "evidence_type": "direct",
+   "numbers": "publikacja 2026-10-08; wejście w życie 2026-11-12",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/aup",
+     "title": "Usage Policy",
+     "publisher": "Anthropic"
+    },
+    {
+     "url": "https://anthropic.com/news/2026-usage-policy-update",
+     "title": "2026 usage policy update",
+     "publisher": "Anthropic",
+     "published": "2026-10"
+    },
+    {
+     "url": "https://www.unite.ai/?p=482561",
+     "title": "AI Models & Platforms (Anthropic usage policy update)",
+     "publisher": "Unite.AI"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Właściciel używa Claude Code do budowy, co nie jest zastosowaniem konsumenckim. Gdyby jednak serwis generował spersonalizowane rekomendacje finansowe przez API Claude w czasie rzeczywistym, mógłby podlegać tym wymogom (interpretacja: hipoteza). Bezpieczniejszy wzorzec: LLM tylko w produkcji treści i kodu offline, a w runtime deterministyczne modele z jawnymi założeniami."
+  },
+  {
+   "question": "e) ChatGPT Apps SDK / katalog aplikacji: start, kwalifikowalność, monetyzacja",
+   "claim_pl": "OpenAI ogłosił 17.12.2025 przyjmowanie zgłoszeń aplikacji przez Developer Platform. Zgłoszenie wymaga danych o połączeniu MCP, wytycznych testowych, metadanych i krajów dostępności. Aplikacje trafiają do katalogu dostępnego dla ok. 800 mln WAU. Lepsze aplikacje „mogą” być wyróżniane lub polecane przez ChatGPT w przyszłości. Monetyzacja: przekierowanie do zewnętrznej strony w celu zakupu towarów fizycznych, a dobra cyfrowe są dopiero rozważane. Wątek na forum deweloperów: aplikacje z monetyzacją produktów i usług cyfrowych nie przechodzą weryfikacji. W wynikach nie było mowy o reklamach w aplikacjach.",
+   "evidence_type": "direct",
+   "numbers": "2025-12-17; ~800 mln WAU (dane OpenAI)",
+   "sources": [
+    {
+     "url": "https://openai.com/index/developers-can-now-submit-apps-to-chatgpt/",
+     "title": "Developers can now submit apps to ChatGPT",
+     "publisher": "OpenAI",
+     "published": "2025-12-17"
+    },
+    {
+     "url": "https://community.openai.com/t/chatgpt-app-monetization-apps-sdk/1372343",
+     "title": "ChatGPT App Monetization (Apps SDK) - OpenAI Developer Community",
+     "publisher": "OpenAI Developer Community"
+    },
+    {
+     "url": "https://yourstory.com/ai-story/openai-chatgpt-app-submissions",
+     "title": "ChatGPT gets in-chat app directory, invites developer submissions",
+     "publisher": "YourStory"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Aplikacja w ChatGPT nie daje modelu reklamowego (AdSense), więc nie może być bazą przychodów. Może najwyżej służyć dystrybucji z linkiem do serwisu. Formalnie mały wydawca może zgłosić aplikację. Szczegóły weryfikacji (np. tożsamość dewelopera) są niezweryfikowane."
+  },
+  {
+   "question": "e) Aktualizacje 2026 dla ChatGPT Apps: dobra cyfrowe, Instant Checkout, katalog",
+   "claim_pl": "Źródła zewnętrzne z 2026 podają, że dobra cyfrowe i subskrypcje wciąż nie są ogólnie dostępną ścieżką monetyzacji. Instant Checkout jest opisywany raz jako zamknięta beta dla wybranych partnerów z towarami fizycznymi, raz jako dostępny dla użytkowników Free, Plus i Pro w USA z prowizją 4%. Jedno źródło twierdzi, że 09.07.2026 katalog aplikacji połączono z Codex we wspólny „Plugin Directory” (wymaga potwierdzenia). Nie znaleziono publicznych danych o zarobkach deweloperów.",
+   "evidence_type": "indirect",
+   "numbers": "prowizja Instant Checkout 4% (jedno źródło); 2026-07-09 migracja katalogu (jedno źródło)",
+   "sources": [
+    {
+     "url": "https://phiture.com/asostack/chat-gpt-app-directory/",
+     "title": "ChatGPT App Directory: How to Integrate Your App & Get Discovered in 2026",
+     "publisher": "Phiture"
+    },
+    {
+     "url": "https://www.ekamoira.com/blog/chatgpt-instant-checkout-agentic-commerce-protocol-2026",
+     "title": "ChatGPT Instant Checkout: ACP Protocol Retailer Guide (2026)",
+     "publisher": "Ekamoira"
+    },
+    {
+     "url": "https://dev.to/lusivision/chatgpt-apps-for-business-should-you-build-one-in-2026-388n",
+     "title": "ChatGPT Apps for Business: Should You Build One in 2026?",
+     "publisher": "DEV Community"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Ekosystem aplikacji w ChatGPT nadal jest ukierunkowany na handel i duże marki. Dla wydawcy symulatorów z modelem reklamowym nie widać ścieżki przychodu wewnątrz ChatGPT."
+  },
+  {
+   "question": "e) Czy istnieją dane o ruchu lub użyciu aplikacji w ChatGPT?",
+   "claim_pl": "Nie znaleziono oficjalnych ani zewnętrznych danych o liczbie opublikowanych aplikacji, ich użyciu czy zaangażowaniu użytkowników. Są tylko dane o całej platformie: 900 mln WAU w 02.2026 (dane OpenAI, nieaudytowane) i ok. 1 mld MAU aplikacji mobilnej w 05.2026 (Sensor Tower według Reutersa, cytowane wtórnie). Liczby z GPT Store (np. 159 tys.) dotyczą custom GPTs, nie aplikacji z Apps SDK.",
+   "evidence_type": "indirect",
+   "numbers": "900 mln WAU (02.2026, OpenAI); ~1 mld MAU app (05.2026, Sensor Tower)",
+   "sources": [
+    {
+     "url": "https://seoprofy.com/blog/chatgpt-statistics/",
+     "title": "ChatGPT Usage Statistics (September 2026)",
+     "publisher": "SEOProfy"
+    },
+    {
+     "url": "https://www.getpanto.ai/blog/chatgpt-statistics",
+     "title": "ChatGPT Statistics 2026: Users, Revenue & Growth",
+     "publisher": "Panto AI"
+    },
+    {
+     "url": "https://bosio.digital/articles/new-app-store-moment-chatgpt-apps",
+     "title": "ChatGPT Apps: 2026's Biggest Distribution Opportunity Explained",
+     "publisher": "Bosio Digital"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Zasięg platformy to nie popyt na aplikacje. Nie wolno szacować ruchu aplikacji z liczby WAU ChatGPT. Wartość dystrybucyjna aplikacji jest nieznana."
+  },
+  {
+   "question": "f) Ilu Amerykanów nie chce podawać danych finansowych chatbotom AI?",
+   "claim_pl": "Qlik (03.2026, sezon podatkowy): 40% Amerykanów deklaruje, że nigdy nie wpisze danych osobowych ani finansowych do narzędzia AI. Pew (badanie z 02.2026): 54% osób niekorzystających z chatbotów podaje obawy o wykorzystanie danych osobowych jako główny powód, a 79% jako główny lub poboczny. 71% uważa, że AI zmniejszy bezpieczeństwo ich danych, 3% że je poprawi. 28% ufa firmom AI w kwestii danych (liczba z artykułu omawiającego badanie, nie potwierdzona bezpośrednio u Pew).",
+   "evidence_type": "direct",
+   "numbers": "40% 'never'; 54% (główny powód wśród niekorzystających); 79%; 71% vs 3%; 28% zaufania",
+   "sources": [
+    {
+     "url": "https://secure.businesswire.com/news/home/20260311654368/en/Qlik-Survey-Mid-Career-Americans-Emerge-as-AI-Power-Users-During-the-2026-Tax-Season",
+     "title": "Qlik Survey: Mid-Career Americans Emerge as AI Power Users During the 2026 Tax Season",
+     "publisher": "Business Wire / Qlik",
+     "published": "2026-03-11"
+    },
+    {
+     "url": "https://www.pewresearch.org/short-reads/2026/10/09/why-dont-some-people-use-chatbots/",
+     "title": "Why Don't Some People Use Chatbots?",
+     "publisher": "Pew Research Center",
+     "published": "2026-10-09"
+    },
+    {
+     "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
+     "title": "Americans' Views on AI Chatbots, Smart Devices and AI's Impact",
+     "publisher": "Pew Research Center",
+     "published": "2026-06-17"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Istnieje grupa użytkowników niechętnych wpisywaniu finansów do czatu. Symulator liczący lokalnie w przeglądarce, bez logowania i z komunikatem „nie zapisujemy danych”, może mieć tu przewagę nad asystentem (hipoteza). Deklaracja nie oznacza jednak, że ci ludzie będą szukać zewnętrznego narzędzia."
+  },
+  {
+   "question": "f) Jak naprawdę zachowują się użytkownicy przy finansach w chatbotach?",
+   "claim_pl": "NerdWallet: 77% Amerykanów, którzy pytali chatbota AI o finanse osobiste, podało mu jakieś dane osobowe. 9% podało numer SSN, 10% numery kont. TD (2025): tylko 18% zaufałoby AI w samodzielnym wydawaniu rekomendacji finansowych, większość chce, żeby decyzje finansowe podejmowali ludzie.",
+   "evidence_type": "direct",
+   "numbers": "77% podało dane; 9% SSN; 10% numery kont; 18% ufa AI w samodzielnych rekomendacjach",
+   "sources": [
+    {
+     "url": "https://www.nerdwallet.com/finance/studies/using-ai-for-personal-finances",
+     "title": "Data: Americans Are Using Chatbots for Financial Advice. Risky or Rewarding?",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://stories.td.com/us/en/article/nearly-80-of-americans-use-ai-tools-but-most-still-want-humans-making-financial-decisions-td-survey-finds",
+     "title": "Nearly 80% of Americans use AI Tools but Most Still Want Humans Making Financial Decisions, TD Survey Finds",
+     "publisher": "TD Bank",
+     "published": "2025"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Obawy o prywatność słabo hamują faktyczne korzystanie: kto używa chatbota do finansów, ten zwykle podaje dane. Argument prywatności jest więc słabym wyróżnikiem. Lepszym może być zaufanie do wyniku (jawne założenia, wrażliwość), bo tylko mniejszość ufa samodzielnym rekomendacjom AI."
+  },
+  {
+   "question": "g) Jaki udział w użyciu ChatGPT mają porady i zadania decyzyjne?",
+   "claim_pl": "OpenAI i NBER (09.2025; 1,5 mln rozmów, plany konsumenckie): ok. 75–80% użycia to praktyczne porady, wyszukiwanie informacji i pisanie (75%, 78% lub 80%, zależnie od źródła). Prawie połowa wiadomości to „Asking”, czyli prośby o radę lub informację, ok. 40% to „Doing”, ok. 11% to „Expressing”. W pracy pisanie stanowi 40% wiadomości (06.2025), programowanie 4,2%. Nie znaleziono osobnego udziału decyzji finansowych ani matematyki.",
+   "evidence_type": "direct",
+   "numbers": "1,5 mln rozmów; ~49% Asking; ~40% Doing; ~11% Expressing; 75–80% trzy główne kategorie",
+   "sources": [
+    {
+     "url": "https://openai.com/index/how-people-are-using-chatgpt/",
+     "title": "How people are using ChatGPT",
+     "publisher": "OpenAI",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-reveals-biggest-ever-study-of-how-people-are-using-chatgpt-here-are-3-things-weve-learned",
+     "title": "OpenAI reveals biggest-ever study of how people are using ChatGPT",
+     "publisher": "TechRadar"
+    },
+    {
+     "url": "https://gizmodo.com/openai-how-people-use-chatgpt-2000658906",
+     "title": "OpenAI: how people use ChatGPT",
+     "publisher": "Gizmodo"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Proszenie o radę to główny tryb użycia ChatGPT, więc pytania decyzyjne z założenia trafiają do asystenta, nie do wyszukiwarki. To potwierdza, że kanał AI ma znaczenie. Oznacza to też, że asystent jest pierwszym i często ostatnim przystankiem. Nie wynika z tego wolumen promptów dla konkretnych decyzji."
+  },
+  {
+   "question": "g) Anthropic Economic Index: udział zadań finansowych i biznesowych",
+   "claim_pl": "Raport z 09.2025: udział zadań Business and Financial Operations w danych Claude.ai spadł z 6% do 3%. Według zewnętrznego podsumowania raportu „Cadences” (06.2026), niepotwierdzonego bezpośrednio u Anthropic: użycie prywatne to ok. 35% w dni robocze i ok. 50% w weekendy, a zapytania podatkowe przed 15 kwietnia rosły 8-krotnie. Nie znaleziono aktualnego udziału finansów osobistych.",
+   "evidence_type": "indirect",
+   "numbers": "Business & Financial Ops 6% → 3% (09.2025); podatki 8× przed 15.04 (niezweryfikowane)",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+     "title": "Economic Index: Uneven AI adoption",
+     "publisher": "Anthropic",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+     "title": "Anthropic Economic Index report: Cadences",
+     "publisher": "Anthropic",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://explainx.ai/blog/anthropic-economic-index-cadences-june-2026",
+     "title": "Anthropic Economic Index June 2026: Cadences Explained",
+     "publisher": "ExplainX"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Zadania finansowe to w Claude.ai mały i w 2025 malejący odsetek. Popyt jest wyraźnie sezonowy (podatki), co przy symulatorach podatkowych oznacza skoki ruchu i przychodu w sezonie (hipoteza). Danych Claude.ai nie wolno przenosić na ChatGPT."
+  }
+ ],
+ "contradictions_pl": [
+  "Bazowy odsetek AI Overviews: BrightEdge podaje ok. 48% śledzonych zapytań w USA, a panel Ahrefs 20,5%. Różnica wynika z innego koszyka słów kluczowych, więc liczb nie da się porównać wprost.",
+  "AIO przy zapytaniach transakcyjnych: jedno źródło podaje ok. 16%, inne poniżej 1%.",
+  "Instant Checkout w ChatGPT: jedno źródło opisuje zamkniętą betę dla wybranych partnerów, inne funkcję dostępną dla użytkowników Free, Plus i Pro w USA z prowizją 4%.",
+  "Prywatność: 40% deklaruje, że nigdy nie poda danych finansowych AI (Qlik), a 77% użytkowników chatbotów finansowych już podało dane osobowe (NerdWallet). Deklaracje przeczą zachowaniu.",
+  "Rankingi najczęściej cytowanych domen zależą od metody: u Similarweb prowadzą Wikipedia i Reddit, u Ahrefs Reddit, a Forbes jest #3.",
+  "Udział trzech głównych kategorii użycia ChatGPT: 75% (TechRadar), 78% (Originality.ai), ok. 80% (Gizmodo) z tego samego badania.",
+  "Strona OpenAI o ChatGPT agent jest oznaczona jako nieaktualna, więc obecne możliwości mogą się różnić od opisu z 07.2025."
+ ],
+ "open_questions_pl": [
+  "Czy ChatGPT, Perplexity, AI Mode i Copilot linkują w odpowiedziach na pytania decyzyjne do stron-kalkulatorów, czy tylko do artykułów? Potrzebny własny, logowany test 30–50 promptów (np. 'Should I install solar now or wait until I replace my roof?') na każdej platformie.",
+  "Brak danych o CTR z ChatGPT i Perplexity według typu strony docelowej, w tym narzędzi interaktywnych.",
+  "Czy generatywny UI Gemini 3 (kalkulatory i symulacje w AI Mode) jest w 10.2026 dostępny dla darmowych użytkowników w USA i jak często się uruchamia przy pytaniach finansowych lub domowych?",
+  "Czy Google Search ma w 2026 natywne widżety kalkulatora hipotecznego lub kredytowego? Nie potwierdzono.",
+  "Niezweryfikowane w tym top-upie (wyczerpany limit wyszukiwań): ChatGPT Canvas, data analysis i pamięć w 2026, Gemini Canvas, możliwości Microsoft Copilot.",
+  "Polityki Google (Gemini, Generative AI Prohibited Use Policy) wobec porad finansowych, podatkowych i ubezpieczeniowych nie zostały sprawdzone.",
+  "Kwalifikowalność małych wydawców do katalogu aplikacji ChatGPT (weryfikacja dewelopera, kraje), zasady dotyczące reklam w aplikacjach, potwierdzenie migracji do 'Plugin Directory' (09.07.2026).",
+  "Brak jakichkolwiek danych o ruchu lub użyciu aplikacji z Apps SDK.",
+  "Dokładny udział finansów osobistych i zadań decyzyjnych w Anthropic Economic Index 2026 (dane na Hugging Face) i w danych OpenAI.",
+  "Czy klauzula OpenAI o 'tailored advice that requires a license' faktycznie sprawia, że ChatGPT odsyła do narzędzi lub ekspertów przy spersonalizowanych pytaniach finansowych? To wymaga testu zachowania modelu."
+ ],
+ "queries_run": [
+  "ChatGPT Perplexity citations analysis calculator tool pages NerdWallet Bankrate Omni Calculator AI search 2025 (extended)",
+  "which page types get clicked from AI answers study ChatGPT referral traffic landing pages tools calculators 2026 (extended)",
+  "OpenAI announces ChatGPT agent mode apps in ChatGPT Apps SDK app directory submissions monetization developers (extended)",
+  "Google AI Mode interactive charts graphs calculator mortgage loan comparison 2026 Search (extended)",
+  "Gemini 3 AI Mode generative UI interactive tools simulations custom calculator dynamic view announcement (extended)",
+  "OpenAI usage policies update tailored advice licensed professional financial legal medical 2025 ChatGPT (standard)",
+  "Anthropic usage policy high-risk use cases financial guidance human-in-the-loop disclosure consumer-facing (standard)",
+  "Perplexity Labs launch spreadsheets dashboards simple web apps; ChatGPT agent spreadsheet; Copilot financial scenario (standard)",
+  "survey Americans unwilling share financial information AI chatbot privacy percent 2025 2026 (extended)",
+  "\"How people use ChatGPT\" OpenAI NBER study practical guidance seeking information share of messages math tutoring decision making (standard)",
+  "Anthropic Economic Index report 2026 share of conversations business financial operations personal finance tasks Claude.ai (extended)",
+  "ChatGPT apps usage data 2026 third-party apps adoption users few apps traction Apps SDK developers report (extended)",
+  "OpenAI introducing ChatGPT agent editable spreadsheets slideshows code interpreter connectors July 2025 (standard)",
+  "AI Overviews trigger rate calculator queries \"calculator\" keywords study Ahrefs Semrush tool intent (extended)",
+  "ChatGPT apps monetization 2026 digital goods Instant Checkout developers earn revenue apps directory update (extended)",
+  "Similarweb ChatGPT referrals top referred domains calculator.net omnicalculator nerdwallet AI referral traffic finance sites 2026 (extended)"
+ ]
+}

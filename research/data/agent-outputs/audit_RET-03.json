@@ -1,0 +1,451 @@
+{
+ "id": "RET-03",
+ "competitors": [
+  {
+   "name": "RothHelper - Roth Conversion Calculator (IRMAA, ACA, SS Torpedo)",
+   "url": "https://rothhelper.com/",
+   "type": "direct",
+   "access": "Darmowy lub freemium - model dostępu niezweryfikowany; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Wg search-summary: modeluje PTC z ACA (z flagą klifu 400% FPL), IRMAA i opodatkowanie Social Security w 5 strategiach. Optymalizator szuka wieloletniego harmonogramu rocznych konwersji, który maksymalizuje majątek po podatku na końcu planu. Na liście funkcji jest HSA. To pokrywa rdzeń decyzji: ile konwertować rocznie wobec podatku i utraconej PTC, w wielu okresach.",
+   "misses_or_unverified_pl": "Porównanie poziomów planu (bronze/silver/gold), CSR przy 200-250% FPL i sposób modelowania wpłat HSA obniżających MAGI: niezweryfikowane (summary mówi, że wyniki nie pokazują, jak HSA jest modelowane). Paywall i login: niezweryfikowane. Dopłaty stanowe i składka benchmarkowa wg ZIP: niezweryfikowane."
+  },
+  {
+   "name": "QuantCalc ACA Bridge Optimizer (+ Roth Conversion Optimizer, stanowe strony 'Retirement Tax Calculator 2026 - Roth Conversion + ACA Cliff')",
+   "url": "https://quantcalc.app/aca-bridge-optimizer/",
+   "type": "direct",
+   "access": "Freemium: wersja darmowa wymiaruje każdy rok osobno; pełna tabela rok po roku, progi podatkowe/IRMAA i porównanie ze strategią '12% bracket' są w płatnym plannerze (wg search-summary). Strona nieotwierana (WebFetch zablokowany).",
+   "covers_pl": "Wg search-summary: plan konwersji Roth i kolejności wypłat rok po roku dla wcześniejszych emerytów, z każdym rokiem poniżej wybranego pułapu FPL (most do Medicare). Osobny Roth Conversion Optimizer pokazuje podatek, IRMAA i ACA dla każdego dolara konwersji (federal + state). Do tego programowe strony stanowe (np. Georgia, Arkansas). Wspomina kohortę z chorobami przewlekłymi, dla której bronze + max OOP jest katastrofalny, więc poziom planu pojawia się przynajmniej jako założenie.",
+   "misses_or_unverified_pl": "Wieloletnia tabela jest za paywallem. Jawne porównanie bronze+HSA vs silver CSR vs gold i wpłaty HSA/IRA obniżające MAGI: nie pojawiły się w summary (niezweryfikowane). Przykład stanowy (Georgia) używał nieaktualnego progu $81,760, czyli FPL z 2024 - ryzyko jakości danych."
+  },
+  {
+   "name": "ACA Optimizer - ACA Subsidy & Roth Conversion Optimizer for Early Retirees",
+   "url": "https://acaoptimizer.com/",
+   "type": "partial",
+   "access": "Strona nieotwierana (WebFetch zablokowany), dowód: search-summary; model cenowy niezweryfikowany",
+   "covers_pl": "Wg tytułu z wyników: optymalizator dopłat ACA i konwersji Roth dla wcześniejszych emerytów. Search-summary z zapytania o oprogramowanie wspomina też darmowy, przeglądarkowy 'ACA Retirement Withdrawal Optimizer', który unika klifu i maksymalizuje ulgi zdrowotne (przypisanie do tej domeny niepewne).",
+   "misses_or_unverified_pl": "Horyzont wieloletni, poziomy planu, HSA i IRMAA: niezweryfikowane. Możliwe, że to konkurent bezpośredni, ale summary nie podaje szczegółów."
+  },
+  {
+   "name": "The Roth Ladder - ACA Subsidy Cliff Calculator (+ ladder tool)",
+   "url": "https://therothladder.com/tools/aca-subsidy-calculator",
+   "type": "partial",
+   "access": "Darmowy wg tytułu ('Free Roth Conversion Tool'); strona nieotwierana (WebFetch zablokowany)",
+   "covers_pl": "Wycenia koszt krańcowy następnego dolara konwersji, łącznie z utraconą PTC (krzywa efektywnej stawki krańcowej). Osobne narzędzie 'ladder' układa harmonogram wieloletni.",
+   "misses_or_unverified_pl": "Narzędzie roczne i wieloletnie są osobne; to, czy wyniki jednego wpływają na drugie, jest niezweryfikowane. Poziomy planu i HSA: niezweryfikowane."
+  },
+  {
+   "name": "CoastIQ - Roth conversion calculator",
+   "url": "https://coastiq.org/blog/post/roth-conversion-calculator",
+   "type": "partial",
+   "access": "Strona nieotwierana (WebFetch zablokowany), dowód: search-summary; paywall niezweryfikowany",
+   "covers_pl": "Wg search-summary: modeluje rok po roku progi podatkowe, ACA, IRMAA i opodatkowanie Social Security.",
+   "misses_or_unverified_pl": "Wybór poziomu planu, CSR i HSA: niezweryfikowane. Nie wiadomo, czy klif PTC jest liczony z benchmarkiem SLCSP."
+  },
+  {
+   "name": "ThunderHarbor - Roth Conversion Optimizer & Retirement Tax Planner",
+   "url": "https://thunderharbor.net/upgrade",
+   "type": "partial",
+   "access": "Płatny tier Premium (wg search-summary); strona nieotwierana (WebFetch zablokowany)",
+   "covers_pl": "Optymalizator konwersji Roth z modelowaniem dopłat ACA. Funkcja 'Roth Strategy' mówi, ile konwertować każdego roku bez wywołania IRMAA i bez przekroczenia klifu ACA.",
+   "misses_or_unverified_pl": "Za paywallem: szczegóły niezweryfikowane. Poziomy planu i HSA: niezweryfikowane."
+  },
+  {
+   "name": "Algorithmic FIRE - Roth Conversion & ACA Subsidy Calculator",
+   "url": "https://algorithmicfire.com/calculators/roth-conversion",
+   "type": "partial",
+   "access": "Strona nieotwierana (WebFetch zablokowany), dowód: tytuł w wynikach",
+   "covers_pl": "Łączy konwersję Roth z dopłatą ACA (wg tytułu).",
+   "misses_or_unverified_pl": "Horyzont wieloletni, poziomy planu, HSA i IRMAA: niezweryfikowane."
+  },
+  {
+   "name": "The Finance Buff - tax calculator for ACA/Obamacare subsidy (Roth conversion and capital gains)",
+   "url": "https://thefinancebuff.com/tax-calculator-aca-obamacare-subsidy.html",
+   "type": "partial",
+   "access": "Strona nieotwierana (WebFetch zablokowany); dowód: tytuł w wynikach",
+   "covers_pl": "Wpływ konwersji Roth i zysków kapitałowych na podatek i dopłatę ACA w jednym roku (wg tytułu).",
+   "misses_or_unverified_pl": "Plan wieloletni, poziomy planu i HSA: niezweryfikowane. Prawdopodobnie narzędzie jednoroczne (hipoteza)."
+  },
+  {
+   "name": "Jednoroczne kalkulatory klifu PTC 2026 (acacalc.com, TaxCliffs/acasubsidycliff.com i taxcliffs.co, coastretirement.com/aca-cliff, nationaltaxtools.com, acasubsidyguide.com, Teamz Lab, Evvy Tools, StateCalc)",
+   "url": "https://acacalc.com/",
+   "type": "partial",
+   "access": "Darmowe (wg summary); strony nieotwierane (WebFetch zablokowany)",
+   "covers_pl": "% FPL, szacowana PTC, koszt przekroczenia klifu 400% o 1 USD, składka po dopłacie. Evvy opiera się na Rev. Proc. 2025-25. TaxCliffs ma kalkulator 'bracket-fill' dla konwersji do progu podatkowego, IRMAA lub ACA.",
+   "misses_or_unverified_pl": "Pojedyncze, niepowiązane kalkulatory, więc nie są konkurentem bezpośrednim. Rozbieżne progi FPL między stronami ($62,160, $62,600, $63,840 dla singla). Brak planu wieloletniego i porównania poziomów planu (w summary nie wykazano)."
+  },
+  {
+   "name": "Boldin (dawniej NewRetirement) - Roth Conversion Explorer (PlannerPlus)",
+   "url": "https://incomelaboratory.com/best-roth-conversion-software/",
+   "type": "substitute",
+   "access": "Płatny tier PlannerPlus (wg summary z porównania vendora Income Lab); strona nieotwierana (WebFetch zablokowany)",
+   "covers_pl": "Roth Conversion Explorer w pełnym planie emerytalnym. Użytkownicy z Bogleheads opisują, że razem z arkuszem MMM Case Study Spreadsheet szukali w nim konwersji, które zachowują dopłaty.",
+   "misses_or_unverified_pl": "Natywne modelowanie PTC/klifu ACA i poziomów planu w Boldin: niezweryfikowane w tej rundzie (wcześniejszy URL robberger.com nie był ponownie sprawdzany)."
+  },
+  {
+   "name": "MaxiFi - Roth Conversion Optimizer",
+   "url": "https://www.maxifi.com/features/roth-conversion-optimizer",
+   "type": "substitute",
+   "access": "Płatny, tier Premium, ok. $109-149/rok (wg summary); strona nieotwierana",
+   "covers_pl": "Automatyczny optymalizator rocznych kwot konwersji, który maksymalizuje dożywotnie wydatki.",
+   "misses_or_unverified_pl": "Uwzględnianie klifu ACA, HSA i poziomów planu: niezweryfikowane."
+  },
+  {
+   "name": "Narzędzia doradcze: Income Lab, Holistiplan Premium",
+   "url": "https://incomelaboratory.com/roth-conversion-planning-software/",
+   "type": "substitute",
+   "access": "Oprogramowanie dla doradców, płatne; strony nieotwierane",
+   "covers_pl": "Wieloletnie projekcje konwersji Roth. Holistiplan działa na skanowaniu zeznań, Income Lab w pełnym planie emerytalnym.",
+   "misses_or_unverified_pl": "Modelowanie ACA i poziomów planu: niezweryfikowane. Nie są narzędziami konsumenckimi."
+  },
+  {
+   "name": "ProjectionLab / Pralana",
+   "url": "brak URL w wynikach tej rundy",
+   "type": "substitute",
+   "access": "Nie pojawiły się w wynikach (summary: 'nothing on ProjectionLab or Pralana'); wiedza modelu, niezweryfikowane",
+   "covers_pl": "Hipoteza (wiedza modelu): pełne planery emerytalne z modelowaniem podatków i potencjalnie ACA.",
+   "misses_or_unverified_pl": "Wszystkie funkcje związane z ACA/PTC, HSA i poziomami planu: niezweryfikowane."
+  },
+  {
+   "name": "Bogleheads (wątki ACA vs Roth) + Mr. Money Mustache Case Study Spreadsheet",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=329476",
+   "type": "substitute",
+   "access": "Forum publiczne; strona nieotwierana (WebFetch zablokowany)",
+   "covers_pl": "Ręczne porównania scenariuszy: maksimum dopłaty, wypełnienie do klifu, rezygnacja z dopłat i wypełnienie progu 24% (łączny koszt podatku i zdrowia). Arkusz MMM jest używany do szukania poziomu konwersji.",
+   "misses_or_unverified_pl": "Wymaga samodzielnego modelowania. Wiele postów pochodzi z 2021-2025, sprzed powrotu klifu w 2026."
+  },
+  {
+   "name": "healthcosttools.com - Plan Cost Calculator / HSA-FSA Calculator",
+   "url": "https://healthcosttools.com/blog-bronze-plan-hsa-eligible-2026.html",
+   "type": "partial",
+   "access": "Strona nieotwierana (WebFetch zablokowany); metodologia niewidoczna w summary",
+   "covers_pl": "Treści i kalkulatory: bronze z HSA w 2026, silver z CSR, porównanie kosztu planu.",
+   "misses_or_unverified_pl": "Brak powiązania z konwersjami Roth i klifem PTC w czasie (w summary nie wykazano); metodologia niezweryfikowana."
+  },
+  {
+   "name": "HealthCare.gov window shopping / KFF Marketplace Calculator",
+   "url": "brak URL w wynikach tej rundy",
+   "type": "partial",
+   "access": "Nie pojawiły się w wynikach; wiedza modelu, niezweryfikowane",
+   "covers_pl": "Hipoteza: szacunek PTC i porównanie planów wg ZIP i wieku na jeden rok.",
+   "misses_or_unverified_pl": "Brak konwersji Roth, planu wieloletniego i podatku (wg wiedzy modelu, niezweryfikowane w tej rundzie)."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "n/d",
+   "type": "substitute",
+   "access": "Ogólnodostępni; ChatGPT Intelligent UI renderuje kalkulatory w odpowiedziach (od 7.10.2026), Google AI Mode generuje interaktywne narzędzia (od 19.08.2026)",
+   "covers_pl": "Prosty headroom w jednym roku (400% FPL minus pozostały dochód) i reguły CSR/HSA da się podać w odpowiedzi, a nawet w wygenerowanym formularzu.",
+   "misses_or_unverified_pl": "Składka benchmarkowa SLCSP wg ZIP i wieku, aktualne tabele (Rev. Proc.), audytowalny model wieloletni: jakość niezweryfikowana. Ryzyko nieaktualnych progów FPL widać nawet w wynikach wyszukiwania."
+  }
+ ],
+ "direct_competitor_found": true,
+ "gap_statement_pl": "Główną lukę z fali 1 (darmowe narzędzie łączące krańcową stawkę z klifem PTC i wieloletni plan konwersji do 65. roku życia) ODRZUCAM. Według search-summary co najmniej dwa narzędzia robią ten rdzeń w jednym modelu: RothHelper (wieloletni optymalizator z ACA, IRMAA i SS torpedo) oraz QuantCalc ACA Bridge Optimizer (plan rok po roku pod pułapem FPL; pełna tabela płatna). Do tego dochodzą CoastIQ, ThunderHarbor (płatny), acaoptimizer.com i kilkanaście kalkulatorów jednorocznych. Zostaje wąska, niepotwierdzona luka. W wynikach nie znaleziono narzędzia, które w tym samym modelu porównuje poziomy planu po podatku: bronze kwalifikujący do HSA od 2026 i wpłata HSA obniżająca MAGI vs silver z CSR przy 200-250% FPL vs gold. Summary dwukrotnie stwierdza, że żadne z wyników nie porównuje bronze/silver/gold ani nie pokazuje modelowania HSA, ale RothHelper wymienia HSA wśród funkcji (niezweryfikowane). Zakres: 7 wyszukiwań extended, strony nieotwierane, płatne tiery niewidoczne. Pewność luki: niska-średnia.",
+ "search_scope_pl": "7 wyszukiwań WebSearch (wszystkie w trybie extended), rynek US, j. angielski, wykonane 2026-10-25. Typy zapytań: (1) pytanie w języku naturalnym, (2) krótka kategoria 'ACA subsidy cliff calculator 2026', (3) terminologia alternatywna (MAGI planner, premium tax credit, bronze HSA vs silver CSR), (4) oprogramowanie płatne i doradcze (ProjectionLab, Pralana, Boldin, MaxiFi, Income Lab), (5) Reddit, Bogleheads i arkusze, (6) szczegóły funkcji optymalizatorów (rok po roku, HSA, poziomy planu), (7) wybór poziomu planu bronze HSA vs silver CSR. WebFetch zablokowany: żadna strona nie była otwierana, formularze nie były testowane, a płatnych tierów (QuantCalc paid planner, ThunderHarbor Premium, Boldin PlannerPlus, MaxiFi Premium) nie widziano. Wszystkie funkcje pochodzą z search-summary i tytułów wyników. ProjectionLab i Pralana nie pojawiły się w wynikach. Reddit pojawił się tylko pośrednio. HealthCare.gov i KFF nie pojawiły się w wynikach.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wysyp wyspecjalizowanych narzędzi na 2026 (acacalc.com, TaxCliffs, coastretirement, nationaltaxtools, acasubsidyguide, Teamz Lab, Evvy, StateCalc, programowe strony stanowe QuantCalc) pokazuje, że wielu wydawców uznało ten temat za wart ruchu po powrocie klifu 400% FPL. Jednocześnie oznacza to silną konkurencję w SEO.",
+   "url": "https://acacalc.com/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Artykuł 24/7 Wall St. (28.05.2026) o błędzie konwersji Roth, przez który para wcześniejszych emerytów straciła $86,400 PTC. Temat trafia do mediów masowych.",
+   "url": "https://247wallst.com/personal-finance/2026/05/28/the-roth-conversion-mistake-that-cost-an-early-retiree-couple-86400-in-aca-premium-tax-credits-before-they-realized-they-lost-the-subsidy/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Yahoo Finance/AOL (2026): '$1.5 Million at 60 Looks Solid Until You Calculate Five Years Without Medicare'. Zarządzanie dochodem i konwersje Roth są w nim opisane jako sposób na obniżenie składek dla osób w wieku 60-64 lat.",
+   "url": "https://finance.yahoo.com/news/1-5-million-60-looks-142804359.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kilka wątków Bogleheads o kompromisie dopłata ACA vs konwersje Roth (2021-2025), m.in. t=329476, 452624, 397807 i 444617. To powtarzające się pytania użytkowników.",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=452624",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątek early-retirement.org 'ACA: Silver plan with CSR or Bronze with HSA' pokazuje pytanie o wybór poziomu planu w powiązaniu z konwersjami (stary wątek).",
+   "url": "https://www.early-retirement.org/threads/aca-silver-plan-with-csr-or-bronze-with-hsa.111523/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Treści brokerów i doradców o kwalifikowalności bronze do HSA od 2026 (iadbrokerage, hsatrackr, healthcosttools, themadisonpartners). Nowa reguła generuje pytania, a źródła są ze sobą sprzeczne co do automatycznej kwalifikacji.",
+   "url": "https://www.hsatrackr.com/guides/aca-bronze-hsa-eligible",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Themadisonpartners pisze o klifie w 2027 (płaska stawka 10.22% w przedziale 300-400% FPL wg Rev. Proc. 2026-26 - niezweryfikowane). Problem powtarza się co rok w IV kwartale i w czasie OE.",
+   "url": "https://www.themadisonpartners.com/the-aca-subsidy-cliff-what-early-retirees-owe-in-2027/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: segment to osoby 55-64 kupujące plan na Marketplace, mające traditional IRA i dochód blisko 400% FPL. Realny, ale wąski podzbiór Marketplace. Nie znaleziono danych o wolumenie wyszukiwań. Spadek zapisów powyżej 400% FPL wg KFF pochodzi z notatek fali 1 i nie był ponownie weryfikowany.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko średnie-wysokie dla rdzenia pytania. Odpowiedź z przykładowego promptu (headroom = 400% FPL minus pozostały MAGI; HSA obniża MAGI; CSR tylko w silver do 250% FPL; bronze kwalifikuje się do HSA od 2026) to proste reguły. ChatGPT z Intelligent UI i Google AI Mode mogą wygenerować do tego formularz. Asystent słabiej radzi sobie z trzema rzeczami: aktualną składką benchmarkową SLCSP wg ZIP i wieku (dane lokalne), tabelą applicable percentage na dany rok oraz audytowalnym planem wieloletnim z IRMAA. Tu przewagę ma zewnętrzne narzędzie. Wyniki wyszukiwania same pokazują rozbieżne progi FPL ($62,160 / $62,600 / $63,840), co przemawia za narzędziem z wersjonowanymi danymi. Jeśli jednak asystent odsyła do narzędzia, to prawdopodobnie do już indeksowanych RothHelper, QuantCalc czy acacalc, a nie do nowej strony.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja wraca co roku (IV kwartał, konwersje do 31.12 i OE), a powrót klifu w 2026 podniósł jej stawkę. Widać pytania na forach i artykuły w mediach masowych. Segment (wcześniejsi emeryci i samozatrudnieni blisko 400% FPL z kontami przedpodatkowymi) jest jednak wąski.",
+   "evidence_pl": "Wątki Bogleheads i early-retirement.org; 24/7 Wall St. 05.2026; Yahoo/AOL 2026; wysyp kalkulatorów klifu na 2026.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań i liczbie gospodarstw w segmencie. Spadek zapisów wg KFF niezweryfikowany w tej rundzie.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 2,
+   "rationale_pl": "Rdzeń (wieloletni harmonogram konwersji z klifem PTC, podatkiem i IRMAA) pokrywają RothHelper i QuantCalc ACA Bridge Optimizer, a częściowo CoastIQ, ThunderHarbor i acaoptimizer. Nieobecna w wynikach jest tylko integracja wyboru poziomu planu (bronze+HSA vs silver CSR vs gold) po podatku. To realny, ale wąski przyrost, a RothHelper wymienia HSA.",
+   "evidence_pl": "Search-summary z zapytań 1, 4 i 6. Dwukrotnie: 'none compare bronze, silver, and gold... none show HSA contribution modeling'.",
+   "gaps_pl": "Paywalle (QuantCalc paid, ThunderHarbor Premium, Boldin PlannerPlus) i nieotwierane strony. Funkcje HSA w RothHelper niezweryfikowane. Nie wiadomo, czy RothHelper jest w pełni darmowy.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Dokładny wynik wymaga danych lokalnych (SLCSP wg ZIP i wieku), aktualnych tabel IRS i modelu wieloletniego, więc istnieje powód, by odesłać do narzędzia. Prosty headroom w jednym roku asystent policzy sam, a przy odesłaniu ma do wyboru wielu już obecnych graczy.",
+   "evidence_pl": "Rozbieżne progi FPL w wynikach. Liczne istniejące narzędzia z dopasowanymi tytułami (Roth + ACA).",
+   "gaps_pl": "Brak danych, które domeny cytują ChatGPT/AI Mode dla tego zapytania.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Zamożni Amerykanie 55-64 lat to drogie wertykale: doradztwo finansowe, ubezpieczenia zdrowotne i Marketplace brokers, później Medicare i annuities. Audytorium jest jednak wąskie, a treści zdrowotne mogą ograniczać personalizację reklam.",
+   "evidence_pl": "Obecność brokerów (iadbrokerage, policysherpas) i doradców (themadisonpartners, warriorretirement) publikujących na ten temat.",
+   "gaps_pl": "Brak danych CPC/RPM. Ograniczenia AdSense dla treści zdrowotnych niezweryfikowane.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 2,
+   "rationale_pl": "Wymaga corocznej aktualizacji: FPL, tabela applicable percentage (Rev. Proc.), progi podatkowe federalne i stanowe, IRMAA, limity HSA i reguły HSA dla bronze (źródła sprzeczne). Do tego dopłaty stanowe, benchmark SLCSP wg ZIP i wieku oraz wysoka zmienność polityczna (klif, repayment caps, możliwe przywrócenie ulg). To kłóci się z oczekiwaniem automatycznego utrzymania.",
+   "evidence_pl": "Summary: brak limitów zwrotu APTC od 2026; Rev. Proc. 2025-25 i 2026-26; sprzeczne interpretacje kwalifikowalności bronze do HSA; nieaktualne progi u konkurenta.",
+   "gaps_pl": "Nie sprawdzono dostępności i formatu danych SLCSP (CMS PUF) ani kosztu ich utrzymania.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Błąd o 1 USD ponad 400% FPL kasuje całą PTC (tysiące USD), a od 2026 nie ma limitu zwrotu nadpłaconej APTC. Potrzebna interpretacja definicji MAGI, kwalifikowalności HSA i rozliczenia Form 8962. Błędy mogą być kosztowne dla użytkownika i wizerunkowo.",
+   "evidence_pl": "Przykład $86,400 straconej PTC (24/7 Wall St.); sprzeczne źródła o HSA w bronze; rozbieżne progi FPL między kalkulatorami.",
+   "gaps_pl": "Nie analizowano wymogów prawnych ani disclaimerów konkurencji.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Silnik podatkowy (federal i state, LTCG, MAGI), oś przepływów pieniężnych do 65+, IRMAA i opodatkowanie SS nadają się do ponownego użycia w rodzinie 'Emerytura i wypłaty' (Roth ladder, kolejność wypłat, IRMAA planner, termin SS). Moduł składek ACA może zasilić narzędzia dla samozatrudnionych.",
+   "evidence_pl": "Konkurenci (QuantCalc, RothHelper, CoastIQ) budują właśnie takie rodziny narzędzi na wspólnym silniku.",
+   "gaps_pl": "Słabe powiązanie z modułami domu, energii i finansowania nieruchomości.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "odrzucić",
+ "recommendation_reason_pl": "Jako samodzielny produkt: odrzucić. Rdzeń decyzji ma już zintegrowane narzędzia (RothHelper, QuantCalc ACA Bridge Optimizer, a także CoastIQ, ThunderHarbor i acaoptimizer), a do tego dochodzi kilkanaście kalkulatorów klifu na 2026 walczących o te same zapytania. Pozostała luka (bronze+HSA vs silver CSR vs gold w tym samym modelu) jest wąska i niepotwierdzona, bo strony nie były otwierane, a części płatnych nie widziano. Jednocześnie produkt ma niską łatwość utrzymania (coroczne tabele IRS, SLCSP wg ZIP, zmienność polityczna) i wysokie ryzyko kosztownych błędów (twardy klif bez limitu zwrotu APTC). Przy ocenach ok. 2.85/5 (ważone) nie uzasadnia pilota. Jeśli powstanie wspólny silnik podatkowo-emerytalny dla rodziny 'Emerytura i wypłaty', moduł porównania poziomów planu z HSA można dodać później jako funkcję wyróżniającą, a nie osobny produkt. Pewność rekomendacji: średnia.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator; ACA bridge optimizer year-by-year Roth conversion HSA contribution metal tier bronze silver gold comparison calculator",
+   "url": "https://rothhelper.com/",
+   "competitor": "RothHelper",
+   "features_checked": "klif PTC, IRMAA, SS torpedo, wieloletni optymalizator harmonogramu konwersji, HSA, poziomy planu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; paywall/login niezweryfikowany",
+   "conclusion": "Konkurent bezpośredni dla rdzenia (wieloletnie konwersje vs PTC + IRMAA). HSA na liście funkcji, sposób modelowania niezweryfikowany. Porównanie poziomów planu niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ProjectionLab Pralana Boldin; ACA bridge optimizer year-by-year ...",
+   "url": "https://quantcalc.app/aca-bridge-optimizer/",
+   "competitor": "QuantCalc ACA Bridge Optimizer",
+   "features_checked": "plan rok po roku konwersji i wypłat pod pułapem FPL, IRMAA, progi podatkowe, poziomy planu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; pełna tabela rok po roku, progi i IRMAA w płatnym plannerze",
+   "conclusion": "Konkurent bezpośredni (freemium) dla rdzenia wieloletniego. Wersja darmowa liczy każdy rok osobno. Porównanie bronze/silver/gold i HSA niewykazane w summary.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://quantcalc.app/state/georgia/",
+   "competitor": "QuantCalc - stanowe strony Retirement Tax Calculator + Roth Conversion Optimizer",
+   "features_checked": "konwersja Roth + klif ACA + podatek stanowy, aktualność progów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Programowe SEO na poziomie stanów. Przykład Georgia używa progu $81,760 (FPL 2024), więc ryzyko jakości danych. Silny gracz w SEO.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ...; ACA bridge optimizer ...",
+   "url": "https://acaoptimizer.com/",
+   "competitor": "ACA Optimizer (ACA Subsidy & Roth Conversion Optimizer for Early Retirees)",
+   "features_checked": "optymalizacja dopłaty ACA i konwersji Roth",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; model cenowy niezweryfikowany",
+   "conclusion": "Częściowy, potencjalnie bezpośredni. Szczegóły (wieloletniość, HSA, poziomy planu) niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://therothladder.com/tools/aca-subsidy-calculator",
+   "competitor": "The Roth Ladder - ACA Subsidy Cliff Calculator",
+   "features_checked": "koszt krańcowy następnego dolara konwersji z utraconą PTC, osobne narzędzie ladder",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: pokrywa krzywą efektywnej stawki krańcowej. Integracja z planem wieloletnim niezweryfikowana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ACA bridge optimizer year-by-year Roth conversion HSA contribution metal tier ...",
+   "url": "https://coastiq.org/blog/post/roth-conversion-calculator",
+   "competitor": "CoastIQ",
+   "features_checked": "progi podatkowe, ACA, IRMAA, SS rok po roku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy/bliski bezpośredniemu dla rdzenia. Poziomy planu i HSA niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ...",
+   "url": "https://thunderharbor.net/upgrade",
+   "competitor": "ThunderHarbor",
+   "features_checked": "Roth Strategy: roczna konwersja bez IRMAA i bez przekroczenia klifu ACA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; funkcja w płatnym tierze Premium",
+   "conclusion": "Częściowy (płatny). Rdzeń wieloletni prawdopodobny, szczegóły niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://algorithmicfire.com/calculators/roth-conversion",
+   "competitor": "Algorithmic FIRE - Roth Conversion & ACA Subsidy Calculator",
+   "features_checked": "konwersja Roth + dopłata ACA (tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Częściowy; zakres funkcji niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://thefinancebuff.com/tax-calculator-aca-obamacare-subsidy.html",
+   "competitor": "The Finance Buff - ACA tax calculator",
+   "features_checked": "wpływ konwersji Roth i zysków kapitałowych na ACA (tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tytuł)",
+   "conclusion": "Częściowy, prawdopodobnie jednoroczny (hipoteza).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ACA subsidy cliff calculator 2026",
+   "url": "https://acacalc.com/",
+   "competitor": "acacalc.com i inne jednoroczne kalkulatory klifu (TaxCliffs acasubsidycliff.com, coastretirement.com/aca-cliff, nationaltaxtools.com, acasubsidyguide.com, tool.teamzlab.com, evvytools.com, statecalc.com)",
+   "features_checked": "% FPL, PTC, koszt przekroczenia klifu o 1 USD, składka netto, aktualność progów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowe, jednoroczne, bez planu wieloletniego. Rozbieżne progi FPL. Bardzo zatłoczona SERP dla krótkiej kategorii.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "ACA bridge optimizer year-by-year Roth conversion HSA contribution metal tier ...",
+   "url": "https://taxcliffs.co/roth-conversion-calculator",
+   "competitor": "TaxCliffs - Roth Conversion Bracket-Fill Calculator",
+   "features_checked": "maksymalna konwersja pod progiem podatkowym, IRMAA lub klifem ACA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy (jednoroczny bracket-fill). Poziomów planu i HSA nie wykazano.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ProjectionLab Pralana Boldin",
+   "url": "https://www.maxifi.com/features/roth-conversion-optimizer",
+   "competitor": "MaxiFi Roth Conversion Optimizer",
+   "features_checked": "optymalizacja rocznych konwersji, cena, ACA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatny Premium ok. $109-149/rok",
+   "conclusion": "Substytut płatny; modelowanie ACA niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ProjectionLab Pralana Boldin",
+   "url": "https://incomelaboratory.com/best-roth-conversion-software/",
+   "competitor": "Boldin Roth Conversion Explorer, Holistiplan Premium, Income Lab (porównanie vendora)",
+   "features_checked": "wieloletnie projekcje konwersji, tiery płatne",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; źródło to vendor (Income Lab); Boldin PlannerPlus płatny; narzędzia doradcze płatne",
+   "conclusion": "Substytuty płatne/doradcze. Modelowanie klifu ACA niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ProjectionLab Pralana Boldin",
+   "url": "brak URL - nie pojawiły się w wynikach",
+   "competitor": "ProjectionLab, Pralana",
+   "features_checked": "modelowanie ACA/PTC i konwersji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (brak wyników o tych narzędziach)",
+   "conclusion": "Notatki z fali 1 nadal niezweryfikowane; funkcje ACA 'niezweryfikowane', nie 'brak'.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit spreadsheet ACA subsidy Roth conversion early retirement bogleheads",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=329476",
+   "competitor": "Bogleheads + MMM Case Study Spreadsheet + Boldin (użycie przez forumowiczów)",
+   "features_checked": "ręczne scenariusze (maks. dopłata / do klifu / do 24%), arkusz",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; forum publiczne",
+   "conclusion": "Substytut (arkusz + forum). Potwierdza istnienie problemu i ręczne łączenie narzędzi. Posty sprzed 2026.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "early retiree MAGI planner premium tax credit Roth conversion multi-year until Medicare bronze HSA vs silver CSR",
+   "url": "https://www.early-retirement.org/threads/aca-silver-plan-with-csr-or-bronze-with-hsa.111523/",
+   "competitor": "early-retirement.org (wątek Silver CSR vs Bronze HSA)",
+   "features_checked": "dyskusja o wyborze poziomu planu i HSA jako dźwigni konwersji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wątek stary, kwoty nieaktualne",
+   "conclusion": "Substytut forumowy. Sygnał, że wymiar 'poziom planu' jest częścią decyzji. Summary nie wskazało narzędzia łączącego wszystkie elementy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "2026 bronze plans HSA eligible vs silver CSR which marketplace plan should I choose calculator",
+   "url": "https://healthcosttools.com/blog-bronze-plan-hsa-eligible-2026.html",
+   "competitor": "healthcosttools.com (Plan Cost Calculator, HSA/FSA Calculator)",
+   "features_checked": "porównanie kosztu planu, bronze HSA 2026, silver CSR",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; metodologia niewidoczna",
+   "conclusion": "Częściowy dla wymiaru poziomu planu; brak powiązania z konwersjami i PTC w summary.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "2026 bronze plans HSA eligible vs silver CSR which marketplace plan should I choose calculator",
+   "url": "brak URL - HealthCare.gov nie pojawił się w wynikach",
+   "competitor": "HealthCare.gov window shopping / KFF calculator",
+   "features_checked": "oficjalny kalkulator porównania planów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary ('I didn't find an official HealthCare.gov calculator in these results')",
+   "conclusion": "Częściowy wg wiedzy modelu; w tej rundzie niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://www.richify.ai/us/tools/roth-conversion-ladder",
+   "competitor": "Richify Roth Ladder Calculator 2026",
+   "features_checked": "drabina konwersji, reguła 5 lat, PTC",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Wg summary pewien przewodnik zaznacza, że jego kalkulator drabiny nie liczy PTC (przypisanie do Richify niepewne). Fragment niepowiązany z ACA.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much can I Roth convert without losing ACA premium tax credit calculator",
+   "url": "https://www.penaltyfreeretire.com/blog/can-a-roth-conversion-raise-your-aca-premiums-how-to-plan-the-subsidy-tradeoff-before-medicare",
+   "competitor": "Poradniki treściowe (penaltyfreeretire, warriorretirement, bridgeandretire, fiphysician)",
+   "features_checked": "treść poradnikowa o kompromisie Roth vs ACA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Konkurencja treściowa o te same zapytania, nie narzędzia.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "how much can I Roth convert without losing ACA premium tax credit calculator",
+  "ACA subsidy cliff calculator 2026",
+  "early retiree MAGI planner premium tax credit Roth conversion multi-year until Medicare bronze HSA vs silver CSR",
+  "retirement planning software ACA premium tax credit modeling Roth conversion optimizer ProjectionLab Pralana Boldin",
+  "reddit spreadsheet ACA subsidy Roth conversion early retirement bogleheads",
+  "ACA bridge optimizer year-by-year Roth conversion HSA contribution metal tier bronze silver gold comparison calculator",
+  "2026 bronze plans HSA eligible vs silver CSR which marketplace plan should I choose calculator"
+ ]
+}

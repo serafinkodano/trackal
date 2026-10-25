@@ -1,0 +1,391 @@
+{
+ "id": "LIFE-01",
+ "competitors": [
+  {
+   "name": "My Shared Home – Sibling Buyout Calculator + 'When One Sibling Lives in the Inherited House'",
+   "url": "https://mysharedhome.com/learn/sibling-buyout-calculator/",
+   "type": "partial",
+   "access": "Publiczna strona /learn/ (prawdopodobnie bezpłatna – niezweryfikowane); strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Tematycznie najbliższy serwis (wspólnie odziedziczony dom). Kalkulator fair price wykupu: wycena minus długi = equity, podzielone wg udziałów; opcja wykupu na weksel/seller financing ze stopą minimalną IRS (AFR, 4,98% long-term lipiec 2026). Osobny przewodnik o 'fairness math' (czynsz od rodzeństwa mieszkającego w domu, podział podatków i napraw; wyjścia: umowa, wykup, sprzedaż, partition jako najdroższa droga).",
+   "misses_or_unverified_pl": "Niezweryfikowane: porównanie wariantów sprzedaż/remont/wynajem/zamieszkanie, wartość netto po podatku dla każdego spadkobiercy, przepływy wieloletnie, refinans hipoteki przy wykupie, zwolnienie 121, wrażliwość. Wyszukiwanie nie wykazało osobnego narzędzia decyzyjnego na stronie (search-summary: 'didn't find a standalone decision tool page')."
+  },
+  {
+   "name": "FastProbates – Heir Buyout Calculator (2026)",
+   "url": "https://fastprobates.com/heir-buyout-calculator/",
+   "type": "partial",
+   "access": "Publiczna strona; model biznesowy prawdopodobnie lead-gen probate/zakup domów – niezweryfikowane; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Koszt wykupu rodzeństwa z odziedziczonego domu (wariant D – fragment).",
+   "misses_or_unverified_pl": "Niezweryfikowane: refinans i zdolność kredytowa wykupującego, podatki, porównanie z wynajmem/sprzedażą, wynik per spadkobierca w czasie."
+  },
+  {
+   "name": "LadderedProperty – Inherited Property Buyout Calculator",
+   "url": "https://www.ladderedproperty.com/tools/inherited-property-buyout-calculator",
+   "type": "partial",
+   "access": "Publiczna strona /tools/ – niezweryfikowane czy bez logowania; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Wykup udziałów odziedziczonej nieruchomości przez jednego z rodzeństwa/beneficjentów (wariant D – fragment).",
+   "misses_or_unverified_pl": "Niezweryfikowane: podatki, finansowanie, porównanie wariantów A–E, przepływy wieloletnie."
+  },
+  {
+   "name": "Sell It Scott – Sibling Buyout Cost / Can You Afford to Buy Out Your Siblings?",
+   "url": "https://sellitscott.com/sibling-buyout-cost/",
+   "type": "partial",
+   "access": "Publiczna strona sprzedażowa (agent/skupujący – niezweryfikowane); strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Koszt wykupu rodzeństwa i (wg tytułu drugiej strony) aspekt dostępności finansowej wykupu – najbliżej powiązania wykupu z finansowaniem.",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy faktycznie liczy refinans/zdolność, podatki, porównanie z wynajmem i sprzedażą; treść może być sterowana interesem kupującego dom."
+  },
+  {
+   "name": "Inherited Rental Property Calculator (financial-advisors-for-real-estate-investors.com)",
+   "url": "https://financial-advisors-for-real-estate-investors.com/inherited-rental-property-calculator/",
+   "type": "partial",
+   "access": "Publiczna strona; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Najważniejszy fragment podatkowy: stepped-up basis, nowa amortyzacja od wartości z dnia śmierci (bez gruntu, 27,5 roku), pułapka PAL §469; wg podsumowania wejścia: FMV z dnia śmierci, % gruntu, saldo hipoteki i porównanie 'sell now' vs 'hold and rent' (warianty A vs C).",
+   "misses_or_unverified_pl": "Niezweryfikowane: podział na wielu spadkobierców z różnymi stawkami, wykup z refinansem, remont przed sprzedażą, zamieszkanie spadkobiercy i 121, break-even czynszu. Podsumowanie wspomina 'recapture amortyzacji zmarłego właściciela' – potencjalny błąd merytoryczny (step-up zwykle ją eliminuje; wiedza modelu, niezweryfikowane)."
+  },
+  {
+   "name": "Estate Step-Up in Basis Calculator (teamzlab) / Capital Gains on Inherited Property Calculator (robert-parish.com)",
+   "url": "https://tool.teamzlab.com/finance/estate-step-up-basis-calculator/",
+   "type": "partial",
+   "access": "Publiczne strony; strony nieotwierane (WebFetch zablokowany), dowód: search-summary; drugi URL: https://robert-parish.com/blog/capital-gains-inherited-property-calculator",
+   "covers_pl": "Wąski fragment: oszczędność podatkowa ze stepped-up basis / zysk kapitałowy przy sprzedaży odziedziczonej nieruchomości.",
+   "misses_or_unverified_pl": "Jednocelowe kalkulatory – brak powiązania z wynajmem, wykupem, wieloma spadkobiercami (wg tytułów/podsumowań; szczegóły niezweryfikowane)."
+  },
+  {
+   "name": "Inherited Property Match – Selling Inherited Property with Siblings / Sell or Rent Inherited Property",
+   "url": "https://inheritedpropertymatch.com/inherited-property/selling-inherited-property-with-siblings/",
+   "type": "substitute",
+   "access": "Publiczne artykuły; strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Jakościowa tabela porównująca sprzedaż, wykup, zatrzymanie i wynajem oraz 'nic nie robić' (koszty utrzymania, ryzyko ubezpieczenia, konflikt).",
+   "misses_or_unverified_pl": "Brak obliczeń w podsumowaniu – framework tekstowy; kalkulator niezweryfikowany."
+  },
+  {
+   "name": "Financial Advisors for Inheritance – What to Do With an Inherited House: Sell, Rent, or Keep? (2026 Guide)",
+   "url": "https://financial-advisors-for-inheritance.com/guides/inherited-real-estate/",
+   "type": "substitute",
+   "access": "Publiczny przewodnik (prawdopodobnie lead-gen doradców – niezweryfikowane); strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Opisowe porównanie sprzedaży, wynajmu i zatrzymania z amortyzacją od stepped-up FMV.",
+   "misses_or_unverified_pl": "Narzędzie obliczeniowe i wymiar wielu spadkobierców niezweryfikowane."
+  },
+  {
+   "name": "Fast Home Buyer California – Renovating Inherited Property (2026) / Opendoor – Sell Inherited House guides",
+   "url": "https://fasthomebuyercalifornia.com/renovating-inherited-property-california",
+   "type": "substitute",
+   "access": "Publiczne treści skupujących/iBuyera; strony nieotwierane (WebFetch zablokowany), dowód: search-summary; Opendoor: https://www.opendoor.com/articles/sell-inherited-house",
+   "covers_pl": "Framework 'as-is vs remont' (różnica cen vs koszt remontu, koszty utrzymania × czas remontu) – warianty A vs B; Opendoor: ścieżki sprzedaży (agent, FSBO, cash buyer).",
+   "misses_or_unverified_pl": "Treści stronnicze (interes w szybkim zakupie domu); brak modelu podatkowego per spadkobierca i wariantów C–E w podsumowaniach."
+  },
+  {
+   "name": "Duże portale: Rocket Mortgage, SmartAsset, Nasdaq, City National Bank – 'inheriting a house with siblings'",
+   "url": "https://rocketmortgage.com/learn/inheriting-a-house-with-siblings",
+   "type": "substitute",
+   "access": "Publiczne artykuły; strony nieotwierane (WebFetch zablokowany), dowód: search-summary; inne URL: https://smartasset.com/estate-planning/inheriting-a-house-with-siblings, https://www.nasdaq.com/articles/what-to-do-when-inheriting-a-house-with-siblings, https://www.cnb.com/personal-banking/insights/inheriting-a-house-with-siblings.html",
+   "covers_pl": "Opisy opcji (wykup, sprzedaż, wynajem, mediacja), zarządzanie wspólnym wynajmem, wycena, podatek od wzrostu wartości po dziedziczeniu.",
+   "misses_or_unverified_pl": "Treści, nie symulator; brak liczb per spadkobierca i w czasie w podsumowaniach."
+  },
+  {
+   "name": "Prawnicy spadkowi / partition attorneys / CPA (np. Underwood Law – CA buyout vs sell, Prop 19; Talkov Law)",
+   "url": "https://underwood.law/blog/buying-out-a-sibling-vs-selling/",
+   "type": "substitute",
+   "access": "Płatna usługa; treści publiczne; strony nieotwierane (WebFetch zablokowany), dowód: search-summary",
+   "covers_pl": "Interpretacja prawna: wykup vs sprzedaż, Prop 19 w Kalifornii, partition (sądowa sprzedaż, set-off), podatki.",
+   "misses_or_unverified_pl": "Brak samoobsługowego modelu liczbowego; koszt i czas."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z 'Intelligent UI', Google AI Mode z generowanymi narzędziami)",
+   "url": "n/d",
+   "type": "substitute",
+   "access": "Bezpłatne/abonament; kontekst z zadania (ChatGPT Intelligent UI od 7.10.2026, Google AI Mode od 19.08.2026) – nie testowano",
+   "covers_pl": "Odpowiedź na przykładowy prompt jakościowo (opcje, step-up, 121, partition) i prawdopodobnie prosty kalkulator wykupu renderowany w odpowiedzi.",
+   "misses_or_unverified_pl": "Niezweryfikowane: spójny wieloletni model per spadkobierca z 5 wariantami, audytowalność, możliwość udostępnienia tych samych liczb całemu rodzeństwu."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań WebSearch, wyniki US, strony nieotwierane – wyłącznie podsumowania wyszukiwarki; pewność niska–średnia). Dwa podsumowania wprost stwierdziły brak jednego narzędzia porównującego wszystkie ścieżki 'side by side'. Rynek jest jednak wyraźnie fragmentarycznie pokryty i aktywnie zasiedlany w 2026 przez mikroserwisy SEO i lead-gen skupujących: (1) kalkulatory fair price wykupu rodzeństwa (mysharedhome, fastprobates, ladderedproperty, sellitscott – w tym seller financing z AFR); (2) kalkulator 'inherited rental' z step-up, nową amortyzacją, PAL i porównaniem sell-now vs hold-and-rent; (3) kalkulatory step-up/zysku kapitałowego; (4) jakościowe frameworki as-is vs remont oraz tabele opcji. Precyzyjna luka (do potwierdzenia ręcznym otwarciem stron): jeden model, który dla 2–4 spadkobierców z RÓŻNYMI stawkami podatkowymi liczy wartość netto po podatku dla każdego z wariantów A–E w rocznych przepływach, wiążąc ze sobą: wykup z refinansem (stopa, koszty, zdolność, przejęcie istniejącej hipoteki), remont (koszt vs premia cenowa vs czas utrzymania), wspólny wynajem (amortyzacja od step-up, PAL, recapture przy późniejszej sprzedaży), zamieszkanie spadkobiercy i zwolnienie 121 tylko na jego udział, break-even czynszu, fair price wykupu oraz wrażliwość na cenę, czas i stopy. Wariant E (zamieszkanie + 121) nie pojawił się w żadnym narzędziu w wynikach (tylko treści, np. Nolo). Luka jest więc 'integracyjna', wąska i łatwa do zamknięcia przez istniejących graczy lub generowane narzędzia AI; dodatkowym wyróżnikiem może być neutralny, udostępnialny raport dla całego rodzeństwa (hipoteza).",
+ "search_scope_pl": "Data: 2026-10-25. 7/7 wywołań WebSearch (6 extended, 1 standard), wyniki US, język angielski. Mieszanka zapytań: pytanie w języku naturalnym (Q1), zapytanie kategorii 'inherited house rent vs sell calculator' (Q2), weryfikacja marki mysharedhome (Q3), płatne aplikacje/platformy estate settlement i doradcy (Q4), Reddit/arkusze (Q5), porównanie wariantów per heir (Q6), terminologia alternatywna tenants in common/co-owner buyout/partition (Q7). WebFetch zablokowany – żadna strona nie została otwarta, formularzy nie testowano, paywalli/logowań nie sprawdzono; dowody = podsumowania wyszukiwarki. Nie wykryto w wynikach: Clever, HomeLight, Empathy, Atticus (status: niezweryfikowane, nie 'brak'), szablonów arkuszy ani wątków Reddit z narzędziem. Nie sprawdzono wolumenów słów kluczowych ani zachowania ChatGPT/Google AI Mode na przykładowym prompcie.",
+ "demand_signals": [
+  {
+   "signal_pl": "W 2026 powstało co najmniej kilka dedykowanych kalkulatorów wykupu rodzeństwa z odziedziczonego domu (mysharedhome, fastprobates z dopiskiem '(2026)', ladderedproperty, sellitscott) – podaż narzędzi sugeruje, że wydawcy widzą popyt wyszukiwaniowy.",
+   "url": "https://fastprobates.com/heir-buyout-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Duzi wydawcy finansowi i kredytodawcy (Rocket Mortgage, SmartAsset, Nasdaq, City National Bank, Opendoor, Nolo, Thrivent) utrzymują artykuły o dziedziczeniu domu z rodzeństwem i podatkach – temat ma stały popyt informacyjny.",
+   "url": "https://rocketmortgage.com/learn/inheriting-a-house-with-siblings",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wg podsumowania wyszukiwarki źródło podaje, że blisko 70% Amerykanów spodziewających się odziedziczyć nieruchomość planuje ją sprzedać (statystyka wtórna, źródło pierwotne niezweryfikowane).",
+   "url": "https://www.effectiveagents.com/resources/inheriting-a-house-to-sell-or-not-to-sell",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Liczne strony prawników od partition (MA Land Court FAQ, Talkov, Greenacre, Timoney Knox, Maloney) wskazują na częste spory współwłaścicieli/spadkobierców o sprzedaż vs wykup.",
+   "url": "https://www.mass.gov/info-details/frequently-asked-questions-about-partition-cases-in-the-land-court",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wątek Reddit (snapshot) o długo trzymanej odziedziczonej nieruchomości i podatku od zysków – pojedynczy sygnał pytań forumowych.",
+   "url": "https://reddit.sentinel-team.org/posts/1qhfbt7/snapshots/2026-01-21T01%3A20%3A27.90356Z",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza (wiedza modelu, bez źródła w tej sesji): w USA umiera ok. 3 mln osób rocznie, znaczna część to właściciele domów z kilkorgiem dzieci – rzędu setek tysięcy decyzji rocznie; to liczba zdarzeń w roku, NIE miesięczny popyt wyszukiwaniowy.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta: średnio-wysokie dla warstwy jakościowej, średnie dla warstwy liczbowej. ChatGPT (Intelligent UI od 7.10.2026) i Google AI Mode (interaktywne narzędzia od 19.08.2026) z dużym prawdopodobieństwem odpowiedzą na przykładowy prompt: wymienią opcje, wyjaśnią step-up, 121, partition i wyrenderują prosty kalkulator wykupu (wzór wycena − dług × udział jest trywialny). Trudniejsze dla asystenta: spójny wieloletni model 5 wariantów × 2–4 spadkobierców z różnymi stawkami, amortyzacja/PAL/recapture, refinans z aktualnymi stopami, break-even czynszu i wrażliwość – z audytowalnymi założeniami. Argument za odesłaniem do zewnętrznego narzędzia: potrzeba trwałego, udostępnialnego scenariusza, który zobaczy całe rodzeństwo (rozmowa z AI jest prywatna dla jednej strony konfliktu) – to hipoteza, nie zweryfikowano zachowania asystentów.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja dotyczy dużej liczby rodzin rocznie i ma widoczny popyt treściowy; jest jednorazowa w życiu rodziny, ale bardzo kosztowna, co sprzyja szukaniu narzędzi.",
+   "evidence_pl": "Dedykowane kalkulatory 2026 (mysharedhome, fastprobates, ladderedproperty, sellitscott); artykuły Rocket Mortgage, SmartAsset, Nasdaq, CNB, Opendoor; statystyka ~70% planujących sprzedaż (effectiveagents, wtórna); strony prawników partition.",
+   "gaps_pl": "Brak wolumenów słów kluczowych; brak twardej liczby gospodarstw rocznie z wyszukiwania (tylko hipoteza modelu); nie wiadomo, jaki odsetek szuka narzędzia, a jaki prawnika/skupującego.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Fragmenty (wykup, sell vs rent z podatkiem, step-up, as-is vs remont) są pokryte przez darmowe narzędzia i treści; nie znaleziono integracji wszystkich wariantów per spadkobierca w czasie. Luka jest integracyjna i podatna na szybkie zamknięcie przez mikroserwisy SEO 2026.",
+   "evidence_pl": "Podsumowania Q2 i Q6: brak jednego narzędzia porównującego wszystkie ścieżki; kalkulator inherited rental porównuje sell-now vs hold-and-rent; kalkulatory wykupu liczą fair price i seller financing.",
+   "gaps_pl": "Strony nieotwierane – mysharedhome/fastprobates/ladderedproperty/financial-advisors-for-real-estate-investors mogą mieć więcej funkcji niż w podsumowaniach (niezweryfikowane); brak testu generowanych narzędzi Google AI Mode.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Asystent sam obsłuży wyjaśnienia i prosty wykup; odesłanie do zewnętrznego narzędzia jest prawdopodobne przy długim modelu wieloletnim, wielu spadkobiercach i potrzebie wspólnego, audytowalnego raportu dla rodzeństwa.",
+   "evidence_pl": "Kontekst zadania (ChatGPT Intelligent UI, Google AI Mode generujący narzędzia); prostota wzoru wykupu w wynikach; złożoność podatkowa (PAL, recapture, 121) widoczna w wynikach.",
+   "gaps_pl": "Nie przetestowano odpowiedzi asystentów ani tego, czy cytują zewnętrzne kalkulatory dla tego tematu.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Odbiorcy to amerykańscy konsumenci tuż przed transakcją o dużej wartości: sprzedaż domu (agenci, cash buyers), refinans/kredyt na wykup (mortgage), remont i opróżnianie domu (home services), ubezpieczenie pustego domu, zarządzanie najmem, prawnicy spadkowi. Temat żałoby nie jest kategorią zastrzeżoną AdSense (wiedza modelu).",
+   "evidence_pl": "Aktywność lead-gen skupujących (sellitscott, fasthomebuyercalifornia, fastprobates) i kredytodawców (Rocket Mortgage, AmeriSave) wokół tematu w wynikach.",
+   "gaps_pl": "Brak danych CPC/RPM; nie zweryfikowano polityk reklamowych dla treści o śmierci/spadku; ruch może być mały mimo wysokiej wartości kliknięcia.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Dane wejściowe głównie od użytkownika (wycena, czynsz, koszt remontu), stopy i AFR publiczne; ale silnik wymaga federalnych reguł podatkowych (zyski kapitałowe, NIIT, amortyzacja, PAL, recapture, 121), matematyki hipotecznej i flag stanowych (np. Prop 19, partition) – coroczne aktualizacje progów i comiesięczne AFR.",
+   "evidence_pl": "Wyniki pokazują zależność od AFR (4,98% lipiec 2026), Prop 19 w CA, różnic stanowych w partition (MA, CA, PA, IL).",
+   "gaps_pl": "Nie oszacowano kosztu utrzymania reguł stanowych; MVP może ograniczyć się do podatku federalnego + stawki stanowej wpisanej przez użytkownika.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Duże kwoty i rodzinny konflikt – błąd (np. w 121 dla współwłaściciela, recapture, due-on-sale przy przejęciu hipoteki, probate) może mieć poważne skutki finansowe i relacyjne; dużo interpretacji prawno-podatkowej i różnic stanowych.",
+   "evidence_pl": "Wyniki wskazują na niuanse: PAL §469, recapture, Prop 19, sądowe wymogi ceny min. 90% wyceny w probate (TX), partition. Jedno podsumowanie konkurenta zawiera wątpliwą tezę o recapture amortyzacji zmarłego – sygnał, że nawet konkurenci się mylą.",
+   "gaps_pl": "Ochrona przed due-on-sale i reguły 121 dla spadkobierców – wiedza modelu, niezweryfikowane w tej sesji.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Silnik w całości złożony ze wspólnych modułów: oś przepływów, finansowanie/refinans, podatek od sprzedaży i najmu, wartość domu, model wynajmu. Naturalne produkty siostrzane: dom przy rozwodzie (wykup małżonka), sprzedać czy wynajmować przy przeprowadzce, wykup współwłaściciela/TIC, dom rodzica przy przeprowadzce do opieki.",
+   "evidence_pl": "Wyniki dla co-owner/TIC buyout i treści rozwodowe/współwłasności pokazują te same zależności (wycena, udziały, refinans, partition).",
+   "gaps_pl": "Nie zweryfikowano popytu na produkty siostrzane w tej sesji.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważony wynik orientacyjny ok. 3,6/5 (popyt 4, luka 3, dystrybucja AI 3, reklamy 5, wykonalność 3, niezawodność 2, wspólny silnik 5). Mocne strony: wartościowe kategorie reklamowe (nieruchomości, kredyty, usługi domowe), realny popyt i wysoka reużywalność silnika. Ryzyka: luka jest tylko integracyjna, a fragmenty (wykup, sell vs rent z podatkiem) budują w 2026 liczne mikroserwisy SEO i skupujący; asystenci AI pokrywają warstwę jakościową; wysokie ryzyko merytoryczne. Przed pilotem: (1) ręcznie otworzyć i przetestować mysharedhome, fastprobates, ladderedproperty, sellitscott i inherited rental calculator (czy liczą per spadkobierca, w czasie, z refinansem i 121); (2) sprawdzić wolumeny fraz typu 'buy out sibling inherited house', 'inherited house calculator'; (3) przetestować przykładowy prompt w ChatGPT i Google AI Mode; (4) zdefiniować MVP (federalny podatek + stawka stanowa wpisana ręcznie, warianty A, C, D, E) i rozważyć wspólny rdzeń z kalkulatorem domu przy rozwodzie.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+   "url": "https://mysharedhome.com/learn/sibling-buyout-calculator/",
+   "competitor": "My Shared Home – Sibling Buyout Calculator",
+   "features_checked": "wzór fair price wykupu, udziały, seller financing z AFR, porównanie wariantów, podatek per spadkobierca",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie/paywall niezweryfikowane",
+   "conclusion": "Partial: wykup + seller financing; porównanie sprzedaż/wynajem/zamieszkanie i podatki niezweryfikowane; brak osobnej strony decision tool w wynikach Q3.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "mysharedhome.com inherited house siblings sell rent buyout decision tool",
+   "url": "https://mysharedhome.com/learn/one-sibling-lives-in-the-house/",
+   "competitor": "My Shared Home – When One Sibling Lives in the Inherited House",
+   "features_checked": "czynsz od mieszkającego rodzeństwa, podział podatków i napraw, wyjścia (umowa, wykup, sprzedaż, partition)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute/partial treściowy dla wariantu E (zamieszkanie) – 'fairness math', bez zweryfikowanego modelu 121 i przepływów.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+   "url": "https://fastprobates.com/heir-buyout-calculator/",
+   "competitor": "FastProbates – Heir Buyout Calculator (2026)",
+   "features_checked": "koszt wykupu rodzeństwa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; model lead-gen niezweryfikowany",
+   "conclusion": "Partial (wariant D). Inne funkcje niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+   "url": "https://www.ladderedproperty.com/tools/inherited-property-buyout-calculator",
+   "competitor": "LadderedProperty – Inherited Property Buyout Calculator",
+   "features_checked": "wykup udziałów rodzeństwa/beneficjentów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie niezweryfikowane",
+   "conclusion": "Partial (wariant D). Podatki, finansowanie i inne warianty niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+   "url": "https://sellitscott.com/sibling-buyout-cost/",
+   "competitor": "Sell It Scott – Sibling Buyout Cost / Afford to Buy Out Siblings",
+   "features_checked": "koszt wykupu, dostępność finansowa wykupu (wg tytułu https://sellitscott.com/afford-to-buy-out-siblings-inherited-house/)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (wariant D + możliwe finansowanie); treść sprzedażowa, refinans niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house rent vs sell calculator stepped-up basis",
+   "url": "https://financial-advisors-for-real-estate-investors.com/inherited-rental-property-calculator/",
+   "competitor": "Inherited Rental Property Calculator",
+   "features_checked": "step-up, nowa amortyzacja, PAL §469, recapture, wejścia FMV/% gruntu/hipoteka, sell-now vs hold-and-rent",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Najmocniejszy partial dla A vs C z podatkiem; wielu spadkobierców, wykup, remont, 121 niezweryfikowane; możliwy błąd merytoryczny co do recapture.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house rent vs sell calculator stepped-up basis",
+   "url": "https://tool.teamzlab.com/finance/estate-step-up-basis-calculator/",
+   "competitor": "Estate Step-Up in Basis Calculator (teamzlab)",
+   "features_checked": "oszczędność podatkowa ze step-up",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial wąski (moduł podatkowy), jednocelowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house rent vs sell calculator stepped-up basis",
+   "url": "https://robert-parish.com/blog/capital-gains-inherited-property-calculator",
+   "competitor": "Capital Gains on Inherited Property Calculator (robert-parish.com)",
+   "features_checked": "zysk kapitałowy przy sprzedaży odziedziczonej nieruchomości",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial wąski, jednocelowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house rent vs sell calculator stepped-up basis",
+   "url": "https://financial-advisors-for-inheritance.com/guides/inherited-real-estate/",
+   "competitor": "Financial Advisors for Inheritance – Sell, Rent, or Keep (2026 Guide)",
+   "features_checked": "opisowe porównanie sprzedaż/wynajem/zatrzymanie, amortyzacja od stepped-up FMV",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (przewodnik, prawdopodobnie lead-gen doradców); narzędzie niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house calculator compare sell as-is, renovate, rent, sibling buyout net proceeds per heir",
+   "url": "https://inheritedpropertymatch.com/inherited-property/sell-or-rent-inherited-property/",
+   "competitor": "Inherited Property Match",
+   "features_checked": "tabela opcji sprzedaż/wykup/wynajem/nic nie robić; sell or rent",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute jakościowy; brak obliczeń w podsumowaniu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house calculator compare sell as-is, renovate, rent, sibling buyout net proceeds per heir",
+   "url": "https://fasthomebuyercalifornia.com/renovating-inherited-property-california",
+   "competitor": "Fast Home Buyer California – Renovating Inherited Property (2026)",
+   "features_checked": "as-is vs remont: różnica cen vs koszt, koszty utrzymania × czas remontu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (framework A vs B, treść skupującego, stronnicza).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "estate settlement app inherited home sell or keep valuation probate real estate (Empathy, Atticus, Clever, HomeLight)",
+   "url": "https://www.opendoor.com/articles/sell-inherited-house",
+   "competitor": "Opendoor – Sell Inherited House guides",
+   "features_checked": "ścieżki sprzedaży (agent, FSBO, cash buyer)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (iBuyer, treści); brak modelu wariantów.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "estate settlement app inherited home sell or keep valuation probate real estate (Empathy, Atticus, Clever, HomeLight)",
+   "url": "n/d",
+   "competitor": "Empathy / Atticus / Clever / HomeLight (płatne platformy i portale agentów)",
+   "features_checked": "obecność narzędzi decyzyjnych dla odziedziczonego domu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; marki nie pojawiły się w wynikach",
+   "conclusion": "Niezweryfikowane – nie znaleziono w wynikach; nie oznacza braku funkcji. Notatka z wave-1 o Clever/HomeLight pozostaje niepotwierdzona.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit inherited house with siblings one wants to rent one wants to sell spreadsheet",
+   "url": "https://reddit.sentinel-team.org/posts/1qhfbt7/snapshots/2026-01-21T01%3A20%3A27.90356Z",
+   "competitor": "Reddit / arkusze kalkulacyjne",
+   "features_checked": "szablon arkusza lub narzędzie z forum",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Nie znaleziono szablonu arkusza ani narzędzia forumowego w badanym zakresie; jedynie wątek z radą o podatku od zysków.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit inherited house with siblings one wants to rent one wants to sell spreadsheet",
+   "url": "https://rocketmortgage.com/learn/inheriting-a-house-with-siblings",
+   "competitor": "Rocket Mortgage / SmartAsset / Nasdaq / CNB – artykuły",
+   "features_checked": "opcje wykup/sprzedaż/wynajem/mediacja, zarządzanie najmem, podatek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute treściowy; sygnał popytu i zainteresowania reklamodawców hipotecznych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+   "url": "https://underwood.law/blog/buying-out-a-sibling-vs-selling/",
+   "competitor": "Underwood Law – Buying Out a Sibling vs Selling (CA)",
+   "features_checked": "wykup vs sprzedaż, Prop 19",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (prawnik, treść stanowa CA). Wyniki wspominają też kalkulator kalifornijski ze scenariuszami Prop 19 – źródło nieustalone, niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tenants in common co-owner buyout calculator refinance cash-out partition vs sale",
+   "url": "https://www.mass.gov/info-details/frequently-asked-questions-about-partition-cases-in-the-land-court",
+   "competitor": "Partition / co-owner buyout (MA Land Court FAQ, Talkov Law, 1031ex, AmeriSave)",
+   "features_checked": "kalkulator wykupu współwłaściciela z refinansem, set-off vs sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "W terminologii TIC/co-owner nie znaleziono kalkulatora w badanym zakresie; tylko treści prawne (substitute).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inherited house rent vs sell calculator stepped-up basis",
+   "url": "https://www.nolo.com/legal-encyclopedia/if-you-inherit-home-do-you-qualify-the-home-sale-tax-exclusion.html",
+   "competitor": "Nolo – 121 exclusion dla odziedziczonego domu",
+   "features_checked": "zwolnienie 250/500 tys. USD dla spadkobiercy (wariant E)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute treściowy dla wariantu E; nie znaleziono narzędzia liczącego wariant E w badanym zakresie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (kontekst zadania)",
+   "url": "n/d",
+   "competitor": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "features_checked": "zdolność odpowiedzi na przykładowy prompt i generowania kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; nie testowano asystentów, informacja z kontekstu zadania",
+   "conclusion": "Substitute o wysokim prawdopodobieństwie pokrycia warstwy jakościowej i prostego wykupu; pełny model niezweryfikowany.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "my siblings and I inherited a house should we sell, rent it out, or buy each other out calculator",
+  "inherited house rent vs sell calculator stepped-up basis",
+  "mysharedhome.com inherited house siblings sell rent buyout decision tool",
+  "estate settlement app inherited home sell or keep valuation probate real estate (Empathy, Atticus, Clever, HomeLight)",
+  "reddit inherited house with siblings one wants to rent one wants to sell spreadsheet",
+  "inherited house calculator compare sell as-is, renovate, rent, sibling buyout net proceeds per heir",
+  "tenants in common co-owner buyout calculator refinance cash-out partition vs sale"
+ ]
+}

@@ -1,0 +1,464 @@
+{
+ "id": "RENO-03",
+ "competitors": [
+  {
+   "name": "Think Heat Pump – Heat Pump Calculator",
+   "url": "https://thinkheatpump.org/heat-pump-calculator/",
+   "type": "partial",
+   "access": "Darmowy kalkulator online (wg search-summary); strona nieotwierana, logowanie/paywall niezweryfikowane",
+   "covers_pl": "Wg search-summary porównuje opcje pompy ciepła z istniejącym układem piec gazowy + AC; wskazuje, że HP nie musi obniżyć kosztów ogrzewania (zależnie od lokalnych cen), ale obniża koszt chłodzenia, gdy zastępuje AC; zauważa, że ekonomika jest gorsza, gdy do wymiany jest tylko piec, a AC jest sprawne; uwzględnia wpływ rebat i ulg. Summary nazwał go najbliższym dopasowaniem do pytania o dual-fuel.",
+   "misses_or_unverified_pl": "Wariant naprawy z odroczeniem 1-3 lata i oczekiwany koszt kolejnych awarii – niezweryfikowane; wiek pieca jako jawne wejście – niezweryfikowane; obliczanie punktu przełączania dual-fuel – niezweryfikowane; horyzont 10-15 lat – niezweryfikowane; pojemność panelu – niezweryfikowane; zasięg geograficzny (krajowy czy regionalny program) – niezweryfikowany."
+  },
+  {
+   "name": "heat-pumps.guide – Repair AC or Furnace vs Switch to a Heat Pump (2026)",
+   "url": "https://heat-pumps.guide/guides/repair-or-replace-ac-furnace-vs-heat-pump",
+   "type": "partial",
+   "access": "Darmowy poradnik (wg tytułu i search-summary); strona nieotwierana",
+   "covers_pl": "Tytuł ramuje dokładnie tę decyzję (naprawa AC/pieca vs przejście na HP). Wg summary: progi wieku pieca (do ~12 lat w okresie życia, planowanie wymiany ~19 lat), reguła 50% kosztu naprawy, pęknięty wymiennik ciepła jako powód wymiany niezależnie od wieku.",
+   "misses_or_unverified_pl": "Czy zawiera interaktywny model wielookresowy, porównanie dual-fuel, lokalne ceny gazu/prądu, break-even ceny gazu – niezweryfikowane (może to być wyłącznie artykuł)."
+  },
+  {
+   "name": "Clean Energy Calc – Heat Pump vs Gas Furnace Calculator 2026",
+   "url": "https://cleanenergycalc.com/calculators/heat-pump-vs-gas",
+   "type": "partial",
+   "access": "Darmowy kalkulator (wg search-summary); strona nieotwierana",
+   "covers_pl": "Projekcja kosztu 20-letniego, stawki stanowe, potencjał rebat, oszczędność CO2.",
+   "misses_or_unverified_pl": "Wariant naprawy, wiek pieca, dual-fuel/punkt przełączania, mini-split, panel, koszt awarii – niezweryfikowane."
+  },
+  {
+   "name": "Solar Energy Calcs – Heat Pump vs Furnace Calculator",
+   "url": "https://www.solarenergycalcs.com/energy-calculators/heat-pump-vs-furnace",
+   "type": "partial",
+   "access": "Darmowy (wg tytułu 'Free Tool'); strona nieotwierana",
+   "covers_pl": "15-letni koszt operacyjny i rok break-even; dane EIA, NREL, IRS (wg summary).",
+   "misses_or_unverified_pl": "Naprawa i odroczenie, dual-fuel, wiek drugiego urządzenia, panel – niezweryfikowane."
+  },
+  {
+   "name": "HVACBase – Heating Cost Calculator (Gas vs Electric vs Heat Pump)",
+   "url": "https://www.hvacbase.org/heating-cost-calculator",
+   "type": "partial",
+   "access": "Darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Porównuje ogrzewanie i chłodzenie łącznie, przyjmuje ceny instalacji i rebaty, liczy payback; przykład: 2000 sq ft, 4500 HDD, piec 95% ~829 USD/rok vs HP ~1280 USD/rok przy założonych cenach.",
+   "misses_or_unverified_pl": "Wariant naprawy, dual-fuel, wiek pieca, koszt awarii, horyzont wielookresowy – niezweryfikowane."
+  },
+  {
+   "name": "SWEEP (Southwest Energy Efficiency Project) – heat pump calculator",
+   "url": "https://www.swenergy.org/heat-pump-calculator/",
+   "type": "partial",
+   "access": "Darmowy (organizacja non-profit, wg summary); strona nieotwierana",
+   "covers_pl": "Szacuje oszczędności ogrzewania i chłodzenia oraz emisje w horyzoncie 15 lat, przy średnich cenach stanowych.",
+   "misses_or_unverified_pl": "Naprawa vs wymiana, dual-fuel, wiek pieca, lokalne (nie stanowe) taryfy, panel – niezweryfikowane."
+  },
+  {
+   "name": "Intry – Dual-Fuel Switchover Calculator",
+   "url": "https://www.intrysys.com/tools/hvac/dual-fuel-switchover-calculator",
+   "type": "partial",
+   "access": "Darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Liczy ekonomiczny i termiczny punkt przełączania HP/gaz; pokazuje, że punkt zależy od taryf (przykład ~39°F przy 0,16 USD/kWh i 1,40 USD/therm).",
+   "misses_or_unverified_pl": "Pomija pobór dmuchawy/inducera pieca (wg summary); brak (niezweryfikowane) kosztu rocznego, kosztu inwestycji, wariantu naprawy i wieku urządzeń – to fragment decyzji."
+  },
+  {
+   "name": "DualFuelMath / DualFuelHP",
+   "url": "https://dualfuelmath.com/",
+   "type": "partial",
+   "access": "Darmowe (wg summary); strony nieotwierane",
+   "covers_pl": "Kalkulator 'Heat Pump vs Gas'; DualFuelHP (http://dualfuelhp.com/) liczy tylko ekonomiczny punkt równowagi.",
+   "misses_or_unverified_pl": "Termiczny balance point (DualFuelHP – brak wg summary), koszty wieloletnie, naprawa vs wymiana, wiek pieca – niezweryfikowane."
+  },
+  {
+   "name": "NRTech Studio – Heat Pump Sizing Calculator (Balance Point, Backup Heat & Dual-Fuel Switchover)",
+   "url": "https://nrtechstudio.com/tools/heat-pump-sizing-calculator/",
+   "type": "partial",
+   "access": "Darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Krzywa wydajności vs linia obciążenia budynku, punkt balansu, dobór grzałki zapasowej, przełączanie dual-fuel; korekta deratingu w mrozie; zaznacza potrzebę Manual J.",
+   "misses_or_unverified_pl": "Ekonomika wariantów, naprawa, wiek pieca, koszt 10-15 lat – niezweryfikowane (narzędzie raczej techniczne)."
+  },
+  {
+   "name": "Rewiring America – Personal Electrification Planner (+ Incentive API)",
+   "url": "https://www.rewiringamerica.org/newsroom/press-releases/personal-electrification-planner-ira-money-saving-tool",
+   "type": "partial",
+   "access": "Darmowy (wg summary); planer pod homes.rewiringamerica.org (adres z summary, nie jako link wyniku); strona nieotwierana",
+   "covers_pl": "Koszty początkowe, oszczędności rachunków (NREL ResStock + historyczne ceny EIA), emisje, zachęty wg dochodu i lokalizacji; osobny Savings Calculator i Incentive API (https://www.rewiringamerica.org/tools/incentive-api).",
+   "misses_or_unverified_pl": "Wariant naprawy z odroczeniem, wiek pieca, dual-fuel jako opcja, punkt przełączania, koszt awarii – niezweryfikowane; źródła głównie 2024-2025, aktualność zachęt po wygaśnięciu ulg federalnych niezweryfikowana."
+  },
+  {
+   "name": "HVAC Lifespan and Replacement Planner (hvacscalculator.com)",
+   "url": "https://hvacscalculator.com/planning/system-lifespan-replacement-planner/",
+   "type": "partial",
+   "access": "Darmowy (wg summary); strona nieotwierana",
+   "covers_pl": "Żywotność urządzeń wg ASHRAE/ENERGY STAR (piec 15-25 lat, rozważyć wymianę po 15; HP zużywa się szybciej niż AC); planowanie momentu wymiany.",
+   "misses_or_unverified_pl": "Porównanie kosztowe wariantów HP/dual-fuel, lokalne ceny energii, koszt awarii – niezweryfikowane."
+  },
+  {
+   "name": "Kalkulatory naprawa vs wymiana (myhomecostcalc.com, ecohomesolutions.com)",
+   "url": "https://myhomecostcalc.com/hvac/hvac-repair-cost-calculator/",
+   "type": "partial",
+   "access": "Darmowe (wg summary); strony nieotwierane; ecohomesolutions: https://ecohomesolutions.com/repair-or-replace/",
+   "covers_pl": "Reguła wiek × koszt naprawy > 5000 USD => wymiana (myhomecostcalc wg summary); reguła 50% kosztu nowego systemu; koszt naprawy.",
+   "misses_or_unverified_pl": "Funkcje ecohomesolutions poza tytułem – niezweryfikowane; brak (niezweryfikowane) porównania z HP/dual-fuel i kosztów energii."
+  },
+  {
+   "name": "Estymatory kosztu wymiany HVAC (hvacprojectcost.com, refconhvac.com, projectcostpro.com, hvaccostcalculator.net)",
+   "url": "https://hvacprojectcost.com/hvac-replacement-cost-estimator/",
+   "type": "partial",
+   "access": "Darmowe, w większości lead-gen (wg summary); strony nieotwierane",
+   "covers_pl": "Widełki kosztów instalacji 2026 (np. AC 4700-8000 USD, HP 5500-9500 USD, piec 3900-7000 USD wg jednego źródła); refconhvac odsyła do porównania naprawy vs wymiany przy naprawie >50%.",
+   "misses_or_unverified_pl": "Koszty eksploatacji, dual-fuel, wiek drugiego urządzenia, horyzont wielookresowy – niezweryfikowane; liczby niezależnie niezweryfikowane."
+  },
+  {
+   "name": "MassLandlords – Heat Pump vs Furnace Calculator",
+   "url": "https://masslandlords.net/heat-pump-vs-furnace/",
+   "type": "partial",
+   "access": "Wg summary kalkulator; ukierunkowany na Massachusetts/landlordów; strona nieotwierana",
+   "covers_pl": "Porównanie HP vs piec gazowy przy zastępowaniu gazu.",
+   "misses_or_unverified_pl": "Zasięg krajowy, naprawa, dual-fuel, wiek urządzeń – niezweryfikowane."
+  },
+  {
+   "name": "Efficiency Vermont – Heat Pump Balance Point Tool / CEE controls guide",
+   "url": "https://www.efficiencyvermont.com/trade-partners/heat-pump-balance-point-tool",
+   "type": "substitute",
+   "access": "Arkusz dla wykonawców (trade partners); strona nieotwierana",
+   "covers_pl": "Arkusz punktu balansu dla instalatorów; CEE (https://cee1.org/images/pdf/CEE_Controls_for_a_HP_with_Secondary_Heating_for_Contractors_TRC_01.16.24.pdf) podaje wzór ekonomicznego COP przełączania: taryfa prądu × 29,31 kWh/therm × AFUE / cena gazu.",
+   "misses_or_unverified_pl": "Narzędzie dla profesjonalistów, nie przeprowadza właściciela przez decyzję naprawa/wymiana; koszty wieloletnie – niezweryfikowane."
+  },
+  {
+   "name": "Fora (Bogleheads, TractorByNet, AnandTech)",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=458217",
+   "type": "substitute",
+   "access": "Darmowe, publiczne wątki; strony nieotwierane",
+   "covers_pl": "Porady dla 15-letnich jednostek (wymiana na inverter HP zamiast naprawy za 5000 USD), dual-fuel przełączający poniżej ~40°F, uwagi o spaleniu sprężarki.",
+   "misses_or_unverified_pl": "Brak modelu liczbowego; nie znaleziono arkusza decyzyjnego ani wątków Reddit w wynikach."
+  },
+  {
+   "name": "Marketplace'y i wykonawcy (HomeAdvisor, Modernize, 3 HVAC Quotes, poradniki kontraktorów)",
+   "url": "https://www.homeadvisor.com/near-me/heat-pump-repair-or-service/",
+   "type": "substitute",
+   "access": "Darmowe dla właściciela (lead-gen); strony nieotwierane",
+   "covers_pl": "Dopasowanie do do 3 lokalnych wykonawców i porównanie ofert; poradniki naprawa vs wymiana (reguła 50%, <8 lat zwykle naprawa); koszt naprawy sprężarki ~800-3500 USD wg źródeł.",
+   "misses_or_unverified_pl": "Brak niezależnego modelu wielowariantowego; konflikt interesów (sprzedaż)."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "brak URL w wynikach – nie dotyczy",
+   "type": "substitute",
+   "access": "Darmowe dla wszystkich użytkowników (wg kontekstu zadania: ChatGPT Intelligent UI od 7.10.2026, Google AI Mode od 19.08.2026)",
+   "covers_pl": "Mogą podać reguły (50%, wiek × koszt), wzór COP przełączania i wygenerować prosty interaktywny kalkulator w odpowiedzi.",
+   "misses_or_unverified_pl": "Spójność wielookresowego modelu, aktualne lokalne taryfy i rebaty, krzywe COP konkretnych urządzeń, audytowalność – niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 zapytań WebSearch, wyniki US, dowód wyłącznie z search-summary, strony nieotwierane); pewność niska-średnia. Pierwsze wyszukiwanie wprost podsumowało, że nie ma jednego narzędzia porównującego naprawę, wymianę i HP z gazowym backupem obok siebie. Fragmenty są jednak dobrze pokryte przez darmowe kalkulatory: koszt 15-20 lat HP vs piec przy stawkach stanowych (Clean Energy Calc, Solar Energy Calcs, SWEEP, HVACBase), punkt przełączania dual-fuel (Intry, DualFuelMath, NRTech), reguły naprawa/wymiana i żywotność (myhomecostcalc, hvacscalculator, heat-pumps.guide), zachęty (Rewiring America), a Think Heat Pump porównuje HP z istniejącym piecem+AC. Precyzyjna luka: jeden model, w którym (1) wariant naprawy z odroczeniem 1-3 lata ma oczekiwany koszt kolejnych awarii, (2) wiek drugiego urządzenia (pieca) przesuwa opłacalność wymiany łącznej vs etapowej, (3) ekonomiczny punkt przełączania dual-fuel liczony z lokalnych taryf i krzywej COP zasila koszt roczny, (4) wynik daje break-even ceny gazu i koszt 10-15 lat dla 5-6 wariantów (w tym mini-split i cold-climate HP), (5) koszt modernizacji panelu wchodzi w koszt instalacji, (6) zachęty po wygaśnięciu 25C (search-summary: kredyt dotyczył systemów oddanych do użytku do określonej daty). Ryzyko odrzucenia luki: Think Heat Pump i heat-pumps.guide mogą pokrywać więcej, niż widać w summary – wymaga ręcznej weryfikacji.",
+ "search_scope_pl": "7 zapytań WebSearch (6 extended + 1 extended dla advisorów), rynek US, 25.10.2026: fraza naturalna (naprawa vs wymiana vs HP z gazowym backupem), kategoria (heat pump vs gas furnace cost calculator), terminologia alternatywna (dual fuel/hybrid switchover balance point), narzędzia elektryfikacyjne (Rewiring America, Sealed), fora/arkusze (Reddit/spreadsheet), kalkulatory repair-or-replace z wiekiem pieca, płatne/advisor (EnergySage, Arbor). WebFetch zablokowany – żadna strona nie została otwarta, funkcje i paywalle znane tylko z search-summary. Nie zwrócono wyników dla: Sealed, ENERGY STAR (kalkulatory), EnergySage, Arbor, wątków Reddit – ich funkcje pozostają niezweryfikowane (nie 'brak'). Nie sprawdzano wolumenów wyszukiwań, CPC ani transition czynnika (R-410A -> A2L) – niezweryfikowane.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wątek Bogleheads o naprawie/wymianie HP (15-letnia jednostka, wycena naprawy 5000 USD na jednostkę, rada wymiany na inverter HP) – bezpośredni dowód, że ten dylemat jest zadawany online.",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=458217",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątki AnandTech 'Home air conditioning unit repair or replace' i 'Advice needed - AC Repair/Replacement' (koszt wymiany sprężarki ~900 USD + robocizna; użytkownik dual-fuel przełączający poniżej 40°F).",
+   "url": "https://forums.anandtech.com/threads/advice-needed-ac-repair-replacement.2620136/latest",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątki TractorByNet o pomocy przy HP i wymianie (15 lat 'stretching it', żywotność sprężarki ~10 lat).",
+   "url": "https://www.tractorbynet.com/forums/threads/who-makes-best-heat-pumps-hvac.384812",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wysyp kalkulatorów kosztów HVAC oznaczonych '2026' (hvacprojectcost, refconhvac, projectcostpro, hvaccostcalculator.net, cleanenergycalc) – pośredni sygnał popytu wyszukiwania i opłacalności SEO/lead-gen; jednocześnie oznaka zatłoczonego SERP.",
+   "url": "https://hvacprojectcost.com/hvac-replacement-cost-estimator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Marketplace'y lead-gen (HomeAdvisor, Modernize z przewodnikiem kosztów HP 2026, 3 HVAC Quotes) inwestują w treści o naprawie/wymianie HP – pośredni dowód wartości komercyjnej zapytań.",
+   "url": "https://modernize.com/hvac/heating-repair-installation/heat-pump",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Liczne poradniki wykonawców 'Heat Pump Repair vs Replacement: How to Decide' (Sig Cox, Eco Services WA, Manual Harbor, Tempercove) – pośredni sygnał, że to częste pytanie klientów.",
+   "url": "https://sigcox.com/heat-pump-repair-vs-replacement-how-to-decide/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Żywotność AC/HP 12-15 lat i pieca 15-25 lat (wg summary, ASHRAE/ENERGY STAR) => szacunkowo ok. 1/12-1/15 gospodarstw z centralnym AC staje rocznie przed decyzją; to szacunek zdarzeń rocznych, nie miesięczny popyt wyszukiwań; liczba gospodarstw z AC nie została sprawdzona w tym przebiegu.",
+   "url": "https://hvacscalculator.com/planning/system-lifespan-replacement-planner/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Kampania Rewiring America przed wygaśnięciem ulg federalnych na elektryfikację – wskazuje na falę decyzji wokół końca 25C i potrzebę przeliczenia ekonomiki bez ulgi w 2026.",
+   "url": "https://www.canarymedia.com/articles/electrification/campaign-use-home-tax-credits-expire",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: transition czynnika (R-410A -> A2L) podnosi koszt naprawy starszych jednostek i zwiększa liczbę zapytań 'repair or replace' – niezweryfikowane w tym przebiegu.",
+   "url": "brak URL – niezweryfikowane",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta: średnie-wysokie. Asystent bez problemu poda reguły kciuka (50% kosztu nowego systemu, wiek × koszt naprawy > 5000 USD), typowe żywotności, wzór ekonomicznego COP przełączania (taryfa × 29,31 × AFUE / cena gazu) i – dzięki ChatGPT Intelligent UI (od 7.10.2026) oraz Google AI Mode (od 19.08.2026) – wygeneruje prosty interaktywny kalkulator w odpowiedzi. Dla przykładowego promptu (sprężarka 2800 USD, AC 15 lat) asystent zwykle zarekomenduje wymianę i rozważenie HP/dual-fuel bez zewnętrznego narzędzia. Czynniki przemawiające za odesłaniem do narzędzia: potrzeba aktualnych lokalnych taryf i rebat (stanowe/utility po wygaśnięciu 25C), krzywych COP konkretnych modeli cold-climate, spójnego modelu 10-15 lat z 5-6 wariantami i kosztem awarii oraz audytowalności założeń (scenariusze cen gazu). Asystenci mogą też cytować istniejące kalkulatory (Think Heat Pump, Rewiring America, Intry), więc nowy serwis musi zbudować autorytet, by być linkowanym.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Awaria AC/pieca w wieku 12-20 lat to powtarzalne zdarzenie dla dużej części gospodarstw z centralnym HVAC; widoczny popyt na pytania online (fora, poradniki wykonawców, wysyp kalkulatorów 2026, lead-gen). Moment awarii jest pilny i wysoko intencyjny.",
+   "evidence_pl": "Wątki Bogleheads/AnandTech/TractorByNet; liczne kalkulatory 'repair or replace' i 'heat pump vs furnace' 2026; marketplace'y HomeAdvisor/Modernize; żywotność AC/HP 12-15 lat wg summary.",
+   "gaps_pl": "Brak danych o wolumenach wyszukiwań i liczbie wymian rocznie (AHRI/EIA nie sprawdzone); nie wiadomo, jaka część użytkowników rozważa dual-fuel/HP vs prostą wymianę 1:1.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Darmowe partiale pokrywają większość fragmentów (koszt 15-20 lat HP vs piec, punkt przełączania, reguły naprawa/wymiana, zachęty), ale w wynikach nie widać jednego modelu łączącego wariant naprawy z kosztem awarii, wiek pieca, dual-fuel z lokalnymi taryfami i break-even ceny gazu.",
+   "evidence_pl": "Summary pierwszego zapytania: brak jednego narzędzia porównującego naprawę, wymianę i HP z gazowym backupem; Think Heat Pump najbliżej; Intry/DualFuelMath tylko switchover; Clean Energy Calc/Solar Energy Calcs tylko HP vs piec w horyzoncie.",
+   "gaps_pl": "Strony nieotwierane – Think Heat Pump, heat-pumps.guide, Clean Energy Calc i Rewiring America planner mogą mieć więcej funkcji; Sealed, ENERGY STAR, EnergySage, Arbor niezweryfikowane.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Wymaga świeżych lokalnych danych (taryfy, rebaty po 25C, krzywe COP) i długiego modelu wielowariantowego, co sprzyja odesłaniu do narzędzia; ale rdzeń porady (reguły kciuka, wzór przełączania) asystent rozwiąże sam i potrafi renderować kalkulatory w odpowiedzi.",
+   "evidence_pl": "Kontekst: ChatGPT Intelligent UI i Google AI Mode generują interaktywne narzędzia; wzór CEE na ekonomiczny COP jest prosty; istnieją kalkulatory, które asystenci mogą cytować.",
+   "gaps_pl": "Brak danych, czy asystenci obecnie linkują zewnętrzne kalkulatory HVAC dla takich promptów; nie testowano odpowiedzi asystentów.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsumencki ruch US w module home services/HVAC w momencie zakupu (wymiana 5-15 tys. USD), z naturalnymi powiązaniami z finansowaniem (HELOC, pożyczki) i ubezpieczeniem domu; brak ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "Obecność lead-gen (HomeAdvisor, Modernize, 3 HVAC Quotes) i wielu komercyjnych kalkulatorów-lead-gen w wynikach wskazuje na wysoką wartość reklamową.",
+   "gaps_pl": "Nie sprawdzono CPC ani RPM AdSense dla HVAC; przychód zależy od skali ruchu, a SERP jest zatłoczony.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Dane bazowe są darmowe (ceny energii EIA, dane klimatyczne/HDD, Incentive API Rewiring America, wzory switchover), ale model wymaga krzywych COP w temperaturze, rozkładu godzin temperatur wg lokalizacji, widełek kosztów instalacji (brak autorytatywnego darmowego źródła), prawdopodobieństw awarii i aktualizacji rebat oraz kosztów czynnika.",
+   "evidence_pl": "Rewiring America Incentive API i planer oparty na ResStock/EIA; Intry/NRTech pokazują, że balance point da się liczyć z krzywych; widełki kosztów różnią się mocno między źródłami.",
+   "gaps_pl": "Warunki licencyjne Incentive API, dostępność danych o awaryjności i krzywych COP (np. listy cold-climate HP) niezweryfikowane.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy są finansowe (kilka tysięcy USD), nie katastrofalne, a interpretacja prawna ogranicza się do zachęt; jednak wyniki są bardzo wrażliwe na taryfy, COP i koszty instalacji, a kwestie bezpieczeństwa (pęknięty wymiennik, dobór mocy wymagający Manual J) wymagają wyraźnych zastrzeżeń.",
+   "evidence_pl": "Summary: brak uniwersalnej temperatury przełączania; pomijanie poboru dmuchawy; derating 80-90% w mrozie; Manual J potrzebny; widełki kosztów niezweryfikowane niezależnie.",
+   "gaps_pl": "Status 25C po 2025 oparty na search-summary; koszt czynnika niezweryfikowany.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Rdzeń (lokalne ceny energii, klimat/HDD, COP, rebaty, finansowanie, oś cash-flow 10-15 lat, koszt awarii/żywotność) jest wspólny dla rodziny remontów: HPWH vs gazowy podgrzewacz, kolejność ocieplenie vs HP, modernizacja panelu, solar + HP, wymiana okien, kuchnia indukcyjna.",
+   "evidence_pl": "Rewiring America planer obejmuje HP, HPWH, indukcję, suszarki, EV, solar na wspólnym silniku ResStock/EIA – potwierdza wspólność modułów.",
+   "gaps_pl": "Koszt uogólnienia silnika na inne urządzenia niezweryfikowany.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony ok. 3,7/5: wysoki potencjał reklamowy (HVAC/home services, moment zakupu), solidny popyt i bardzo dobry wspólny silnik dla rodziny remontów. Luka jest jednak umiarkowana i nisko pewna: rynek ma wiele darmowych partiali (Think Heat Pump, Clean Energy Calc, Intry, Rewiring America), SERP jest zatłoczony kalkulatorami 2026, a asystenci AI rozwiązują rdzeń porady sami. Przed pilotem: ręcznie otworzyć Think Heat Pump, heat-pumps.guide, Clean Energy Calc, HVACBase i planer Rewiring America (czy mają wariant naprawy, wiek pieca, dual-fuel, horyzont 10-15 lat), sprawdzić Sealed/ENERGY STAR/EnergySage, wolumeny i CPC dla 'repair or replace AC', 'heat pump vs furnace', 'dual fuel', oraz status czynnika i rebat stanowych. Jeśli integracja naprawa+wiek pieca+dual-fuel+break-even gazu się potwierdzi jako nieobecna – pilot jako pierwszy produkt silnika energetycznego.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "should I repair or replace my old AC or switch to a heat pump with gas furnace backup calculator",
+   "url": "https://thinkheatpump.org/heat-pump-calculator/",
+   "competitor": "Think Heat Pump – Heat Pump Calculator",
+   "features_checked": "porównanie HP z istniejącym piecem gazowym + AC; koszt chłodzenia; przypadek tylko piec do wymiany; rebaty/ulgi; naprawa; wiek pieca; switchover; horyzont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie/paywall niezweryfikowane",
+   "conclusion": "Partial, najbliższy wg summary; naprawa, wiek pieca jako input, switchover i horyzont 10-15 lat niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I repair or replace my old AC or switch to a heat pump with gas furnace backup calculator",
+   "url": "https://hvacscalculator.com/planning/system-lifespan-replacement-planner/",
+   "competitor": "HVAC Lifespan and Replacement Planner",
+   "features_checked": "żywotność AC/HP/pieca, moment wymiany, porównanie kosztowe wariantów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – fragment żywotności/timingu; brak dowodu na model kosztowy wariantów (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I repair or replace my old AC or switch to a heat pump with gas furnace backup calculator",
+   "url": "https://refconhvac.com/ac-replacement-cost-calculator/",
+   "competitor": "Estymatory kosztów wymiany HVAC (refconhvac, projectcostpro, hvacprojectcost, hvaccostcalculator.net)",
+   "features_checked": "widełki kosztów AC/HP/pieca 2026, reguła 50%, status 25C",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; serwisy lead-gen",
+   "conclusion": "Partial – tylko koszt inwestycji; summary: brak jednego narzędzia porównującego naprawę, wymianę i HP z gazowym backupem",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I repair or replace my old AC or switch to a heat pump with gas furnace backup calculator",
+   "url": "https://ecohomesolutions.com/repair-or-replace/",
+   "competitor": "EcoHome Solutions – HVAC Repair or Replace Calculator",
+   "features_checked": "logika naprawa vs wymiana; opcja HP/dual-fuel; koszty energii",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial (fragment naprawa/wymiana); funkcje poza tytułem niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump vs gas furnace cost comparison calculator",
+   "url": "https://cleanenergycalc.com/calculators/heat-pump-vs-gas",
+   "competitor": "Clean Energy Calc – Heat Pump vs Gas Furnace Calculator 2026",
+   "features_checked": "horyzont 20 lat, stawki stanowe, rebaty, CO2; naprawa; dual-fuel",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – wieloletni koszt HP vs gaz; naprawa, wiek pieca i dual-fuel niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump vs gas furnace cost comparison calculator",
+   "url": "https://www.solarenergycalcs.com/energy-calculators/heat-pump-vs-furnace",
+   "competitor": "Solar Energy Calcs – Heat Pump vs Furnace",
+   "features_checked": "15-letni koszt operacyjny, rok break-even, dane EIA/NREL/IRS",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – horyzont i break-even dla dwóch wariantów; brak dowodu na naprawę/dual-fuel",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump vs gas furnace cost comparison calculator",
+   "url": "https://www.hvacbase.org/heating-cost-calculator",
+   "competitor": "HVACBase – Heating Cost Calculator",
+   "features_checked": "ogrzewanie+chłodzenie, ceny instalacji, rebaty, payback, przykład 2000 sq ft/4500 HDD",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – koszt roczny i payback; naprawa, wiek pieca, dual-fuel niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump vs gas furnace cost comparison calculator",
+   "url": "https://www.swenergy.org/heat-pump-calculator/",
+   "competitor": "SWEEP – heat pump calculator",
+   "features_checked": "oszczędności ogrzewania/chłodzenia, emisje, 15 lat, średnie ceny stanowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – horyzont 15 lat przy cenach stanowych; brak dowodu na naprawę/dual-fuel",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump vs gas furnace cost comparison calculator",
+   "url": "https://masslandlords.net/heat-pump-vs-furnace/",
+   "competitor": "MassLandlords – Heat Pump vs Furnace Calculator",
+   "features_checked": "HP vs piec gazowy; zasięg geograficzny",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial, prawdopodobnie regionalny (MA); funkcje niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "dual fuel hybrid heat pump switchover balance point calculator",
+   "url": "https://www.intrysys.com/tools/hvac/dual-fuel-switchover-calculator",
+   "competitor": "Intry – Dual-Fuel Switchover Calculator",
+   "features_checked": "ekonomiczny i termiczny punkt przełączania, zależność od taryf, pobór dmuchawy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – pokrywa wyjście 'punkt przełączania dual-fuel'; nie integruje kosztów inwestycji ani naprawy (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "dual fuel hybrid heat pump switchover balance point calculator",
+   "url": "https://dualfuelmath.com/",
+   "competitor": "DualFuelMath / DualFuelHP",
+   "features_checked": "ekonomiczny balance point; termiczny balance point",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – fragment switchover; DualFuelHP tylko ekonomiczny wg summary",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "dual fuel hybrid heat pump switchover balance point calculator",
+   "url": "https://nrtechstudio.com/tools/heat-pump-sizing-calculator/",
+   "competitor": "NRTech Studio – Heat Pump Sizing Calculator",
+   "features_checked": "krzywa wydajności vs obciążenie, balance point, grzałka zapasowa, dual-fuel, derating",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial techniczny; brak dowodu na ekonomikę wariantów",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "dual fuel hybrid heat pump switchover balance point calculator",
+   "url": "https://www.efficiencyvermont.com/trade-partners/heat-pump-balance-point-tool",
+   "competitor": "Efficiency Vermont – Heat Pump Balance Point Tool (+ CEE guide)",
+   "features_checked": "arkusz balance point dla wykonawców; wzór ekonomicznego COP",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; sekcja dla trade partners",
+   "conclusion": "Substitute (arkusz profesjonalny), nie przeprowadza właściciela przez decyzję",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Rewiring America personal electrification planner heat pump savings calculator Sealed",
+   "url": "https://www.rewiringamerica.org/newsroom/press-releases/personal-electrification-planner-ira-money-saving-tool",
+   "competitor": "Rewiring America – Personal Electrification Planner / Savings Calculator / Incentive API",
+   "features_checked": "koszty, oszczędności (ResStock+EIA), emisje, zachęty wg dochodu/lokalizacji; naprawa; dual-fuel; wiek pieca",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; źródła 2024-2025",
+   "conclusion": "Partial – elektryfikacja i zachęty; naprawa, dual-fuel i wiek pieca niezweryfikowane; potencjalne źródło danych (Incentive API)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Rewiring America personal electrification planner heat pump savings calculator Sealed",
+   "url": "brak URL w wynikach",
+   "competitor": "Sealed, ENERGY STAR (z notatek wave-1)",
+   "features_checked": "istnienie narzędzia i funkcje",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary – summary nie rozpoznał 'Sealed'; ENERGY STAR nie pojawił się w wynikach",
+   "conclusion": "Niezweryfikowane – nie potwierdzono ani nie wykluczono; wymaga osobnego sprawdzenia",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit 15 year old AC compressor repair or replace heat pump dual fuel spreadsheet",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=458217",
+   "competitor": "Fora: Bogleheads, TractorByNet, AnandTech",
+   "features_checked": "porady naprawa vs wymiana, dual-fuel, arkusze decyzyjne",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; nie znaleziono wątków Reddit",
+   "conclusion": "Substitute (porady jakościowe); nie znaleziono arkusza decyzyjnego w wynikach",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HVAC repair or replace calculator furnace age heat pump option lifetime cost",
+   "url": "https://heat-pumps.guide/guides/repair-or-replace-ac-furnace-vs-heat-pump",
+   "competitor": "heat-pumps.guide – Repair AC or Furnace vs Switch to a Heat Pump (2026)",
+   "features_checked": "ramowanie decyzji, progi wieku pieca, reguła 50%, pęknięty wymiennik; interaktywny model",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (prawdopodobnie poradnik); najbliższe ujęcie problemu – kluczowe do ręcznej weryfikacji, czy zawiera kalkulator wielowariantowy",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HVAC repair or replace calculator furnace age heat pump option lifetime cost",
+   "url": "https://myhomecostcalc.com/hvac/hvac-repair-cost-calculator/",
+   "competitor": "myhomecostcalc – HVAC Repair Cost Calculator",
+   "features_checked": "koszt naprawy, reguła wiek × koszt > 5000 USD",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial – reguła kciuka naprawa/wymiana, bez kosztów energii (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "heat pump advisor service or app for homeowners compare repair vs replace quotes EnergySage Arbor",
+   "url": "https://www.homeadvisor.com/near-me/heat-pump-repair-or-service/",
+   "competitor": "HomeAdvisor, 3 HVAC Quotes, Modernize, poradniki wykonawców (Sig Cox, Eco Services WA)",
+   "features_checked": "porównanie ofert, reguły naprawa/wymiana, koszty naprawy sprężarki; EnergySage/Arbor",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; EnergySage i Arbor nie pojawiły się w wynikach (niezweryfikowane)",
+   "conclusion": "Substitute (lead-gen/wykonawcy); brak niezależnego modelu wielowariantowego w summary",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(kontekst zadania – bez wyszukiwania)",
+   "url": "brak URL – nie dotyczy",
+   "competitor": "ChatGPT Intelligent UI / Google AI Mode",
+   "features_checked": "generowanie interaktywnych kalkulatorów i reguł kciuka w odpowiedzi",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny – informacja z kontekstu zadania; nie testowano",
+   "conclusion": "Substitute o wysokim ryzyku samodzielnego rozwiązania rdzenia porady",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I repair or replace my old AC or switch to a heat pump with gas furnace backup calculator",
+  "heat pump vs gas furnace cost comparison calculator",
+  "dual fuel hybrid heat pump switchover balance point calculator",
+  "Rewiring America personal electrification planner heat pump savings calculator Sealed",
+  "reddit 15 year old AC compressor repair or replace heat pump dual fuel spreadsheet",
+  "HVAC repair or replace calculator furnace age heat pump option lifetime cost",
+  "heat pump advisor service or app for homeowners compare repair vs replace quotes EnergySage Arbor"
+ ]
+}

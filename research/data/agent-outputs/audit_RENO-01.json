@@ -1,0 +1,393 @@
+{
+ "id": "RENO-01",
+ "competitors": [
+  {
+   "name": "Solar Calcu – Free Solar Roof Replacement Calculator",
+   "url": "https://solarcalcu.com/solar-roof-replacement-calculator/",
+   "type": "partial",
+   "access": "darmowy (wg search-summary); strona nieotwierana",
+   "covers_pl": "Łączny koszt systemu PV i nowego dachu w jednym kalkulatorze. Ulgę ITC 30% liczy tylko od części PV. Według wyników wyszukiwania to najbliższy kalkulator łączący dach i PV.",
+   "misses_or_unverified_pl": "Wg summary stosuje ITC 30%. Dla zakupu przez właściciela ulga 25D wygasła po 2025, więc to założenie może być nieaktualne (czy chodzi o 25D, czy o 48E: niezweryfikowane). Horyzont sprzedaży, premia PV w cenie domu, wariant „PV teraz, dach później z detach/reset”, lease/PPA, NPV wielu wariantów i analiza wrażliwości: niezweryfikowane (brak w summary)."
+  },
+  {
+   "name": "Higher Power Solar – Roof Replacement Cost Calculator",
+   "url": "https://higherpowersolar.com/roof-replacement-cost-calculator/",
+   "type": "partial",
+   "access": "darmowy, regionalny (Southwest Florida) wg summary",
+   "covers_pl": "Koszt wymiany dachu. Reguła timingu „dach 15+ lat → najpierw wymiana”. Koszt demontażu i ponownego montażu PV ok. $4,500–8,750.",
+   "misses_or_unverified_pl": "Tylko jeden region. Porównanie wariantów, horyzont sprzedaży, forma własności i NPV: niezweryfikowane. Wygląda na narzędzie lead-gen instalatora."
+  },
+  {
+   "name": "roofcalc.org – Solar Roofing Calculator",
+   "url": "https://www.roofcalc.org/solar-roofing-calculator/",
+   "type": "partial",
+   "access": "darmowy; wg summary ok. 3 lata bez aktualizacji",
+   "covers_pl": "Szacunek kosztu i zwrotu przy zakupie dachu solarnego lub PV.",
+   "misses_or_unverified_pl": "Wg summary działa tylko dla zakupu (bez lease/PPA). Zasady podatkowe są prawdopodobnie sprzed 2026 (niezweryfikowane). Horyzont sprzedaży i detach/reset: niezweryfikowane."
+  },
+  {
+   "name": "shinglescalculator.com – Solar Roof Calculator",
+   "url": "https://shinglescalculator.com/calculators/solar-roof-calculator/",
+   "type": "partial",
+   "access": "darmowy",
+   "covers_pl": "Liczba paneli mieszczących się na dachu, roczna produkcja, oszczędności i okres zwrotu.",
+   "misses_or_unverified_pl": "Wg summary liczy zwrot po uldze 30% (dla zakupu przez właściciela w 2026 prawdopodobnie nieaktualne). Wymiana dachu, sprzedaż domu i warianty: niezweryfikowane."
+  },
+  {
+   "name": "RealCostIQ – 2026 Solar Payback Calculator",
+   "url": "https://realcostiq.com/solar-calculators/solar-payback-2026/",
+   "type": "partial",
+   "access": "darmowy",
+   "covers_pl": "Okres zwrotu PV po wygaśnięciu ulgi federalnej (przykład: 8 kW za $24,000 gotówką, zwrot ok. 12 lat).",
+   "misses_or_unverified_pl": "Dach, koszt detach/reset, horyzont sprzedaży, premia w cenie domu i lease/PPA: niezweryfikowane."
+  },
+  {
+   "name": "Solar Estimator Pro – Solar Payback Calculator 2026 (No Federal Tax Credit)",
+   "url": "https://solarestimatorpro.com/solar-payback-calculator-2026/",
+   "type": "partial",
+   "access": "darmowy",
+   "covers_pl": "Zwrot PV bez ulgi federalnej (wg summary krajowo ok. 9–14 lat).",
+   "misses_or_unverified_pl": "Dach, sprzedaż domu i porównanie wariantów: niezweryfikowane."
+  },
+  {
+   "name": "Google Project Sunroof",
+   "url": "https://sunroof.withgoogle.com/",
+   "type": "partial",
+   "access": "darmowy",
+   "covers_pl": "Potencjał dachu (geometria, nasłonecznienie), oszczędności oraz porównanie kredytu, leasingu i zakupu.",
+   "misses_or_unverified_pl": "Wiek i wymiana dachu, detach/reset, horyzont sprzedaży, aktualność zasad po 25D: niezweryfikowane."
+  },
+  {
+   "name": "PV Roof Planner – Free Solar Roof Calculator & Proposal Tool",
+   "url": "https://pvroofplanner.com/",
+   "type": "partial",
+   "access": "darmowy",
+   "covers_pl": "Kalkulator PV i generator oferty. Wynik finansowy opiera się na taryfach, kosztach i założeniach podanych przez użytkownika.",
+   "misses_or_unverified_pl": "Timing dachu, horyzont sprzedaży i warianty A–E: niezweryfikowane."
+  },
+  {
+   "name": "Aurora Solar / OpenSolar / Artemis (oprogramowanie ofertowe dla instalatorów)",
+   "url": "https://aurorasolar.com/",
+   "type": "substitute",
+   "access": "płatne B2B wg summary: Aurora $159–259/użytkownik/mies.; Artemis od $9.50 za ofertę; OpenSolar darmowy dla profesjonalistów. Konsument korzysta pośrednio, przez instalatora",
+   "covers_pl": "Model 3D dachu, cień, produkcja oraz scenariusze finansowania (gotówka, kredyt, lease, PPA). Artemis jest opisywany jako narzędzie ofertowe dla „solar and roofing”.",
+   "misses_or_unverified_pl": "Nie jest neutralnym narzędziem dla konsumenta (oferta sprzedawcy). Uwzględnienie horyzontu sprzedaży, premii w cenie domu i porównania kolejności dach/PV: niezweryfikowane."
+  },
+  {
+   "name": "Solar Bid Analyzer – Detach and Reset Solar Panels for Reroofing",
+   "url": "https://solarbidanalyzer.com/solar-detach-and-reset",
+   "type": "substitute",
+   "access": "darmowa treść (poradnik 2026)",
+   "covers_pl": "Treść o koszcie i procesie detach/reset przy wymianie dachu.",
+   "misses_or_unverified_pl": "Czy na stronie jest interaktywny kalkulator: niezweryfikowane. Porównania wariantów i horyzontu sprzedaży nie widać w summary."
+  },
+  {
+   "name": "Nuwatt Energy – Roof Replacement vs Solar decision guide / Is Solar Worth It in 2026",
+   "url": "https://nuwattenergy.com/en/solar-buyers-guide/roof-replacement-timing",
+   "type": "substitute",
+   "access": "darmowy poradnik",
+   "covers_pl": "Progi decyzyjne wg pozostałej żywotności dachu. W drugim artykule: przy sprzedaży za 5–8 lat lease/PPA może wyjść lepiej niż zakup; premia PV ok. 4% wartości domu (szacunek sprzedawcy).",
+   "misses_or_unverified_pl": "Statyczny poradnik, bez modelu wielookresowego. Liczby premii pochodzą od sprzedawcy i nie są poparte badaniem pierwotnym."
+  },
+  {
+   "name": "Poradniki reguł kciuka (ConsumerAffairs, Griffith Roofing „5 to 15 Year Rule”, SolarFY, Blue Raven)",
+   "url": "https://www.consumeraffairs.com/solar-energy/should-you-replace-your-roof-before-going-solar.html",
+   "type": "substitute",
+   "access": "darmowe treści",
+   "covers_pl": "Reguły: <5 lat pozostałej żywotności → wymiana przed PV; >15 lat → PV teraz. Koszt R&R $4,500–8,750. Oszczędność ok. $4,000 przy łączeniu (DOE, dane z 2021).",
+   "misses_or_unverified_pl": "Brak kalkulacji indywidualnej. Progi różnią się między źródłami. Horyzont sprzedaży i forma własności są pomijane albo tylko wspomniane."
+  },
+  {
+   "name": "Pakiety dach+PV kontraktorów i łączone finansowanie (np. Sunnova roof+solar loan 2020; Tesla Solar Roof)",
+   "url": "https://www.businesswire.com/news/home/20200205005433/en",
+   "type": "substitute",
+   "access": "oferta handlowa. Oferta Sunnova z 2020, dostępność dziś niezweryfikowana. Tesla Solar Roof nie pojawiła się w wynikach (niezweryfikowane)",
+   "covers_pl": "Wariant B (dach i PV razem) z finansowaniem jednym kredytem.",
+   "misses_or_unverified_pl": "Ocena stronnicza (sprzedawca). Brak porównania z wariantami A, C, D i E oraz z horyzontem sprzedaży."
+  },
+  {
+   "name": "DOE – A Consumer's Guide to Buying a House with Solar Panels",
+   "url": "https://www.energy.gov/eere/solar/consumers-guide-buying-house-solar-panels",
+   "type": "substitute",
+   "access": "darmowy poradnik rządowy",
+   "covers_pl": "Strona kupującego: wiek systemu a wiek dachu, żywotność falowników, komplikacje przy przejmowaniu leasingu.",
+   "misses_or_unverified_pl": "Poradnik dla kupującego, nie narzędzie dla sprzedającego. Bez kalkulacji."
+  },
+  {
+   "name": "EnergySage / SolarReviews / NREL PVWatts (z notatek fali 1)",
+   "url": "brak URL w wynikach tej fali; URL-e z fali 1 dotyczą EV tax credit i są nieadekwatne",
+   "type": "partial",
+   "access": "niezweryfikowane w tej fali (nie pojawiły się w wynikach 7 zapytań)",
+   "covers_pl": "Z wiedzy modelu, niezweryfikowane: szacunek produkcji i oszczędności PV (PVWatts) oraz marketplace i kalkulator ofert (EnergySage, SolarReviews).",
+   "misses_or_unverified_pl": "Funkcje dachu, detach/reset i horyzontu sprzedaży: niezweryfikowane. Notatki z fali 1 należy traktować jako niepotwierdzone."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode, Claude, Gemini) + arkusz / dekarz / instalator",
+   "url": "brak URL (substytut ogólny)",
+   "type": "substitute",
+   "access": "darmowe lub płatne. ChatGPT renderuje kalkulatory w odpowiedziach od 7.10.2026, Google AI Mode generuje interaktywne narzędzia od 19.08.2026",
+   "covers_pl": "Jakościowa odpowiedź na prompt przykładowy (reguły kciuka). Asystent może też szybko wygenerować tabelę lub formularz z 3–5 scenariuszami.",
+   "misses_or_unverified_pl": "Brak świeżych danych lokalnych (stawki detach/reset, taryfy eksportowe, lokalna premia PV). Model nie jest stabilny ani audytowalny. Niepewny stan 48E dla lease/PPA (źródła są sprzeczne)."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 zapytań WebSearch (extended), angielskie, rynek US. Dowody pochodzą wyłącznie z search-summary, strony nie były otwierane. Pewność średnio-niska. Istniejące narzędzia pokrywają fragmenty: (a) łączny koszt dachu i PV (Solar Calcu, roofcalc.org), (b) reguły kciuka wg wieku dachu i koszt R&R (Higher Power Solar, poradniki ConsumerAffairs i Nuwatt), (c) zwrot PV po wygaśnięciu 25D (RealCostIQ, Solar Estimator Pro), (d) porównanie zakupu, kredytu, leasingu i PPA (Project Sunroof, oprogramowanie instalatorów Aurora/OpenSolar/Artemis). W wynikach nie widać narzędzia, które w jednym modelu wielookresowym łączy trzy zależności: pozostałą żywotność dachu (wyznacza termin i koszt detach/reset), horyzont sprzedaży (ile wartości PV wraca w cenie albo jakie jest dyskonto za stary dach) i formę własności (zakup kontra lease/PPA z przeniesieniem umowy). Nie widać też żadnego, które dla wariantów A–E daje NPV, break-even horyzontu sprzedaży i analizę wrażliwości. Zapytanie wprost o narzędzie porównujące scenariusze zwróciło tylko poradniki. Uwaga dodatkowa: część kalkulatorów wg summary nadal stosuje ulgę 30%, co dla zakupu przez właściciela w 2026 wygląda na nieaktualne. To szansa, ale też dowód kosztu utrzymania. Zastrzeżenie: luka dotyczy integracji. Jakościową odpowiedź (reguły kciuka) dobrze dają poradniki i asystenci AI, więc wartość dodana musi wynikać z liczb, wrażliwości i świeżych danych.",
+ "search_scope_pl": "7 zapytań WebSearch w trybie extended (US-only). Mieszanka: (1) pytanie w języku naturalnym o kolejność dach/PV przy sprzedaży za 5 lat, (2) krótkie zapytanie kategorii „roof replacement and solar calculator”, (3) alternatywna terminologia „detach and reset / remove and reinstall”, (4) płatne oprogramowanie ofertowe dla instalatorów, (5) Reddit/fora, (6) kalkulatory zwrotu po 2026 bez ulgi z premią w cenie domu, (7) narzędzie porównania scenariuszy wg wieku dachu. WebFetch był zablokowany: żadna strona nie została otwarta, formularze nie były testowane, paywalle i loginy nie były sprawdzane. Funkcje spoza summary oznaczono jako „niezweryfikowane”. Nie sprawdzono osobno: EnergySage, SolarReviews, NREL PVWatts, Tesla Solar Roof, aplikacji mobilnych ani szablonów arkuszy na marketplace’ach (Etsy, Vertex42).",
+ "demand_signals": [
+  {
+   "signal_pl": "Duża podaż poradników z 2026 na pytanie „replace roof before solar” (ConsumerAffairs 2026, SolarFY 2026, Squaredash 2026, Griffith Roofing „5 to 15 Year Rule”, Blue Raven). Sugeruje stały popyt w wyszukiwarce. Wolumenu nie zmierzono.",
+   "url": "https://www.consumeraffairs.com/solar-energy/should-you-replace-your-roof-before-going-solar.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieje rynek leadów „solar detach and reset” (przewodnik o kosztach i pozyskiwaniu takich leadów). Problem wymiany dachu pod istniejącym PV jest więc na tyle częsty, że firmy kupują te kontakty. To także sygnał wartości reklamowej.",
+   "url": "https://scoutdata.com/guides/solar-detach-and-reset-leads",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pytanie użytkownika na forum Blind: „get solar and replace roof at same time”. Pojedynczy wątek, nie mierzy wolumenu.",
+   "url": "https://www.teamblind.com/post/get-solar-and-replace-roof-at-same-time-nddghxxy",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Artykuł o przypadku z Reddita: kupujący odkrywa martwy 18-letni system PV i dach do wymiany. Pokazuje stronę sprzedaży: stary dach z PV to ryzyko dyskonta, które tematyzuje wariant D.",
+   "url": "https://www.thecooldown.com/green-home/homebuyer-solar-system-roof-replacement/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele nowych stron typu „2026 solar payback calculator, no federal tax credit” (RealCostIQ, Solar Estimator Pro, Helios). Użytkownicy ponownie przeliczają opłacalność po wygaśnięciu 25D.",
+   "url": "https://realcostiq.com/solar-calculators/solar-payback-2026/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Treści łączą horyzont sprzedaży z formą własności: Nuwatt sugeruje lease/PPA przy sprzedaży za 5–8 lat, DOE ostrzega przed komplikacjami przy przenoszeniu leasingu. Wymiar sprzedaży jest więc rozpoznany, ale obsługiwany tylko tekstem.",
+   "url": "https://nuwattenergy.com/en/solar-worth-it-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Branża sprzedaje pakiety dach+PV (łączony kredyt Sunnova z 2020, oprogramowanie ofertowe „solar and roofing” typu Artemis). Wariant B jest aktywnie promowany, co rodzi potrzebę neutralnego porównania.",
+   "url": "https://www.businesswire.com/news/home/20200205005433/en",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: wygaśnięcie 25D po 2025 może zmniejszyć liczbę zakupów PV za gotówkę lub na kredyt, a więc pulę osób rozważających warianty A i B. Popyt może przesuwać się ku lease/PPA albo rezygnacji z PV. Liczb nie zweryfikowano.",
+   "url": "https://www.solar.com/learn/trump-and-the-fate-of-the-30-solar-tax-credit/",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnej odpowiedzi AI jest wysokie dla odpowiedzi jakościowej i średnie dla ilościowej. Prompt przykładowy da się rozstrzygnąć regułami kciuka, które widać nawet w summary wyszukiwarki: przy dachu z mniej niż 5–10 latami życia wymień go najpierw albo połącz z PV. Zwrot z zakupu PV po 25D wynosi ok. 9–14 lat, czyli więcej niż horyzont 5 lat, więc zakup opłaca się tylko przy realnej premii w cenie domu. Lease/PPA ma sens przy krótkim horyzoncie. ChatGPT (Intelligent UI od 7.10.2026) i Google AI Mode (od 19.08.2026) potrafią wyrenderować prosty formularz i tabelę 3–5 scenariuszy. AI nie zapewnia natomiast trzech rzeczy. Po pierwsze świeżych danych lokalnych: stawki detach/reset wahają się wg summary od $85 do $850 za panel, a taryfy eksportowe zależą od stanu. Po drugie stabilnego, audytowalnego modelu rocznego z wrażliwością i break-even. Po trzecie pewnego stanu 48E dla lease/PPA: źródła są sprzeczne, The Green Watt sugeruje, że termin już minął, a SEIA podaje 2027. To argumenty za odesłaniem do zewnętrznego narzędzia, ale tylko dla użytkowników chcących liczb. Większość zapytań zostanie obsłużona w odpowiedzi asystenta.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Problem jest realny i opisywany w wielu treściach z 2026. Docelowa grupa to jednak przecięcie trzech warunków: dach 15–22 lata, oferta lub rozważanie PV i sprzedaż za 2–8 lat. Po wygaśnięciu 25D część popytu na zakup PV może słabnąć.",
+   "evidence_pl": "Liczne poradniki z 2026 (ConsumerAffairs, SolarFY, Squaredash, Griffith), rynek leadów detach/reset (scoutdata), pojedyncze wątki forumowe (Blind, przypadek z Reddita w thecooldown), fala kalkulatorów zwrotu po 2026.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań i o liczbie gospodarstw w tym przecięciu. Nie sprawdzono trendu instalacji PV po 2025.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po 7 zróżnicowanych zapytaniach nie znaleziono narzędzia, które integruje żywotność dachu, detach/reset, horyzont sprzedaży z premią PV i formę własności w jednym modelu NPV. Częściowe narzędzia pomijają kluczowe zależności, a kilka ma nieaktualne założenia (ulga 30%). Nie daję 5: nie mogłem otworzyć stron, a oprogramowanie instalatorów może częściowo modelować te zależności (niezweryfikowane).",
+   "evidence_pl": "Solar Calcu (łączny koszt, ulga 30%), Higher Power Solar (regionalny, reguła 15 lat), RealCostIQ i Solar Estimator Pro (tylko zwrot PV), Project Sunroof (zakup/lease/kredyt bez dachu). Zapytanie nr 7 wprost nie zwróciło kalkulatora scenariuszy.",
+   "gaps_pl": "Strony nieotwierane. EnergySage, PVWatts i Tesla Solar Roof niesprawdzone w tej fali. Możliwe arkusze na marketplace’ach niesprawdzone.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Jakościową odpowiedź asystent daje sam, a interfejsy z generowanymi kalkulatorami jeszcze zmniejszają potrzebę odsyłania. Za zewnętrznym narzędziem przemawiają tylko lokalne dane, model wieloletni z wrażliwością i niepewność 48E.",
+   "evidence_pl": "Summary wyszukiwarki same udzielały kompletnych porad z regułami kciuka. Rozrzut lokalnych kosztów R&R ($85–850 za panel) i sprzeczne źródła o 48E wskazują na potrzebę świeżych danych.",
+   "gaps_pl": "Nie testowano realnych odpowiedzi ChatGPT ani Google AI Mode na prompt przykładowy ani tego, czy linkują do narzędzi.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Publiczność to amerykańscy właściciele domów w wertykałach o wysokiej wartości reklamowej: dekarstwo, solar, finansowanie remontów i HELOC, nieruchomości. Kategoria nie jest wrażliwa.",
+   "evidence_pl": "Rynek płatnych leadów detach/reset (scoutdata). Kalkulatory dachowe i solarne prowadzą instalatorzy jako lead-gen (Higher Power Solar, hdroofers). Branża oferuje łączone finansowanie dach+PV.",
+   "gaps_pl": "Brak danych CPC i RPM z wyszukiwań. Część ruchu może pochodzić spoza USA.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Silnik NPV jest prosty. Dane produkcji i taryf są dostępne publicznie (z wiedzy modelu: PVWatts API, URDB; niezweryfikowane w tej fali). Trudne lub zmienne pozostają: koszty detach/reset i dachu wg regionu, taryfy eksportowe i net metering wg stanu, status 48E dla lease/PPA (okno do 2027, sprzeczne źródła) i słabe dane o premii PV w cenie domu.",
+   "evidence_pl": "Rozrzut stawek R&R w summary od $85–175 (San Diego) do $350–850 za panel (Minnesota). Część kalkulatorów nie zaktualizowała ulgi 30%. The Green Watt podaje inny stan 48E niż SEIA.",
+   "gaps_pl": "Nie zweryfikowano dostępności i licencji API danych ani częstotliwości zmian taryf.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd nie jest katastrofalny, ale dotyczy decyzji wartej $20–50k. Ryzyko treści daje interpretacja podatkowa (48E, FEOC), przenoszenie leasingu i UCC przy sprzedaży oraz premia PV oparta głównie na szacunkach sprzedawców (3–4%).",
+   "evidence_pl": "Liniotech i Nuwatt podają premię 3–4% bez badania pierwotnego. Źródła są sprzeczne co do terminu ulgi dla TPO. DOE ostrzega przed problemami z leasingiem przy sprzedaży.",
+   "gaps_pl": "Nie sprawdzono badań LBNL ani Zillow o premii PV ani aktualnych wytycznych IRS.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Produkt używa wszystkich modułów wspólnych: wieloletniej osi przepływów, finansowania (gotówka, kredyt, lease/PPA), podatków (48E, ulgi stanowe, zwolnienia od podatku od nieruchomości), wartości domu i horyzontu sprzedaży oraz energii (produkcja, taryfy, inflacja cen). Daje naturalne produkty siostrzane: bateria i PV, pompa ciepła lub HVAC kontra sprzedaż, modernizacja instalacji elektrycznej i ładowarka EV, remont przed sprzedażą kontra dyskonto.",
+   "evidence_pl": "Treści łączą dach, PV, finansowanie i wartość domu (Nuwatt, DOE, Project Sunroof z porównaniem finansowania). Pokazuje to wspólne wejścia dla całej rodziny „Remonty i kolejność inwestycji w dom”.",
+   "gaps_pl": "Ocena architektoniczna, nie weryfikowana rynkowo.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważony wynik to ok. 3,55/5. Za: luka integracyjna jest prawdopodobna (nie znaleziono bezpośredniego konkurenta w badanym zakresie, pewność średnio-niska), wertykał reklamowy jest bardzo mocny (dach, solar, finansowanie), a silnik w pełni reużywalny dla rodziny produktów remontowych. Przeciw: wysokie ryzyko, że asystenci AI odpowiedzą sami na poziomie jakościowym, wąskie przecięcie grupy docelowej i zmienność regulacyjna (koniec 25D, okno 48E dla lease/PPA do 2027 przy sprzecznych źródłach, zmiany taryf eksportowych), która podnosi koszt automatycznego utrzymania. Przed pilotem: (1) sprawdzić wolumeny fraz „replace roof before solar”, „solar panel removal for roof replacement cost”, „do solar panels increase home value”, „sell house with solar lease”; (2) przetestować prompt przykładowy w ChatGPT i Google AI Mode i sprawdzić, czy odsyłają do narzędzi; (3) sprawdzić EnergySage, PVWatts, Tesla Solar Roof i szablony arkuszy; (4) rozważyć zbudowanie RENO-01 jako modułu wspólnego silnika „remont kontra sprzedaż” zamiast samodzielnej strony.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "roof replacement and solar calculator",
+   "url": "https://solarcalcu.com/solar-roof-replacement-calculator/",
+   "competitor": "Solar Calcu – Free Solar Roof Replacement Calculator",
+   "features_checked": "łączny koszt dach+PV, ulga ITC, horyzont sprzedaży, warianty, lease/PPA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: łączy koszt dachu i PV, stosuje ITC 30% (dla 25D w 2026 prawdopodobnie nieaktualne). Pozostałe funkcje niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof replacement and solar calculator",
+   "url": "https://higherpowersolar.com/roof-replacement-cost-calculator/",
+   "competitor": "Higher Power Solar – Roof Replacement Cost Calculator",
+   "features_checked": "koszt dachu, reguła timingu, koszt R&R, zasięg regionalny",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy, regionalny (SW Florida). Reguła 15 lat i R&R $4,500–8,750. Brak dowodu na model wariantów i sprzedaży.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof replacement and solar calculator",
+   "url": "https://www.roofcalc.org/solar-roofing-calculator/",
+   "competitor": "roofcalc.org – Solar Roofing Calculator",
+   "features_checked": "aktualność, forma własności",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy, wg summary przestarzały (~3 lata) i tylko dla zakupu.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof replacement and solar calculator",
+   "url": "https://shinglescalculator.com/calculators/solar-roof-calculator/",
+   "competitor": "shinglescalculator.com – Solar Roof Calculator",
+   "features_checked": "produkcja, oszczędności, zwrot, ulga",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: zwrot PV po uldze 30%, bez widocznego wymiaru dachu i sprzedaży.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar payback calculator if I sell my house home value premium 2026 no federal tax credit",
+   "url": "https://realcostiq.com/solar-calculators/solar-payback-2026/",
+   "competitor": "RealCostIQ – 2026 Solar Payback Calculator",
+   "features_checked": "zwrot po 25D, sprzedaż domu, dach",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: aktualny zwrot PV (~12 lat w przykładzie). Dach i sprzedaż niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar payback calculator if I sell my house home value premium 2026 no federal tax credit",
+   "url": "https://solarestimatorpro.com/solar-payback-calculator-2026/",
+   "competitor": "Solar Estimator Pro – Solar Payback Calculator 2026",
+   "features_checked": "zwrot bez ulgi federalnej",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: zwrot 9–14 lat krajowo. Brak dowodu na dach i sprzedaż.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roofing proposal software combined roof replacement solar financing savings analysis for homeowners",
+   "url": "https://sunroof.withgoogle.com/",
+   "competitor": "Google Project Sunroof",
+   "features_checked": "potencjał dachu, oszczędności, porównanie zakup/kredyt/lease",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: porównuje formy finansowania PV. Wiek dachu i sprzedaż niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roofing proposal software combined roof replacement solar financing savings analysis for homeowners",
+   "url": "https://aurorasolar.com/",
+   "competitor": "Aurora Solar / OpenSolar / Artemis",
+   "features_checked": "scenariusze finansowania, roof+solar proposals, cena, dostęp konsumenta",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatne B2B (Aurora $159–259/użytkownik/mies., Artemis od $9.50 za ofertę), wymaga konta instalatora",
+   "conclusion": "Substytut B2B (oferty sprzedawców), nie neutralne narzędzie konsumenckie. Modelowanie horyzontu sprzedaży niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roofing proposal software combined roof replacement solar financing savings analysis for homeowners",
+   "url": "https://pvroofplanner.com/",
+   "competitor": "PV Roof Planner",
+   "features_checked": "kalkulator PV i oferta, założenia użytkownika",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Częściowy: kalkulator i oferta PV. Timing dachu i sprzedaż niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar panel detach and reset cost reroof calculator remove and reinstall",
+   "url": "https://solarbidanalyzer.com/solar-detach-and-reset",
+   "competitor": "Solar Bid Analyzer – Detach and Reset",
+   "features_checked": "kalkulator detach/reset, koszty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Wyszukiwanie nie znalazło dedykowanego kalkulatora detach/reset, tylko poradniki z widełkami ($2,000–6,000 i $85–850 za panel). Substytut treściowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof age solar decision tool: replace roof first or install solar now, compare scenarios calculator",
+   "url": "https://nuwattenergy.com/en/solar-buyers-guide/roof-replacement-timing",
+   "competitor": "Nuwatt Energy – Roof Replacement vs Solar decision guide",
+   "features_checked": "progi decyzyjne, interaktywność, porównanie scenariuszy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Summary wprost: znaleziono poradniki, ale nie interaktywny kalkulator porównujący scenariusze. Substytut.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I replace my roof before installing solar if I plan to sell my house in 5 years",
+   "url": "https://www.consumeraffairs.com/solar-energy/should-you-replace-your-roof-before-going-solar.html",
+   "competitor": "Poradniki reguł kciuka (ConsumerAffairs, Griffith, SolarFY, Blue Raven)",
+   "features_checked": "progi wieku dachu, koszt R&R, horyzont sprzedaży, forma własności",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut: reguły <5 i >15 lat, R&R $4,500–8,750. Summary zaznacza, że wyniki nie obejmują obsługi PV przy sprzedaży.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit solar panels roof 18 years old selling house in a few years worth it",
+   "url": "https://www.energy.gov/eere/solar/consumers-guide-buying-house-solar-panels",
+   "competitor": "DOE – Consumer's Guide to Buying a House with Solar Panels",
+   "features_checked": "wiek systemu a dach, leasing przy sprzedaży",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (poradnik po stronie kupującego). Brak wątku z Reddita dokładnie o tej decyzji.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar and roofing proposal software combined roof replacement solar financing savings analysis for homeowners",
+   "url": "https://www.businesswire.com/news/home/20200205005433/en",
+   "competitor": "Sunnova – bundled roof + solar loan (2020)",
+   "features_checked": "łączone finansowanie dach+PV, aktualność",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; oferta z 2020, aktualna dostępność niezweryfikowana",
+   "conclusion": "Substytut dla wariantu B (oferta handlowa), bez porównania wariantów.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "solar payback calculator if I sell my house home value premium 2026 no federal tax credit",
+   "url": "https://www.thegreenwatt.com/solar-tax-credit/",
+   "competitor": "(kontekst regulacyjny) The Green Watt – status ulg 2026",
+   "features_checked": "25D, ulga dla TPO lease/PPA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Źródło sugeruje, że termin ulgi dla TPO mógł już minąć. To sprzeczne z założeniem „48E do 2027” (SEIA) z opisu produktu: ryzyko rzetelności wariantu E.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I replace my roof before installing solar if I plan to sell my house in 5 years",
+  "roof replacement and solar calculator",
+  "solar panel detach and reset cost reroof calculator remove and reinstall",
+  "solar and roofing proposal software combined roof replacement solar financing savings analysis for homeowners",
+  "reddit solar panels roof 18 years old selling house in a few years worth it",
+  "solar payback calculator if I sell my house home value premium 2026 no federal tax credit",
+  "roof age solar decision tool: replace roof first or install solar now, compare scenarios calculator"
+ ]
+}

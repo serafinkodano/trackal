@@ -1,0 +1,429 @@
+{
+ "id": "BIZ-01",
+ "competitors": [
+  {
+   "name": "Ecomcalculators.io – Fulfillment Cost Comparison (In-House vs 3PL vs FBA)",
+   "url": "https://ecomcalculators.io/fulfillment-cost-comparison",
+   "type": "partial",
+   "access": "Darmowy, prawdopodobnie bez logowania (wg search-summary; strona nieotwierana)",
+   "covers_pl": "Porównuje koszt na zamówienie dla in-house, 3PL i FBA: robocizna, storage, pick/pack, wysyłka; pokazuje sumę miesięczną przy podanym wolumenie.",
+   "misses_or_unverified_pl": "Niezweryfikowane: podział kanałów Amazon/Shopify i MCF, sezonowość Q4 i aged surcharge, horyzont wielookresowy, gotówka w zapasie w wielu węzłach, koszt migracji, wpływ utraty Prime na konwersję, wariant hybrydowy/overflow, tornado."
+  },
+  {
+   "name": "AMZ Prep – Free 3PL Cost Comparison Calculator (FBA, D2C & Storage) / 3PL assessment tool",
+   "url": "https://amzprep.com/3pl-assessment-tool/",
+   "type": "partial",
+   "access": "Darmowy; narzędzie lead-gen dostawcy 3PL (możliwy formularz kontaktowy – niezweryfikowane)",
+   "covers_pl": "Szacuje koszt 3PL na podstawie wolumenu prep dla FBA, liczby zamówień Shopify i paletowego storage; rynki Ameryka Płn. i Europa. Obejmuje więc model '3PL prepuje FBA + obsługuje DTC'.",
+   "misses_or_unverified_pl": "Niezweryfikowane: pełne porównanie z wariantem FBA+MCF i FBM, sezonowość, aged fees, gotówka w zapasie, migracja, Prime. Stronniczość – narzędzie sprzedażowe 3PL."
+  },
+  {
+   "name": "PackPro – Amazon FBA vs 3PL Fulfilment Calculator",
+   "url": "https://packprofulfilment.co.uk/amazon-fba-vs-3pl-calculator/",
+   "type": "partial",
+   "access": "Darmowy; UK (waluta i stawki prawdopodobnie brytyjskie – niezweryfikowane)",
+   "covers_pl": "Wejścia: miesięczny wolumen zamówień, rozmiar produktu, stopa zwrotów; wynik: miesięczny koszt obok siebie, szacowana oszczędność, marża brutto. Domyślne opłaty FBA wg pasm rozmiaru z możliwością nadpisania.",
+   "misses_or_unverified_pl": "Rynek UK, nie US. Brak w summary: MCF/podział kanałów, sezonowość, aged, gotówka, migracja, Prime, hybryda – niezweryfikowane."
+  },
+  {
+   "name": "Skupreme – Free Ecommerce Fulfillment Calculators (Amazon AWD vs Your 3PL; Amazon MCF vs Walmart WFS)",
+   "url": "https://skupreme.com/tools",
+   "type": "partial",
+   "access": "Darmowe (wg search-summary)",
+   "covers_pl": "Kalkulator AWD+FBA vs obecny 3PL (odpowiada fragmentowi wariantu C) oraz MCF vs WFS.",
+   "misses_or_unverified_pl": "Osobne kalkulatory jednocelowe; nie widać integracji sezonowości, podziału kanałów, gotówki w zapasie, migracji, Prime – niezweryfikowane."
+  },
+  {
+   "name": "Amazon Storage Pros – Amazon AWD vs 3PL Cost Calculator",
+   "url": "https://amazonstoragepros.com/amazon-awd-vs-3pl-cost-calculator/",
+   "type": "partial",
+   "access": "Darmowy; strona dostawcy usług magazynowych (lead-gen)",
+   "covers_pl": "Porównanie kosztów AWD z alternatywą 3PL jako upstream storage.",
+   "misses_or_unverified_pl": "Dotyczy tylko warstwy upstream storage; DTC/MCF, FBM, sezonowość, gotówka, migracja, Prime – niezweryfikowane."
+  },
+  {
+   "name": "AMZ Prep MCF Calculator (rozszerzenie Chrome)",
+   "url": "https://chromewebstore.google.com/detail/amazon-multi-channel-full/ecehmmikamdekododgoihhkfbbbkbieo",
+   "type": "partial",
+   "access": "Darmowe rozszerzenie przeglądarki; marketing 3PL ('save 30% vs MCF')",
+   "covers_pl": "Liczy opłaty MCF na stronach produktów Amazon (koszt na zamówienie DTC przez MCF).",
+   "misses_or_unverified_pl": "Pojedynczy element kosztu; brak modelu wariantów, sezonowości i gotówki (wg summary)."
+  },
+  {
+   "name": "MCF Connect – Comparing 3PLs and Amazon MCF: Pricing, Fulfillment, and Storage",
+   "url": "https://mcfconnect.com/compare",
+   "type": "partial",
+   "access": "Nieznany (strona nieotwierana); możliwe, że to statyczna strona porównawcza",
+   "covers_pl": "Porównanie 3PL vs MCF w zakresie cen, fulfillmentu i storage (tytuł wyniku).",
+   "misses_or_unverified_pl": "Nie wiadomo, czy to interaktywne narzędzie; wszystkie funkcje niezweryfikowane."
+  },
+  {
+   "name": "Seller Assistant – FBM and FBA Calculator",
+   "url": "https://www.sellerassistant.app/blog/fbm-and-fba-calculator-by-seller-assistant/",
+   "type": "partial",
+   "access": "Część płatnego narzędzia dla sprzedawców (szczegóły dostępu niezweryfikowane)",
+   "covers_pl": "Porównanie FBA vs FBM na poziomie produktu/jednostki (fragment wariantu D).",
+   "misses_or_unverified_pl": "Poziom pojedynczego ASIN; brak (wg summary) kanału DTC, 3PL, sezonowości, gotówki, migracji."
+  },
+  {
+   "name": "Amazon Revenue Calculator (Seller Central / FBA calculator)",
+   "url": "brak URL w wynikach – wzmianka w search-summary zapytania 'FBA vs 3PL calculator'",
+   "type": "partial",
+   "access": "Darmowy; oficjalny Amazon",
+   "covers_pl": "Dokładne opłaty FBA dla ASIN, rozbicie kosztów, zysk i marża netto; porównanie FBA vs własna realizacja na poziomie jednostki.",
+   "misses_or_unverified_pl": "Poziom jednostki, brak scenariuszy wielookresowych, 3PL, MCF dla Shopify, gotówki – na podstawie wiedzy ogólnej i summary; szczegóły niezweryfikowane."
+  },
+  {
+   "name": "Calcbee – 3PL Cost Calculator",
+   "url": "https://calcbee.com/calculators/ecommerce/fulfillment/3pl-cost-calculator/",
+   "type": "partial",
+   "access": "Darmowy (notatka z fali 1; nie pojawił się w 7 wyszukiwaniach fali 2)",
+   "covers_pl": "Szacunek kosztu 3PL (wg notatki z fali 1).",
+   "misses_or_unverified_pl": "Nie potwierdzono w tej fali; wszystkie funkcje niezweryfikowane. Prawdopodobnie kalkulator jednocelowy."
+  },
+  {
+   "name": "Sellerboard blog – What Amazon MCF Actually Costs Per Order (and When a 3PL Is Cheaper), 5.10.2026",
+   "url": "https://blog.sellerboard.com/2026/10/05/what-amazon-multi-channel-fulfillment-actually-costs-per-order-and-when-a-3pl-is-cheaper/",
+   "type": "substitute",
+   "access": "Darmowy artykuł",
+   "covers_pl": "Rozbicie kosztu MCF na zamówienie i progi, przy których 3PL jest tańszy; porównanie zysku netto na zamówieniu.",
+   "misses_or_unverified_pl": "Statyczna analiza, nie model użytkownika; summary wskazuje, że porównuje sprzedaż Amazon z Shopify, więc nie izoluje kosztu fulfillmentu."
+  },
+  {
+   "name": "WarehousingCosts.com – Amazon FBA vs 3PL: Full Cost Comparison (2026) + FBA Storage Fees (2026)",
+   "url": "https://warehousingcosts.com/guides/amazon-fba-vs-3pl",
+   "type": "substitute",
+   "access": "Darmowy poradnik",
+   "covers_pl": "Porównanie kosztów FBA vs 3PL z przykładami; w powiązanym poradniku stawki storage (Q4 2,40 USD/cu ft). Prawdopodobnie przykład liczbowy wariantu hybrydowego.",
+   "misses_or_unverified_pl": "Treść statyczna; brak interaktywnego modelu (niezweryfikowane)."
+  },
+  {
+   "name": "Ledgerport – 3PL vs FBA vs Self-Fulfillment: Total Cost Compared",
+   "url": "https://ledgerport.com/3pl-vs-fba-vs-self-fulfillment/",
+   "type": "substitute",
+   "access": "Darmowy artykuł",
+   "covers_pl": "Porównanie całkowitego kosztu trzech modeli (3PL, FBA, in-house).",
+   "misses_or_unverified_pl": "Treść statyczna; integracja sezonowości, gotówki i migracji niezweryfikowana."
+  },
+  {
+   "name": "DSCP Smart Fulfillment – FBA vs 3PL vs Hybrid",
+   "url": "https://dscpsmartfulfillment.com/blog/fba-vs-3pl-vs-hybrid/",
+   "type": "substitute",
+   "access": "Darmowy artykuł dostawcy 3PL",
+   "covers_pl": "Opisuje wariant hybrydowy (FBA dla Amazon, 3PL dla pozostałych kanałów) z zachowaniem Prime.",
+   "misses_or_unverified_pl": "Brak kalkulacji pod dane użytkownika (wg summary); stronniczość dostawcy."
+  },
+  {
+   "name": "Webgility – Comparing Amazon MCF fees vs FBA vs 3PL: A 2026 Guide",
+   "url": "https://www.webgility.com/blog/amazon-multi-channel-fulfillment-fees",
+   "type": "substitute",
+   "access": "Darmowy artykuł",
+   "covers_pl": "Porównanie opłat MCF, FBA i 3PL na 2026.",
+   "misses_or_unverified_pl": "Treść statyczna; brak modelu scenariuszy."
+  },
+  {
+   "name": "Oprogramowanie do planowania zapasów: SoStocked (SPS Commerce), Descartes Finale, Inventory Optimizer, ReplenishRadar, Prediko",
+   "url": "https://www.spscommerce.com/products/sostocked/",
+   "type": "substitute",
+   "access": "Płatne SaaS (SoStocked tylko na wycenę); wymagają integracji z Seller Central",
+   "covers_pl": "Zapasy i uzupełnianie w wielu węzłach (FBA, AWD, 3PL, własny magazyn), 12-miesięczny plan popytu (Inventory Optimizer), limity pojemności FBA (ReplenishRadar).",
+   "misses_or_unverified_pl": "Narzędzia operacyjne do istniejącej konfiguracji, nie do porównania strategii fulfillment; summary nie potwierdza modelowania gotówki ani kosztu wariantów."
+  },
+  {
+   "name": "Narzędzia enterprise do sieci/alokacji: ShipBob inventory placement, Manhattan Omnichannel Allocation",
+   "url": "https://www.manh.com/solutions/supply-chain-planning-software/inventory-allocation/omnichannel-allocation",
+   "type": "substitute",
+   "access": "Płatne/enterprise lub tylko dla klientów 3PL",
+   "covers_pl": "Alokacja zapasu między węzłami i kanałami na podstawie historii zamówień.",
+   "misses_or_unverified_pl": "Nie są specyficzne dla Amazon FBA/MCF; poza zasięgiem docelowej firmy 300–5000 zamówień/mies."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI od 7.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026) oraz doradcy/handlowcy 3PL",
+   "url": "brak URL (substytut ogólny)",
+   "type": "substitute",
+   "access": "Darmowe/powszechne; doradcy 3PL bezpłatnie w ramach sprzedaży",
+   "covers_pl": "Reguły kciuka (np. 3PL wygrywa powyżej ok. 200–500 zamówień DTC/mies.), prosta kalkulacja kosztu na zamówienie z danych użytkownika, wygenerowany kalkulator w odpowiedzi.",
+   "misses_or_unverified_pl": "Ryzyko nieaktualnych stawek (źródła sprzeczne: 0,78 vs 0,87 USD/cu ft), brak trwałego, audytowalnego modelu wielookresowego z datą stawek."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań extended, wyszukiwarka US, język angielski, 25.10.2026; tylko search-summary, strony nieotwierane; pewność niska do średniej). Nie widać narzędzia, które w jednym modelu wielookresowym porównuje 5 konfiguracji (A: FBA+MCF dla Shopify, B: FBA+3PL dla DTC, C: 3PL hub uzupełniający FBA/AWD, D: FBM/in-house, E: hybryda z overflow na Q4) i łączy zależności: sezonowość i wolumen → storage Q4 i aged surcharge; podział kanałów → koszt MCF vs 3PL na zamówienie; tier wymiarowy SKU → opłaty FBA; liczba węzłów → zapas bezpieczeństwa i zamrożona gotówka; migracja → okres podwójnych kosztów; utrata Prime → konwersja. Fragmenty pokrywa wiele darmowych partiali: koszt na zamówienie in-house/3PL/FBA przy jednym wolumenie (Ecomcalculators.io; PackPro – rynek UK), AWD vs 3PL (Skupreme, Amazon Storage Pros), opłaty MCF (rozszerzenie AMZ Prep), koszt 3PL z prepem FBA i zamówieniami Shopify (AMZ Prep), FBA vs FBM na jednostkę (Amazon Revenue Calculator, Seller Assistant), a także liczne poradniki 2026 z przykładami liczbowymi, również dla wariantu hybrydowego. Luka dotyczy więc integracji i horyzontu czasowego, a nie pojedynczych obliczeń. Kalkulatory dostawców 3PL to lead-geny i mogą mieć dodatkowe funkcje za formularzem; tych funkcji nie zweryfikowano. Wartość luki ogranicza to, że docelowy użytkownik i tak musi zebrać indywidualne wyceny 3PL, bo stawki rzadko są publiczne.",
+ "search_scope_pl": "7 wywołań WebSearch (wszystkie extended) 25.10.2026: zapytanie problemowe w języku naturalnym (MCF dla Shopify vs 3PL), krótka kategoria ('FBA vs 3PL calculator'), alternatywna terminologia (omnichannel fulfillment network cost model / AWD / inventory placement simulation), zapytanie Reddit/spreadsheet (nie zwróciło żadnych wątków Reddit), dwa zapytania o płatne oprogramowanie (fulfillment strategy / 3PL quotes, inventory planning multi-warehouse z cash flow) oraz drugie zapytanie kategorii (MCF vs 3PL / AWD calculator). WebFetch zablokowany: żadna strona nie została otwarta, formularzy nie testowano, nie widziano paywalli ani loginów; dowody pochodzą wyłącznie z podsumowań wyszukiwarki. Nie sprawdzono narzędzi w Seller Central (wymagają logowania), aplikacji z Amazon Selling Partner Appstore, szablonów Google Sheets ani grup na Facebooku. Calcbee z fali 1 nie pojawił się ponownie.",
+ "demand_signals": [
+  {
+   "signal_pl": "Duża podaż świeżych treści na ten temat w 2026 r. (Sellerboard 5.10.2026, Webgility, 3PL Guys, SKU Compass, 3plcost.com, AMZ Prep) wskazuje, że wydawcy i dostawcy widzą zainteresowanie zapytaniami 'MCF vs 3PL' oraz 'FBA vs 3PL'. Pośrednio pokazuje to też silną konkurencję SEO.",
+   "url": "https://blog.sellerboard.com/2026/10/05/what-amazon-multi-channel-fulfillment-actually-costs-per-order-and-when-a-3pl-is-cheaper/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wiele firm 3PL buduje darmowe kalkulatory jako lead-gen (AMZ Prep, PackPro, Amazon Storage Pros, Skupreme). Świadczy to o wartości komercyjnej tej decyzji i o tym, że firmy płacą za dotarcie do takich sprzedawców.",
+   "url": "https://amzprep.com/3pl-assessment-tool/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Cyklicznym wyzwalaczem decyzji jest skok stawki storage FBA w Q4 (2,40 USD/cu ft w okresie październik–grudzień wobec 0,78–0,87 USD/cu ft w styczniu–wrześniu; źródła podają różne stawki bazowe). Inne podsumowanie wspomina też o dopłacie MCF w okresie 15.10–14.01.",
+   "url": "https://warehousingcosts.com/guides/amazon-fba-storage-fees",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Według podsumowań wyszukiwania Amazon wycofał usługę prep w FBA, więc sprzedawcy muszą przenieść prep do siebie albo do 3PL. Jest to nowy wyzwalacz rozważania wariantu C. Konkretnej strony źródłowej w wynikach nie ustalono.",
+   "url": "brak jednoznacznego URL – wzmianka w search-summary zapytania o MCF vs 3PL",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Brak wątków Reddit/forum w wynikach. Popytu konwersacyjnego (pytań użytkowników) nie potwierdzono w tej fali.",
+   "url": "brak URL – zapytanie 'reddit FBA vs 3PL spreadsheet...' nie zwróciło wątków Reddit",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Liczba amerykańskich marek sprzedających na Amazon i Shopify z wolumenem 300–5000 zamówień miesięcznie to szacunkowo dziesiątki tysięcy. W wynikach nie ma żadnych danych na ten temat. Decyzja wraca co roku (zmiany opłat, Q4), ale populacja jest mała w porównaniu z decyzjami gospodarstw domowych.",
+   "url": "brak URL – szacunek modelowy",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest średnie. Asystent bez trudu poda reguły kciuka (MCF opłaca się przy niskim wolumenie DTC i lekkich produktach, 3PL lub hybryda powyżej ok. 200–500 zamówień DTC miesięcznie), a ChatGPT Intelligent UI i Google AI Mode mogą wygenerować prosty kalkulator kosztu na zamówienie z danymi z promptu. Na korzyść zewnętrznego narzędzia działają trzy rzeczy. Po pierwsze, aktualne i datowane tabele opłat (FBA wg tierów, Q4 storage, aged surcharge, inbound placement, dopłaty MCF, AWD) zmieniają się co roku i nawet źródła są ze sobą sprzeczne, więc asystent narażony jest na nieaktualne stawki. Po drugie, potrzebny jest model 12–24-miesięczny z sezonowością, zapasem w kilku węzłach i kosztem migracji. Po trzecie, wynik ma być audytowalny i nadawać się do pokazania wspólnikowi lub 3PL. Asystenci cytują jednak przede wszystkim liczne poradniki dostawców 3PL, które dominują w wynikach, więc odesłanie do niezależnego symulatora wymaga zbudowania autorytetu.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Decyzja realna i cykliczna (Q4, zmiany opłat, wycofanie prepu FBA, wzrost DTC), ale dotyczy wąskiej populacji firm B2B, a nie gospodarstw domowych.",
+   "evidence_pl": "Fala treści na 2026 rok o MCF vs 3PL i FBA vs 3PL (Sellerboard, Webgility, 3PL Guys, WarehousingCosts), lead-genowe kalkulatory wielu 3PL, skok storage Q4 do 2,40 USD/cu ft.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań i liczbie sprzedawców w przedziale 300–5000 zamówień miesięcznie; wątków Reddit nie znaleziono.",
+   "confidence": "low"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Partiale pokrywają większość fragmentów (koszt na zamówienie, AWD vs 3PL, MCF, FBA vs FBM), ale żadne znalezione narzędzie nie integruje wielookresowej sekwencji z sezonowością, gotówką w węzłach, migracją i Prime.",
+   "evidence_pl": "Ecomcalculators.io, PackPro, AMZ Prep, Skupreme, Amazon Storage Pros: wg summary to kalkulatory jednookresowe lub jednocelowe; oprogramowanie do planowania zapasów nie porównuje strategii.",
+   "gaps_pl": "Funkcje lead-genów za formularzami i płatnych SaaS niezweryfikowane; nie sprawdzono Selling Partner Appstore ani szablonów arkuszy.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Potrzeba świeżych, datowanych stawek i modelu wielookresowego przemawia za zewnętrznym narzędziem, ale reguły kciuka i prosty kalkulator AI wystarczą wielu użytkownikom.",
+   "evidence_pl": "Sprzeczne stawki w źródłach (0,78 vs 0,87 USD/cu ft; MCF 5,90 vs 8–15 USD); ChatGPT Intelligent UI i Google AI Mode generują kalkulatory.",
+   "gaps_pl": "Brak danych, jak często asystenci linkują do zewnętrznych kalkulatorów w tej niszy; konkurencja treści dostawców 3PL o cytowania.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 2,
+   "rationale_pl": "Audytorium B2B, małe i niszowe. Reklamodawcy (3PL, SaaS e-commerce) płacą dobrze za lead, ale AdSense przy małym ruchu da niewiele; to nie są konsumenckie branże typu ubezpieczenia czy kredyty hipoteczne.",
+   "evidence_pl": "Rynek opanowany przez 3PL budujące własne kalkulatory jako lead-gen, co pokazuje wartość leada, a nie potencjał display.",
+   "gaps_pl": "Brak danych o CPC i wolumenie; lepszym modelem mogą być afiliacja lub lead-gen do 3PL niż AdSense.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 2,
+   "rationale_pl": "Model złożony (5 wariantów, sezonowość, zapas bezpieczeństwa, tornado). Opłaty Amazon zmieniają się co roku i sezonowo, a stawki 3PL są niepubliczne (wyceny indywidualne), więc potrzebne są pasma benchmarków. Automatyczne utrzymanie jest trudne.",
+   "evidence_pl": "Summary: ShipBob i inni nie publikują stawek; źródła ostrzegają, że stare kalkulatory zaniżają koszty o 20–30%; dopłaty MCF w Q4; zmiany prepu FBA.",
+   "gaps_pl": "Nie sprawdzono, czy Amazon udostępnia tabele opłat w formie maszynowej; doświadczenie właściciela w logistyce częściowo obniża koszt treści.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy nie są katastrofalne: użytkownik i tak zbiera wyceny, a interpretacji prawnej jest niewiele. Ryzyko polega na utracie wiarygodności u doświadczonych sprzedawców przy nieaktualnych stawkach oraz na trudności z oszacowaniem utraty konwersji po utracie Prime.",
+   "evidence_pl": "Sprzeczne stawki i progi break-even w źródłach (50–200, 200, 500, 3000–5000 zamówień miesięcznie).",
+   "gaps_pl": "Brak danych o elastyczności konwersji po utracie Prime; założenia trzeba jasno datować.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 3,
+   "rationale_pl": "Wykorzystuje moduły osi cash-flow, gotówki w zapasie i finansowania. Daje rodzinę produktów pokrewnych: AWD vs 3PL, MCF vs WFS, FBA vs FBM, planer zapasu na Q4, symulator zamówień i płynności. Słabo łączy się z modułami domowymi (podatki osobiste, wartość domu, energia).",
+   "evidence_pl": "Istnienie osobnych kalkulatorów AWD vs 3PL, MCF vs WFS i FBA vs FBM pokazuje naturalne warianty pokrewne.",
+   "gaps_pl": "Wspólny silnik z innymi rodzinami produktów portfela niepotwierdzony.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "później",
+ "recommendation_reason_pl": "Wynik ważony to ok. 2,75/5. Luka integracyjna jest prawdopodobna (nie znaleziono bezpośredniego konkurenta w badanym zakresie, pewność niska do średniej), ale rynek jest gęsto obsadzony darmowymi partialami i poradnikami dostawców 3PL. Audytorium jest niszowe i B2B, co słabo pasuje do modelu AdSense-first. Utrzymanie automatyczne jest trudne, bo opłaty Amazon zmieniają się co roku i sezonowo, a stawki 3PL są niepubliczne. Produkt warto odłożyć do czasu zbudowania wspólnego silnika zapasu i gotówki dla rodziny e-commerce. Wtedy można go przetestować najpierw jako lżejszy moduł ('MCF vs 3PL break-even + koszt Q4'), rozważając monetyzację afiliacyjną lub lead-gen zamiast AdSense. Przed ewentualnym pilotem trzeba zweryfikować funkcje lead-genów AMZ Prep i Skupreme, Selling Partner Appstore oraz popyt na forach.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL calculator",
+   "url": "https://ecomcalculators.io/fulfillment-cost-comparison",
+   "competitor": "Ecomcalculators.io – Fulfillment Cost Comparison",
+   "features_checked": "Koszt na zamówienie in-house/3PL/FBA (robocizna, storage, pick/pack, wysyłka), suma miesięczna przy wolumenie; podział kanałów, sezonowość, gotówka, migracja, Prime",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; login/paywall nieznane",
+   "conclusion": "Partial: jednookresowe porównanie kosztu; integracja kluczowych zależności niezweryfikowana",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL calculator",
+   "url": "https://amzprep.com/3pl-assessment-tool/",
+   "competitor": "AMZ Prep – Free 3PL Cost Comparison Calculator: FBA, D2C & Storage",
+   "features_checked": "Wolumen prepu FBA, zamówienia Shopify, storage paletowy, region NA/EU; porównanie z FBA+MCF, sezonowość, gotówka",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie lead-gen, możliwy formularz kontaktowy (niezweryfikowane)",
+   "conclusion": "Partial: pokrywa koszt wariantu C (3PL z prepem dla FBA i obsługą DTC); pełne porównanie wariantów niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL calculator",
+   "url": "https://packprofulfilment.co.uk/amazon-fba-vs-3pl-calculator/",
+   "competitor": "PackPro – Amazon FBA vs 3PL Fulfilment Calculator",
+   "features_checked": "Wolumen, rozmiar produktu, zwroty; miesięczny koszt obok siebie, oszczędność, marża brutto; nadpisywanie opłat FBA",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; rynek UK",
+   "conclusion": "Partial, rynek UK: porównanie jednookresowe 2 wariantów",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon MCF vs 3PL calculator AWD cost calculator",
+   "url": "https://skupreme.com/tools",
+   "competitor": "Skupreme – Amazon AWD vs Your 3PL Cost Calculator; Amazon MCF vs Walmart WFS Calculator",
+   "features_checked": "AWD+FBA vs obecny 3PL; MCF vs WFS",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: osobne kalkulatory jednocelowe, bez widocznej integracji",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon MCF vs 3PL calculator AWD cost calculator",
+   "url": "https://amazonstoragepros.com/amazon-awd-vs-3pl-cost-calculator/",
+   "competitor": "Amazon Storage Pros – Amazon AWD vs 3PL Cost Calculator",
+   "features_checked": "Koszt AWD vs 3PL jako upstream storage",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; strona dostawcy (lead-gen)",
+   "conclusion": "Partial: wycinek wariantu C",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon MCF vs 3PL calculator AWD cost calculator",
+   "url": "https://chromewebstore.google.com/detail/amazon-multi-channel-full/ecehmmikamdekododgoihhkfbbbkbieo",
+   "competitor": "AMZ Prep MCF Calculator (rozszerzenie Chrome)",
+   "features_checked": "Opłaty MCF na stronach produktów Amazon",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wymaga instalacji rozszerzenia",
+   "conclusion": "Partial: pojedynczy składnik kosztu (MCF na zamówienie)",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon MCF vs 3PL calculator AWD cost calculator",
+   "url": "https://mcfconnect.com/compare",
+   "competitor": "MCF Connect – Comparing 3PLs and Amazon MCF",
+   "features_checked": "Ceny, fulfillment, storage 3PL vs MCF (tylko tytuł wyniku)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial lub substitute: charakter strony i funkcje niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL calculator",
+   "url": "https://www.sellerassistant.app/blog/fbm-and-fba-calculator-by-seller-assistant/",
+   "competitor": "Seller Assistant – FBM and FBA Calculator",
+   "features_checked": "Porównanie FBA vs FBM na poziomie produktu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; prawdopodobnie część płatnego narzędzia (niezweryfikowane)",
+   "conclusion": "Partial: fragment wariantu D, poziom jednostki",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "FBA vs 3PL calculator",
+   "url": "brak URL w wynikach – wzmianka w search-summary",
+   "competitor": "Amazon Revenue Calculator",
+   "features_checked": "Opłaty FBA per ASIN, zysk i marża netto",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wg summary dostępny w Seller Central (możliwy login)",
+   "conclusion": "Partial: poziom jednostki, bez scenariuszy wielookresowych",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "nie powtórzono w fali 2 (notatka z fali 1)",
+   "url": "https://calcbee.com/calculators/ecommerce/fulfillment/3pl-cost-calculator/",
+   "competitor": "Calcbee – 3PL Cost Calculator",
+   "features_checked": "Koszt 3PL (wg notatki z fali 1)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary z fali 1; w fali 2 nie pojawił się",
+   "conclusion": "Partial, niezweryfikowany w tej fali",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+   "url": "https://blog.sellerboard.com/2026/10/05/what-amazon-multi-channel-fulfillment-actually-costs-per-order-and-when-a-3pl-is-cheaper/",
+   "competitor": "Sellerboard blog (5.10.2026)",
+   "features_checked": "Koszt MCF na zamówienie, próg opłacalności 3PL, zysk netto na zamówieniu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: statyczna analiza; świeży sygnał popytu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+   "url": "https://warehousingcosts.com/guides/amazon-fba-vs-3pl",
+   "competitor": "WarehousingCosts.com – Amazon FBA vs 3PL (2026)",
+   "features_checked": "Porównanie kosztów, przykłady liczbowe, stawki storage Q4",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: poradnik bez modelu użytkownika (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+   "url": "https://ledgerport.com/3pl-vs-fba-vs-self-fulfillment/",
+   "competitor": "Ledgerport – 3PL vs FBA vs Self-Fulfillment",
+   "features_checked": "Całkowity koszt 3 modeli",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: artykuł statyczny",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+   "url": "https://dscpsmartfulfillment.com/blog/fba-vs-3pl-vs-hybrid/",
+   "competitor": "DSCP Smart Fulfillment – FBA vs 3PL vs Hybrid",
+   "features_checked": "Opis wariantu hybrydowego z zachowaniem Prime",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: artykuł dostawcy, brak kalkulacji pod dane użytkownika (wg summary)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+   "url": "https://www.webgility.com/blog/amazon-multi-channel-fulfillment-fees",
+   "competitor": "Webgility – MCF vs FBA vs 3PL 2026 Guide",
+   "features_checked": "Porównanie opłat MCF/FBA/3PL",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute: poradnik statyczny",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "inventory planning software Amazon FBA AWD 3PL multi-warehouse replenishment cash flow forecast for brands",
+   "url": "https://www.spscommerce.com/products/sostocked/",
+   "competitor": "SoStocked (SPS Commerce) oraz Descartes Finale, Inventory Optimizer, ReplenishRadar",
+   "features_checked": "Zapasy i uzupełnianie w węzłach FBA/AWD/3PL, plan popytu, limity pojemności; cash flow; porównanie strategii",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatne SaaS, SoStocked tylko na wycenę, integracja z Seller Central",
+   "conclusion": "Substitute: narzędzia operacyjne, nie porównują konfiguracji; modelowania cash flow summary nie potwierdza",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "omnichannel fulfillment network cost model tool Amazon AWD MCF 3PL inventory placement simulation",
+   "url": "https://www.manh.com/solutions/supply-chain-planning-software/inventory-allocation/omnichannel-allocation",
+   "competitor": "Manhattan Omnichannel Allocation; ShipBob inventory placement",
+   "features_checked": "Alokacja zapasu między węzłami i kanałami",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; enterprise lub tylko dla klientów 3PL",
+   "conclusion": "Substitute poza segmentem docelowym; brak narzędzia specyficznego dla Amazon w tym zapytaniu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit FBA vs 3PL spreadsheet MCF Shopify Q4 storage fees overflow",
+   "url": "https://warehousingcosts.com/guides/amazon-fba-storage-fees",
+   "competitor": "Brak wątków Reddit; poradniki o opłatach storage i MCF (WarehousingCosts, 3PL Guys, 3plcost.com, SKU Compass)",
+   "features_checked": "Szablony arkuszy, wątki forum, stawki storage Q4, aged surcharge",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; Reddit nie pojawił się w wynikach",
+   "conclusion": "Nie znaleziono arkuszy ani wątków forum; poradniki zalecają budowę własnego modelu z Q4, aged i minimami 3PL, co pośrednio potwierdza lukę",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I use Amazon Multi-Channel Fulfillment for Shopify orders or a 3PL that preps FBA cost comparison",
+  "FBA vs 3PL calculator",
+  "omnichannel fulfillment network cost model tool Amazon AWD MCF 3PL inventory placement simulation",
+  "reddit FBA vs 3PL spreadsheet MCF Shopify Q4 storage fees overflow",
+  "fulfillment strategy software for Amazon sellers compare 3PL quotes landed cost per order inventory planning app",
+  "Amazon MCF vs 3PL calculator AWD cost calculator",
+  "inventory planning software Amazon FBA AWD 3PL multi-warehouse replenishment cash flow forecast for brands"
+ ]
+}

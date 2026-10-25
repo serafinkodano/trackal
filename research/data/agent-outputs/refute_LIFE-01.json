@@ -1,0 +1,96 @@
+{
+ "id": "LIFE-01",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "Effective Agents – Selling an Inherited House: Taxes, Timing, Keep or Sell (2026) – kalkulator sell vs keep-as-rental",
+   "url": "https://www.effectiveagents.com/resources/inheriting-a-house-to-sell-or-not-to-sell",
+   "classification": "partial",
+   "evidence_pl": "NOWY kandydat (nie było go w poprzednim audycie). Search-summary: Effective Agents 'has a calculator that estimates capital gains tax if you sell and compares that to the costs and income of keeping the home as a rental'. To najbliższe dotąd narzędzie porównujące dwie ścieżki (A vs C) w jednym widoku. W podsumowaniu brak wzmianki o wykupie rodzeństwa z refinansem (D), remoncie przed sprzedażą (B), zamieszkaniu i zwolnieniu 121 (E) oraz o różnych stawkach podatkowych poszczególnych spadkobierców. To strona lead-gen agentów nieruchomości.",
+   "what_to_check_manually_pl": "Otworzyć stronę i sprawdzić pola kalkulatora: czy ma horyzont wieloletni, amortyzację i odzyskanie amortyzacji (recapture), liczbę spadkobierców i udziały, opcję wykupu i remontu oraz czy wynik to porównanie netto na spadkobiercę. Jeśli tak, klasyfikację trzeba podnieść."
+  },
+  {
+   "name": "LadderedProperty – Inherited Property Buyout Calculator (oraz katalog /tools)",
+   "url": "https://www.ladderedproperty.com/tools/inherited-property-buyout-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary potwierdza dane z poprzedniego audytu i je uzupełnia: narzędzie 'handles equal and unequal shares, up to six beneficiaries, and shows the loan you'd need if you're refinancing to fund the buyout'. Pokrywa więc wariant D (wykup z refinansem) dla 2–6 spadkobierców. Podsumowanie nie wspomina o porównaniu ze sprzedażą, wynajmem, remontem ani 121.",
+   "what_to_check_manually_pl": "Przejrzeć katalog /tools: czy ten sam serwis ma kalkulator keep vs sell albo rent vs sell i czy narzędzia są ze sobą połączone (wspólne dane wejściowe, zestawienie wyników). Połączony zestaw mógłby się zbliżyć do konkurenta bezpośredniego."
+  },
+  {
+   "name": "My Shared Home – Sibling Buyout Calculator",
+   "url": "https://mysharedhome.com/learn/sibling-buyout-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Ponownie w wynikach dla zapytania o porównanie sell, rent, keep i buyout. Podsumowanie wymienia go tylko jako kalkulator wykupu (wzór: wycena minus dług, razy udział) i dodaje: 'I couldn't find a single tool that compares all four options side by side'.",
+   "what_to_check_manually_pl": "Sprawdzić, czy sekcja /learn albo aplikacja serwisu ma narzędzie wielowariantowe (rent vs sell vs buyout) lub płatny produkt dla współwłaścicieli."
+  },
+  {
+   "name": "FastProbates – Heir Buyout Calculator (2026)",
+   "url": "https://fastprobates.com/heir-buyout-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: 'gives you the equity, each heir's share, and the buyout amount the keeping heir pays'. Narzędzie pokrywa tylko wariant D.",
+   "what_to_check_manually_pl": "Sprawdzić, czy kalkulator uwzględnia koszty utrzymania pustego domu w probate i porównanie ze sprzedażą."
+  },
+  {
+   "name": "Mashvisor – rental property calculator / 'Inheriting property: sell or rent out'",
+   "url": "https://www.mashvisor.com/blog/inheriting-property-sell-or-rent-out/",
+   "classification": "substitute",
+   "evidence_pl": "NOWY. Search-summary (zapytanie w stylu Reddita): kalkulator Mashvisor jest 'the most direct match… rental comps and cash flow estimates… it's a sales pitch'. To ogólny kalkulator inwestora najmu: brak w nim step-up, wielu spadkobierców, wykupu i 121. Pokrywa wyłącznie warstwę czynszu rynkowego i przepływów pieniężnych.",
+   "what_to_check_manually_pl": "Sprawdzić, czy artykuł zawiera osadzony kalkulator sell vs rent dla spadku, czy tylko odsyła do płatnego produktu (subskrypcja)."
+  },
+  {
+   "name": "WealthVieu – Inherited house: sell or keep",
+   "url": "https://wealthvieu.com/personal-finance/inheritance/inherited-house-sell-or-keep/",
+   "classification": "substitute",
+   "evidence_pl": "NOWY. Pojawił się w wynikach zapytania o arkusz sell vs rent. Podsumowanie zbiorcze przywołuje koszty utrzymania (10–25 tys. USD rocznie) i projekcje na 1, 5 i 10 lat, ale nie przypisuje ich jednoznacznie temu źródłu. Nie wiadomo, czy to kalkulator, czy artykuł.",
+   "what_to_check_manually_pl": "Otworzyć i ustalić, czy strona ma interaktywny kalkulator keep vs sell z horyzontem wieloletnim. Jeśli tak, to raczej konkurent częściowy (A vs C)."
+  },
+  {
+   "name": "Kalkulatory step-up i zysku kapitałowego: CalculatorHub, SimplyTrust (CA), CapitalTaxCalc, robert-parish.com, teamzlab",
+   "url": "https://calculatorhub.com/tools/step-up-basis-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary pokazuje kolejne kalkulatory tylko warstwy podatkowej: step-up od wartości z dnia śmierci, zysk przy szybkiej sprzedaży, wpływ amortyzacji na zysk. Inne adresy z wyników: https://simplytrust.com/tools/step-up-basis-calculator/california/, https://capitaltaxcalc.com/guides/capital-gains-tax-inherited-property. Podsumowanie wprost stwierdza, że scenariusza zamieszkania (move-in i 121) te źródła 'did not cover… in any depth'.",
+   "what_to_check_manually_pl": "Sprawdzić, czy któryś z nich ma tryb 'sell now vs hold' albo kilku spadkobierców z różnymi stawkami podatkowymi."
+  },
+  {
+   "name": "Inherited Rental Property Calculator (financial-advisors-for-real-estate-investors.com) i powiązany przewodnik financial-advisors-for-inheritance.com",
+   "url": "https://financial-advisors-for-inheritance.com/guides/inherited-real-estate/",
+   "classification": "partial",
+   "evidence_pl": "Ten sam ekosystem co w poprzednim audycie: przewodnik 'Sell, Rent, or Keep? (2026 Guide)' wrócił w wynikach o scenariusze move-in, rent i sell now. Poprzedni audyt opisał powiązany kalkulator inherited rental (step-up, amortyzacja, PAL, sell-now vs hold). Nowe wyszukiwania nie dodały dowodu, że obejmuje on wykup albo 121.",
+   "what_to_check_manually_pl": "Zweryfikować kalkulator: liczba spadkobierców, wykup, remont, scenariusz 121. To najbardziej prawdopodobny kandydat do awansu, razem z Effective Agents."
+  },
+  {
+   "name": "EstateExec – Inheritance Guide for Heirs (oprogramowanie dla wykonawców testamentu)",
+   "url": "https://www.estateexec.com/Docs/Heirs",
+   "classification": "substitute",
+   "evidence_pl": "NOWY. To płatne oprogramowanie do rozliczania spadku, sprzedawane konsumentom-wykonawcom. W wynikach pojawił się tylko jego przewodnik dla spadkobierców. Podsumowanie stwierdza: 'The search didn't turn up any estate settlement apps or software specifically' z funkcją analizy decyzji o domu.",
+   "what_to_check_manually_pl": "Sprawdzić, czy EstateExec (lub podobne Empathy, Atticus) ma moduł 'real estate options' z porównaniem sprzedaży, wynajmu i wykupu."
+  },
+  {
+   "name": "Opendoor / Steadily / Inherited Property Match / Pierce Law – przewodniki (as-is vs remont, partition, sell vs rent)",
+   "url": "https://www.steadily.com/blog/should-i-sell-or-rent-out-the-house-i-inherited",
+   "classification": "substitute",
+   "evidence_pl": "Jakościowe frameworki: cash offer jako punkt odniesienia, remont tylko przy dodatnim zysku netto, czasy sprzedaży (60–120+ dni z agentem, 7–30 dni za gotówkę, 90–180 dni fix-and-sell), koszty partition (5–25 tys. USD i więcej na prawników, 6–12 miesięcy). Inne adresy z wyników: https://www.opendoor.com/articles/do-all-heirs-have-to-agree-to-sell-property, https://inheritedpropertymatch.com/inherited-property/sell-or-rent-inherited-property/, https://piercelaw.com/news/probate-question-and-answer/can-i-require-my-sibling-to-buy-out-my-one-third-interest-and-how-is-a-fair-buyout-price-determined/. Podsumowanie: 'I didn't find a buyout-vs-partition-vs-sale cost calculator'.",
+   "what_to_check_manually_pl": "To nie są konkurenci narzędziowi, ale konkurenci w SEO o te same frazy. Warto ocenić siłę domen."
+  },
+  {
+   "name": "BiggerPockets forum – 'Buy out co inheritors VS sell single family home'",
+   "url": "https://www.biggerpockets.com/posts/7254692",
+   "classification": "substitute",
+   "evidence_pl": "Wątek forum o dokładnie tym dylemacie (wykup współspadkobierców vs sprzedaż). Pokazuje realny popyt, ale w podsumowaniu nie ma śladu rekomendowanego narzędzia.",
+   "what_to_check_manually_pl": "Przeczytać wątek: czy użytkownicy polecają konkretne arkusze lub narzędzia (np. arkusz BiggerPockets lub własne spreadsheety)."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Wykonałem 8 nowych wyszukiwań WebSearch z innymi sformułowaniami niż poprzedni audytor: synonimy, 'decision tool/app', 'spreadsheet/template/Etsy/Excel', Reddit i fora, narzędzia AI i 2026, oprogramowanie do rozliczania spadku, 'partition vs buyout'. Mimo założenia, że konkurent istnieje, pięć niezależnych podsumowań wyszukiwarki wprost stwierdziło brak jednego narzędzia:\n- 'couldn't find a single tool that compares all four options side by side';\n- 'didn't find a dedicated app';\n- 'didn't turn up a specific Etsy or Excel template';\n- 'didn't turn up any estate settlement apps';\n- 'didn't find a buyout-vs-partition-vs-sale cost calculator'.\n\nNajważniejsze nowe znalezisko to Effective Agents. Jego kalkulator, według podsumowania, porównuje podatek przy sprzedaży z kosztami i dochodem z zatrzymania domu na wynajem, czyli łączy warianty A i C. Brak w nim jednak dowodów na wykup z refinansem (D), remont (B), zamieszkanie i 121 (E) oraz różne stawki podatkowe spadkobierców, więc klasyfikuję go jako partial.\n\nUzupełnienie o LadderedProperty: obsługuje nierówne udziały, do 6 beneficjentów i wylicza wymaganą kwotę refinansu. Wzmacnia to pokrycie wariantu D przez narzędzia punktowe.\n\nRynek pozostaje rozdrobniony na kalkulatory punktowe: wykup, step-up i zysk kapitałowy, inwestor najmu (Mashvisor) oraz przewodniki jakościowe. Doklejone osobne kalkulatory nie są konkurencją bezpośrednią. Luka do potwierdzenia ręcznie: jeden model wielowariantowy (A–E) i wielookresowy dla 2–4 spadkobierców, z koszt utrzymania w probate, czasem sprzedaży, remontem, amortyzacją i jej odzyskaniem przy sprzedaży, ścieżką 121 oraz wynikiem netto na spadkobiercę.\n\nGłówne ryzyka:\n1. Effective Agents albo kalkulator inherited rental z financial-advisors-for-real-estate-investors.com może po otwarciu okazać się szerszy, niż wynika z podsumowań.\n2. Płatne arkusze (Etsy, Gumroad) mogą istnieć, ale nie pojawiły się w wynikach.\n3. Asystenci AI (ChatGPT, Google AI Mode) są realnym zamiennikiem dla warstwy jakościowej i prostego wykupu.",
+ "search_scope_pl": "8 wyszukiwań WebSearch (tryby standard i extended, wyniki US) z 25.10.2026, uzupełniające 7 wyszukiwań poprzedniego audytu. Strony nie były otwierane, bo WebFetch jest niedostępny. Dowody to wyłącznie podsumowania wyszukiwarki (search-summary). Nie sprawdzałem bezpośrednio sklepów z aplikacjami (App Store, Google Play), Etsy, Gumroad ani Reddita (zapytanie w stylu Reddita zwróciło artykuły i BiggerPockets, nie wątki z Reddita). Nie testowałem też odpowiedzi ChatGPT ani Google AI Mode.",
+ "confidence": "medium",
+ "queries_run": [
+  "inherited house calculator compare sell vs rent vs keep vs buyout siblings",
+  "inherited property decision tool app heirs sell keep rent",
+  "inherited house spreadsheet template sell vs rent analysis siblings etsy OR excel",
+  "reddit inherited house with brother he wants to rent I want to sell calculator tool recommend",
+  "AI inherited home planner 2026 compare options sell as-is renovate rent buyout heirs net proceeds",
+  "estate settlement app inherited real estate options analysis heirs software probate house decision",
+  "inherited home keep or sell calculator scenarios move in, rent out, sell now, stepped-up basis depreciation recapture",
+  "co-owned inherited property options calculator buyout vs partition vs sale cost heirs"
+ ]
+}

@@ -1,0 +1,252 @@
+{
+ "claims": [
+  {
+   "id": "C7",
+   "claim": "AdSense since 2024 pays publishers per impression; publishers receive 80% after the buy-side fee (~68% effective overall). AdSense does not allow auto-refreshing ads without user action.",
+   "verdict": "confirmed",
+   "corrected_claim_pl": "Od początku 2024 r. AdSense rozlicza wydawców głównie za wyświetlenia (eCPM) zamiast za kliknięcia. Udział przychodu podzielono na stawkę buy-side i sell-side: wydawca dostaje 80% po potrąceniu opłaty platformy kupującej. Gdy kupującym jest Google Ads (średnio ok. 15% opłaty, zmienna), łącznie daje to ok. 68%. Przy kupujących zewnętrznych efektywny udział zależy od ich opłat, których Google nie widzi. Zasady umieszczania reklam AdSense zabraniają odświeżania strony lub jej elementu (w tym reklam) bez żądania użytkownika. Odświeżanie czasowe dopuszcza tylko Google Ad Manager/AdX, po zadeklarowaniu, z minimalnym interwałem 30 s.",
+   "evidence_pl": "Źródło pierwotne: wpis na blogu Google („Updates to how publishers monetize with AdSense”) mówi o przejściu z płatności za kliknięcie na płatność za wyświetlenie, o podziale na buy-side i sell-side, o 80% po opłacie platformy reklamodawcy oraz o tym, że wydawcy „nadal zachowają ok. 68%”. Szczegóły podaje też FAQ w pomocy AdSense (answer/14129646). Ginny Marvin (Google Ads Liaison) potwierdziła w lutym 2024 r., że płatności eCPM już działają (SEJ, 9to5Google). Strona „Ad placement policies” (support.google.com/adsense/answer/1346295) zakazuje odświeżania strony lub jej elementu bez prośby użytkownika. Zastrzeżenie: ok. 68% to wartość podana przez Google dla popytu Google Ads, a nie gwarancja przy każdym kupującym. Strony pomocy mogą być w trakcie przenoszenia do nowego Publisher Policies Help Center.",
+   "sources": [
+    {
+     "url": "https://blog.google/products/adsense/evolving-how-publishers-monetize-with-adsense/",
+     "title": "Updates to how publishers monetize with AdSense (Google blog)",
+     "primary": true
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/14129646?hl=en",
+     "title": "FAQs about AdSense updating its revenue share structure",
+     "primary": true
+    },
+    {
+     "url": "https://support.google.com/adsense/answer/1346295?hl=en",
+     "title": "Ad placement policies - Google AdSense Help",
+     "primary": true
+    },
+    {
+     "url": "https://support.google.com/admanager/answer/6286179?hl=en",
+     "title": "Declare inventory that refreshes - Google Ad Manager Help",
+     "primary": true
+    },
+    {
+     "url": "https://www.searchenginejournal.com/google-adsense-shifts-to-ecpm-payment-model/508132",
+     "title": "SEJ: Google AdSense shifts to eCPM payment model",
+     "primary": false
+    }
+   ]
+  },
+  {
+   "id": "C8",
+   "claim": "Ad network thresholds (2026): Journey by Mediavine >1,000 sessions; Mediavine Official $5,000 annual ad revenue; Raptive 25,000 monthly pageviews (since Oct 2025) with >=50% tier-1 traffic; Ezoic requires 250,000+ monthly active users for new sites since Feb 19, 2026.",
+   "verdict": "confirmed",
+   "corrected_claim_pl": "Journey by Mediavine wymaga ponad 1000 sesji miesięcznie. Mediavine precyzuje, że chodzi o „premium sessions”, czyli ruch z US/UK/CA/AU. Mediavine Official wymaga co najmniej 5000 USD rocznego przychodu z reklam. Raptive od 16.10.2025 wymaga minimum 25 000 odsłon miesięcznie (wcześniej 100 000; program Rise włączono do poziomu Insider). Dla przedziału 25 000–99 999 odsłon co najmniej 50% ruchu musi pochodzić z US/UK/CA/NZ/AU (od 100 000 wystarczy 40%), a domena musi mieć co najmniej 6 miesięcy. Ezoic: nowe strony dodane po 19.02.2026 muszą mieć ponad 250 000 użytkowników miesięcznie. Mniejsze mogą aplikować do Incubatora (ok. 20 wydawców miesięcznie). Strony już monetyzowane zachowują status, jeśli nie wyłączą Ezoic na dłużej niż 7 dni.",
+   "evidence_pl": "Mediavine: strona „Mediavine Requirements” i Help Center podają „ponad 1000 sesji” dla Journey oraz 5000 USD rocznie dla pełnego programu. Blog Mediavine doprecyzowuje „1,000 premium sessions per month”. Raptive: wpis na blogu Raptive i Help Center („Who is eligible for Raptive?”) podają 25 000 odsłon oraz progi 50%/40% dla pięciu krajów. Datę 16.10.2025 podaje PPC Land, a SEJ opisuje obniżenie progu o 75%. Ezoic: strona wymagań w bazie wiedzy Ezoic podaje 250 000+ użytkowników miesięcznie dla stron dodanych po 19.02.2026. Jedna strona Incubatora podaje 18.02.2026. Komunikat prasowy z 19.02.2026 mówi o „250,000 monthly users”. Drobne rozbieżności: Ezoic pisze raczej „monthly users” lub „monthly active users” (weryfikacja przez Google Analytics), a „tier-1” w Raptive to konkretnie 5 krajów, w tym NZ.",
+   "sources": [
+    {
+     "url": "https://help.mediavine.com/what-does-it-take-to-get-approved-by-mediavine",
+     "title": "Mediavine Help Center: What does it take to get approved by Mediavine?",
+     "primary": true
+    },
+    {
+     "url": "https://www.mediavine.com/mediavine-requirements/",
+     "title": "Mediavine Requirements",
+     "primary": true
+    },
+    {
+     "url": "https://raptive.com/blog/opening-the-door-to-more-creators-who-meet-raptive-quality-standards/",
+     "title": "Raptive blog: Opening the door to more creators",
+     "primary": true
+    },
+    {
+     "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+     "title": "Raptive Help: Who is eligible for Raptive?",
+     "primary": true
+    },
+    {
+     "url": "https://ppc.land/raptive-drops-pageview-requirement-to-25-000-monthly-visits/",
+     "title": "PPC Land: Raptive drops pageview requirement to 25,000",
+     "primary": false
+    },
+    {
+     "url": "https://support.ezoic.com/kb/article/getting-started-ezoics-requirements",
+     "title": "Ezoic KB: Getting started - Ezoic's requirements",
+     "primary": true
+    },
+    {
+     "url": "https://osticket.ezoic.com/kb/article/ezoic-incubator-program",
+     "title": "Ezoic Incubator Program",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "id": "C9",
+   "claim": "OpenAI began testing ads in ChatGPT on Feb 9, 2026 (US, Free and Go tiers), excluding sensitive topics such as health.",
+   "verdict": "confirmed",
+   "corrected_claim_pl": "OpenAI zaczęło testować reklamy w ChatGPT 9.02.2026 w USA. Test obejmuje zalogowanych dorosłych użytkowników planów Free i Go, a plany Plus, Pro, Business, Enterprise i Edu są bez reklam. Reklamy nie pojawiają się przy tematach wrażliwych lub regulowanych, takich jak zdrowie, zdrowie psychiczne i polityka, ani u osób poniżej 18 lat. Plan ogłoszono 16.01.2026. Później reklamy rozszerzono m.in. na UK, Meksyk, Brazylię, Japonię, Koreę Płd. i 31 rynków europejskich.",
+   "evidence_pl": "Źródła pierwotne: wpis OpenAI „Testing ads in ChatGPT” (aktualizowany, ostatnio 11.08.2026) oraz Help Center „Ads in ChatGPT”, który podaje start testów 9.02.2026. Wcześniejszy wpis „Our approach to advertising…” z 16.01.2026 zapowiadał wyłączenie tematów wrażliwych. Datę 9.02 i zakres (US, Free i Go) potwierdzają niezależnie SEJ, Business Today i exchange4media.",
+   "sources": [
+    {
+     "url": "https://openai.com/index/testing-ads-in-chatgpt/",
+     "title": "OpenAI: Testing ads in ChatGPT",
+     "primary": true
+    },
+    {
+     "url": "https://help.openai.com/en/articles/20001047-ads-in-chatgpt",
+     "title": "OpenAI Help: Ads in ChatGPT",
+     "primary": true
+    },
+    {
+     "url": "https://openai.com/index/our-approach-to-advertising-and-expanding-access/",
+     "title": "OpenAI: Our approach to advertising and expanding access to ChatGPT",
+     "primary": true
+    },
+    {
+     "url": "https://www.searchenginejournal.com/openai-begins-testing-ads-in-chatgpt-for-free-and-go-users/566869",
+     "title": "SEJ: OpenAI begins testing ads in ChatGPT for Free and Go users",
+     "primary": false
+    },
+    {
+     "url": "https://openai.com/index/chatgpt-ads-expands-across-europe/",
+     "title": "OpenAI: ChatGPT Ads expands across Europe",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "id": "C10",
+   "claim": "MCP Apps (interactive UI inside AI chat clients) launched as an official MCP extension on Jan 26, 2026; ChatGPT Apps SDK currently allows monetization only for physical goods via external checkout (no digital goods/subscriptions).",
+   "verdict": "partially",
+   "corrected_claim_pl": "MCP Apps (SEP-1865, oparte na MCP-UI i OpenAI Apps SDK) ruszyły 26.01.2026 jako pierwsze oficjalne rozszerzenie MCP, gotowe do produkcji. Wspierają je m.in. Claude (od dnia premiery), ChatGPT, VS Code i Goose. W ChatGPT oficjalne wytyczne nadal dopuszczają handel wyłącznie towarami fizycznymi. Sprzedaż produktów cyfrowych, subskrypcji, tokenów i kredytów jest zakazana, także pośrednio, np. przez upsell freemium. Domyślną i ogólnie dostępną ścieżką jest checkout zewnętrzny na domenie dewelopera. Istnieje jednak też Instant Checkout (beta, tylko wybrane marketplace'y) i checkout z zapisanymi metodami płatności. Dokumentacja przemianowała „apps” na „plugins” („Plugin guidelines”, ścieżka /plugins/build/monetization). Nie znalazłem potwierdzenia stanu na październik 2026.",
+   "evidence_pl": "MCP Apps: oficjalny blog MCP (blog.modelcontextprotocol.io, wpis z 26.01.2026) ogłasza „MCP Apps are now live as an official MCP extension”. Potwierdzają to WorkOS (27.01.2026) i Alpic. Monetyzacja: developers.openai.com (Monetization oraz App/Plugin submission guidelines) podaje „Currently, plugins may conduct commerce only for physical goods…” i opisuje checkout zewnętrzny jako „recommended and generally available”. Według dokumentacji Instant Checkout jest w becie dla wybranych marketplace'ów. Wpis OpenAI „Developers can now submit apps to ChatGPT” (grudzień 2025) zapowiadał, że OpenAI rozważa w przyszłości dobra cyfrowe. Zastrzeżenie: wyniki wyszukiwania pokazywały strony dokumentacji sprzed ok. 270–315 dni. Nie znalazłem zmiany polityki w 2026 r., ale nie mogę wykluczyć, że ją wprowadzono. Ocena „partially” wynika ze słowa „only via external checkout”, które pomija Instant Checkout, oraz ze zmiany nazwy na „plugins”.",
+   "sources": [
+    {
+     "url": "https://blog.modelcontextprotocol.io/tags/apps/",
+     "title": "MCP Blog: MCP Apps - Bringing UI Capabilities To MCP Clients",
+     "primary": true
+    },
+    {
+     "url": "https://workos.com/blog/2026-01-27-mcp-apps",
+     "title": "WorkOS: MCP Apps",
+     "primary": false
+    },
+    {
+     "url": "https://alpic.ai/blog/mcp-apps-goes-official-claude-chatgpt-support",
+     "title": "Alpic: MCP Apps goes official",
+     "primary": false
+    },
+    {
+     "url": "https://developers.openai.com/apps-sdk/build/monetization",
+     "title": "OpenAI Developers: Monetization",
+     "primary": true
+    },
+    {
+     "url": "https://developers.openai.com/apps-sdk/app-submission-guidelines",
+     "title": "OpenAI Developers: Plugin/App submission guidelines",
+     "primary": true
+    },
+    {
+     "url": "https://openai.com/index/developers-can-now-submit-apps-to-chatgpt/",
+     "title": "OpenAI: Developers can now submit apps to ChatGPT",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "id": "C11",
+   "claim": "Cloudflare, from Sept 15, 2026, blocks by default crawlers classified as Training or Agent on sites that show ads (new/free accounts).",
+   "verdict": "partially",
+   "corrected_claim_pl": "Od 15.09.2026 nowe domeny dodawane do Cloudflare dostają nowe ustawienia domyślne: boty z kategorii Training i Agent są blokowane na stronach (podstronach) wyświetlających reklamy, a Search pozostaje dozwolony. Blokada działa na poziomie strony z reklamami, a nie całej witryny. Oficjalny changelog mówi o nowych domenach. Objęcie istniejących stref na planie Free, które nie zmieniły ustawień, opisują tylko źródła wtórne, a ich wersje się różnią. Ważne skutki uboczne: crawlery wielozadaniowe (Googlebot, Bingbot, Applebot) podlegają regule Training, więc „Block” i „Block on pages with ads” mogą blokować także indeksowanie wyszukiwarki. Cloudflare zaleca opcję „Disallow AI Training”. Ustawienia można zmienić (opt-out) per strefa.",
+   "evidence_pl": "Źródła pierwotne: changelog Cloudflare z 1.07.2026 („New options to manage AI traffic”) oraz blog „Your site, your rules: new AI traffic options for all customers”. Według nich od 15.09.2026 nowe domeny przy onboardingu dostają domyślnie blokadę Training i Agent na stronach z reklamami, z zachowaniem Search. Późniejszy wpis („accountable mixed-use AI crawlers”) dodaje, że przy onboardingu można zaznaczyć „I monetize from pages with ads”, co ustawia Training na Disallow. Zakres obejmujący istniejących klientów Free podają tylko źródła wtórne (TechCrunch, hosting.com, blogi) i są niespójne. W wątku społeczności Cloudflare jeden użytkownik zgłosił 403 dla zweryfikowanego Googlebota. Wyniki nie potwierdziły, czy wdrożenie 15.09 przebiegło dokładnie zgodnie z planem.",
+   "sources": [
+    {
+     "url": "https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options/",
+     "title": "Cloudflare Changelog: New options to manage AI traffic",
+     "primary": true
+    },
+    {
+     "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+     "title": "Cloudflare blog: Your site, your rules: new AI traffic options for all customers",
+     "primary": true
+    },
+    {
+     "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers",
+     "title": "Cloudflare blog: Have it both ways: stay discoverable in search while disallowing AI training",
+     "primary": true
+    },
+    {
+     "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
+     "title": "TechCrunch: Cloudflare's new policy pushes AI companies to pay for publishers' content",
+     "primary": false
+    },
+    {
+     "url": "https://hosting.com/learn/cloudflares-new-ai-crawler-defaults-and-what-they-mean-for-site-owners/",
+     "title": "hosting.com: Cloudflare's new AI crawler defaults",
+     "primary": false
+    },
+    {
+     "url": "https://community.cloudflare.com/t/googlebot-blocked-by-block-ai-training-crawlers-before-september-15/951410",
+     "title": "Cloudflare Community: Googlebot blocked by Block AI training crawlers",
+     "primary": false
+    }
+   ]
+  },
+  {
+   "id": "C12",
+   "claim": "In October 2026 ChatGPT links temporarily lost utm_source=chatgpt.com / referrer, shifting traffic into 'Direct' in analytics; OpenAI called it a bug.",
+   "verdict": "partially",
+   "corrected_claim_pl": "Około 8/9–15.10.2026, w czasie wdrażania GPT-6 (związek niepotwierdzony), linki wychodzące z ChatGPT przestały zawierać utm_source=chatgpt.com. Część z nich otwierała się z noreferrer, więc narzędzia analityczne (GA4, Adobe) liczyły te wizyty jako „Direct”. Cedric Huesler z Adobe zmierzył na ok. 500 stronach spadek ruchu z ChatGPT o ok. 31 tys. wizyt dziennie przy wzroście Direct o ok. 26 tys. Poprawka zaczęła się wdrażać ok. 15.10. OpenAI nie wydało publicznego oświadczenia. To, że był to błąd, wiadomo z drugiej ręki: OpenAI potwierdziło to Hueslerowi. Referrer nadal brakuje w większości kliknięć z ChatGPT także po poprawce, więc trwałym sygnałem jest UTM.",
+   "evidence_pl": "Spójnie opisują to Search Engine Land („ChatGPT drop in UTM tracking was a bug”), SEJ, Relevant Audience i Marketing4eCommerce (okno 8–15.10). Kilka źródeł wprost podaje, że OpenAI nie opublikowało oficjalnego wyjaśnienia ani wpisu w release notes, a potwierdzenie pochodzi od Hueslera (Adobe), który 15.10 zaktualizował swój wpis. Okno czasowe różni się w zależności od źródła (8–15.10 lub 9–13.10). LLM Pulse nie zaobserwował mierzalnego wzrostu Direct. Ocena „partially” wynika z tego, że teza „OpenAI called it a bug” nie ma publicznego źródła OpenAI. Słowo „temporarily” trafnie opisuje utratę UTM, ale już nie brak referrera.",
+   "sources": [
+    {
+     "url": "https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552",
+     "title": "Search Engine Land: ChatGPT drop in UTM tracking was a bug",
+     "primary": false
+    },
+    {
+     "url": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/",
+     "title": "SEJ: ChatGPT traffic drop appears to be a tracking problem",
+     "primary": false
+    },
+    {
+     "url": "https://www.relevantaudience.com/analytics/chatgpt-utm-tag-bug-fixed-openai-confirmed-adobe/",
+     "title": "Relevant Audience: ChatGPT UTM tag loss was a bug, says Adobe's Huesler",
+     "primary": false
+    },
+    {
+     "url": "https://marketing4ecommerce.net/en/error-traffic-chatgpt/",
+     "title": "Marketing4eCommerce: OpenAI bug misclassified ChatGPT referral traffic as direct Oct 8-15",
+     "primary": false
+    },
+    {
+     "url": "https://www.evertune.ai/resources/insights-on-ai/the-week-without-chatgpt-attribution",
+     "title": "Evertune: The week without ChatGPT attribution",
+     "primary": false
+    }
+   ]
+  }
+ ],
+ "queries_run": [
+  "AdSense per impression payment 80% publishers buy-side fee 2024",
+  "Raptive 25,000 pageviews requirement October 2025",
+  "OpenAI testing ads ChatGPT February 9 2026 Free Go tiers",
+  "openai.com testing ads in ChatGPT (allowed: openai.com)",
+  "AdSense policy auto-refresh ads without user action not allowed",
+  "Ezoic 250,000 monthly active users requirement new sites February 2026",
+  "Journey by Mediavine requirements 1,000 sessions Mediavine Official $5,000 annual ad revenue",
+  "Google AdSense help refresh ads policy user action publisher policies (support.google.com)",
+  "MCP Apps official extension launch January 26 2026",
+  "ChatGPT Apps SDK monetization physical goods external checkout digital goods not allowed",
+  "Cloudflare September 15 2026 block AI crawlers by default sites with ads Training Agent",
+  "ChatGPT utm_source=chatgpt.com missing October 2026 direct traffic bug",
+  "blog.cloudflare.com AI crawlers blocked by default pages with ads September 15 (cloudflare domains)",
+  "OpenAI confirms ChatGPT UTM referral tracking bug statement October 2026 (extended)",
+  "Cloudflare September 15, 2026 new defaults Free plan existing zones Training Agent blocked pages that display ads (extended)",
+  "Raptive eligibility 25,000 pageviews 50% traffic US UK Canada Australia New Zealand help center (raptive domains)",
+  "Cloudflare July 2026 blog new AI traffic options defaults free customers pages with ads (blog.cloudflare.com)",
+  "blog.modelcontextprotocol.io MCP Apps now live official extension January 2026",
+  "ChatGPT apps digital goods subscriptions allowed 2026 Apps SDK monetization update",
+  "AdSense blog evolving per-impression payments revenue share 80% buy-side sell-side (google domains)",
+  "developers.openai.com apps monetization physical goods external checkout Instant Checkout digital goods (openai domains)",
+  "Mediavine help Journey requirements 1,000 sessions premium sessions per month (mediavine domains)"
+ ]
+}

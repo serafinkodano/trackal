@@ -1,0 +1,89 @@
+{
+ "id": "RENO-03",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "The Furnace Outlet – HVAC Calculator (repair vs replacement)",
+   "url": "https://thefurnaceoutlet.com/?p=4560",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator naprawa vs wymiana pompy ciepła porównuje koszt początkowy, oszczędności energii, przyszłe naprawy i długoterminowy koszt posiadania. Ścieżka naprawy obejmuje przyszłą wymianę po końcu pozostałej żywotności, z kosztem zinflowanym na tamten rok i bez założenia przyszłej rebaty. To najsilniejsze nowe znalezisko: pokrywa element luki (1), czyli naprawę z odroczeniem i kosztem późniejszej wymiany. W podsumowaniu nie ma jednak wariantów dual-fuel, AC 1:1 ani mini-split, nie ma wieku drugiego urządzenia, balance pointu ani relacji cen gaz/prąd.",
+   "what_to_check_manually_pl": "Otworzyć stronę i sprawdzić: (a) czy działa także dla AC i pieca, czy tylko dla pompy ciepła; (b) czy można porównać więcej niż 2 ścieżki (dual-fuel, cold-climate HP, mini-split); (c) czy pyta o wiek pieca, ceny gazu i prądu oraz klimat; (d) czy liczy prawdopodobieństwo kolejnych awarii, czy tylko jedną przyszłą wymianę; (e) czy uwzględnia brak 25C od 2026."
+  },
+  {
+   "name": "United HVAC Motors – HVAC Repair vs Replace Calculator [2026]",
+   "url": "https://unitedhvacmotors.com/pages/repair-vs-replace-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator naprawa vs wymiana oparty na regule $5,000 (koszt naprawy × wiek). Dodatkowo punktuje wielkość kosztu naprawy, sprawność energetyczną, częstotliwość awarii i komfort. To scoring binarny (napraw/wymień) bez wariantów HP, dual-fuel i mini-split oraz bez modelu kosztów rocznych gaz vs prąd. Strona sprzedawcy silników, więc ma interes komercyjny.",
+   "what_to_check_manually_pl": "Sprawdzić, czy wynik to tylko rekomendacja punktowa, czy porównanie kosztów wieloletnich. Sprawdzić też, czy po werdykcie „wymień” sugeruje typ nowego systemu."
+  },
+  {
+   "name": "TryBuildCalc – HVAC Repair vs Replace Decision Guide",
+   "url": "https://trybuildcalc.com/knowledge/hvac/hvac-repair-vs-replace-guide",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: przewodnik decyzyjny ze scoringiem wiek × koszt naprawy (próg ok. $5,000). Ma progi wieku osobno dla AC/HP (<10 lat napraw, >12-15 wymień) i pieca (~12 lat) oraz przykłady R-22 z wyciekiem czynnika. Pokrywa heurystykę naprawa/wymiana i kwestię czynnika, ale nie porównuje kosztów wariantów HP/dual-fuel. Nie wiadomo, czy domena ma też interaktywny kalkulator.",
+   "what_to_check_manually_pl": "Sprawdzić, czy na trybuildcalc.com istnieje powiązany interaktywny kalkulator i czy łączy decyzję naprawa/wymiana z wyborem nowego typu systemu."
+  },
+  {
+   "name": "HVAC Pricing Guide – Heat Pump vs Dual Fuel: Which Is Right?",
+   "url": "https://hvacpricingguide.com/heat-pump-vs-dual-fuel-decision/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: strona decyzyjna HP all-electric ($8,000-15,000) vs dual-fuel ($12,000-20,000). Wskazuje, że grzałki elektryczne kosztują 2-3x więcej za godzinę niż gaz. Pokrywa jedną gałąź decyzji (HP z grzałką vs dual-fuel). Bez naprawy, AC 1:1, wieku pieca i modelu wieloletniego. Z podsumowania nie wynika, czy to narzędzie interaktywne, czy artykuł.",
+   "what_to_check_manually_pl": "Ustalić, czy strona ma interaktywny kalkulator albo quiz i czy uwzględnia lokalne ceny gaz/prąd oraz balance point."
+  },
+  {
+   "name": "UniColorado – Dual Fuel vs All-Electric Heat Pump for Denver Homes (calculator)",
+   "url": "https://unicolorado.com/dual-fuel-or-electric-heat-pump/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: kalkulator dla Denver porównuje gaz i HP w przedziałach temperatur przy stawkach Xcel. Wniosek: gaz jest tańszy w większości przedziałów, więc dual-fuel to lepsza odpowiedź dla większości domów w Denver. To lokalny kalkulator kontraktora, liczący logikę balance pointu i koszt per przedział temperatur. Nie obejmuje naprawy, wymiany 1:1, wieku urządzeń ani ogólnego klimatu i taryf USA.",
+   "what_to_check_manually_pl": "Sprawdzić, czy można wpisać własne taryfy i strefę klimatyczną poza Denver oraz czy jest wariant naprawy lub odroczenia."
+  },
+  {
+   "name": "This Old House – HVAC Replacement Cost Calculator (2026)",
+   "url": "https://www.thisoldhouse.com/heating-cooling/hvac-replacement-cost-calculator",
+   "classification": "partial",
+   "evidence_pl": "Search-summary (zbiorcze dla kilku stron): kalkulatory kosztu wymiany podają widełki dla pieca+AC i HP, a niektóre wyceniają dual-fuel osobno. Z podsumowania nie wynika jednoznacznie, który kalkulator wycenia dual-fuel. To estymator kosztu inwestycji, bez kosztów eksploatacji, naprawy z odroczeniem i zależności wiek pieca/balance point. Duża marka medialna, więc istotny konkurent SEO.",
+   "what_to_check_manually_pl": "Sprawdzić listę wariantów (czy jest HP, dual-fuel, mini-split) i czy kalkulator liczy koszty roczne lub break-even."
+  },
+  {
+   "name": "RealCostIQ – Furnace & AC Replacement Cost Calculator (2026)",
+   "url": "https://realcostiq.com/furnace-ac-replacement-cost-calculator/",
+   "classification": "partial",
+   "evidence_pl": "Search-summary: porównuje piec+AC ($6,500-11,000) z HP zastępującą oba urządzenia ($4,200-9,100 po 30% uldze). Założenie 30% ulgi wygląda na nieaktualne wobec braku 25C od 2026, a to możliwy punkt przewagi dla RENO-03. To estymator kosztu, bez wariantów naprawy i dual-fuel oraz bez kosztów rocznych.",
+   "what_to_check_manually_pl": "Sprawdzić, czy uwzględnia dual-fuel, ceny energii i aktualny stan ulg federalnych na 2026."
+  },
+  {
+   "name": "Modernize – New HVAC System Cost Calculator (2026)",
+   "url": "https://modernize.com/hvac/cost-calculator",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: kalkulator kosztu nowego systemu z indywidualną wyceną. Lead-gen dla kontraktorów, pokrywa tylko koszt inwestycji. Bez naprawy, porównania wariantów eksploatacyjnych i dual-fuel.",
+   "what_to_check_manually_pl": "Sprawdzić, czy kalkulator pyta o typ systemu (HP/dual-fuel) i czy zwraca cokolwiek poza widełkami ceny i formularzem leadowym."
+  },
+  {
+   "name": "QuoteIQ – AI software for HVAC companies (tiered repair-or-replace pricing)",
+   "url": "https://myquoteiq.com/ai-powered-software-hvac-companies/",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: oprogramowanie dla kontraktorów z wielopoziomową wyceną naprawa-albo-wymiana i AI podglądem przed/po. Ma pomagać przesunąć klienta z łatki na pełną wymianę. To narzędzie sprzedażowe instalatora pokazywane klientowi w domu, a nie bezstronny symulator dla konsumenta. Brak dowodu na model kosztów gaz/prąd czy dual-fuel. Inne wyniki z aplikacjami AI (HVAC AI, Automation AI w Google Play) to diagnostyka dla techników.",
+   "what_to_check_manually_pl": "Sprawdzić, czy prezentacja dla klienta (good/better/best) zawiera porównanie kosztów eksploatacji i wariant HP/dual-fuel. Jeśli tak, przy wizycie technika to realny substytut w momencie awarii."
+  },
+  {
+   "name": "EnergySage – Heat Pump vs AC (guide + marketplace)",
+   "url": "https://energysage.com/heat-pumps/heat-pump-vs-ac",
+   "classification": "substitute",
+   "evidence_pl": "Search-summary: argumentuje, że przy wymianie AC zwykle warto od razu wziąć pompę ciepła, niezależnie od tego, czy wymieniasz piec. EnergySage to także marketplace ofert, więc konsument może dostać porównanie wycen zamiast symulacji. Brak dowodu na interaktywny model z naprawą, wiekiem pieca i balance pointem.",
+   "what_to_check_manually_pl": "Sprawdzić, czy EnergySage ma w 2026 kalkulator HP z wariantem zachowania pieca (dual-fuel) i porównaniem z naprawą."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 8 dodatkowych zapytań WebSearch (wyniki US), komplementarnych do 7 zapytań poprzedniego audytu. Dowód to wyłącznie search-summary, stron nie otwierano. Pewność: średnia.\n\nŻadne podsumowanie nie wskazało narzędzia, które w jednym modelu prowadzi przez wszystkie elementy decyzji:\n- naprawę z odroczeniem,\n- AC 1:1,\n- HP z grzałką,\n- dual-fuel z istniejącym piecem,\n- cold-climate HP / mini-split,\n- wiek drugiego urządzenia,\n- balance point,\n- relację cen gaz/prąd.\n\nPróby obalenia przyniosły jednak dwa istotne korekty do gap statement poprzedniego audytu:\n\n(1) The Furnace Outlet ma kalkulator naprawa vs wymiana. Jego ścieżka naprawy obejmuje przyszłą wymianę po końcu żywotności, z kosztem zinflowanym na przyszły rok. Element „naprawa z odroczeniem z kosztem w czasie” nie jest więc unikalny. Unikalne pozostaje dopiero połączenie go z wyborem typu nowego systemu i z wiekiem pieca.\n\n(2) Logikę „AC padło, piec zdrowy ok. 10-12 lat → wyceń dual-fuel zamiast AC 1:1” powtarzają liczne przewodniki kontraktorów i heat-pumps.guide. Kalkulatory przedziałów temperatur (UniColorado dla Denver) i strony HP vs dual-fuel (hvacpricingguide) pokrywają gałąź dual-fuel.\n\nRynek jest gęsty, ale rozdrobniony: estymatory kosztu (This Old House, RealCostIQ, Modernize), scoringi naprawa/wymiana (United HVAC Motors, TryBuildCalc, Furnace Outlet), kalkulatory przełączania (z poprzedniego audytu) oraz oprogramowanie sprzedażowe kontraktorów (QuoteIQ). To ostatnie pokazuje klientowi warianty naprawa/wymiana w momencie awarii i jest realnym substytutem.\n\nNie znaleziono:\n- konsumenckiej aplikacji AI do tej decyzji (wyniki AI to narzędzia diagnostyczne dla techników),\n- płatnego arkusza (Etsy/Gumroad) ani polecanego na Reddit narzędzia,\n- danych o narzędziach Jetson, Quilt, Carbon Switch, Elephant ani Sealed (wyszukiwanie ich nie zwróciło, więc nie można ich wykluczyć).\n\nMożliwy wyróżnik: część estymatorów (np. RealCostIQ) zakłada 30% ulgę federalną, co wygląda na nieaktualne wobec braku 25C od 2026.\n\nRyzyko pominięcia: średnie. Narzędzia za formularzem leadowym, kalkulatory utility (np. programy stanowe) i oprogramowanie sprzedażowe kontraktorów mogą zawierać pełniejsze porównanie, którego search-summary nie ujawnia.",
+ "search_scope_pl": "8 zapytań WebSearch (5 extended, 3 standard), wyniki US, 2026-10-25. Celowo inne niż poprzedni audyt:\n- naturalna fraza użytkownika (napraw stare AC czy HP z gazowym backupem),\n- aplikacje i doradcy AI dla właścicieli domów,\n- arkusze na Reddit,\n- narzędzie z wiekiem pieca i AC,\n- planery marek (Jetson, Quilt, Carbon Switch, Elephant, Sealed),\n- płatne szablony (Etsy, Gumroad, Google Sheets),\n- weryfikacja kalkulatora The Furnace Outlet,\n- quiz lub kreator „AC padło – czym zastąpić” z mini-splitem.\n\nDowód wyłącznie z search-summary, bez otwierania stron (WebFetch niedostępny). Nie przeszukano sklepów z aplikacjami poza tym, co zwróciło wyszukiwanie, kalkulatorów poszczególnych utility/stanów ani narzędzi producentów (Carrier, Trane, Mitsubishi).",
+ "confidence": "medium",
+ "queries_run": [
+  "should I repair my old AC or switch to heat pump with gas furnace backup calculator compare options",
+  "AI HVAC advisor app homeowners repair or replace furnace AC heat pump dual fuel recommendation 2026",
+  "reddit spreadsheet I made compare dual fuel heat pump vs AC replacement vs repair old system",
+  "tool enter furnace age and AC age recommend replace both, add heat pump dual fuel, or repair",
+  "heat pump planner compare \"dual fuel\" vs \"all-electric\" vs new AC and furnace lifetime cost Jetson OR Quilt OR \"Carbon Switch\" OR Elephant OR Sealed",
+  "HVAC replacement decision spreadsheet template heat pump vs furnace AC Etsy OR Gumroad OR \"Google Sheets\"",
+  "The Furnace Outlet HVAC calculator repair vs replacement heat pump dual fuel ownership cost",
+  "AC died what to replace it with interactive quiz OR wizard heat pump, dual fuel, mini-split or new AC personalized recommendation cost"
+ ]
+}

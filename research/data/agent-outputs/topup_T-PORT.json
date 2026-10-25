@@ -1,0 +1,581 @@
+{
+ "topic": "Dowody dla strategii portfela narzędzi i strategii domenowej (TOP-UP): monetyzacja niszowych narzędzi decyzyjnych, oficjalne stanowiska Google o sygnałach site-wide i topical focus, dobór źródeł przez asystentów AI, praktyki E-E-A-T, raporty indie, model biznesowy wydawców finansowych",
+ "summary_pl": "Wykorzystano 20 z 20 dozwolonych wyszukiwań (WebFetch niedostępny; wszystkie dowody mają charakter 'search-summary', żadna strona nie została otwarta). Kluczowe wnioski:\n(1) Monetyzacja niszowych narzędzi decyzyjnych: żadne z głębokich narzędzi decyzyjnych zbadanych w tym zakresie nie okazało się finansowane głównie z reklam display. FI Calc działa na darowiznach; ProjectionLab (bootstrapped, deklarowane ~1 mln USD ARR, 3 FTE), Boldin i DealCheck to freemium z subskrypcją; Rewiring America to bezpłatne narzędzie organizacji non-profit, dystrybuowane przez widżet do osadzenia i API dla wykonawców, samorządów i NGO. Model oparty na reklamach działa w zebranych dowodach tylko przy ogromnej skali i szerokim, płytkim katalogu: Omni Calculator ma ok. 18–23 mln wizyt miesięcznie i ok. 70 pracowników. Na niewielkim indie-portalu z kalkulatorami ten sam model daje niewielkie przychody.\n(2) Wielcy wydawcy finansowi to biznesy lead-gen i afiliacji, a nie reklam display. NerdWallet miał w FY2025 ok. 836,6 mln USD przychodu podzielonego na produkty partnerów; największy segment to Insurance (280,8 mln). Rdzeniem SmartAsset jest sprzedaż leadów doradcom (SmartAdvisor). Red Ventures/Bankrate zarabia na afiliacji przy zapytaniach o wysokiej intencji. Udział display w przychodach NerdWallet nie został potwierdzony w wynikach wyszukiwania.\n(3) Google, co udokumentowane: systemy rankingowe działają głównie na poziomie strony, ale uwzględniają też sygnały site-wide (Mueller: części sygnałów jakości nie da się zebrać per strona). Klasyfikator HCU, pierwotnie działający na poziomie całej witryny, od marca 2024 jest częścią core. Polityka scaled content abuse obejmuje masowo generowane strony bez wartości dla użytkownika, niezależnie od metody ich powstania, a generatywne AI pada w niej jako przykład. „Topic authority” udokumentowano wyłącznie jako system dla zapytań newsowych (maj 2023). Folklor SEO: Mueller mówi, że „topical authority” to po prostu trafność („don't worry about it”) i że Google nie ma wyniku „website authority”. Pola siteFocusScore/siteRadius z wycieku z 2024 r. są niezweryfikowane. Nie znaleziono oficjalnej deklaracji, że szeroka witryna jest karana albo nagradzana.\n(4) Asystenci AI: dowody pochodzą głównie od dostawców narzędzi SEO, nie z recenzowanych badań. W cytowaniach dominują Reddit i Wikipedia. Najsilniejszą korelację z widocznością w AI miały wzmianki na YouTube (Ahrefs, 75 tys. marek). Perplexity mocno preferuje świeżość treści. ChatGPT często cytuje strony spoza top 20 Google. llms.txt nie wykazuje mierzalnego efektu (SE Ranking, 300 tys. domen). Schema daje efekt zerowy lub marginalny, bo systemy czytają widoczny HTML. Zależność ChatGPT od Binga prawdopodobnie słabnie.\n(5) E-E-A-T: NerdWallet i SmartAsset publikują wytyczne redakcyjne, zasady niezależności i metodologię ocen. W przypadku Bankrate i Omni procesu recenzji nie zweryfikowano.\n(6) Indie: znaleziono tylko anegdoty, m.in. wpis na Indie Hackers o portalu z 50+ kalkulatorami („publishing was easy; earning trust and traffic wasn't”) i spadek RPM AdSense w 2024 r. W badanym zakresie nie znaleziono udokumentowanej ręcznej kary (manual action) za scaled content wobec portalu z kalkulatorami. Twierdzenia o spadkach witryn programmatic SEO po aktualizacjach z 2026 r. pochodzą z blogów dostawców i są niezweryfikowane.\nImplikacja dla projektu: dowody podważają założenie, że portfel setek symulatorów finansowany wyłącznie z AdSense i bez społeczności czy linkowania będzie skuteczny. Niszowe narzędzia, które odniosły sukces, monetyzują przez subskrypcje albo leady i zdobywają zasięg przez rekomendacje (rankingi „best calculators” u blogerów finansowych, społeczność FIRE, osadzanie u partnerów). Jednocześnie mechanizmy Google (sygnały site-wide, scaled content abuse) sprawiają, że masowa automatyzacja jest ryzykiem dla całej domeny.",
+ "findings": [
+  {
+   "question": "a) Jak monetyzują się i zdobywają ruch niszowe narzędzia decyzyjne dla FIRE i emerytury (ficalc.app, cFIREsim, Open Social Security)?",
+   "claim_pl": "Według własnej strony About FI Calc jest darmowy i utrzymuje się z darowizn. cFIREsim recenzje opisują jako darmowe narzędzie webowe bez rejestracji, ale źródła finansowania i obecności reklam nie zweryfikowano. Open Social Security to darmowy kalkulator autorstwa Mike'a Pipera i Briana Courtsa; model finansowania jest niezweryfikowany. Wszystkie trzy narzędzia pojawiają się w zestawieniach „best retirement calculators” u blogerów finansowych (White Coat Investor, ChooseFI, The Ways To Wealth). To pośredni dowód, że ich dystrybucja opiera się na rekomendacjach ze społeczności FIRE i blogów, a nie wyłącznie na SEO.",
+   "evidence_type": "direct",
+   "numbers": "FI Calc: dane historyczne z ponad 100 lat (wg strony About). Ruchu żadnego z tych narzędzi nie zweryfikowano.",
+   "sources": [
+    {
+     "url": "https://guide.ficalc.app/about/",
+     "title": "About - FI Calc",
+     "publisher": "FI Calc"
+    },
+    {
+     "url": "https://www.whitecoatinvestor.com/best-retirement-calculators/",
+     "title": "A DIY Investor's Guide to Retirement Calculators",
+     "publisher": "The White Coat Investor"
+    },
+    {
+     "url": "https://choosefi.com/how-to-invest-money/early-retirement-calculators",
+     "title": "Best Early Retirement Calculators for 2026",
+     "publisher": "ChooseFI"
+    },
+    {
+     "url": "https://www.thewaystowealth.com/free-monte-carlo-simulation-calculator/",
+     "title": "6 Best Free Monte Carlo Retirement Simulation Calculators",
+     "publisher": "The Ways To Wealth"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Najlepsze darmowe narzędzia niszowe żyją z darowizn lub pasji twórców, a nie z AdSense. Ich zasięg wynika z rekomendacji w społecznościach i rankingach blogerów, czyli właśnie z linkowania i społeczności, z których właściciel chce zrezygnować. To również darmowe substytuty (C) lub częściowi konkurenci (B) w niszy emerytalnej."
+  },
+  {
+   "question": "a) Jak monetyzuje się ProjectionLab i jaką skalę osiąga?",
+   "claim_pl": "ProjectionLab to narzędzie bootstrapped na modelu freemium z subskrypcją: darmowy plan Basic, płatny Premium i plan Pro dla doradców. Założyciel Kyle Nolan deklaruje 1 mln USD ARR bez finansowania zewnętrznego (83,3 tys. USD MRR w czerwcu 2025), zespół 3 FTE i ponad 100 tys. gospodarstw domowych. Wcześniej, na X, ogłaszał 0,5 mln USD łącznego przychodu po 3 latach. GetLatka podaje dla 2023 r. tylko 201,6 tys. USD przychodu, co jest sprzeczne z deklaracjami założyciela. Kanały pozyskania ruchu nie zostały zweryfikowane.",
+   "evidence_type": "direct",
+   "numbers": "1 mln USD ARR (deklaracja założyciela); 83,3 tys. USD MRR w 06/2025; 3 FTE; 100 tys.+ gospodarstw; Premium ok. 14 USD/mies. lub 109–129 USD/rok (źródła się różnią); ok. 65% marży (źródło wtórne).",
+   "sources": [
+    {
+     "url": "https://projectionlab.com/blog/we-reached-1m-arr-with-zero-funding",
+     "title": "We reached $1M ARR with zero funding - ProjectionLab",
+     "publisher": "ProjectionLab"
+    },
+    {
+     "url": "https://x.com/_knolan/status/1762928674809000314?lang=en",
+     "title": "Kyle Nolan on X: Half a million in total revenue",
+     "publisher": "X"
+    },
+    {
+     "url": "https://www.starterstory.com/projection-lab-breakdown",
+     "title": "How Kyle Built A $50K/Month Financial Planning Tool - Starter Story",
+     "publisher": "Starter Story"
+    },
+    {
+     "url": "https://getlatka.com/companies/projectionlab",
+     "title": "ProjectionLab Revenue, Valuation & Funding History (2023)",
+     "publisher": "GetLatka"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Udany przykład głębokiego symulatora z jednego, zintegrowanego problemu (planowanie finansowe na całe życie) monetyzuje się przez subskrypcję, a nie reklamy. To dowód, że wartość głębokiej integracji można sprzedać zaangażowanym użytkownikom. Nie jest to jednak dowód, że setki płytszych symulatorów utrzymają się z display. ProjectionLab jest też bezpośrednim lub częściowym konkurentem w każdym symulatorze typu retirement/FIRE."
+  },
+  {
+   "question": "a) Model biznesowy Boldin (dawniej NewRetirement) i DealCheck",
+   "claim_pl": "Boldin działa na freemium: darmowy planer, subskrypcja PlannerPlus za ok. 120–144 USD rocznie, osobno płatne usługi Boldin Advisors (jedno ze źródeł podaje 2800 USD rocznie) oraz kanał doradców korzystających z wersji co-branded. Rebranding z NewRetirement nastąpił we wrześniu 2024. Według źródła wtórnego firma zamknęła w 2024 r. rundę Series A na 20 mln USD. DealCheck to również freemium: darmowa wersja web i mobilna oraz płatne plany Plus i Pro, dostępne tylko w USA. Ceny w recenzjach są sprzeczne (10/20 USD vs 14/29 USD miesięcznie). Istnieje ekosystem kodów promocyjnych (strony flux.ai), co według hipotezy wskazuje na program afiliacyjny. Engaging Data nie zostało zweryfikowane: wyszukiwanie nie zwróciło wyników.",
+   "evidence_type": "direct",
+   "numbers": "Boldin PlannerPlus ok. 120–144 USD/rok; 350 tys.+ planów; 300 mld USD+ śledzonych aktywów (źródło wtórne); Series A 20 mln USD (źródło wtórne). DealCheck Plus: do 50 zapisanych nieruchomości (help center).",
+   "sources": [
+    {
+     "url": "https://www.wealthmanagement.com/retirement/newretirement-rebrands-as-boldin",
+     "title": "NewRetirement Rebrands As Boldin",
+     "publisher": "WealthManagement.com"
+    },
+    {
+     "url": "https://www.whitecoatinvestor.com/newretirement-review-online-retirement-calculator/",
+     "title": "Boldin Review: An Online Retirement Calculator on Steroids",
+     "publisher": "The White Coat Investor"
+    },
+    {
+     "url": "https://yespress.io/boldin",
+     "title": "Boldin: The Spreadsheet That Grew Into a $300 Billion Planning Habit",
+     "publisher": "yespress.io"
+    },
+    {
+     "url": "https://retirementplanningtools.net/tools/boldin/",
+     "title": "Boldin (NewRetirement) Review 2026: Is PlannerPlus Worth $120/yr?",
+     "publisher": "retirementplanningtools.net"
+    },
+    {
+     "url": "https://help.dealcheck.io/en/articles/2023912-dealcheck-plus-pro",
+     "title": "DealCheck Plus & Pro",
+     "publisher": "DealCheck Help Center"
+    },
+    {
+     "url": "https://mashvisor.com/blog/dealcheck-review/",
+     "title": "DealCheck review",
+     "publisher": "Mashvisor"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W niszach o wysokiej stawce (emerytura, inwestycje w nieruchomości) dominującym modelem jest subskrypcja, a nie reklamy. Każdy symulator właściciela w tych niszach zmierzy się z dojrzałymi produktami z darmowym planem. Darmowy tier Boldin i DealCheck to realny bezpośredni lub częściowy konkurent, a zasięg tych produktów wspierają recenzje blogerów finansowych."
+  },
+  {
+   "question": "a) Narzędzia non-profit i rządowe (Rewiring America, NREL PVWatts, NYT rent vs buy): jak docierają do użytkowników?",
+   "claim_pl": "Rewiring America udostępnia bezpłatny, osadzalny Savings Calculator (wymaga klucza API) skierowany do wykonawców, firm, agencji rządowych i NGO, „without clients leaving your site”. W lutym 2025 uruchomiło trzy API: incentives, health impacts i Residential Electrification Model. Pokrycie zachęt jest szczegółowe w 18 stanach, a w pozostałych ogólne. Kod kalkulatora rachunków jest open source (Apache 2.0). Tych narzędzi nie monetyzuje się przez reklamy, a dystrybucja odbywa się przez B2B/embed. Ruch i model PVWatts oraz NYT rent vs buy nie zostały zweryfikowane: wyszukiwanie nie zwróciło wyników.",
+   "evidence_type": "direct",
+   "numbers": "3 API (luty 2025); szczegółowe pokrycie zachęt w 18 stanach.",
+   "sources": [
+    {
+     "url": "https://docs.rewiringamerica.org/incentives/embed",
+     "title": "Embed our Calculators",
+     "publisher": "Rewiring America"
+    },
+    {
+     "url": "https://rewiringamerica.org/newsroom/press-releases/API",
+     "title": "Rewiring America launches suite of electrification APIs",
+     "publisher": "Rewiring America"
+    },
+    {
+     "url": "https://www.rewiringamerica.org/tools/incentive-api",
+     "title": "Incentive API",
+     "publisher": "Rewiring America"
+    },
+    {
+     "url": "https://embed.rewiringamerica.org/",
+     "title": "Rewiring America Incentives Calculator Demo",
+     "publisher": "Rewiring America"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "W niszy solar/elektryfikacja (np. przykład „roof + solar”) istnieje darmowe, finansowane grantowo narzędzie z danymi o zachętach, osadzane na wielu stronach partnerów. To częściowy konkurent i źródło danych dla symulatora. Właściciel może z API skorzystać (należy sprawdzić warunki API Terms), ale nie wygra z nim aktualnością danych o zachętach."
+  },
+  {
+   "question": "a/e) Omni Calculator jako benchmark portfela kalkulatorów finansowanego z reklam",
+   "claim_pl": "Według case study Google Ad Manager Omni Calculator od początku utrzymuje się głównie z reklam (AdSense), a założyciel uznał, że płatny produkt zawęziłby audytorium. Ruch: ponad 18 mln wizyt miesięcznie (case study Google) lub 23,1 mln miesięcznie na początku 2024 (BoringCashCow). Similarweb pokazuje ok. 76% ruchu desktop z wyszukiwania organicznego oraz spadek o 11,03% m/m w jednym z okien. Zespół liczy ok. 70 osób, w tym naukowców. Szacunki przychodu są sprzeczne: poniżej 5 mln USD, 4,2 mln USD rocznie lub 500 tys. USD miesięcznie, i żaden nie jest audytowany. Formalny proces fact-checkingu lub recenzji nie został zweryfikowany.",
+   "evidence_type": "indirect",
+   "numbers": "18–23,1 mln wizyt/mies.; ok. 76% ruchu desktop z organic; ok. 67–70 pracowników; przychód: szacunki od <5 mln USD/rok do 500 tys. USD/mies. (niezweryfikowane).",
+   "sources": [
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator",
+     "publisher": "Google Ad Manager / AdSense publisher stories"
+    },
+    {
+     "url": "https://www.similarweb.com/website/omnicalculator.com/",
+     "title": "omnicalculator.com Traffic Analytics, Ranking & Audience [June 2026]",
+     "publisher": "Similarweb"
+    },
+    {
+     "url": "https://boringcashcow.com/view/calculators-website-generates-231-million-visits-a-month",
+     "title": "Calculators Website Generates 23.1 Million Visits a Month",
+     "publisher": "BoringCashCow"
+    },
+    {
+     "url": "https://growjo.com/company/Omni_Calculator",
+     "title": "Omni Calculator: Revenue, Competitors, Alternatives",
+     "publisher": "Growjo"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Model „kalkulatory + display” działa, ale przy dziesiątkach milionów wizyt, tysiącach kalkulatorów i zespole ok. 70 osób, przy bardzo silnej zależności od Google organic. Dla jednoosobowego projektu to raczej sygnał, że display wymaga ogromnego wolumenu. Głębokie symulatory mają z definicji niższy wolumen na stronę niż „BMI calculator”, więc sama ekonomia display jest dla nich trudniejsza (hipoteza / niezweryfikowane)."
+  },
+  {
+   "question": "f) Struktura przychodów NerdWallet w FY2025 (10-K)",
+   "claim_pl": "Według 10-K za FY2025 przychód NerdWallet wyniósł ok. 836,6 mln USD (687,6 mln USD w 2024). Podział według kategorii produktów: Insurance 280,8 mln (191,6 mln w 2024; 45,0 mln w 2023), Credit cards 133,4 mln (176,4 mln; 209,7 mln), Loans 133,4 mln (84,5 mln; 101,6 mln), SMB 100,0 mln (109,8 mln; 101,2 mln), Emerging verticals 189,0 mln (banking, investing, international). Od Q1 2026 firma raportuje podział Consumer vs SMB. Przychód jest przypisany do produktów partnerów finansowych. Według brytyjskiej strony NerdWallet firma zarabia na partnerstwach komercyjnych z dostawcami „plus some paid advertising”. Udziału display w przychodach w USA nie znaleziono w wynikach. Szacunek „~85% z afiliacji” pochodzi od strony trzeciej i jest niezweryfikowany.",
+   "evidence_type": "direct",
+   "numbers": "FY2025: 836,6 mln USD; Insurance 280,8; Credit cards 133,4; Loans 133,4 (identyczna z Credit cards, ale suma kategorii zgadza się z całością); SMB 100,0; Emerging 189,0 mln USD.",
+   "sources": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1625278/000162527826000014/nrds-20251231.htm",
+     "title": "NERDWALLET, INC. - Form 10-K - FY2025",
+     "publisher": "SEC EDGAR",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.businesswire.com/news/home/20260225448516/en/NerdWallet-Reports-Fourth-Quarter-and-Full-Year-2025-Results",
+     "title": "NerdWallet Reports Fourth Quarter and Full Year 2025 Results",
+     "publisher": "Business Wire",
+     "published": "2026-02-25"
+    },
+    {
+     "url": "https://www.nerdwallet.com/uk/about-us/how-our-site-works",
+     "title": "NerdWallet UK - how our site works",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://michaelryanmoney.com/nerdwallet-review-safe-legit/",
+     "title": "NerdWallet Review: Is It a Trustworthy Tool or a Sales Trap?",
+     "publisher": "Michael Ryan Money"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Największy amerykański wydawca narzędzi i treści finansowych jest w praktyce biznesem lead-gen i afiliacji (zarabia per produkt partnera), a nie biznesem display. Jego kalkulatory są lejkiem do ofert partnerów. Projekt opierający się wyłącznie na AdSense konkuruje o te same zapytania z graczami, którzy zarabiają na użytkowniku wielokrotnie więcej i mogą przelicytować go w SEO i marketingu (wniosek: hipoteza)."
+  },
+  {
+   "question": "f) Model biznesowy SmartAsset i Bankrate (Red Ventures)",
+   "claim_pl": "Rdzeniem przychodów SmartAsset jest SmartAdvisor, czyli generowanie leadów dla doradców finansowych. Według firmy SmartAdvisor dał 10-krotny wzrost ARR do prawie 100 mln USD (dane z 2021) i pomógł osiągnąć wycenę 1 mld USD. Stawka ok. 230 USD za lead to szacunek komentatora i jest niezweryfikowana. Model Red Ventures (właściciela Bankrate od 2017) to według The Verge (cytowanego w Wikipedii) treści pod wysokointencyjne zapytania w Google, monetyzowane afiliacją; za jednego klienta karty kredytowej płacono setki dolarów. Nowszych danych o przychodach z lat 2025–2026 nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "SmartAsset: ARR ok. 100 mln USD (2021, dane firmy); wycena 1 mld USD; ok. 230 USD/lead (szacunek komentatora). Bankrate: przejęcie przez Red Ventures za 1,24 mld USD (wg HousingWire).",
+   "sources": [
+    {
+     "url": "https://riabiz.com/a/2021/7/13/smartasset-raises-110-million-after-lpl-and-schwab-dominoes-fall-revenues-zoom-to-100-million-and-zoe-escalates-ria-referrals-arms-race",
+     "title": "SmartAsset raises $110 million ... revenues zoom to $100 million",
+     "publisher": "RIABiz",
+     "published": "2021-07-13"
+    },
+    {
+     "url": "https://www.institutionalinvestor.com/article/2auctyvi71ne1npxu7z7k/wealth-management/advisor-referral-business-helps-lift-smartasset-to-1-billion-valuation",
+     "title": "Advisor referral business helps lift SmartAsset to $1 billion valuation",
+     "publisher": "Institutional Investor"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Red_Ventures",
+     "title": "Red Ventures",
+     "publisher": "Wikipedia"
+    },
+    {
+     "url": "https://www.housingwire.com/articles/40608-financial-publishing-giant-bankrate-selling-to-red-ventures-for-124-billion",
+     "title": "Financial publishing giant Bankrate selling to Red Ventures for $1.24 billion",
+     "publisher": "HousingWire"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "SmartAsset to najbliższy wzorzec „kalkulatory jako lejek”: darmowe kalkulatory przyciągają ruch, a pieniądze przynoszą leady do doradców. To wprost przeczy założeniu, że lead-gen jest tylko dodatkiem. W finansach USA ekonomia jednostkowa leada jest o rzędy wielkości wyższa niż display (hipoteza wynikająca z porównania 100–230 USD za lead/klienta z typowymi RPM w zakresie 1–10 USD za 1000 odsłon)."
+  },
+  {
+   "question": "b) Oficjalne stanowiska Google 2023–2026: sygnały site-wide (helpful content) a pojedyncze strony",
+   "claim_pl": "Udokumentowane: w 2022 r. Google ogłosił sygnał site-wide (klasyfikator ML) dla treści „search engine-first”. Danny Sullivan zaprzeczał, że edycja jednej strony zmieni ocenę całej witryny („doesn't work that way”). Od marca 2024 system jest częścią core ranking systems. Według relacji z dokumentacji Google systemy core są „primarily designed to work on the page level”, ale uwzględniają też niektóre sygnały site-wide. Mueller: „We do index things page by page, we rank things page by page, but there's some signals that we can't reliably collect on a per page basis”. Mówił też, że ciężko dotknięte witryny odczuwają skutki do kolejnej dużej aktualizacji. Cytaty pochodzą z relacji wtórnych (SEJ, SER, GSQi). Bezpośredniego oświadczenia z 2025 r. nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "Klasyfikator HCU włączony do core w marcu 2024. Według trackera wtórnego ok. 22% z ok. 400 ciężko dotkniętych witryn odzyskało ponad 20% ruchu do sierpnia 2024 (Patrick Stox; niezweryfikowane).",
+   "sources": [
+    {
+     "url": "https://www.gsqi.com/marketing-blog/google-site-level-impact-gabeback-machine/",
+     "title": "Documenting Google's site-level evaluation and impact on search rankings using the 'Gabeback Machine'",
+     "publisher": "GSQi (Glenn Gabe)"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-helpful-content-update-sitewide-36318.html",
+     "title": "Google's Helpful Content Update Is Sitewide; Changing Some Words On A Page Won't Help You",
+     "publisher": "Search Engine Roundtable"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/google-helpfulness-signal-changes/516718/",
+     "title": "Google Helpfulness Signals Might Change - Why It's Not Enough",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://patrickstox.com/programmatic-seo/risks/helpful-content-update/",
+     "title": "Helpful Content Update",
+     "publisher": "Patrick Stox"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Przy setkach symulatorów na jednej domenie słaba część katalogu (np. automatycznie generowane, płytkie strony) może obniżyć ocenę całej witryny, a powrót trwa miesiące. Argument za rygorystycznym quality gate przed publikacją i przeciw wypuszczaniu „setek” naraz. Struktura katalogów nie izoluje sygnałów site-wide (hipoteza / niezweryfikowane)."
+  },
+  {
+   "question": "b) „Topic authority” i tematyczne skupienie witryny: dokumentacja kontra folklor SEO",
+   "claim_pl": "Udokumentowane: w maju 2023 Google opisał na blogu Search Central system „topic authority”, ale wyłącznie dla zapytań newsowych w wyspecjalizowanych obszarach (zdrowie, polityka, finanse) oraz dla lokalnych wydawców. Sygnały to m.in. notability źródła w danym temacie, cytowanie oryginalnych materiałów przez innych wydawców i historia rzetelnych publikacji. Sullivan mówił, że system jest używany od lat. Mueller stwierdził, że „topical authority” to w praktyce trafność (relevance) pod nową nazwą, „don't worry about it”, i że Google nie ma wyniku „website authority”. Folklor lub niezweryfikowane: pola siteFocusScore i siteRadius z wycieku Content Warehouse API (2024) znane są tylko z komentarzy blogowych. Mueller wspominał, że zrozumienie, „jakiego rodzaju to witryna”, pomaga ustalić punkt startowy dla nowej strony. Nie znaleziono oficjalnego stwierdzenia, że szeroka witryna jest karana albo wspierana.",
+   "evidence_type": "direct",
+   "numbers": "Ogłoszenie systemu news topic authority: maj 2023.",
+   "sources": [
+    {
+     "url": "https://developers.google.com/search/blog/2023/05/understanding-news-topic-authority",
+     "title": "Understanding news topic authority",
+     "publisher": "Google Search Central Blog",
+     "published": "2023-05"
+    },
+    {
+     "url": "https://searchengineland.com/google-launches-new-topic-authority-system-to-better-surface-news-content-427485",
+     "title": "Google launches new topic authority system to better surface news content",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/google-on-topical-authority-dont-worry-about-it/501209/",
+     "title": "Google On Topical Authority: Don't Worry About It",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-no-website-authority-score-22874.html",
+     "title": "Google: We Don't Have A Website Authority Signal Or Score",
+     "publisher": "Search Engine Roundtable"
+    },
+    {
+     "url": "https://www.socialaibusinesssolutions.com/blog/topical-authority-what-it-actually-is",
+     "title": "A Google Search Advocate Says Topical Authority Isn't Real. The Leaked API Docs Disagree.",
+     "publisher": "Social AI Business Solutions"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Decyzja „jedna szeroka domena vs kilka domen tematycznych” nie może opierać się na rzekomej karze za szerokość, bo takiej nie udokumentowano. Kontekst witryny prawdopodobnie jednak wpływa na start nowych stron, więc spójny klaster tematyczny (np. dom/energia/nieruchomości) jest bezpieczniejszy niż katalog wszystkiego (hipoteza / niezweryfikowane). Jedna domena koncentruje też ryzyko sygnałów site-wide."
+  },
+  {
+   "question": "b) Polityka site reputation abuse (listopad 2024): czy dotyczy projektu?",
+   "claim_pl": "Według bloga Google Search Central z listopada 2024 polityka site reputation abuse dotyczy publikowania treści stron trzecich w celu wykorzystania sygnałów rankingowych hosta i ma zastosowanie niezależnie od nadzoru czy udziału pierwszej strony. Egzekwowanie odbywa się przez ręczne działania zgłaszane w Search Console. Rekomendowane środki zaradcze to przeniesienie treści na inną domenę, noindex lub przerobienie jej na treść first-party. Według źródeł wtórnych egzekwowanie zaostrzono w latach 2025–2026, a w sierpniu 2025 była aktualizacja spamowa; nie zweryfikowano tego w dokumentach Google.",
+   "evidence_type": "direct",
+   "numbers": "Aktualizacja polityki: listopad 2024.",
+   "sources": [
+    {
+     "url": "https://developers.google.com/search/blog/2024/11/site-reputation-abuse",
+     "title": "Updating our site reputation abuse policy",
+     "publisher": "Google Search Central Blog",
+     "published": "2024-11"
+    },
+    {
+     "url": "https://www.seroundtable.com/google-clarifies-site-reputation-abuse-policy-manual-actions-38781.html",
+     "title": "Google Clarifies Site Reputation Abuse Policy & Manual Actions",
+     "publisher": "Search Engine Roundtable"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Polityka nie zagraża własnym symulatorom first-party. Staje się ryzykiem dopiero wtedy, gdy właściciel zacznie hostować treści partnerów, sponsorowane kalkulatory lub white-label narzędzia afiliacyjne pod swoją domeną. To istotne, jeśli dodatek lead-gen przybierze formę stron partnerów."
+  },
+  {
+   "question": "b/e) Polityka scaled content abuse a masowo generowane strony narzędziowe",
+   "claim_pl": "Według zgodnych relacji wtórnych polityka obejmuje sytuacje, gdy „many pages are generated for the primary purpose of manipulating search rankings and not helping users”, „no matter how it's created”. Jako przykład podano „using generative AI tools ... to generate many pages without adding value for users”. W marcu 2024 zastąpiła ona dawne „spammy automatically generated content”. Google nie ujawnił progu liczby stron ani tempa publikacji. W badanym zakresie (wyszukiwanie po manual action, programmatic SEO i stronach z kalkulatorami) nie znaleziono udokumentowanej ręcznej kary dla portalu z kalkulatorami. Twierdzenia o spadkach o 60–90% dla witryn programmatic po aktualizacjach core z marca i maja 2026 pochodzą z blogów dostawców i są niezweryfikowane, podobnie jak szacunki spadków G2 (80–85%).",
+   "evidence_type": "indirect",
+   "numbers": "Brak progu ilościowego. Spadki 60–90% (marzec 2026) i 76–99% (G2, ZoomInfo) to niezweryfikowane szacunki stron trzecich.",
+   "sources": [
+    {
+     "url": "https://www.searchenginejournal.com/in-depth-look-at-google-spam-policies-updates/511005/",
+     "title": "In-depth look at Google spam policies updates",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://ppc.land/scaled-content-abuse/",
+     "title": "Scaled content abuse",
+     "publisher": "PPC Land"
+    },
+    {
+     "url": "https://www.digitalapplied.com/blog/programmatic-seo-after-march-2026-surviving-scaled-content-ban",
+     "title": "Programmatic SEO After March 2026: Scaled Content Survival",
+     "publisher": "Digital Applied"
+    },
+    {
+     "url": "https://www.airops.com/blog/hidden-dangers-of-programmatic-seo",
+     "title": "The Hidden Dangers of Programmatic SEO",
+     "publisher": "AirOps"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Pipeline „Claude Code + n8n generuje setki symulatorów” mieści się dokładnie w klasie ryzyka opisanej przez politykę. Obronić może się tylko symulator z unikalną logiką obliczeniową i realną wartością (porównanie wariantów, analiza wrażliwości), a nie szablon z podmienionym tekstem. Sama liczba stron jest ryzykiem, nie przewagą."
+  },
+  {
+   "question": "c) Jak asystenci AI dobierają źródła: domain authority, wzmianki o marce, świeżość, ranking w Google",
+   "claim_pl": "Dowody pochodzą niemal wyłącznie od dostawców narzędzi SEO i AI visibility, nie z recenzowanych badań. Analiza Profound (30 mln cytowań): Wikipedia ma ok. 47,9% udziału wśród najczęściej cytowanych źródeł w ChatGPT, a Reddit ok. 46,7% w Perplexity. Ahrefs (grudzień 2025, ok. 75 tys. marek): najsilniejsza korelacja z widocznością w ChatGPT, AI Mode i AI Overviews to wzmianki na YouTube (0,737). AirOps: ChatGPT wymienia marki ok. 3,2 razy częściej, niż do nich linkuje. Seer Interactive: ok. połowa cytowań Perplexity dotyczy treści z bieżącego roku. Semrush: ChatGPT w ok. 90% przypadków cytuje strony spoza pozycji 20 w Google. Ahrefs: udział cytowań AI Overviews z organicznego top 10 spadł z 76,1% do 37,9%. Liczby są kierunkowe, a źródła mierzą różne rzeczy.",
+   "evidence_type": "indirect",
+   "numbers": "Wikipedia ok. 47,9% (ChatGPT); Reddit ok. 46,7% (Perplexity); korelacja wzmianek YouTube 0,737; 3,2x więcej wzmianek niż linków (ChatGPT); ok. 90% cytowań ChatGPT spoza top 20 Google; AIO z top 10: 76,1% → 37,9%.",
+   "sources": [
+    {
+     "url": "https://contently.com/2026/04/29/top-sources-llms-cite/",
+     "title": "Top 10 Sources LLMs Cite Most in 2026",
+     "publisher": "Contently",
+     "published": "2026-04-29"
+    },
+    {
+     "url": "https://risely.digital/en/insights/how-ai-search-engines-choose-citations",
+     "title": "How ChatGPT, Perplexity & AI Overviews Choose Citations",
+     "publisher": "Risely Digital"
+    },
+    {
+     "url": "https://www.agenzy.lt/blog/which-sources-ai-engines-cite-2026",
+     "title": "Which Sources Do AI Engines Cite? Agenzy 2026 Study",
+     "publisher": "Agenzy"
+    },
+    {
+     "url": "https://www.netranks.ai/blog/how-chatgpt-claude-and-perplexity-choose-which-brands-to-cite/",
+     "title": "How ChatGPT, Claude & Perplexity Choose Brands to Cite",
+     "publisher": "NetRanks"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Według tych danych widoczność w asystentach AI zależy od obecności marki poza własną witryną (YouTube, Reddit, Wikipedia, wzmianki w mediach), a nie tylko od rankingu w Google. To wymaga aktywności w społecznościach, czyli tego, czego właściciel chce uniknąć. Nie wolno przenosić reguł Google wprost na ChatGPT czy Perplexity: każdy system zachowuje się inaczej (np. Perplexity premiuje świeżość)."
+  },
+  {
+   "question": "c) Czy llms.txt wpływa na cytowania w AI?",
+   "claim_pl": "Badanie SE Ranking (listopad 2025, ok. 300 tys. domen) nie wykazało mierzalnego związku między posiadaniem llms.txt a częstością cytowań w głównych LLM. Plik miało ok. 10% domen. Według relacji wtórnych eksperyment OtterlyAI (90 dni) zanotował tylko 84 żądania tego pliku (0,1% żądań crawlerów), a Ahrefs podaje, że 97% z ok. 38 tys. domen z poprawnym llms.txt nie otrzymało w maju 2026 ani jednego żądania pliku. Rzekome porównanie przez Muellera llms.txt do meta keywords pochodzi z jednego bloga i jest niezweryfikowane. Badania pokazującego pozytywny efekt nie znaleziono.",
+   "evidence_type": "direct",
+   "numbers": "ok. 300 tys. domen; ok. 10% z llms.txt; 0,1% żądań (OtterlyAI); 97% z ok. 38 tys. domen bez żądań (Ahrefs, 05/2026, źródło wtórne).",
+   "sources": [
+    {
+     "url": "https://seranking.com/blog/llms-txt/",
+     "title": "Does LLMs.txt impact your AI visibility and citations? No, according to research",
+     "publisher": "SE Ranking",
+     "published": "2025-11"
+    },
+    {
+     "url": "https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/",
+     "title": "llms.txt shows no clear effect on AI citations based on 300k domains",
+     "publisher": "Search Engine Journal"
+    },
+    {
+     "url": "https://maxaeo.ai/blog/?p=148",
+     "title": "Does llms.txt Work? Evidence From AI Citation Data",
+     "publisher": "MaxAEO"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "llms.txt można dodać kosztem minut, ale nie należy traktować go jako dźwigni dystrybucji przez AI. Strategia „AI-assistant referrals” nie może się na nim opierać."
+  },
+  {
+   "question": "c) Structured data / schema oraz indeks (Bing, Google) a cytowania w ChatGPT, Perplexity i AI Overviews",
+   "claim_pl": "Test Ahrefs (1885 stron, pięć systemów, w tym ChatGPT i Perplexity): systemy wyciągały tylko widoczną treść HTML, a JSON-LD i ukryte Microdata/RDFa były ignorowane. Zmiana w ChatGPT wyniosła ok. +2%, ale test dotyczył stron już cytowanych. Search Atlas nie znalazł korelacji między pokryciem schema a cytowaniami. AirOps znalazł korelację 38,5% vs 32,0% na korzyść stron z JSON-LD (to korelacja, nie przyczynowość). Fabrice Canel z Bing twierdzi, że schema pomaga LLM-om Microsoftu. ChatGPT search korzystał z Binga od października 2023 i ma własny crawler OAI-SearchBot. Francuska analiza 240 mln cytowań wskazuje, że w lipcu 2025 33% cytowań ChatGPT pokrywało się z wynikami Google, a tylko 8% z Bingiem (interpretacja o własnym indeksie OpenAI to inferencja). Dokument Google „AI features and your website” opisuje query fan-out i szerszy zestaw stron wspierających. Brak osobnych wymagań technicznych znany jest z relacji wtórnej. Pew: kliknięcia w klasyczny wynik w 8% wizyt z AI summary wobec 15% bez niego.",
+   "evidence_type": "indirect",
+   "numbers": "+2% (Ahrefs, ChatGPT); 38,5% vs 32,0% (AirOps, korelacja); overlap z Google 33% vs z Bing 8% (07/2025); CTR 8% vs 15% (Pew).",
+   "sources": [
+    {
+     "url": "https://ahrefs.com/blog/schema-ai-citations/",
+     "title": "Schema AI citations",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://searchatlas.com/blog/limits-of-schema-markup-for-ai-search/",
+     "title": "The Limits of Schema Markup for AI Search: LLM Citation Analysis",
+     "publisher": "Search Atlas"
+    },
+    {
+     "url": "https://analyzify.com/hub/schema-markup-ai-citations-research",
+     "title": "Does Schema Markup Help AI Citations? What Studies Found",
+     "publisher": "Analyzify"
+    },
+    {
+     "url": "https://www.leptidigital.fr/intelligence-artificielle-ia/chatgpt-google-bing-impact-81622/",
+     "title": "ChatGPT Search : Google vs Bing, de quel moteur de recherche s'inspire-t-il vraiment ?",
+     "publisher": "Leptidigital"
+    },
+    {
+     "url": "https://searchengineland.com/chatgpt-search-microsoft-bing-seo-448019",
+     "title": "ChatGPT Search makes Microsoft Bing an SEO priority",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://developers.google.com/search/docs/appearance/ai-features",
+     "title": "AI features and your website",
+     "publisher": "Google Search Central"
+    },
+    {
+     "url": "https://serpapi.com/blog/the-state-of-the-serp-in-the-age-of-ai/",
+     "title": "The state of the SERP in the age of AI",
+     "publisher": "SerpApi"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Najważniejsze, żeby wynik symulatora, jego założenia i wnioski były zapisane w widocznym HTML (renderowanym po stronie serwera), a nie wyłącznie w JS czy JSON-LD. Wtedy AI może je wyciągnąć i zacytować. Schema to higiena, a nie przewaga. AI summaries obniżają CTR, co uderza w model display oparty na kliknięciach."
+  },
+  {
+   "question": "d) Praktyki E-E-A-T i YMYL wydawców narzędzi finansowych (NerdWallet, SmartAsset, Bankrate, Omni)",
+   "claim_pl": "NerdWallet publikuje wytyczne redakcyjne (fact-checking, szybkie korekty błędów, „transparent in how we make money and how we rate products”) oraz osobną stronę metodologii ocen gwiazdkowych opartej na rubrykach zespołu ekspertów, z deklaracją, że relacje z partnerami nie wpływają na oceny. SmartAsset ma stronę „editorial independence”: rekomendacje opierają się na badaniach i analizie danych, a określenia „best”/„top” wynikają z metodologii niezależnej od partnerów. Praktyk Bankrate, istnienia „financial review board” ani formalnego procesu recenzji Omni nie zweryfikowano. Profil firmowy Omni mówi jedynie o „specialists and academics”. Cytat Sullivana, że E-E-A-T „not a ranking factor”, pochodzi ze źródła wtórnego i jest niezweryfikowany.",
+   "evidence_type": "direct",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://www.nerdwallet.com/nerdwallet-editorial-guidelines",
+     "title": "NerdWallet Editorial Guidelines",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://www.nerdwallet.com/methodology",
+     "title": "How NerdWallet Determines Star Ratings",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://smartasset.com/editorial-independence",
+     "title": "Editorial Independence",
+     "publisher": "SmartAsset"
+    },
+    {
+     "url": "https://app.dealroom.co/companies/omni_calculator",
+     "title": "Omni Calculator company information, funding & investors",
+     "publisher": "Dealroom"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Tanim i automatyzowalnym elementem zaufania, spójnym z koncepcją symulatora, jest publiczna strona metodologii i jawne założenia przy każdym narzędziu (źródła danych, data aktualizacji, ograniczenia), a także ujawnienie modelu zarabiania. Panele ekspertów-recenzentów są drogie i kłócą się z założeniem braku kosztownej pracy redakcyjnej. Bez nich tematy YMYL (finanse, podatki) pozostają w niekorzystnej pozycji wobec NerdWallet i Bankrate (hipoteza)."
+  },
+  {
+   "question": "e) Indie i małe portale z kalkulatorami 2023–2026: raporty przychodów, ruchu i porażki",
+   "claim_pl": "Twardych, publicznych raportów przychodów portali z kalkulatorami uruchomionych w latach 2023–2026 nie znaleziono w badanym zakresie (Indie Hackers, HN, ogólna sieć; jedno wyszukiwanie typu extended). Są anegdoty. Autor portalu z ponad 50 kalkulatorami na Indie Hackers pisze, że publikacja była łatwa, ale zdobycie zaufania i ruchu nie. W chwili wpisu nie miał przychodów z reklam i czekał na akceptację AdSense. Inny wpis na IH opisuje spadek przychodów z AdSense z 800 do 200 USD miesięcznie w 2024 przy niezmienionym ruchu (spadek RPM) i przejście na bezpośrednią sprzedaż reklam, która po pół roku dawała 3000 USD miesięcznie. Komentarz na HN (stary wątek) podaje ok. 1–2 USD na 1000 odsłon w niszach o niskiej konkurencji i 5–10 USD w konkurencyjnych przy ruchu z krajów tier-1.",
+   "evidence_type": "indirect",
+   "numbers": "AdSense 800 → 200 USD/mies. (2024, jedna anegdota); sprzedaż bezpośrednia 3000 USD/mies.; RPM 1–2 / 5–10 USD (anegdota HN, nieaktualna).",
+   "sources": [
+    {
+     "url": "https://www.indiehackers.com/post/i-built-a-50-page-calculator-website-publishing-it-was-easy-earning-trust-and-traffic-wasn-t-wtiXvCjOSmdVA8DgHF2A",
+     "title": "I built a 50+ page calculator website. Publishing it was easy; earning trust and traffic wasn't",
+     "publisher": "Indie Hackers"
+    },
+    {
+     "url": "https://www.indiehackers.com/post/from-200-to-3k-month-why-i-ditched-adsense-for-direct-ad-sales-with-numbers-d1098e3aae",
+     "title": "From $200 to $3k/month: Why I ditched AdSense for direct ad sales (with numbers)",
+     "publisher": "Indie Hackers"
+    },
+    {
+     "url": "https://news.ycombinator.com/item?id=14576677",
+     "title": "Ask HN: How much ad revenue you make from your side project?",
+     "publisher": "Hacker News"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Wąskim gardłem nie jest produkcja narzędzi (którą Claude Code tanieje), tylko zaufanie i ruch. Przychody z AdSense na małym portalu bywają niskie i niestabilne. Te anegdoty nie wystarczają do modelu ekonomicznego, ale nie wspierają też założenia o skalowalnym przychodzie z display. Nie wolno z nich wyliczać RPM dla projektu."
+  },
+  {
+   "question": "a/f) Synteza przekrojowa: wzorce monetyzacji narzędzi decyzyjnych i finansowych",
+   "claim_pl": "W zebranych dowodach widać wyraźny podział. Głębokie, zintegrowane narzędzia decyzyjne monetyzują się przez subskrypcję (ProjectionLab, Boldin, DealCheck), darowizny (FI Calc) lub granty i dystrybucję B2B przez embed/API (Rewiring America). Wielcy wydawcy finansowi zarabiają na leadach i afiliacji (NerdWallet, SmartAsset, Bankrate/Red Ventures). Model, w którym display jest główną bazą, zaobserwowano tylko u szerokiego, wysokowolumenowego katalogu kalkulatorów (Omni Calculator). W badanym zakresie nie znaleziono głębokiego symulatora decyzyjnego, którego główną bazą przychodów byłby display. To obserwacja z ograniczonej próby, a nie dowód, że taki model nie istnieje.",
+   "evidence_type": "estimate",
+   "numbers": "Próba: ok. 10 produktów z pytania (a) i (f); Engaging Data, PVWatts i NYT niezweryfikowane.",
+   "sources": [
+    {
+     "url": "https://guide.ficalc.app/about/",
+     "title": "About - FI Calc",
+     "publisher": "FI Calc"
+    },
+    {
+     "url": "https://projectionlab.com/blog/we-reached-1m-arr-with-zero-funding",
+     "title": "We reached $1M ARR with zero funding - ProjectionLab",
+     "publisher": "ProjectionLab"
+    },
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator",
+     "publisher": "Google Ad Manager / AdSense publisher stories"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1625278/000162527826000014/nrds-20251231.htm",
+     "title": "NERDWALLET, INC. - Form 10-K - FY2025",
+     "publisher": "SEC EDGAR"
+    },
+    {
+     "url": "https://docs.rewiringamerica.org/incentives/embed",
+     "title": "Embed our Calculators",
+     "publisher": "Rewiring America"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Założenie właściciela, że display (AdSense) będzie bazą, a afiliacja, leady i płatne funkcje tylko dodatkiem, jest sprzeczne z tym, jak monetyzują się zbadane narzędzia tej klasy. Głęboki symulator przyciąga mniej, ale bardziej zdecydowanych użytkowników, co ekonomicznie sprzyja leadom lub subskrypcji, a nie display. Zespół powinien albo przyjąć, że model display wymaga skali typu Omni, albo otwarcie przetestować, czy baza display w ogóle się domyka (hipoteza do weryfikacji w modelu ekonomicznym)."
+  }
+ ],
+ "contradictions_pl": [
+  "NerdWallet FY2025: Loans (133,4 mln USD) i Credit cards (133,4 mln USD) mają identyczne kwoty. Suma pięciu kategorii zgadza się z całością (836,6 mln), co sugeruje poprawność danych, ale warto to potwierdzić bezpośrednio w 10-K.",
+  "ProjectionLab: założyciel deklaruje 1 mln USD ARR (06/2025: 83,3 tys. USD MRR), a GetLatka podaje dla 2023 r. tylko 201,6 tys. USD przychodu. Różnica może wynikać z innych okresów lub metody szacunku, ale nie da się tego rozstrzygnąć.",
+  "Omni Calculator: ruch 18 mln/mies. (case study Google) vs 23,1 mln/mies. (BoringCashCow). Przychód od <5 mln USD/rok do 500 tys. USD/mies. (rozrzut kilkukrotny, wszystkie dane nieaudytowane).",
+  "DealCheck: ceny planów w recenzjach są sprzeczne (Plus/Pro 10/20 USD vs Starter/Pro 14/29 USD miesięcznie).",
+  "ChatGPT search: źródła mówią o zależności od indeksu Bing (od 10/2023), ale analiza 240 mln cytowań pokazuje w 07/2025 większe pokrycie z Google (33%) niż z Bingiem (8%).",
+  "AI Overviews: według relacji (SE Ranking, SerpApi) Google twierdzi, że funkcje AI opierają się na tradycyjnych sygnałach SEO, podczas gdy Ahrefs raportuje spadek udziału cytowań z organicznego top 10 z 76,1% do 37,9%. Query fan-out może godzić obie tezy, bo strony rankują na zapytania pochodne.",
+  "Topical authority: Mueller twierdzi, że to trafność i nie ma wyniku authority. Komentatorzy wycieku API z 2024 wskazują pola siteFocusScore i siteRadius. Oba stanowiska mogą być prawdziwe, bo brak nazwanego wyniku nie wyklucza reprezentacji tematu na poziomie witryny.",
+  "Założenie właściciela o braku zależności od społeczności i linkowania kontra dowody: niszowe narzędzia zdobywają zasięg przez rankingi blogerów i społeczność FIRE, a widoczność w AI koreluje z wzmiankami na YouTube i Reddicie."
+ ],
+ "open_questions_pl": [
+  "Engaging Data, NREL PVWatts, NYT rent vs buy calculator: ruch i monetyzacja niezweryfikowane (brak wyników w ramach budżetu wyszukiwań).",
+  "Kanały pozyskania ruchu ProjectionLab, Boldin i DealCheck (SEO, Reddit, YouTube, afiliacja recenzentów) nie zostały zweryfikowane. Recenzje WCI i Financial Samurai mogą być afiliacyjne (hipoteza).",
+  "Jaki udział w przychodach NerdWallet mają reklamy display? Nie znaleziono tego w wynikach wyszukiwania; wymaga lektury sekcji revenue recognition w 10-K.",
+  "Procesy redakcyjne i recenzenckie Bankrate oraz Omni Calculator: niezweryfikowane.",
+  "Brak pierwotnego cytatu Google (Search Central, Sullivan, Mueller) z lat 2025–2026 na temat tego, czy szeroka, wielotematyczna witryna jest w gorszej pozycji niż niszowa.",
+  "Czy aktualizacje core z marca i maja 2026 rzeczywiście uderzyły w strony programmatic lub narzędziowe? Źródła to wyłącznie blogi dostawców; brak potwierdzenia Google ani niezależnego trackera (np. Glenn Gabe).",
+  "Brak publicznych danych o wolumenie poleceń z asystentów AI (ChatGPT, Perplexity, Claude, Copilot, Gemini) do stron z kalkulatorami i symulatorami. Nie wolno utożsamiać cytowań z kliknięciami.",
+  "Brak udokumentowanych przypadków ręcznej kary (manual action) za scaled content abuse wobec portali z narzędziami w badanym zakresie. Nie oznacza to braku ryzyka.",
+  "Aktualne RPM AdSense dla treści finansowych i domowych w USA w 2026: brak wiarygodnego źródła w tej rundzie."
+ ],
+ "queries_run": [
+  "NerdWallet 10-K 2025 revenue by vertical credit cards loans SMB insurance revenue mix (standard)",
+  "Google site reputation abuse policy topic authority Search Central documentation 2025 site-wide signals (extended)",
+  "study which sources ChatGPT Perplexity AI Overviews cite domain authority brand mentions freshness 2025 (extended)",
+  "NerdWallet revenue \"primarily\" fees from financial services partners matching consumers advertising cost-per-click 10-K how we make money (standard)",
+  "SmartAsset business model SmartAdvisor lead generation revenue; Bankrate Red Ventures revenue model affiliate (standard)",
+  "Danny Sullivan OR John Mueller site covers many topics broad site ranking \"site-wide\" helpful content signals 2024 2025 statement (extended)",
+  "Google \"topic authority\" system news Search Central 2023 expertise specific topic areas (standard)",
+  "llms.txt effect on AI citations study data 2025 2026 no impact Google Mueller (standard)",
+  "ProjectionLab revenue indie founder subscribers; Boldin NewRetirement pricing subscription business model (extended)",
+  "ficalc.app OR cFIREsim OR \"Open Social Security\" free calculator donations funded no ads creator (extended)",
+  "DealCheck app pricing plans subscription rental property analysis; Engaging Data rent vs buy calculator monetization ads (standard)",
+  "Omni Calculator business model revenue traffic review process experts \"fact-checked\" calculators team (extended)",
+  "calculator website side project revenue AdSense monthly traffic report indie hackers 2024 2025 (extended)",
+  "calculator sites programmatic SEO lost traffic helpful content update scaled content abuse manual action tool site case study (extended)",
+  "Google Search Central \"AI features and your website\" AI Overviews AI Mode no special optimization structured data requirements (standard)",
+  "NerdWallet Bankrate SmartAsset editorial guidelines calculator methodology expert reviewed financial review board E-E-A-T (standard)",
+  "study schema markup structured data effect on ChatGPT Perplexity citations; ChatGPT search Bing index source selection 2025 (standard)",
+  "Google spam policies \"scaled content abuse\" definition \"regardless of how\" created automation generative AI documentation (standard)",
+  "Rewiring America calculator API embed partners; NREL PVWatts API usage users; NYT rent vs buy calculator (standard)",
+  "John Mueller \"topical authority\" not a thing OR niche site vs broad site covering many topics Google ranking comment (extended)"
+ ]
+}

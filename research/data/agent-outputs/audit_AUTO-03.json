@@ -1,0 +1,521 @@
+{
+ "id": "AUTO-03",
+ "competitors": [
+  {
+   "name": "Car Repair vs Replace Calculator (repairoreplacecar.com)",
+   "url": "https://www.repairoreplacecar.com/",
+   "type": "partial",
+   "access": "darmowy, bez logowania (wg opisu w wynikach); strona nieotwierana",
+   "covers_pl": "Najbliższy konsumencki odpowiednik: wartość auta, horyzont trzymania (lata), wycena naprawy, opcjonalnie bieżąca rata i liczba miesięcy do końca kredytu, wybór trade-in vs sprzedaż, stan (do szacunku ubezpieczenia); daje rekomendację naprawić/wymienić.",
+   "misses_or_unverified_pl": "Niezweryfikowane: osobne warianty (używany za gotówkę, używany na kredyt, nowy na kredyt, leasing, naprawa i sprzedaż), ryzyko kolejnych awarii, break-even kosztu przyszłych napraw, wrażliwość na stopę/wartość, test płynności, podatek od sprzedaży i ulga trade-in (snippet sugeruje, że pole stanu służy tylko ubezpieczeniu), odliczenie odsetek."
+  },
+  {
+   "name": "Vehicle Replacement Timing Calculator (MotoWatchdog)",
+   "url": "https://www.motowatchdog.com/free-tools/vehicle-replacement-timing-calculator",
+   "type": "partial",
+   "access": "darmowy (free-tools); strona nieotwierana",
+   "covers_pl": "Model wielookresowy keep vs replace: miesięczne sumy, trend kosztów utrzymania, przestoje, deprecjacja, efektywność paliwowa, finansowanie, bufor ryzyka nieplanowanych napraw, miesiąc break-even, eksport CSV. Najbliższy pod względem logiki modelu.",
+   "misses_or_unverified_pl": "Zaprojektowany dla flot, nie dla gospodarstwa domowego; brak (wg summary) porównania wielu ścieżek wymiany (leasing/używany/nowy), sprzedaży as-is, podatku stanowego i ulgi trade-in, płynności - niezweryfikowane."
+  },
+  {
+   "name": "ATRA Fix or Trade Calculator",
+   "url": "https://atra.com/fix-or-trade-calculator",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Koszt na milę obecnego auta (naprawy, ubezpieczenie, utrzymanie) vs nowsze, bardziej oszczędne auto.",
+   "misses_or_unverified_pl": "Niezweryfikowane: finansowanie wymiany, saldo kredytu, sprzedaż as-is, ryzyko kolejnych napraw jako wartość oczekiwana, wiele wariantów, podatek. Wydawca to stowarzyszenie warsztatów skrzyń biegów (możliwy bias ku naprawie)."
+  },
+  {
+   "name": "Fix or Sell Calculator (ismycarcooked.com)",
+   "url": "https://ismycarcooked.com/fix-or-sell/",
+   "type": "partial",
+   "access": "darmowy (prawdopodobnie); strona nieotwierana",
+   "covers_pl": "Dedykowany kalkulator naprawić vs sprzedać/wymienić.",
+   "misses_or_unverified_pl": "Zakres pól i logika niezweryfikowane - summary nie podaje szczegółów."
+  },
+  {
+   "name": "Repair vs Replace Car Calculator (AutoAdvisorAI)",
+   "url": "https://autoadvisorai.com/repair-vs-replace-calculator/",
+   "type": "partial",
+   "access": "darmowy (prawdopodobnie); strona nieotwierana",
+   "covers_pl": "Dedykowany kalkulator repair vs replace; pojawia się w dwóch zapytaniach.",
+   "misses_or_unverified_pl": "Pola, warianty, finansowanie i ryzyko napraw niezweryfikowane."
+  },
+  {
+   "name": "Repair vs Replace Car Calculator (UltimateFinanceCalculator)",
+   "url": "https://www.ultimatefinancecalculator.com/calculators/repair-vs-replace-car-calculator/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Porównanie kosztów i rekomendacja repair vs replace.",
+   "misses_or_unverified_pl": "Szczegóły (leasing, as-is, ryzyko, podatek) niezweryfikowane."
+  },
+  {
+   "name": "Repair or Replace Car - Cost Per Month (AutoCalcHub)",
+   "url": "https://autocalchub.com/tools/repair-or-replace-car-calculator.html",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Porównanie naprawić vs wymienić w ujęciu kosztu miesięcznego.",
+   "misses_or_unverified_pl": "Wielowariantowość, ryzyko kolejnych awarii, podatek, płynność niezweryfikowane."
+  },
+  {
+   "name": "Car Repair Cost Estimator: Fix or Sell? (CashForCars)",
+   "url": "https://www.cashforcars.com/car-repair-cost-estimator-fix-or-sell/",
+   "type": "partial",
+   "access": "darmowy, lead-gen (oferta skupu as-is); strona nieotwierana",
+   "covers_pl": "Szacunek naprawy + natychmiastowa oferta skupu auta as-is; reguła 50% wartości.",
+   "misses_or_unverified_pl": "Brak (wg summary) modelu wymiany, finansowania, horyzontu wieloletniego; narzędzie stronnicze (kupujący auto)."
+  },
+  {
+   "name": "New vs Old Car Cost Calculator (Starlight Tools)",
+   "url": "https://starlighttools.org/calculators/new-vs-old-car-cost-calculator",
+   "type": "partial",
+   "access": "darmowy, w przeglądarce; strona nieotwierana",
+   "covers_pl": "Zaliczka, rata kredytu, paliwo, utrzymanie, ubezpieczenie, wartość rezydualna; wynik NPV, equivalent annual cost, koszt na milę.",
+   "misses_or_unverified_pl": "Nie startuje od szoku naprawy; sprzedaż as-is, ryzyko kolejnych awarii, leasing, podatek trade-in, płynność - niezweryfikowane."
+  },
+  {
+   "name": "Used Car Cost Tool - keep or replace (carcosttool.com)",
+   "url": "https://carcosttool.com/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Opcja keep or replace: koszt zatrzymania obecnego auta vs zakup nowego lub używanego.",
+   "misses_or_unverified_pl": "Wycena naprawy, ryzyko, leasing, podatek, płynność niezweryfikowane."
+  },
+  {
+   "name": "AGCO Automotive Buy or Keep calculator",
+   "url": "https://www.agcoauto.com/content/plugins/buy%20or%20keep/buy%20or%20keep.html",
+   "type": "partial",
+   "access": "darmowy, widget warsztatu; strona nieotwierana",
+   "covers_pl": "Koszty zakupu innego auta vs zatrzymanie spłaconego obecnego auta.",
+   "misses_or_unverified_pl": "Brak (wg summary) obsługi istniejącego kredytu; ryzyko, warianty, podatek niezweryfikowane."
+  },
+  {
+   "name": "HCS Repair vs Replace Calculator",
+   "url": "https://hcsrepair.com/repair-vs-replace-calculator/",
+   "type": "partial",
+   "access": "darmowy, widget warsztatu; strona nieotwierana",
+   "covers_pl": "Koszt naprawy, utrzymanie, wiek, przebieg, budżet wymiany; rekomendacja oparta o procenty kosztu i deprecjację.",
+   "misses_or_unverified_pl": "Model heurystyczny, nie wielookresowy cash-flow; ~18 mies. bez aktualizacji (wg summary); finansowanie/leasing/podatek niezweryfikowane."
+  },
+  {
+   "name": "Tri-City Transmission Repair vs Replace Calculator",
+   "url": "https://tricitytransmission.com/repair-replace-calculator/",
+   "type": "substitute",
+   "access": "plik do pobrania; strona nieotwierana",
+   "covers_pl": "Projekcja kosztu naprawy i zatrzymania vs zakup nowego lub używanego + checklista dla dużych napraw (silnik, skrzynia).",
+   "misses_or_unverified_pl": "Format pobieralny (arkusz), nie interaktywny symulator; warianty i finansowanie niezweryfikowane."
+  },
+  {
+   "name": "Cars.zone Automotive Financial Calculators & Decision Engines",
+   "url": "https://cars.zone/calculators/",
+   "type": "partial",
+   "access": "darmowy (prawdopodobnie); strona nieotwierana",
+   "covers_pl": "Zestaw kalkulatorów i 'decision engines' motoryzacyjnych; w summary pojawia się wzmianka o 50-stanowej reciprocity podatku od sprzedaży u jednego z dostawców.",
+   "misses_or_unverified_pl": "Czy istnieje zintegrowany flow naprawa vs wymiana - niezweryfikowane; możliwe, że to zbiór osobnych kalkulatorów."
+  },
+  {
+   "name": "Kelley Blue Book - Auto Repair pricing + values",
+   "url": "https://www.kbb.com/auto-repair/",
+   "type": "substitute",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Lokalne ceny napraw oraz wartość trade-in/retail - dane wejściowe do decyzji.",
+   "misses_or_unverified_pl": "Brak porównania ścieżek; KBB 5-Year Cost to Own nie pojawił się w wynikach - niezweryfikowany."
+  },
+  {
+   "name": "Peddle / CarBrain / DamagedCars (skup aut as-is)",
+   "url": "https://www.peddle.com/sell-your-car-with-bad-transmission",
+   "type": "substitute",
+   "access": "darmowe oferty, lead-gen; strony nieotwierane",
+   "covers_pl": "Oferta za auto z uszkodzoną skrzynią + treści 'fix or sell' (też https://carbrain.com/sell-your-car-with-bad-transmission, https://www.damagedcars.com/blog/transmission-repair).",
+   "misses_or_unverified_pl": "Pokrywają tylko ścieżkę 'sprzedaj as-is'; brak modelu zakupu/finansowania zastępczego auta; treści stronnicze."
+  },
+  {
+   "name": "Cars.com Sell (instant cash offer)",
+   "url": "https://www.cars.com/sell/",
+   "type": "substitute",
+   "access": "darmowy, wymaga inspekcji pojazdu",
+   "covers_pl": "Wiążąca oferta gotówkowa od lokalnego dealera.",
+   "misses_or_unverified_pl": "Tylko sprzedaż; bez wyceny naprawy i porównania wariantów. Carvana/CarMax z notatek wave-1 nie pojawiły się w wynikach - niezweryfikowane."
+  },
+  {
+   "name": "Car Repair vs Replace Decision skill (findskill.ai)",
+   "url": "https://findskill.ai/skills/money/car-repair-vs-replace/",
+   "type": "substitute",
+   "access": "prompt/skill dla asystenta AI; strona nieotwierana",
+   "covers_pl": "Gotowy 'skill' do prowadzenia decyzji naprawa vs wymiana przez asystenta AI - sygnał, że AI przejmuje tę decyzję.",
+   "misses_or_unverified_pl": "Zakres i jakość modelu niezweryfikowane."
+  },
+  {
+   "name": "Engineering ToolBox - New vs Old Car Costs (arkusz)",
+   "url": "https://www.engineeringtoolbox.com/car-costs-old-new-d_339.html",
+   "type": "substitute",
+   "access": "darmowy arkusz; strona nieotwierana",
+   "covers_pl": "Arkusz porównujący koszt posiadania nowszego vs starszego auta, domyślnie 3 lata, rozszerzalny.",
+   "misses_or_unverified_pl": "Ręczny arkusz, bez wyceny naprawy, as-is, leasingu, podatku."
+  },
+  {
+   "name": "Edmunds True Cost to Own",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "type": "partial",
+   "access": "nieznany - nie pojawił się w 7 wyszukiwaniach",
+   "covers_pl": "Wg notatek wave-1 (wiedza modelu): 5-letni koszt posiadania konkretnego modelu.",
+   "misses_or_unverified_pl": "Nie potwierdzono w tej rundzie; nie modeluje (wg wiedzy modelu) decyzji naprawy obecnego auta - niezweryfikowane."
+  },
+  {
+   "name": "AAA Your Driving Costs",
+   "url": "brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "type": "substitute",
+   "access": "nieznany - nie pojawił się w wynikach",
+   "covers_pl": "Wg notatek wave-1: średnie koszty posiadania auta (benchmark).",
+   "misses_or_unverified_pl": "Nie potwierdzono w tej rundzie; benchmark, nie narzędzie decyzyjne."
+  },
+  {
+   "name": "ChatGPT Intelligent UI / Google AI Mode (asystenci AI)",
+   "url": "brak URL w wynikach (kontekst zadania: od 7.10.2026 i 19.08.2026)",
+   "type": "substitute",
+   "access": "darmowe dla użytkowników",
+   "covers_pl": "Odpowiedź na przykładowy prompt (reguła 50%, prosta arytmetyka rata vs naprawa) i generowanie interaktywnego kalkulatora w odpowiedzi.",
+   "misses_or_unverified_pl": "Jakość modelu wielookresowego, aktualne stopy, stanowe zasady podatkowe i audytowalność założeń - niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań extended, US/EN, 2026-10-25, tylko search-summary; pewność niska-średnia). W podsumowaniach nie widać narzędzia, które jednocześnie: (a) startuje od wyceny naprawy i wartości auta przed/po naprawie, (b) porównuje równolegle 5+ ścieżek (naprawa i keep 1/3/5 lat, sprzedaż as-is + używany za gotówkę, używany na kredyt, nowy na kredyt, leasing, naprawa i sprzedaż), (c) modeluje ryzyko kolejnych awarii jako wartość oczekiwaną i liczy break-even kosztu przyszłych napraw, (d) uwzględnia stanową ulgę trade-in w podatku od sprzedaży i test płynności/budżetu. ALE luka jest wąska i dotyczy głębokości, nie kategorii: kategoria 'repair vs replace car calculator' jest zatłoczona (min. 10 dedykowanych kalkulatorów i widgetów warsztatów). repairoreplacecar.com łączy wycenę naprawy, horyzont, saldo kredytu, trade-in vs sprzedaż i ubezpieczenie stanowe; MotoWatchdog ma wielookresowy break-even z buforem ryzyka napraw i finansowaniem (dla flot); Starlight Tools daje NPV/EAC/koszt na milę. Kilka kluczowych funkcji tych narzędzi jest niezweryfikowanych - po ręcznym teście luka może zniknąć.",
+ "search_scope_pl": "7 zapytań WebSearch (tryb extended), rynek US, język angielski, 2026-10-25. Typy zapytań: kategoria ('repair or replace car calculator'), język naturalny ('should I fix my car transmission or sell it as is...'), alternatywna terminologia ('keep old car vs buy new car cost comparison calculator'), aplikacje/narzędzia płatne i lead-gen ('app that tells you whether to fix or sell...'), Reddit/fora/arkusze, weryfikacja repairoreplacecar.com, zapytanie o warianty leasing/kredyt/break-even. Żadna strona nie została otwarta (WebFetch zablokowany) - dowody wyłącznie z podsumowań wyszukiwarki; nie testowano formularzy, nie sprawdzano paywalli/logowania. Nie zwrócono wątków r/personalfinance; nie sprawdzono sklepów z aplikacjami bezpośrednio; Edmunds TCO, KBB 5-Year Cost to Own, AAA, Carvana/CarMax nie pojawiły się w wynikach (niezweryfikowane).",
+ "demand_signals": [
+  {
+   "signal_pl": "Wątki forumowe z dokładnie tym pytaniem (wymienić skrzynię czy auto; zepsuta skrzynia w Hondzie Accord - naprawić czy sprzedać; do jakiego momentu sprzedać auto z finansowego punktu widzenia). Skala nieznana, próbka anegdotyczna.",
+   "url": "https://forums.anandtech.com/threads/busted-transmission-on-2000-honda-accord-should-i-fix-or-sell.2104957/post-30442055",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Ten sam dylemat na forum spoza branży motoryzacyjnej (TractorByNet) - pytanie pojawia się w różnych społecznościach.",
+   "url": "https://www.tractorbynet.com/forums/threads/replace-transmission-or-replace-car.79336/latest",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Skupy aut as-is (Peddle, CarBrain, DamagedCars, CurbSold, CashForCars) inwestują w treści i narzędzia 'sell car with bad transmission / fix or sell' - komercyjny sygnał popytu na zapytania w tym momencie decyzji.",
+   "url": "https://www.peddle.com/sell-your-car-with-bad-transmission",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Liczne warsztaty (ATRA, HCS, Tri-City, Phoenix Auto, ATC, AGCO) publikują kalkulatory repair vs replace jako lead-gen - podaż narzędzi sugeruje stały popyt, ale też zatłoczenie SERP.",
+   "url": "https://atra.com/fix-or-trade-calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Powstały dedykowane domeny pod ten jeden problem (repairoreplacecar.com, ismycarcooked.com, autocalchub) - sygnał, że wydawcy widzą ruch organiczny dla tej frazy; wolumenu nie zweryfikowano.",
+   "url": "https://www.repairoreplacecar.com/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Artykuł konsumencki (AOL, cytujący J.D. Power: wymiana automatycznej skrzyni ok. 2500-5000 USD) o decyzji 'money pit: repair vs replace' - temat mainstreamowy w mediach finansowych.",
+   "url": "https://www.aol.com/finance/repair-replace-car-fixes-aren-212450643.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieje gotowy 'skill' AI do decyzji naprawa vs wymiana - popyt jest, ale część przechodzi do asystentów AI.",
+   "url": "https://findskill.ai/skills/money/car-repair-vs-replace/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza (bez źródła w wynikach): duża część aut w USA ma 8-15 lat, więc duże naprawy dotykają milionów gospodarstw rocznie; liczby gospodarstw nie są popytem miesięcznym na narzędzie.",
+   "url": "brak URL w wynikach",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI: wysokie. Przykładowy prompt ('$3,800 transmission, worth $6k fixed - repair, sell as-is, or buy?') to klasyczne pytanie, na które asystent odpowiada regułą 50% wartości, prostym porównaniem raty vs koszt naprawy (np. 2500/500 = 5 miesięcy break-even) i checklistą - sama wyszukiwarka w tym badaniu wygenerowała taką odpowiedź i nawet zaproponowała strukturę arkusza. Od 7.10.2026 ChatGPT Intelligent UI renderuje kalkulatory w odpowiedzi, a od 19.08.2026 Google AI Mode generuje interaktywne narzędzia - prosta wersja porównania powstanie w czacie. Istnieje też gotowy 'skill' AI (findskill.ai). Asystent ma powód odesłać na zewnątrz głównie po dane świeże/lokalne: wartość auta (KBB), ofertę as-is (Peddle, Cars.com, CashForCars), lokalne ceny napraw - czyli do serwisów z danymi/ofertą, a nie do kalkulatora. Szansa na odesłanie do symulatora istnieje tylko przy długim, audytowalnym modelu wielowariantowym (leasing, kredyty, ryzyko awarii, ulga trade-in) - to nisza wewnątrz niszy.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja częsta w USA (starzejący się park aut, droga skrzynia/silnik/bateria hybrydowa) i widoczna w pytaniach online; wiele firm buduje pod nią treści i narzędzia.",
+   "evidence_pl": "Wątki forum AnandTech/TractorByNet z dokładnym pytaniem; skupy as-is (Peddle, CarBrain, DamagedCars, CashForCars) z dedykowanymi landingami; >10 kalkulatorów repair vs replace; artykuł AOL z danymi J.D. Power.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań; nie zwrócono wątków r/personalfinance; liczba gospodarstw z autami 8-15 lat nie pochodzi z wyników.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 2,
+   "rationale_pl": "Kategoria zatłoczona; co najmniej jeden konsumencki kalkulator (repairoreplacecar.com) łączy wycenę naprawy, horyzont, saldo kredytu, trade-in/sprzedaż i ubezpieczenie, a fleetowy MotoWatchdog robi wielookresowy break-even z buforem ryzyka napraw. Luka dotyczy tylko głębokości (wiele wariantów jednocześnie, ryzyko jako wartość oczekiwana, ulga trade-in, płynność), a nie istnienia narzędzia.",
+   "evidence_pl": "Wyniki zapytań 1, 3, 6, 7: repairoreplacecar.com, autoadvisorai, ultimatefinancecalculator, autocalchub, ismycarcooked, ATRA, HCS, Starlight Tools, carcosttool, MotoWatchdog.",
+   "gaps_pl": "Funkcje top 4 narzędzi niezweryfikowane (brak otwarcia stron); możliwe, że któreś już ma leasing/warianty wymiany (wtedy ocena 1), albo wszystkie są płytkie (wtedy 3).",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent sam odpowiada na typowy prompt (reguła 50%, rata vs naprawa) i może wyrenderować prosty kalkulator; zewnętrzne odesłania trafiają raczej do KBB/skupów po dane i oferty niż do kalkulatora.",
+   "evidence_pl": "Odpowiedź wyszukiwarki na zapytanie 2 i 5 dała gotową heurystykę i strukturę arkusza; findskill.ai oferuje AI skill dla tej decyzji; kontekst: ChatGPT Intelligent UI i Google AI Mode generują narzędzia.",
+   "gaps_pl": "Nie zbadano, jakie źródła cytują ChatGPT/Gemini/Perplexity dla tego promptu.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumencka publiczność USA w momencie zakupu/sprzedaży auta: kredyty samochodowe, ubezpieczenia auto, zakup auta, skupy - wysokowartościowe branże bez ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "Obecność reklamodawców-lead-genów w SERP (Peddle, CarBrain, CashForCars, Cars.com sell, YourMechanic); warsztaty używają kalkulatorów jako lead-gen.",
+   "gaps_pl": "Brak danych o CPC/RPM; część użytkowników ma ograniczony budżet (stare auto, presja gotówkowa), a SERP zdominowany przez lead-geny może obniżać osiągalny ruch.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Rdzeń (cash-flow wielookresowy, kredyt, leasing, wartość auta wpisywana przez użytkownika) jest prosty, ale tabela stanowych zasad podatku od sprzedaży i ulgi trade-in, czasowe odliczenie odsetek oraz brak darmowych danych o prawdopodobieństwie awarii wg modelu wymagają heurystyk i utrzymania.",
+   "evidence_pl": "Summary: repairoreplacecar.com stosuje stan do ubezpieczenia; inny dostawca wspomina 50-stanową reciprocity podatku; HCS - przykład narzędzia nieaktualizowanego ~18 mies.",
+   "gaps_pl": "Nie zweryfikowano źródeł darmowych danych o niezawodności i wartościach aut; zasady odliczenia odsetek 2025-2028 niezweryfikowane w tej rundzie.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 4,
+   "rationale_pl": "Błędy kosztują użytkownika setki-tysiące USD, nie są katastrofalne; interpretacja prawna ograniczona do podatku od sprzedaży i odliczenia odsetek; ryzyko głównie w założeniach o kolejnych awariach (trzeba je jawnie pokazywać).",
+   "evidence_pl": "Źródła podkreślają zależność wyniku od konkretnego auta i warsztatu oraz potrzebę diagnozy i drugiej opinii.",
+   "gaps_pl": "Ryzyko reputacyjne przy rekomendacji naprawy, po której auto znów się psuje - wymaga dobrego disclaimera i scenariuszy.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Reużywa modułów: oś cash-flow, kredyt/leasing, deprecjacja/wartość auta, podatek stanowy od sprzedaży, ubezpieczenie; zasila rodzeństwo w rodzinie Samochody (lease vs buy, EV vs ICE, moment trade-inu, nadpłata kredytu auto).",
+   "evidence_pl": "Narzędzia konkurencji używają tych samych bloków (kredyt, resale, koszt na milę, NPV/EAC - Starlight Tools; finansowanie i deprecjacja - MotoWatchdog).",
+   "gaps_pl": "Moduł ryzyka awarii jest specyficzny dla tego produktu i słabo przenośny poza motoryzację.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony ok. 3,2/5: dobry popyt (4), potencjał reklamowy (4) i wspólny silnik (4), ale słaba luka (2) i wysokie ryzyko samodzielnego rozwiązania przez AI (2). Kategoria 'repair vs replace car calculator' jest zatłoczona, a najbliższe narzędzia (repairoreplacecar.com, MotoWatchdog, AutoAdvisorAI, ismycarcooked) mają kluczowe funkcje niezweryfikowane. Nie rekomenduję pilotu jako produktu samodzielnego. Następny krok: ręcznie przetestować 4 najbliższe narzędzia (czy jest leasing, ryzyko kolejnych awarii, ulga trade-in, płynność). Jeśli któreś je ma, wtedy 'później/odrzucić'; jeśli nie, budować jako moduł rodziny Samochody na wspólnym silniku finansowania, a nie jako produkt wiodący.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://www.repairoreplacecar.com/",
+   "competitor": "repairoreplacecar.com",
+   "features_checked": "wartość auta, horyzont, wycena naprawy, opcjonalny kredyt (rata, miesiące do końca), trade-in vs sprzedaż, stan (ubezpieczenie), rekomendacja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; logowanie/paywall nieznane (opis: free)",
+   "conclusion": "partial - najbliższy konsumencki; leasing, warianty wymiany, ryzyko awarii, podatek niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://www.motowatchdog.com/free-tools/vehicle-replacement-timing-calculator",
+   "competitor": "MotoWatchdog Vehicle Replacement Timing Calculator",
+   "features_checked": "keep vs replace w czasie, deprecjacja, przestoje, finansowanie, bufor ryzyka napraw, miesiąc break-even, eksport CSV",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; opis 'free tools'",
+   "conclusion": "partial - logika wielookresowa bliska, ale dla flot; brak wariantów konsumenckich (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://atra.com/fix-or-trade-calculator",
+   "competitor": "ATRA Fix or Trade Calculator",
+   "features_checked": "koszt na milę: naprawy, ubezpieczenie, utrzymanie, efektywność paliwowa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - brak finansowania wymiany i as-is w summary (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://hcsrepair.com/repair-vs-replace-calculator/",
+   "competitor": "HCS Repair vs Replace Calculator",
+   "features_checked": "koszt naprawy, utrzymanie, wiek, przebieg, budżet wymiany, procent kosztu, deprecjacja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; summary: ok. 18 mies. bez aktualizacji",
+   "conclusion": "partial - heurystyka, nie model cash-flow",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://tricitytransmission.com/repair-replace-calculator/",
+   "competitor": "Tri-City Transmission Repair vs Replace Calculator",
+   "features_checked": "projekcja naprawa+keep vs nowy/używany; checklista dużych napraw; format do pobrania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; plik do pobrania",
+   "conclusion": "substitute - arkusz pobieralny",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair or replace car calculator",
+   "url": "https://www.kbb.com/auto-repair/",
+   "competitor": "Kelley Blue Book Auto Repair + values",
+   "features_checked": "lokalne ceny napraw, wartość trade-in/retail",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute - dane wejściowe; KBB 5-Year Cost to Own niezweryfikowany",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I fix my car transmission or sell it as is and buy another car",
+   "url": "https://www.peddle.com/sell-your-car-with-bad-transmission",
+   "competitor": "Peddle / CarBrain / DamagedCars",
+   "features_checked": "oferta skupu auta z uszkodzoną skrzynią, treści fix-or-sell, reguła 50%",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; oferta wymaga podania danych auta (niezweryfikowane)",
+   "conclusion": "substitute - pokrywa tylko ścieżkę sprzedaży as-is; sygnał popytu komercyjnego",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep old car vs buy new car cost comparison calculator",
+   "url": "https://starlighttools.org/calculators/new-vs-old-car-cost-calculator",
+   "competitor": "Starlight Tools New vs Old Car Cost Calculator",
+   "features_checked": "zaliczka, kredyt, paliwo, utrzymanie, ubezpieczenie, resale, NPV, EAC, koszt na milę",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - silny model kosztu, brak wejścia od szoku naprawy i as-is (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep old car vs buy new car cost comparison calculator",
+   "url": "https://carcosttool.com/",
+   "competitor": "Car Cost Tool (keep or replace)",
+   "features_checked": "keep obecne auto vs nowy lub używany",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - szczegóły niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep old car vs buy new car cost comparison calculator",
+   "url": "https://www.agcoauto.com/content/plugins/buy%20or%20keep/buy%20or%20keep.html",
+   "competitor": "AGCO Automotive Buy or Keep",
+   "features_checked": "zakup innego auta vs zatrzymanie spłaconego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - tylko auto spłacone (wg summary)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "keep old car vs buy new car cost comparison calculator",
+   "url": "https://www.engineeringtoolbox.com/car-costs-old-new-d_339.html",
+   "competitor": "Engineering ToolBox New vs Old Car Costs",
+   "features_checked": "arkusz kosztów nowsze vs starsze auto, domyślnie 3 lata",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute - arkusz",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app that tells you whether to fix or sell your car repair estimate instant offer",
+   "url": "https://www.cashforcars.com/car-repair-cost-estimator-fix-or-sell/",
+   "competitor": "CashForCars Car Repair Cost Estimator: Fix or Sell?",
+   "features_checked": "szacunek naprawy, oferta skupu as-is, reguła 50%",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; lead-gen (oferta wymaga danych auta - niezweryfikowane)",
+   "conclusion": "partial - łączy naprawę i ofertę as-is, bez modelu wymiany i finansowania",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app that tells you whether to fix or sell your car repair estimate instant offer",
+   "url": "https://www.cars.com/sell/",
+   "competitor": "Cars.com Sell",
+   "features_checked": "wiążąca oferta gotówkowa od dealera",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wymaga fizycznej inspekcji pojazdu",
+   "conclusion": "substitute - tylko sprzedaż",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app that tells you whether to fix or sell your car repair estimate instant offer",
+   "url": "https://worthtofix.com/",
+   "competitor": "WorthToFix",
+   "features_checked": "wycena naprawy AI ze zdjęć, płatna za wycenę",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatne za wycenę",
+   "conclusion": "substitute - tylko koszt naprawy, bez decyzji o wymianie (wg summary)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit personalfinance $4000 transmission repair worth it or replace car spreadsheet",
+   "url": "https://forums.anandtech.com/threads/replace-transmission-or-get-another-car.266310",
+   "competitor": "Fora (AnandTech, TractorByNet) - porady społeczności",
+   "features_checked": "heurystyki: koszt naprawy vs wartość, używana skrzynia, stan reszty auta, znane vs nieznane problemy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; brak wątków r/personalfinance w wynikach",
+   "conclusion": "substitute + sygnał popytu; brak narzędzia",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repairoreplacecar.com car repair vs replace calculator loan state sales tax",
+   "url": "https://autoadvisorai.com/repair-vs-replace-calculator/",
+   "competitor": "AutoAdvisorAI Repair vs Replace",
+   "features_checked": "tylko istnienie dedykowanego kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - funkcje niezweryfikowane; do ręcznego testu",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repairoreplacecar.com car repair vs replace calculator loan state sales tax",
+   "url": "https://www.ultimatefinancecalculator.com/calculators/repair-vs-replace-car-calculator/",
+   "competitor": "UltimateFinanceCalculator Repair vs Replace Car",
+   "features_checked": "porównanie kosztów + rekomendacja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - szczegóły niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repairoreplacecar.com car repair vs replace calculator loan state sales tax",
+   "url": "https://autocalchub.com/tools/repair-or-replace-car-calculator.html",
+   "competitor": "AutoCalcHub Repair or Replace (cost per month)",
+   "features_checked": "koszt miesięczny naprawa vs wymiana",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - szczegóły niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repairoreplacecar.com car repair vs replace calculator loan state sales tax",
+   "url": "https://cars.zone/calculators/",
+   "competitor": "Cars.zone Automotive Decision Engines",
+   "features_checked": "zestaw kalkulatorów motoryzacyjnych; wzmianka o 50-stanowej reciprocity podatku (dostawca nieprecyzyjny w summary)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - integracja niezweryfikowana",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair vs replace car calculator compare lease, used, new loan, future repair costs break-even cost per month",
+   "url": "https://ismycarcooked.com/fix-or-sell/",
+   "competitor": "ismycarcooked.com Fix or Sell Calculator",
+   "features_checked": "dedykowany kalkulator fix or sell",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - funkcje niezweryfikowane; do ręcznego testu",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair vs replace car calculator compare lease, used, new loan, future repair costs break-even cost per month",
+   "url": "https://findskill.ai/skills/money/car-repair-vs-replace/",
+   "competitor": "findskill.ai Car Repair vs Replace Decision skill",
+   "features_checked": "AI skill/prompt do decyzji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute - sygnał przejmowania decyzji przez asystentów AI",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair vs replace car calculator compare lease, used, new loan, future repair costs break-even cost per month",
+   "url": "https://calculory.com/calculators/sustainability/repair-vs-replace-calculator",
+   "competitor": "Calculory Repair vs Replace (cost per year)",
+   "features_checked": "koszt na rok użytkowania, odliczenie resale obecnego auta po stronie wymiany",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial - ogólny (nie tylko auta), brak finansowania (niezweryfikowane)",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "repair vs replace car calculator compare lease, used, new loan, future repair costs break-even cost per month",
+   "url": "brak URL w wynikach",
+   "competitor": "Edmunds True Cost to Own / AAA Your Driving Costs / Carvana / CarMax (notatki wave-1)",
+   "features_checked": "nie pojawiły się w żadnym z 7 wyszukiwań",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary - brak wyników",
+   "conclusion": "niezweryfikowane - pozostają hipotezą z wiedzy modelu",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "repair or replace car calculator",
+  "should I fix my car transmission or sell it as is and buy another car",
+  "keep old car vs buy new car cost comparison calculator",
+  "app that tells you whether to fix or sell your car repair estimate instant offer",
+  "reddit personalfinance $4000 transmission repair worth it or replace car spreadsheet",
+  "repairoreplacecar.com car repair vs replace calculator loan state sales tax",
+  "repair vs replace car calculator compare lease, used, new loan, future repair costs break-even cost per month"
+ ]
+}

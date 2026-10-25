@@ -1,0 +1,384 @@
+{
+ "id": "RENO-02",
+ "competitors": [
+  {
+   "name": "SubcontractorHub – Roof Repair vs. Replacement Calculator",
+   "url": "https://www.subcontractorhub.com/tools/roof-repair-vs-replacement-calculator",
+   "type": "partial",
+   "access": "darmowy, online (wg search-summary); strona nieotwierana",
+   "covers_pl": "Porównanie naprawa vs wymiana: koszt naprawy, koszt wymiany, wiek dachu, ile lat wytrzyma naprawa; koszt roczny naprawy (koszt/lata) vs koszt roczny nowego dachu (koszt/~25 lat), reguła 50% i analiza pozostałej żywotności. Najbliższy fragment 'naprawa i czekanie'.",
+   "misses_or_unverified_pl": "W summary brak: warunków polisy (ACV/RCV, harmonogram wypłat wg wieku, dopłata za wiek, udział własny wiatr/grad), prawdopodobieństwa szkody burzowej, horyzontu sprzedaży (zwrot wartości w cenie / kredyt dla kupującego), kosztu finansowania, PV. Niezweryfikowane, czy ma inne pola (strona nieotwierana). Narzędzie z domeny B2B dla wykonawców."
+  },
+  {
+   "name": "Roof Decision Guide – Repair vs Replace Calculator",
+   "url": "https://roofdecisionguide.com/repair-vs-replace/calculator/",
+   "type": "partial",
+   "access": "darmowy, online (wg search-summary); strona nieotwierana",
+   "covers_pl": "Wiek dachu, materiał, widoczne objawy, lokalizacja -> wynik 0-100 (poniżej 25 naprawa, powyżej 75 pilna wymiana) plus orientacyjne widełki kosztu naprawy i wymiany.",
+   "misses_or_unverified_pl": "Wynik punktowy, nie rachunek kosztów w czasie. W summary brak ubezpieczenia, horyzontu sprzedaży, finansowania, PV. Czy 'lokalizacja' przekłada się na ryzyko gradu/wiatru – niezweryfikowane."
+  },
+  {
+   "name": "RoofTap – Free Roof Cost Estimate / homeowner roof report",
+   "url": "https://www.rooftap.app/homeowner/roof-report",
+   "type": "partial",
+   "access": "darmowy raport (wg search-summary); możliwe podanie adresu/danych – niezweryfikowane",
+   "covers_pl": "AI-owa ocena wieku i stanu dachu, prawdopodobny materiał, 3-letnia prognoza wymiany, szacunek potencjalnych rocznych oszczędności na ubezpieczeniu. Jedyne znalezione narzędzie konsumenckie łączące wiek dachu z ubezpieczeniem.",
+   "misses_or_unverified_pl": "Finansowanie – niejasne (niezweryfikowane). Brak w summary: wariantów (naprawa/czekanie/sprzedaż as-is z kredytem), oczekiwanej straty przy ACV, prawdopodobieństwa szkody, horyzontu sprzedaży, PV, progu opłacalności roku wymiany. Prawdopodobnie narzędzie lead-gen dla dekarzy. Największe ryzyko błędnej klasyfikacji – wymaga otwarcia strony."
+  },
+  {
+   "name": "RoofQuote (roofquotes.app) – AI estimates for contractors",
+   "url": "https://roofquotes.app/",
+   "type": "partial",
+   "access": "narzędzie dla wykonawców (B2B), model cenowy niezweryfikowany",
+   "covers_pl": "Szacuje roczne obniżki składki dla poziomów FORTIFIED Roof/Silver/Gold, 5-letnią projekcję oszczędności, wskazuje stanowe granty (do $10,000 na dach FORTIFIED wg summary).",
+   "misses_or_unverified_pl": "Skierowane do dekarzy, nie do właścicieli domów. Brak w summary: ACV/RCV i oczekiwanej straty, horyzontu sprzedaży, wariantów naprawy/czekania, PV. Dostęp konsumencki niezweryfikowany."
+  },
+  {
+   "name": "Kalkulatory kosztu wymiany dachu (TheRooferFinder, RoofPitch, CostFlow AI, RoofQuotes.com, Calculator.net, Roof-Smith)",
+   "url": "https://www.therooferfinder.com/roof-cost-calculator",
+   "type": "partial",
+   "access": "darmowe online (wg search-summary)",
+   "covers_pl": "Jednorazowy koszt wymiany wg powierzchni, materiału, nachylenia, lokalizacji (np. typowo ~$8,000-24,000 wg summary). Inne adresy: https://roofpitch.net/roof-replacement-cost-calculator/, https://costflowai.com/calculators/roofing/, https://roofquotes.com/roofing-calculator, https://www.calculator.net/roofing-calculator.html, https://www.roof-smith.com/calculator",
+   "misses_or_unverified_pl": "Jednocelowe kalkulatory kosztu – brak decyzji o terminie, ubezpieczenia, ryzyka szkody, sprzedaży, finansowania. To moduł wejściowy, nie konkurent bezpośredni."
+  },
+  {
+   "name": "ServiceAgent.ai – Roof Repair Cost Estimator",
+   "url": "https://serviceagent.ai/tools/roof-repair-cost-calculator/",
+   "type": "partial",
+   "access": "darmowy online (wg search-summary)",
+   "covers_pl": "Koszt naprawy wg materiału, powierzchni, nachylenia, stanu; FAQ: przy >~30% uszkodzeń wymiana zwykle lepsza.",
+   "misses_or_unverified_pl": "Tylko koszt naprawy; brak horyzontu, ubezpieczenia, sprzedaży, finansowania."
+  },
+  {
+   "name": "ValuePenguin – Does Home Insurance Cover a New Roof?",
+   "url": "https://www.valuepenguin.com/homeowners-insurance/roof-insurance",
+   "type": "substitute",
+   "access": "darmowy artykuł",
+   "covers_pl": "Tabela składek wg wieku dachu (średnio $2,211 nowy vs $2,624 dach 20-letni, ok. 19% różnicy wg summary) – dane wejściowe do zależności wiek dachu -> składka.",
+   "misses_or_unverified_pl": "Treść, nie narzędzie; brak rachunku wariantów i horyzontu sprzedaży. Metodologia tabeli niezweryfikowana."
+  },
+  {
+   "name": "Treści o ACV vs RCV i harmonogramach wypłat (Real Cost Report, Fit Roofing, Better Choice Insurance, Weathershield Roofers, Yahoo Finance, Bankrate, Policygenius)",
+   "url": "https://www.realcostreport.com/insurance/home-insurance/replacement-cost-vs-acv/",
+   "type": "substitute",
+   "access": "darmowe artykuły",
+   "covers_pl": "Wzory i przykłady: wypłata ACV = koszt odtworzenia minus amortyzacja minus udział własny; harmonogram wypłat wg wieku (0-5 lat 100% ... 21+ lat 20% wg jednego źródła); przykład $18,000 wymiany, $9,000 amortyzacji, $2,000 udziału -> wypłata $7,000. Inne adresy: https://fit-roofing.com/blog/acv-vs-rcv-roof-insurance/, https://www.betterchoiceins.com/blog/roof-insurance-claim-acv-vs-replacement-cost, https://weathershieldroofers.com/blog/roof-age-insurance-coverage-guide/, https://www.policygenius.com/homeowners-insurance/how-to-get-homeowners-insurance-with-a-bad-roof/",
+   "misses_or_unverified_pl": "Jednorazowe przykłady liczbowe; brak prawdopodobieństwa szkody, ujęcia wieloletniego, sprzedaży, finansowania. Search zwrócił wprost: 'no calculator for the cost of waiting'."
+  },
+  {
+   "name": "Poradniki 'replace roof before selling' (Zillow, ibuyer.com, RoofVista, Best Roofing Now, Tour Wizard)",
+   "url": "https://www.zillow.com/learn/should-i-replace-my-roof-before-selling/",
+   "type": "substitute",
+   "access": "darmowe artykuły",
+   "covers_pl": "Zwrot kosztu wymiany w cenie (~55-70% wg różnych źródeł), kredyty przy zamknięciu $3,000-10,000, kredyt zwykle 1.5-2x wyceny wykonawcy, reguła: wymieniać, gdy potrącenie kupującego > koszt netto wymiany; wydłużenie przygotowania do sprzedaży. Inne adresy: https://ibuyer.com/blog/should-you-replace-roof-before-selling-house/, https://roofvista.com/resources/guides/new-roof-home-value-roi-2026",
+   "misses_or_unverified_pl": "Search: 'no single tool that compares a roof replacement against a closing credit'. Brak połączenia z ubezpieczeniem, ryzykiem szkody do daty sprzedaży i finansowaniem. Jeden serwis ma tabelę 'net cost after ROI' (który – niejasne)."
+  },
+  {
+   "name": "Treści o PV a wymianie dachu (ConsumerAffairs, Solar Panel Exit, The Roofing Brief, SquareDash, SolarFY, Forme Solar)",
+   "url": "https://www.consumeraffairs.com/solar-energy/should-you-replace-your-roof-before-going-solar.html",
+   "type": "substitute",
+   "access": "darmowe artykuły",
+   "covers_pl": "Koszt demontażu/ponownego montażu paneli: $300-350/panel (~$4,500-8,750 dla 15-25 paneli), benchmark EnergySage $1,500-6,000 (cytowany w summary), inne $2,500-6,500; reguły pozostałej żywotności (min. 15 lat, albo 5-7 lat); utracona produkcja w czasie przestoju. Inne adresy: https://solarpanelexit.com/solar-panel-removal-and-reinstall/, https://theroofingbrief.com/removing-solar-panels-for-roof-repair/",
+   "misses_or_unverified_pl": "Brak kalkulatora łączącego termin dachu z PV, ubezpieczeniem i sprzedażą. Notowany w fali 1 kalkulator roofcalc.org nie pojawił się w wynikach tej sesji – niezweryfikowany."
+  },
+  {
+   "name": "Planery budżetu i finansowanie dachu (RIBA Roofing planner, HomeRun PACE, PrimeRates)",
+   "url": "https://ribaconstruction.com/how-homeowners-budget-for-a-new-roof/",
+   "type": "substitute",
+   "access": "darmowe treści/lead-gen",
+   "covers_pl": "Planer oszczędzania: koszt / miesiące do daty wymiany; opcje finansowania (PACE w CA/FL, pożyczki). Inne adresy: https://www.homerunfinancing.com/how-it-works/roof-financing-for-homeowners/, https://primerates.com/personal-loans/new-roof-financing-roof-repair/",
+   "misses_or_unverified_pl": "Fragment finansowy bez ubezpieczenia, ryzyka i sprzedaży; brak porównania wariantów."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI od 2026-10-07, Google AI Mode z generowanymi narzędziami od 2026-08-19)",
+   "url": "n/d",
+   "type": "substitute",
+   "access": "darmowe dla użytkowników (wg kontekstu zadania)",
+   "covers_pl": "Mogą odpowiedzieć na sample prompt jakościowo, policzyć wypłatę ACV dla podanych danych i wyrenderować prosty formularz/kalkulator w odpowiedzi.",
+   "misses_or_unverified_pl": "Niezweryfikowane w tej sesji (brak testu). Prawdopodobne słabości: brak danych o lokalnej częstości gradu/wiatru, harmonogramu konkretnej polisy, lokalnych kosztów i stóp zwrotu przy sprzedaży; niespójność i brak audytowalnych założeń przy modelu wieloletnim z prawdopodobieństwami."
+  },
+  {
+   "name": "Agent ubezpieczeniowy / dekarz / agent nieruchomości",
+   "url": "n/d",
+   "type": "substitute",
+   "access": "usługa osobista",
+   "covers_pl": "Agent: warunki polisy, oferty innych ubezpieczycieli; dekarz: inspekcja i wycena; agent nieruchomości: oczekiwania kupujących i kredyty przy zamknięciu (rekomendowani w summary jako źródło lokalne).",
+   "misses_or_unverified_pl": "Rozproszeni doradcy z konfliktem interesów (dekarz sprzedaje wymianę); nikt nie składa jednego rachunku wariantów."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań WebSearch extended, anglojęzyczny web US, 2026-10-25, wyłącznie search-summary bez otwierania stron; pewność: średnia). Istniejące narzędzia pokrywają fragmenty: (a) naprawa vs wymiana jako koszt roczny lub wynik punktowy (SubcontractorHub, Roof Decision Guide), (b) wiek/stan dachu + 3-letnia prognoza + oszczędność na składce (RoofTap – funkcje niezweryfikowane), (c) oszczędności składki FORTIFIED dla wykonawców (RoofQuote, B2B), (d) jednorazowy koszt wymiany/naprawy (wiele kalkulatorów), (e) treści z wzorem ACV, harmonogramem wypłat wg wieku, ROI wymiany przed sprzedażą i widełkami kredytu dla kupującego. Search trzykrotnie wprost zwrócił brak narzędzia: 'no calculator for the cost of waiting', 'no single tool that compares a roof replacement against a closing credit', 'no single paid homeowner app' łączącego termin, finansowanie i składkę. Luka: brak konsumenckiego modelu wielookresowego, w którym wiek dachu steruje składką i zakresem pokrycia (RCV->ACV/harmonogram, udział wiatr/grad), to razem z regionalnym prawdopodobieństwem szkody daje oczekiwany koszt własny, a termin wymiany wpływa na koszt finansowania i na to, czy przy sprzedaży wartość wraca w cenie (~55-70%) czy trzeba dać kredyt (~1.5-2x wyceny) lub ryzykować nieubezpieczalność dla kupującego; plus opcjonalne zdarzenie demontażu PV. To brak kluczowych zależności, nie kosmetycznego pola. Zastrzeżenia: RoofTap może być bliżej niż wynika z summary; nie sprawdzono Roofr, Hover, portali ubezpieczycieli, App Store, szablonów Google Sheets; asystenci AI mogą generować podobny kalkulator ad hoc.",
+ "search_scope_pl": "7 zapytań WebSearch (tryb extended), 2026-10-25, wyniki US. Mieszanka: problem w języku naturalnym (18-letni dach, ACV, sprzedaż), krótka kategoria ('roof repair or replace calculator'), terminologia alternatywna (roof payment schedule, roof age surcharge, cost of waiting), wymiana przed sprzedażą vs kredyt przy zamknięciu, Reddit/forum (non-renewal z powodu wieku dachu), moduł PV (demontaż/montaż), płatne aplikacje/oprogramowanie dla właścicieli. WebFetch zablokowany – żadna strona nie została otwarta, formularze nie testowane, paywalle/loginy nieznane; dowód = wyłącznie search-summary. Nie sprawdzono: Roofr, Hover, EagleView, narzędzi ubezpieczycieli, App Store/Google Play, YouTube, szablonów arkuszy (zapytanie forumowe nie zwróciło wątku Reddit ani szablonu), ponownie URL-i z fali 1 (Griffith Roofing, Jobber, roofcalc.org, roofingcalculator.com – nie pojawiły się w wynikach tej sesji). Brak testu sample promptu w ChatGPT/Google AI Mode.",
+ "demand_signals": [
+  {
+   "signal_pl": "Regulator stanowy (Massachusetts) wydał poradnik konsumencki o zawiadomieniach ubezpieczycieli związanych z dachem (wymóg 45 dni, brak formalnego odwołania) i ostrzeżenie przed mailerami 'flagged roof' – sygnał, że zawiadomienia dot. dachu są na tyle częste, że wymagają komunikatu urzędowego.",
+   "url": "https://www.mass.gov/news/consumer-advisory-roof-related-insurance-notices",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Massachusetts informuje o używaniu przez ubezpieczycieli zdjęć lotniczych (dron/satelita) do oceny stanu dachu – mechanizm zwiększający liczbę zawiadomień przy odnowieniu.",
+   "url": "https://www.mass.gov/news/the-truth-about-your-roof-understanding-how-insurance-companies-use-aerial-imaging-to-assess-roof-condition",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Artykuły mediów konsumenckich o rosnącej liczbie nieodnowień polis i żądaniach ubezpieczycieli wobec domów (w tym przykład właściciela, który zmienił ubezpieczyciela zamiast wymieniać dach i zapłacił wyższą składkę).",
+   "url": "https://www.aol.com/articles/home-insurance-nonrenewals-rising-triggers-181221435.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Drugi artykuł AOL o żądaniach ubezpieczycieli wobec właścicieli domów (treść szczegółowa nieznana – tylko tytuł/summary).",
+   "url": "https://www.aol.com/finance/home-insurers-demanding-policyholders-home-151708690.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Credit union w Teksasie publikuje poradnik 'Did roof coverage change on your home insurance renewal' – instytucje finansowe odpowiadają na pytania członków o zmianę pokrycia dachu przy odnowieniu.",
+   "url": "https://www.texasbaycu.org/articles/roof-coverage-change-on-homeowner-renewals",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Dokumenty legislacyjne Luizjany pojawiają się w wynikach dla zapytania o nieodnowienie z powodu wieku dachu – możliwa aktywność ustawodawcza w tym temacie; treść nieznana (search-summary jej nie opisał).",
+   "url": "https://legis.la.gov/Legis/ViewDocument.aspx?d=1453383",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Liczne strony targetujące frazy 'roof insurance canceled due to age 2026', 'will insurance cover a 20-year-old roof', 'replace roof before selling' (RoofVista, Weathershield, Zillow, ibuyer.com, wielu dekarzy) – wydawcy widzą popyt na te zapytania; brak danych o wolumenie.",
+   "url": "https://roofvista.com/resources/guides/roof-insurance-canceled-age-2026",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pojawienie się dedykowanych kalkulatorów 'repair vs replace' (SubcontractorHub, Roof Decision Guide) i serwisu RoofTap z prognozą wymiany i oszczędnościami na składce – podaż narzędzi sugeruje popyt na decyzję, nie tylko na koszt.",
+   "url": "https://www.subcontractorhub.com/tools/roof-repair-vs-replacement-calculator",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Wątek na Blind: kupujący nie mógł ubezpieczyć 40-letniego dachu; komentarze o wymianie vs certyfikacie i zmianie ubezpieczyciela – bezpośrednie pytanie użytkownika (bliski, nie identyczny problem). Wątku Reddit nie znaleziono.",
+   "url": "https://www.teamblind.com/post/old-roof-no-insurance-ecmau3vv",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Twierdzenie dekarza: przy 20 latach ok. 70% ubezpieczycieli przechodzi z RCV na ACV – szacunek marketingowy, nie statystyka branżowa.",
+   "url": "https://weathershieldroofers.com/blog/will-insurance-cover-20-year-old-roof-myrtle-beach/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Skala problemu: miliony domów w USA z dachami 15-25 lat co roku wchodzą w strefę zmian warunków polis – hipoteza bez danych w tej sesji; liczby gospodarstw nie są miesięcznym popytem.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta: średnio-wysokie dla odpowiedzi podstawowej, średnie dla pełnego modelu. Wzór ACV (koszt odtworzenia x udział wg harmonogramu minus udział własny), reguły kciuka (wymiana przed sprzedażą gdy potrącenie > koszt netto; ROI ~60%; PV: min. 15 lat żywotności) są szeroko opisane w treściach, więc ChatGPT (Intelligent UI renderuje formularze/kalkulatory od 2026-10-07) i Google AI Mode (generuje interaktywne narzędzia od 2026-08-19) mogą dać sensowną odpowiedź na sample prompt i prosty kalkulator ad hoc. Słabsze punkty asystentów (hipoteza, niezweryfikowane testem): lokalna częstość gradu/wiatru (dane NOAA trzeba przetworzyć), harmonogram konkretnej polisy i lokalne koszty, spójny wielookresowy model 5-6 wariantów z prawdopodobieństwem szkody, progiem roku wymiany i wrażliwością, jawna i powtarzalna lista założeń. Szansa na odesłanie do zewnętrznego narzędzia istnieje głównie, gdy strona ma dane lokalne (ZIP -> ryzyko gradu, koszt) i audytowalne założenia, które asystent może cytować; inaczej asystent cytuje raczej artykuły (ValuePenguin, Zillow).",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja o starym dachu dotyczy dużej liczby właścicieli domów, a zmiany polis związane z wiekiem dachu (ACV, nieodnowienia, oceny lotnicze) są na tyle powszechne, że reagują regulatorzy, media i instytucje finansowe; dużo treści targetuje pokrewne frazy.",
+   "evidence_pl": "Mass.gov advisory i artykuł o zdjęciach lotniczych; AOL o rosnących nieodnowieniach; Texas Bay CU o zmianie pokrycia przy odnowieniu; liczne strony 'replace roof before selling', 'insurance canceled due to age'; dedykowane kalkulatory repair-vs-replace.",
+   "gaps_pl": "Brak wolumenów wyszukiwań i liczby gospodarstw z dachem 15-25 lat; dokładna kombinacja (ubezpieczenie + horyzont sprzedaży) jest węższa niż każdy fragment osobno; treść dokumentów z Luizjany nieznana.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po 7 zróżnicowanych wyszukiwaniach nie znaleziono narzędzia łączącego wiek dachu, warunki polisy, ryzyko szkody, finansowanie i horyzont sprzedaży; partiale pomijają kluczowe zależności, a search trzykrotnie wprost raportował brak takiego narzędzia. Nie daję 5, bo RoofTap jest niezweryfikowany, a asystenci AI mogą generować kalkulator ad hoc.",
+   "evidence_pl": "SubcontractorHub (koszt roczny naprawy vs wymiany), Roof Decision Guide (wynik 0-100), RoofTap (wiek + 3-letnia prognoza + oszczędność składki), RoofQuote (B2B FORTIFIED); summary: 'no calculator for the cost of waiting', 'no single tool that compares a roof replacement against a closing credit', brak płatnej aplikacji łączącej termin, finansowanie i składkę.",
+   "gaps_pl": "Nie otwarto żadnej strony; nie sprawdzono Roofr, Hover, narzędzi ubezpieczycieli, aplikacji mobilnych, szablonów arkuszy; brak testu ChatGPT/AI Mode.",
+   "confidence": "medium"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Podstawowa odpowiedź i prosty rachunek ACV leżą w zasięgu asystentów, które od 2026 renderują kalkulatory w odpowiedziach; zewnętrzne narzędzie ma przewagę tylko przy danych lokalnych (grad/wiatr, koszty) i długim modelu probabilistycznym z audytowalnymi założeniami.",
+   "evidence_pl": "Wzory i progi są szeroko opisane w treściach (Real Cost Report, Weathershield, ibuyer.com, ConsumerAffairs); kontekst zadania: ChatGPT Intelligent UI i Google AI Mode generują narzędzia interaktywne.",
+   "gaps_pl": "Brak testu sample promptu w asystentach; nieznane, czy asystenci cytują kalkulatory w tej niszy.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsumencka publiczność US w wertykałach o wysokiej wartości: dekarstwo/usługi domowe, ubezpieczenia domu, HELOC/finansowanie (PACE, pożyczki), solar, nieruchomości; brak ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "W wynikach liczni dekarze, lead-geny finansowania (HomeRun PACE, PrimeRates), ubezpieczyciele/porównywarki (Policygenius, ValuePenguin, Bankrate), solar (ConsumerAffairs) i portale nieruchomości (Zillow, ibuyer.com) – gęstość reklamodawców.",
+   "gaps_pl": "Brak danych CPC/RPM w tej sesji; AdSense może dawać niższe stawki niż afiliacja/lead-gen.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Silnik to oczekiwany koszt w osi czasu na danych od użytkownika (wycena, harmonogram polisy, data sprzedaży) – prosty do zbudowania. Utrzymanie trudniejsze: domyślne koszty regionalne, składki wg wieku dachu i reguły stanowe (nieodnowienia, wymogi wieku dachu) się zmieniają, a ryzyko gradu/wiatru wymaga przetworzenia danych NOAA.",
+   "evidence_pl": "Rozrzut kosztów R&R paneli 2x między źródłami; różne progi ROI; tabela składek ValuePenguin jest zewnętrzna; aktywność regulacyjna (Massachusetts, możliwa legislacja Luizjany).",
+   "gaps_pl": "Nie zweryfikowano dostępności i licencji danych o gradzie na poziomie ZIP ani publicznych harmonogramów wypłat ubezpieczycieli.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy nie są katastrofalne, ale chodzi o $8,000-24,000+ i o ryzyko nieubezpieczalności przy sprzedaży; interpretacja polis (ACV, harmonogramy, udziały wiatr/grad, wyłączenia) zbliża się do porady ubezpieczeniowej i wymaga wyraźnych zastrzeżeń.",
+   "evidence_pl": "Summary podkreślają, że warunki polisy rządzą wypłatą i że progi wieku oraz stawki ROI są szacunkami marketingowymi; rady stanowe różnią się w poszczególnych stanach.",
+   "gaps_pl": "Brak analizy prawnej per stan; nieznane, jak często harmonogramy różnią się między ubezpieczycielami.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś przepływów pieniężnych, finansowanie (gotówka/HELOC/pożyczka), wartość domu i horyzont sprzedaży, energię (PV), ryzyko/ubezpieczenie; daje produkty pokrewne: wymiana dachu FORTIFIED/wind mitigation, kolejność PV vs dach, HVAC/podgrzewacz napraw-czy-wymień, remonty przed sprzedażą, ubezpieczenie a modernizacje.",
+   "evidence_pl": "Wyniki pokazują te same wejścia w treściach o dachu, PV, FORTIFIED (RoofQuote), finansowaniu (PACE) i sprzedaży (Zillow) – wspólne zmienne między rodzinami produktów.",
+   "gaps_pl": "Moduł ryzyka burzowego/ubezpieczenia może być specyficzny i kosztowny w utrzymaniu; podatki mają tu niewielkie znaczenie.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony ok. 3.75/5: silny potencjał reklamowy (dach, ubezpieczenia, finansowanie, solar, nieruchomości), mocna luka (nie znaleziono bezpośredniego konkurenta w badanym zakresie, pewność średnia) i dobra reużywalność silnika, ale niska ocena dystrybucji przez AI i średnia pewność oceny luki. Przed pilotem warto tanio sprawdzić: (1) ręcznie otworzyć RoofTap, SubcontractorHub i Roof Decision Guide oraz sprawdzić Roofr/Hover i narzędzia ubezpieczycieli; (2) wolumeny fraz typu 'replace roof before selling', 'roof age insurance', 'roof repair or replace calculator', 'insurance non renewal roof'; (3) przetestować sample prompt w ChatGPT Intelligent UI i Google AI Mode – czy dają pełny model, czy tylko regułę kciuka; (4) dostępność danych o gradzie/wietrze na poziomie ZIP (NOAA) i publicznych harmonogramów wypłat wg wieku dachu. Jeśli luka się potwierdzi, a asystenci nie budują modelu wieloletniego, produkt warto przenieść do pilota.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "roof repair or replace calculator",
+   "url": "https://www.subcontractorhub.com/tools/roof-repair-vs-replacement-calculator",
+   "competitor": "SubcontractorHub – Roof Repair vs. Replacement Calculator",
+   "features_checked": "pola: koszt naprawy, koszt wymiany, wiek dachu, trwałość naprawy; reguła 50%; koszt roczny; ubezpieczenie, sprzedaż, finansowanie, PV",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; darmowy wg summary, login nieznany",
+   "conclusion": "partial – najbliższy fragment naprawa vs wymiana; brak ubezpieczenia, ryzyka szkody, horyzontu sprzedaży i finansowania w summary (niezweryfikowane)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof repair or replace calculator",
+   "url": "https://roofdecisionguide.com/repair-vs-replace/calculator/",
+   "competitor": "Roof Decision Guide – Repair vs Replace Calculator",
+   "features_checked": "wiek, materiał, objawy, lokalizacja, wynik 0-100, widełki kosztów; ubezpieczenie, sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; login nieznany",
+   "conclusion": "partial – wynik punktowy, nie rachunek kosztów w czasie; ubezpieczenie i sprzedaż niezweryfikowane (nie występują w summary)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app or software forecasts roof replacement timing, financing and insurance premium savings (paid tool)",
+   "url": "https://www.rooftap.app/homeowner/roof-report",
+   "competitor": "RoofTap – homeowner roof report",
+   "features_checked": "AI ocena wieku/stanu, materiał, 3-letnia prognoza wymiany, potencjalne oszczędności składki; finansowanie; warianty; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; możliwe podanie adresu/danych kontaktowych – niezweryfikowane",
+   "conclusion": "partial – jedyne narzędzie konsumenckie łączące wiek dachu z ubezpieczeniem; finansowanie niejasne, brak wariantów i horyzontu sprzedaży w summary; wymaga ręcznej weryfikacji",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app or software forecasts roof replacement timing, financing and insurance premium savings (paid tool)",
+   "url": "https://roofquotes.app/",
+   "competitor": "RoofQuote (roofquotes.app)",
+   "features_checked": "obniżki składki FORTIFIED Roof/Silver/Gold, 5-letnia projekcja, granty stanowe; grupa docelowa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie dla wykonawców, cennik/login niezweryfikowane",
+   "conclusion": "partial (B2B) – liczy oszczędności składki, ale nie decyzję właściciela o terminie/sprzedaży",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof repair or replace calculator",
+   "url": "https://www.therooferfinder.com/roof-cost-calculator",
+   "competitor": "Kalkulatory kosztu wymiany (TheRooferFinder, RoofPitch, CostFlow AI, RoofQuotes.com, Calculator.net, Roof-Smith)",
+   "features_checked": "koszt wymiany wg powierzchni, materiału, nachylenia, lokalizacji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial – jednocelowe kalkulatory kosztu, moduł wejściowy, nie konkurent bezpośredni",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof repair or replace calculator",
+   "url": "https://serviceagent.ai/tools/roof-repair-cost-calculator/",
+   "competitor": "ServiceAgent.ai – Roof Repair Cost Estimator",
+   "features_checked": "koszt naprawy wg materiału, powierzchni, nachylenia, stanu; próg 30% uszkodzeń",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "partial – tylko koszt naprawy",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof payment schedule depreciation insurance roof age surcharge calculator cost of waiting to replace roof",
+   "url": "https://www.valuepenguin.com/homeowners-insurance/roof-insurance",
+   "competitor": "ValuePenguin – roof insurance guide",
+   "features_checked": "składka wg wieku dachu ($2,211 vs $2,624, ~19%); kalkulator kosztu czekania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute (dane) – search wprost: 'no calculator for the cost of waiting'",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof payment schedule depreciation insurance roof age surcharge calculator cost of waiting to replace roof",
+   "url": "https://weathershieldroofers.com/blog/roof-age-insurance-coverage-guide/",
+   "competitor": "Weathershield Roofers – roof age & insurance guides",
+   "features_checked": "harmonogram wypłat wg wieku (100% do 5 lat ... 20% 21+), przykład $18,000/$9,000/$2,000, 70% ubezpieczycieli przechodzi na ACV przy 20 latach",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; treść marketingowa dekarza",
+   "conclusion": "substitute – jednorazowy przykład liczbowy, brak narzędzia",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "roof 18 years old insurance only covers actual cash value should I replace now or wait before selling",
+   "url": "https://www.realcostreport.com/insurance/home-insurance/replacement-cost-vs-acv/",
+   "competitor": "Real Cost Report / Fit Roofing / Better Choice Insurance / Policygenius (ACV vs RCV)",
+   "features_checked": "definicja ACV, przykłady wypłat, ubezpieczalność dachu 15-20 lat dla kupującego, kompromis $200-400 oszczędności rocznej vs ryzyko pięciocyfrowe",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute – treści objaśniające; brak narzędzia łączącego z horyzontem sprzedaży",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "replace roof before selling house calculator ROI vs closing credit tool",
+   "url": "https://www.zillow.com/learn/should-i-replace-my-roof-before-selling/",
+   "competitor": "Zillow / ibuyer.com / RoofVista – replace roof before selling",
+   "features_checked": "ROI 55-70%, kredyt przy zamknięciu $3,000-10,000, kredyt 1.5-2x wyceny, reguła decyzji, czas przygotowania",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute – search wprost: 'no single tool that compares a roof replacement against a closing credit'",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "replace roof before solar calculator remaining roof life panel removal reinstall cost",
+   "url": "https://www.consumeraffairs.com/solar-energy/should-you-replace-your-roof-before-going-solar.html",
+   "competitor": "ConsumerAffairs / Solar Panel Exit / The Roofing Brief (PV a dach)",
+   "features_checked": "koszt R&R paneli ($300-350/panel; $1,500-6,000 benchmark EnergySage wg summary; $2,500-6,500), progi pozostałej żywotności, utracona produkcja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "substitute – brak kalkulatora łączącego termin dachu z PV; roofcalc.org z fali 1 nie pojawił się w wynikach – niezweryfikowany",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowner app or software forecasts roof replacement timing, financing and insurance premium savings (paid tool)",
+   "url": "https://ribaconstruction.com/how-homeowners-budget-for-a-new-roof/",
+   "competitor": "RIBA Roofing planner / HomeRun PACE / PrimeRates",
+   "features_checked": "planer oszczędzania (koszt/miesiące), opcje finansowania; płatna aplikacja łącząca termin, finansowanie i składkę",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; lead-gen",
+   "conclusion": "substitute – search: brak płatnej aplikacji łączącej trzy elementy",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit insurance non-renewal because of roof age replace roof or switch insurer",
+   "url": "https://www.teamblind.com/post/old-roof-no-insurance-ecmau3vv",
+   "competitor": "Forum (Blind) – dyskusja o nieubezpieczalnym dachu",
+   "features_checked": "wątek Reddit, arkusze/szablony, porady społeczności",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; Blind może wymagać logowania – niezweryfikowane",
+   "conclusion": "brak narzędzia; nie znaleziono wątku Reddit ani szablonu arkusza; sygnał popytu, nie konkurent",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (nie wyszukano ponownie – limit 7 zapytań)",
+   "url": "n/d – URL-e z fali 1 nie pojawiły się w wynikach tej sesji",
+   "competitor": "Notatki z fali 1: Griffith Roofing 5-15 Year Rule, Jobber Roof Replacement Cost Calculator, roofcalc.org Solar Roofing Calculator, RoofingCalculator insurance guide, Roofr, IBHS FORTIFIED, Angi/HomeAdvisor",
+   "features_checked": "brak – nie weryfikowano w tej sesji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny w tej sesji dla tych pozycji",
+   "conclusion": "klasyfikacje z fali 1 (substitute/partial) niezweryfikowane; żadna z nich nie jest wg notatek narzędziem zintegrowanym",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (kontekst zadania)",
+   "url": "n/d",
+   "competitor": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "features_checked": "możliwość odpowiedzi na sample prompt i wygenerowania kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny; brak testu w asystentach",
+   "conclusion": "substitute – realne ryzyko samodzielnego rozwiązania dla prostego rachunku; pełny model z danymi lokalnymi niezweryfikowany",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "roof 18 years old insurance only covers actual cash value should I replace now or wait before selling",
+  "roof repair or replace calculator",
+  "roof payment schedule depreciation insurance roof age surcharge calculator cost of waiting to replace roof",
+  "replace roof before selling house calculator ROI vs closing credit tool",
+  "reddit insurance non-renewal because of roof age replace roof or switch insurer",
+  "replace roof before solar calculator remaining roof life panel removal reinstall cost",
+  "homeowner app or software forecasts roof replacement timing, financing and insurance premium savings (paid tool)"
+ ]
+}

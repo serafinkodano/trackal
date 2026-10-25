@@ -1,0 +1,451 @@
+{
+ "topic": "Ryzyko zdolności asystentów AI: które zadania decyzyjne zachowują trwałe powody do użycia zewnętrznego narzędzia, a które zostaną wchłonięte przez ChatGPT/Claude/Gemini/Copilot/Perplexity i Google",
+ "summary_pl": "ZASTRZEŻENIE METODYCZNE: wspólny limit wyszukiwań dla całego workflow (200 na turę) wyczerpał się po 10 udanych zapytaniach. Dlatego część punktów (ChatGPT agent/Canvas/memory, Gemini Canvas, Copilot, Perplexity Labs, polityki dostawców, natywne kalkulatory Google, linkowanie kalkulatorów przez asystentów, prywatność) jest oznaczona jako 'hipoteza / niezweryfikowane'. Pochodzą one z wiedzy treningowej, bez URL. Wszystkie dowody to search-summary: żadnej strony nie otwierano i żadnego narzędzia nie testowano.\n\nGŁÓWNE WNIOSKI:\n(1) Interaktywność sama w sobie nie jest już fosą. Claude od połowy 2025 buduje i hostuje interaktywne aplikacje (artifacts), a od października 2025 ma też MCP i trwały zapis danych. Google AI Mode generuje interaktywne wykresy finansowe z tabelami, które aktualizują się po kliknięciu, i zapowiada rozszerzenie na inne tematy. ChatGPT od października 2025 wyświetla w czacie aplikacje partnerów (Zillow z interaktywną mapą, Expedia). Użytkownik może więc poprosić asystenta o model 'solar teraz vs razem z dachem vs odłożyć' z suwakami. Brak dowodów na to, jak często ktoś faktycznie to robi.\n(2) Arytmetyka przestaje być przewagą, ale stosowanie reguł nadal nią jest. TaxCalcBench (2025): najlepszy model liczy poprawnie mniej niż 1/3 pełnych zeznań federalnych. Badanie z września 2026 pokazuje, że nowsze modele przekraczają 90% na dobrze postawionych zadaniach podatkowych, ale przy sprzecznych danych wejściowych zwykle i tak podają wynik, zamiast zgłosić problem. Trwała przewaga zewnętrznego narzędzia przesuwa się więc z 'policzy poprawnie' na: strukturyzację problemu, walidację wejść, jawne założenia, wersjonowaną metodologię oraz świeże dane lokalne (taryfy, ulgi, koszty).\n(3) Popyt na porady finansowe w asystentach jest masowy, a ich jakość niepewna. Credit Karma (09.2025): 2/3 użytkowników genAI korzystało z AI przy poradach finansowych. Realtor.com (10.2025): większość kupujących domy używa AI, w tym 67% z nich ChatGPT. NerdWallet/Harris (2026): 29% osób, które posłuchały chatbota, twierdzi, że im to zaszkodziło, a 20% działało bez żadnej weryfikacji. Zaufanie przy złożonych planach jest niskie: według Northwestern Mutual 15% wybrałoby AI do spersonalizowanego planu, a 53% człowieka. Bank of America podaje, że AI jest używane głównie na wczesnym etapie, a nie w kluczowych momentach decyzji.\n(4) Zadania jednoformułowe (rata kredytu, ogólne wyjaśnienia) są już w praktyce przejmowane. Kupujący domy deklarują, że szacują w AI miesięczne raty, a duże marki (Zillow, Expedia) dostarczają dane i UI wewnątrz ChatGPT. Asystenci odsyłają na zewnątrz przy transakcjach i danych zastrzeżonych, ale do partnerów z aplikacjami, nie do anonimowych stron. Nie znaleziono dowodu, że asystenci regularnie linkują do zewnętrznych kalkulatorów lub symulatorów: zakres badań był bardzo ograniczony, a pewność niska.\n\nOCENA RYZYKA (estymacja / hipoteza):\n- Pojedyncze kalkulatory i ogólne poradniki: ryzyko absorpcji bardzo wysokie.\n- Ogólne symulatory wieloscenariuszowe bez danych lokalnych: wysokie.\n- Symulatory oparte na regułach regulacyjnych, świeżych danych lokalnych, walidacji spójności wejść, audytowalnym wyniku i eksporcie: średnie.\n\nKluczowa niewiadoma dla modelu AdSense: czy asystent w ogóle przekaże użytkownika na stronę zewnętrzną, skoro sam potrafi zbudować narzędzie albo pokazać aplikację partnera.",
+ "findings": [
+  {
+   "question": "1. Aktualne zdolności: ChatGPT apps / agent",
+   "claim_pl": "Od OpenAI DevDay (6.10.2025) ChatGPT obsługuje 'apps' (Apps SDK). Partnerzy startowi to m.in. Booking.com, Canva, Coursera, Figma, Expedia, Spotify i Zillow. Funkcja trafiła do wszystkich zalogowanych użytkowników poza UE, łącznie z kontami darmowymi. Na demo Zillow wyświetlił w czacie interaktywną mapę domów na sprzedaż w Pittsburghu. Expedia pozwala planować podróż w czacie, a finalizacja (rezerwacja) odbywa się na stronie partnera. ChatGPT sam kieruje zapytanie do podłączonej aplikacji. Wyszukiwanie nie zwróciło informacji o rozwoju tej funkcji w 2026.",
+   "evidence_type": "direct",
+   "numbers": "Data startu: 6.10.2025; 7 wymienionych partnerów startowych",
+   "sources": [
+    {
+     "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-gets-apps-now-you-can-book-a-trip-build-slides-and-make-playlists-without-leaving-the-chat",
+     "title": "ChatGPT gets apps: now you can book a trip, build slides, and make Spotify playlists without leaving the chat",
+     "publisher": "TechRadar",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://www.geekwire.com/2025/new-platform-familiar-risks-zillow-and-expedia-bet-on-openais-chatgpt-apps-rollout/",
+     "title": "New platform, familiar risks: Zillow and Expedia bet on OpenAI's ChatGPT apps rollout",
+     "publisher": "GeekWire",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://www.bgr.com/1989183/how-to-use-chatgpt-with-apps-spotify-expedia-zillow/",
+     "title": "ChatGPT Supports Apps Like Spotify, Expedia, And Zillow - Here's How To Use Them",
+     "publisher": "BGR"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Duzi gracze z danymi zastrzeżonymi (listingi, ceny, dostępność) dostarczają już dane i interfejs bezpośrednio w czacie, bez odsłony na stronie. Dla witryny opartej na AdSense to podwójny sygnał. Po pierwsze, kategorie 'dane + prosty UI' (wyszukiwanie domów, podróże) są przejmowane przez asystenta i wybranych partnerów. Po drugie, kanał 'app w ChatGPT' jest teoretycznie możliwy, ale nie generuje odsłon reklam display. Ryzyko platformowe (gatekeeper) opisuje sam GeekWire."
+  },
+  {
+   "question": "1. Aktualne zdolności: Claude artifacts / interaktywne aplikacje",
+   "claim_pl": "W czerwcu i lipcu 2025 Anthropic wprowadził 'AI-powered artifacts'. Są to interaktywne aplikacje budowane, hostowane i udostępniane w Claude, które wywołują Claude przez API na koszt użytkownika końcowego. W październiku 2025 dodano obsługę MCP i trwały zapis danych (persistent storage). Anthropic podaje, że użytkownicy utworzyli ponad pół miliarda artifacts. Artifacts mogą być aplikacjami HTML/JS, komponentami React, diagramami czy dokumentami, a każda kolejna wiadomość w czacie modyfikuje aplikację na miejscu.",
+   "evidence_type": "direct",
+   "numbers": ">0,5 mld artifacts (dane Anthropic); MCP + storage od 10.2025",
+   "sources": [
+    {
+     "url": "https://anthropic.com/news/claude-powered-artifacts",
+     "title": "Claude powered artifacts",
+     "publisher": "Anthropic"
+    },
+    {
+     "url": "https://claude.com/blog/build-artifacts",
+     "title": "Turn ideas into interactive AI-powered apps",
+     "publisher": "Anthropic/Claude"
+    },
+    {
+     "url": "https://clickup.com/blog/claude-artifacts/",
+     "title": "How to Use Claude Artifacts for Work in 2026",
+     "publisher": "ClickUp"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Użytkownik może na żądanie zlecić zbudowanie symulatora z suwakami i scenariuszami, np. dla 'roof + solar' (to wniosek z opisu funkcji, w tej sesji nie testowano jakości). Sama interaktywność (suwaki, wykresy, warianty) nie jest więc trwałym wyróżnikiem. Przewaga zewnętrznej strony musi pochodzić z gotowej, zweryfikowanej metodologii, aktualnych danych i zerowego wysiłku użytkownika: bez pisania promptów, iterowania i sprawdzania kodu."
+  },
+  {
+   "question": "1/5. Google AI Mode – interaktywne wykresy finansowe",
+   "claim_pl": "W czerwcu 2025 Google zaczął testować w AI Mode (Search Labs, tylko USA) interaktywne wykresy porównujące akcje i fundusze w czasie, oparte na danych bieżących i historycznych. Tabele aktualizują się po interakcji z wykresem, a pytania uzupełniające (np. o dywidendy) uruchamiają dodatkowy research. Google zapowiedział rozszerzenie funkcji poza finanse. Statusu w 2026 nie zweryfikowano.",
+   "evidence_type": "direct",
+   "numbers": "Start testu: 06.2025; zasięg: USA, Labs",
+   "sources": [
+    {
+     "url": "https://9to5google.com/2025/06/05/google-ai-mode-charts/",
+     "title": "Google AI Mode charts",
+     "publisher": "9to5Google",
+     "published": "2025-06-05"
+    },
+    {
+     "url": "https://getcoai.com/news/in-the-money-google-tests-interactive-finance-charts-in-ai-mode-for-stock-comparisons",
+     "title": "In the money: Google tests interactive finance charts in AI Mode for stock comparisons",
+     "publisher": "CO/AI"
+    },
+    {
+     "url": "https://www.croma.com/unboxed/google-search-ai-mode-gets-data-visualisation-feature",
+     "title": "Google Search AI Mode just got a whole lot smarter for finance queries",
+     "publisher": "Croma"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Google buduje natywne wizualizacje 'porównanie + wykres + follow-up' bezpośrednio w wynikach wyszukiwania. Najbardziej narażone są tematy oparte na publicznych danych rynkowych, np. porównania inwestycyjne i historyczne stopy. Hipoteza: jeśli funkcja obejmie inne kategorie (kredyty, energia), proste symulatory porównawcze stracą ruch z Google, zanim zdążą go zdobyć."
+  },
+  {
+   "question": "1. Niezawodność LLM w obliczeniach podatkowych (benchmark)",
+   "claim_pl": "TaxCalcBench (arXiv 2507.16126, lipiec 2025, Column Tax) to według recenzji pierwszy publiczny benchmark obliczania podatków przez LLM. Najlepszy model frontier oblicza w pełni poprawnie mniej niż 1/3 zeznań federalnych USA, a przy tolerancji ±5 USD około połowy. Strona dostawcy (Filed) podaje 23–42% poprawnych zeznań w uproszczonych warunkach, a dla własnego systemu multi-agentowego ok. 72,5%. To marketing dostawcy. Uzupełniająco: ewaluacja Taxmann.AI/IIT Kharagpur (prawo indyjskie, 11.2025) pokazuje, że żaden model nie przekroczył 80%, a najlepsze osiągnęły ok. 70–73%.",
+   "evidence_type": "direct",
+   "numbers": "<33% pełna poprawność; ~50% przy ±$5; vendor: 23–42% vs 72,5%; Indie: max ~70–73%",
+   "sources": [
+    {
+     "url": "https://pith.science/paper/2507.16126",
+     "title": "TaxCalcBench: Evaluating Frontier Models on the Tax Calculation Task · Pith Review",
+     "publisher": "Pith"
+    },
+    {
+     "url": "https://www.filed.com/measuring-ai-tax-accuracy-filed-vs-chatgpt-claude-gemini",
+     "title": "Filed vs ChatGPT, Claude, Gemini: Tax Accuracy",
+     "publisher": "Filed"
+    },
+    {
+     "url": "https://www.taxmann.com/post/blog/taxmann-ai-x-iit-kharagpur-llm-evaluation-le-btl-benchmark-study",
+     "title": "Taxmann.AI X IIT Kharagpur LLM Evaluation",
+     "publisher": "Taxmann"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wieloetapowe obliczenia według reguł (progi, wygaszanie ulg, interakcje przepisów) to obszar, w którym deterministyczny silnik z wersjonowaną metodologią ma udokumentowaną przewagę jakościową nad samym LLM. Zastrzeżenia: (a) dane dotyczą modeli z 2025 roku, a autorami są firmy sprzedające konkurencyjne rozwiązania; (b) przewaga jakościowa nie oznacza, że użytkownik ją zauważy i przejdzie na zewnętrzną stronę."
+  },
+  {
+   "question": "1. Niezawodność LLM – nowsze modele i sprzeczne dane wejściowe",
+   "claim_pl": "Preprint arXiv 2609.05928 (wrzesień 2026) 'Solving versus Verifying' pokazuje, że niektóre modele przekraczają 90% poprawnie obliczonych zobowiązań podatkowych na dobrze sformułowanych przypadkach ustawowych. Gdy dane wejściowe zawierają sprzeczności, modele zwykle mimo to podają wynik, zamiast zgłosić problem.",
+   "evidence_type": "direct",
+   "numbers": ">90% na dobrze sformułowanych przypadkach",
+   "sources": [
+    {
+     "url": "https://arxiv.org/html/2609.05928v1",
+     "title": "Solving versus Verifying: Catching Contradictions in Tax Reasoning Systems",
+     "publisher": "arXiv",
+     "published": "2026-09"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "To kluczowy niuans dla projektu. Przewaga 'poprawnej arytmetyki' szybko się kurczy, ale trwała pozostaje przewaga w strukturyzacji problemu, walidacji spójności wejść i jawnym pokazywaniu założeń oraz ograniczeń. Symulator, który wykrywa sprzeczne lub nierealistyczne wejścia (np. sprzedaż domu za 2 lata przy 25-letnim okresie zwrotu z solara), robi to, czego LLM typowo nie robi. Jeśli jednak kolejne modele nauczą się weryfikacji, i ta przewaga zmaleje."
+  },
+  {
+   "question": "1. Niezawodność LLM – starsze testy numeryczne (VITA, pytania finansowe)",
+   "claim_pl": "Badanie w Artificial Intelligence and Law (Springer, 2025) przetestowało m.in. GPT-4, GPT-4o mini i Claude 3.5 Haiku na pytaniach z testu VITA (podatki osób o niskich dochodach). Słabym punktem były otwarte pytania numeryczne: GPT-4 uzyskał ok. 45% na zaawansowanym zestawie, a autorzy nazywają obliczenia numeryczne 'uniwersalnym wyzwaniem'. Starszy test 'Investing in the Web' (opisany przez Entrepreneur, data niezweryfikowana, prawdopodobnie 2023) objął 100 pytań finansowych: ChatGPT odpowiedział poprawnie na 65%, 29% odpowiedzi było niepełnych lub mylących, a 6% całkowicie błędnych.",
+   "evidence_type": "direct",
+   "numbers": "VITA: ~45% (GPT-4, zaawansowane otwarte); Investing in the Web: 65/29/6%",
+   "sources": [
+    {
+     "url": "https://link.springer.com/article/10.1007/s10506-025-09465-7",
+     "title": "Performance of LLMs on VITA test: potential for AI-assisted tax returns for low income taxpayers",
+     "publisher": "Springer – Artificial Intelligence and Law",
+     "published": "2025"
+    },
+    {
+     "url": "https://www.entrepreneur.com/business-news/dont-ask-chatgpt-for-financial-advice-study/489792",
+     "title": "Don't Ask ChatGPT for Financial Advice: Study",
+     "publisher": "Entrepreneur"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Dowody dotyczą modeli z lat 2023–2024, w większości bez wykonywania kodu. Nie wolno ich ekstrapolować na asystentów z 2026, którzy liczą w code interpreterze. Błędy arytmetyczne maleją, ale błędy w regułach i stawkach (nieaktualne limity, zmyślone przepisy) pozostają realne (hipoteza). Nie należy budować tezy produktu na 'AI źle liczy'."
+  },
+  {
+   "question": "2. OpenAI 'How People Use ChatGPT' (2025)",
+   "claim_pl": "Według pracy NBER zespołu OpenAI Economic Research i Davida Deminga (Harvard, wrzesień 2025) ok. 80% wiadomości w ChatGPT należy do trzech kategorii: Practical Guidance, Seeking Information i Writing. Practical Guidance (porady how-to, tutoring, ideacja) jest najczęstsza. Udział wiadomości niezwiązanych z pracą wzrósł z ok. 53% do 73% między czerwcem 2024 a połową 2025. Według źródła wtórnego ok. 1 na 4 wiadomości to wyszukiwanie informacji (niezweryfikowane w samym dokumencie). Kodowanie stanowi ok. 4,2%. Dokładnego udziału kategorii 'math/calculation' nie ustalono.",
+   "evidence_type": "direct",
+   "numbers": "~80% (3 kategorie); non-work 53%→73%; ~25% info-seeking (wtórne); coding ~4,2%",
+   "sources": [
+    {
+     "url": "https://gizmodo.com/openai-how-people-use-chatgpt-2000658906",
+     "title": "OpenAI: how people use ChatGPT",
+     "publisher": "Gizmodo",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://www.tomsguide.com/ai/chatgpt/1-1-million-chatgpt-messages-analyzed-turns-out-were-mostly-just-asking-about-ourselves",
+     "title": "New study shows how people are using ChatGPT — and Google should be worried",
+     "publisher": "Tom's Guide"
+    },
+    {
+     "url": "https://pw.hks.harvard.edu/post/how-people-use-chatgpt",
+     "title": "How People Use ChatGPT",
+     "publisher": "Harvard Kennedy School (Deming)"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Dominujące, rosnące użycie ChatGPT to porady praktyczne i wyszukiwanie informacji w sprawach prywatnych, czyli dokładnie segment decyzji typu 'czy instalować solar teraz'. Asystent staje się pierwszym punktem kontaktu z problemem. Zewnętrzny symulator musi więc być uzasadnionym następnym krokiem z odpowiedzi asystenta (cytowanie, link), a nie miejscem, do którego użytkownik trafia z Google. Uwaga: to są proporcje wiadomości, a nie wolumen zapytań o konkretne decyzje."
+  },
+  {
+   "question": "2. Konsumenci: AI w poradach finansowych (Credit Karma 2025)",
+   "claim_pl": "W badaniu Intuit Credit Karma (wrzesień 2025, ponad 1000 osób) ok. 2/3 dorosłych Amerykanów, którzy używali generatywnej AI, korzystało z niej przy poradach finansowych. Ok. 80% osób, które zastosowały poradę, uważa, że poprawiła ich sytuację. Inna relacja (CBS Philadelphia) przytacza dane Credit Karma, według których nieco ponad połowa respondentów przyznała się do złej decyzji finansowej podjętej na podstawie informacji z genAI. Nie zweryfikowano, czy to ta sama fala badania.",
+   "evidence_type": "direct",
+   "numbers": "~66% użytkowników genAI; ~80% 'poprawa' wśród działających; >50% 'zła decyzja' (CBS, fala niepewna)",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/news/chatgpteacher-two-thirds-americans-ai-190139564.html",
+     "title": "ChatGPTeacher: Two-Thirds of Americans Use AI for Financial Advice",
+     "publisher": "Yahoo Finance",
+     "published": "2025-09"
+    },
+    {
+     "url": "https://www.aol.com/articles/chatgpteacher-two-thirds-americans-ai-210139380.html",
+     "title": "ChatGPTeacher: Two-Thirds of Americans Use AI for Financial Advice",
+     "publisher": "AOL"
+    },
+    {
+     "url": "https://www.cbsnews.com/philadelphia/news/more-people-turning-to-ai-chatbots-for-financial-advice/",
+     "title": "More people turning to AI chatbots for financial advice. Can you trust it?",
+     "publisher": "CBS Philadelphia"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Intencja 'pomóż mi zdecydować finansowo' masowo przenosi się do asystentów. To potwierdza, że kanał AI ma znaczenie, ale zarazem oznacza, że asystent zaspokaja dużą część potrzeby bez kliknięcia. Badanie jest sponsorowane przez fintech, a mianownik to 'użytkownicy genAI', a nie wszyscy dorośli."
+  },
+  {
+   "question": "2. Konsumenci: młodsze pokolenia i zaufanie (Experian)",
+   "claim_pl": "Badanie Experian (n=2011 dorosłych w USA, terenowe 30.08–3.09, publikacja 10.2024) pokazuje, że 67% Gen Z i 62% millenialsów używa AI do finansów osobistych, większość co najmniej raz w tygodniu. Zastosowania: oszczędzanie i budżet (60%), planowanie inwestycji (48%), poprawa scoringu (48%). 38% ufa genAI tak samo lub bardziej niż ludzkim doradcom. W Gen X odsetek użytkowników lub rozważających wynosi ok. 41%, wśród boomersów 28%.",
+   "evidence_type": "direct",
+   "numbers": "Gen Z 67%, millenialsi 62%, Gen X ~41%, boomersi 28%; 38% ufa AI ≥ doradcom",
+   "sources": [
+    {
+     "url": "https://www.experian.com/blogs/news/2024/10/30/generative-ai-for-financial-success/",
+     "title": "Harnessing Generative AI for Financial Success",
+     "publisher": "Experian",
+     "published": "2024-10-30"
+    },
+    {
+     "url": "https://cuinsight.com/gen-z-millennials-are-using-ai-for-personal-finance-advice-report-finds",
+     "title": "Gen Z, millennials are using AI for personal finance advice, report finds",
+     "publisher": "CUInsight"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Najmłodsze kohorty traktują asystenta jako domyślne narzędzie finansowe. Oznacza to wysoki odsetek wchłaniania prostych zadań (budżet, porównanie opcji). Dane mają 2 lata, więc obecnie adopcja jest prawdopodobnie wyższa (hipoteza)."
+  },
+  {
+   "question": "2. Konsumenci: zakup domu",
+   "claim_pl": "Realtor.com (10.2025): większość kupujących domy deklaruje użycie AI do analiz nieruchomości. Wśród platform prowadzi ChatGPT (67%), przed Gemini (54%), ale najbardziej zaufanym źródłem pozostają agenci. Veterans United: 34% potencjalnych kupujących korzysta z AI (wobec 32% kwartał wcześniej), a zastosowania obejmują szacowanie miesięcznych rat i wartości nieruchomości. Bank of America: 1 na 5 kupujących lub właścicieli używał AI, głównie na wczesnym etapie, a nie w kluczowych momentach decyzji. Cotality (za NAR): 55% kupujących używa genAI co najmniej raz w miesiącu.",
+   "evidence_type": "direct",
+   "numbers": "ChatGPT 67%/Gemini 54% (Realtor.com); 34% (VU); 1/5 (BofA); 55% miesięcznie (Cotality)",
+   "sources": [
+    {
+     "url": "https://nationalmortgageprofessional.com/news/ai-searches-grow-popularity-among-home-shoppers",
+     "title": "AI Searches Grow In Popularity Among Home Shoppers",
+     "publisher": "National Mortgage Professional",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://www.nar.realtor/news/real-estate-news/technology/ai-becomes-early-step-in-homebuying-journey",
+     "title": "AI Becomes Early Step in Homebuying Journey",
+     "publisher": "National Association of Realtors"
+    },
+    {
+     "url": "https://austin.veteransunited.com/education/ai-homebuying-survey",
+     "title": "AI homebuying survey",
+     "publisher": "Veterans United Home Loans"
+    },
+    {
+     "url": "https://themortgagepoint.com/2025/02/13/ais-impact-on-the-homebuying-journey/",
+     "title": "AI's Impact on the Homebuying Journey",
+     "publisher": "The MortgagePoint",
+     "published": "2025-02-13"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Zadanie 'oszacuj miesięczną ratę / wartość domu' już odbywa się w asystencie, więc kalkulatory jednoformułowe są faktycznie wchłaniane. Wynik BofA (AI na wczesnym etapie, nie w kluczowych momentach) sugeruje lukę w ostatniej fazie decyzji, gdzie użytkownik potrzebuje czegoś bardziej wiarygodnego. Hipoteza: tę lukę mogą częściowo zająć symulatory z jawną metodologią, ale równie dobrze agent, doradca lub kredytodawca."
+  },
+  {
+   "question": "2/4. Zaufanie: AI vs człowiek przy złożonych planach (Northwestern Mutual 2025)",
+   "claim_pl": "Planning & Progress Study 2025 (Harris Poll dla Northwestern Mutual, n=4626, styczeń 2025): do spersonalizowanego planu finansowego 53% wybiera człowieka, a 15% AI. Przy planie emerytalnym 56% bardziej ufa człowiekowi, 13% AI. Przy wskazówkach oszczędnościowych i prowadzeniu budżetu przewaga człowieka jest mniejsza. Respondenci akceptują, że doradcy używają AI m.in. do 'financial scenario modeling'.",
+   "evidence_type": "direct",
+   "numbers": "53% vs 15% (plan); 56% vs 13% (emerytura); n=4626",
+   "sources": [
+    {
+     "url": "https://news.northwesternmutual.com/2025-08-05-Human-Connection-Over-Machines-Americans-Trust-Advisors-More-Than-AI-for-Financial-Advice,-Finds-Northwestern-Mutuals-2025-Planning-Progress-Study",
+     "title": "Human Connection Over Machines: Americans Trust Advisors More Than AI for Financial Advice",
+     "publisher": "Northwestern Mutual",
+     "published": "2025-08-05"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Zaufanie do AI maleje wraz ze złożonością i stawką decyzji. To pośredni argument za narzędziem o jawnej, audytowalnej metodologii przy złożonych decyzjach. Nie dowodzi jednak, że użytkownik wybierze anonimową stronę z reklamami zamiast asystenta lub doradcy. Sponsor (firma doradcza) ma interes w takim wyniku."
+  },
+  {
+   "question": "2/4. Skutki działania na poradach chatbotów (NerdWallet/Harris 2026)",
+   "claim_pl": "Badanie NerdWallet/Harris Poll (2026): spośród Amerykanów, którzy zastosowali poradę finansową chatbota AI, 29% twierdzi, że zaszkodziła ich sytuacji, a 39%, że pomogła. 20% działało od razu, bez pytań uzupełniających, dodatkowego researchu i konsultacji z człowiekiem. Lokalne media (28.09.2026) informowały o badaniu 'AI chatbots hurt some users' finances'. Że to ta sama ankieta, nie zweryfikowano. CFP Board (12.2025): 57% żałuje decyzji podjętych po zaufaniu poradom online (ogólnie online, nie tylko AI).",
+   "evidence_type": "direct",
+   "numbers": "29% szkoda / 39% pomoc / 20% bez weryfikacji; CFP: 57% żalu (online ogólnie)",
+   "sources": [
+    {
+     "url": "https://www.nerdwallet.com/finance/studies/using-ai-for-personal-finances",
+     "title": "Data: Americans Are Using Chatbots for Financial Advice. Risky or Rewarding?",
+     "publisher": "NerdWallet",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.wtok.com/2026/09/28/ai-chatbots-hurt-some-users-finances-survey-finds/",
+     "title": "AI chatbots hurt some users' finances, survey finds",
+     "publisher": "WTOK",
+     "published": "2026-09-28"
+    },
+    {
+     "url": "https://www.cfp.net/news/2025/12/financial-experts-urge-caution-as-57-of-americans-regret-acting-on-online-advice",
+     "title": "Financial Experts Urge Caution as 57% of Americans Regret Acting on Online Advice",
+     "publisher": "CFP Board",
+     "published": "2025-12"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Problem jakości porad AI jest realny i mierzalny, co daje narrację 'druga opinia / weryfikacja założeń'. 20% działa jednak bez żadnej weryfikacji, więc duża część użytkowników nie poszuka zewnętrznego narzędzia. Istnienie problemu nie oznacza gotowości do kliknięcia. NerdWallet jest wydawcą kalkulatorów, ma więc interes w takiej narracji."
+  },
+  {
+   "question": "2. Rekomendacje produktów finansowych przez ChatGPT (Motley Fool, 2023)",
+   "claim_pl": "Badania Motley Fool Ascent (2023): 26% Amerykanów używało ChatGPT do rekomendacji kart kredytowych, 54% do rekomendacji produktu finansowego, a 47% do typowania akcji. To odpowiedzi na różnie sformułowane pytania, więc liczby nie są porównywalne z badaniami z 2025.",
+   "evidence_type": "direct",
+   "numbers": "26% karty; 54% produkt finansowy; 47% akcje (2023)",
+   "sources": [
+    {
+     "url": "https://www.fool.com/the-ascent/research/chatgpt-credit-card-recommendations",
+     "title": "Study: 26% of Americans Have Used ChatGPT for Credit Card Recommendations",
+     "publisher": "The Motley Fool Ascent",
+     "published": "2023"
+    },
+    {
+     "url": "https://wealthprofessional.ca/news/industry-news/47-of-americans-rely-on-chatgpt-for-stock-picks-study/375834",
+     "title": "47% of Americans rely on ChatGPT for stock picks - study",
+     "publisher": "Wealth Professional"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Już w 2023 asystenci przejmowali etap 'który produkt wybrać', czyli etap tradycyjnie monetyzowany afiliacją i lead-gen. Potwierdza to założenie właściciela, że afiliacja nie może ratować modelu bazowego, bo ten etap jest szczególnie narażony. Wysokie odsetki z 2023 budzą wątpliwości metodyczne (panel online)."
+  },
+  {
+   "question": "3/5. Asystenci kierują do partnerów przy danych zastrzeżonych i transakcjach",
+   "claim_pl": "Według relacji z premiery aplikacje w ChatGPT obsługują odkrywanie i planowanie w czacie, a do finalnych kroków (np. rezerwacji pokoju) przekazują użytkownika na strony partnerów. OpenAI opisało ten ruch jako ewolucję ChatGPT w stronę systemu operacyjnego. Zillow podawał, że jest jedyną aplikacją nieruchomości w ChatGPT. Komentatorzy wskazywali ryzyko zależności od jednego gatekeepera.",
+   "evidence_type": "indirect",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://www.geekwire.com/2025/new-platform-familiar-risks-zillow-and-expedia-bet-on-openais-chatgpt-apps-rollout/",
+     "title": "New platform, familiar risks: Zillow and Expedia bet on OpenAI's ChatGPT apps rollout",
+     "publisher": "GeekWire",
+     "published": "2025-10"
+    },
+    {
+     "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/chatgpt-gets-apps-now-you-can-book-a-trip-build-slides-and-make-playlists-without-leaving-the-chat",
+     "title": "ChatGPT gets apps",
+     "publisher": "TechRadar",
+     "published": "2025-10"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Asystent odsyła na zewnątrz, gdy partner ma dane zastrzeżone lub zamyka transakcję. Beneficjentami są duże marki z integracją, nie anonimowe strony. Niezależny symulator bez własnych danych ani transakcji nie ma naturalnego miejsca w tym przepływie. Musi zasłużyć na cytowanie jakością treści, której asystent nie wygeneruje sam (hipoteza)."
+  },
+  {
+   "question": "3. Czy asystenci linkują do kalkulatorów/narzędzi (np. NerdWallet, Bankrate)?",
+   "claim_pl": "Nie znaleziono analizy ani artykułu mierzącego, jak często ChatGPT, Perplexity, Gemini czy Claude linkują do interaktywnych kalkulatorów (a nie do artykułów) w odpowiedziach finansowych. Zapytanie przygotowane na ten temat nie zostało wykonane z powodu wyczerpania limitu wyszukiwań. Hipoteza / niezweryfikowane: asystenci z wyszukiwaniem cytują duże domeny finansowe (NerdWallet, Bankrate, Investopedia), ale nie wiadomo, czy linkowany jest kalkulator, ani jaki jest CTR.",
+   "evidence_type": "hypothesis",
+   "numbers": "",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "To największa luka dowodowa dla modelu biznesowego. Bez danych o tym, czy i jak często asystenci przekazują użytkownika do zewnętrznego narzędzia, założenie, że ruch z asystentów przyniesie odsłony AdSense, pozostaje niezweryfikowane. Właściciel może to tanio sprawdzić własnymi testami promptów i analizą referrerów healthscorer.com, bez wnioskowania o RPM."
+  },
+  {
+   "question": "1. Pozostałe zdolności: ChatGPT agent/Canvas/memory/data analysis, Gemini Canvas, Copilot, Perplexity Labs",
+   "claim_pl": "Hipoteza / niezweryfikowane w tej sesji (brak wyszukiwań, wiedza treningowa): ChatGPT ma analizę danych z wykonywaniem kodu, upload plików (CSV/PDF), Canvas, pamięć oraz 'ChatGPT agent' (od lipca 2025), który przegląda strony i wypełnia formularze. Gemini ma Canvas z podglądem kodu i aplikacji. Perplexity Labs (od 2025) generuje raporty, arkusze, dashboardy i proste aplikacje webowe. Copilot ma analogiczne funkcje generowania i analizy. Wszyscy główni asystenci potrafią więc na żądanie wygenerować kod interaktywnego modelu wieloscenariuszowego. Jakości, poprawności i powtarzalności takich modeli nie testowano.",
+   "evidence_type": "hypothesis",
+   "numbers": "",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Zakładając poprawność tych informacji, techniczna zdolność 'zbuduj mi symulator' jest powszechna, więc fosą nie jest możliwość zbudowania, tylko: (a) wysiłek i kompetencje, których wymaga od użytkownika; (b) poprawność reguł i danych; (c) powtarzalność, bo ten sam prompt daje różne modele. Wymaga to praktycznego testu: ten sam problem 'roof + solar' w 4–5 asystentach i porównanie wyników z referencyjnym silnikiem."
+  },
+  {
+   "question": "5. Natywne narzędzia Google i asystentów pochłaniające proste zadania",
+   "claim_pl": "Hipoteza / niezweryfikowane w tej sesji: Google od lat wyświetla w wynikach natywne kalkulatory (m.in. dla zapytań typu 'mortgage calculator', 'loan calculator', konwersje i proste kalkulatory). AI Overviews i AI Mode odpowiadają na zapytania o formuły bez kliknięcia. OpenAI wprowadziło w 2025 funkcje zakupowe w ChatGPT (Instant Checkout, 'shopping research'), a Google wprowadził Gemini w Chrome (2025). Potwierdzone w tej sesji są jedynie interaktywne wykresy finansowe w AI Mode oraz aplikacje Zillow i Expedia w ChatGPT (zob. wyżej).",
+   "evidence_type": "hypothesis",
+   "numbers": "",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Zadania jednoformułowe (rata, procent składany, BMI, konwersje) i ogólne wyjaśnienia ('jak działa net metering') należy uznać za wchłonięte lub wchłaniane. Na nich nie warto budować ani treści, ani ruchu. Symulator musi rozwiązywać problem, którego nie da się zamknąć jednym widgetem ani jednym akapitem AI Overview."
+  },
+  {
+   "question": "6. Polityki dostawców AI dotyczące porad finansowych",
+   "claim_pl": "Hipoteza / niezweryfikowane w tej sesji (wiedza treningowa, brak źródła z wyszukiwania): pod koniec października 2025 OpenAI ujednoliciło usage policies, wymieniając m.in. zakaz 'tailored advice that requires a license' (podawane przykłady: porady prawne i medyczne) bez udziału licencjonowanego profesjonalisty. Po medialnych doniesieniach o zakazie OpenAI komunikowało, że zachowanie modelu się nie zmieniło. W praktyce asystenci udzielają ogólnych porad finansowych z zastrzeżeniami (disclaimer), a nie odmawiają. Stanu polityk Anthropic, Google i Microsoftu na 2026 nie zweryfikowano.",
+   "evidence_type": "hypothesis",
+   "numbers": "",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Polityki dostawców nie tworzą trwałej niszy dla zewnętrznych narzędzi, bo asystenci nie odmawiają rozmowy o pieniądzach, tylko dodają disclaimery. Symulator decyzyjny też musi mieć jasne disclaimery (narzędzie edukacyjne, nie porada inwestycyjna), co nie jest przewagą konkurencyjną."
+  },
+  {
+   "question": "4. Trwałe powody użycia zewnętrznego narzędzia – synteza",
+   "claim_pl": "Synteza (hipoteza wsparta pośrednio): powody o najwyższej trwałości to (a) świeże dane lokalne i regulacyjne, np. taryfy energii, programy ulg, lokalne koszty i składki, aktualne limity podatkowe; (b) deterministyczna, wersjonowana metodologia z powtarzalnym wynikiem, bo ten sam input daje ten sam output (asystent tego nie gwarantuje); (c) walidacja spójności wejść i jawne założenia, wsparte badaniem arXiv 2609.05928; (d) gotowa struktura problemu bez wysiłku promptowania. Średnia trwałość: wykresy, oś czasu, eksport PDF/CSV, bo asystenci generują je na żądanie (Claude artifacts, Google AI Mode charts). Niska trwałość: sama interaktywność (suwaki) i proste obliczenia. Prywatność (niechęć do podawania danych finansowych AI) to wiarygodny argument, ale w tej sesji nie znaleziono danych ilościowych.",
+   "evidence_type": "hypothesis",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://arxiv.org/html/2609.05928v1",
+     "title": "Solving versus Verifying: Catching Contradictions in Tax Reasoning Systems",
+     "publisher": "arXiv",
+     "published": "2026-09"
+    },
+    {
+     "url": "https://pith.science/paper/2507.16126",
+     "title": "TaxCalcBench (Pith Review)",
+     "publisher": "Pith"
+    },
+    {
+     "url": "https://anthropic.com/news/claude-powered-artifacts",
+     "title": "Claude powered artifacts",
+     "publisher": "Anthropic"
+    },
+    {
+     "url": "https://9to5google.com/2025/06/05/google-ai-mode-charts/",
+     "title": "Google AI Mode charts",
+     "publisher": "9to5Google",
+     "published": "2025-06-05"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wybierając symulatory do portfolio, należy priorytetyzować problemy, w których wynik zależy od danych lokalnych lub regulacyjnych, które trzeba utrzymywać (to automatyzowalne przez n8n, ale kosztowne w kontroli jakości), oraz od wielu powiązanych reguł. Symulatory, których jedyną wartością jest UI z suwakami nad publiczną formułą, odrzucić. Uwaga: trwałe źródła przewagi (świeże dane, regulacje) to dokładnie to, co podnosi koszt automatycznego utrzymania. To napięcie z założeniem 'minimum manual editorial work'."
+  },
+  {
+   "question": "2. Rozbieżność skali adopcji (różne mianowniki)",
+   "claim_pl": "Search-summary, bez pewnego przypisania URL (niezweryfikowane): według badania Gallup z Edward Jones (2025) ok. 1 na 5 Amerykanów, którzy w ostatnim roku szukali porady finansowej, zwróciło się do AI, a tylko ok. 3 na 10 ma 'duże' lub 'pewne' zaufanie do jej kompetencji w zarządzaniu pieniędzmi. Według badania Pearl.com (2025, 2000 dorosłych) 19% straciło ponad 100 USD przez poradę finansową chatbota AI. Wyniki pojawiły się w zbiorczym podsumowaniu wyszukiwania, ale nie udało się jednoznacznie przypisać ich do konkretnego URL z listy wyników.",
+   "evidence_type": "indirect",
+   "numbers": "~20% szukających porad użyło AI; ~30% ufa; 19% straciło >$100",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Skala zależy od mianownika: 'użytkownicy genAI' w Credit Karma to 2/3, a 'wszyscy szukający porad' u Gallupa to ok. 1/5. Do modelowania popytu nie należy używać najwyższych liczb z badań sponsorowanych przez fintechy. Realistyczny obraz: znacząca, ale mniejszościowa i niskozaufaniowa część populacji używa AI do decyzji finansowych."
+  }
+ ],
+ "contradictions_pl": [
+  "Skala użycia AI do porad finansowych: Credit Karma (09.2025) podaje ok. 2/3, ale wśród użytkowników genAI. Gallup/Edward Jones (niezweryfikowane przypisanie URL) podaje ok. 1/5, ale wśród osób szukających porad. Bank of America wskazuje 1/5 kupujących domy, a Realtor.com 'większość' kupujących. Różnice wynikają z mianowników, definicji 'użycia AI' i sponsorów.",
+  "Skutki porad AI: Credit Karma raportuje, że ok. 80% działających uważa, że im to pomogło, ale ta sama marka (według CBS) podaje, że ponad połowa przyznała się do złej decyzji. NerdWallet/Harris (2026): 29% szkoda vs 39% pomoc. Wyniki zależą od sformułowania pytań i sponsora.",
+  "Niezawodność obliczeń: TaxCalcBench (2025) daje poniżej 1/3 poprawnych pełnych zeznań, a arXiv 2609.05928 (09.2026) powyżej 90% na dobrze sformułowanych przypadkach. Różnice wynikają z generacji modeli, złożoności zadania (pełne zeznanie vs pojedynczy przypadek) i warunków (czyste vs sprzeczne wejścia). Wniosek: arytmetyka szybko się poprawia, walidacja wejść pozostaje słaba.",
+  "Zaufanie: Experian (2024) podaje, że 38% ufa AI tak jak doradcom lub bardziej. Northwestern Mutual (2025): tylko 15% preferuje AI do spersonalizowanego planu. Różne pytania (ogólne zaufanie vs wybór przy konkretnym planie) i różne grupy wiekowe.",
+  "Experian: odsetek pozytywnych doświadczeń wynosi 96% w komunikacie firmy i 98% (Gen Z i millenialsi) w relacji NBC. Rozbieżność w źródłach wtórnych."
+ ],
+ "open_questions_pl": [
+  "Jak często asystenci (ChatGPT, Perplexity, Gemini, Claude, Copilot) linkują do interaktywnych kalkulatorów i symulatorów, a nie do artykułów, w odpowiedziach na pytania decyzyjne? Jaki jest CTR z tych linków? Nie znaleziono danych, a wyszukiwanie przerwał limit.",
+  "Jaki udział wiadomości w 'How People Use ChatGPT' (2025) stanowią obliczenia i matematyka oraz decyzje finansowe? Nie ustalono z wyników wyszukiwania.",
+  "Co pokazuje Anthropic Economic Index (2025–2026) o udziale zadań finansowych i decyzyjnych w Claude.ai? Wyszukiwanie przerwał limit.",
+  "Czy Google AI Mode rozszerzył interaktywne wykresy poza akcje i fundusze (np. kredyty, energia, ubezpieczenia) do 10.2026? Status po 06.2025 jest niezweryfikowany.",
+  "Jaka jest rzeczywista jakość i powtarzalność wieloscenariuszowych modeli budowanych na żądanie przez ChatGPT (analiza danych, Canvas), Claude (artifacts), Gemini (Canvas) i Perplexity Labs dla problemu 'roof + solar + planned sale'? Potrzebny praktyczny test w kilku asystentach z porównaniem do referencyjnego silnika. Niemożliwy w tej sesji.",
+  "Ilościowe dane o prywatności: jaki odsetek Amerykanów nie chce podawać asystentom AI szczegółów finansowych (dochód, kredyt, wartość domu)? Nie znaleziono danych.",
+  "Aktualne (2026) polityki OpenAI, Anthropic, Google i Microsoftu dotyczące porad finansowych i podatkowych. W tej sesji niezweryfikowane.",
+  "Czy kanał 'app w ChatGPT' (Apps SDK) lub MCP dla niezależnego symulatora jest realny dla małego wydawcy i czy da się go monetyzować bez odsłon AdSense?",
+  "Czy natywne kalkulatory Google w SERP oraz funkcje zakupowe ChatGPT (Instant Checkout, shopping research) i Gemini w Chrome działają w 2026 tak, jak zakłada hipoteza? Niezweryfikowane w tej sesji.",
+  "Czy luka 'AI na wczesnym etapie, nie w kluczowych decyzjach' (Bank of America) przekłada się na gotowość do skorzystania z zewnętrznego symulatora, czy raczej z doradcy, agenta lub kredytodawcy?"
+ ],
+ "queries_run": [
+  "[standard] ChatGPT agent apps in ChatGPT Zillow Expedia 2025 2026",
+  "[standard] Claude artifacts interactive apps AI-powered artifacts 2025 2026",
+  "[standard] Google AI Mode interactive charts financial data stocks",
+  "[extended] LLM benchmark tax calculation accuracy study 2025",
+  "[standard] OpenAI \"How People Use ChatGPT\" practical guidance seeking information share of messages",
+  "[standard] survey Americans use ChatGPT for financial advice 2025 percent",
+  "[standard] Experian survey generative AI financial advice Gen Z millennials ChatGPT",
+  "[standard] homebuyers using ChatGPT AI to buy a home survey 2025 2026",
+  "[standard] Northwestern Mutual Planning Progress AI financial advice trust survey 2025",
+  "[extended] ChatGPT financial advice wrong mistakes survey regret acted on AI money advice",
+  "[NIE WYKONANE – limit wyszukiwań] NerdWallet Harris Poll 2026 Americans AI chatbot financial advice hurt 29%",
+  "[NIE WYKONANE – limit wyszukiwań] Pew Research 2025 share of Americans used ChatGPT",
+  "[NIE WYKONANE – limit wyszukiwań] Anthropic Economic Index 2026 consumer Claude.ai usage personal finance",
+  "[NIE WYKONANE – limit wyszukiwań] ChatGPT answers cite NerdWallet Bankrate calculator AI citations analysis",
+  "[NIE WYKONANE – limit wyszukiwań] Google search mortgage calculator built-in AI Overviews calculator traffic loss calculator websites"
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "id": "RENO-02",
+ "demand_evidence": [
+  {
+   "claim_pl": "Brak oficjalnego federalnego licznika wymian dachów. Analiza strony trzeciej oparta na American Housing Survey 2023 liczy 8,3 mln projektów dachowych w ciągu 2 lat w domach zamieszkanych przez właścicieli (cykl ok. 17 lat). Modelowo, z danych o wieku zasobu mieszkaniowego, wychodzi 3,3–5,8 mln wymian rocznie (scenariusz centralny ok. 4,3 mln). W tym samym zestawie wyników krążą też liczby wtórne: ok. 5 mln wymian rocznie (przypisywane NRCA) i ok. 7% domów jednorodzinnych rocznie, przy niejasnej metodologii i niepewnym przypisaniu do konkretnej strony.",
+   "url": "https://owlroofing.com/blog/how-many-roofs-are-replaced-each-year-in-the-us-reroofing-market-size/",
+   "kind": "estimate",
+   "measures_pl": "Liczba zdarzeń, czyli wymian dachu w roku: to górna granica populacji ludzi w momencie decyzji. To NIE jest miesięczny popyt na narzędzie ani wolumen zapytań. Tylko część tych osób ma jednocześnie ACV lub dopłatę i horyzont sprzedaży."
+  },
+  {
+   "claim_pl": "Raport Verisk 2026 U.S. Roof Report (dane za 2025): średni koszt wymiany dachu mieszkalnego to 17 631 USD, a naprawy 4 699 USD. To odpowiednio +33% i +25% wobec średniej z poprzednich 4 lat, przy spadku liczby szkód o ok. 20%. Udział niekatastrofalnych szkód wiatr/grad wzrósł z 17% do 25% wszystkich szkód mieszkaniowych w latach 2022–2024.",
+   "url": "https://www.insurancejournal.com/magazines/mag-features/2026/06/22/874418.htm",
+   "kind": "direct",
+   "measures_pl": "Parametry modelu (koszt wymiany i naprawy, rosnąca dotkliwość szkód) oraz trigger medialny. To dane o kosztach i szkodach, nie o popycie na narzędzie."
+  },
+  {
+   "claim_pl": "Według Verisk w 2025 r. w 16 stanach co najmniej 20% dachów było narażonych na silny grad (w 2024 r. w 12 stanach), z koncentracją w Central Plains. W stanach gradowych 57% domów ma dach nie starszy niż 9 lat, w stanach bez gradu 38%. To sugeruje szybszy cykl wymian tam, gdzie grad jest częsty.",
+   "url": "https://www.insurancebusinessmag.com/us/news/property/roof-claims-severity-hits-record-highs-even-as-storm-activity-falls-verisk-data-shows-577150.aspx",
+   "kind": "direct",
+   "measures_pl": "Ekspozycja geograficzna: gdzie oczekiwana strata gradowa realnie zmienia wynik. Uzasadnia regionalną zmienną ryzyka w MVP. Nie mierzy popytu."
+  },
+  {
+   "claim_pl": "Treści wydawców i dekarzy z 2026 r. zgodnie opisują schemat: ok. 15 lat to inspekcja lub certyfikacja dachu, ok. 20 lat to przejście z RCV na ACV albo nieodnowienie. Zmiana przychodzi często jako endorsement typu 'roof surfaces payment schedule' (tabela amortyzacji według wieku i materiału), a nie jako nieodnowienie. Krajowych statystyk nieodnowień nie znaleziono. Pojawiła się liczba '70% dużych ubezpieczycieli stosuje próg 20 lat', ale bez źródła, więc jej nie używamy.",
+   "url": "https://roofvista.com/resources/guides/roof-insurance-canceled-age-2026",
+   "kind": "indirect",
+   "measures_pl": "Potwierdza, że mechanizm z briefu (dopłata, ACV, nieodnowienie według wieku dachu) jest powszechnie opisywaną praktyką. Częściowo podnosi hipotezę z briefu do poziomu 'opisywane w treściach', ale skala jest nieznana. Szczegóły tego samego mechanizmu: https://theroofingbrief.com/insurance-non-renewal-roof-age/"
+  },
+  {
+   "claim_pl": "Floryda: według jednego ze źródeł (przypisanie do konkretnego wyniku niepewne) ubezpieczyciel nie może odmówić wystawienia ani odnowienia polisy wyłącznie z powodu wieku dachu poniżej 15 lat (FS 627.7011(5)). Przy dachu starszym certyfikat inspektora potwierdzający co najmniej 5 lat pozostałej żywotności ma blokować odmowę. Wymagane wypowiedzenie przy nieodnowieniu: 120 dni. Wspomniany projekt HB 815 (2026) jest niezweryfikowany.",
+   "url": "https://roofing-it.com/florida-roof-age-rules-by-insurer",
+   "kind": "indirect",
+   "measures_pl": "Reguła stanowa, która zmienia warianty dla FL: certyfikat żywotności to tańsza alternatywa dla wymiany. Wymaga weryfikacji w tekście statutu przed użyciem w narzędziu."
+  },
+  {
+   "claim_pl": "Prasa branżowa pisze o nieodnowieniach na Florydzie wywołanych błędnymi danymi o wieku dachu w bazach ubezpieczycieli. Lokalni dekarze publikują w 2026 r. strony 'Does roof age really matter in 2026'.",
+   "url": "https://www.liveinsurancenews.com/florida-home-insurance-roof-age/8576822/",
+   "kind": "indirect",
+   "measures_pl": "Wskazuje trigger (list o nieodnowieniu lub dopłacie) i fakt, że wydawcy celują w to zapytanie. Wolumenu zapytań nie mierzy."
+  },
+  {
+   "claim_pl": "Gęste pokrycie wydawców tematu 'replace roof before selling / credit / sell as-is' (Clever, iBuyer 2026, lokalni agenci i dekarze, np. Jacksonville 2026). Jedno źródło szacuje odzysk z nowego dachu przy sprzedaży na ok. 60–70% kosztu. Inne twierdzi, że w wielu regionach ubezpieczyciel kupującego odmawia ochrony albo żąda wymiany w ciągu 30 dni od zamknięcia (pojedyncze źródło, traktować jako hipotezę).",
+   "url": "https://listwithclever.com/should-i-replace-my-roof-before-selling/",
+   "kind": "indirect",
+   "measures_pl": "Wydawcy inwestują w ten temat, co pośrednio sygnalizuje popyt wyszukiwawczy. Dostarcza też parametrów (zakres odzysku, ryzyko ubezpieczalności kupującego). Wolumen niezmierzony. Przykład lokalny: https://www.nexgenfl.com/blog/selling-a-house-with-an-old-roof-jacksonville"
+  },
+  {
+   "claim_pl": "Gałąź PV: koszt demontażu i ponownego montażu paneli (detach & reset, D&R) to według przewodnika kosztowego 2 000–6 000 USD (2026). Inne źródło podaje 7 000–17 000 USD dla 20 paneli, a dekarz z San Diego 85–175 USD za moduł (1 800–3 600 USD za 18–24 panele). Według podsumowania wyszukiwania wytyczne DOE mówią: jeśli dach będzie wymagał wymiany w trakcie życia instalacji PV, wymień go najpierw. GAF podobno zaleca gonty pod panelami młodsze niż 5 lat. Niektóre gwarancje paneli wyłączają moduły zdemontowane i ponownie zamontowane.",
+   "url": "https://www.fixr.com/costs/remove-solar-panels-to-replace-roof",
+   "kind": "indirect",
+   "measures_pl": "Parametry gałęzi PV i ryzyko pominięte przez AI (gwarancja). Rozrzut źródeł uzasadnia analizę wrażliwości na koszt D&R. Popytu nie mierzy."
+  },
+  {
+   "claim_pl": "Istnieje komercyjny rynek leadów 'solar detach and reset' (przewodnik o pozyskiwaniu takich leadów i ich kosztach, 2026). Wpis producenta pokryć metalowych ma tytuł '23% of Homeowners Plan to Reroof in 2026'. Metodologia i próba nieznane, źródło stronnicze.",
+   "url": "https://scoutdata.com/guides/solar-detach-and-reset-leads",
+   "kind": "indirect",
+   "measures_pl": "Sygnał monetyzacji: wykonawcy płacą za leady dachowe i D&R, co przemawia za wysokim CPC w AdSense (hipoteza, CPC niezweryfikowane). Ankieta '23%' to deklaracja intencji, nie zachowanie: https://blog.mcelroymetal.com/metal-roofing-contractors/23-of-homeowners-plan-to-reroof-in-2026-are-you-positioned-to-win-that-business"
+  },
+  {
+   "claim_pl": "Hipoteza: istnieje stały, wielomiesięczny popyt wyszukiwawczy na frazy typu 'roof age insurance', 'insurance actual cash value roof', 'replace roof before selling', 'replace roof before solar'. W tej sesji nie sprawdzono wolumenów (brak narzędzia słów kluczowych) ani Google Trends.",
+   "url": "https://kingdomroofinginc.com/2026/06/01/roof-age-2026-roofing-contractors/",
+   "kind": "hypothesis",
+   "measures_pl": "Do weryfikacji przed budową: Keyword Planner lub Ahrefs dla 20–30 fraz oraz Google Trends (sezonowość wiosna/lato i huragany)."
+  }
+ ],
+ "forum_question_examples": [
+  {
+   "paraphrase_en": "[Contractor Q&A page title, not a forum post] My roof is 18 years old - should I replace it now or wait?",
+   "url": "https://www.a-rite.com/knowledge-center/my-roof-is-18-years-old-should-i-replace-it-now-or-wait"
+  },
+  {
+   "paraphrase_en": "[Publisher guide title, not a forum post] My insurer canceled/non-renewed my policy because of roof age in 2026 - what are my options?",
+   "url": "https://roofvista.com/resources/guides/roof-insurance-canceled-age-2026"
+  },
+  {
+   "paraphrase_en": "[Q&A 'answers' page, not a forum post] What roof age actually triggers a homeowners insurance non-renewal?",
+   "url": "https://roofingtechpro.com/answers/roof-age-nonrenewal"
+  },
+  {
+   "paraphrase_en": "[Contractor blog title, not a forum post] Selling a house with an old roof - should I replace it, give the buyer a credit, or sell as-is?",
+   "url": "https://www.nexgenfl.com/blog/selling-a-house-with-an-old-roof-jacksonville"
+  },
+  {
+   "paraphrase_en": "[iBuyer blog title, not a forum post] Can I even sell a house with a 20-year-old roof in 2026?",
+   "url": "https://ibuyer.com/blog/selling-a-house-with-a-20-year-old-roof/"
+  },
+  {
+   "paraphrase_en": "[Contractor blog title, not a forum post] How old can a roof be before insurance won't cover it anymore?",
+   "url": "https://alanconstructionpgh.com/how-old-can-a-roof-be-before-insurance-wont-cover-it/"
+  },
+  {
+   "paraphrase_en": "[Insurance publisher guide, not a forum post] How do I get homeowners insurance when my roof is old or in bad shape?",
+   "url": "https://www.policygenius.com/homeowners-insurance/how-to-get-homeowners-insurance-with-a-bad-roof/"
+  },
+  {
+   "paraphrase_en": "[Solar cost guide title, not a forum post] I need a new roof but I already have solar panels - what will detach-and-reset cost and what should I check first?",
+   "url": "https://www.integratesun.com/post/replacing-your-roof-with-solar-panels-read-this-first"
+  }
+ ],
+ "seasonality_or_triggers_pl": "Triggery, czyli moment decyzji. Potwierdzone w search-summary, chyba że oznaczono inaczej:\n(1) List od ubezpieczyciela przy odnowieniu polisy: endorsement 'roof surfaces payment schedule', przejście na ACV, dopłata, żądanie inspekcji lub nieodnowienie. Rozkłada się na cały rok według dat rocznic polis. Na Florydzie podawane jest 120 dni wypowiedzenia (do weryfikacji w statucie).\n(2) Przekroczenie progów wieku dachu, ok. 15 i ok. 20 lat (praktyka opisywana w treściach, brak danych o skali).\n(3) Sezon gradowy w Central Plains (16 stanów z co najmniej 20% dachów narażonych w 2025 wg Verisk) oraz sezon huraganowy na wybrzeżu Atlantyku i Zatoki Meksykańskiej. Konkretne miesiące szczytu (zwykle wiosna i lato dla gradu, czerwiec–listopad dla huraganów) to wiedza ogólna, w tej sesji niezweryfikowana. Po burzy pojawia się też trigger 'czy zgłaszać szkodę na starym dachu z ACV'.\n(4) Przygotowanie do sprzedaży: inspekcja przed wystawieniem, inspekcja kupującego, wymogi ubezpieczyciela i kredytodawcy kupującego. Wiosenny szczyt wystawień to hipoteza, bez danych w tej sesji.\n(5) Oferta lub instalacja PV (sprzedawca solarny pyta o wiek dachu) i potrzeba D&R przy istniejącym PV.\n(6) Newsy o inflacji kosztów dachów (Verisk: +33% kosztu wymiany w 2025).\nSezonowości wyszukiwań (Google Trends) w tej sesji NIE sprawdzono.",
+ "prompts_no_tool_request": [
+  "My roof is 18 years old, my insurer just switched it to actual cash value at renewal, and we'll probably sell in about 3 years. Should I replace it now, patch it, or just wait?",
+  "We live outside Dallas. Our shingle roof is 17 years old and the renewal letter says roof claims will now be paid on a payment schedule, plus we have a 2% wind/hail deductible on a $410k dwelling limit. A roofer quoted $16,500. Is it smarter to replace now or ride it out a couple more years?",
+  "Got a non-renewal notice from my Florida insurer because my roof is 16 years old. An inspector told me it has maybe 4-5 years left. Replacement quote is $24k and we're planning to move in 2028. What would you do in my shoes?",
+  "I want solar panels on my house in Ohio but the roof is 22 years old and we'll probably sell in 5 years. Do I need to redo the roof first, or can I put panels on it and deal with it later?"
+ ],
+ "prompts_calculator_request": [
+  "Build me a calculator that compares replacing my roof now vs. repairing it and waiting 3 years, including my insurance switching to actual cash value, a $5,000 hail deductible, and selling the house in 2029.",
+  "Is there a tool where I can plug in my roof age, replacement quote, whether my policy pays RCV or ACV, my wind/hail deductible, and when I plan to sell, and it shows the expected total cost of each option?",
+  "Make me a spreadsheet model: roof replacement for $21,000 financed on a HELOC at 8.5% vs. paying cash vs. waiting 4 years with about $800/year in repairs. I'm in Oklahoma, so factor in hail risk.",
+  "Can you give me an interactive break-even calculator that tells me at what point replacing my roof before listing beats just giving the buyer a $12,000 credit at closing?"
+ ],
+ "prompts_scenario_comparison": [
+  "Compare these over 5 years: (A) replace now for $18k cash, (B) $1,200 repair now and replace in 2029, (C) do nothing and sell as-is in 2028 with roughly a $10k closing credit. My roof is on ACV and I have a 1% wind/hail deductible on $350k in North Carolina. Which comes out cheapest and which is riskiest?",
+  "Which is cheaper over 4 years in Minnesota: replacing my 19-year-old roof now with a 0% promo loan for 18 months, or waiting until it fails and hoping a hail claim pays out? Policy is ACV on the roof with a $2,500 deductible.",
+  "Roof is 15 years old and there's an 8 kW solar system on it. Option 1: replace roof plus detach/reset panels now ($27k + $4k). Option 2: wait 5 years and do it right before we sell. Option 3: sell in 3 years and let the buyer deal with it. Compare total cost and risk for each.",
+  "My Alabama insurer offers a premium discount for a FORTIFIED roof. Compare replacing now with impact-resistant shingles vs. standard shingles in 3 years vs. not replacing at all, assuming we sell in 6 years and premiums keep rising."
+ ],
+ "ai_self_solve_assessment_pl": "Ryzyko samodzielnego rozwiązania przez asystenta AI: średnio-wysokie dla odpowiedzi jakościowej i jednego okresu, średnie dla pełnego modelu wielookresowego z ryzykiem.\n\nDowód z tej sesji: silnik podsumowań wyszukiwarki sam, bez pytania o to, wygenerował sensowną rekomendację dla 18-letniego dachu ('performing roof may not need replacement; inspect, certify, consider credit'). Asystenci mają więc gotową narrację, wzór ACV (koszt × udział z harmonogramu − udział własny), regułę odzysku ok. 60–70% i regułę 'wymień dach przed PV'.\n\nChatGPT Intelligent UI (wg briefu od 2026-10-07, w tej sesji niezweryfikowane) potrafi wyrenderować formularz z 5–8 polami i policzyć wypłatę ACV, ratę HELOC i prosty break-even 'wymiana vs kredyt dla kupującego'. Podobnie Google AI Mode z generatywnym UI (wg briefu od 2026-08-19). Dla promptów z sekcji 'calculator request' trzeba spodziewać się, że asystent zbuduje narzędzie ad hoc.\n\nSłabości, czyli nasza przewaga:\n(a) model probabilistyczny: oczekiwana strata = p(szkoda gradowa lub wiatrowa w roku) × luka ACV/RCV, z regionalnym p i rosnącym udziałem własnym;\n(b) wielookresowość: harmonogram amortyzacji rok po roku, inflacja kosztów dachu (+33% w 2025 wg Verisk), dyskontowanie, naprawy rosnące z wiekiem;\n(c) wrażliwość i break-even (rok sprzedaży, % odzysku, koszt D&R, p(grad)), których AI nie robi, jeśli użytkownik o nie nie poprosi;\n(d) spójność i źródła domyślnych wartości: AI wymyśla parametry, które mogą zmieniać się między sesjami, a kalkulator ad hoc nie ma testów;\n(e) zapis i udostępnienie scenariusza, np. wysłanie partnerowi lub agentowi.\n\nRyzyko dystrybucyjne: zapytania jakościowe ('should I…') zostaną w dużej mierze zaspokojone w AI bez kliknięcia. Szansa leży w byciu cytowanym źródłem: transparentne tabele parametrów (przykładowe harmonogramy ACV, poziomy ryzyka gradu według stanów, zakresy D&R) i przykłady liczbowe, które AI chętnie przytacza z linkiem.",
+ "missing_dependencies_ai_likely_ignores_pl": "Zależności, które asystent AI w typowej odpowiedzi prawdopodobnie pominie:\n\n1. Udział własny procentowy od sumy ubezpieczenia Coverage A (np. 2% od 400k = 8 000 USD) zamiast kwotowego. Przy ACV wypłata może spaść do zera.\n2. Kształt harmonogramu amortyzacji ('roof surfaces payment schedule') zależny od materiału i wieku, nie liniowy 'wiek/30'.\n3. Ryzyko nieodnowienia i przejścia do ubezpieczyciela ostatniej szansy (FAIR plan, Citizens FL, TWIA TX) ze skokiem składki. To koszt czekania niezależny od szkody.\n4. Zgłoszenie szkody na starym dachu może podnieść składkę lub wywołać nieodnowienie, więc 'samoubezpieczenie' bywa racjonalne.\n5. Ubezpieczalność i wymogi kredytowe kupującego: FL 4-point lub certyfikat żywotności, możliwe żądanie wymiany w ciągu 30 dni od zamknięcia (pojedyncze źródło). To wpływa na cenę, czas sprzedaży i ryzyko zerwania transakcji, a nie tylko na kwotę kredytu dla kupującego.\n6. Floryda: certyfikat inspektora (co najmniej 5 lat żywotności) jako tańszy wariant niż wymiana (do weryfikacji w FS 627.7011).\n7. Odzysk wartości przy sprzedaży jest tylko częściowy (ok. 60–70%, jedno źródło), a przy dłuższym horyzoncie nowy dach też się starzeje i odzysk maleje.\n8. Inflacja kosztów robót (+33% w 2025 wg Verisk) kontra koszt kapitału. Zmienne oprocentowanie HELOC i ryzyko jego zmiany.\n9. Ordinance or law coverage, koszty wymogów kodeksu budowlanego przy wymianie, przepisy o dopasowaniu (matching) przy częściowej naprawie.\n10. Rabaty na składce za nowy dach lub dach odporny na uderzenia (FORTIFIED, Class 4, wind mitigation credit na FL) jako przepływ dodatni w wariancie 'wymiana teraz'.\n11. PV: podwójny koszt D&R (instalacja PV teraz, wymiana dachu później), ryzyko utraty gwarancji paneli po demontażu, kto płaci za D&R przy umowie leasingu lub PPA, wpływ leasingu PV na sprzedaż domu.\n12. Podatki: wymiana dachu jako ulepszenie kapitałowe zwiększa podstawę kosztową (istotne przy zysku powyżej wyłączenia 250k/500k). Status federalnej ulgi na PV (25D) po zmianach z 2025 r. trzeba zweryfikować. Sam dach nie kwalifikuje się do ulgi, poza gontami solarnymi.\n13. Niepewność pozostałej żywotności: rozkład, a nie liczba. Do tego wariant roof-over (druga warstwa) tam, gdzie kodeks pozwala.",
+ "mvp_scope_pl": "MVP, czyli minimalna wersja dająca wartość: jedna strona symulatora, 5 wariantów, horyzont 1–10 lat.\n\nWEJŚCIA:\n- stan (poziom ryzyka grad/wiatr: low/med/high z tabeli statycznej, z możliwością nadpisania rocznego p szkody);\n- wiek dachu i materiał;\n- szacowana pozostała żywotność jako zakres min–max;\n- wycena wymiany oraz naprawy z rocznym kosztem utrzymania;\n- ubezpieczenie: RCV / ACV / harmonogram (prosta edytowalna tabela % wypłaty według wieku), udział własny wiatr/grad kwotowy lub % od Coverage A, obecna składka, dopłata za wiek, rabat za nowy dach, p(nieodnowienie) z kosztem alternatywnej polisy;\n- horyzont sprzedaży, % odzysku wartości nowego dachu, oczekiwany kredyt lub obniżka ceny przy starym dachu;\n- finansowanie: gotówka / HELOC / kredyt (oprocentowanie, okres);\n- stopa dyskontowa, inflacja kosztów dachu;\n- przełącznik PV: istniejące PV (koszt D&R doliczany do każdej wymiany) lub planowane PV (ostrzeżenie, gdy pozostała żywotność dachu jest krótsza niż życie instalacji; koszt dodatkowego D&R).\n\nWARIANTY:\n- A: wymiana teraz;\n- B: naprawa i wymiana za N lat;\n- C: czekanie i samoubezpieczenie (wymiana przy awarii lub szkodzie, z wypłatą ACV);\n- D: wymiana tuż przed wystawieniem;\n- E: sprzedaż as-is z kredytem dla kupującego.\n\nWYJŚCIA:\n- oczekiwany koszt netto (NPV) każdego wariantu z rozbiciem: wymiana, naprawy, składki, oczekiwana luka ubezpieczeniowa, finansowanie, odzysk przy sprzedaży lub kredyt, D&R;\n- tabela przepływów rok po roku;\n- break-even: rok sprzedaży oraz kwota kredytu, przy których A i E się zrównują;\n- wykres tornado dla 5 kluczowych parametrów;\n- panel założeń ze źródłami i disclaimer 'nie jest poradą ubezpieczeniową ani prawną';\n- link do udostępnienia scenariusza (stan w URL).\n\nStrony treściowe wspierające SEO i cytowania przez AI: przykłady liczbowe (golden cases) i tabela parametrów.",
+ "deferred_features_pl": "Świadomie odłożone:\n(1) Ryzyko gradu i wiatru na poziomie ZIP lub hrabstwa z danych NOAA SPC / FEMA National Risk Index. MVP używa poziomów stanowych.\n(2) Biblioteka rzeczywistych harmonogramów amortyzacji konkretnych ubezpieczycieli (np. z filingów SERFF) i reguł stanowych poza FL.\n(3) Monte Carlo pozostałej żywotności i zdarzeń burzowych. MVP liczy wartość oczekiwaną plus tornado.\n(4) Pełna ekonomika PV: produkcja, net metering, ulgi, leasing i PPA przy sprzedaży domu. MVP ma tylko D&R i sekwencjonowanie.\n(5) Moduł podatkowy (podstawa kosztowa, zysk kapitałowy).\n(6) Decyzja 'zgłaszać szkodę czy nie' z wpływem na składkę.\n(7) Wymogi kredytodawców FHA/VA/konwencjonalnych dotyczące dachu przy zakupie.\n(8) Roof-over, metal, dachówka jako osobne ścieżki materiałowe z innymi harmonogramami.\n(9) Konta, zapis wielu domów, eksport PDF dla agenta lub partnera.\n(10) Lead-gen do dekarzy lub ubezpieczycieli. Model AdSense-first, ewentualny lead-gen dopiero po walidacji zgodności.",
+ "data_sources_and_tests_pl": "ŹRÓDŁA DANYCH. Z wyników tej sesji, plus źródła publiczne, które trzeba sprawdzić bezpośrednio:\n- Verisk 2026 U.S. Roof Report: średni koszt wymiany 17 631 USD i naprawy 4 699 USD (2025), ekspozycja gradowa według stanów (insurancejournal.com, insurancebusinessmag.com, verisk.com PDF);\n- przewodniki D&R: Fixr 2 000–6 000 USD, dekarz z San Diego 85–175 USD za moduł, wytyczne DOE o sekwencji dach–PV;\n- reguły FL: FS 627.7011(5), do weryfikacji w tekście statutu;\n- zakres odzysku 60–70% (pojedyncze źródło wydawcy). Do weryfikacji z raportem Remodeling Cost vs Value (niesprawdzony w tej sesji);\n- do pozyskania: FEMA National Risk Index (hail, strong wind, EAL według hrabstw), NOAA SPC / Storm Events (częstość gradu), przykładowe endorsementy 'roof surfaces payment schedule' z filingów stanowych, stawki HELOC (Fed/Bankrate).\n\nTESTY OBLICZEŃ:\n(a) Narzędzia referencyjne: kalkulatory kredytowe (Calculator.net/Bankrate) dla PMT, Excel NPV/PMT, kalkulatory naprawa vs wymiana z audytu (SubcontractorHub, Roof Decision Guide) do porównania kierunkowego, nie wyniku.\n(b) Golden cases, policzone ręcznie lub skryptem:\n- GC1, wypłata ACV: koszt 20 000, harmonogram 35% w wieku 18 lat, udział własny 2 000. Wypłata 5 000, koszt własny 15 000. Przy RCV wypłata 18 000, koszt własny 2 000.\n- GC2, udział procentowy: Coverage A 400 000 × 2% = 8 000. Dach 18 000 przy 50% ACV daje 9 000 − 8 000 = 1 000 wypłaty.\n- GC3, oczekiwana luka: p = 0,08 rocznie × luka 13 000 = 1 040 USD rocznie.\n- GC4, HELOC: 18 000 przy 8,5% na 120 miesięcy daje ratę 223,17 USD i odsetki łącznie 8 780,91 USD.\n- GC5, break-even odzysku: wymiana 18 000 kontra kredyt 12 000. Wymiana i kredyt zrównują się przy odzysku 33,3%. Przy odzysku 60% koszt netto wymiany to 7 200 < 12 000.\n- GC6, opóźnienie: 18 000 × 1,04³ = 20 247,55, zdyskontowane przy 5% daje 17 490,60, czyli zysk z opóźnienia ok. 509 USD przed ryzykiem i naprawami.\n- GC7, PV: instalacja PV teraz i wymiana dachu za 4 lata dodaje jeden D&R (np. 4 000) wobec sekwencji 'dach najpierw'.\n(c) Testy własności: monotoniczność (wyższe p(grad) nigdy nie obniża kosztu czekania; wyższy % odzysku nigdy nie pogarsza wariantu A), przypadki brzegowe (horyzont 0 lat, p = 0, RCV bez dopłat, gdzie czekanie powinno wygrać przy długiej żywotności), spójność sum w rozbiciu.\n(d) Porównanie z odpowiedziami ChatGPT, Gemini i Perplexity na prompty z tej karty (test manualny w przyszłości, bez wyników w tej sesji).",
+ "expert_review_pl": "Wymagany przegląd ekspercki. Wszystkie godziny to SZACUNEK.\n(1) Licencjonowany agent lub underwriter P&C znający endorsementy dotyczące wieku dachu i udziały procentowe wiatr/grad w co najmniej 2–3 stanach (np. TX, FL, CO lub MN): weryfikacja logiki ACV, harmonogramów, nieodnowień, FAIR planów i rabatów. Ok. 6–10 h.\n(2) Licencjonowany dekarz lub inspektor dachów (np. z certyfikacją HAAG): zakresy pozostałej żywotności, koszty napraw rosnące z wiekiem, roof-over, D&R. Ok. 4–6 h.\n(3) Agent nieruchomości lub rzeczoznawca: odzysk wartości, typowe kredyty dla kupującego, ryzyko ubezpieczalności kupującego, praktyka FL 4-point. Ok. 3–5 h.\n(4) CFP lub analityk finansowy: NPV, finansowanie HELOC, dyskontowanie, sensowność wartości domyślnych. Ok. 3–4 h.\n(5) Instalator PV: sekwencjonowanie, D&R, gwarancje, leasing i PPA. Ok. 2–3 h.\n(6) Przegląd prawny disclaimerów (brak porady ubezpieczeniowej, prawnej i podatkowej) oraz zgodności treści z regulacjami stanowymi. Ok. 2 h.\n\nRazem ok. 20–30 h (szacunek). Przegląd powtarzać przy zmianach prawa stanowego (FL) i corocznie przy aktualizacji kosztów.",
+ "queries_run": [
+  "reddit roof 18 years old insurance actual cash value only replace now or wait selling house [extended; no Reddit threads returned]",
+  "homeowners insurance nonrenewal roof age 2026 actual cash value roof payment schedule surcharge states statistics [extended]",
+  "how many US homeowners replace roof each year roofing projects American Housing Survey JCHS 2025 reroofing [extended]",
+  "hail claims statistics 2025 homeowners roof replacement season spring storm demand NICB Verisk severe convective storm losses [standard]",
+  "old roof insurance company actual cash value or non-renew replace roof before selling credit buyer [extended, allowed_domains=reddit.com; ERROR 400: reddit.com not accessible - no results]",
+  "calculator replace roof before solar panels detach reset cost planning to sell house in few years roof age remaining life [extended]"
+ ]
+}

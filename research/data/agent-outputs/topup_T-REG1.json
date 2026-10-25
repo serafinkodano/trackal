@@ -1,0 +1,587 @@
+{
+ "topic": "Przepisy USA 2025-2026 (stan na koniec października 2026), część 1: OBBBA (car loan interest, SALT, senior deduction, standard deduction, bonus depreciation/179, estate tax), kredyty studenckie (RAP, SAVE, limity, Parent PLUS, Grad PLUS), HSA/529/Trump accounts, ACA enhanced PTC i składki, Social Security COLA, Medicare Part B/IRMAA",
+ "summary_pl": "Wszystkie dowody pochodzą z podsumowań wyników wyszukiwania (search-summary). Żadnej strony nie otwierałem, bo WebFetch jest zablokowany. Wykonałem 20 z 20 dozwolonych wyszukiwań. Najważniejsze ustalenia na 2026-10-25:\n(1) OBBBA (P.L. 119-21). IRS w nowych materiałach nazywa ją „Working Families Tax Cuts”. Wprowadziła kilka ulg czasowych z datami wygaśnięcia. Car loan interest: do $10,000 rocznie, lata 2025-2028, tylko nowe auta z final assembly w USA, phase-out od MAGI $100k/$200k. Senior deduction: $6,000 na osobę 65+ w latach 2025-2028, phase-out od $75k/$150k. Limit SALT: $40,000 w 2025, $40,400 w 2026, potem +1% rocznie do 2029, a w 2030 powrót do $10,000. Limit maleje o 30% nadwyżki ponad ok. $500k MAGI, ale nie spada poniżej $10k. Standard deduction 2026: $16,100 / $32,200 / $24,150 (HoH). 100% bonus depreciation jest stała dla mienia nabytego po 19.01.2025. Section 179: limit $2.5M, próg phase-out $4M. Zwolnienie z estate tax: $15M, stałe i indeksowane.\n(2) Oficjalnych kwot IRS na 2027 nie znalazłem. Projekcje mówią o standard deduction ok. $16,600 / $33,200 i estate exclusion ok. $15.48M. IRS opublikował już Rev. Proc. 2026-26: applicable percentage dla ACA na 2027 i required contribution 10.22%.\n(3) Kredyty studenckie. RAP ruszył 1.07.2026. SAVE zakończono: jedno źródło wtórne podaje wyrok z 10.03.2026, a ED nazywa SAVE „unlawful”. Dla nowych pożyczek Grad PLUS wycofano od 1.07.2026. Nowe limity: $20,500 rocznie / $100k łącznie (graduate), $50k / $200k (professional), lifetime $257,500. Parent PLUS: $20k rocznie i $65k łącznie na dziecko. Nowe Parent PLUS mają tylko Tiered Standard, bez IDR i PSLF. PAYE i ICR wygasają 1.07.2028.\n(4) HSA (Notice 2026-5). Telehealth bez franszyzy na stałe. Plany bronze i catastrophic są HSA-compatible od 1.01.2026, także poza giełdą. Uwzględniono też direct primary care. 529: limit K-12 $20k od 2026, szerszy katalog wydatków K-12 i programy credentialing. Trump accounts: aplikacja od 28.05.2026, wpłaty od 4.07.2026, pilotażowe $1,000 dla dzieci urodzonych 2025-2028, limit $5,000 rocznie. Faktyczne wykonanie wpłat z 4.07 jest niezweryfikowane.\n(5) ACA. Enhanced PTC wygasły 31.12.2025. Izba przyjęła 3-letnie przedłużenie 8.01.2026 (230-196). W Senacie S.3385 nie uzyskał 60 głosów, a kompromis „CARE Act” był wciąż negocjowany. Według najnowszego znalezionego źródła (ok. 3 tygodnie temu) przedłużenia nie uchwalono. Klif 400% FPL działa w 2026 i 2027. Benchmark premium 2026 wzrósł średnio o 26% (KFF). Składki płacone z własnej kieszeni wzrosły według źródeł wtórnych średnio o ok. 58%. Wstępne wnioski taryfowe na 2027 to mediana +14-15%. Liczba plan selections 2026 spadła o ok. 5% (ok. 23,0 mln wobec 24,2 mln).\n(6) SSA i Medicare. COLA na 2026 wyniosła 2.8%. COLA na 2027 to 3.6%, ogłoszona 14.10.2026 (SSA). Medicare Part B 2026: składka $202.90, deductible $283. Bazowy próg IRMAA to $109k / $218k (MAGI z 2024), najwyższa składka $689.90. Składka Part B na 2027 będzie znana pod koniec listopada 2026.\nWnioski dla projektu. Wiele decyzji ma teraz twarde daty graniczne (2026, 2028, 2029, 2030) i progi z klifami: SALT torpedo, phase-out senior deduction, klif 400% FPL ACA, progi IRMAA, terminy dla Parent PLUS. To dobry materiał na symulatory decyzji. Hipoteza / niezweryfikowane: popyt jest. Wymaga to jednak rejestru parametrów z datami obowiązywania i źródłami. Potrzebny jest też stały cykl aktualizacji: październik (IRS Rev. Proc., SSA COLA), listopad (CMS Part B/IRMAA), lato (wnioski taryfowe ACA), 1 lipca (rok akademicki/FSA). Dochodzi ryzyko legislacyjne (ACA) i ryzyko YMYL. Utrzymanie tego da się zautomatyzować tylko częściowo. n8n może monitorować źródła, ale zmianę parametrów musi zatwierdzić człowiek.",
+ "findings": [
+  {
+   "question": "a) OBBBA car loan interest deduction: limity, kwalifikujące się pojazdy, lata",
+   "claim_pl": "Odliczenie odsetek od kredytu na nowy pojazd do użytku osobistego obowiązuje w latach 2025-2028. Limit wynosi $10,000 rocznie (Sec. 70203). Kredyt musi być udzielony po 31.12.2024, a pojazd musi być nowy, z original use u podatnika. Leasing i auta używane się nie kwalifikują. Kwalifikują się: car, minivan, van, SUV, pickup, motocykl, o GVWR poniżej 14,000 lbs, z final assembly w USA. Phase-out zaczyna się od MAGI $100k (single) / $200k (joint). Odliczenie przysługuje także osobom, które nie itemizują, i rozlicza się je na nowym Schedule 1-A. Analitycy cytowani przez CBT News szacują realną korzyść w pierwszym roku na kilkaset dolarów. Źródło: search-summary.",
+   "evidence_type": "direct",
+   "numbers": "cap $10,000/rok; lata 2025-2028; GVWR <14,000 lbs; phase-out MAGI >$100,000 / >$200,000 MFJ; loan originated po 2024-12-31",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/newsroom/one-big-beautiful-bill-provisions-individuals-and-workers",
+     "title": "Working Families Tax Cuts (IRS – provisions for individuals and workers)",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.irs.gov/newsroom/schedule-1-a-additional-deductions-what-to-know-about-the-new-form",
+     "title": "Schedule 1-A, Additional Deductions: What to know about the new form",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.cbtnews.com/new-vehicle-buyers-could-see-modest-tax-savings-under-irs-rule/",
+     "title": "new vehicle buyers could see modest tax savings under irs rule",
+     "publisher": "CBT News"
+    },
+    {
+     "url": "https://www.fox5ny.com/news/who-qualifies-10k-car-loan-tax-deduction",
+     "title": "The $10,000 car loan tax deduction: Here's who qualifies and how to claim it",
+     "publisher": "FOX 5 NY"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Wspiera symulator „new US-assembled car on loan vs used vs lease vs cash” z oknem czasowym do 2028. Ulga zmniejsza dochód do opodatkowania, a nie podatek, więc symulator musi uczciwie pokazać, że zysk to zwykle kilkaset dolarów, a nie $10k. To dobry przykład wartości symulatora wobec nagłówków medialnych. Weryfikacja final assembly (VIN) to zewnętrzna zależność danych. Treść ma datę ważności: koniec 2028."
+  },
+  {
+   "question": "b) Enhanced senior deduction $6,000",
+   "claim_pl": "Osoba w wieku 65+ ma dodatkowe odliczenie $6,000 za lata 2025-2028 (Sec. 70103), ponad dotychczasowy additional standard deduction dla seniorów. Przysługuje na każdą uprawnioną osobę, więc para, w której oboje mają 65+, odlicza $12,000. Można je wziąć niezależnie od tego, czy podatnik itemizuje. Phase-out zaczyna się od MAGI $75,000 (single) / $150,000 (joint). Ten próg podaje strona eitc.irs.gov i źródła wtórne. W podsumowaniu głównej strony IRS dla osób fizycznych tego progu nie było. Stawki phase-out nie zweryfikowałem.",
+   "evidence_type": "direct",
+   "numbers": "$6,000 na osobę; $12,000 para; 2025-2028; phase-out od $75,000 / $150,000 MAGI; stawka phase-out niezweryfikowana",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors",
+     "title": "Working Families Tax Cuts: Tax deductions for working Americans and seniors",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.eitc.irs.gov/newsroom/one-big-beautiful-bill-provisions",
+     "title": "One, Big, Beautiful Bill provisions",
+     "publisher": "IRS (eitc.irs.gov)"
+    },
+    {
+     "url": "https://www.franklintempleton.com/articles-us/retirement/navigating-the-new-tax-law-tips-for-maximizing-new-deductions",
+     "title": "Navigating the New Tax Law: Tips for Maximizing New Deductions",
+     "publisher": "Franklin Templeton"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Phase-out między $75k a $150k MAGI wchodzi w interakcję z Roth conversion, wypłatami z IRA, momentem przejścia na Social Security i progami IRMAA. Klasyczny symulator emerytalny („Roth conversion now vs later”, „claim SS at 62/67/70”) musi to modelować do 2028. Pojawia się efekt klifu czasowego, bo w 2029 ulga znika."
+  },
+  {
+   "question": "b) SALT cap 2025-2029 i phase-out",
+   "claim_pl": "Limit odliczenia SALT wynosi $40,000 od 2025 i $40,400 w 2026. Rośnie o 1% rocznie do 2029, a w 2030 wraca do $10,000 ($5,000 dla MFS). Phase-down zaczyna się od $500,000 MAGI. Próg rośnie o 1% rocznie, ale dokładnej kwoty na 2026 (ok. $505k) nie zweryfikowałem. Limit maleje o 30% nadwyżki ponad próg, ale nie poniżej $10,000, który osiąga się przy ok. $600k MAGI. W przedziale ok. $500-600k powstaje „SALT torpedo”: efektywna krańcowa stawka federalna sięga w niektórych przypadkach ok. 45.5%. Od 2026 podatnicy w progu 37% odliczają itemized deductions o wartości odpowiadającej tylko 35%.",
+   "evidence_type": "indirect",
+   "numbers": "$40,000 (2025), $40,400 (2026), +1%/rok do 2029, $10,000 od 2030; próg $500,000 MAGI (+1%/rok); redukcja 30%; floor $10,000; ~45.5% efektywnej stawki w strefie torpedo",
+   "sources": [
+    {
+     "url": "https://www.nbcnews.com/business/personal-finance/trumps-big-beautiful-bill-deliver-salt-torpedo-high-earners-rcna218328",
+     "title": "Trump's 'big beautiful bill' could deliver 45.5% 'SALT torpedo' for high earners, tax pro says",
+     "publisher": "NBC News"
+    },
+    {
+     "url": "https://www.ncacpa.org/wp-content/uploads/2025/11/GS2_Bill-Harden_Federal-Tax-Update.pdf",
+     "title": "GS2 Bill Harden Federal Tax Update",
+     "publisher": "NCACPA",
+     "published": "2025-11"
+    },
+    {
+     "url": "https://www.nerdwallet.com/article/taxes/tax-changes-2026",
+     "title": "IRS Announces 2026 Income Tax Brackets, Updated Standard Deduction",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://www.irs.gov/ko/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+     "title": "IRS releases tax inflation adjustments for tax year 2026 including amendments from the One Big Beautiful Bill",
+     "publisher": "IRS"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Wąska, ale zamożna grupa. Strefa $500-600k MAGI to klasyczny problem decyzyjny w stylu „czy przesunąć dochód lub zrobić PTET, czy itemizować”, z silnymi zamiennikami: CPA i software podatkowe. Szansa na mass-market jest mała. Klif w 2030 tworzy natomiast pytania o timing w stylu „kup/sprzedaj/zapłać property tax teraz czy później”. Parametry SALT zmieniają się co roku przez indeksację 1%."
+  },
+  {
+   "question": "b) Standard deduction 2026",
+   "claim_pl": "Według IRS (IR-2025-103, 9.10.2025, Rev. Proc. 2025-32) standard deduction na 2026 wynosi $16,100 dla single i MFS, $32,200 dla MFJ (wobec $31,500 w 2025) oraz $24,150 dla HoH. Kwoty dotyczą zeznań składanych w 2027.",
+   "evidence_type": "direct",
+   "numbers": "$16,100 single/MFS; $32,200 MFJ; $24,150 HoH (TY2026)",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/ko/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+     "title": "IRS releases tax inflation adjustments for tax year 2026 including amendments from the One Big Beautiful Bill",
+     "publisher": "IRS",
+     "published": "2025-10-09"
+    },
+    {
+     "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+     "title": "Rev. Proc. 2025-32 (Part III Administrative, Procedural, and Miscellaneous)",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.nerdwallet.com/article/taxes/tax-changes-2026",
+     "title": "IRS Announces 2026 Income Tax Brackets, Updated Standard Deduction",
+     "publisher": "NerdWallet"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "To bazowy parametr niemal każdego symulatora podatkowego (itemize vs standard, Schedule 1-A). Aktualizuje się raz w roku, zwykle w październiku lub listopadzie, z jednego dokumentu (Rev. Proc.), co łatwo zautomatyzować: n8n monitoruje IRS newsroom/IRB, a człowiek zatwierdza zmianę."
+  },
+  {
+   "question": "b/c) Parametry 2027: czy IRS już je ogłosił (stan 2026-10-25)?",
+   "claim_pl": "Oficjalnego komunikatu IRS z kwotami inflacyjnymi na 2027 (tax brackets, standard deduction, estate exclusion) nie znalazłem. Źródła z września 2026 piszą, że IRS ich jeszcze nie ogłosił. Projekcje (Wolters Kluwer/Bloomberg Tax i inne) to ok. $16,600 single, $33,200 MFJ, $24,950 HoH i estate exclusion ok. $15.48M, przy indeksacji ok. 3.2%. Bloomberg Tax liczył średnią z 11 miesięcy, bo BLS nie opublikował C-CPI-U za październik 2025 z powodu lapse in appropriations. IRS opublikował natomiast Rev. Proc. 2026-26 z 2027 applicable percentage table dla ACA i required contribution percentage 10.22%.",
+   "evidence_type": "estimate",
+   "numbers": "Projekcje TY2027: $16,600 / $33,200 / $24,950 (HoH); estate ~$15.48M; indeksacja ~3.2%; required contribution 2027 = 10.22% (oficjalne)",
+   "sources": [
+    {
+     "url": "https://www.wolterskluwer.com/en/expert-insights/projected-2027-federal-tax-brackets",
+     "title": "Projected 2027 federal tax brackets and other inflation-adjusted amounts",
+     "publisher": "Wolters Kluwer"
+    },
+    {
+     "url": "https://www.taxgirl.com/2026/09/12/your-first-look-at-2027-tax-brackets-standard-deduction-amounts-and-more/",
+     "title": "Your First Look at 2027 Tax Brackets, Standard Deduction Amounts and More",
+     "publisher": "Taxgirl",
+     "published": "2026-09-12"
+    },
+    {
+     "url": "https://www.cbsnews.com/news/2027-tax-brackets-irs-inflation-adjustments/",
+     "title": "See how your income tax bracket could change for 2027",
+     "publisher": "CBS News"
+    },
+    {
+     "url": "https://www.irs.gov/irb/2026-35_IRB",
+     "title": "Internal Revenue Bulletin: 2026-35",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.irs.gov/irb/2026-31_irb",
+     "title": "Internal Revenue Bulletin: 2026-31",
+     "publisher": "IRS"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Witryna musi obsługiwać dwa lata podatkowe naraz (TY2026 do złożenia w 2027 i planowanie na TY2027) oraz jawnie oznaczać parametry „projected” i „official”. Opóźnienia danych BLS pokazują, że harmonogram aktualizacji nie jest stały. Nie wiem, czy Rev. Proc. 2026-26 jest w IRB 2026-31 czy 2026-35 (niezweryfikowane)."
+  },
+  {
+   "question": "c) Bonus depreciation, Section 179, estate tax exemption 2026",
+   "claim_pl": "OBBBA przywróciła na stałe 100% bonus depreciation dla mienia nabytego i oddanego do użytku po 19.01.2025. Źródła piszą „after January 19” albo „on or after January 20, 2025”, co oznacza to samo. Section 179: limit $2.5M, próg phase-out $4M (redukcja dolar za dolar), dla mienia oddanego do użytku po 31.12.2024, z indeksacją. Estate tax: stałe zwolnienie $15M na osobę od 2026, indeksowane. Kwotę $15M na 2026 podają źródła wtórne. Rev. Proc. 2025-32 pojawił się w wynikach, ale podsumowanie nie potwierdziło tej kwoty wprost.",
+   "evidence_type": "indirect",
+   "numbers": "bonus 100% (stałe, po 2025-01-19); §179 $2,500,000 / próg $4,000,000; estate $15,000,000 (2026), indeksowane",
+   "sources": [
+    {
+     "url": "https://bdo.com/insights/tax/one-big-beautiful-bill-act-expands-100-depreciation-expensing-opportunities",
+     "title": "One Big Beautiful Bill Act Expands 100% Depreciation Expensing Opportunities",
+     "publisher": "BDO"
+    },
+    {
+     "url": "https://beginningfarmer.iastate.edu/post/top-10-tax-law-changes-2025-will-impact-farmers",
+     "title": "The Top 10 Tax Law Changes of 2025 that will Impact Farmers",
+     "publisher": "Iowa State University"
+    },
+    {
+     "url": "https://sparkreceipt.com/blog/bonus-depreciation-2026/",
+     "title": "Bonus Depreciation 2026: 100% Expensing Permanently Restored by OBBBA",
+     "publisher": "Sparkreceipt"
+    },
+    {
+     "url": "https://www.taftlaw.com/news-events/law-bulletins/year-end-tax-planning-tips-for-businesses-and-their-owners/",
+     "title": "Year-End Tax Planning Tips for Businesses and Their Owners",
+     "publisher": "Taft Law"
+    },
+    {
+     "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+     "title": "Rev. Proc. 2025-32",
+     "publisher": "IRS"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Stałe 100% bonus depreciation zmniejsza presję czasu (brak sunset), więc typowe pytanie „kup sprzęt przed końcem roku” opiera się raczej na przepływach pieniężnych i doborze roku. Symulatory dla małych firm, np. „buy vs lease equipment/heavy vehicle”, mają sens, ale z silnymi zamiennikami (CPA). Estate tax przy stałym $15M dotyczy bardzo wąskiej grupy, więc ma niski priorytet dla ruchu masowego."
+  },
+  {
+   "question": "d) Repayment Assistance Plan (RAP): start, formuła; koniec SAVE; harmonogram 2026-2028",
+   "claim_pl": "RAP ruszył 1.07.2026 i jest jedynym planem IDR dla pożyczek zaciągniętych od 1.07.2026. Formuła według CRS (IF13075): od 1% do 10% AGI, +1 pp. na każde $10k powyżej $10k AGI, minimum $10 miesięcznie, minus $50 na każde dziecko na utrzymaniu (nie mniej niż $10). Po 360 płatnościach (30 lat) reszta jest umarzana. Niespłacone odsetki nie są naliczane, a ED dopłaca do spłaty kapitału do $50. Parent PLUS nie kwalifikuje się do RAP. SAVE: ED nazywa go „unlawful SAVE plan” i ogłosił dalsze kroki dla kredytobiorców. Jedno źródło wtórne podaje unieważnienie wyrokiem z 10.03.2026 (niezweryfikowane u źródła pierwotnego). Servicerzy wysyłają zawiadomienia z 90-dniowym terminem na wybór planu (wg jednego źródła wysyłka 1.07-15.08.2026). Kto nie wybierze, może zostać przeniesiony automatycznie. PAYE i ICR wygasają 1.07.2028, a ich uczestnicy przechodzą do RAP albo IBR.",
+   "evidence_type": "direct",
+   "numbers": "RAP start 2026-07-01; 1-10% AGI; min $10/mies.; -$50/dziecko; 360 płatności; matching principal do $50; 90 dni na wybór planu; PAYE/ICR koniec 2028-07-01",
+   "sources": [
+    {
+     "url": "https://www.congress.gov/crs-product/IF13075",
+     "title": "The Repayment Assistance Plan (RAP) in P.L. 119-21, the FY2025 Reconciliation Law",
+     "publisher": "Congressional Research Service"
+    },
+    {
+     "url": "https://www.everycrsreport.com/files/2025-07-31_IF13075_d08bd35bed70265ba5facbc55c4135b864a1f534.html",
+     "title": "The Repayment Assistance Plan (RAP) in P.L. 119-21 (CRS IF13075 mirror)",
+     "publisher": "EveryCRSReport",
+     "published": "2025-07-31"
+    },
+    {
+     "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-next-steps-borrowers-enrolled-unlawful-save-plan",
+     "title": "U.S. Department of Education Announces Next Steps for Borrowers Enrolled in the Unlawful SAVE Plan",
+     "publisher": "U.S. Department of Education"
+    },
+    {
+     "url": "https://www.nerdwallet.com/student-loans/news/save-plan-switch-ultimatum",
+     "title": "End Finally Comes for SAVE Student Loan Plan: Millions Given Deadline to Switch",
+     "publisher": "NerdWallet"
+    },
+    {
+     "url": "https://www.tateesq.com/learn/student-loan-repayment-options",
+     "title": "Federal Student Loan Repayment Plans in 2026: What Changed and How to Choose",
+     "publisher": "Tate Law"
+    },
+    {
+     "url": "https://edfinancial.studentaid.gov/RAP",
+     "title": "Important Announcements (RAP)",
+     "publisher": "Edfinancial (FSA servicer)"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "„RAP vs IBR vs Standard” dla byłych użytkowników SAVE to wyraźna decyzja wielowariantowa z terminem, dochodem, dziećmi, PSLF i horyzontem 30 lat, idealna dla symulatora. Popyt trwa jednak falami: okna 90-dniowe w 2026 i deadline 2028 dla PAYE/ICR. Hipoteza / niezweryfikowane: istnieje oficjalny substytut w postaci Loan Simulator na studentaid.gov, a w tym zakresie nie badałem konkurencji. Formuła RAP jest ustawowa i stabilna, więc jej utrzymanie jest tanie."
+  },
+  {
+   "question": "d) Nowe limity pożyczek graduate/professional, likwidacja Grad PLUS",
+   "claim_pl": "Grad PLUS zlikwidowano dla nowych kredytobiorców od 1.07.2026. Studenci, którzy wzięli Grad PLUS przed tą datą, mogą pożyczać na starych zasadach (legacy) jeszcze do 3 lat akademickich albo do końca programu. Nowe limity Direct Unsubsidized: graduate $20,500 rocznie i $100,000 łącznie, professional $50,000 rocznie i $200,000 łącznie. Klasyfikacja programu jako professional zależy od kierunku, np. DVM tak, DNAP nie. Lifetime limit federalny wynosi $257,500, wliczając wcześniejsze Grad PLUS. Brakującą kwotę trzeba pokryć prywatnymi pożyczkami lub pomocą uczelni.",
+   "evidence_type": "indirect",
+   "numbers": "graduate $20,500/rok, $100,000 łącznie; professional $50,000/rok, $200,000 łącznie; lifetime $257,500; legacy do 3 lat",
+   "sources": [
+    {
+     "url": "https://www.grad.msstate.edu/student-spotlight/2026/07/important-changes-graduateprofessional-loan-programs-effective-july-1",
+     "title": "Important Changes to Graduate/Professional Loan Programs Effective July 1, 2026",
+     "publisher": "Mississippi State University",
+     "published": "2026-07"
+    },
+    {
+     "url": "https://www.sofi.com/learn/content/grad-plus-parent-plus-loan-changes/",
+     "title": "Big Changes Ahead for Grad PLUS and Parent PLUS Loans: What to Know",
+     "publisher": "SoFi"
+    },
+    {
+     "url": "https://www.ccsu.edu/understanding-big-beautiful-bill/doctoral-graduate-students",
+     "title": "Doctoral-Graduate Students",
+     "publisher": "Central Connecticut State University"
+    },
+    {
+     "url": "https://rm.edu/blog/graduate-plus-loans-are-ending-in-2026-what-rmu-students-need-to-know/",
+     "title": "Graduate PLUS Loans Are Ending in 2026: What RMU Students Need to Know",
+     "publisher": "Robert Morris University"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Nowa decyzja dla kandydatów na studia: luka finansowania (koszt programu minus limit federalny), czyli private loan vs tańsza uczelnia vs odroczenie vs praca. Zwrot z dyplomu w relacji do długu dobrze nadaje się do symulatora z break-even. Uwaga: strona finansowania prywatnych pożyczek grozi monetyzacją lead-gen i konfliktem interesów, której nie wolno traktować jako ratunku modelu."
+  },
+  {
+   "question": "d) Zmiany Parent PLUS",
+   "claim_pl": "Od 1.07.2026 Parent PLUS ma limit $20,000 rocznie i $65,000 łącznie na każde dziecko na utrzymaniu (z możliwym legacy do 3 lat). Pożyczki Parent PLUS udzielone od 1.07.2026 kwalifikują się wyłącznie do nowego Tiered Standard Repayment Plan, bez IDR i bez PSLF. Według poradników uczelni (na bazie NASFAA) nowa pożyczka może pozbawić rodzica dostępu do IDR/PSLF także dla starszych Parent PLUS. Dostęp zachowuje się przez konsolidację do Direct Consolidation Loan przed 1.07.2026, zapis do ICR przed 1.07.2028 i niezaciąganie nowej Parent PLUS. Źródła różnią się co do szczegółów, np. PPSL zalecało złożyć wniosek o konsolidację do 1.04.2026 i dokonać jednej płatności przed 1.07.2028.",
+   "evidence_type": "indirect",
+   "numbers": "$20,000/rok; $65,000 łącznie na dziecko; deadline konsolidacji 2026-07-01; ICR do 2028-07-01",
+   "sources": [
+    {
+     "url": "https://undergradaid.northwestern.edu/types-of-aid/loans/plus-loan.html",
+     "title": "PLUS Loan",
+     "publisher": "Northwestern University"
+    },
+    {
+     "url": "https://www.rider.edu/sites/default/files/2026-07/OB3_PPLUS_Changes_New_Parent_Borrowers.pdf",
+     "title": "OB3 PPLUS Changes New Parent Borrowers",
+     "publisher": "Rider University",
+     "published": "2026-07"
+    },
+    {
+     "url": "https://www.ccny.cuny.edu/financialaid/federal-parent-plus-loan-changes",
+     "title": "Federal Parent PLUS Loan Changes",
+     "publisher": "CCNY CUNY"
+    },
+    {
+     "url": "https://www.ppsl.org/parent-plus-loans",
+     "title": "Parent PLUS Loans",
+     "publisher": "PPSL"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "To bardzo silny kandydat na symulator „should I take a new Parent PLUS vs private loan vs cheaper school”, bo jedna decyzja ma skutek uboczny dla starych pożyczek (utrata IDR/PSLF). Szczegóły proceduralne trzeba jednak potwierdzić na studentaid.gov, zanim zbuduje się narzędzie (ryzyko YMYL). Termin 1.07.2028 utrzymuje znaczenie tematu do 2028."
+  },
+  {
+   "question": "e) Zmiany HSA (bronze/catastrophic, telehealth, DPC)",
+   "claim_pl": "IRS Notice 2026-5 (9.12.2025) wyjaśnia trzy zmiany OBBBA. Pierwsza: pokrycie telehealth przed franszyzą jest stałe dla planów od 1.01.2025. Safe harbor obejmuje tylko usługi zdalne, nie in-person, sprzęt ani leki. Druga: plany bronze i catastrophic są traktowane jako HSA-compatible od 1.01.2026, nawet jeśli nie spełniają definicji HDHP, i nie muszą być kupione przez giełdę (Exchange). Trzecia: osoby w niektórych umowach direct primary care mogą od 1.01.2026 wpłacać na HSA i płacić z niego abonament DPC bez podatku. Komentarze przyjmowano do 6.03.2026.",
+   "evidence_type": "direct",
+   "numbers": "Notice 2026-5 z 2025-12-09; telehealth od planów 2025; bronze/catastrophic i DPC od 2026-01-01",
+   "sources": [
+    {
+     "url": "https://www.irs.gov/node/153161",
+     "title": "www.irs.gov (IRS notice page)",
+     "publisher": "IRS"
+    },
+    {
+     "url": "https://www.journalofaccountancy.com/news/2025/dec/irs-clarifies-health-savings-account-changes-in-h-r-1-in-new-notice/",
+     "title": "IRS clarifies health savings account changes in H.R. 1 in new notice",
+     "publisher": "Journal of Accountancy",
+     "published": "2025-12"
+    },
+    {
+     "url": "https://nysscpa.org/news/1050230-irs-releases-new-guidance-increasing-hsa-eligibility-in-response-to-the-obbba-2025-12-11",
+     "title": "IRS releases new guidance increasing HSA eligibility in response to the OBBBA",
+     "publisher": "NYSSCPA",
+     "published": "2025-12-11"
+    },
+    {
+     "url": "https://kpmg.com/kpmg-us/content/dam/kpmg/taxnewsflash/pdf/2025/12/25347.pdf",
+     "title": "KPMG TaxNewsFlash (HSA notice)",
+     "publisher": "KPMG"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Po wygaśnięciu enhanced PTC wielu kupujących ACA schodzi z silver na bronze. Od 2026 bronze otwiera dostęp do HSA, więc decyzja „bronze + HSA vs silver (CSR) vs catastrophic” łączy podatki, ryzyko kosztów leczenia i subsydia. To dobry symulator wieloczynnikowy, choć wymaga danych o składkach w danym regionie."
+  },
+  {
+   "question": "e) Rozszerzenia 529",
+   "claim_pl": "Roczny limit wypłat z 529 na K-12 rośnie z $10,000 do $20,000 na beneficjenta od 2026 (taxable years po 31.12.2025). Katalog wydatków K-12 poza czesnym rozszerzono od 5.07.2025 (dane z komunikatu skarbu Wirginii Zachodniej) o materiały, egzaminy standaryzowane, dual enrollment, materiały online, tutoring i terapię zdiagnozowanych trudności w nauce. 529 może też finansować postsecondary credential programs (WIOA, uprawnienia wojskowe, programy uznane przez państwo lub organizacje certyfikujące), w tym opłaty egzaminacyjne i kształcenie ustawiczne. Zgodność ze stanowymi ulgami (state conformity) różni się między stanami.",
+   "evidence_type": "indirect",
+   "numbers": "K-12 $20,000/rok od 2026 (wcześniej $10,000); rozszerzone wydatki od 2025-07-05",
+   "sources": [
+    {
+     "url": "https://weaver.com/resources/section-529-plans-after-the-one-big-beautiful-bill-act/",
+     "title": "Section 529 Plans After the One Big Beautiful Bill Act",
+     "publisher": "Weaver"
+    },
+    {
+     "url": "https://wvtreasury.gov/About/Press-Releases/details/treasurer-pack-announces-expanded-smart529-plan-benefits-under-president-trump-s-one-big-beautiful-bill-act",
+     "title": "Treasurer Pack Announces Expanded SMART529 Plan Benefits Under President Trump's One Big Beautiful Bill Act",
+     "publisher": "West Virginia State Treasury"
+    },
+    {
+     "url": "https://www.blackrock.com/us/financial-professionals/insights/529-plans-and-the-obbba-what-you-need-to-know",
+     "title": "529 plans and the OBBBA: what you need to know",
+     "publisher": "BlackRock"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Decyzja „use 529 for private K-12 now vs save for college”, w tym ryzyko wyczerpania funduszu przed studiami, nadaje się na symulator z osią czasu. Ulgi stanowe dodają wymiar 50 stanów, który zwiększa koszt utrzymania. Hipoteza: w MVP warto ograniczyć się do warstwy federalnej i jasno opisać to ograniczenie."
+  },
+  {
+   "question": "e) Trump accounts: status uruchomienia",
+   "claim_pl": "Konta zakłada się przez IRS Form 4547. Treasury uruchomił aplikację Trump Accounts 28.05.2026 i rozsyłał e-maile aktywacyjne (TrumpAccounts.gov). Konta nie przyjmowały wpłat przed 4.07.2026, w tym pilotażowej wpłaty Treasury. Dzieci urodzone 1.01.2025-31.12.2028 dostają pilotażowe $1,000 od 4.07.2026 według zapowiedzi Treasury. Limit wpłat to $5,000 rocznie. Wpłaty pracodawcy do $2,500 wliczają się do limitu, a wpłaty organizacji charytatywnych i rządów nie. Limit $5,000 będzie indeksowany po 2027. Późniejszy komunikat Treasury (sb0554) mówi o oficjalnym starcie i pełnej funkcjonalności aplikacji w całym kraju, ale jego daty nie potwierdziłem. Nie potwierdziłem też, że wpłaty $1,000 faktycznie wykonano.",
+   "evidence_type": "direct",
+   "numbers": "app 2026-05-28; wpłaty od 2026-07-04; $1,000 pilot (urodzeni 2025-2028); limit $5,000/rok; pracodawca do $2,500",
+   "sources": [
+    {
+     "url": "https://home.treasury.gov/news/press-releases/sb0508",
+     "title": "Treasury Announces the Launch of the Trump Accounts App and Next Steps for Trump Accounts",
+     "publisher": "U.S. Treasury"
+    },
+    {
+     "url": "https://home.treasury.gov/news/press-releases/sb0554",
+     "title": "U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App",
+     "publisher": "U.S. Treasury"
+    },
+    {
+     "url": "https://www.forbes.com/sites/kellyphillipserb/2026/05/29/treasury-launches-trump-accounts-app-as-funding-date-approaches/",
+     "title": "Treasury Launches Trump Accounts App As Funding Date Approaches",
+     "publisher": "Forbes",
+     "published": "2026-05-29"
+    },
+    {
+     "url": "https://tax.thomsonreuters.com/news/trump-account-app-released-ahead-of-initial-contribution-date/",
+     "title": "Trump Account App Released Ahead of Initial Contribution Date",
+     "publisher": "Thomson Reuters"
+    },
+    {
+     "url": "https://www.axios.com/2026/01/02/trump-accounts-signup-big-beautiful-bill",
+     "title": "Trump accounts launch in 2026: What to know about the $1,000 fund",
+     "publisher": "Axios",
+     "published": "2026-01-02"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Pojawia się nowa decyzja rodzinna z małą liczbą narzędzi porównawczych: „Trump account vs 529 vs custodial/Roth for kid, where to put the next $X”. Hipoteza / niezweryfikowane: popyt istnieje, ale konkurencji nie badałem. Temat jest politycznie nacechowany, a reguły mogą się jeszcze zmieniać w wytycznych IRS, co oznacza ryzyko utrzymania."
+  },
+  {
+   "question": "f) ACA enhanced premium tax credits: wygasły czy przedłużone? Legislacja 2026",
+   "claim_pl": "Enhanced PTC wygasły 31.12.2025 i w 2026 obowiązują reguły sprzed 2021, łącznie z klifem 400% FPL. Izba Reprezentantów przyjęła 8.01.2026 trzyletnie przedłużenie stosunkiem głosów 230-196 (17 republikanów za), po discharge petition. W Senacie S.3385 nie uzyskał 60 głosów. Ponadpartyjny kompromis „CARE Act” (2 lata, minimalne składki, limity dochodowe) był według najnowszych znalezionych źródeł nadal negocjowany i nie miał terminu głosowania. Źródło z końca lipca 2026 i źródło sprzed ok. 3 tygodni wskazują, że przedłużenia nie uchwalono, a na 2027 obowiązuje obecne prawo z klifem 400% FPL. Ewentualnych zmian z ostatnich 3 tygodni nie zweryfikowałem.",
+   "evidence_type": "indirect",
+   "numbers": "wygaśnięcie 2025-12-31; House 2026-01-08, 230-196; S.3385 poniżej 60 głosów; klif 400% FPL w 2026 i 2027",
+   "sources": [
+    {
+     "url": "https://news.ballotpedia.org/2026/01/12/house-passes-three-year-extension-of-expanded-aca-subsidies/",
+     "title": "House passes three-year extension of expanded ACA subsidies",
+     "publisher": "Ballotpedia News",
+     "published": "2026-01-12"
+    },
+    {
+     "url": "https://www.aha.org/news/headline/2026-01-09-house-passes-bill-extending-enhanced-premium-tax-credits",
+     "title": "House passes bill extending enhanced premium tax credits",
+     "publisher": "AHA",
+     "published": "2026-01-09"
+    },
+    {
+     "url": "https://www.astho.org/communications/blog/2026/aca-enhanced-premium-tax-credits-legislative-developments-2025-2026/",
+     "title": "ACA Enhanced Premium Tax Credits: Legislative Developments in 2025 and 2026",
+     "publisher": "ASTHO"
+    },
+    {
+     "url": "https://www.healthaffairs.org/content/forefront/extending-enhanced-premium-tax-credits-things-stand",
+     "title": "Extending Enhanced Premium Tax Credits: Where Things Stand",
+     "publisher": "Health Affairs"
+    },
+    {
+     "url": "https://taxpayers.net/guides/aca-subsidy-status-2027",
+     "title": "2027 ACA Subsidy Status: The 400% Cliff Is Back",
+     "publisher": "taxpayers.net"
+    },
+    {
+     "url": "https://healthinsurancenetwork.org/guide/will-aca-subsidies-come-back",
+     "title": "Will the ACA Subsidies Come Back? Where the Extension Bill Actually Stands",
+     "publisher": "Health Insurance Network"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Klif 400% FPL to jeden z najmocniejszych problemów decyzyjnych do symulacji: obniżenie MAGI przez HSA, 401k lub Roth vs Traditional, timing dochodu, wcześniejsza emerytura przed Medicare. Status prawny jest jednak niepewny, bo Senat może zmienić reguły w trakcie roku, a open enrollment 2027 startuje na początku listopada 2026. Symulator potrzebuje przełącznika scenariusza „current law vs extension”."
+  },
+  {
+   "question": "f) Średnie zmiany składek ACA 2026 (i zapowiedź 2027), zapisy",
+   "claim_pl": "Na 2026 ubezpieczyciele podnieśli cenę benchmark planu średnio o ok. 26% (KFF). Prognoza KFF z 30.09.2025 zakładała, że przy wygaśnięciu enhanced PTC średnia roczna składka płacona przez subsydiowanych wzrośnie z $888 do $1,904 (+114%). To estymacja warunkowa, nie pomiar. Źródła z 2026 piszą o średnim wzroście składek out-of-pocket o ok. 58% w 2026. Wstępne wnioski taryfowe na 2027 to mediana +14% (77 ubezpieczycieli w 16 stanach i DC) albo ok. +15% (276 ubezpieczycieli we wszystkich stanach), z rozrzutem od -1% do +54% i 63% wniosków w przedziale 10-25%. Plan selections w 2026 wyniosły 22,973,219 wobec 24,166,491 w 2025 (-5%; nowe zapisy -14%, odnowienia -3%). Acasignups.net podaje 23.1M QHP, o 1.2M mniej r/r. Danych o effectuated enrollment po wygaśnięciu ulg nie znalazłem.",
+   "evidence_type": "indirect",
+   "numbers": "benchmark 2026 +26%; projekcja +114% ($888→$1,904); out-of-pocket 2026 ~+58%; 2027 mediana proponowana +14-15%; plan selections 2026 ~23.0M vs 24.2M (-5%)",
+   "sources": [
+    {
+     "url": "https://www.kff.org/quick-take/aca-insurers-are-raising-premiums-by-an-estimated-26-but-most-enrollees-could-see-sharper-increases-in-what-they-pay/",
+     "title": "ACA Insurers Are Raising Premiums by an Estimated 26%, but Most Enrollees Could See Sharper Increases in What They Pay",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.kff.org/affordable-care-act/aca-marketplace-premium-payments-would-more-than-double-on-average-next-year-if-enhanced-premium-tax-credits-expire/embed/",
+     "title": "ACA Marketplace Premium Payments Would More than Double on Average Next Year if Enhanced Premium Tax Credits Expire",
+     "publisher": "KFF",
+     "published": "2025-09-30"
+    },
+    {
+     "url": "https://www.kff.org/affordable-care-act/in-preliminary-rate-filings-aca-marketplace-insurers-largely-propose-double-digit-premium-increase-for-2027-following-a-steep-climb-this-year/",
+     "title": "In Preliminary Rate Filings, ACA Marketplace Insurers Largely Propose Double-Digit Premium Increase For 2027",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.healthsystemtracker.org/brief/how-much-and-why-aca-marketplace-premiums-are-going-up-in-2027/",
+     "title": "How much and why ACA Marketplace premiums are going up in 2027",
+     "publisher": "Peterson-KFF Health System Tracker"
+    },
+    {
+     "url": "https://www.kff.org/affordable-care-act/aca-marketplace-enrollment-is-down-in-2026-but-all-of-the-data-isnt-in-yet/",
+     "title": "ACA Marketplace Enrollment is Down in 2026—But All of the Data Isn't in Yet",
+     "publisher": "KFF"
+    },
+    {
+     "url": "https://www.healthmanagement.com/insights/weekly-roundup-v2/february-4-2026/",
+     "title": "Weekly Roundup – February 4, 2026",
+     "publisher": "Health Management Associates",
+     "published": "2026-02-04"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ok. 23 mln osób z planami ACA w 2026 to liczba ubezpieczonych, nie miesięczny popyt na narzędzie. Tę grupę dotyka wzrost kosztów dwa lata z rzędu, co uzasadnia symulatory w stylu „stay on ACA vs employer plan vs ICHRA vs bronze+HSA vs drop coverage”. Dokładny symulator składek wymaga jednak danych o składkach na poziomie hrabstwa (benchmark, wiek, stan), a to drogie dane do utrzymania. Hipoteza: substytutem jest healthcare.gov window shopping (niezweryfikowane w tym zakresie)."
+  },
+  {
+   "question": "g) Social Security COLA 2026 (i 2027)",
+   "claim_pl": "COLA na 2026 wyniosła 2.8%. SSA ogłosiła 14.10.2026 COLA na 2027 w wysokości 3.6%, najwyższą od 2023, obowiązującą od świadczeń za styczeń 2027. Przeciętne świadczenie emerytalne wzrośnie o ok. $75 miesięcznie. Według mediów do wzrostu przyczyniły się m.in. ceny energii. Składka Medicare na 2027 będzie dostępna w my Social Security pod koniec listopada 2026.",
+   "evidence_type": "direct",
+   "numbers": "COLA 2024 3.2%, 2025 2.5%, 2026 2.8%, 2027 3.6% (ogłoszona 2026-10-14); ~+$75/mies. średnio",
+   "sources": [
+    {
+     "url": "https://www.ssa.gov/news/en/press/releases/2026-10-14.html",
+     "title": "Social Security Announces 3.6 Percent Benefit Increase for 2027",
+     "publisher": "SSA",
+     "published": "2026-10-14"
+    },
+    {
+     "url": "https://www.ssa.gov/news/en/advocates/2026-10-14.html",
+     "title": "Just Announced! Cost-of-Living Adjustment (COLA) for 2027",
+     "publisher": "SSA",
+     "published": "2026-10-14"
+    },
+    {
+     "url": "https://www.ssa.gov/oact/cola/colasummary.html",
+     "title": "Cost-Of-Living Adjustment (COLA)",
+     "publisher": "SSA"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/10/14/social-security-cola-2027.html",
+     "title": "Cost of living: Social Security announces 3.6% COLA for 2027",
+     "publisher": "CNBC",
+     "published": "2026-10-14"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Symulatory w stylu „claim at 62/FRA/70” i projekcje emerytalne muszą aktualizować COLA co roku w październiku. Parametr pochodzi z jednego źródła (SSA), więc łatwo go monitorować automatycznie. Ogłoszenie COLA wywołuje sezonowy szczyt zainteresowania tematem (hipoteza / niezweryfikowane)."
+  },
+  {
+   "question": "g) Medicare Part B 2026 i progi IRMAA 2026",
+   "claim_pl": "CMS (komunikat z 14.11.2025) ustaliło standardową składkę Part B na 2026 na $202.90, wobec $185.00 w 2025 (+$17.90). Roczne deductible Part B wynosi $283 (wcześniej $257). Bazową składkę płacą osoby z MAGI za 2024 do $109,000 (single) / $218,000 (joint). Pierwszy próg IRMAA, $109,001-$137,000 / $218,001-$274,000, oznacza składkę $284.10. Najwyższy próg to $689.90 przy MAGI od $500,000. IRMAA liczy się z zeznania sprzed 2 lat. Składki i progi na 2027 nie były jeszcze ogłoszone; SSA zapowiada je na koniec listopada 2026. Jedno źródło wtórne podawało prognozę $206.50, sprzeczną z ostateczną kwotą.",
+   "evidence_type": "indirect",
+   "numbers": "Part B 2026 $202.90; deductible $283; IRMAA próg bazowy $109,000 / $218,000 (MAGI 2024); tier 1 $284.10; top $689.90 (≥$500k)",
+   "sources": [
+    {
+     "url": "https://www.moaa.org/content/publications-and-media/news-articles/2025-news-articles/health-care-and-earned-benefits/how-much-will-your-medicare-part-b-premium-rise-in-2026/",
+     "title": "How much will your Medicare Part B premium rise in 2026",
+     "publisher": "MOAA",
+     "published": "2025-11"
+    },
+    {
+     "url": "https://www.currentfederaltaxdevelopments.com/blog/2025/11/17/2026-adjustments-to-medicare-parts-a-b-and-d-a-technical-review-of-premiums-and-irmaa-calculations",
+     "title": "2026 Adjustments to Medicare Parts A, B, and D: A Technical Review of Premiums and IRMAA Calculations",
+     "publisher": "Current Federal Tax Developments",
+     "published": "2025-11-17"
+    },
+    {
+     "url": "https://www.kiplinger.com/retirement/medicare/what-you-will-pay-for-medicare-in-2026",
+     "title": "What You Will Pay for Medicare in 2026",
+     "publisher": "Kiplinger"
+    },
+    {
+     "url": "https://www.ameripriseadvisors.com/ryan.johnson/perspectives/medicare-costs-are-rising-in-2026-what-you-need-to-know",
+     "title": "Medicare costs are rising in 2026: what you need to know",
+     "publisher": "Ameriprise"
+    },
+    {
+     "url": "https://www.ssa.gov/news/en/advocates/2026-10-14.html",
+     "title": "Just Announced! Cost-of-Living Adjustment (COLA) for 2027",
+     "publisher": "SSA",
+     "published": "2026-10-14"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Progi IRMAA działają jak klify (przekroczenie o $1 podnosi składkę na cały rok) i mają 2-letnie opóźnienie, więc nadają się do symulatorów wielookresowych: „Roth conversion vs IRMAA vs senior deduction phase-out”, „sprzedaż nieruchomości lub akcji w roku X”. Parametry aktualizuje się co roku w listopadzie (CMS). Pierwotnego dokumentu CMS nie znalazłem bezpośrednio w wynikach, tylko źródła wtórne powołujące się na komunikat CMS."
+  }
+ ],
+ "contradictions_pl": [
+  "Car loan interest: IRS wiąże kwalifikację z datą udzielenia kredytu (loan originated after 12/31/2024), a część mediów pisze o dacie zakupu pojazdu (purchased after 12/31/2024). W symulatorze trzymać się sformułowania IRS.",
+  "Senior deduction: podsumowanie głównej strony IRS dla osób fizycznych nie pokazało progu phase-out, a eitc.irs.gov i źródła wtórne podają $75k/$150k MAGI. Stawki phase-out nie zweryfikowałem.",
+  "Bonus depreciation: „after January 19, 2025” i „on or after January 20, 2025” to w praktyce ta sama data. Pozorna sprzeczność wynika z różnych sformułowań.",
+  "Parent PLUS: źródła różnią się co do procedury zachowania IDR/PSLF. Według NASFAA i uczelni trzeba skonsolidować przed 1.07.2026 i zapisać się do ICR przed 1.07.2028. PPSL zaleca wniosek o konsolidację do 1.04.2026 i jedną pełną płatność przed 1.07.2028.",
+  "SAVE/RAP: daty wysyłki zawiadomień o przejściu z SAVE (1.07-15.08.2026) podaje tylko jedno źródło wtórne. Datę unieważnienia SAVE (10.03.2026) też podaje tylko źródło wtórne, a komunikat ED w wynikach był starszy.",
+  "ACA 114%: KFF z 30.09.2025 opisuje to jako projekcję warunkową, a slajd KFF z marca 2026 podobno jako faktyczny wzrost. Źródła z 2026 podają inną miarę: ok. +58% średnich składek out-of-pocket. To różne metryki, więc nie należy ich mieszać.",
+  "ACA 2027: mediana proponowanych podwyżek wynosi 14% (77 ubezpieczycieli) albo ok. 15% (276 ubezpieczycieli). Różnica wynika z próby, a stawki nie są ostateczne.",
+  "Medicare Part B 2026: jedno źródło wtórne podawało $206.50 i top $702.10 (prognoza), co jest sprzeczne z ostatecznymi $202.90 i $689.90.",
+  "Projekcje 2027: jedno źródło porównuje $16,600/$33,200 z „$15,750/$31,500 w 2026”, ale to wartości z 2025. Według IRS kwoty na 2026 to $16,100/$32,200, więc źródło wtórne zawiera błąd.",
+  "ACA: wyniki nazywają kompromis senacki „CARE Act”. Status „w negocjacjach” pochodzi ze źródeł sprzed ok. 3 tygodni i może być nieaktualny."
+ ],
+ "open_questions_pl": [
+  "Czy IRS opublikował już (stan 2026-10-25) Rev. Proc. z kwotami inflacyjnymi na 2027 (brackets, standard deduction, estate exclusion, SALT threshold)? Znalazłem tylko projekcje.",
+  "Jaka jest dokładna kwota progu phase-down SALT na 2026 (ok. $505,000?) i stawka phase-out senior deduction (6%?)? Obie niezweryfikowane.",
+  "Czy pilotażowe $1,000 do Trump accounts faktycznie wpłynęło od 4.07.2026 i kiedy wydano komunikat Treasury sb0554?",
+  "Jaki jest formalny status prawny końca SAVE (wyrok z 10.03.2026 czy ugoda z Missouri) i jakie terminy przejścia podaje studentaid.gov? Brak potwierdzenia u źródła pierwotnego.",
+  "Czy w ostatnich tygodniach października 2026 Senat lub Kongres podjął działania w sprawie enhanced PTC (CARE Act) przed open enrollment 2027 (od 1.11.2026)?",
+  "Jaka będzie składka Medicare Part B i progi IRMAA na 2027 (ogłoszenie CMS spodziewane w listopadzie 2026)?",
+  "Jakie są dane effectuated enrollment ACA 2026 (ile osób faktycznie opłaciło składki po wygaśnięciu ulg)?",
+  "Car loan interest: jakie są wymogi raportowania przez kredytodawców i weryfikacji VIN/final assembly (ostateczne regulacje IRS)?",
+  "Jaki jest zakres oficjalnych narzędzi rządowych (studentaid.gov Loan Simulator, healthcare.gov window shopping, SSA calculators), które są substytutami lub częściową konkurencją dla symulatorów? Nie badałem tego w tej części.",
+  "Czy Rev. Proc. 2026-26 (ACA 2027, required contribution 10.22%) znajduje się w IRB 2026-31 czy 2026-35?"
+ ],
+ "queries_run": [
+  "[standard] IRS car loan interest deduction One Big Beautiful Bill $10,000 final assembly United States guidance",
+  "[standard, irs.gov] One, Big, Beautiful Bill provisions no tax on car loan interest enhanced deduction for seniors SALT",
+  "[standard] IRS tax year 2026 inflation adjustments standard deduction $32,200 SALT cap $40,400 phase-out $505,000",
+  "[standard] SALT deduction cap $40,000 phase down modified AGI $500,000 30% floor $10,000 reverts 2030 senior deduction phase-out $75,000",
+  "[standard] OBBBA permanent 100% bonus depreciation after January 19 2025 Section 179 $2.5 million estate tax exemption $15 million 2026",
+  "[extended] Repayment Assistance Plan RAP launch July 1 2026 SAVE plan borrowers moved deadline Federal Student Aid",
+  "[standard] Grad PLUS eliminated July 1 2026 new borrowing limits $100,000 graduate $200,000 professional Parent PLUS $65,000 lifetime cap",
+  "[standard] Parent PLUS loan new limits $20,000 per year $65,000 per student July 1 2026 Parent PLUS income-driven repayment access ends",
+  "[standard] IRS guidance HSA bronze catastrophic plans HSA-compatible telehealth safe harbor direct primary care 2026 notice",
+  "[extended] Trump accounts launch July 4 2026 contributions begin $1,000 pilot deposit Treasury app status",
+  "[standard] 529 plan changes One Big Beautiful Bill K-12 limit $20,000 2026 credential programs expanded qualified expenses",
+  "[extended] enhanced ACA premium tax credits expired 2026 House vote extension Senate status subsidy cliff 400% FPL returns",
+  "[standard] KFF 2026 ACA marketplace benchmark premiums increase average percent net premium payments subsidized enrollees 114%",
+  "[extended] Social Security COLA 2027 announced October 2026 SSA cost-of-living adjustment 2026 2.8%",
+  "[standard] CMS 2026 Medicare Part B premium $202.90 deductible $283 IRMAA income thresholds $109,000 $218,000",
+  "[extended] IRS tax year 2027 inflation adjustments standard deduction estate tax basic exclusion amount announced October 2026",
+  "[standard, irs.gov] IRS releases tax inflation adjustments for tax year 2027",
+  "[extended] 2027 ACA marketplace proposed premium increases rate filings open enrollment November 2026 enrollment drop 2026",
+  "[standard] 2026 ACA open enrollment plan selections CMS final report fewer sign-ups than 2025 effectuated enrollment decline after subsidies expired",
+  "[standard] Repayment Assistance Plan payment formula 1% to 10% of AGI $10 minimum $50 per dependent forgiveness 360 payments SAVE plan ended court settlement Missouri"
+ ]
+}

@@ -1,0 +1,718 @@
+{
+ "seeds": [
+  {
+   "seed_id": "S5",
+   "restated_problem_pl": "Mały sprzedawca e-commerce (Shopify/DTC lub Amazon FBA, US) dostaje od dostawcy ofertę z progami cenowymi/MOQ (np. 1 000 szt. po $6.20 vs 3 000 szt. po $5.10) i musi zdecydować przed wpłatą zaliczki: (A) mniejsze zamówienie z własnej gotówki, wyższy koszt jednostkowy, ryzyko braków i częstszych zamówień; (B) większa partia finansowana (stała opłata typu Wayflyer/Clearco, revenue-share/sweep, MCA, kredyt APR, marketplace typu Kickfurther, Shopify Capital/Amazon Lending); (C) wariant pośredni (podział dostaw, częściowa zaliczka, termin płatności). Pełny problem obejmuje: koszt wyładunku (fracht, cło/taryfy 2026, MPF/HMF), harmonogram płatności (zaliczka, saldo, fracht, cło) vs moment sprzedaży, tempo sprzedaży i jego niepewność, wydatki reklamowe potrzebne do utrzymania tempa, zwroty (część towaru wraca do sprzedaży, część nie), koszty magazynowania (3PL, Amazon Aged Inventory Surcharge), ryzyko przeterminowania/likwidacji oraz najniższy punkt gotówki (płynność) w horyzoncie 6-12 miesięcy. Wynik: który wariant daje wyższy zysk netto przy akceptowalnym dołku gotówkowym i przy jakim tempie sprzedaży/koszcie finansowania przewaga się odwraca.",
+   "integration_check_pl": "Integracja jest REALNA, nie sklejona: (1) tempo sprzedaży -> liczba miesięcy trzymania zapasu -> koszt magazynu, ryzyko likwidacji i (przy Kickfurther, gdzie spłata zależy od tempa sprzedaży - search-summary) czas i koszt finansowania; (2) revenue-share/sweep spłaty zmniejsza gotówkę dostępną na reklamy -> niższe tempo -> dłuższe trzymanie (sprzężenie zwrotne); (3) stała opłata finansowania daje różne efektywne APR w zależności od czasu spłaty (przykład z wyników: 10% opłaty przy spłacie 26 tyg. ~37% rocznie, przy 52 tyg. ~19% - search-summary, weareuncapped.com/clearco-alternatives lub pokrewne); (4) cło/taryfa liczona per zamówienie zmienia marżę i wielkość pierwszej płatności. Zastrzeżenie: wynik jest zdominowany przez założenie użytkownika o tempie sprzedaży i elastyczności reklam - wartość narzędzia leży w analizie wrażliwości i progu rentowności, nie w 'jednej odpowiedzi'. Moduły zwrotów i reklam łatwo stają się kosmetyczne (jeden parametr % zwrotów i CAC) - nie należy ich sprzedawać jako głębi.",
+   "competitors": [
+    {
+     "name": "Cogsy",
+     "url": "https://www.sumtracker.com/blog/prediko-alternatives-for-shopify-multichannel-sellers",
+     "type": "partial",
+     "features_claimed": "Według porównań: łączy decyzje zapasowe z planowaniem gotówki, scenariusze (np. opóźnienie dostawcy); nastawiony na planowanie i pokrycie, nie pełne PO/księgowość",
+     "notes": "search-summary z porównań pisanych m.in. przez konkurentów; porównanie ofert finansowania, reklam i zwrotów: niezweryfikowana. Najbliższy 'inventory+cash' wśród aplikacji magazynowych.",
+     "paid": "tak, od ok. $199/mies. (wg źródeł zewnętrznych)"
+    },
+    {
+     "name": "Prediko",
+     "url": "https://www.prediko.io/forecasting-demand-planning/inventory-planning-software",
+     "type": "partial",
+     "features_claimed": "Prognozowanie AI + rekomendacje zakupowe (PO) dla Shopify",
+     "notes": "Brak dowodu na moduł porównania finansowania - niezweryfikowana",
+     "paid": "tak, od ok. $49/mies."
+    },
+    {
+     "name": "Fabrikator (Fabrikatör)",
+     "url": "https://www.sumtracker.com/blog/prediko-alternatives-for-shopify-multichannel-sellers",
+     "type": "partial",
+     "features_claimed": "Prognoza na poziomie SKU, automatyzacja PO, obsługa backorderów",
+     "notes": "Ceny w źródłach sprzeczne ($79 vs $99/mies.); cash-flow/finansowanie niezweryfikowane; przypisanie do konkretnego URL z porównań - search-summary",
+     "paid": "tak"
+    },
+    {
+     "name": "Inventory Planner (Sage)",
+     "url": "https://www.prediko.io/inventory-planner-alternatives",
+     "type": "partial",
+     "features_claimed": "Planowanie zapasów/zakupów (kategoria)",
+     "notes": "Widoczny tylko jako punkt odniesienia na stronie konkurenta; funkcje finansowo-gotówkowe niezweryfikowane",
+     "paid": "tak"
+    },
+    {
+     "name": "SoStocked",
+     "url": "https://www.distilledfunding.com/post/ai-cash-flow-tools-amazon-sellers",
+     "type": "partial",
+     "features_claimed": "Prognoza i uzupełnianie zapasów Amazon: tempo sprzedaży, sezonowość, bufor, warunki dostawcy; źródło sugeruje śledzenie zaliczki, salda, frachtu i cła dla każdego zamówienia",
+     "notes": "Porównanie finansowania i wariantów wielkości partii niezweryfikowane",
+     "paid": "tak"
+    },
+    {
+     "name": "RestockPro (eComEngine)",
+     "url": "https://www.ecomengine.com/restockpro",
+     "type": "partial",
+     "features_claimed": "Ilość i moment ponownego zamówienia z tempa SKU, lead time, sezonowości, limitów magazynowych Amazon; plan Plus: rentowność SKU",
+     "notes": "Brak modułu finansowania w wynikach",
+     "paid": "tak, od $49/mies., 30 dni trial"
+    },
+    {
+     "name": "Sellerboard (moduł Cashflow)",
+     "url": "https://www.distilledfunding.com/post/ai-cash-flow-tools-amazon-sellers",
+     "type": "partial",
+     "features_claimed": "Śledzenie i prognoza przepływów: wypłaty Amazon, wydatki, zakupy, inwestycje",
+     "notes": "Narzędzie raportowe, nie symulator wariantów zakupu - wg search-summary",
+     "paid": "tak"
+    },
+    {
+     "name": "Float",
+     "url": "https://us.fitgap.com/products/011672/float",
+     "type": "substitute",
+     "features_claimed": "Prognoza cash flow ze scenariuszami (zmiany terminów sprzedaży, wydatków, warunków płatności); wymienia zakupy zapasów jako decyzję do oceny; integracja Xero/QuickBooks",
+     "notes": "Nie udziela finansowania; spłaty trzeba wprowadzić ręcznie; ogólne narzędzie, nie modeluje progów cenowych/MOQ",
+     "paid": "tak, ok. $31/mies. (może być nieaktualne)"
+    },
+    {
+     "name": "Shopify Sidekick",
+     "url": "https://www.shopify.com/blog/enhanced-inventory-management",
+     "type": "substitute",
+     "features_claimed": "Odpowiada co zamówić na podstawie historii sprzedaży i tworzy szkic PO (wg Forthcast od edycji Spring '26)",
+     "notes": "Wg Forthcast (konkurent): brak ilości uwzględniających MOQ/lead time, brak towaru w drodze, brak sezonowości. Ważny substytut AI wbudowany w platformę z realnymi danymi sklepu.",
+     "paid": "w ramach Shopify"
+    },
+    {
+     "name": "Forthcast",
+     "url": "https://www.forthcast.io/blog/shopify-sidekick-vs-dedicated-inventory-apps",
+     "type": "partial",
+     "features_claimed": "Aplikacja prognozowa deklarująca ilości z uwzględnieniem MOQ i lead time, towar w drodze, sezonowość",
+     "notes": "Deklaracje vendora; finansowanie niezweryfikowane",
+     "paid": "tak (niezweryfikowane)"
+    },
+    {
+     "name": "Kickfurther",
+     "url": "https://www.kickfurther.com/blog/kickfurther-vs-clearco",
+     "type": "partial",
+     "features_claimed": "Finansowanie zapasów przez marketplace inwestorów; spłata powiązana z tempem sprzedaży; koszt ok. 1%/mies. wg źródła zewnętrznego",
+     "notes": "Blog vendora; kalkulatora porównawczego nie znaleziono w wynikach (niezweryfikowane czy jest za loginem)",
+     "paid": "finansowanie"
+    },
+    {
+     "name": "Wayflyer",
+     "url": "https://www.kickfurther.com/blog/wayflyer-alternatives",
+     "type": "partial",
+     "features_claimed": "Stała opłata ok. 2-10% (lub 5-10% wg innego źródła), finansowanie zapasów",
+     "notes": "Oferta jednej opcji, nie porównanie wariantów; narzędzia wyceny niezweryfikowane",
+     "paid": "finansowanie"
+    },
+    {
+     "name": "Clearco",
+     "url": "https://www.weareuncapped.com/blog/clearco-alternatives",
+     "type": "partial",
+     "features_claimed": "Opłaty ok. 3.5-12% zaliczki, cash advance 8-14%; spłata jako sweep przychodów",
+     "notes": "Źródło (Uncapped) jest konkurentem; zgłoszenia o potrąceniach powyżej umowy - niezweryfikowane",
+     "paid": "finansowanie"
+    },
+    {
+     "name": "Onramp Funds (przewodniki)",
+     "url": "https://www.onrampfunds.com/resources/comparing-5-inventory-financing-options-for-sellers",
+     "type": "partial",
+     "features_claimed": "Porównanie 5 typów finansowania zapasów z widełkami APR (np. MCA 70-350% APR)",
+     "notes": "Treść lendera, nie kalkulator integrujący wielkość partii",
+     "paid": "darmowe treści"
+    },
+    {
+     "name": "LedgerGurus Inventory Forecasting Template",
+     "url": "https://ledgergurus.com/inventory-forecasting-template/",
+     "type": "substitute",
+     "features_claimed": "Szablon: koszt zamówienia, zaliczki, wypływy gotówki, planowanie lead time",
+     "notes": "Najbliższy arkusz do MOQ vs gotówka; brak finansowania/porównania wariantów wg summary",
+     "paid": "darmowy (lead magnet)"
+    },
+    {
+     "name": "Clearco cash flow template",
+     "url": "https://clear.co/downloadables/ecommerce-cash-flow-statement-template",
+     "type": "substitute",
+     "features_claimed": "Miesięczny i tygodniowy model cash flow w Sheets/Excel",
+     "notes": "Ogólny szablon",
+     "paid": "darmowy"
+    },
+    {
+     "name": "A2X Inventory Accounting Workflow Template",
+     "url": "https://go.a2xaccounting.com/inventory-accounting-workflow-template",
+     "type": "substitute",
+     "features_claimed": "Google Sheet od prognozy przez zakup do sprzedaży",
+     "notes": "Workflow, nie symulator decyzji",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Inventory/cash flow Excel workbook (Gumroad)",
+     "url": "https://tarunvadher.gumroad.com/l/huonv",
+     "type": "substitute",
+     "features_claimed": "Zapasy, cash flow i sprzedaż w jednym pliku",
+     "notes": "Obsługa MOQ niezweryfikowana",
+     "paid": "$19.99"
+    },
+    {
+     "name": "AMZ Prep US Tariff Calculator 2026",
+     "url": "https://amzprep.com/us-reciprocal-tariffs-calculator/",
+     "type": "partial",
+     "features_claimed": "Cła importowe US (MFN, 301, 232, reciprocal, opłaty)",
+     "notes": "Tylko moduł landed cost",
+     "paid": "darmowy"
+    },
+    {
+     "name": "Amazon Seller Central Restock Inventory tool",
+     "url": "https://www.onrampfunds.com/resources/amazon-sellers-balance-inventory-buys-rank-velocity",
+     "type": "partial",
+     "features_claimed": "Darmowe rekomendacje uzupełnienia i prognoza popytu jednostkowego w Seller Central",
+     "notes": "Za loginem sprzedawcy; finansowanie i gotówka - brak w summary (niezweryfikowane)",
+     "paid": "darmowy dla sprzedawców"
+    }
+   ],
+   "novelty": "częściowa",
+   "demand_pl": "Dane pośrednie: bardzo gęste nasycenie treściami lenderów i fintechów o 'inventory financing' dla e-commerce (Onramp, Crestmont, Fundwell, QuickBridge, AF Commerce, Uncapped, Kickfurther, Shipfusion - search-summary) sugeruje komercyjną wartość tematu i reklamodawców, ale NIE mierzy wolumenu zapytań użytkowników. Wyszukiwanie w stylu Reddit nie zwróciło wątków (jedno zapytanie; brak wyniku != brak popytu). Brak danych o wolumenie słów kluczowych i promptów LLM - hipoteza / niezweryfikowane. Strukturalnie: grupa docelowa to mali sprzedawcy e-commerce w US - znacznie węższa niż decyzje konsumenckie; ten sam sprzedawca powtarza decyzję przy każdym PO, więc naturalnie migruje do płatnego narzędzia z integracją danych (Cogsy, Prediko, Sidekick) zamiast wracać do darmowej strony - co kłóci się z modelem 'wielu nowych użytkowników z jednym zadaniem'.",
+   "ai_risk_pl": "WYSOKIE. Problem jest czysto liczbowy i oparty na danych użytkownika (oferta dostawcy, tempo sprzedaży, warunki finansowania) - ChatGPT/Claude z wykonywaniem kodu zbuduje harmonogram gotówki i porówna warianty w rozmowie; AskBiz (wcześniej znaleziony) robi to jako AI. Shopify Sidekick od 2026 rekomenduje zamówienia i szkicuje PO na realnych danych sklepu (search-summary). Przewaga zewnętrznej strony: powtarzalna struktura, wymuszenie kompletu założeń (zaliczka/saldo/cło/sweep), przeliczenie stałej opłaty na efektywne APR, wykres wrażliwości. Nie należy przenosić logiki Google na asystentów AI: to, że AI odpowiada samo, nie oznacza, że poleci link - hipoteza, wymaga testów promptów.",
+   "maintenance_pl": "Średnie, o ile stawki są wejściami użytkownika. Zmienne 2025-2026: (1) taryfy US bardzo niestabilne - wyniki mówią o wygaśnięciu dopłaty Section 122 (24.07.2026) i zastąpieniu jej cłem Section 301 'forced-labor' dla ~60 gospodarek, a status de minimis jest w źródłach sprzeczny; co najmniej jeden kalkulator (TariffSnap) pokazuje nieaktualne stawki (search-summary) - wbudowana baza HTS = wysokie ryzyko błędu, lepiej pole '% cła' + link do CBP/brokera; (2) opłaty Amazon: Aged Inventory Surcharge i opłaty za usunięcie zmienione w styczniu 2026, źródła podają sprzeczne stawki; (3) MPF/HMF FY2026; (4) widełki opłat finansowania (Wayflyer 2-10%, Clearco 3.5-12%/8-14%, Kickfurther ~1%/mies.) - tylko jako orientacyjne domyślne, rynek RBF szybko się zmienia; (5) Shopify Stocky wycofywany 31.08.2026 - zmiana krajobrazu aplikacji. Regulacyjnie: treść finansowa (kredyty) - unikać rekomendowania konkretnych lenderów jako porady.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Logika ma realne sprzężenia (sweep spłaty -> budżet reklam -> tempo -> czas trzymania -> koszt magazynu/finansowania), więc to nie są sklejone kalkulatory. Nie znaleziono bezpośredniego konkurenta w badanym zakresie jako DARMOWEGO pojedynczego narzędzia łączącego progi cenowe, typ finansowania, ryzyko tempa sprzedaży i dołek gotówki; jednak płatne narzędzia (Cogsy, 8fig - wcześniej znaleziony, Float) i platformowe AI (Sidekick) pokrywają znaczną część, a asystenci AI łatwo to policzą. Do tego: wąska grupa B2B, powtarzalna decyzja (użytkownik przejdzie do płatnej aplikacji), wysoka wrażliwość na niestabilne dane taryfowe. W obecnym kształcie (z reklamami, zwrotami, marżą, płynnością naraz) to zbyt szeroki, 'konsultingowy' model. Zmodyfikować do węższych, jednorazowych decyzji z jasnym progiem rentowności (patrz T-S5-R1..R3), stawki taryf i finansowania trzymać jako wejścia. Kierunek 'taryfowy pre-buy' odrzucony jako samodzielny: ≥9 darmowych kalkulatorów taryf w jednym wyszukiwaniu, a reżim zmienia się co kilka miesięcy.",
+   "search_scope_pl": "10 zapytań WebSearch (6 extended, 4 standard), tylko podsumowania wyników (search-summary; WebFetch niedostępny - żadna strona nie została otwarta, żaden formularz nie testowany). Zakres: aplikacje planowania zapasów Shopify (Prediko, Fabrikator, Cogsy, Inventory Planner, Forthcast, Verve), narzędzia Amazon (SoStocked, RestockPro, Sellerboard, Seller Central Restock), cash-flow (Float; Fathom nie pojawił się w wynikach - niezweryfikowany), finansowanie (Wayflyer, Clearco, Kickfurther, Onramp, Uncapped; Amazon Lending nie pojawił się w wynikach - niezweryfikowany), szablony MOQ/cash flow, kalkulatory taryf 2026, newsvendor, Amazon aged inventory, Shopify Sidekick, fraza w stylu Reddit. Nie sprawdzono: Jungle Scout/Helium 10 (wyniki nie zwróciły ich funkcji cash/finansowania - niezweryfikowane), Fathom, Amazon Lending, wolumenów słów kluczowych, testów promptów w ChatGPT/Perplexity.",
+   "confidence": "medium"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "T-S5-R1",
+   "name_en": "Bulk Order vs Financing Break-Even Simulator",
+   "family": "Small business / e-commerce: zakupy zapasów i kapitał obrotowy",
+   "user_and_moment": "Mały sprzedawca DTC/Amazon w US, który właśnie dostał od dostawcy wycenę z progami ilościowymi/MOQ i ofertę finansowania (np. Wayflyer, Shopify Capital, Kickfurther), na kilka dni przed wpłatą zaliczki.",
+   "sample_prompt_en": "My supplier offers $5.10/unit if I order 3,000 instead of 1,000 at $6.20. I'd need a $10k advance with a 6% flat fee for the bigger order. I sell about 250 units a month. Is the bigger order actually worth it?",
+   "decision_problem": "Czy większa partia z rabatem, sfinansowana zewnętrznie, daje wyższy zysk netto niż mniejsza partia z gotówki - po uwzględnieniu efektywnego kosztu finansowania, kosztu trzymania i ryzyka wolniejszej sprzedaży - oraz przy jakim tempie sprzedaży przewaga się odwraca.",
+   "combined_domains": "progi cenowe/MOQ, landed cost (fracht, % cła jako wejście, MPF/HMF), struktury finansowania (stała opłata, revenue-share/sweep, APR, marketplace z płatnością od sprzedaży), koszty magazynowania i likwidacji, niepewność popytu, harmonogram gotówki (zaliczka/saldo/fracht/cło)",
+   "variants_compared": "A: mała partia z gotówki; B: duża partia z finansowaniem (wybór struktury); C: duża partia z podziałem dostaw/częściową zaliczką; D: mała partia + ponowne zamówienie z ryzykiem braków lub podwyżki ceny",
+   "key_dependencies": "tempo sprzedaży -> miesiące trzymania -> magazyn, likwidacja, czas finansowania; % sweep -> gotówka na reklamy -> tempo; czas spłaty -> efektywne APR stałej opłaty; terminy płatności -> dołek gotówki",
+   "main_outputs": "zysk netto per wariant w horyzoncie, najniższy stan gotówki i jego data, efektywne APR każdej oferty, próg miesięcznej sprzedaży poniżej którego duża partia traci, maksymalna akceptowalna opłata, wykres tornado (tempo, rabat, opłata, magazyn), lista 'co zmienia wynik'",
+   "reason_external_site": "Wymusza komplet założeń, których rozmowa z AI często pomija (zaliczka vs saldo, sweep, przeliczenie stałej opłaty na APR), daje powtarzalny wynik i wykres wrażliwości; asystent AI może to policzyć, ale niespójnie - przewaga słaba (hipoteza).",
+   "data_sources": "Wejścia użytkownika; orientacyjne widełki opłat finansowania z publicznych treści (search-summary: Uncapped, Kickfurther, Onramp) wyraźnie oznaczone jako przykładowe; MPF/HMF FY2026 (do weryfikacji w CBP); bez wbudowanej bazy HTS.",
+   "user_data": "wycena dostawcy (progi, MOQ, terminy płatności), tempo sprzedaży i jego rozrzut, marża/cena, oferta finansowania, koszt magazynu, % zwrotów (opcjonalnie)",
+   "nearest_competition": [
+    {
+     "name": "Cogsy",
+     "url": "https://www.sumtracker.com/blog/prediko-alternatives-for-shopify-multichannel-sellers",
+     "type": "partial",
+     "features_claimed": "łączy zapasy z planowaniem gotówki, scenariusze",
+     "paid": "od ok. $199/mies.",
+     "notes": "porównanie ofert finansowania niezweryfikowane"
+    },
+    {
+     "name": "Float",
+     "url": "https://us.fitgap.com/products/011672/float",
+     "type": "substitute",
+     "features_claimed": "scenariusze cash flow, w tym zakupy zapasów",
+     "paid": "ok. $31/mies.",
+     "notes": "ogólne narzędzie, bez progów MOQ"
+    },
+    {
+     "name": "Uncapped - przewodnik po kosztach finansowania",
+     "url": "https://www.weareuncapped.com/blog/clearco-alternatives",
+     "type": "partial",
+     "features_claimed": "opłaty i przeliczanie kosztu finansowania",
+     "paid": "darmowe treści",
+     "notes": "treść konkurenta-lendera"
+    },
+    {
+     "name": "LedgerGurus Inventory Forecasting Template",
+     "url": "https://ledgergurus.com/inventory-forecasting-template/",
+     "type": "substitute",
+     "features_claimed": "koszt zamówienia, zaliczki, wypływy gotówki, lead time",
+     "paid": "darmowy"
+    }
+   ],
+   "already_solved": "Fragmenty: kalkulatory rabatów ilościowych (Toolsque, ActiveCalculator, Calculator Academy - wcześniej znalezione) bez finansowania i trzymania; przeliczenia APR w treściach lenderów; płatne planery (Cogsy, 8fig, Float); szablony arkuszy; AI (AskBiz, Sidekick, ChatGPT).",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (10 zapytań, tylko search-summary) dla darmowego narzędzia łączącego progi cenowe × strukturę finansowania × ryzyko tempa × dołek gotówki z progiem rentowności. Luka jest wąska i łatwa do zamknięcia przez AI.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: nasycenie treściami lenderów o finansowaniu zapasów (search-summary). Brak danych o wolumenie i promptach - hipoteza / niezweryfikowane. Wąska grupa B2B.",
+   "ad_environment": "Reklamodawcy fintech/lending dla e-commerce prawdopodobnie aktywni (hipoteza, brak danych CPC/RPM); AdSense na stronie narzędzia może mieć niskie wyświetlenia na użytkownika; afiliacja lenderów możliwa, ale nie może ratować modelu.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Najlepiej zachowuje wartość ziarna przy niskim utrzymaniu, ale ryzyko samodzielnego rozwiązania przez AI i wąski popyt wymagają walidacji (wolumen fraz typu 'bulk order financing', test promptów, czy AI linkuje narzędzia) przed budową. Może współdzielić silnik z R2.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S5-R2",
+   "name_en": "Holiday One-Shot Inventory Buy Sizer",
+   "family": "Small business / e-commerce: zakupy sezonowe pod niepewnością",
+   "user_and_moment": "Sprzedawca w lipcu-wrześniu składający ostatnie zamówienie na Q4 z 60-90-dniowym lead time, bez możliwości uzupełnienia w sezonie.",
+   "sample_prompt_en": "I'm placing my last holiday order from China this week. I sold 1,800 units last Q4 and expect growth but I'm not sure. MOQ is 1,000 per color. How many should I order, and what happens to leftovers in January?",
+   "decision_problem": "Ile zamówić jednorazowo przed sezonem, gdy niedobór oznacza utraconą marżę, a nadwyżka - przecenę, likwidację, opłaty magazynowe lub przeniesienie na kolejny rok, przy ograniczeniu gotówki i opcjonalnym finansowaniu.",
+   "combined_domains": "model newsvendor (scenariusze popytu), progi MOQ/cenowe, ścieżki wyjścia z nadwyżki (przecena, likwidacja, Amazon aged surcharge/3PL, carry-over), finansowanie i harmonogram gotówki",
+   "variants_compared": "ilości: ostrożna / bazowa / agresywna / optimum newsvendor; ścieżki nadwyżki: przecena w styczniu vs likwidacja vs przechowanie do kolejnego sezonu; z finansowaniem vs bez",
+   "key_dependencies": "wartość odzysku nadwyżki zależy od ścieżki i czasu trzymania (opłaty magazynowe) -> zmienia koszt nadmiaru -> zmienia optymalną ilość; MOQ zaokrągla ilość; ograniczenie gotówki/finansowania obcina górę",
+   "main_outputs": "rekomendowany przedział ilości, oczekiwany zysk i rozkład (zły/bazowy/dobry sezon), oczekiwana nadwyżka i jej koszt per ścieżka, dołek gotówki, wrażliwość na prognozę i wartość odzysku",
+   "reason_external_site": "Newsvendor jest podręcznikowy, ale poprawne oszacowanie wartości odzysku jest trudne (źródło akademickie w wynikach: intuicyjne metody szacowania salvage prowadzą do zbyt dużych zamówień - search-summary); narzędzie z modelem ścieżek wyjścia dodaje strukturę, której ogólny kalkulator nie ma.",
+   "data_sources": "Wejścia użytkownika (historia sezonu, niepewność), opcjonalne tabele opłat Amazon aged inventory (aktualizowane, oznaczone datą), ogólne założenia przecen",
+   "user_data": "sprzedaż w poprzednim sezonie, oczekiwany wzrost i niepewność, koszt/cena, MOQ, opcje wyjścia z nadwyżki, gotówka i finansowanie",
+   "nearest_competition": [
+    {
+     "name": "MetricGate Inventory Newsvendor calculator",
+     "url": "https://metricgate.com/calculator/inventory-newsvendor",
+     "type": "partial",
+     "features_claimed": "model jednookresowy, critical ratio, Q* dla rozkładu normalnego/empirycznego",
+     "paid": "darmowy (niezweryfikowane)",
+     "notes": "statystyka bez ścieżek wyjścia, finansowania i gotówki"
+    },
+    {
+     "name": "Prediko",
+     "url": "https://www.prediko.io/forecasting-demand-planning/inventory-planning-software",
+     "type": "partial",
+     "features_claimed": "prognozowanie AI, rekomendacje zakupowe",
+     "paid": "od ok. $49/mies.",
+     "notes": "nastawione na SKU uzupełniane, sezonowy one-shot niezweryfikowany"
+    },
+    {
+     "name": "Forthcast",
+     "url": "https://www.forthcast.io/blog/shopify-sidekick-vs-dedicated-inventory-apps",
+     "type": "partial",
+     "features_claimed": "sezonowość, MOQ i lead time w ilościach (deklaracje vendora)",
+     "paid": "tak (niezweryfikowane)"
+    }
+   ],
+   "already_solved": "Teoria i generyczne kalkulatory newsvendor (MetricGate), płatne aplikacje prognozowe, konsultanci, AI z kodem.",
+   "gap": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie dla połączenia newsvendor + MOQ + modelowanych ścieżek nadwyżki + gotówka (1 zapytanie bezpośrednie, search-summary; niska pewność).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Brak danych bezpośrednich; popyt prawdopodobnie sezonowy (lipiec-październik) - hipoteza / niezweryfikowane.",
+   "ad_environment": "Jak R1 (reklamodawcy narzędzi e-commerce, logistyki, finansowania - hipoteza); sezonowy ruch.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Ciekawy jako tryb silnika R1 (ten sam model gotówki), ale sezonowość, wąska grupa i podręcznikowość dla AI sprawiają, że nie powinien być pierwszym pilotem.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "T-S5-R3",
+   "name_en": "FBA Aged Inventory Exit Planner (Hold vs Discount vs Liquidate vs Remove)",
+   "family": "Small business / e-commerce: zarządzanie nadmiarowym zapasem na marketplace",
+   "user_and_moment": "Sprzedawca Amazon FBA, który widzi w Seller Central jednostki zbliżające się do kolejnego progu Aged Inventory Surcharge i musi zdecydować przed naliczeniem kolejnej miesięcznej opłaty.",
+   "sample_prompt_en": "I have 1,200 units in FBA that are about to hit 271 days. Should I cut the price, run more ads, send them to liquidation, or pull them out and sell on Shopify?",
+   "decision_problem": "Która ścieżka wyjścia (trzymać, obniżyć cenę + reklamy, likwidacja Amazon, usunięcie do 3PL i sprzedaż w innym kanale, utylizacja) maksymalizuje odzyskaną gotówkę netto w czasie, uwzględniając narastające co miesiąc opłaty wiekowe i jednorazowe opłaty usunięcia/likwidacji.",
+   "combined_domains": "tabele opłat Amazon (aged inventory surcharge per pasmo wiekowe, większa z opłat per jednostkę/per ft³, opłaty usunięcia/utylizacji/likwidacji), elastyczność ceny i reklam, alternatywny kanał (fracht do 3PL, prowizje), oś czasu pasm wiekowych",
+   "variants_compared": "hold; discount X% (+ad spend); liquidation; removal + resale w innym kanale; disposal; kombinacje (część przecenić, resztę usunąć)",
+   "key_dependencies": "tempo sprzedaży po przecenie -> ile jednostek przekroczy kolejne pasmo -> wysokość przyszłych opłat; rozmiar produktu decyduje czy wiąże opłata per jednostkę czy per ft³; opłata usunięcia + fracht + prowizje innego kanału vs odzysk z likwidacji",
+   "main_outputs": "odzysk netto per ścieżka w 30/60/90 dni, data i koszt przekroczenia kolejnych pasm, próg ceny poniżej którego lepsza jest likwidacja/usunięcie, wrażliwość na tempo po przecenie",
+   "reason_external_site": "Opłaty Amazon zmieniają się (styczeń 2026: zmiany surcharge i opłat usunięcia) a źródła podają sprzeczne stawki (search-summary) - aktualna, datowana i cytowana tabela opłat daje przewagę nad AI z nieaktualną wiedzą; struktura czasu pasm jest trudna do policzenia 'w głowie'.",
+   "data_sources": "Publiczne strony opłat Amazon/Seller Central (dostępność bez logowania niezweryfikowana), monitorowane automatycznie (n8n) z ręczną akceptacją zmian; wejścia użytkownika",
+   "user_data": "liczba jednostek per wiek, wymiary/waga, cena, koszt, tempo sprzedaży, szacowana elastyczność, koszty alternatywnego kanału",
+   "nearest_competition": [
+    {
+     "name": "SalesDuo - Liquidations vs Removal Orders (2026)",
+     "url": "https://salesduo.com/blog/amazon-fba-liquidations-vs-removal-orders/",
+     "type": "partial",
+     "features_claimed": "przewodnik decyzyjny likwidacja vs usunięcie",
+     "paid": "darmowe treści (agencja)",
+     "notes": "treść, nie kalkulator (wg summary)"
+    },
+    {
+     "name": "SupplyKick - aging FBA inventory removal",
+     "url": "https://www.supplykick.com/blog/aging-fba-inventory-removal",
+     "type": "partial",
+     "features_claimed": "strategie dla starzejącego się zapasu",
+     "paid": "darmowe treści (agencja)"
+    },
+    {
+     "name": "adbrew - Amazon aged inventory surcharge",
+     "url": "https://adbrew.io/blog/amazon-aged-inventory-surcharge",
+     "type": "partial",
+     "features_claimed": "opis surcharge i ram decyzji",
+     "paid": "darmowe treści"
+    },
+    {
+     "name": "RestockPro (eComEngine)",
+     "url": "https://www.ecomengine.com/restockpro",
+     "type": "partial",
+     "features_claimed": "limity magazynowe, rentowność SKU",
+     "paid": "od $49/mies.",
+     "notes": "obsługa nadmiaru/likwidacji niezweryfikowana"
+    }
+   ],
+   "already_solved": "Liczne przewodniki agencji z ramą decyzji (porównaj miesięczną opłatę z odzyskiem); wewnętrzne rekomendacje Seller Central dla nadmiarowego zapasu prawdopodobnie istnieją - hipoteza / niezweryfikowane (za loginem); płatne narzędzia Amazon.",
+   "gap": "W jednym wyszukiwaniu nie pojawił się dedykowany kalkulator 2026 porównujący wszystkie ścieżki z osią czasu pasm. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (1 zapytanie, search-summary, niska pewność; narzędzia za loginem niezweryfikowane).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: wiele agencji i vendorów publikuje treści o surcharge/likwidacji w 2026 (SalesDuo, SupplyKick, Feedvisor, AMZ Prep, MyAmazonGuy, adbrew - search-summary), co sugeruje powtarzalny ból sprzedawców. Brak wolumenów - hipoteza.",
+   "ad_environment": "Reklamodawcy usług dla sprzedawców Amazon (agencje, 3PL, likwidatorzy, narzędzia) - hipoteza, brak danych RPM.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Najlepiej wykorzystuje tło właściciela (e-commerce, logistyka) i ma realną przewagę danych (aktualne opłaty), ale zależy od jednej platformy, której opłaty zmieniają się co najmniej corocznie; trzeba sprawdzić, czy Seller Central już nie podaje tej rekomendacji natywnie i czy strony opłat da się monitorować automatycznie.",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+   "url": "https://www.sumtracker.com/blog/prediko-alternatives-for-shopify-multichannel-sellers",
+   "competitor": "Cogsy",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "powiązanie zapasów z planowaniem gotówki, scenariusze (opóźnienie dostawcy), cena, PO/księgowość",
+   "access_limits": "płatne (od ok. $199/mies.), za loginem; tylko search-summary z porównań konkurentów",
+   "conclusion": "PARTIAL: najbliższa aplikacja zapasowa łącząca zapasy z gotówką; porównanie finansowania, reklam i zwrotów niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+   "url": "https://www.prediko.io/forecasting-demand-planning/inventory-planning-software",
+   "competitor": "Prediko",
+   "related_idea": "S5; T-S5-R2",
+   "features_checked": "prognoza AI, rekomendacje zakupowe, cena",
+   "access_limits": "płatne (od ok. $49/mies.); strona vendora, search-summary",
+   "conclusion": "PARTIAL: zakupy i prognoza, brak dowodu na moduł finansowania/gotówki (niezweryfikowana)",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+   "url": "https://www.sumtracker.com/blog/prediko-alternatives-for-shopify-multichannel-sellers",
+   "competitor": "Fabrikator (Fabrikatör)",
+   "related_idea": "S5",
+   "features_checked": "prognoza SKU, automatyzacja PO, backordery, cena",
+   "access_limits": "płatne ($79-99/mies., źródła sprzeczne); search-summary",
+   "conclusion": "PARTIAL: PO i prognoza; cash flow i finansowanie niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+   "url": "https://www.prediko.io/inventory-planner-alternatives",
+   "competitor": "Inventory Planner",
+   "related_idea": "S5",
+   "features_checked": "tylko obecność jako punkt odniesienia",
+   "access_limits": "płatne; funkcje niezweryfikowane (strona konkurenta)",
+   "conclusion": "PARTIAL (zakładany): planowanie zakupów; funkcje gotówkowe niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+   "url": "https://www.getverveai.com/blog/shopify-inventory-forecasting-app-comparison",
+   "competitor": "Verve AI",
+   "related_idea": "S5",
+   "features_checked": "prognozowanie zapasów Shopify (kategoria)",
+   "access_limits": "płatne (niezweryfikowane); tylko tytuł wyniku",
+   "conclusion": "PARTIAL (zakładany): prognoza; funkcje finansowe niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://www.distilledfunding.com/post/ai-cash-flow-tools-amazon-sellers",
+   "competitor": "SoStocked",
+   "related_idea": "S5",
+   "features_checked": "prognoza, sezonowość, bufor, dostawca; śledzenie zaliczki/salda/frachtu/cła",
+   "access_limits": "płatne; search-summary z bloga podmiotu finansującego",
+   "conclusion": "PARTIAL: uzupełnianie zapasów Amazon; porównanie wariantów partii i finansowania niezweryfikowane",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://www.ecomengine.com/restockpro",
+   "competitor": "RestockPro (eComEngine)",
+   "related_idea": "S5; T-S5-R3",
+   "features_checked": "ilość/moment zamówienia, lead time, sezonowość, limity magazynowe Amazon, rentowność SKU (Plus), cena",
+   "access_limits": "płatne od $49/mies., trial 30 dni",
+   "conclusion": "PARTIAL: replenishment; brak modułu finansowania w wynikach",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://www.distilledfunding.com/post/ai-cash-flow-tools-amazon-sellers",
+   "competitor": "Sellerboard (Cashflow module)",
+   "related_idea": "S5",
+   "features_checked": "śledzenie i prognoza przepływów, zakupy, wypłaty",
+   "access_limits": "płatne; search-summary",
+   "conclusion": "PARTIAL: raportowanie cash flow, nie symulacja wariantów zakupu",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://www.onrampfunds.com/resources/amazon-sellers-balance-inventory-buys-rank-velocity",
+   "competitor": "Amazon Seller Central Restock Inventory tool / Unit Demand Forecast",
+   "related_idea": "S5",
+   "features_checked": "darmowe rekomendacje uzupełnienia, prognoza popytu",
+   "access_limits": "za loginem Seller Central; niezweryfikowane bezpośrednio",
+   "conclusion": "PARTIAL: darmowy replenishment natywny; brak finansowania/gotówki w summary",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://amazon-consultant.co.uk/tools/restock-forecasting/",
+   "competitor": "Amazon Consultant Restock Forecasting Tool",
+   "related_idea": "S5",
+   "features_checked": "tylko tytuł: narzędzie do prognozy uzupełnień",
+   "access_limits": "rynek UK; funkcje niezweryfikowane",
+   "conclusion": "PARTIAL (zakładany): darmowy kalkulator restock, bez dowodu na finansowanie",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+   "url": "https://novadata.io/resources/blog/best-amazon-inventory-management-tools",
+   "competitor": "Jungle Scout / Helium 10 (restock/profitability)",
+   "related_idea": "S5",
+   "features_checked": "funkcje cash/finansowania - wyniki ich nie zwróciły",
+   "access_limits": "płatne; niezweryfikowane",
+   "conclusion": "Niezweryfikowane: wyniki nie potwierdziły ani nie wykluczyły modułów gotówkowych",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Float Fathom cash flow scenario planning inventory purchase loan what-if small business",
+   "url": "https://us.fitgap.com/products/011672/float",
+   "competitor": "Float",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "scenariusze cash flow, zakupy zapasów, integracje, finansowanie, cena",
+   "access_limits": "płatne (~$31/mies., może być nieaktualne); search-summary z katalogów i recenzji",
+   "conclusion": "SUBSTITUTE: ogólne scenariusze gotówki, spłaty wprowadzane ręcznie, brak progów MOQ",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Wayflyer vs Clearco vs Kickfurther inventory financing cost comparison calculator 2026",
+   "url": "https://www.kickfurther.com/blog/kickfurther-vs-clearco",
+   "competitor": "Kickfurther",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "model finansowania, koszt (~1%/mies. wg źródła zewn.), spłata zależna od sprzedaży, kalkulator",
+   "access_limits": "blog vendora; kalkulator nie pojawił się (niezweryfikowane czy istnieje za loginem)",
+   "conclusion": "PARTIAL: wycena jednej opcji finansowania, nie porównanie wariantów",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Wayflyer vs Clearco vs Kickfurther inventory financing cost comparison calculator 2026",
+   "url": "https://www.kickfurther.com/blog/wayflyer-alternatives",
+   "competitor": "Wayflyer",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "stała opłata 2-10% / 5-10%, próg wejścia, finansowanie zapasów",
+   "access_limits": "dane z bloga konkurenta; narzędzia wyceny niezweryfikowane",
+   "conclusion": "PARTIAL: jedna opcja finansowania",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Wayflyer vs Clearco vs Kickfurther inventory financing cost comparison calculator 2026",
+   "url": "https://www.weareuncapped.com/blog/clearco-alternatives",
+   "competitor": "Clearco (+ Uncapped jako źródło porównania)",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "opłaty 3.5-12%, cash advance 8-14%, sweep, przeliczenie na koszt roczny",
+   "access_limits": "źródło jest konkurentem-lenderem; search-summary",
+   "conclusion": "PARTIAL: dane o kosztach finansowania; nie znaleziono kalkulatora porównawczego 3 dostawców",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Wayflyer vs Clearco vs Kickfurther inventory financing cost comparison calculator 2026",
+   "url": "https://ask-luca.com/blogs/wayflyer-alternatives",
+   "competitor": "Ask Luca (ranking dostawców finansowania)",
+   "related_idea": "S5",
+   "features_checked": "tylko tytuł: ranking 10 dostawców wg opłat",
+   "access_limits": "funkcje niezweryfikowane",
+   "conclusion": "PARTIAL (zakładany): porównanie dostawców, nie decyzji zakupowej",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I take a loan to buy more inventory bulk order MOQ discount cash flow reddit ecommerce",
+   "url": "https://www.onrampfunds.com/resources/comparing-5-inventory-financing-options-for-sellers",
+   "competitor": "Onramp Funds (przewodniki)",
+   "related_idea": "S5",
+   "features_checked": "porównanie typów finansowania, widełki APR",
+   "access_limits": "treść lendera, darmowa",
+   "conclusion": "PARTIAL: treść edukacyjna; brak wątków Reddit w wynikach",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "MOQ inventory cash flow spreadsheet template ecommerce order quantity vs cash runway",
+   "url": "https://ledgergurus.com/inventory-forecasting-template/",
+   "competitor": "LedgerGurus Inventory Forecasting Template",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "koszt zamówienia, zaliczki, wypływy, lead time",
+   "access_limits": "darmowy szablon (prawdopodobnie lead magnet - niezweryfikowane)",
+   "conclusion": "SUBSTITUTE: najbliższy arkusz MOQ-gotówka, bez porównania finansowania",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "MOQ inventory cash flow spreadsheet template ecommerce order quantity vs cash runway",
+   "url": "https://clear.co/downloadables/ecommerce-cash-flow-statement-template",
+   "competitor": "Clearco cash flow template",
+   "related_idea": "S5",
+   "features_checked": "model cash flow miesięczny/tygodniowy",
+   "access_limits": "darmowy",
+   "conclusion": "SUBSTITUTE: ogólny szablon",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "MOQ inventory cash flow spreadsheet template ecommerce order quantity vs cash runway",
+   "url": "https://go.a2xaccounting.com/inventory-accounting-workflow-template",
+   "competitor": "A2X Inventory Accounting Workflow Template",
+   "related_idea": "S5",
+   "features_checked": "workflow od prognozy do sprzedaży w Google Sheets",
+   "access_limits": "darmowy",
+   "conclusion": "SUBSTITUTE: workflow, nie symulator",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "MOQ inventory cash flow spreadsheet template ecommerce order quantity vs cash runway",
+   "url": "https://tarunvadher.gumroad.com/l/huonv",
+   "competitor": "Inventory/cash flow Excel workbook (Gumroad)",
+   "related_idea": "S5",
+   "features_checked": "zapasy, cash flow, sprzedaż w jednym pliku",
+   "access_limits": "płatny $19.99; obsługa MOQ niezweryfikowana",
+   "conclusion": "SUBSTITUTE",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Shopify Sidekick inventory reorder purchase order cash flow recommendations 2026",
+   "url": "https://www.shopify.com/blog/enhanced-inventory-management",
+   "competitor": "Shopify Sidekick",
+   "related_idea": "S5; T-S5-R1",
+   "features_checked": "rekomendacje zamówień z historii sprzedaży, szkic PO",
+   "access_limits": "w ramach Shopify; funkcje wg bloga Shopify, niezweryfikowane w panelu",
+   "conclusion": "SUBSTITUTE: platformowe AI na realnych danych; bez finansowania i (wg Forthcast) bez MOQ/lead time",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Shopify Sidekick inventory reorder purchase order cash flow recommendations 2026",
+   "url": "https://www.forthcast.io/blog/shopify-sidekick-inventory-what-it-can-and-cant-do",
+   "competitor": "Forthcast",
+   "related_idea": "S5; T-S5-R2",
+   "features_checked": "deklaracje: ilości z MOQ i lead time, towar w drodze, sezonowość",
+   "access_limits": "blog vendora; płatne (niezweryfikowane)",
+   "conclusion": "PARTIAL: prognoza/zakupy; finansowanie niezweryfikowane",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tariff landed cost calculator 2026 small importer de minimis ecommerce",
+   "url": "https://amzprep.com/us-reciprocal-tariffs-calculator/",
+   "competitor": "AMZ Prep US Tariff Calculator 2026",
+   "related_idea": "S5",
+   "features_checked": "MFN, 301, 232, reciprocal, MPF/HMF",
+   "access_limits": "darmowy; aktualność stawek niezweryfikowana",
+   "conclusion": "PARTIAL: tylko moduł landed cost",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tariff landed cost calculator 2026 small importer de minimis ecommerce",
+   "url": "https://ustariffcalc.com/",
+   "competitor": "US Import Tariff Calculator 2026 (ustariffcalc)",
+   "related_idea": "S5",
+   "features_checked": "cło importowe (tytuł)",
+   "access_limits": "darmowy; funkcje niezweryfikowane",
+   "conclusion": "PARTIAL: moduł cła",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tariff landed cost calculator 2026 small importer de minimis ecommerce",
+   "url": "https://tariffsnap.com/tariff-calculator/",
+   "competitor": "TariffSnap",
+   "related_idea": "S5",
+   "features_checked": "landed cost dla e-commerce; aktualność stawek",
+   "access_limits": "darmowy; wg summary nadal opisuje Section 122 jako obowiązujące (nieaktualne)",
+   "conclusion": "PARTIAL; dowód wysokiego ryzyka utrzymania danych taryfowych",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "tariff landed cost calculator 2026 small importer de minimis ecommerce",
+   "url": "https://airliftusa.com/tariff-simulator",
+   "competitor": "Airlift USA Tariff Simulator",
+   "related_idea": "S5",
+   "features_checked": "cła i opłaty dla przesyłek komercyjnych niezależnie od wartości",
+   "access_limits": "darmowy (podmiot logistyczny)",
+   "conclusion": "PARTIAL: moduł landed cost",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "seasonal inventory order quantity calculator overstock liquidation stockout newsvendor ecommerce Q4",
+   "url": "https://metricgate.com/calculator/inventory-newsvendor",
+   "competitor": "MetricGate Inventory Newsvendor",
+   "related_idea": "T-S5-R2",
+   "features_checked": "critical ratio, Q* normalny/empiryczny, wrażliwość",
+   "access_limits": "darmowy (niezweryfikowane); vendor promuje własne kalkulatory",
+   "conclusion": "PARTIAL: statystyczny rdzeń bez ścieżek nadwyżki, finansowania i gotówki",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon aged inventory liquidate vs removal vs keep storage fee calculator 2026",
+   "url": "https://salesduo.com/blog/amazon-fba-liquidations-vs-removal-orders/",
+   "competitor": "SalesDuo (przewodnik)",
+   "related_idea": "T-S5-R3",
+   "features_checked": "rama decyzji likwidacja vs usunięcie 2026",
+   "access_limits": "darmowa treść agencji",
+   "conclusion": "PARTIAL: treść, kalkulatora nie znaleziono",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon aged inventory liquidate vs removal vs keep storage fee calculator 2026",
+   "url": "https://www.supplykick.com/blog/aging-fba-inventory-removal",
+   "competitor": "SupplyKick (przewodnik)",
+   "related_idea": "T-S5-R3",
+   "features_checked": "strategie dla starzejącego się zapasu FBA",
+   "access_limits": "darmowa treść agencji",
+   "conclusion": "PARTIAL: treść",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon aged inventory liquidate vs removal vs keep storage fee calculator 2026",
+   "url": "https://adbrew.io/blog/amazon-aged-inventory-surcharge",
+   "competitor": "adbrew (przewodnik)",
+   "related_idea": "T-S5-R3",
+   "features_checked": "opis Aged Inventory Surcharge",
+   "access_limits": "darmowa treść",
+   "conclusion": "PARTIAL: treść",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "Amazon aged inventory liquidate vs removal vs keep storage fee calculator 2026",
+   "url": "https://myamazonguy.com/fba/amazon-long-term-storage-fees/",
+   "competitor": "My Amazon Guy (przewodnik)",
+   "related_idea": "T-S5-R3",
+   "features_checked": "stawki opłat długoterminowych (sprzeczne między źródłami)",
+   "access_limits": "darmowa treść",
+   "conclusion": "PARTIAL: treść; sprzeczne stawki = argument za utrzymywaną tabelą opłat",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "[extended] Prediko Fabrikator Cogsy inventory planning cash flow purchase order budget Shopify",
+  "[extended] Wayflyer vs Clearco vs Kickfurther inventory financing cost comparison calculator 2026",
+  "[extended] should I take a loan to buy more inventory bulk order MOQ discount cash flow reddit ecommerce",
+  "[extended] SoStocked OR Inventory Planner OR Jungle Scout OR Helium 10 restock cash flow forecast purchase order financing Amazon seller tool",
+  "[extended] tariff landed cost calculator 2026 small importer de minimis ecommerce",
+  "[standard] MOQ inventory cash flow spreadsheet template ecommerce order quantity vs cash runway",
+  "[standard] Float Fathom cash flow scenario planning inventory purchase loan what-if small business",
+  "[standard] seasonal inventory order quantity calculator overstock liquidation stockout newsvendor ecommerce Q4",
+  "[standard] Amazon aged inventory liquidate vs removal vs keep storage fee calculator 2026",
+  "[extended] Shopify Sidekick inventory reorder purchase order cash flow recommendations 2026"
+ ]
+}

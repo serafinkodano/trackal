@@ -1,0 +1,96 @@
+{
+ "id": "INS-03",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "evenstate - keep your home insurable (niezależny rzecznik właściciela domu w sprawie ubezpieczalności przy ryzyku pożarowym)",
+   "url": "https://www.evenstate.ai/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: serwis przedstawia się jako niezależny rzecznik właściciela domu w sprawie ubezpieczalności przy ryzyku pożarowym. Pomaga zakwestionować na piśmie wildfire score, zażądać ponownej oceny po udokumentowaniu prac zabezpieczających i odebrać rabaty za mitygację. Fragmenty strony w streszczeniu nie wspominają o huraganach, FAIR+DIC, E&S, udziale własnym przy wietrze ani o sprzedaży. Drugie wyszukiwanie, nastawione na evenstate, nie zwróciło żadnych wyników o tym serwisie.",
+   "what_to_check_manually_pl": "Otworzyć stronę i sprawdzić: (1) czy jest kalkulator lub model kosztów porównujący FAIR+DIC, E&S i admitted po zabezpieczeniu; (2) czy liczy koszt i grant na zabezpieczenie oraz rabat w horyzoncie wieloletnim; (3) czy obejmuje wiatr i huragany oraz sprzedaż; (4) model biznesowy (płatny, prowizje od partnerów); (5) czy jest wsparcie AI."
+  },
+  {
+   "name": "FireRisk.ai - Fire Insurance / Keep Your Insurance (non-renewal playbook, appeal tool, mitigation plan)",
+   "url": "https://firerisk.ai/keep-your-insurance",
+   "classification": "partial",
+   "evidence_pl": "search-summary: darmowy wildfire risk score dla dowolnego adresu w US, plan mitygacji i porady ubezpieczeniowe. Do tego playbook na wypadek nieodnowienia (prawa, terminy, 6 kroków powrotu do ochrony), darmowe narzędzie do odwołań, poradnik kosztów ('cheapest legitimate options') i recenzja FAIR Plan (69/100). Serwis może dostawać wynagrodzenie od partnerów. W streszczeniach nie ma śladu modelu kosztów łączącego zabezpieczenie, FAIR+DIC, E&S, wyższy udział własny przy wietrze i sprzedaż w horyzoncie 1-5 lat. Strony: https://firerisk.ai/fire-insurance, https://firerisk.ai/fire-insurance/cancelled-dropped, https://firerisk.ai/fire-insurance/companies/fair-plan",
+   "what_to_check_manually_pl": "Najgroźniejszy nowy kandydat, bo łączy ryzyko, mitygację i nieodnowienie. Sprawdzić, czy 'mitigation plan' zawiera koszty, rabaty i payback. Sprawdzić, czy poradnik kosztów ma interaktywne porównanie ścieżek (FAIR+DIC vs E&S vs admitted) z wyceną w USD. Sprawdzić, czy jest horyzont wieloletni, scenariusz sprzedaży, wymogi kredytodawcy i ekspozycja przy katastrofie. Sprawdzić zasięg: tylko pożary czy też wiatr."
+  },
+  {
+   "name": "Florida OIR - Homeowners Insurance Choices (porównanie zatwierdzonych stawek wg hrabstwa)",
+   "url": "https://www.coveragecat.com/blog/best-homeowners-insurance-florida",
+   "classification": "partial",
+   "evidence_pl": "search-summary (CoverageCat powołuje się na FLOIR): narzędzie regulatora porównuje zatwierdzone stawki ubezpieczycieli według hrabstwa i poziomu ochrony. Pokazuje stawki taryfowe, a nie oferty. W tym samym wyszukiwaniu streszczenie stwierdza, że nie znaleziono oficjalnego narzędzia, które automatycznie stosuje regułę 20% Citizens. Nie ma tu mitygacji, kosztu zabezpieczenia, E&S, udziału własnego ani sprzedaży.",
+   "what_to_check_manually_pl": "Znaleźć oficjalny URL na floir.com (w wynikach był tylko pośredni). Sprawdzić, czy narzędzie pozwala zmieniać udział własny przy huraganie i uwzględnia rabaty wiatrowe."
+  },
+  {
+   "name": "Tenax AI (computer vision do weryfikacji mitygacji, aplikacja mobilna)",
+   "url": "https://www.tenaxai.com/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: produkt kierowany głównie do ubezpieczycieli, MGA i społeczności. Ma aplikację mobilną z analizą zdjęć z telefonu i drona, która weryfikuje mitygację i ocenia ryzyko. Na stronie jest marketingowe świadectwo właściciela domu, któremu rekomendacje pomogły zachować ochronę. To nie jest narzędzie do porównania ścieżek ubezpieczeniowych i finansowych.",
+   "what_to_check_manually_pl": "Sprawdzić, czy aplikacja jest dostępna dla konsumentów bezpośrednio i czy pokazuje szacowany rabat lub koszt prac."
+  },
+  {
+   "name": "Stand (ubezpieczyciel z AI/physics-based planami mitygacji dla domów wysokiego ryzyka, CA, ekspansja na FL)",
+   "url": "https://iireporter.com/startup-stand-debuts-homeowners-product-using-physics-driven-ai/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: licencjonowany ubezpieczyciel, a nie aplikacja. Używa AI i modeli fizycznych do tworzenia planów mitygacji dla domów wysokiego ryzyka w Kalifornii. Według doniesień rozszerza działalność na Florydę (huragany i wiatr). Materiały z premiery pochodzą z lat 2024-2025. Zastępuje część decyzji (zabezpieczenie plus ubezpieczyciel), ale nie porównuje FAIR+DIC, E&S, udziału własnego i sprzedaży. Inne źródła z wyników: https://www.fastcompany.com/91246735/insurers-are-fleeing-california-due-to-wildfires-but-this-startup-plans-to-work-with-the-riskiest-homes , https://finance.yahoo.com/news/insurance-startup-uses-ai-offer-003316214.html",
+   "what_to_check_manually_pl": "Sprawdzić, czy Stand udostępnia konsumentom kalkulator lub plan z kosztami i porównaniem z FAIR. Sprawdzić obecny status ekspansji na FL w 2026."
+  },
+  {
+   "name": "California FAIR Plan online premium estimator (cfpnet.com) - wzmianka w wynikach",
+   "url": "https://www.latentinsure.com/california-fair-plan/cost",
+   "classification": "partial",
+   "evidence_pl": "search-summary: oficjalny estymator FAIR Plan daje bazową składkę za budynek na podstawie ZIP, konstrukcji i klasy ochrony. Według streszczenia nie uwzględnia kosztu polisy DIC ani wszystkich rabatów za zabezpieczenia. Estymator pojawił się tylko jako wzmianka. Nie jest pewne, który z wyników ją zawierał (prawdopodobnie Latent Insure lub inny poradnik o kosztach FAIR), a domeny cfpnet.com nie było w wynikach.",
+   "what_to_check_manually_pl": "Potwierdzić, że estymator istnieje i jak dokładnie działa. Sprawdzić, czy w 2026 dodano rabaty Safer from Wildfires lub DIC."
+  },
+  {
+   "name": "NumberVibe - Climate Disaster Home Risk & Insurance Calculator",
+   "url": "https://numbervibe.com/calculators/trending/climate-disaster-home-risk-calculator",
+   "classification": "partial",
+   "evidence_pl": "search-summary: ocenia ekspozycję na huragan, powódź, pożar, grad i upał. Porównuje obecną ochronę z zalecanym poziomem i szacuje koszt właściwej ochrony. Nie ma ścieżek FAIR, E&S, mitygacji z grantem, udziału własnego przy wietrze ani sprzedaży.",
+   "what_to_check_manually_pl": "Sprawdzić pola wejściowe i wyniki, w tym czy jest porównanie scenariuszy lub horyzont lat. To potencjalny konkurent w SERP dla ogólnych zapytań 'climate risk insurance calculator'."
+  },
+  {
+   "name": "SD Cash Buyer - 'CA Home Insurance Up 16% in 2026: Sell or Stay?' (heurystyka sell vs stay)",
+   "url": "https://www.sd-cash-buyer.com/blog/california-home-insurance-16-percent-increase-2026-sell-or-stay/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: artykuł firmy skupującej domy za gotówkę z regułą kciuka. Jeśli wzrost składki przekracza 3000 USD rocznie, a prognoza wzrostu wartości domu jest poniżej 3%, sprzedaż często lepiej chroni kapitał. To nie jest interaktywne narzędzie, źródło ma interes komercyjny, a wariantów ubezpieczeniowych brak.",
+   "what_to_check_manually_pl": "Sprawdzić, czy na stronie nie ma osadzonego kalkulatora sell vs stay."
+  },
+  {
+   "name": "Generyczne kalkulatory składki 2026 (Matic, CalcWolf, InsuranceCostCalc, moving-calculator.net)",
+   "url": "https://matic.com/home-insurance-calculator/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: estymatory średniej składki według stanu i parametrów domu. Nie porównują ścieżek po nieodnowieniu, nie liczą mitygacji ani udziału własnego przy wietrze w horyzoncie wieloletnim. Inne URL z wyników: https://calcwolf.com/home-insurance-estimator/ , https://www.insurancecostcalc.com/home-insurance-calculator/ , https://moving-calculator.net/home-insurance-calculator",
+   "what_to_check_manually_pl": "Sprawdzić, czy kalkulator Matic (broker) ma tryb wysokiego ryzyka, FAIR lub E&S albo suwak udziału własnego przy huraganie. Oceniać jako konkurencję SEO."
+  },
+  {
+   "name": "Poradniki porównawcze FAIR vs prywatne vs E&S 2026 (RealCostReport, Covfind, Oldharbor, Stonecrest, Epicenter Insights)",
+   "url": "https://realcostreport.com/insurance/home-insurance/california-fair-plan-vs-private-home-insurance",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: artykuły z widełkami kosztów. FAIR+DIC to 9500-15500 USD rocznie wobec 6500-13000 USD dla E&S. Polisa DIC to 25-60% składki FAIR albo 800-2000 USD rocznie. E&S obciąża 3% podatek i opłata stemplowa ok. 0,18%, bez ochrony CIGA. Pełny rabat 24,5% przy składce ok. 12000 USD daje 2940 USD rocznie, a dach klasy A może kosztować ponad 12000 USD. Streszczenie wprost stwierdza, że nie znaleziono gotowego arkusza payback na 5 lat. Inne URL z wyników: https://covfind.com/blog/surplus-lines-insurance-california/ , https://oldharbor.com/2026/07/01/hazard-insurance-california/ , https://stonecrestinsurance.com/blog/california-fair-plan-vs-private-home-insurance/ , https://www.epicenterinsights.com/can-home-hardening-discounts-ease-the-insurability-crisis/",
+   "what_to_check_manually_pl": "Sprawdzić, czy któryś z poradników (zwłaszcza RealCostReport i Covfind) ma interaktywny kalkulator lub arkusz do pobrania. Te dane mogą posłużyć jako domyślne założenia symulatora."
+  },
+  {
+   "name": "United Policyholders (uphelp.org) - poradniki 'dropped by your insurer' / 'non-renewed'",
+   "url": "https://uphelp.org/what-to-do-if-youve-been-non-renewed-by-your-insurance-company/?print=pdf",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: poradniki organizacji konsumenckiej dla CO i CA. Radzą poprosić ubezpieczyciela o ponowne rozpatrzenie po zabezpieczeniu domu i uprzątnięciu roślinności, a FAIR traktować jako ostateczność. W streszczeniu nie ma kalkulatora ani ramy decyzji sprzedać czy zabezpieczyć.",
+   "what_to_check_manually_pl": "Sprawdzić, czy UP ma narzędzie lub arkusz w sekcji Roadmap to Preparedness."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie.\n\n**Zakres:** 8 nowych wyszukiwań WebSearch, rynek US, język angielski. Kąty wyszukiwania:\n- narzędzia decyzyjne;\n- Reddit, fora i arkusze;\n- stay or sell z ryzykiem klimatycznym;\n- Citizens z regułą 20% i udziałem własnym przy huraganie;\n- aplikacje AI i startupy 2026;\n- weryfikacja evenstate;\n- weryfikacja FireRisk.ai;\n- 5-letni payback zabezpieczenia wobec FAIR+DIC i E&S.\n\nPracowałem wyłącznie na streszczeniach wyników, bez otwierania stron.\n\n**Pewność:** średnia. Razem z poprzednim audytem to 15 wyszukiwań z różnych kątów i żadne nie dało pełnego pokrycia, ale niczego nie dało się zweryfikować na stronach.\n\n**Nowi kandydaci spoza poprzedniego audytu:**\n- **FireRisk.ai:** risk score, plan mitygacji, playbook na nieodnowienie, narzędzie do odwołań i poradnik kosztów. Według streszczeń nie ma modelu kosztów 1-5 lat porównującego ścieżki, nie obejmuje wiatru i udziału własnego, nie rozważa sprzedaży.\n- **evenstate.ai:** rzecznik ubezpieczalności przy ryzyku pożarowym, odwołania od wildfire score, rabaty za mitygację.\n- **Stand, Tenax AI:** ubezpieczyciel i dostawca dla ubezpieczycieli, więc to substytuty, nie narzędzia decyzyjne.\n- **Florida OIR Homeowners Insurance Choices:** porównanie zatwierdzonych stawek.\n- **NumberVibe Climate Disaster Home Risk & Insurance Calculator:** luka w ochronie.\n- **Heurystyka sell vs stay od skupującego domy:** artykuł komercyjny z regułą kciuka.\n\nDwa streszczenia wprost stwierdzają brak gotowych narzędzi:\n- brak arkusza lub kalkulatora łączącego zabezpieczenie z kosztami FAIR+DIC i E&S w horyzoncie 5 lat;\n- brak oficjalnego narzędzia stosującego regułę 20% Citizens.\n\n**Główne ryzyka:**\n- FireRisk.ai (lub evenstate) może mieć funkcje niewidoczne w streszczeniach. Trzeba je sprawdzić ręcznie w pierwszej kolejności.\n- Asystenci AI sami budują pełną ramę decyzji. Wyszukiwarka w tym audycie znów wygenerowała gotowy wzór: 5-letni koszt = składka + DIC + podatki E&S + koszt zabezpieczenia − rabaty.\n- Wyniki wyszukiwania zajmują poradniki brokerów i treści z rodziny Latent Insure.",
+ "search_scope_pl": "8 wyszukiwań WebSearch (4 standard, 4 extended), US, język angielski, 2026-10-25. Wyłącznie streszczenia wyników (search-summary), bez WebFetch i bez otwierania stron. Kąty:\n- ogólne narzędzie decyzyjne po nieodnowieniu;\n- Reddit, arkusze i dylemat sprzedać czy zabezpieczyć;\n- kalkulatory stay or sell z ryzykiem klimatycznym;\n- Floryda: Citizens, reguła 20%, rabaty wiatrowe i udział własny przy huraganie;\n- aplikacje i startupy AI 2026;\n- weryfikacja evenstate.ai;\n- weryfikacja FireRisk.ai;\n- 5-letni koszt i payback zabezpieczenia wobec FAIR+DIC i E&S (kalkulator lub arkusz).\n\nNie objęto: marketplace'ów z arkuszami (Etsy, Gumroad), sklepów z aplikacjami, Teksasu, Luizjany i Kolorado osobno, kalkulatorów grantów My Safe Florida Home.",
+ "confidence": "medium",
+ "queries_run": [
+  "homeowners insurance nonrenewal options decision tool compare FAIR Plan DIC surplus lines cost calculator",
+  "reddit insurance non-renewed should I sell house or harden home FAIR plan tool spreadsheet",
+  "\"stay or sell\" home insurance costs climate risk calculator homeowners Florida California 2026",
+  "Florida Citizens vs private insurer comparison calculator wind mitigation discount hurricane deductible 20% rule tool",
+  "app helps homeowners stay insurable wildfire hurricane mitigation discounts AI advisor nonrenewal startup 2026",
+  "evenstate.ai homeowner insurability FAIR Plan options mitigation credits calculator",
+  "firerisk.ai nonrenewal playbook FAIR Plan DIC cost estimate mitigation plan insurance options",
+  "home hardening payback vs FAIR Plan plus DIC vs surplus lines 5-year total cost comparison calculator or spreadsheet"
+ ]
+}

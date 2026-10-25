@@ -1,0 +1,150 @@
+{
+ "id": "RENO-03",
+ "demand_evidence": [
+  {
+   "claim_pl": "AHRI, dane za cały 2025 rok (search-summary): wysyłki gazowych pieców nadmuchowych wyniosły 3 247 426 szt. (+4,1% r/r). Central AC i powietrzne pompy ciepła łącznie: 7 749 529 szt. (-20,0%), w tym central AC 4 104 933 szt. (-26,2%) i pompy ciepła 3 644 596 szt. (-11,6%). AHRI zastrzega, że dane mogą zostać zrewidowane.",
+   "url": "https://www.contractingbusiness.com/industry-news/news/55358865/heat-pumps-hold-steady-air-conditioners-slide-breaking-down-ahris-2025-year-end-shipment-numbers",
+   "kind": "direct",
+   "measures_pl": "Roczne wysyłki producentów do dystrybucji (transakcje B2B), a nie montaże u klientów, nie liczba gospodarstw i nie popyt miesięczny. Liczba obejmuje też nowe budownictwo. To dowód skali rynku sprzętu, z którego bierze się decyzja naprawa/wymiana, a nie dowód wolumenu wyszukiwań."
+  },
+  {
+   "claim_pl": "Szacunek rzędu wielkości (moje założenie, niezweryfikowane): jeśli większość z ok. 11 mln jednostek wysłanych w 2025 r. (7,75 mln AC/HP + 3,25 mln pieców) trafia do wymian w istniejących domach, to w USA zapada co roku kilka milionów decyzji o wymianie lub naprawie HVAC. Udziału wymian w wysyłkach nie potwierdziłem w tym badaniu.",
+   "url": "https://www.contractingbusiness.com/industry-news/news/55358865/heat-pumps-hold-steady-air-conditioners-slide-breaking-down-ahris-2025-year-end-shipment-numbers",
+   "kind": "estimate",
+   "measures_pl": "Górna granica liczby zdarzeń decyzyjnych w roku. Ta liczba NIE oznacza wyszukiwań, sesji ani popytu miesięcznego. Wolumenów słów kluczowych nie pozyskałem (brak dostępu do Keyword Planner i Trends w tym zadaniu)."
+  },
+  {
+   "claim_pl": "AHRI za listopad 2025 (search-summary, tytuł): wysyłki HVAC 'mocno spadają', sprzedaż AC i pomp ciepła maleje, a piece mają wyniki mieszane. Wskazuje to na sezonowość: chłodzenie słabnie jesienią, a ogrzewanie trzyma się lepiej.",
+   "url": "https://contractingbusiness.com/industry-news/news/55343752/ahri-november-2025-hvac-shipments-drop-sharply-as-ac-and-heat-pump-sales-slide-furnaces-show-mixed-results",
+   "kind": "indirect",
+   "measures_pl": "Miesięczne wysyłki (podaż w kanale dystrybucji), a nie awarie ani zapytania. Służy tylko jako przybliżenie sezonowości. Wolumenów miesięcznych z tego wyniku nie odczytałem."
+  },
+  {
+   "claim_pl": "Założenia DOE/AHRI o średniej żywotności to ok. 15 lat dla central AC i ok. 18 lat dla gazowego pieca (search-summary, przypisanie do konkretnej strony z listy wyników niepewne). Z tej różnicy wynika typowy scenariusz produktu: AC umiera, a piec ma jeszcze kilka lat życia, więc dual-fuel albo wymiana łączna staje się realnym pytaniem.",
+   "url": "https://heat-pumps.guide/guides/repair-or-replace-ac-furnace-vs-heat-pump",
+   "kind": "indirect",
+   "measures_pl": "Strukturalny powód, dla którego problem się powtarza (niedopasowanie wieku obu urządzeń). Nie mierzy liczby przypadków."
+  },
+  {
+   "claim_pl": "Bogleheads, wątek 'Should I Get a Heat Pump to Replace Dead AC?': właściciel z zepsutym AC pyta o pompę ciepła. Odpowiedzi pokazują duży rozrzut wycen (ok. 7 500 USD za 4-tonową HP od dużego dealera wobec wyceny 20 tys. USD nazwanej 'sky high') oraz zależność elektryczną (240 V po stronie centrali wentylacyjnej dla grzałek zapasowych).",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=456475",
+   "kind": "direct",
+   "measures_pl": "Organiczne pytanie dokładnie o moment decyzji z produktu, plus dowód rozrzutu wycen, który uzasadnia porównywarkę. Jeden wątek, anegdotyczny, bez liczby wyświetleń."
+  },
+  {
+   "claim_pl": "Heating Help (The Wall), wątek 'Replace old central AC with heat pump?': padają rady w rodzaju 'jeśli jesteś nerwowy, zostaw też piec' i 'pompa ciepła to nawet nie 10% dopłaty' względem AC.",
+   "url": "https://forum.heatinghelp.com/discussion/193765/replace-old-central-ac-with-heat-pump",
+   "kind": "direct",
+   "measures_pl": "Organiczne pytanie: wymiana AC na HP z piecem jako backupem. Anegdotyczna informacja o niskiej dopłacie za HP względem AC 1:1 to kluczowy parametr do modelu."
+  },
+  {
+   "claim_pl": "TractorByNet, wątki o przebudowie AC/ogrzewania i o współpracy HP z piecem: właściciel z HP i backupem LP obniżył punkt przełączania z ok. 30°F do 20°F, a inny post opisuje, że wężownica HP stoi za piecem, żeby chronić wymiennik przed kondensatem.",
+   "url": "https://www.tractorbynet.com/forums/threads/air-conditioner-heater-overhaul.217906/post-2492885",
+   "kind": "direct",
+   "measures_pl": "Pytania i praktyka użytkowników wokół punktu przełączania dual-fuel. Potwierdza, że parametr switchover jest realnie ustawiany i dyskutowany. Anegdotyczne, forum wiejskie (dużo propanu)."
+  },
+  {
+   "claim_pl": "Pokrycie wydawców i wykonawców: wpisy SEO odpowiadają wprost na pytania 'Is it worth repairing a 15-year-old AC?' (Horizon HVAC) i 'AC compressor failure: repair or replace?' (Meyers/Browns Heating). Podobne poradniki publikują Filterbuy, ManualHarbor, Volpe, High Performance HVAC i HVACDatabase. Według summary koszt sprężarki to 1 500–3 500 USD z montażem, a reguły to 'naprawa > 1/3 kosztu nowego systemu' i 'duża naprawa przy wieku 15+ = wymiana'.",
+   "url": "https://horizonhvacinc.com/blog/repair-or-replace-15-year-old-ac/",
+   "kind": "indirect",
+   "measures_pl": "Wydawcy i wykonawcy inwestują w treści pod dokładnie te zapytania, co sygnalizuje komercyjną wartość frazy. Nie mierzy wolumenu."
+  },
+  {
+   "claim_pl": "Kolejny przykład treści o tej samej decyzji: strona wykonawcy 'AC Compressor Failure: Do You Repair or Replace?'.",
+   "url": "https://www.brownsheating.com/blog/air-conditioning-service/ac-compressor-failure-do-you-repair-or-replace/",
+   "kind": "indirect",
+   "measures_pl": "Pokrycie tematu przez lokalnych wykonawców (lead-gen). Nie mierzy wolumenu."
+  },
+  {
+   "claim_pl": "Poradnik heat-pumps.guide (2026) obejmuje dokładnie ten temat: naprawa AC/pieca vs przejście na HP. Według summary dual-fuel ma sens, gdy piec jest sprawny i ma mniej więcej 10–12 lat lub mniej, a typowy przełącznik ustawia się na 30–40°F.",
+   "url": "https://heat-pumps.guide/guides/repair-or-replace-ac-furnace-vs-heat-pump",
+   "kind": "indirect",
+   "measures_pl": "Istnienie dedykowanego poradnika wydawcy (konkurencja w SERP i dla cytowań AI). Nie mierzy wolumenu."
+  },
+  {
+   "claim_pl": "Ulgi 25C i 25D wygasły dla instalacji oddanych do użytku po 31.12.2025 (Public Law 119-21, sec. 70505; search-summary). Sprzęt kupiony w 2025 i zamontowany w 2026 się nie kwalifikuje. Instalacje z 2025 rozlicza się na Form 5695, a termin po przedłużeniu minął 15.10.2026.",
+   "url": "https://energyrebatecalculator.com/blog/heat-pump-tax-credit-2026",
+   "kind": "indirect",
+   "measures_pl": "Zmiana polityki, która zmienia ekonomię HP i wywołuje pytania. Wydawcy już kierują treści pod frazę 'heat pump tax credit 2026'. Nie mierzy wolumenu."
+  },
+  {
+   "claim_pl": "Rabaty HEAR: do 8 000 USD za HP dla gospodarstw poniżej 150% AMI, w punkcie sprzedaży (100% kosztu poniżej 80% AMI, 50% w przedziale 80–150%). Wdrożenie jest nierówne: według źródła komercyjnego ok. tuzina stanów miało aktywne programy w połowie 2026 r., a pula single-family w Kalifornii była w pełni zarezerwowana od lutego 2026. Rabaty stanowe i od zakładów energetycznych mogą dodać 500–15 000 USD, najwięcej w Mass Save (MA).",
+   "url": "https://energyrebatecalculator.com/blog/heat-pump-rebate-2026",
+   "kind": "indirect",
+   "measures_pl": "Lokalny, zależny od dochodu czynnik decyzji i wyzwalacz (otwarcie programu w stanie). Przypisanie konkretnych liczb do tego URL z listy wyników jest niepewne, a źródło komercyjne. Przed użyciem trzeba to zweryfikować w stanowych biurach energii lub DOE."
+  },
+  {
+   "claim_pl": "Ryzyko dezinformacji: jedna strona (jouleio) twierdziła w wynikach, że 25C 'remains active and widely unclaimed', co przeczy źródłom opartym na IRS. Hipoteza: asystenci AI mogą powielać takie nieaktualne lub błędne treści, więc narzędzie z aktualnym stanem ulg ma wartość.",
+   "url": "https://jouleio.com/blog/ira-energy-incentives/",
+   "kind": "hypothesis",
+   "measures_pl": "Istnienie sprzecznych treści w indeksie. Nie mierzy popytu, uzasadnia wartość aktualnych danych i ryzyko błędów AI."
+  },
+  {
+   "claim_pl": "Ceny R-410A w 2026: wyniki wyszukiwania to głównie słabe strony z rozbieżnymi widełkami (4–9 USD/lb, 35–75, 50–120, 60–120 USD/lb), także na stronie PickHVAC dla R-22/R-410A/R-32/R-454B. Wiarygodnego źródła nie znalazłem. Hipoteza: wraz z przejściem na czynniki A2L rośnie niepewność kosztu naprawy wycieku.",
+   "url": "https://www.pickhvac.com/?p=46357",
+   "kind": "indirect",
+   "measures_pl": "Luka informacyjna i rozrzut danych o koszcie czynnika. Nie mierzy popytu. Parametru nie da się dziś zasilić wiarygodnym domyślnym źródłem, więc zostaje polem edytowalnym z szerokim zakresem."
+  },
+  {
+   "claim_pl": "Hipoteza sezonowości: pytania o awarię AC skupiają się w falach upałów (maj–sierpień, najsilniej w Sun Belt), a pytania o piec i pompę ciepła przy pierwszych mrozach (październik–styczeń). Można to zweryfikować miesięcznymi wydaniami AHRI (wysyłki) i Google Trends (niedostępne w tym zadaniu).",
+   "url": "https://rses.org/news/717254/AHRI-Releases-October-2025-HVAC-Shipment-Data.htm",
+   "kind": "hypothesis",
+   "measures_pl": "Nic jeszcze nie mierzy. URL wskazuje źródło danych miesięcznych do weryfikacji sezonowości (wysyłki, a nie awarie)."
+  }
+ ],
+ "forum_question_examples": [
+  {
+   "paraphrase_en": "A homeowner's central AC died and they ask whether it makes sense to put in a heat pump instead of a like-for-like AC. Replies compare quotes (about $7,500 installed for a 4-ton heat pump from a big dealer vs a $20k quote called 'sky high') and warn that backup heat strips may need 240V at the air handler.",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=456475"
+  },
+  {
+   "paraphrase_en": "Owner of an old central AC asks whether to replace it with a heat pump. Responders suggest keeping the furnace as backup 'if you're the nervous type' and say the heat pump costs barely more than a straight AC.",
+   "url": "https://forum.heatinghelp.com/discussion/193765/replace-old-central-ac-with-heat-pump"
+  },
+  {
+   "paraphrase_en": "Someone overhauling their air conditioner and heater discusses pairing a heat pump with propane backup. One owner says the heat pump handled it fine after he lowered the switchover point from about 30°F to 20°F.",
+   "url": "https://www.tractorbynet.com/forums/threads/air-conditioner-heater-overhaul.217906/post-2492885"
+  },
+  {
+   "paraphrase_en": "User asks how a heat pump and a furnace should be combined. Replies explain that in a dual-fuel setup the heat pump coil normally sits after the furnace so condensate doesn't hit the furnace heat exchanger.",
+   "url": "https://www.tractorbynet.com/forums/threads/heat-pump-furnace-question.69649/post-773226"
+  },
+  {
+   "paraphrase_en": "Homeowner facing a heat pump replacement asks which brands are better before committing to a new system.",
+   "url": "https://www.tractorbynet.com/forums/goto/post?id=4740644"
+  }
+ ],
+ "seasonality_or_triggers_pl": "Wyzwalacze (zdarzenia, nie wolumeny):\n(1) Awaria AC w pierwszej fali upałów (hipoteza: maj–sierpień, najsilniej Południe i Południowy Zachód). Decyzja zapada pod presją czasu, często w 24–72 h, przy wyższych cenach i dłuższych terminach u wykonawców.\n(2) Awaria pieca lub pompy ciepła przy pierwszych mrozach (październik–styczeń) albo pęknięty wymiennik wykryty przy przeglądzie jesiennym.\n(3) Wycena dużej naprawy: sprężarka 1 500–3 500 USD według search-summary, wyciek czynnika R-410A o bardzo niepewnej cenie, zawór czterodrogowy, cewka. To moment 'repair vs replace'.\n(4) Zmiany polityki: koniec 25C dla instalacji po 31.12.2025 (część ludzi wciąż liczy na 30%) i stanowe starty programów HEAR. Według źródła komercyjnego w połowie 2026 aktywnych było ok. 12 stanów, a pula single-family w Kalifornii była wyczerpana od lutego 2026. Do tego terminy rabatów zakładów energetycznych (np. Mass Save).\n(5) Wykonawca proponuje 'pompę ciepła zamiast AC' przy wymianie, co wywołuje pytanie o dual-fuel i punkt przełączania.\n(6) Przejście na czynniki A2L (R-454B/R-32): stare systemy R-410A trudniej naprawić, a nowe jednostki zewnętrzne wymagają dopasowanej cewki. To hipoteza do weryfikacji, niezweryfikowane w tym badaniu.\n(7) Zakup lub sprzedaż domu: inspekcja wskazuje 15-letni system.\n(8) Zmiany taryf gazu i prądu (podwyżki zimowe).\n\nSezonowość jako przybliżenie: AHRI pokazuje silny spadek wysyłek AC/HP w listopadzie 2025 (indirect). W 2025 wysyłki AC spadły o 26,2%, a HP o 11,6%, co może wynikać po części z przejścia czynników i zakupów na zapas w 2024. To hipoteza. Miesięcznych wolumenów wyszukiwań nie mam. Do weryfikacji: Google Trends dla fraz 'ac compressor replacement cost', 'heat pump vs ac', 'dual fuel heat pump' (5 lat, USA) oraz miesięczne wydania AHRI.",
+ "prompts_no_tool_request": [
+  "Our central air quit during a heat wave here in Phoenix. The tech says the compressor is shot on our 2010 Trane and wants $3,100 to replace it, or $9,800 for a whole new 3-ton system. Is it dumb to put that kind of money into a 16-year-old unit?",
+  "I'm outside Columbus, Ohio. My AC is 14 years old and leaking R-410A; leak search plus recharge is $1,400 and they say it may leak again. My furnace is a 2019 96% gas furnace. What would you do in my shoes?",
+  "We're in Minneapolis. The furnace (19 years old) just failed inspection with a cracked heat exchanger and the AC is 17. The contractor is pushing a cold-climate heat pump instead of a new furnace and AC. Is that realistic for Minnesota winters or am I going to freeze and pay a fortune?",
+  "Retired, fixed income, Raleigh NC. My 2009 heat pump stopped heating and the repair quote is $1,900 for a reversing valve. I probably stay in the house 5 more years. Fix it or replace it?"
+ ],
+ "prompts_calculator_request": [
+  "Build me a calculator that compares repairing my AC vs replacing it with a new AC vs a heat pump with my gas furnace as backup, over 10 years. Inputs: repair $2,800, new AC $8,900, heat pump $11,200, electricity $0.17/kWh, gas $1.45/therm, Pennsylvania.",
+  "Is there a tool that tells me the right dual-fuel switchover temperature? I pay 14 cents per kWh and $1.20 a therm, my furnace is 95% AFUE and the heat pump is HSPF2 7.8. I'm near Kansas City.",
+  "Make me an interactive break-even calculator: fix the compressor now for $2,800 and replace in 1-3 years, vs a new AC now for $11,500, vs a heat pump now for $14,000. Show which year each option breaks even.",
+  "Can you give me a repair-vs-replace HVAC calculator that also factors in how old my furnace is? Furnace is 8 years old, AC is 15, I'm in Denver on Xcel rates and gas."
+ ],
+ "prompts_scenario_comparison": [
+  "Compare these 4 options side by side for a 2,000 sq ft house in New Jersey: (1) repair the compressor for $2,600 and limp along 2 more years, (2) new 16 SEER2 AC for $8,900, (3) heat pump with my 12-year-old gas furnace as backup for $11,200, (4) ducted cold-climate heat pump with electric strips and no gas for $15,500. Include yearly energy costs and what changes if gas goes up 30%.",
+  "Heat pump only vs dual fuel in Chicago: electricity 18 cents/kWh, gas $1.10/therm, house uses about 900 therms a year. Which is cheaper per year, and at what outdoor temperature should the furnace take over?",
+  "Should I replace both my furnace (16 years) and AC (15 years) now, or just the AC now and the furnace when it dies? Quotes in Atlanta: AC alone $7,800, furnace plus AC $13,900, heat pump plus new furnace $16,400. Show me 15-year totals.",
+  "My electrical panel is 100 amps. For a 1960s ranch in Massachusetts with Mass Save rebates, compare a ducted heat pump with backup heat strips, a heat pump that keeps my gas furnace as backup, and ductless mini-splits. What does each one cost me upfront and per year?"
+ ],
+ "ai_self_solve_assessment_pl": "Ryzyko samodzielnego rozwiązania: ŚREDNIO-WYSOKIE dla pytań prostych, ŚREDNIE dla pełnej decyzji wieloletniej.\n\nCo asystent zrobi dobrze bez nas:\n- reguły kciuka (wiek × koszt naprawy > 5 000 USD; naprawa > 50% lub > 1/3 kosztu nowego systemu; duża naprawa przy wieku 15+ = wymiana),\n- typowe żywotności (AC ok. 15 lat, piec ok. 18 lat),\n- wzór ekonomicznego COP przełączania (cena kWh × 29,307 × AFUE / cena therma),\n- roczny koszt ogrzewania gaz vs HP przy podanych liczbach.\n\nWedług briefu (dat nie weryfikowałem w tym badaniu) ChatGPT Intelligent UI (od 7.10.2026) i generatywny UI w Google AI Mode (od 19.08.2026) potrafią wyrenderować prosty interaktywny kalkulator wprost w odpowiedzi. Dla zapytań w rodzaju 'switchover temperature calculator' czy 'heat pump vs gas annual cost' wartość osobnej strony mocno spada, ruch zero-click jest prawdopodobny.\n\nGdzie asystent najpewniej zawiedzie lub uprości:\n(a) Brak domyślnych danych lokalnych: taryfy stanowe i zimowe, rozkład godzin poniżej punktu przełączania zamiast średniej temperatury, krzywe wydajności i COP pomp standardowych i cold-climate. Asystent przyjmie jedną średnią COP.\n(b) Wariant 'napraw i odrocz 1–3 lata' bez oczekiwanego kosztu kolejnych awarii, bez wzrostu cen sprzętu i bez premii za awaryjny tryb.\n(c) Pominięta współzależność z wiekiem pieca: synergia wymiany łącznej (jedna robocizna i jedno pozwolenie, cewka na piecu, zgodność dmuchawy).\n(d) Aktualność ulg. Modele i treści w indeksie wciąż podają 30%/2 000 USD z 25C, a w wynikach widać stronę twierdzącą, że 25C działa. HEAR zależy od stanu i AMI.\n(e) Koszty ukryte: dopasowana cewka i czynnik A2L, 240 V, panel 100 A, kanały.\n\nWynik generatywnego UI jest jednorazowy i nie zawiera sprawdzonych wartości domyślnych, analizy wrażliwości ani linku do udostępnienia.\n\nImplikacje dla dystrybucji przez AI:\n1. Strona musi mieć cytowalne, unikalne dane: tabelę 'ekonomiczny punkt przełączania wg stanu' liczoną z cen EIA, tabelę kosztów 6 wariantów dla reprezentatywnych miast, aktualny stan 25C i HEAR z datą.\n2. Wynik musi być deep-linkowalny przez parametry URL, żeby asystent mógł odesłać do konkretnego scenariusza.\n3. Przewagą jest model wielookresowy ze wszystkimi zależnościami i 'co zmienia decyzję', a nie sama kalkulacja kosztu rocznego.\n\nBez tego ryzyko kanibalizacji przez AI Mode/ChatGPT jest wysokie. Model AdSense dodatkowo cierpi na zero-click (hipoteza).",
+ "missing_dependencies_ai_likely_ignores_pl": "1. Dopasowana cewka wewnętrzna i czynnik A2L (R-454B/R-32). Nowej jednostki zewnętrznej zwykle nie da się podpiąć do starej cewki R-410A, więc 'AC 1:1' obejmuje cewkę, często sprawdzenie lub wymianę linii. W efekcie dopłata za HP względem AC bywa mała (anegdota z Heating Help: 'nawet nie 10%').\n2. Wiek i stan pieca a wymiana łączna: cewka montowana na piecu, w dual-fuel wężownica HP za piecem z powodu kondensatu (TractorByNet), zgodność dmuchawy/ECM. Przy piecu 15+ jedna robocizna i jedno pozwolenie zamiast dwóch w ciągu kilku lat.\n3. Ryzyko w wariancie odroczenia: prawdopodobieństwo kolejnej awarii (wiek 15+), ponowne dobijanie czynnika przy wycieku, premia za wymianę awaryjną w szczycie sezonu, wzrost cen sprzętu.\n4. Ekonomiczny a termiczny punkt równowagi. Instalator ustawia przełączanie 'z kciuka' (30–40°F według summary), a optimum zależy od relacji cen i krzywej COP. Liczy się rozkład godzin w przedziałach temperatur, nie średnia.\n5. Spadek mocy HP w mrozie i dobór grzałek: 240 V, osobne obwody, pojemność panelu (100 A), ewentualna modernizacja panelu.\n6. Struktura taryf: zimowe progi, specjalne taryfy dla pomp ciepła, TOU, opłaty stałe. Stała opłata gazowa znika tylko przy pełnej elektryfikacji wszystkich urządzeń gazowych.\n7. Ulgi: 25C wygasło dla instalacji po 31.12.2025. HEAR zależy od stanu i AMI, jest wypłacane w punkcie sprzedaży i jego pule się wyczerpują. Rabaty utility (500–15 000 USD według źródła komercyjnego) stackują się. Ryzyko halucynacji 30%.\n8. Wskaźniki SEER→SEER2 i HSPF→HSPF2 (od 2023): mieszanie starych i nowych wskaźników zawyża lub zaniża oszczędności.\n9. Dobór mocy (Manual J): HP dobrana pod ogrzewanie w zimnym klimacie może być przewymiarowana do chłodzenia (wilgotność). Przepustowość starych kanałów.\n10. Horyzont właściciela (sprzedaż za 5 lat), koszt finansowania (APR) i gwarancja na naprawę w porównaniu z gwarancją 10-letnią na nowy sprzęt.\n11. Paliwo: propan lub olej zamiast gazu ziemnego radykalnie zmienia punkt opłacalności (przy propanie HP wygrywa prawie zawsze).\n12. Pewność danych o cenie czynnika jest bardzo niska (rozbieżne widełki), więc potrzebne jest edytowalne pole z ostrzeżeniem.",
+ "mvp_scope_pl": "MVP: 'awaria lub wycena → 6 wariantów → koszt całkowity i rekomendacja z warunkami'.\n\nWEJŚCIA (krok 1, minimum):\n- ZIP lub stan, z którego pobieram domyślne ceny prądu i gazu (EIA) oraz klimat (najbliższe z ok. 20–25 reprezentatywnych miast z rozkładem godzin w przedziałach temperatur),\n- wiek AC lub HP oraz pieca, typ paliwa (gaz ziemny lub propan),\n- wycena naprawy,\n- zużycie gazu z rachunków (therms/rok) albo metraż z domyślnym obciążeniem,\n- AFUE obecnego pieca, SEER obecnego AC.\n\nWEJŚCIA (krok 2, opcjonalne z wartościami domyślnymi):\n- wyceny wariantów (domyślne widełki do edycji),\n- SEER2/HSPF2 nowego sprzętu, standard vs cold-climate (moc i COP przy 5/17/47°F),\n- panel (100/150/200 A),\n- horyzont (10/15 lat), stopa dyskontowa, eskalacja cen energii i sprzętu,\n- rabaty wpisywane ręcznie z linkiem do Rewiring America lub biura stanowego (bez silnika ulg),\n- liczba lat odroczenia (1–3) i roczne prawdopodobieństwo awarii (domyślne założenie z etykietą 'założenie', edytowalne).\n\nWARIANTY:\n(R) naprawa + odroczenie 1–3 lata, potem AC 1:1 po cenie z eskalacją,\n(A) AC 1:1 z dopasowaną cewką,\n(DF) HP + istniejący piec (dual-fuel) z ekonomicznym punktem przełączania,\n(HPS) HP z grzałką elektryczną,\n(CC) cold-climate HP jako jedyne źródło (opcja odłączenia gazu i usunięcia opłaty stałej),\n(B) wymiana AC i pieca razem, z uwzględnieniem planowanej wymiany pieca w wariantach A/DF, gdy piec się 'zestarzeje' w horyzoncie.\n\nOBLICZENIA: metoda przedziałów temperatur dla ogrzewania (udział HP, pieca i grzałki wg mocy i COP), chłodzenie z CDD lub godzin pełnego obciążenia i SEER2, NPV i skumulowany cash flow, rok break-even dla par wariantów, ekonomiczny COP i temperatura przełączania.\n\nWYJŚCIA:\n- tabela 6 wariantów (koszt początkowy, roczna energia, NPV, break-even),\n- wykres skumulowanych kosztów,\n- tornado wrażliwości (gaz ±30%, prąd ±30%, prawdopodobieństwo awarii, pozostała żywotność pieca, wycena HP),\n- zdanie 'co zmienia decyzję' (np. 'jeśli piec ma >14 lat, wygrywa B'),\n- flagi zależności (panel 100 A + grzałki, propan, dopasowana cewka),\n- checklista pytań do wykonawcy (cewka/A2L, linie, 240 V, Manual J, ustawienie przełączania),\n- wynik w URL do udostępnienia lub wydruku,\n- statyczne tabele cytowalne (punkt przełączania wg stanu, koszty wg miast) z datą aktualizacji.\n\nMini-split wymieniony w DECISION, ale nie w VARIANTS, odkładam do v1.1.",
+ "deferred_features_pl": "Świadomie odłożone:\n(1) Mini-split i ductless jako wariant (wymaga modelu stref i braku kanałów), v1.1.\n(2) Silnik ulg po ZIP i dochodzie (Rewiring America Incentive API, DSIRE, HEAR). W MVP tylko ręczne pole, link i stały opis stanu 25C z datą.\n(3) Taryfy TOU, progowe i specjalne taryfy HP z bazy taryf (np. URDB). W MVP średnia stanowa plus edytowalna stawka zimowa.\n(4) Pełny Manual J, dobór mocy i ocena kanałów.\n(5) Olej opałowy i drewno, w MVP tylko gaz ziemny i propan.\n(6) Fotowoltaika, magazyn energii i podgrzewacz wody (pełna elektryfikacja domu).\n(7) Emisje CO2 i koszt społeczny.\n(8) Szczegółowe finansowanie (APR, raty, leasing). W MVP opcjonalnie prosta stopa dyskontowa.\n(9) Tracker cen i dostępności czynników R-410A/R-454B, w MVP edytowalne pole kosztu.\n(10) Lead-gen i oferty wykonawców (konflikt z neutralnością, później).\n(11) Monte Carlo awarii, w MVP wartość oczekiwana plus wrażliwość.\n(12) Wpływ na wartość domu i wilgotność.\n(13) Kalibracja do danych ResStock na poziomie ZIP.",
+ "data_sources_and_tests_pl": "ŹRÓDŁA DANYCH (nazwy; URL-e poza wynikami tego badania nie są podane):\n- EIA: Electric Power Monthly (średnie ceny prądu w gospodarstwach wg stanu) oraz Natural Gas Monthly/Navigator (cena gazu w gospodarstwach wg stanu), dla propanu EIA Heating Oil and Propane Update.\n- Klimat: NOAA Climate Normals (HDD/CDD) i NREL TMY3/NSRDB do rozkładu godzin w przedziałach temperatur dla ok. 20–25 miast.\n- Krzywe HP: NEEP Cold-Climate ASHP List (moc i COP przy 5/17/47°F), AHRI Directory (dopasowane zestawy), standardy DOE SEER2/HSPF2 (2023, regionalne minima).\n- Żywotność: założenia DOE/AHRI (AC ok. 15, piec ok. 18 lat, z search-summary, do potwierdzenia w DOE Technical Support Documents).\n- Kalibracja: NREL ResStock (miary 'heat pump upgrades', dokumentacja na GitHubie widoczna w wynikach); DOE o cold-climate HP.\n- Ulgi: IRS (Form 5695, Public Law 119-21 sec. 70505), strony DOE HEAR/HOMES, stanowe biura energii, Rewiring America.\n- Koszty instalacji: AHRI tylko jako tło rynku; poradniki cenowe wykonawców tylko jako szerokie widełki (niska wiarygodność, jak pokazało wyszukiwanie cen R-410A); docelowo 2–3 wyceny od eksperta HVAC.\n\nNARZĘDZIA REFERENCYJNE do testów krzyżowych (z audytu, te same dane wejściowe): Think Heat Pump, SWEEP, Clean Energy Calc, Solar Energy Calcs, HVACBase (koszty roczne), Intry Dual-Fuel Switchover, DualFuelMath, NRTech (punkt przełączania i balance point), myhomecostcalc i hvacscalculator (reguły naprawa/wymiana). Tolerancja: ekonomiczny COP dokładnie (±0,01), koszty roczne ±10–15% (różne modele), kierunek rekomendacji zgodny lub różnica wyjaśniona.\n\nGOLDEN CASES (policzone ręcznie, do testów jednostkowych):\nG1: prąd 0,15 USD/kWh, gaz 1,20 USD/therm, AFUE 95% → COP_be = 0,15 × 29,307 × 0,95 / 1,20 = 3,86. HP tańsza dopiero przy COP > 3,86.\nG2: 0,12 USD/kWh, 1,50 USD/therm, AFUE 96% → COP_be = 2,44.\nG3: koszt dostarczonego ciepła. Gaz 1,20 USD przy 95% = 12,63 USD/MMBtu; HP przy COP 3,0 i 0,15 USD = 14,65 USD/MMBtu; grzałka (COP 1) przy 0,15 USD = 43,96 USD/MMBtu.\nG4: propan 2,80 USD/gal (0,915 therm/gal), AFUE 95%, prąd 0,15 USD → COP_be = 1,36 (HP wygrywa prawie zawsze).\nG5: 800 therm/rok przy AFUE 80% daje 640 therm ciepła. Nowy piec 95%: 673,7 therm × 1,20 USD = 808 USD/rok. HP o sezonowym COP 2,8 przy 0,15 USD: 6 699 kWh = 1 005 USD/rok.\nG6: odroczenie. Naprawa 2 800 USD teraz, wymiana za 2 lata za 11 500 USD z eskalacją 4%/rok = 12 438 USD, dyskonto 5% → PV 11 282 USD, razem 14 082 USD wobec 11 500 USD dziś (bez różnic energii i bez awarii). Przy p awarii = 0 model ma zwrócić dokładnie tę wartość.\nG7: konflikt heurystyk. Naprawa 2 800 USD wobec 11 500 USD to 24% < 50% (reguła mówi 'napraw'), a 15 × 2 800 = 42 000 > 5 000 (reguła mówi 'wymień'). Narzędzie ma pokazać obie i wyjaśnić rozbieżność.\nG8: chłodzenie. 36 000 Btu/h × 1 500 h = 54 MMBtu; SEER 10 daje 5 400 kWh, SEER2 15,2 daje 3 553 kWh (test samego wzoru).\n\nTESTY WŁASNOŚCI:\n- bilans energii: ciepło dostarczone identyczne we wszystkich wariantach,\n- monotoniczność: wzrost ceny gazu nie pogarsza wariantów HP,\n- przypadki brzegowe: punkt przełączania poza zakresem, HP bez mocy w mrozie przechodzi na grzałkę, panel 100 A z grzałkami daje flagę i koszt, piec 15+ uruchamia synergię w wariancie B, NPV przy dyskoncie 0 równa się sumie.\n\nTESTY AI (później, ręcznie): prompty z tej karty w ChatGPT, Gemini, Perplexity, Copilot i Claude. Porównanie z G1–G7 i sprawdzenie, czy asystent pomija zależności z listy.",
+ "expert_review_pl": "Wymagany przegląd (godziny to SZACUNKI):\n(1) Licencjonowany wykonawca HVAC lub technik z certyfikatem NATE, z doświadczeniem w dual-fuel i cold-climate HP, najlepiej jeden z klimatu zimnego i jeden z gorącego: 6–10 h łącznie (szacunek). Zakres: definicje 6 wariantów, dodatki kosztowe (cewka/A2L, linie, 240 V, panel, pozwolenia), widełki cen instalacji wg regionu, praktyka ustawiania przełączania, realność 'naprawy z odroczeniem' i prawdopodobieństwa awarii, checklista do wykonawcy.\n(2) Inżynier lub modelarz energetyczny budynków (PE albo doświadczony z ASHRAE bin method, NEEP, ResStock): 8–12 h (szacunek). Zakres: metoda przedziałów temperatur, krzywe COP i mocy, konwersje SEER2/HSPF2, golden cases G1–G8, kalibracja na 3–5 miastach.\n(3) Specjalista od ulg (CPA/EA albo osoba z programu stanowego): 2–3 h (szacunek). Zakres: brzmienie stanu 25C (wygasło dla instalacji po 31.12.2025, rozliczenie 2025 na Form 5695), opis HEAR i rabatów, disclaimery.\n(4) Opcjonalnie analityk taryf utility: 2 h (szacunek), domyślne stawki zimowe i taryfy HP.\n\nRazem ok. 16–27 h (szacunek). Rytm aktualizacji: ceny energii co kwartał, ulgi i HEAR co kwartał lub przy zmianach, ceny sprzętu i czynnika co pół roku. Przed publikacją potrzebny wyraźny disclaimer, że to narzędzie edukacyjne, a nie wycena ani porada podatkowa.",
+ "queries_run": [
+  "reddit 15 year old AC compressor failed repair or replace heat pump keep gas furnace dual fuel (extended; no Reddit threads returned)",
+  "AHRI shipments 2025 heat pumps central air conditioners gas furnaces year total (standard)",
+  "AC died repair or replace heat pump vs new AC furnace still works advice (extended, allowed_domains=reddit.com) - FAILED: reddit.com not accessible to search user agent",
+  "R-410A refrigerant price 2026 shortage repair cost per pound R-454B replacement older systems homeowners (standard)",
+  "forum homeowner quote compressor replacement old AC or install heat pump keep furnace as backup diychatroom greenbuildingadvisor city-data (extended)",
+  "25C energy efficient home improvement credit ended December 31 2025 heat pump 2026 HEAR rebates states status (standard)"
+ ]
+}

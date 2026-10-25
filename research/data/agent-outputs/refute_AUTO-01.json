@@ -1,0 +1,117 @@
+{
+ "id": "AUTO-01",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "CarCalcPro Negative Equity Calculator (+ guide)",
+   "url": "https://carcalcpro.com/negative-equity-calculator.html",
+   "classification": "partial",
+   "evidence_pl": "search-summary: liczy rollover negative equity: nową ratę, LTV na starcie, łączne odsetki, krzywą amortyzacji i przybliżony miesiąc, w którym saldo spada poniżej szacowanej wartości odsprzedaży. Poradnik (https://carcalcpro.com/resources/negative-equity-calculator-guide/) tylko radzi uwzględnić serwis, ubezpieczenie i paliwo przy wyborze keep vs trade, więc tego porównania nie liczy. To nadal najbliższy fragment, ale modeluje tylko wariant 2.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma tryb porównania z 'keep' lub 'wait N months', z dopłatą luki gotówką i z prywatną sprzedażą, czy uwzględnia ulgę podatkową od trade-in i czy pokazuje koszt łączny w horyzoncie 3–7 lat."
+  },
+  {
+   "name": "Carcosttool – Keep or Replace calculator",
+   "url": "https://carcosttool.com/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: porównuje zatrzymanie obecnego auta z kupnem nowego lub używanego. Uwzględnia amortyzację, finansowanie, serwis, paliwo, podatek i ubezpieczenie w tym samym horyzoncie i wskazuje tańszą opcję. Według podsumowania nie przyjmuje salda kredytu wprost, więc negative equity, rolloveru i luki nie modeluje natywnie. To najbliższy rdzeń 'keep vs replace' z TCO, ale bez equity(t).",
+   "what_to_check_manually_pl": "Sprawdzić, czy da się wpisać payoff i trade-in, żeby dostać efekt luki, czy ma warianty rolloveru i dopłaty gotówką, opóźnienia N miesięcy, refinansowania i leasingu oraz czy EV ma osobny koszt energii."
+  },
+  {
+   "name": "AGCO Automotive – Buy or Keep (Replace or Keep) calculator",
+   "url": "https://www.agcoauto.com/content/plugins/buy%20or%20keep/buy%20or%20keep.html",
+   "classification": "partial",
+   "evidence_pl": "search-summary: porównuje kupno innego auta z zatrzymaniem obecnego, przy czym zakłada auto spłacone. Pola: wartość obecnego auta, podatek, finansowanie, wkład, okres, ubezpieczenie, paliwo, liczba lat. Brak salda kredytu, więc nie ma negative equity.",
+   "what_to_check_manually_pl": "Potwierdzić założenie auta spłaconego i brak pola payoff. To prawdopodobnie stary widget (plugin), więc sprawdzić też, czy działa."
+  },
+  {
+   "name": "State Farm – Calculate how soon to buy your next car",
+   "url": "https://www.statefarm.com/simple-insights/auto-and-vehicles/calculating-how-soon-to-buy-your-next-auto",
+   "classification": "partial",
+   "evidence_pl": "search-summary: kalkulator timingu kolejnego zakupu, który traktuje wartość trade-in obecnego auta jako wkład. Temat 'kiedy kupić' bliski wariantowi 6, ale brak dowodu na obsługę salda, negative equity czy wariantów wyjścia.",
+   "what_to_check_manually_pl": "Sprawdzić, czy uwzględnia saldo kredytu i ujemne equity, czy model jest wielookresowy i czy porównuje warianty."
+  },
+  {
+   "name": "Car Dogs Trade-In Equity Calculator",
+   "url": "https://cardogs.org/tools/trade-in-calculator",
+   "classification": "partial",
+   "evidence_pl": "search-summary: ustala, czy jest equity czy underwater (na podstawie 10-dniowego payoff i realnej oferty cash), oraz pokazuje miesięczny i łączny koszt rolloveru. Zachęca do rozważenia dopłaty luki, ale z podsumowań nie wynika, że to liczy.",
+   "what_to_check_manually_pl": "Sprawdzić, czy liczy wariant dopłaty gotówką równolegle z rolloverem i czy ma jakikolwiek wariant keep, wait lub private sale."
+  },
+  {
+   "name": "CarCalculator.org – Car Trade-In Calculator",
+   "url": "https://carcalculator.org/car-trade-in-calculator/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: sprawdza dodatnie lub ujemne equity i wpływ negative equity na kwotę finansowania oraz ratę nowego auta. Pojedynczy fragment.",
+   "what_to_check_manually_pl": "Sprawdzić, czy liczy coś poza equity i nową ratą (horyzont, warianty)."
+  },
+  {
+   "name": "CalcBee Negative Equity Calculator",
+   "url": "https://calcbee.com/calculators/automotive/trade-in/negative-equity-calculator/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: kalkulator negative equity przy trade-in (nowy względem poprzedniego audytu). Zastrzega, że uogólnione założenia amortyzacji nie zastąpią wyceny po VIN ani payoff od pożyczkodawcy, co sugeruje projekcję wartości w czasie. Pełnego zakresu nie widać.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma projekcję equity(t) i miesiąc wyjścia oraz porównanie wariantów (rollover, dopłata, czekanie)."
+  },
+  {
+   "name": "VehCalc – How Negative Equity Works When Trading In a Car (2026)",
+   "url": "https://vehcalc.com/guides/how-negative-equity-works-trade-in-car-loan-2026",
+   "classification": "partial",
+   "evidence_pl": "search-summary: wynik to poradnik 2026 na domenie z kalkulatorami samochodowymi. Narzędzie do negative equity nie pojawiło się bezpośrednio w wynikach. Klasyfikacja ostrożna, bo zawartość jest nieznana.",
+   "what_to_check_manually_pl": "Przejrzeć katalog kalkulatorów vehcalc.com, czy jest planer wyjścia z negative equity lub porównywarka keep, trade i wait."
+  },
+  {
+   "name": "Holding Cost – Vehicle Ownership Cost Calculator",
+   "url": "https://holdingcost.com/calculators/vehicles/total-ownership-cost/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: TCO pojazdu rok po roku (amortyzacja, paliwo, finansowanie, ubezpieczenie, rejestracja, serwis). Liczy jedno auto i nie ma negative equity ani porównania wariantów wyjścia.",
+   "what_to_check_manually_pl": "Sprawdzić, czy jest tryb porównania 2+ aut lub scenariuszy."
+  },
+  {
+   "name": "Wealthvieu – Trade In a Car When You Owe Money in 2026 (porównanie w tabeli)",
+   "url": "https://wealthvieu.com/auto/auto-loans/financing-refinance/trade-in-car-when-you-owe-money/",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: artykuły 2026 z tabelą jakościową keep, sprzedaż prywatna, trade-in z rolloverem i refinansowanie (koszt z góry, rata, odsetki, tempo powrotu do dodatniego equity) oraz regułą, że luka powyżej $5,000 to sygnał, by czekać. Treść, nie kalkulator. Siostrzany artykuł: https://wealthvieu.com/auto/car-buying/trade-in-car-when-you-owe/",
+   "what_to_check_manually_pl": "Sprawdzić, czy artykuł ma osadzony kalkulator."
+  },
+  {
+   "name": "Finelo – Auto loan refinance vs. trade-in: keep the car or replace it?",
+   "url": "https://finelo.com/blog/auto-loan-refinance-vs-trade-in",
+   "classification": "substitute",
+   "evidence_pl": "search-summary: blog porównujący refinansowanie (zostać przy aucie) z trade-in (wymiana) przy negative equity. Treść bez potwierdzonego kalkulatora. Finelo to aplikacja finansowa, więc może mieć narzędzie w aplikacji.",
+   "what_to_check_manually_pl": "Sprawdzić, czy aplikacja Finelo ma interaktywne porównanie refinance vs trade-in z saldem i wartością auta."
+  },
+  {
+   "name": "FindSkill.ai – Car Repair vs Replace Decision Calculator",
+   "url": "https://findskill.ai/skills/money/car-repair-vs-replace/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: kalkulator decyzji naprawa vs wymiana w formie 'skill' na platformie AI-native. Dotyczy wyzwalacza z briefu (wycena poważnej naprawy), brak dowodu na obsługę salda kredytu i negative equity.",
+   "what_to_check_manually_pl": "Sprawdzić, czy to prompt lub skill dla LLM, który może przyjąć saldo kredytu i warianty wyjścia (ryzyko AI-native substytutu), oraz jakie pola ma."
+  },
+  {
+   "name": "EVorNot – Car Cost Calculator: Gas vs Hybrid vs EV",
+   "url": "https://evornot.app/",
+   "classification": "partial",
+   "evidence_pl": "search-summary: porównanie kosztu benzyna, hybryda i EV (komponent kosztu na milę z ładowaniem). Bez negative equity ani trade-in. Pokrywa jedną zależność briefu. Podobne: https://usecalcpro.com/auto/electric-vs-hybrid-car-cost-calculator, https://www.electvehicles.com/2026/09/ev-vs-gas-vs-hybrid-tco-calculator.html",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma pole 'obecne auto' z saldem i wartością albo tryb keep vs switch."
+  },
+  {
+   "name": "CarPaymentCalculator.net – Underwater Trade-Ins",
+   "url": "https://www.carpaymentcalculator.net/calcs/underwater-trade-ins.php",
+   "classification": "partial",
+   "evidence_pl": "search-summary: porównuje ratę i łączne odsetki z negative equity i bez, oraz szacuje koszt netto rolloveru po uwzględnieniu ulgi podatkowej od trade-in. Wcześniej wykryte, potwierdzone ponownie.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma warianty keep, wait lub private sale."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Próba obalenia luki się nie udała. 8 wyszukiwań extended (US) szło innymi ścieżkami niż poprzedni audyt: język użytkownika ('upside down', 'should I trade in my car'), 'keep or replace', 'trade now or wait', szablony arkuszy (Etsy, Google Sheets), Reddit, aplikacje i doradcy AI, przejście na EV przy negative equity. Żadne podsumowanie nie wskazało narzędzia, które w jednym modelu porównuje warianty keep, rollover, dopłatę gotówką, sprzedaż prywatną, refinansowanie, wait N i leasing z equity(t). Kilka podsumowań wprost stwierdza, że takiego narzędzia nie znaleziono ('no single tool that compares all four options side by side', 'These tools don't weigh keeping the car against trading it'). Nowe względem poprzedniego audytu jest głównie to, że istnieje kategoria 'Keep or Replace / Buy or Keep' z pełnym TCO: Carcosttool, AGCO, State Farm, Holding Cost. Kategoria ta ma odwrotną lukę: liczy TCO i horyzont, ale zakłada auto spłacone albo nie przyjmuje salda, więc nie modeluje negative equity, rolloveru i LTV. Kalkulatory negative equity mają z kolei salda i LTV, ale nie liczą TCO ani wariantów keep i wait. Najbliższe są CarCalcPro (rollover, LTV, miesiąc wyjścia z underwater) i Carcosttool (keep vs replace z TCO). Złożenie ich daje niemal pełny model, więc luka pozostaje czysto integracyjna. Na rynku nie widać tego połączenia, ale nie stanowi ono istotnej bariery technicznej. Nie znaleziono płatnych szablonów, aplikacji ani narzędzi AI-native dedykowanych temu problemowi; FindSkill.ai (skill AI do naprawa vs wymiana) to sygnał, że substytuty AI-native się pojawiają. Ograniczenia: tylko podsumowania wyników, strony nieotwierane, Reddit i sklepy z aplikacjami nie przeszukane bezpośrednio. Pewność średnio-niska.",
+ "search_scope_pl": "8 wyszukiwań WebSearch w trybie extended (US), 2026-10-25. Dowody to wyłącznie podsumowania wyników (search-summary), strony nie były otwierane (WebFetch niedostępny). Zakres: frazy naturalne użytkownika (upside down, trade in or keep or refinance, should I trade in my car), kategoria keep or replace i buy or keep z TCO, trade now or wait z break-even, szablony arkuszy (Etsy, Google Sheets), rekomendacje z Reddit (wyniki z Reddit nie pojawiły się), aplikacje i doradcy AI dla kredytów auto, przejście na EV lub hybrydę przy negative equity z kosztem na milę. Nie przeszukano bezpośrednio: App Store i Google Play, płatnych platform szablonów (Etsy i Gumroad nie zwróciły wyników), oprogramowania doradców finansowych, narzędzi dealerskich i lenderów za logowaniem ani wątków Reddit.",
+ "confidence": "medium",
+ "queries_run": [
+  "upside down car loan should I trade in, keep, or refinance calculator compare options",
+  "reddit tool app to decide keep car vs trade in negative equity \"keep vs trade\" calculator",
+  "\"keep or replace\" car calculator total cost loan balance trade-in value new car payment years",
+  "negative equity car spreadsheet template keep vs trade in vs sell privately scenarios Etsy Google Sheets",
+  "negative equity car \"trade now or wait\" calculator months until break even 2026",
+  "AI car loan advisor app upside down loan options compare roll over, pay gap, refinance, lease",
+  "\"should I trade in my car\" calculator side-by-side keep paying vs roll negative equity vs sell privately vs refinance",
+  "negative equity switch to EV or hybrid calculator trade-in rollover fuel savings cost per mile compare keep current car"
+ ]
+}

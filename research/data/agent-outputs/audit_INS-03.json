@@ -1,0 +1,379 @@
+{
+ "id": "INS-03",
+ "competitors": [
+  {
+   "name": "WildFireCost - Wildfire Hardening ROI Calculator (Smart Technology Investments)",
+   "url": "https://wildfirecost.smarttechinvest.com/",
+   "type": "partial",
+   "access": "Według streszczenia darmowy, lookup po ZIP. Strona nieotwierana (WebFetch zablokowany).",
+   "covers_pl": "ROI zabezpieczeń przed pożarem (kratki ember-resistant, defensible space, dach ognioodporny) vs oszczędności na ubezpieczeniu i ochrona majątku. Działa dla dowolnego hrabstwa w USA, opiera się na wynikach Fireline i programach rabatowych ubezpieczycieli. Ten sam ośrodek prowadzi blog z okresami zwrotu (np. tryskacze, defensible space).",
+   "misses_or_unverified_pl": "Ze streszczenia nie wynika porównanie FAIR+DIC vs E&S, udział własny przy wietrze/huraganie, horyzont sprzedaży, granty ani wymogi kredytodawcy. Horyzont wieloletni i analiza wrażliwości niezweryfikowane. Tylko ryzyko pożarowe, bez wiatru."
+  },
+  {
+   "name": "Florida Wind Insurance Savings Calculator (WISC, Florida Division of Emergency Management)",
+   "url": "https://apps.floridadisaster.org/wisc/",
+   "type": "partial",
+   "access": "Stanowe, darmowe (według streszczenia). Strona nieotwierana.",
+   "covers_pl": "Daje ogólny obraz rabatów na składkę wiatrową od ubezpieczycieli z Florydy za cechy budynku ograniczające szkody wiatrowe. To najbliższy oficjalny odpowiednik modułu 'zabezpieczenie domu, potem rabat' dla FL.",
+   "misses_or_unverified_pl": "Koszt zabezpieczeń, grant (My Safe Florida Home), okres zwrotu, porównanie z Citizens, z wyższym udziałem własnym i ze sprzedażą: niezweryfikowane, z opisu wynika jedynie szacunek oszczędności. Brak wieloletniego przepływu gotówki w opisie."
+  },
+  {
+   "name": "Latent Insure - California FAIR Plan Cost / Clearinghouse / Hardening Discounts guides",
+   "url": "https://www.latentinsure.com/california-fair-plan/cost",
+   "type": "partial",
+   "access": "Treści poradnikowe plus (według streszczenia) kalkulator składki. Strona nieotwierana.",
+   "covers_pl": "Przewodnik 2026 po kosztach FAIR Plan, ścieżce wyjścia z FAIR (clearinghouse, powrót do rynku admitted) i rabatach Safer from Wildfires. Podaje orientacyjne widełki: admitted HO-3 6–8 tys. USD vs FAIR+DIC 9,5–15 tys. USD.",
+   "misses_or_unverified_pl": "Według streszczenia kalkulator składki NIE uwzględnia kosztu DIC ani rabatów za zabezpieczenia (przypisanie do tej strony prawdopodobne, nie pewne). Brak E&S, sprzedaży, udziału własnego przy wietrze i horyzontu wieloletniego. Wyłącznie Kalifornia. Szybko rosnący, wyspecjalizowany wydawca, który może dobudować integrację."
+  },
+  {
+   "name": "WhichCalc - Hurricane / Named Storm Deductible Calculator",
+   "url": "https://whichcalc.com/hurricane-deductible-calculator",
+   "type": "partial",
+   "access": "Darmowy kalkulator (prawdopodobnie). Strona nieotwierana.",
+   "covers_pl": "Ekspozycja na procentowy udział własny przy huraganie. Ostrzega, że wybór 2% zamiast 10% może podwoić składkę roczną, czyli dotyka kompromisu udział własny vs składka.",
+   "misses_or_unverified_pl": "Próg opłacalności, prawdopodobieństwo zdarzenia, wieloletni horyzont i powiązanie z mitygacją, FAIR/Citizens lub sprzedażą: niezweryfikowane. Kalkulator jednofunkcyjny."
+  },
+  {
+   "name": "Safeguard Impact - Florida Impact Window Insurance Savings Calculator",
+   "url": "https://safeguardimpact.com/florida-impact-window-insurance-savings-calculator/",
+   "type": "partial",
+   "access": "Kalkulator sprzedawcy (lead-gen). Strona nieotwierana.",
+   "covers_pl": "Oszczędność na składce wiatrowej po montażu okien huraganowych. Deklaruje 20–40% (deklaracja marketingowa).",
+   "misses_or_unverified_pl": "Jedno zabezpieczenie, interes sprzedażowy. Pozostałe warianty decyzji nie występują w opisie."
+  },
+  {
+   "name": "Ember Pro - Wildfire Defense Cost Calculator (California)",
+   "url": "https://emberprousa.com/wildfire-defense-cost-calculator-california/",
+   "type": "partial",
+   "access": "Darmowy 'risk calculator' sprzedawcy. Strona nieotwierana.",
+   "covers_pl": "Koszt ochrony przed pożarem w Kalifornii. Ten sam wydawca ma poradnik o nieodnowieniu polis w strefach pożarowych CA.",
+   "misses_or_unverified_pl": "Powiązanie ze składką, FAIR/DIC/E&S, okres zwrotu i sprzedaż: niezweryfikowane. Interes sprzedażowy."
+  },
+  {
+   "name": "HomeFortifyROI - Home Resilience Checklist: 20 Upgrades Ranked by ROI",
+   "url": "https://www.homefortifyroi.com/blog/home-resilience-checklist",
+   "type": "partial",
+   "access": "Artykuł blogowy, istnienie narzędzia niezweryfikowane. Strona nieotwierana.",
+   "covers_pl": "Ranking ulepszeń odporności domu według ROI. Fragment: priorytetyzacja inwestycji w zabezpieczenie.",
+   "misses_or_unverified_pl": "Czy istnieje interaktywny kalkulator: niezweryfikowane. Brak w opisie porównania rynków ubezpieczeń, udziału własnego i sprzedaży."
+  },
+  {
+   "name": "Generic home insurance premium estimators (homeinsurancecalc.com, homeinsurecalc.com, numeraty.com)",
+   "url": "https://homeinsurecalc.com/",
+   "type": "partial",
+   "access": "Darmowe szacunki (według streszczenia). Strony nieotwierane.",
+   "covers_pl": "Szacunek składki: stawka bazowa (np. ~0,35 USD na 100 USD wartości), wpływ udziału własnego (1000→2500 USD daje 10–20% mniej), koszt odbudowy, powódź według stanu.",
+   "misses_or_unverified_pl": "Nie porównują ścieżek reakcji na nieodnowienie. Brak FAIR/DIC/E&S, mitygacji z okresem zwrotu, sprzedaży i horyzontu. Dane i metodologia deklarowane przez same serwisy, niezweryfikowane."
+  },
+  {
+   "name": "StillInsurable (per-state FAIR Plan alternatives guides)",
+   "url": "https://stillinsurable.com/south-dakota-fair-plan/",
+   "type": "partial",
+   "access": "Treść poradnikowa. Narzędzia niezweryfikowane. Strona nieotwierana.",
+   "covers_pl": "Programatyczne (prawdopodobnie) strony stanowe o tym, co zrobić bez FAIR Plan / po odmowie (np. Dakota Południowa: brak FAIR Plan, ścieżka E&S, brak obowiązkowych rabatów za mitygację). Wskazuje na wydawcę celującego dokładnie w tę niszę.",
+   "misses_or_unverified_pl": "Czy ma kalkulator porównania ścieżek: niezweryfikowane. Do sprawdzenia w następnej fali jako potencjalny konkurent wyłaniający się."
+  },
+  {
+   "name": "Official info: California Department of Insurance / California FAIR Plan (CDI fact sheet)",
+   "url": "https://www.insurance.ca.gov/01-consumers/200-wrr/upload/CDI-Fact-Sheet-Summary-on-Residential-Insurance-Policies-and-the-FAIR-Plan-v-011325.pdf",
+   "type": "partial",
+   "access": "Publiczny PDF stanowy. Nieotwierany.",
+   "covers_pl": "Fakty o FAIR Plan, polisach DIC i rabatach mitygacyjnych (FAIR: do 5% Immediate Surroundings, 10% Structure Protections, 10% Firewise; według innego źródła do 12 rabatów, do 16,4% części pożarowej składki od 15.11.2025).",
+   "misses_or_unverified_pl": "Informacja, nie symulator. Brak porównania kosztów ścieżek w horyzoncie. Narzędzia interaktywne CDI/FAIR (np. wyszukiwarka brokerów, kalkulator FAIR) niezweryfikowane w tej fali."
+  },
+  {
+   "name": "Licensed brokers / E&S brokers (e.g., FBIA, ESI Insurance Brokers)",
+   "url": "https://fbia.com/blog/get-off-california-fair-plan/",
+   "type": "substitute",
+   "access": "Usługa doradcza, zwykle bezpłatna dla klienta (prowizja). Strona nieotwierana.",
+   "covers_pl": "Faktyczne oferty admitted, E&S i DIC (których stawek nie ma publicznie), sekwencja zakupu i dokumentacja mitygacji pod rabaty. To realny substytut, bo decyzja wymaga rzeczywistych ofert.",
+   "misses_or_unverified_pl": "Konflikt interesów (prowizja od DIC/E&S). Brak neutralnej analizy wariantu 'sprzedaż' ani okresu zwrotu inwestycji w zabezpieczenie. Jakość zależy od brokera."
+  },
+  {
+   "name": "Insurance comparison marketplaces and guides (Policygenius, Insurify, The Zebra, NerdWallet)",
+   "url": "https://www.policygenius.com/homeowners-insurance/how-to-get-homeowners-insurance-after-nonrenewal/",
+   "type": "substitute",
+   "access": "Poradniki darmowe. Porównywarki ofert wymagają danych lub kontaktu (niezweryfikowane). Strony nieotwierane.",
+   "covers_pl": "Poradniki 'co zrobić po nieodnowieniu' (szukać ofert, E&S po 3–5 odmowach, FAIR, usunąć przyczynę) oraz przewodnik po udziałach własnych huraganowych według stanów (Policygenius). Marketplace'y mogą zebrać oferty.",
+   "misses_or_unverified_pl": "Brak zintegrowanego modelu kosztów ścieżek w horyzoncie 1–5 lat, okresu zwrotu mitygacji i wariantu sprzedaży. Kalkulatory NerdWallet/Progressive/COUNTRY z poprzedniej fali nie pojawiły się ponownie w wynikach, więc są niezweryfikowane w tej fali (wcześniej oceniane jako jednofunkcyjne)."
+  },
+  {
+   "name": "AI assistants (ChatGPT with Intelligent UI, Google AI Mode interactive tools)",
+   "url": "brak URL - nie pojawił się w wynikach",
+   "type": "substitute",
+   "access": "Darmowe dla wszystkich użytkowników (ChatGPT Intelligent UI od 7.10.2026, Google AI Mode EN od 19.08.2026, według kontekstu zadania).",
+   "covers_pl": "Sama wyszukiwarka użyta w audycie wygenerowała sekwencję decyzji (admitted, potem E&S, potem FAIR+DIC), zasady porównania all-in i wzór progu opłacalności udziału własnego z przykładem liczbowym. Asystent może wyrenderować ad hoc tabelę lub kalkulator 5 ścieżek × 5 lat z ofertami wpisanymi przez użytkownika.",
+   "misses_or_unverified_pl": "Ryzyko nieaktualnych harmonogramów rabatów i stanu grantów oraz sprzeczności (np. udział huraganowy roczny vs per sezon). Brak trwałego, audytowalnego modelu i lokalnych danych o hazardzie. Jakość obliczeń wieloletnich niezweryfikowana."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 wyszukiwań WebSearch, rynek US, język angielski, wyłącznie streszczenia wyników, bez otwierania stron. Pewność: średnio-niska. Istniejące narzędzia pokrywają tylko fragmenty:\n- ROI zabezpieczeń przeciwpożarowych: WildFireCost, Ember Pro, HomeFortifyROI;\n- oszczędności z mitygacji wiatrowej: oficjalny Florida WISC i kalkulator okien Safeguard Impact;\n- ekspozycja na huraganowy udział własny: WhichCalc;\n- szacunek składki FAIR Plan: Latent Insure, który według streszczenia pomija koszt DIC i rabaty za zabezpieczenia;\n- ogólne estymatory składki.\n\nŻadne ze znalezionych narzędzi nie łączy ścieżek (zabezpieczenie + admitted, FAIR + DIC, E&S, wyższy udział własny przy wietrze, sprzedaż) w jednym modelu 1–5 lat. Brakuje w nich jednoczesnego uwzględnienia: kosztu i grantu na zabezpieczenie, rabatu liczonego od właściwej części składki, ekspozycji w zdarzeniu katastrofalnym, horyzontu sprzedaży, wymogów kredytodawcy, flag wykonalności i wrażliwości. Jest to luka integracyjna, nie brak fragmentów.\n\nIstotne zastrzeżenie: luka częściowo wynika ze struktury rynku. Stawki E&S i DIC są negocjowane i niepubliczne, więc symulator musi opierać się na ofertach wpisanych przez użytkownika albo na szerokich przedziałach. To osłabia przewagę nad brokerem i asystentem AI. Dodatkowo co najmniej dwóch wyspecjalizowanych wydawców z 2026 r. (Latent Insure, StillInsurable) celuje w tę niszę, a ich narzędzia są niezweryfikowane. Mogą dobudować integrację lub już ją mieć za stronami, których nie dało się otworzyć.",
+ "search_scope_pl": "7 wyszukiwań WebSearch (6 w trybie extended, 1 standard), US, EN, 2026-10-25. WebFetch zablokowany, więc żadna strona nie była otwierana: dowodem są wyłącznie streszczenia wyników. Nie testowano formularzy, nie widziano paywalli ani loginów.\n\nMiks zapytań:\n- naturalne problemowe: pytanie o nieodnowienie w CA (FAIR+DIC vs E&S vs zabezpieczenie) oraz pytanie o sprzedaż domu z powodu kosztów ubezpieczenia;\n- krótkie kategorii: 'home insurance non-renewal options calculator';\n- alternatywna terminologia: 'home hardening / wind mitigation savings calculator payback' oraz 'hurricane percentage deductible break-even';\n- aplikacje i narzędzia brokerskie: 'app or platform for homeowners facing non-renewal… broker software';\n- Reddit/forum: 'reddit non-renewed FAIR Plan DIC or surplus lines or sell'.\n\nNie wykonano osobnego zapytania o arkusze lub szablony; wyniki Reddit przyszły tylko pośrednio, przez blog brokera. Nie badano osobno Luizjany (Louisiana Citizens, Fortify Homes), Kolorado, TWIA w Teksasie ani depopulacji Citizens na Florydzie.\n\nKalkulatory z fali 1 (NerdWallet, Progressive, COUNTRY Financial) nie pojawiły się ponownie w wynikach, więc nie zostały ponownie zweryfikowane i nie przytaczam ich URL. Z opisów fali 1 są to narzędzia jednofunkcyjne (składka, pokrycie, udział własny), czyli co najwyżej partial.",
+ "demand_signals": [
+  {
+   "signal_pl": "Badanie Redfin z 2024 r.: 70,3% właścicieli domów na Florydzie i 51% w Kalifornii odnotowało wyższe koszty lub zmiany pokrycia w ostatnim roku (44,6% w całym kraju). Jedna trzecia właścicieli, którzy stracili ubezpieczenie, przeprowadziła się lub planuje przeprowadzkę. Na Florydzie 11,9% planujących przeprowadzkę wskazuje koszty ubezpieczenia (6,2% w kraju). Wariant 'sprzedaż' ma realne podstawy. Dane z 2024 r.",
+   "url": "https://www.redfin.com/news/home-insurance-survey-report-2024/",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Blog brokera: od 2020 r. ubezpieczyciele admitted nie odnowili ponad 354 tys. polis w kalifornijskich strefach pożarowych. FAIR Plan złożył wniosek o średnią podwyżkę 35,8% dla polis dwelling-fire (październik 2025). Źródło komercyjne.",
+   "url": "https://www.coveragecat.com/insurance-types/home/drawbacks-of-the-california-fair-plan",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Adres strony ESI Insurance Brokers sugeruje tezę, że ok. 15% kalifornijskich właścicieli domów korzysta z FAIR Plan lub rynku nadwyżkowego (wrzesień 2026). Wniosek wyłącznie z URL, treść nieodczytana.",
+   "url": "https://esibrokers.org/california-homeowners-15-percent-fair-plan-surplus-september-2026/",
+   "evidence_type": "hypothesis"
+  },
+  {
+   "signal_pl": "Nasycenie wyników w 2026 r. wyspecjalizowanymi wydawcami i dostawcami (Latent Insure, FireReadyHome, Cindera, Ember Pro, StillInsurable, ReadyFireOne, Smart Technology Investments) piszącymi dokładnie o wyjściu z FAIR Plan, DIC, rabatach i grantach. To pośredni sygnał popytu wyszukiwań i jednocześnie rosnącej konkurencji SEO. Brak danych o wolumenach.",
+   "url": "https://firereadyhome.com/fair-plan",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Cytaty z Reddita (pośrednio, przez blog brokera), np. użytkownik płacący 4600 USD za FAIR + wrap. Pokazuje, że pytania z forów dotyczą właśnie tego wyboru. Nie zweryfikowano oryginalnych wątków.",
+   "url": "https://www.coveragecat.com/insurance-types/home/customer-experiences-ca-fair-plan",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Duże różnice składek huraganowych na Florydzie: według jednego źródła średnio 2557 USD bez pokrycia huraganowego vs 7136 USD z udziałem 2%. Insurance.com podaje średnio 8471 USD/rok dla FL w 2026 r., NerdWallet 2845 USD (inne metodologie). Kompromis udział własny vs składka jest finansowo istotny.",
+   "url": "https://www.policygenius.com/homeowners-insurance/hurricane-deductible-guide/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kontrsygnał: raport z końca 2025 r. mówi, że ubezpieczonym na Florydzie 'jest nieco lżej' (stabilizacja rynku). Popyt na Florydzie może słabnąć, a środek ciężkości przesuwa się do CA i stanów zachodnich.",
+   "url": "https://www.claimsjournal.com/news/national/2025/12/08/334446.htm",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Moment decyzji jest krótki i przewidywalny: powiadomienie o nieodnowieniu przychodzi zwykle 30–60 dni wcześniej. Skala roczna (dziesiątki do setek tysięcy gospodarstw w CA/FL/LA/TX/CO) to szacunek, nie miesięczny popyt.",
+   "url": "https://www.thezebra.com/homeowners-insurance/guide/policy-cancellation-or-non-renewal/",
+   "evidence_type": "estimate"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko, że asystent rozwiąże to sam, jest średnio-wysokie.\n\nDowód: wyszukiwarka użyta w audycie sama wygenerowała kompletną ramę decyzji:\n- kolejność zakupu: admitted, potem E&S, potem FAIR+DIC;\n- porównanie kosztów all-in i zakresu pokrycia;\n- uwaga, że rabat FAIR dotyczy tylko części pożarowej składki;\n- wzór progu opłacalności wyższego udziału własnego z przykładem: 500 tys. USD, 2%→5%, 500 USD oszczędności, próg ok. 3,3% rocznej szansy szkody.\n\nAsystent nie zna kluczowych danych wejściowych, bo stawki E&S i DIC są niepubliczne, ale zewnętrzny symulator też ich nie zna. Oba wymagają ofert wpisanych przez użytkownika. ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą wyrenderować tabelę lub kalkulator 5 ścieżek × 5 lat bezpośrednio w odpowiedzi.\n\nGdzie zewnętrzne narzędzie ma realną przewagę:\n- aktualne, stanowe harmonogramy rabatów (FAIR: 12 rabatów od 15.11.2025, tabele mitygacji wiatrowej FL) i stan grantów (My Safe Florida Home, granty CA, Fortify Homes w LA), które często się zmieniają;\n- lokalne prawdopodobieństwo zdarzenia katastrofalnego (dane o hazardzie według ZIP/hrabstwa);\n- audytowalny, zapisywalny model z analizą wrażliwości i flagami wykonalności (wymogi kredytodawcy, brak CIGA dla E&S).\n\nAsystent raczej poda ramę tekstową i zacytuje CDI lub blogi brokerów niż odeśle do kalkulatora, chyba że stanie się on rozpoznawalnym źródłem.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Strukturalny, powtarzalny problem w kilku dużych stanach: nieodnowienia, podwyżki FAIR, wysokie składki huraganowe na Florydzie. Moment decyzji jest wyraźny (30–60 dni). Widoczny popyt na pytania: wielu wyspecjalizowanych wydawców w 2026 r., cytaty z Reddita.",
+   "evidence_pl": "Redfin 2024: 70,3% właścicieli w FL i 51% w CA z wyższymi kosztami lub zmianą pokrycia, 1/3 tych, którzy stracili ubezpieczenie, przeprowadza się lub planuje to. Ponad 354 tys. nieodnowień w strefach pożarowych CA od 2020 r. (blog brokera). Wniosek FAIR o +35,8% (2025). Liczne strony z 2026 r. o wyjściu z FAIR, DIC i rabatach.",
+   "gaps_pl": "Brak danych o wolumenach wyszukiwań. Dane z ankiet są z 2024 r. Rynek na Florydzie się stabilizuje (kontrsygnał). Pełny wybór 5 ścieżek ze sprzedażą rozważa mniejsza grupa niż ta, która po prostu szuka dowolnego pokrycia. Liczby gospodarstw to nie miesięczny popyt.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 4,
+   "rationale_pl": "Po zróżnicowanych wyszukiwaniach nie znaleziono narzędzia, które integruje warianty i zależności. Fragmenty (ROI mitygacji, oszczędności wiatrowe, udział własny, składka FAIR) istnieją osobno, a ich wyniki nie wpływają na siebie nawzajem.",
+   "evidence_pl": "Partiale: WildFireCost, Florida WISC, WhichCalc, Latent Insure (kalkulator bez DIC i rabatów), estymatory składki. Zapytanie 'home insurance non-renewal options calculator' według streszczenia nie zwróciło dedykowanego kalkulatora opcji. Zapytanie o aplikacje i oprogramowanie brokerskie nie zwróciło porównywarek ścieżek.",
+   "gaps_pl": "Tylko streszczenia, stron nie otwierano. Narzędzia Latent Insure i StillInsurable niezweryfikowane. Nie badano LA/CO/TX (TWIA) ani depopulacji Citizens. Luka częściowo wynika z niepublicznych stawek E&S i DIC, które obniżają wartość integracji. Wyspecjalizowani wydawcy mogą szybko ją zamknąć.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent sam tworzy ramę decyzji i proste wyliczenia progów opłacalności. Kluczowe dane (oferty E&S/DIC) i tak pochodzą od użytkownika, więc przewaga zewnętrznego narzędzia ogranicza się do aktualnych tabel rabatów i grantów, lokalnego hazardu i audytowalności.",
+   "evidence_pl": "Streszczenia wyszukiwarki zawierały gotową sekwencję zakupu, zasady porównania all-in i wyprowadzony wzór progu opłacalności z przykładem. ChatGPT Intelligent UI i Google AI Mode renderują kalkulatory w odpowiedzi.",
+   "gaps_pl": "Nie testowano realnych odpowiedzi ChatGPT, Gemini ani Perplexity na przykładowy prompt i nie sprawdzono, czy cytują jakiekolwiek kalkulatory.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsumencka publiczność z USA w najdroższych wertykałach reklamowych: ubezpieczenia domów, usługi domowe (dachy, okna huraganowe, zabezpieczenia przeciwpożarowe), nieruchomości (sprzedaż) i pośrednio kredyty hipoteczne. Brak kategorii wrażliwej.",
+   "evidence_pl": "Wyniki zdominowane przez brokerów, porównywarki (Policygenius, Insurify, The Zebra) i sprzedawców zabezpieczeń z kalkulatorami lead-gen (Safeguard Impact, Ember Pro), co świadczy o aktywnych reklamodawcach w tych tematach.",
+   "gaps_pl": "Brak danych o CPC i RPM. Ubezpieczyciele mogą ograniczać reklamy w ZIP-ach wysokiego ryzyka. Ruch skoncentrowany geograficznie (CA/FL).",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 2,
+   "rationale_pl": "Wymaga modułów stanowych (FAIR CA, Citizens FL/LA, TWIA TX, CO) z często zmieniającymi się stawkami, harmonogramami rabatów i statusem grantów. Stawki E&S i DIC są niepubliczne, więc potrzebne są przedziały lub dane od użytkownika. Model katastrofalny wymaga danych o hazardzie.",
+   "evidence_pl": "Podwyżka FAIR +35,8% (2025). Nowe rabaty FAIR od 15.11.2025 (do 12 rabatów, 16,4% części pożarowej). Rozbieżne zasady udziału huraganowego między FL i TX. Źródła sprzeczne co do rocznego vs sezonowego udziału własnego.",
+   "gaps_pl": "Nie sprawdzono dostępności maszynowo czytelnych tabel rabatów (OIR FL, FAIR CA) ani darmowych danych o hazardzie (np. FEMA NRI). Ocena zmienności przepisów oparta na kilku sygnałach.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 2,
+   "rationale_pl": "Błąd może prowadzić do niedoubezpieczenia, przerwy w ochronie, polisy wymuszonej przez kredytodawcę albo wyboru E&S bez ochrony funduszu gwarancyjnego. Konsekwencje przy katastrofie są dotkliwe. Duży udział interpretacji warunków polis (zakres DIC, wyzwalacze udziału własnego).",
+   "evidence_pl": "E&S nie ma ochrony CIGA ani regulacji Prop 103 (streszczenie). Sprzeczne źródła co do mechaniki udziału huraganowego na Florydzie. Rabaty wymagają inspekcji i mogą zostać cofnięte.",
+   "gaps_pl": "Ryzyko można ograniczyć zastrzeżeniami, przedziałami i flagami 'zweryfikuj z brokerem'. Nie oceniano wymogów prawnych dotyczących porad ubezpieczeniowych (licencje producenta w danym stanie).",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś przepływów gotówki 1–5 lat, wartość domu i koszty sprzedaży, finansowanie (wymogi kredytodawcy, HELOC na zabezpieczenia), ryzyko katastrof i okres zwrotu inwestycji. Otwiera rodzinę produktów: wymiana dachu vs ubezpieczenie, NFIP vs prywatne ubezpieczenie powodziowe, rezerwa na udział huraganowy, oferta depopulacji Citizens, ROI zabezpieczeń.",
+   "evidence_pl": "Partiale z wyników to osobne fragmenty (mitygacja pożarowa i wiatrowa, udział własny, składka, powódź według stanu), które pasują do wspólnego silnika.",
+   "gaps_pl": "Moduły stanowe ubezpieczeń są specyficzne i słabo przenoszą się na produkty energetyczne lub podatkowe. Wspólny silnik nie zweryfikowany projektowo.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wynik ważony to ok. 3,45/5. Mocne strony to popyt (4), wartość reklamowa (5) i prawdopodobna luka integracyjna (4, pewność niska). Słabości to wykonalność (2), niezawodność (2) i dystrybucja przez AI (2), bo asystenci sami tworzą ramę decyzji, a kluczowe dane (oferty E&S/DIC) muszą pochodzić od użytkownika.\n\nPrzed pilotem trzeba:\n1. Sprawdzić ręcznie (w przeglądarce) Latent Insure, StillInsurable, WildFireCost i Florida WISC: czy nie mają już integracji.\n2. Zdobyć dane o wolumenach wyszukiwań (np. 'FAIR plan vs surplus lines', 'DIC policy cost', 'wind mitigation savings', 'hurricane deductible calculator').\n3. Przetestować odpowiedzi ChatGPT, Gemini i Perplexity na przykładowy prompt.\n4. Zawęzić zakres do jednego stanu na start, np. Kalifornia: FAIR+DIC vs E&S vs zabezpieczenie+admitted vs sprzedaż, z aktualizowanymi tabelami rabatów FAIR. Zamiast 5 stanów naraz.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "home hardening insurance savings calculator payback wildfire wind mitigation",
+   "url": "https://wildfirecost.smarttechinvest.com/",
+   "competitor": "WildFireCost (Smart Technology Investments)",
+   "features_checked": "ROI zabezpieczeń przeciwpożarowych vs oszczędności ubezpieczeniowe; ZIP/hrabstwo; Fireline; programy rabatowe; FAIR/DIC/E&S; udział własny; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; według streszczenia darmowy",
+   "conclusion": "Partial. Moduł 'mitygacja pożarowa i okres zwrotu'. Pozostałe warianty decyzji niezweryfikowane lub nieobecne w opisie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home hardening insurance savings calculator payback wildfire wind mitigation",
+   "url": "https://apps.floridadisaster.org/wisc/",
+   "competitor": "Florida Wind Insurance Savings Calculator (state)",
+   "features_checked": "szacunek rabatów wiatrowych za cechy budynku; koszt/grant; okres zwrotu; Citizens; udział własny",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzie stanowe, bez znanego paywalla",
+   "conclusion": "Partial (oficjalne). Daje tylko oszczędności z mitygacji wiatrowej na Florydzie. Koszt i grant, okres zwrotu oraz inne ścieżki niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "insurer non-renewed my home California: FAIR Plan plus DIC vs surplus lines vs home hardening discounts, how to decide",
+   "url": "https://www.latentinsure.com/california-fair-plan/cost",
+   "competitor": "Latent Insure - CA FAIR Plan cost guide / premium calculator",
+   "features_checked": "składka FAIR; koszt DIC; rabaty za zabezpieczenia; porównanie admitted vs FAIR+DIC; E&S; sprzedaż",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; przypisanie zdania o kalkulatorze bez DIC i rabatów do tej strony prawdopodobne, nie pewne",
+   "conclusion": "Partial, tylko Kalifornia. Podaje orientacyjne widełki admitted vs FAIR+DIC, ale kalkulator według streszczenia pomija DIC i rabaty. Wyspecjalizowany wydawca w niszy, do ręcznej weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "insurer non-renewed my home California: FAIR Plan plus DIC vs surplus lines vs home hardening discounts, how to decide",
+   "url": "https://www.latentinsure.com/california-fair-plan/hardening-discounts",
+   "competitor": "Latent Insure - Safer from Wildfires hardening discounts / clearinghouse guides",
+   "features_checked": "lista rabatów FAIR (do 12, do 16,4% części pożarowej, od 15.11.2025); ścieżka powrotu do admitted (clearinghouse)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Treść poradnikowa, nie symulator. Potwierdza złożoność i zmienność danych rabatowych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "hurricane percentage deductible vs premium savings calculator break-even Florida Texas",
+   "url": "https://whichcalc.com/hurricane-deductible-calculator",
+   "competitor": "WhichCalc - Hurricane / Named Storm Deductible Calculator",
+   "features_checked": "ekspozycja na procentowy udział własny; kompromis składka vs udział; próg opłacalności; prawdopodobieństwo zdarzenia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, jednofunkcyjny. Ostrzega, że 2% zamiast 10% może podwoić składkę. Próg opłacalności i wieloletni horyzont niezweryfikowane. Streszczenie stwierdziło brak dedykowanego kalkulatora progu opłacalności dla FL/TX.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home hardening insurance savings calculator payback wildfire wind mitigation",
+   "url": "https://safeguardimpact.com/florida-impact-window-insurance-savings-calculator/",
+   "competitor": "Safeguard Impact - FL impact window savings calculator",
+   "features_checked": "oszczędność składki wiatrowej po montażu okien",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; kalkulator sprzedawcy (lead-gen)",
+   "conclusion": "Partial, jedno zabezpieczenie, deklaracja 20–40% to marketing. Nie jest konkurentem bezpośrednim.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home hardening insurance savings calculator payback wildfire wind mitigation",
+   "url": "https://emberprousa.com/wildfire-defense-cost-calculator-california/",
+   "competitor": "Ember Pro - Wildfire defense cost calculator (CA)",
+   "features_checked": "koszt ochrony przeciwpożarowej; ryzyko; powiązanie ze składką",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; kalkulator sprzedawcy",
+   "conclusion": "Partial (koszt ochrony). Powiązanie z rynkiem ubezpieczeń niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home hardening insurance savings calculator payback wildfire wind mitigation",
+   "url": "https://www.homefortifyroi.com/blog/home-resilience-checklist",
+   "competitor": "HomeFortifyROI - resilience upgrades ranked by ROI",
+   "features_checked": "ranking ulepszeń według ROI; istnienie interaktywnego kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (priorytetyzacja mitygacji). Narzędzie interaktywne niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home insurance non-renewal options calculator",
+   "url": "https://homeinsurecalc.com/",
+   "competitor": "Generic premium estimators (homeinsurecalc.com, homeinsurancecalc.com, numeraty.com)",
+   "features_checked": "szacunek składki; wpływ udziału własnego; koszt odbudowy; powódź według stanu; porównanie ścieżek po nieodnowieniu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; dane i metodologia deklarowane przez same serwisy",
+   "conclusion": "Partial (składka). Streszczenie stwierdziło brak dedykowanego kalkulatora opcji po nieodnowieniu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app or platform for homeowners facing insurance non-renewal: compare FAIR Plan, E&S quotes, mitigation discounts (startup, broker software)",
+   "url": "https://stillinsurable.com/south-dakota-fair-plan/",
+   "competitor": "StillInsurable",
+   "features_checked": "stanowe strony o alternatywach dla FAIR Plan; E&S; rabaty mitygacyjne; obecność kalkulatora",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Wyspecjalizowany wydawca w niszy ubezpieczalności. Narzędzia niezweryfikowane, potencjalny konkurent wyłaniający się, do ręcznej weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app or platform for homeowners facing insurance non-renewal: compare FAIR Plan, E&S quotes, mitigation discounts (startup, broker software)",
+   "url": "https://insurify.com/homeowners-insurance/how-to-get-insurance-after-non-renewal/",
+   "competitor": "Insurify / comparison marketplaces",
+   "features_checked": "poradnik po nieodnowieniu; zbieranie ofert; aplikacje lub oprogramowanie do porównania FAIR/E&S",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; porównywarka ofert prawdopodobnie wymaga danych kontaktowych (niezweryfikowane)",
+   "conclusion": "Substytut (zbieranie ofert i poradnik). Streszczenie: brak wyników o aplikacjach lub oprogramowaniu porównującym ścieżki.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home insurance non-renewal options calculator",
+   "url": "https://www.policygenius.com/homeowners-insurance/how-to-get-homeowners-insurance-after-nonrenewal/",
+   "competitor": "Policygenius (guide + marketplace)",
+   "features_checked": "opcje po nieodnowieniu; przewodnik po udziałach huraganowych według stanów; kalkulator ścieżek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (poradnik i marketplace). Zintegrowanego symulatora nie stwierdzono.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit non-renewed FAIR Plan DIC or surplus lines or sell the house insurance too expensive",
+   "url": "https://www.coveragecat.com/insurance-types/home/customer-experiences-ca-fair-plan",
+   "competitor": "Coverage Cat (broker blog quoting Reddit)",
+   "features_checked": "doświadczenia klientów FAIR; DIC; E&S; koszty; cytaty z Reddita",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; cytaty z Reddita z drugiej ręki, oryginalne wątki niezweryfikowane",
+   "conclusion": "Substytut (broker). Sygnał popytu forumowego. Brak symulatora w opisie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "insurer non-renewed my home California: FAIR Plan plus DIC vs surplus lines vs home hardening discounts, how to decide",
+   "url": "https://fbia.com/blog/get-off-california-fair-plan/",
+   "competitor": "Licensed brokers (FBIA, ESI Insurance Brokers)",
+   "features_checked": "sekwencja zakupu admitted → E&S → FAIR+DIC; dokumentacja mitygacji; realne oferty",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; usługa doradcza",
+   "conclusion": "Główny substytut, bo ma dostęp do niepublicznych ofert E&S i DIC. Konflikt interesów, brak neutralnej analizy wariantu 'sprzedaż'.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit non-renewed FAIR Plan DIC or surplus lines or sell the house insurance too expensive",
+   "url": "https://www.insurance.ca.gov/01-consumers/200-wrr/upload/CDI-Fact-Sheet-Summary-on-Residential-Insurance-Policies-and-the-FAIR-Plan-v-011325.pdf",
+   "competitor": "California Department of Insurance - FAIR Plan fact sheet",
+   "features_checked": "fakty o FAIR Plan i DIC; rabaty; interaktywne narzędzia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; publiczny PDF",
+   "conclusion": "Partial (informacja oficjalna). Interaktywne narzędzia CDI/FAIR niezweryfikowane w tej fali.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I sell my house because homeowners insurance got too expensive Florida California survey homeowners considering moving",
+   "url": "https://www.redfin.com/news/home-insurance-survey-report-2024/",
+   "competitor": "(brak konkurenta - sygnał popytu dla wariantu 'sprzedaż')",
+   "features_checked": "odsetek właścicieli z wyższymi kosztami; przeprowadzki z powodu ubezpieczeń; narzędzie 'sprzedać czy zostać'",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; dane z 2024",
+   "conclusion": "W wynikach nie pojawił się kalkulator 'sprzedać czy zostać' z kosztem ubezpieczenia. Streszczenie samo zaproponowało ręczne porównanie kosztów utrzymania i sprzedaży, co pokazuje, że AI rozwiązuje to samodzielnie.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "insurer non-renewed my home California: FAIR Plan plus DIC vs surplus lines vs home hardening discounts, how to decide (extended)",
+  "home hardening insurance savings calculator payback wildfire wind mitigation (extended)",
+  "hurricane percentage deductible vs premium savings calculator break-even Florida Texas (extended)",
+  "app or platform for homeowners facing insurance non-renewal: compare FAIR Plan, E&S quotes, mitigation discounts (startup, broker software) (extended)",
+  "reddit non-renewed FAIR Plan DIC or surplus lines or sell the house insurance too expensive (standard)",
+  "home insurance non-renewal options calculator (extended)",
+  "should I sell my house because homeowners insurance got too expensive Florida California survey homeowners considering moving (extended)"
+ ]
+}

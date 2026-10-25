@@ -1,0 +1,1341 @@
+{
+ "families": [
+  {
+   "family": "Finansowanie i dług (dług konsumencki, refinansowanie, konsolidacja, produkty home equity: HELOC / home equity loan / cash-out refi / home equity investments, kredyty studenckie)",
+   "demand_pl": "OGRANICZENIE SESJI: wspólny limit 200 wyszukiwań na turę (dzielony z innymi agentami) wyczerpał się po 4 zapytaniach. Ocena opiera się na tych 4 wynikach (search-summary) i na hipotezach oznaczonych jako niezweryfikowane. DANE BEZPOŚREDNIE (search-summary): raport NY Fed za Q2 2026 (11.08.2026) podaje: zadłużenie gospodarstw domowych ok. 18,8 bln USD; salda HELOC +13 mld do 459 mld USD, czyli 17. kwartał wzrostu z rzędu i 142 mld powyżej dołka z Q1 2022; karty kredytowe ok. 1,26 bln USD (+54 mld r/r), wskaźnik przejścia kart w poważne opóźnienie 6,97%; kredyty studenckie ok. 1,65 bln; auto ok. 1,71 bln. WOLUMENY TRANSAKCJI (bliżej popytu niż salda): według Equifax w 2025 otwarto 1,409 mln HELOC (198,3 mld USD limitów), według Cotality 1,5 mln za 271 mld (inna metodologia). W 2026 do lipca: +6,6% sztuk i +14,5% limitów (130,1 mld USD). ICE: wypłaty z drugiego zastawu wyniosły 116 mld USD w 2025, najwięcej od 2007. TransUnion: w Q1 2026 liczba nowych kredytów hipotecznych +26% r/r dzięki fali refinansowania przy stopach ok. 6%. MBA Newslink (10.2026): liczba home equity loans +20% w Q2. KREDYTY STUDENCKIE to wymuszone zdarzenie decyzyjne: SAVE się skończył, RAP działa od 1.07.2026, serwisanci wysyłali powiadomienia w falach 1.07–15.08.2026 z 90 dniami na wybór planu, a na RAP można przejść do 1.07.2028. Źródła różnią się co do daty końca SAVE (10.03 vs 1.07.2026). SZACUNEK (nie dane): 1,4–1,5 mln nowych HELOC rocznie to ok. 115–125 tys. zawartych transakcji miesięcznie. Liczba osób, które tylko rozważają, jest większa (hipoteza). NIE SPRAWDZONO: wolumenów zapytań Google, wątków Reddit ani liczby promptów w LLM. Salda w bln USD to nie jest miesięczny popyt na narzędzie.",
+   "demand_sources": [
+    {
+     "url": "https://www.newyorkfed.org/newsevents/news/research/2026/20260811",
+     "title": "Press Release (Quarterly Report on Household Debt and Credit, Q2 2026)",
+     "publisher": "Federal Reserve Bank of New York",
+     "published": "2026-08-11"
+    },
+    {
+     "url": "https://www.newyorkfed.org/medialibrary/interactives/householdcredit/data/pdf/hhdc_2026q2.pdf",
+     "title": "hhdc 2026q2",
+     "publisher": "Federal Reserve Bank of New York",
+     "published": "2026-08"
+    },
+    {
+     "url": "https://bankingjournal.aba.com/2026/08/new-york-fed-household-debt-dipped-to-18-8t-in-q2/",
+     "title": "New York Fed: household debt dipped to $18.8T in Q2",
+     "publisher": "ABA Banking Journal",
+     "published": "2026-08"
+    },
+    {
+     "url": "https://www.mpamag.com/us/mortgage-industry/industry-trends/mortgage-balances-hit-1319-trillion-as-heloc-demand-surges-to-three-year-high/574946",
+     "title": "Mortgage balances hit $13.19 trillion as HELOC demand surges to three-year high",
+     "publisher": "MPA Mag"
+    },
+    {
+     "url": "https://www.stlouisfed.org/on-the-economy/2026/jun/tracking-shift-mortgage-refinancings-helocs",
+     "title": "Tracking the Shift from Mortgage Refinancings to HELOCs",
+     "publisher": "Federal Reserve Bank of St. Louis",
+     "published": "2026-06"
+    },
+    {
+     "url": "https://www.housingwire.com/articles/why-mortgage-leaders-are-betting-on-home-equity-through-2027/",
+     "title": "Why mortgage leaders are betting on home equity through 2027",
+     "publisher": "HousingWire"
+    },
+    {
+     "url": "https://newslink.mba.org/servicing-newslink/2026/october/mba-servicing-newslink-tuesday-oct-6-2026/home-equity-loan-originations-increase-by-20-in-second-quarter/",
+     "title": "Home Equity Loan Originations Increase by 20% in Second Quarter",
+     "publisher": "MBA Newslink",
+     "published": "2026-10-06"
+    },
+    {
+     "url": "https://media.transunion.com/content/dam/transunion/us/business/collateral/infographic/q2-2026-ciir-mortgage-infographic.pdf",
+     "title": "TransUnion Q2 2026 CIIR mortgage infographic",
+     "publisher": "TransUnion",
+     "published": "2026"
+    },
+    {
+     "url": "https://www.hel.news/articles/bank-home-equity-news/study-originations-040726/",
+     "title": "Study: HELOC Lending Share Up as Limits Top $1T",
+     "publisher": "HELN News"
+    },
+    {
+     "url": "https://www.hel.news/articles/risk/stats-062226/",
+     "title": "HELOC Utilization Climbs as Line Sizes Grow",
+     "publisher": "HELN News"
+    },
+    {
+     "url": "https://qz.com/student-loan-changes-2026",
+     "title": "Student loan changes 2026: what borrowers need to know",
+     "publisher": "Quartz"
+    },
+    {
+     "url": "https://www.sofi.com/learn/content/repayment-assistance-plan-explained/",
+     "title": "Repayment Assistance Plan (RAP): What to Know for 2026",
+     "publisher": "SoFi"
+    }
+   ],
+   "commercial_pl": "Bardzo wysoki. Prawie każda decyzja kończy się wyborem produktu kredytowego: HELOC, home equity loan, cash-out refi, personal loan, refinansowanie kredytu studenckiego albo home equity investment (HEI). Dowody pośrednie (search-summary): niezależny kalkulator HEI (heireview.com) deklaruje stałą prowizję referencyjną od dostawców. W 2026 powstało wiele porównań dostawców HEI (LendEDU, FinanceBuzz, Mortgage-info, Banks Done Right, The College Investor), co wskazuje na aktywny rynek afiliacyjny. Lenderzy sami publikują treści o RAP (SoFi) i refinansowaniu HELOC (AmeriSave), więc walczą o ten sam ruch. Stawki CPC i RPM dla display: hipoteza / niezweryfikowane, nie sprawdzano w tej sesji.",
+   "integrated_competition_pl": "Obraz mieszany, pewność niska–średnia. (1) HEI: heireview.com deklaruje się jako jedyny niezależny kalkulator HEI. Porównuje Point, Hometap, Unlock i Splitero oraz pokazuje kwotę, która zostaje przy wyjściu. Dla wyboru dostawcy HEI to konkurent częściowy lub bezpośredni. Czy obejmuje HELOC, reverse mortgage albo sprzedaż domu, jest niezweryfikowane. Hometap ma własny kalkulator (narzędzie dostawcy, stronnicze). Artykuły z obliczeniami na przykładach (walletgrower.com, banksdoneright.com, homeequity101.com) są substytutem. (2) Kredyty studenckie: studentloancalcs.com ma stronę poświęconą przejściu SAVE → RAP / IBR / Tiered Standard. Domena sugeruje kalkulator, ale funkcje są niezweryfikowane (możliwy konkurent bezpośredni). Federalny Loan Simulator i płatni doradcy (np. Student Loan Planner): hipoteza z wiedzy modelu, niesprawdzona w sesji. (3) Refinansowanie, konsolidacja, spłata kart: duzi wydawcy (Bankrate, NerdWallet) mają wiele pojedynczych kalkulatorów. W wynikach potwierdzono tylko stronę stóp HELOC Bankrate, reszta to hipoteza. Wyszukiwania integrujących narzędzi (HELOC vs cash-out, konsolidacja, symulatory planów studenckich) nie zostały wykonane z powodu limitu. Nie znaleziono bezpośredniego konkurenta dla pełnego porównania 'HELOC vs home equity loan vs cash-out vs HEI vs reverse mortgage vs sprzedaż' w badanym zakresie (1 zapytanie extended o HEI vs HELOC; pewność niska).",
+   "ai_fit_pl": "Hipoteza / niezweryfikowane: w sesji brak danych o promptach w LLM (zapytanie o badania użycia ChatGPT do porad finansowych nie zostało wykonane). Pytania 'HELOC or cash-out refi?' albo 'which plan after SAVE?' są naturalne dla asystenta. Przy prostych porównaniach (stała stopa, jedna kwota) asystent odpowie sam, także policzy w code interpreterze. Szansa, że odeśle do narzędzia, rośnie, gdy: (a) reguły są nowe, np. RAP od 1.07.2026, a wiedza modelu może być nieaktualna; (b) obliczenia mają kilka faz (draw i repayment w HELOC, kapy w HEI, scenariusze wartości domu, rok wyjścia); (c) użytkownik chce przeliczać warianty. Czy ChatGPT, Perplexity, Gemini, Claude albo Copilot zacytują stronę narzędzia, zależy od ich własnego mechanizmu wyszukiwania. Nie wolno tu przenosić zasad Google SEO. Ryzyko (hipoteza): duzi wydawcy finansowi i lenderzy mają przewagę autorytetu w cytowaniach.",
+   "shared_modeling_pl": "Bardzo wysoki. Jeden silnik miesięcznych przepływów obsłuży większość pomysłów: amortyzację, zmienną stopę z fazami draw i repayment, koszty zamknięcia i rozliczenie przy sprzedaży. Do tego wspólne moduły: podatki (progi, odliczalność odsetek; parametry do weryfikacji), solver punktu opłacalności (break-even), scenariusze ścieżek stóp i wartości domu, wykres wrażliwości (tornado) oraz warunki kwalifikacji (CLTV, DTI, scoring). Ten sam silnik obsłuży refinansowanie, HELOC, HEI (umowę udziału we wzroście wartości jako osobny instrument), pożyczkę z 401(k) i plany spłaty kredytów studenckich (rata liczona od dochodu). Moduł płynności łączy się z rodziną ubezpieczeń i rezerw, np. HELOC jako zapasowe źródło gotówki.",
+   "data_cost_pl": "Umiarkowany. Większość parametrów podaje użytkownik. Dane rynkowe: stopa prime i średnie stopy hipoteczne są publiczne i aktualizowane co tydzień, więc da się je automatyzować w n8n (licencje źródeł to hipoteza do sprawdzenia; strony stóp Bankrate nie należy kopiować bez licencji). Parametry podatkowe zmieniają się raz w roku. Reguły kredytów studenckich wynikają z ustaw, ale w latach 2025–2026 były bardzo zmienne. Warunki dostawców HEI są zmienne i rozproszone. Źródła z wyników podają sprzeczne liczby dla Hometap: minimalny scoring 500, 575 albo 585 oraz limit 27% albo 30% wartości domu. To dowód, że warunki trzeba weryfikować bezpośrednio u dostawcy, a nie u agregatorów.",
+   "error_risk_pl": "Wysokie (kategoria YMYL). Błąd w regułach RAP, IBR lub PSLF albo w opodatkowaniu umorzenia może kosztować użytkownika tysiące USD, a źródła różnią się nawet co do daty końca SAVE. Umowy HEI mają kapy, korekty ryzyka i różne terminy, więc uproszczenie zmienia wynik. Odliczalność odsetek HELOC zależy od celu wydatku (parametr do weryfikacji). Potrzebne są: jawne założenia, zakres ważności, wersjonowanie reguł i testy regresyjne.",
+   "catalog_potential_pl": "Wysoki, a decyzje są naprawdę różne: dostęp do kapitału z domu (osobne sytuacje: chcę utrzymać niską stopę, mam ograniczoną zdolność, jestem emerytem), refinansowanie z opcją czekania, pilna potrzeba gotówki (401k vs HELOC vs pożyczka), ścieżki oddłużenia (DMP, ugoda, upadłość), finansowanie studiów po zmianach z 2026. Dalsze tematy do zbadania: finansowanie auta a rezerwa, BNPL, dług medyczny. Uwaga: łatwo zjechać w zatłoczone kalkulatory, np. spłatę kart albo 'pay off mortgage vs invest'. Te pomysły odrzucamy.",
+   "ad_fit_pl": "Wysokie dopasowanie tematyczne. Naturalni reklamodawcy: kredyty hipoteczne, HELOC, pożyczki osobiste, refinansowanie studenckie, HEI, reverse mortgage. Konkretne stawki AdSense i RPM: hipoteza / niezweryfikowane. Ryzyka: wysoki standard jakości dla treści YMYL; reklamy usług oddłużeniowych mogą podlegać ograniczeniom polityk reklamowych (niezweryfikowane). Afiliacja (HEI, lenderzy) wyłącznie jako dodatek, zgodnie z modelem właściciela.",
+   "expert_cost_pl": "Średni. Model przegląda CFP lub analityk kredytowy: raz na rodzinę modeli i ponownie przy zmianach prawa. Kredyty studenckie wymagają specjalisty od planów federalnych, co oznacza wyższy koszt i częste aktualizacje. Jeśli silnik jest wspólny, koszt przeglądu nie rośnie liniowo z liczbą stron (hipoteza).",
+   "scores": {
+    "demand": 4,
+    "commercial": 5,
+    "integrated_gap": 3,
+    "ai_fit": 3,
+    "shared_modeling": 5,
+    "data_cost_ease": 3,
+    "low_error_risk": 2,
+    "catalog": 4,
+    "ad_fit": 4,
+    "low_expert_cost": 3
+   },
+   "verdict_pl": "Rodzina priorytetowa. Ma najlepiej udokumentowany popyt (NY Fed, Equifax, ICE, TransUnion, St. Louis Fed) i najsilniejszy charakter komercyjny. Rekomendacja: zacząć od klastra 'dostęp do kapitału z domu' (G1-01, G1-02) i 'pilna potrzeba gotówki' (G1-05). Łączą one zmienne stopy, horyzont, kwalifikację i scenariusze wartości domu, a znaleziona konkurencja jest tylko częściowa. Unikać: ogólnych planerów spłaty kart, 'pay off mortgage vs invest' i ogólnego wyboru planu po SAVE (jest już studentloancalcs.com, liczne przewodniki lenderów, prawdopodobnie federalny symulator). Ograniczenie: wykonano tylko 4 wyszukiwania. Przed budową każdy pomysł wymaga 3–4 wyszukiwań konkurencji (kalkulatory, aplikacje, arkusze, Reddit)."
+  },
+  {
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe (dom, auto, udziały własne w zdrowiu, decyzje o zgłoszeniu szkody, wielkość funduszu awaryjnego)",
+   "demand_pl": "OGRANICZENIE SESJI: limit wyszukiwań wyczerpał się, zanim wykonano jakiekolwiek zapytanie o tę rodzinę (składki, nieodnowienia polis, open enrollment, statystyki funduszu awaryjnego, fora). DANE POŚREDNIE (search-summary): NY Fed Q2 2026 podaje salda kart 1,26 bln USD, wskaźnik przejścia kart w poważne opóźnienie 6,97% oraz że nowe opóźnienia na kartach i kredytach auto są 'na podwyższonym poziomie'. To sugeruje napięcia płynnościowe części gospodarstw i jest tylko pośrednio związane z rezerwami. HIPOTEZY / NIEZWERYFIKOWANE (wiedza modelu, do sprawdzenia): w stanach narażonych na katastrofy (FL, CA, LA, TX, CO) rosną składki domowe i przybywa nieodnowień polis. Właśnie trwają sezonowe okna decyzyjne: open enrollment u pracodawców i w ACA (od 1 listopada; dziś jest 25.10.2026). Zmiany HSA (plany bronze i catastrophic jako HSA-eligible od 2026) oraz status rozszerzonych dopłat ACA wymagają weryfikacji. Polisy auto i dom ma bardzo wiele gospodarstw, ale to nie jest miesięczny popyt na narzędzie. Decyzja zapada w konkretnych momentach: odnowienie polisy, szkoda, zmiana planu zdrowotnego.",
+   "demand_sources": [
+    {
+     "url": "https://www.newyorkfed.org/newsevents/news/research/2026/20260811",
+     "title": "Press Release (Quarterly Report on Household Debt and Credit, Q2 2026) – dane pośrednie o napięciach płynnościowych",
+     "publisher": "Federal Reserve Bank of New York",
+     "published": "2026-08-11"
+    },
+    {
+     "url": "https://bankingjournal.aba.com/2026/08/new-york-fed-household-debt-dipped-to-18-8t-in-q2/",
+     "title": "New York Fed: household debt dipped to $18.8T in Q2 – dane pośrednie",
+     "publisher": "ABA Banking Journal",
+     "published": "2026-08"
+    }
+   ],
+   "commercial_pl": "Ubezpieczenia jako sektor są wysoko komercyjne: porównywarki, lead-gen dla agentów i ubezpieczycieli (hipoteza; stawek nie sprawdzano). Same decyzje są jednak mniej transakcyjne niż w kredytach: 'zgłosić szkodę?', 'podnieść udział własny?', 'ile trzymać rezerwy?'. W chwili decyzji użytkownik nie kupuje produktu. Szok składkowy często kończy się zmianą ubezpieczyciela, więc komercyjność bywa odroczona (hipoteza). Rezerwy gotówkowe mają komercyjność pośrednią (HYSA, T-bills).",
+   "integrated_competition_pl": "Nie zbadano w tej sesji z powodu limitu. Hipotezy z wiedzy modelu, niezweryfikowane: wybór planu zdrowotnego jest silnie obsłużony przez narzędzia pracodawców (np. Jellyvision ALEX, Picwell), HealthCare.gov (szacunki kosztów) i liczne kalkulatory HSA vs PPO dostawców HSA, czyli zatłoczony. W decyzjach o zgłoszeniu szkody i wyborze udziału własnego dominują prawdopodobnie artykuły porównywarek (Policygenius, ValuePenguin, Bankrate) i proste kalkulatory punktu opłacalności. Narzędzia łączącego udziały własne kilku polis z rezerwą gotówkową nie potwierdzono ani nie wykluczono. Nie można tu napisać nawet 'Nie znaleziono bezpośredniego konkurenta', bo wyszukiwania nie wykonano. Pewność niska.",
+   "ai_fit_pl": "Hipoteza / niezweryfikowane. Pytania 'should I file a claim', 'should I raise my deductible' czy 'how big should my emergency fund be' są typowe dla asystentów i często dostają odpowiedź w czacie (reguła kciuka plus prosty punkt opłacalności). Ryzyko, że asystent rozwiąże problem sam, jest więc wysokie. Odesłanie do narzędzia ma sens, gdy potrzebne są dane, których model nie ma: dopłaty składkowe po szkodzie według stanu i typu szkody, aktualne parametry HSA i ACA. Albo gdy trzeba zasymulować probabilistycznie kilka polis naraz z rezerwą. Dlatego ocena jest niższa niż w rodzinie finansowania.",
+   "shared_modeling_pl": "Dobry. Wspólne moduły: zdarzenia losowe (częstość i wysokość szkód, symulacja Monte Carlo wydatków), płynność (rezerwa plus linie kredytowe jako zapas; moduł wspólny z rodziną finansowania, np. HELOC jako backup z ryzykiem zamrożenia), punkt opłacalności udziału własnego, horyzont dopłat składkowych 3–5 lat. Zdrowie (koszty z kieszeni, HSA) wymaga osobnego modułu reguł planów.",
+   "data_cost_pl": "Trudniej niż w finansowaniu. Dopłaty po szkodzie, rabaty za bezszkodowość i reguły stanowe (limity dopłat, zniżki za zabezpieczenie domu) są rozproszone i często zastrzeżone: wnioski taryfowe ubezpieczycieli w stanach, badania porównywarek o niepewnej licencji. Dane publiczne (hipoteza / niezweryfikowane): CMS Public Use Files planów ACA (roczne), limity HSA od IRS (roczne), maksymalne zasiłki dla bezrobotnych według stanów (DOL), FEMA National Risk Index. Aktualizacje są roczne i zdarzeniowe, część wymaga ręcznej weryfikacji.",
+   "error_risk_pl": "Wysokie. Zaniżona oczekiwana dopłata może zniechęcić do zgłoszenia zasadnej szkody, zawyżona działa odwrotnie. W zdrowiu błąd w sieci placówek, limicie kosztów z kieszeni lub regułach HSA kosztuje tysiące USD. Do tego dochodzi zróżnicowanie stanowe. Wyniki muszą mieć wyraźne zakresy, a narzędzie nie powinno wydawać rekomendacji 'nie zgłaszaj' bez podania widełek.",
+   "catalog_potential_pl": "Średni. Kandydaci: zgłoszenie szkody (dom, auto), łączny wybór udziałów własnych z rezerwą, reakcja na skok składki lub nieodnowienie polisy domowej (zabezpieczenie domu vs FAIR vs nadwyżkowy rynek E&S vs sprzedaż), wielkość funduszu awaryjnego i 'stos płynności', planowanie progu dopłat ACA. Dalsze tematy do zbadania: ubezpieczenie od powodzi (NFIP vs prywatne), umbrella, renters. Wiele prostych tematów (rezygnacja z collision, HSA vs PPO) jest zatłoczonych albo trywialnych.",
+   "ad_fit_pl": "Wysokie dopasowanie do reklamodawców ubezpieczeniowych (auto, dom, zdrowie, porównywarki); stawki to hipoteza. Ryzyko konfliktu: reklamy ubezpieczycieli mogą podważać neutralność rekomendacji (np. 'zmień ubezpieczyciela'). Treści zdrowotne podlegają wysokiemu standardowi jakości.",
+   "expert_cost_pl": "Wyższy niż w finansowaniu. Potrzebny licencjonowany agent lub broker albo aktuariusz do założeń o częstości szkód i dopłatach, a dla zdrowia ekspert od benefitów. Zróżnicowanie stanowe podnosi koszt aktualizacji.",
+   "scores": {
+    "demand": 3,
+    "commercial": 4,
+    "integrated_gap": 3,
+    "ai_fit": 2,
+    "shared_modeling": 4,
+    "data_cost_ease": 2,
+    "low_error_risk": 2,
+    "catalog": 3,
+    "ad_fit": 4,
+    "low_expert_cost": 2
+   },
+   "verdict_pl": "Rodzina drugorzędna, uzupełniająca. Najmocniejsze kandydatury to 'Should I file this claim?' (G1-10) i łączny optymalizator udziałów własnych z rezerwą (G1-11). Łączą dane, których asystent nie ma, z symulacją probabilistyczną i dzielą moduł płynności z rodziną finansowania. Do odrzucenia: HSA vs PPO oraz rezygnacja z collision. Wszystkie oceny tej rodziny opierają się na hipotezach, bo dla niej nie wykonano żadnego wyszukiwania. Przed decyzją potrzebne są wyszukiwania popytu i konkurencji."
+  }
+ ],
+ "ideas": [
+  {
+   "temp_id": "G1-01",
+   "name_en": "Keep-the-Low-Rate Equity Access Simulator (HELOC vs Home Equity Loan vs Cash-Out Refi vs Personal Loan vs Phasing)",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Właściciel domu z kredytem hipotecznym na 2,5–3,5% z lat 2020–2021, który w ciągu 0–24 miesięcy potrzebuje 30–150 tys. USD (remont, dach, czesne, spłata kart). Moment: ma wycenę wykonawcy albo dostaje oferty refinansowania po spadku stóp w okolice 6% (TransUnion, Q1 2026).",
+   "sample_prompt_en": "I have a 3.1% mortgage with $280k left and need about $80k for a new roof and kitchen over the next year. HELOC, home equity loan, or cash-out refi now that rates are near 6%? We might move in 5 years.",
+   "decision_problem": "Jakim instrumentem i w jakim harmonogramie pozyskać kapitał, żeby zminimalizować koszt w horyzoncie posiadania domu, przy niepewnej ścieżce stóp i możliwej sprzedaży.",
+   "combined_domains": "Matematyka hipoteczna (stopa mieszana), zmienna stopa HELOC (prime plus marża, faza draw i faza repayment), koszty zamknięcia, horyzont sprzedaży, budżet miesięczny i szok raty, kwalifikacja (CLTV, DTI), podatki (odliczalność odsetek zależna od celu; parametr do weryfikacji), płynność.",
+   "variants_compared": "A) cash-out refi całego salda; B) HELOC z wypłatami według harmonogramu (najpierw same odsetki, potem amortyzacja); C) home equity loan o stałej stopie; D) personal loan na część plus oszczędności; E) etapowanie projektu i odkładanie; F) sekwencja: HELOC teraz, refinansowanie lub konsolidacja później, jeśli stopy spadną.",
+   "key_dependencies": "Różnica między obecną a nową stopą (w wariancie A traci się niską stopę), ścieżka prime, harmonogram wypłat, rok sprzedaży (rozłożenie kosztów zamknięcia, spłata z ceny), koniec okresu draw (szok raty), limity CLTV, wartość domu.",
+   "main_outputs": "Łączny koszt kapitału (nominalnie i jako NPV) w horyzontach 2, 5 i 10 lat; ścieżka rat z zaznaczonym szokiem; rok, w którym warianty się zrównują; wykres wrażliwości (prime ±2 pp, rok sprzedaży, wzrost wartości, koszty zamknięcia); lista wariantów niewykonalnych przez CLTV lub DTI; jawne założenia i ograniczenia.",
+   "reason_external_site": "Przepływy mają kilka faz, zmienną stopę i sekwencję zdarzeń. Asystent da przybliżenie, ale wielokrotne przeliczanie scenariuszy, wykres rat i wykres wrażliwości są wygodniejsze w narzędziu. Wynik jest powtarzalny i sprawdzalny (hipoteza co do zachowań użytkowników).",
+   "data_sources": "Wejścia użytkownika; stopa prime i średnie stopy hipoteczne (publiczne, aktualizowane co tydzień, automatyzacja w n8n; licencje źródeł do sprawdzenia); domyślne koszty zamknięcia jako szacunek z jawnym zakresem; kontekst rynkowy z NY Fed, Equifax i ICE (search-summary).",
+   "user_data": "Saldo, stopa i pozostały okres kredytu; wartość domu; kwota i harmonogram potrzeb; horyzont i planowany rok sprzedaży; przedział scoringu; dochód i inne raty (DTI); krańcowa stopa podatkowa; gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Bankrate – HELOC rates (i kalkulatory home equity)",
+     "url": "https://www.bankrate.com/home-equity/heloc-rates/",
+     "type": "partial",
+     "features_claimed": "Według search-summary: strona z aktualnymi stopami HELOC (październik 2026). Kalkulatory porównujące HELOC z cash-out: niezweryfikowane w sesji.",
+     "paid": "bezpłatne (hipoteza)",
+     "notes": "Strony nie otwarto. Duży wydawca z wysokim autorytetem."
+    },
+    {
+     "name": "Hometap – HELOC vs. Home Equity Investment: Full Comparison",
+     "url": "https://www.hometap.com/blog/helocs-vs-home-equity-investments",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: artykuł dostawcy HEI porównujący HELOC z HEI (spłata miesięczna kontra brak rat).",
+     "paid": "bezpłatne",
+     "notes": "Stronniczy (dostawca HEI). Nie obejmuje cash-out ani harmonogramu wypłat (niezweryfikowane)."
+    },
+    {
+     "name": "AmeriSave – Can You Refinance a HELOC? (2026 guide)",
+     "url": "https://www.amerisave.com/learn/can-you-refinance-a-heloc-your-complete-guide-for",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: poradnik lendera o refinansowaniu HELOC.",
+     "paid": "bezpłatne",
+     "notes": "Treść edukacyjna lendera. Narzędzia interaktywne niezweryfikowane."
+    },
+    {
+     "name": "NerdWallet / Bankrate – kalkulatory HELOC vs cash-out refinance",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań wyczerpany); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: porównanie dwóch instrumentów przy stałych założeniach.",
+     "paid": "bezpłatne (hipoteza)",
+     "notes": "Do sprawdzenia w pierwszej kolejności."
+    },
+    {
+     "name": "Asystent AI (ChatGPT, Claude, Gemini) z code interpreterem",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: przybliżone obliczenia i jakościowe porównanie w czacie.",
+     "paid": "freemium",
+     "notes": "Najmocniejszy substytut przy prostych przypadkach."
+    }
+   ],
+   "already_solved": "Porównania par (cash-out vs HELOC) i strony stóp istnieją u dużych wydawców i lenderów. Strona stóp HELOC Bankrate jest potwierdzona w wynikach, kalkulatory to hipoteza. Lenderzy (AmeriSave) i dostawcy HEI (Hometap) porównują instrumenty jakościowo.",
+   "gap": "Hipoteza: brak jednego narzędzia, które łączy harmonogram wypłat, ścieżkę stóp, horyzont sprzedaży, szok raty i sekwencję 'HELOC teraz, refi później'. Nie znaleziono bezpośredniego konkurenta w badanym zakresie, ale zakres był minimalny: zapytanie o kalkulatory HELOC vs cash-out nie wykonało się z powodu limitu. Pewność niska.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Dane bezpośrednie (search-summary): salda HELOC 459 mld USD, 17. kwartał wzrostu z rzędu (NY Fed, Q2 2026). Nowe HELOC w 2025: 1,409 mln (Equifax) lub 1,5 mln (Cotality); w 2026 do lipca +6,6% sztuk. ICE: 116 mld USD wypłat z drugiego zastawu w 2025, najwięcej od 2007. St. Louis Fed (06.2026) opisuje przesunięcie z refinansowania do HELOC. HELOC to 80,5% nowych kredytów home equity w H1 (Inside Mortgage Finance według search-summary). Wolumen zapytań i promptów: niezbadany.",
+   "ad_environment": "Lenderzy HELOC i hipoteczni, banki, firmy remontowe i dekarskie (pasuje do przykładowego scenariusza dach plus solar). Temat o wysokiej wartości; stawki to hipoteza.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "zbadać",
+   "status_reason": "Najlepiej udokumentowany popyt w obu rodzinach, silna komercyjność, znaleziona konkurencja tylko częściowa. Przed budową potrzebne 3–4 wyszukiwania konkurencji: kalkulatory HELOC vs cash-out u NerdWallet, Bankrate i lenderów, arkusze, wątki Reddit.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-02",
+   "name_en": "Cash-Poor Homeowner Equity Options: Home Equity Investment vs HELOC vs Reverse Mortgage vs Sell & Downsize",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Właściciel z dużym kapitałem w domu, ale ograniczoną zdolnością kredytową (DTI powyżej 43%, scoring poniżej 620, niski dochód emeryta 62+), który potrzebuje gotówki bez miesięcznej raty. Moment: odmowa HELOC albo reklama HEI (Hometap, Unlock, Point).",
+   "sample_prompt_en": "I'm 64, my house is worth $650k with $120k left on the mortgage, my credit score is 610 and I need $70k. Is Hometap or Unlock better than a reverse mortgage, or should I just sell and downsize in 3 years?",
+   "decision_problem": "Która ścieżka uwolnienia kapitału jest wykonalna i najtańsza (albo zostawia najwięcej majątku) przy niepewnym wzroście wartości domu i nieznanym roku wyjścia.",
+   "combined_domains": "Matematyka umów udziału we wzroście wartości (udział inwestora, kapy, korekta ryzyka i wyceny, termin 10–30 lat, częściowy wykup – według LendEDU oferuje go tylko Unlock); reverse mortgage HECM (wiek, limit, składki MIP, rosnące saldo; parametry do weryfikacji); kwalifikacja HELOC (jedno ze źródeł w wynikach: zwykle scoring 620+ i DTI poniżej 43%); koszty sprzedaży; podatek od zysku (wyłączenie dla domu; do weryfikacji); majątek dla spadkobierców.",
+   "variants_compared": "HEI u dostawcy A, B lub C; HELOC albo home equity loan (jeśli użytkownik się kwalifikuje); HECM; sprzedaż i tańszy dom albo najem; kombinacje, np. mała HEI teraz i sprzedaż za 3 lata.",
+   "key_dependencies": "Wzrost wartości domu nieliniowo napędza koszt HEI; rok wyjścia; kapy zwrotu inwestora; tempo narastania salda HECM; warunki kwalifikacji; opłaty początkowe (LendEDU według search-summary: przy 250 tys. USD ok. 12,5 tys. w Unlock vs 7,5 tys. w Hometap); limity kwot (Hometap do 600 tys., Unlock do 500 tys. według tego samego źródła).",
+   "main_outputs": "Mapa ciepła kosztu kapitału: rok wyjścia × wzrost wartości domu. Próg wzrostu wartości, przy którym HEI kosztuje tyle co HELOC. Kapitał netto dla spadkobierców. Flagi wykonalności. Wykres wrażliwości. Lista założeń i warunków umów (dane od dostawców do weryfikacji).",
+   "reason_external_site": "Umowy HEI są nieliniowe i nieintuicyjne. Asystent może pomylić warunki dostawców; nawet źródła w wynikach są sprzeczne (minimalny scoring Hometap 500, 575 albo 585; limit 27% albo 30% wartości domu). Siatka scenariuszy wymaga narzędzia.",
+   "data_sources": "Publiczne warunki dostawców HEI (monitoring w n8n plus ręczna weryfikacja co kwartał); parametry HECM (HUD, roczne – hipoteza); indeksy cen domów do scenariuszy (FHFA HPI – hipoteza); wejścia użytkownika.",
+   "user_data": "Wiek, wartość domu, saldo kredytu, scoring, dochód i DTI, potrzebna kwota, planowany rok sprzedaży, oczekiwany wzrost wartości, cele spadkowe.",
+   "nearest_competition": [
+    {
+     "name": "HEI Review",
+     "url": "https://heireview.com/",
+     "type": "partial",
+     "features_claimed": "Według search-summary: deklaruje się jako jedyny niezależny kalkulator HEI (nie zbudowany przez dostawcę). Porównuje Point, Hometap, Unlock i Splitero i pokazuje, ile użytkownik zatrzymuje przy wyjściu. Pobiera stałą prowizję referencyjną.",
+     "paid": "bezpłatne (model referencyjny)",
+     "notes": "Dla samego wyboru dostawcy HEI prawie bezpośredni konkurent. Czy obejmuje HELOC, HECM i sprzedaż – niezweryfikowane. Strony nie otwarto."
+    },
+    {
+     "name": "Hometap – kalkulator i porównanie HELOC vs HEI",
+     "url": "https://www.hometap.com/blog/helocs-vs-home-equity-investments",
+     "type": "partial",
+     "features_claimed": "Według search-summary: kalkulator dostawcy (przykład z innego źródła: inwestycja 50 tys. USD rozliczana na 82,8–194,3 tys. USD po 10 latach zależnie od wartości domu) oraz artykuł porównawczy.",
+     "paid": "bezpłatne",
+     "notes": "Stronniczy, pokazuje tylko własny produkt."
+    },
+    {
+     "name": "WalletGrower – HEI vs HELOC 2026: Which Costs Less? Worked Math",
+     "url": "https://walletgrower.com/blog/hei-vs-heloc",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: artykuł z obliczeniami na przykładach.",
+     "paid": "bezpłatne",
+     "notes": "Interaktywność niezweryfikowana."
+    },
+    {
+     "name": "Banks Done Right – HEI vs HELOC (2026)",
+     "url": "https://banksdoneright.com/hei-vs-heloc/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: koszty, kwalifikacja, jak wybrać.",
+     "paid": "bezpłatne",
+     "notes": "Artykuł."
+    },
+    {
+     "name": "HomeEquity101 – Home Equity Investment vs HELOC",
+     "url": "https://homeequity101.com/blog/home-equity-investment-vs-heloc",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: porównanie obok siebie.",
+     "paid": "bezpłatne",
+     "notes": "Artykuł."
+    },
+    {
+     "name": "LendEDU – Hometap vs Unlock",
+     "url": "https://lendedu.com/blog/hometap-vs-unlock-home-equity/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: porównanie opłat, limitów i częściowych wykupów.",
+     "paid": "bezpłatne",
+     "notes": "Serwis afiliacyjny."
+    }
+   ],
+   "already_solved": "Wybór dostawcy HEI i koszt przy wyjściu rozwiązuje heireview.com (na podstawie deklaracji). Porównania HEI vs HELOC z przykładami liczbowymi są w wielu artykułach (walletgrower, banksdoneright, homeequity101, financebuzz, mortgage-info).",
+   "gap": "Połączenie HEI z HECM, sprzedażą lub downsizingiem, warunkami kwalifikacji i mapą rok wyjścia × wzrost wartości. Nie znaleziono bezpośredniego konkurenta w badanym zakresie: 1 zapytanie extended, a funkcje heireview.com poza HEI są niezweryfikowane. Pewność niska do średniej. Ryzyko: heireview.com może łatwo rozszerzyć zakres.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Pośrednie: w 2026 opublikowano wiele porównań HEI (LendEDU, FinanceBuzz, Mortgage-info, The College Investor, Banks Done Right). To sygnał zainteresowania i rynku afiliacyjnego, a nie miara popytu. Wolumen transakcji HEI jest niezweryfikowany. Kontekst popytu na HELOC: NY Fed i Equifax (search-summary).",
+   "ad_environment": "Dostawcy HEI (programy referencyjne, tylko jako dodatek), lenderzy reverse mortgage i HELOC, agenci nieruchomości (sprzedaż, downsizing).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "zbadać",
+   "status_reason": "Silna nieliniowość i wiele warunków wykonalności dają narzędziu realną wartość, a konkurencja jest częściowa i niszowa. Ryzyka: wrażliwa grupa (seniorzy), utrzymanie aktualnych warunków dostawców, możliwe regulacje stanowe HEI (niezweryfikowane).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G1-03",
+   "name_en": "SAVE-Ended Repayment Plan Chooser (RAP vs IBR vs Tiered Standard vs Private Refi, with PSLF)",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Kredytobiorca federalny z planu SAVE, który dostał powiadomienie od serwisanta (fale 1.07–15.08.2026) z 90 dniami na wybór planu. Bez wyboru trafi do planu standardowego.",
+   "sample_prompt_en": "My SAVE forbearance is ending and my servicer says I have 90 days to pick a plan. I make $62k, married filing separately, one kid, and I work at a nonprofit. RAP or IBR? Should I refinance instead?",
+   "decision_problem": "Wybór planu spłaty minimalizującego koszt albo ratę, z uwzględnieniem PSLF i możliwego umorzenia.",
+   "combined_domains": "Reguły planów federalnych (RAP według search-summary: 1–10% AGI, minimum 10 USD miesięcznie, 50 USD mniej za każdą osobę na utrzymaniu, umorzenie po 30 latach), PSLF, sposób rozliczenia podatku przez małżonków, ścieżka dochodu, opodatkowanie umorzenia (niezweryfikowane), refinansowanie prywatne (utrata ochrony federalnej).",
+   "variants_compared": "RAP, IBR, Tiered Standard, plan standardowy, refinansowanie prywatne, PSLF w ramach RAP lub IBR.",
+   "key_dependencies": "Dochód i jego wzrost, liczba osób na utrzymaniu, sposób rozliczenia podatku, kwalifikacja do PSLF, termin (na RAP można przejść do 1.07.2028), domyślne przypisanie do planu standardowego.",
+   "main_outputs": "Roczne raty, łączna spłata, umorzenie i podatek od niego, porównanie wariantów, wrażliwość na dochód.",
+   "reason_external_site": "Reguły są nowe (2026), a wiedza modeli może być nieaktualna. Ten sam argument wykorzystują już jednak istniejące narzędzia.",
+   "data_sources": "Przepisy ED/FSA, komunikaty serwisantów, parametry roczne (np. federalna granica ubóstwa).",
+   "user_data": "Salda i typy pożyczek, daty zaciągnięcia, AGI, sytuacja rodzinna, pracodawca (PSLF), historia płatności.",
+   "nearest_competition": [
+    {
+     "name": "StudentLoanCalcs – SAVE Plan Has Ended 2026: How to Switch to RAP, IBR, or Tiered Standard",
+     "url": "https://studentloancalcs.com/save-transition.html",
+     "type": "partial",
+     "features_claimed": "Według search-summary: strona poświęcona właśnie przejściu z SAVE na RAP, IBR lub Tiered Standard; domena wskazuje na kalkulatory.",
+     "paid": "bezpłatne (hipoteza)",
+     "notes": "Możliwy konkurent bezpośredni. Funkcje interaktywne niezweryfikowane, strony nie otwarto."
+    },
+    {
+     "name": "Federal Student Aid – Loan Simulator",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: oficjalny symulator planów spłaty. Czy obsługuje RAP – niezweryfikowane (jeden wynik nie wskazał oficjalnego kalkulatora RAP).",
+     "paid": "bezpłatne",
+     "notes": "Do sprawdzenia."
+    },
+    {
+     "name": "Student Loan Planner (konsultacje i kalkulatory)",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: płatne konsultacje i kalkulatory planów.",
+     "paid": "płatne konsultacje (hipoteza)",
+     "notes": "Substytut ekspercki."
+    },
+    {
+     "name": "SoFi – Repayment Assistance Plan (RAP) explained",
+     "url": "https://www.sofi.com/learn/content/repayment-assistance-plan-explained/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: przewodnik po RAP na 2026.",
+     "paid": "bezpłatne",
+     "notes": "Lender refinansujący, więc ma interes w refinansowaniu."
+    },
+    {
+     "name": "White Coat Investor – RAP explained",
+     "url": "https://www.whitecoatinvestor.com/repayment-assistance-plan-rap/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: RAP po końcu SAVE, dla lekarzy.",
+     "paid": "bezpłatne",
+     "notes": "Treść ekspercka."
+    },
+    {
+     "name": "Finnita – IDR plans after SAVE (2026 guide)",
+     "url": "https://finnita.com/blog/idr-plans-after-save-shutdown-2026/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: przewodnik po planach IDR po końcu SAVE.",
+     "paid": "bezpłatne",
+     "notes": "Narzędzia niezweryfikowane."
+    }
+   ],
+   "already_solved": "Jest strona studentloancalcs.com poświęcona dokładnie przejściu SAVE → RAP / IBR / Tiered Standard (interaktywność niezweryfikowana). Są liczne przewodniki z 2026 (SoFi, Fidelity, White Coat Investor, Quartz, Finnita, AttendWealth, CollegeHelpGuide). Federalny symulator i płatni doradcy to hipoteza.",
+   "gap": "W badanym zakresie brak istotnej luki; ewentualne różnice byłyby kosmetyczne. Konkurencja bezpośrednia jest prawdopodobna (pewność średnia).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Silny popyt wymuszony zdarzeniem: koniec SAVE, start RAP 1.07.2026, powiadomienia 1.07–15.08 z 90-dniowym oknem (search-summary: qz.com, sofi.com, collegehelpguide.com, studentloancalcs.com). Saldo kredytów studenckich ok. 1,65 bln USD (NY Fed). Szczyt jest przejściowy: okna z powiadomień kończą się około listopada 2026.",
+   "ad_environment": "Lenderzy refinansujący (np. SoFi). Reklama refinansowania jest sprzeczna z interesem osób korzystających z PSLF.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Kuszące, bo zdarzenie jest duże, ale obszar jest zatłoczony: dedykowane kalkulatory na innych domenach, przewodniki lenderów, prawdopodobnie federalny symulator i płatni doradcy. Reguły wciąż się zmieniają (źródła różnią się nawet co do daty końca SAVE), co oznacza wysokie ryzyko błędu i drogiego eksperta. Szczyt popytu prawdopodobnie minie, zanim nowa strona się zaindeksuje (hipoteza).",
+   "verification_level": "wstępnie sprawdzony w wyszukiwarce"
+  },
+  {
+   "temp_id": "G1-04",
+   "name_en": "Grad School Funding Gap Simulator (post-Grad PLUS era: federal caps vs private loans vs employer aid vs deferral)",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Kandydat na studia magisterskie lub zawodowe (MBA, prawo, medycyna, pielęgniarstwo) na rok 2027/28, któremu nowe limity federalne nie pokrywają kosztu. Moment: list przyjęcia i pakiet finansowy (kalendarz to hipoteza).",
+   "sample_prompt_en": "Grad PLUS is gone for new borrowers. My MBA costs $160k and federal loans only cover part of it. Should I take private loans with a cosigner, go part-time while working, or defer a year and save? What salary do I need for it to pay off?",
+   "decision_problem": "Jak sfinansować lukę i czy program ma sens finansowy przy nowych limitach i nowym planie spłaty.",
+   "combined_domains": "Limity pożyczek federalnych od 1.07.2026 (dokładne kwoty i likwidacja Grad PLUS to hipoteza / niezweryfikowane w sesji; potwierdzone tylko, że nowi kredytobiorcy mają wyłącznie Tiered Standard lub RAP). Do tego: pożyczki prywatne (scoring, cosigner, stopa stała lub zmienna), dochód utracony w trakcie studiów vs studia part-time, tuition assistance od pracodawcy (limit zwolnienia podatkowego do weryfikacji), opłacalność (wymagany wzrost pensji), spłata części federalnej w RAP.",
+   "variants_compared": "Kredyt federalny plus prywatny; part-time z pracą; odroczenie o rok i oszczędzanie; tańszy program; sponsoring pracodawcy z obowiązkiem odpracowania.",
+   "key_dependencies": "Wysokość luki, stopy prywatne (zależne od scoringu cosignera), wzrost pensji po studiach, czas trwania programu, RAP (procent AGI), ryzyko nieukończenia.",
+   "main_outputs": "Łączny koszt finansowania każdego wariantu, rata na tle dochodu po studiach, wzrost pensji potrzebny do zwrotu, NPV programu, wrażliwość na stopę i pensję.",
+   "reason_external_site": "Reguły są nowe i modele mogą ich nie znać. Narzędzie łączy kilka źródeł finansowania z rachunkiem opłacalności. Asystent policzy przybliżenie, ale reguły federalne wymagają aktualnych danych.",
+   "data_sources": "Przepisy ED (limity, RAP); koszty programów (IPEDS, College Scorecard – hipoteza); wynagrodzenia (BLS OES – hipoteza); stopy prywatne jako wejście użytkownika.",
+   "user_data": "Koszt programu, oszczędności, obecna i oczekiwana pensja, scoring lub cosigner, długość programu.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory prywatnych kredytów studenckich lenderów (np. SoFi, Sallie Mae)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: rata i koszt kredytu prywatnego.",
+     "paid": "bezpłatne",
+     "notes": "Stronnicze."
+    },
+    {
+     "name": "College Scorecard / narzędzia opłacalności studiów",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: koszty i zarobki absolwentów.",
+     "paid": "bezpłatne",
+     "notes": "Bez modelu finansowania (hipoteza)."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: przybliżony rachunek opłacalności w czacie.",
+     "paid": "freemium",
+     "notes": "Ryzyko nieaktualnych reguł."
+    }
+   ],
+   "already_solved": "Hipoteza: fragmenty rozwiązują kalkulatory pożyczek prywatnych lenderów i narzędzia opłacalności uczelni. W sesji tego nie zbadano.",
+   "gap": "Hipoteza / niezweryfikowane: wyszukiwania konkurencji nie wykonano, więc nie można wnioskować o luce.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: od 1.07.2026 nowi kredytobiorcy mają tylko Tiered Standard lub RAP, a Parent PLUS nie kwalifikuje się do RAP (search-summary: sofi.com, qz.com). To zmiana systemowa. Likwidacja Grad PLUS i limity kwot to hipoteza z wiedzy modelu (ustawa z 2025), wymaga weryfikacji. Liczba dotkniętych osób niezweryfikowana.",
+   "ad_environment": "Lenderzy prywatnych kredytów studenckich, programy studiów online. Temat o wysokiej wartości (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Nowe zdarzenie decyzyjne, powtarzające się co rok, z silnym komponentem komercyjnym; łączy finansowanie z rachunkiem opłacalności. Wymaga weryfikacji reguł i konkurencji (lenderzy mają mocne narzędzia).",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-05",
+   "name_en": "Urgent Cash Need Simulator: 401(k) Loan vs Hardship Withdrawal vs HELOC vs Personal Loan vs 0% Card",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Osoba, która w ciągu dni lub tygodni potrzebuje 10–50 tys. USD (rachunek medyczny, awaria, auto) i ma dostęp do kilku źródeł. Moment: nagły wydatek, często przy niepewności zatrudnienia.",
+   "sample_prompt_en": "I need $25k for a medical bill and a roof leak. Should I take a 401(k) loan, a hardship withdrawal, a HELOC, or a personal loan? There are layoff rumors at my company.",
+   "decision_problem": "Z jakiego źródła albo jakiej kombinacji źródeł wziąć pieniądze, żeby zdążyć przed terminem potrzeby i zminimalizować oczekiwany oraz pesymistyczny koszt.",
+   "combined_domains": "Podatki i kary emerytalne (podatek dochodowy plus 10% kary przy wypłacie), reguły pożyczki z 401(k) (limity, spłata, rozliczenie przy odejściu z pracy; terminy do weryfikacji), czas uruchomienia (HELOC tygodnie, personal loan dni), scoring i APR, utracony zwrot z rynku, karta 0% (okres promocyjny i opłata za przeniesienie salda), ryzyko utraty pracy, rezerwa awaryjna.",
+   "variants_compared": "Pożyczka z 401(k); hardship withdrawal; HELOC; personal loan; karta 0% z przeniesieniem salda; kombinacje (np. część z karty 0%, reszta personal loan) i plan płatności u wierzyciela.",
+   "key_dependencies": "Prawdopodobieństwo zwolnienia (przy odejściu niespłacona pożyczka z 401(k) staje się opodatkowaną wypłatą), wynik rynku w czasie pożyczki, scoring, termin potrzeby, krańcowa stopa podatkowa, zdolność spłaty.",
+   "main_outputs": "Koszt oczekiwany i scenariusz pesymistyczny (utrata pracy, spadek rynku), wykonalność w terminie, ranking wariantów, wrażliwość na prawdopodobieństwo zwolnienia i zwrot z rynku, proponowany miks źródeł.",
+   "reason_external_site": "Narzędzie łączy podatki, scenariusze zdarzeń i czas uruchomienia źródeł. Asystent poda zasady, ale probabilistyczny rachunek kilku wariantów z danymi użytkownika jest wygodniejszy w narzędziu (hipoteza).",
+   "data_sources": "Parametry podatkowe IRS (roczne), reguły 401(k) (do weryfikacji), przedziały APR jako wejście lub szacunek, wejścia użytkownika.",
+   "user_data": "Potrzebna kwota i termin, saldo 401(k) i warunki planu, wartość domu i saldo kredytu, scoring, dochód, stopa podatkowa, ocena ryzyka zwolnienia, gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory pożyczki z 401(k) u administratorów planów (np. Vanguard, Fidelity)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: koszt pożyczki z 401(k) i jej wpływ na emeryturę.",
+     "paid": "bezpłatne",
+     "notes": "Jeden instrument."
+    },
+    {
+     "name": "NerdWallet / Bankrate – kalkulatory personal loan i 401(k) loan",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: pojedyncze kalkulatory.",
+     "paid": "bezpłatne",
+     "notes": "Do sprawdzenia."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: jakościowe porównanie i prosty rachunek.",
+     "paid": "freemium",
+     "notes": "Silny substytut przy prostych przypadkach."
+    }
+   ],
+   "already_solved": "Hipoteza: pojedyncze kalkulatory (401(k) loan, personal loan, balance transfer) i artykuły '401k loan vs HELOC'. Nie zweryfikowano w sesji.",
+   "gap": "Hipoteza / niezweryfikowane: porównanie wielu źródeł ze scenariuszem utraty pracy i terminem potrzeby. Wyszukiwania nie wykonano.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "low",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie (search-summary): salda kart 1,26 bln USD; nowe opóźnienia na kartach i kredytach auto 'na podwyższonym poziomie' (NY Fed, Q2 2026). Popyt na hardship withdrawals i pożyczki z 401(k) niezweryfikowany w sesji.",
+   "ad_environment": "Lenderzy personal loan, banki (HELOC), wydawcy kart z balance transfer. Temat o wysokiej wartości (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Prawdziwy problem decyzyjny o mocnej komercyjności, z zależnościami między wariantami (podatki, termin, ryzyko pracy). W dużej mierze korzysta ze wspólnego silnika. Konkurencji jeszcze nie zbadano.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-06",
+   "name_en": "Debt Relief Path Chooser: DIY Payoff vs Debt Management Plan vs Settlement vs Chapter 7 / Chapter 13",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Osoba z 15–80 tys. USD długu niezabezpieczonego, z opóźnieniami albo z ratami minimalnymi przekraczającymi budżet. Moment: telefony windykacji, reklama firmy debt relief.",
+   "sample_prompt_en": "I owe $42k across 6 credit cards, I'm 60 days behind on two, and I make $48k. Should I do a debt management plan, debt settlement, or file Chapter 7? What happens to my credit and taxes?",
+   "decision_problem": "Która ścieżka wyjścia z długu jest wykonalna i najtańsza w łącznym koszcie, czasie i konsekwencjach.",
+   "combined_domains": "Matematyka spłaty; warunki DMP (obniżone APR, 3–5 lat – hipoteza); ugoda (opłaty, podatek od umorzonego długu, wyłączenie przy niewypłacalności – do weryfikacji); upadłość (means test według mediany stanowej, koszty, majątek chroniony); scoring; ryzyko pozwów windykacyjnych.",
+   "variants_compared": "Samodzielna spłata (avalanche); DMP; ugoda (settlement); Chapter 7; Chapter 13; konsolidacja (jeśli użytkownik się kwalifikuje).",
+   "key_dependencies": "Dochód wobec mediany stanowej, majątek, wysokość i struktura długu, opóźnienia, podatek od umorzenia, budżet.",
+   "main_outputs": "Łączny koszt i czas do wyjścia z długu, podatek, jakościowa ścieżka scoringu, wykonalność (means test), ryzyka i ograniczenia.",
+   "reason_external_site": "Narzędzie łączy reguły prawne, podatkowe i finansowe z danymi stanowymi. Asystent prawdopodobnie odpowie ostrożnie i ogólnie (hipoteza).",
+   "data_sources": "Mediany dochodów do means testu (US Trustee Program, aktualizowane okresowo – hipoteza), wejścia użytkownika.",
+   "user_data": "Długi i ich warunki, dochód, wielkość gospodarstwa, stan zamieszkania, majątek, opóźnienia.",
+   "nearest_competition": [
+    {
+     "name": "Upsolve (bezpłatne narzędzie do Chapter 7)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: ocena kwalifikacji i przygotowanie wniosku Chapter 7.",
+     "paid": "bezpłatne (hipoteza)",
+     "notes": "Nonprofit."
+    },
+    {
+     "name": "NFCC / agencje doradztwa kredytowego (DMP)",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: doradztwo i plany DMP.",
+     "paid": "niskie opłaty (hipoteza)",
+     "notes": "Substytut ludzki."
+    },
+    {
+     "name": "Kalkulatory firm debt settlement",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: szacunek oszczędności z ugody.",
+     "paid": "bezpłatne (lead-gen)",
+     "notes": "Silnie stronnicze."
+    }
+   ],
+   "already_solved": "Hipoteza: każdą ścieżkę obsługuje osobny podmiot (Upsolve, agencje DMP, firmy settlement), każdy w swoim interesie. Nie zweryfikowano.",
+   "gap": "Hipoteza / niezweryfikowane: neutralne porównanie wszystkich ścieżek. Wyszukiwania nie wykonano.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "medium",
+   "content_risk": "high",
+   "demand_evidence": "Bezpośrednie (search-summary): salda kart 1,26 bln USD (+54 mld r/r), wskaźnik przejścia kart w poważne opóźnienie 6,97% wobec 6,93% rok wcześniej (NY Fed, Q2 2026), czyli rośnie populacja w trudnościach. Wolumen zapytań niezweryfikowany.",
+   "ad_environment": "Firmy debt relief i settlement, prawnicy upadłościowi. Ryzyko ograniczeń polityk reklamowych (niezweryfikowane) i niskiej jakości reklam.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Prawdziwy problem zintegrowany, ale: ryzyko prawne (granica porady prawnej), wrażliwi użytkownicy, wysoki koszt eksperta (prawnik plus doradca podatkowy), wątpliwe środowisko reklamowe. Wrócić po walidacji modelu na mniej ryzykownych tematach.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-07",
+   "name_en": "Refinance-Now-or-Wait Simulator (rate paths, points vs no-cost refi, re-refi option, sale horizon)",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Kredytobiorca z kredytem na 6,75–7,75% z lat 2023–2025. Moment: stopy spadły w okolice 6% (TransUnion Q1 2026), przychodzą oferty lenderów.",
+   "sample_prompt_en": "My mortgage is 7.25% from 2024 and rates are around 6% now. Should I refinance now and pay points, do a no-closing-cost refi, or wait in case rates drop more? We might sell in 4–6 years.",
+   "decision_problem": "Refinansować teraz (z punktami lub bez kosztów) czy czekać, licząc się z możliwością ponownego refinansowania i horyzontem sprzedaży.",
+   "combined_domains": "Punkt opłacalności kosztów zamknięcia; punkty vs stopa; refinansowanie bez kosztów (wyższa stopa); opcja ponownego refinansowania; scenariusze stóp; horyzont sprzedaży; PMI; reset okresu kredytu; podatki.",
+   "variants_compared": "Refinansowanie teraz z punktami; teraz bez kosztów; czekanie; teraz bez kosztów i ponownie później; zmiana okresu (30, 20 lub 15 lat).",
+   "key_dependencies": "Ścieżka stóp, koszty zamknięcia, rok sprzedaży, PMI i LTV, reset harmonogramu amortyzacji.",
+   "main_outputs": "Oczekiwany koszt wariantów w scenariuszach stóp, wartość opcji czekania, punkt opłacalności punktów, wrażliwość na rok sprzedaży.",
+   "reason_external_site": "Scenariusze stóp i sekwencja kolejnych refinansowań wykraczają poza prosty kalkulator. Prosty punkt opłacalności asystent policzy jednak sam.",
+   "data_sources": "Średnie stopy (publiczne, co tydzień), domyślne koszty zamknięcia jako szacunek, wejścia użytkownika.",
+   "user_data": "Saldo, stopa, pozostały okres, wartość domu, oferty z punktami i bez kosztów, horyzont, PMI.",
+   "nearest_competition": [
+    {
+     "name": "Bankrate / NerdWallet – kalkulatory refinansowania i punktów",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: punkt opłacalności refinansowania, opłacalność punktów.",
+     "paid": "bezpłatne",
+     "notes": "Prawdopodobnie bardzo wiele podobnych narzędzi."
+    },
+    {
+     "name": "Kalkulatory lenderów",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: rata i oszczędność.",
+     "paid": "bezpłatne",
+     "notes": "Stronnicze."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: prosty punkt opłacalności.",
+     "paid": "freemium",
+     "notes": "Wysokie ryzyko, że rozwiąże sam."
+    }
+   ],
+   "already_solved": "Kalkulatory punktu opłacalności refinansowania i punktów są prawdopodobnie powszechne (hipoteza z wiedzy modelu; w sesji nie zweryfikowano).",
+   "gap": "Wartość opcji czekania i sekwencja kolejnych refinansowań. Użytkownicy mogą uznać to za kosmetykę. Brak weryfikacji.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Bezpośrednie (search-summary): według TransUnion liczba nowych kredytów hipotecznych w Q1 2026 wzrosła o 26% r/r dzięki fali refinansowania przy stopach ok. 6%. St. Louis Fed (06.2026) opisuje przesunięcie między refinansowaniem a HELOC.",
+   "ad_environment": "Lenderzy hipoteczni. Temat o wysokiej wartości (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Prawdopodobnie zatłoczony klaster kalkulatorów refinansowania, a wyróżnik (scenariusze stóp, ponowne refinansowanie) może nie zostać dostrzeżony. Tani w budowie jako strona poboczna na wspólnym silniku z G1-01, ale nie na start.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-08",
+   "name_en": "Credit Card Payoff & Balance Transfer Planner (snowball vs avalanche vs transfer vs consolidation loan)",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Osoba z kilkoma kartami kredytowymi, która chce plan spłaty.",
+   "sample_prompt_en": "I have $18k across four credit cards at 22–29% APR. Should I do snowball, avalanche, a balance transfer card, or a consolidation loan?",
+   "decision_problem": "Kolejność spłaty i ewentualna konsolidacja.",
+   "combined_domains": "Matematyka spłaty, opłaty za przeniesienie salda, okres promocyjny, APR pożyczki.",
+   "variants_compared": "Snowball, avalanche, balance transfer, personal loan.",
+   "key_dependencies": "APR, budżet miesięczny, okres promocyjny, szansa na zatwierdzenie.",
+   "main_outputs": "Czas spłaty, łączne odsetki.",
+   "reason_external_site": "Słaby: asystent rozwiąże to sam, a darmowych narzędzi jest wiele.",
+   "data_sources": "Wejścia użytkownika.",
+   "user_data": "Salda, APR, minimalne raty, budżet.",
+   "nearest_competition": [
+    {
+     "name": "Undebt.it",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "direct",
+     "features_claimed": "Hipoteza / niezweryfikowane: planer spłaty metodą snowball i avalanche.",
+     "paid": "freemium (hipoteza)",
+     "notes": "Do potwierdzenia."
+    },
+    {
+     "name": "NerdWallet – debt payoff / consolidation calculators",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: pojedyncze kalkulatory.",
+     "paid": "bezpłatne",
+     "notes": "Duży wydawca."
+    },
+    {
+     "name": "Arkusze typu debt snowball template",
+     "url": "brak URL – nie pojawił się w wynikach; kategoria z wiedzy modelu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: szablony arkuszy.",
+     "paid": "bezpłatne",
+     "notes": "Substytut."
+    }
+   ],
+   "already_solved": "Hipoteza (wiedza modelu, niezweryfikowane w sesji): bardzo wiele darmowych planerów i szablonów; asystenci liczą to wprost.",
+   "gap": "Brak istotnej luki (hipoteza).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Duża populacja (salda kart 1,26 bln USD według NY Fed), ale istnienie problemu nie oznacza, że ktoś kliknie w kolejne narzędzie.",
+   "ad_environment": "Wydawcy kart i lenderzy. Temat wartościowy, ale zatłoczony.",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Zatłoczony obszar (hipoteza z wiedzy modelu); asystent rozwiąże to w czacie; w praktyce to kalkulator, nie symulator decyzji.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-09",
+   "name_en": "Extra Cash Allocator: Prepay Mortgage vs Invest vs Pay Down HELOC/Other Debts",
+   "family": "Finansowanie i dług",
+   "user_and_moment": "Osoba z nadwyżką kilkuset USD miesięcznie i kilkoma długami.",
+   "sample_prompt_en": "Should I put an extra $800 a month toward my 6.5% mortgage, my HELOC, or invest in my 401(k)?",
+   "decision_problem": "Na co przeznaczyć nadwyżkę.",
+   "combined_domains": "Stopy długów, oczekiwane zwroty, podatki, płynność.",
+   "variants_compared": "Nadpłata kredytu hipotecznego, spłata HELOC, inwestowanie, rezerwa.",
+   "key_dependencies": "Stopy, oczekiwany zwrot, podatki, dopłaty pracodawcy.",
+   "main_outputs": "Majątek netto po N latach.",
+   "reason_external_site": "Słaby: klasyczne pytanie, które asystent rozwiązuje sam.",
+   "data_sources": "Wejścia użytkownika.",
+   "user_data": "Długi, stopy, nadwyżka, konta emerytalne.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory 'pay off mortgage or invest' (wielu wydawców)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); kategoria z wiedzy modelu",
+     "type": "direct",
+     "features_claimed": "Hipoteza / niezweryfikowane: porównanie nadpłaty z inwestowaniem.",
+     "paid": "bezpłatne",
+     "notes": "Do potwierdzenia."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: odpowiedź w czacie.",
+     "paid": "freemium",
+     "notes": "Silny substytut."
+    }
+   ],
+   "already_solved": "Hipoteza (wiedza modelu): bardzo popularny typ kalkulatora.",
+   "gap": "Brak istotnej luki (hipoteza).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Niezweryfikowane w sesji.",
+   "ad_environment": "Brokerzy, robo-advisory (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Zatłoczony obszar i łatwy dla asystenta. Złożoność nie daje tu przewagi.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-10",
+   "name_en": "Should I File This Claim? Home & Auto Claim Net-Benefit Simulator",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Właściciel domu lub auta tuż po szkodzie (grad, wyciek wody, stłuczka), z kosztorysem 1,5–15 tys. USD i udziałem własnym 1–2,5 tys. USD albo procentowym (huragan). Moment: 1–14 dni po zdarzeniu, przed zgłoszeniem.",
+   "sample_prompt_en": "A hailstorm damaged my roof. The estimate is $9,500 and my deductible is $2,500. I had a water claim two years ago. If I file, how much will my premium go up, could I get non-renewed, and is it worth it?",
+   "decision_problem": "Zgłosić szkodę czy pokryć ją samemu (albo połączyć z planowaną wymianą dachu), biorąc pod uwagę wieloletnie skutki dla składki i ryzyko nieodnowienia polisy.",
+   "combined_domains": "Udział własny (kwotowy lub procentowy); wypłata w wartości rzeczywistej (ACV) vs odtworzeniowej (RCV) i amortyzacja dachu; dopłata składkowa (procent i czas trwania); utrata rabatu za bezszkodowość; historia szkód (CLUE) i ryzyko nieodnowienia na trudnym rynku; prawdopodobieństwo przyszłej większej szkody; płynność; ewentualny upgrade z rabatem (hipoteza).",
+   "variants_compared": "Zgłoś teraz; zapłać sam; zapłać sam i zrób upgrade z rabatem; zgłoś i połącz z planowaną wymianą (dopłata do różnicy); poczekaj na pełny kosztorys (w terminach z polisy).",
+   "key_dependencies": "Kwota szkody wobec udziału własnego; dopłata = procent × składka × lata; liczba wcześniejszych szkód; regulacje stanowe dotyczące dopłat (niezweryfikowane); sytuacja na rynku (ryzyko nieodnowienia); gotówka.",
+   "main_outputs": "Korzyść netto ze zgłoszenia w horyzoncie 3–5 lat (jako zakres), minimalna kwota szkody, przy której zgłoszenie się opłaca, wpływ ryzyka nieodnowienia (scenariusze), wrażliwość na procent dopłaty, ostrzeżenia (np. szkody na osobach zgłaszać zawsze).",
+   "reason_external_site": "Asystent poda regułę kciuka. Wartość narzędzia to tabele założeń o dopłatach według typu szkody i stanu oraz wieloletni rachunek z ryzykiem nieodnowienia, czyli dane, których model może nie mieć aktualnych (hipoteza).",
+   "data_sources": "Badania porównywarek o średnich dopłatach po szkodzie (licencja i aktualność do sprawdzenia), regulacje stanowe (departamenty ubezpieczeń), wejścia użytkownika.",
+   "user_data": "Składka roczna, udział własny, kosztorys, typ szkody, historia szkód, stan, wiek dachu lub auta, gotówka.",
+   "nearest_competition": [
+    {
+     "name": "Artykuły porównywarek 'when to file a claim' (np. Policygenius, ValuePenguin, Bankrate)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwy z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: średnie dopłaty po szkodzie i reguły kciuka.",
+     "paid": "bezpłatne",
+     "notes": "Prawdopodobnie bez wieloletniej symulacji (niezweryfikowane)."
+    },
+    {
+     "name": "Agent ubezpieczeniowy",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: porada przy zgłoszeniu.",
+     "paid": "bezpłatne (w ramach polisy)",
+     "notes": "Możliwy konflikt interesów."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: reguła kciuka i prosty rachunek.",
+     "paid": "freemium",
+     "notes": "Brak danych o dopłatach według stanu."
+    }
+   ],
+   "already_solved": "Hipoteza: artykuły 'when to file a claim' z przykładowymi średnimi dopłatami, bez wieloletniej symulacji. Nie zweryfikowano w sesji.",
+   "gap": "Hipoteza / niezweryfikowane: wieloletni rachunek zgłoszenia z ryzykiem nieodnowienia i połączeniem z planowaną wymianą. Wyszukiwania konkurencji nie wykonano, więc nie wolno wnioskować o braku konkurenta.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane: szkody gradowe i wodne oraz stłuczki są częste. W sesji brak danych o wyszukiwaniach i forach (limit).",
+   "ad_environment": "Ubezpieczyciele, porównywarki, dekarze i wykonawcy, warsztaty samochodowe (hipoteza co do stawek).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Decyzja z sekwencją zdarzeń i wieloletnimi skutkami, gdzie dane o dopłatach dają przewagę nad czatem. Wspólny moduł z G1-11. Popyt i konkurencję trzeba zweryfikować.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-11",
+   "name_en": "Deductible & Emergency Fund Co-Optimizer (home + auto + health deductibles vs cash reserve)",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Gospodarstwo przy odnowieniu polisy domowej po skoku składki albo w czasie open enrollment (październik–listopad), z ograniczoną rezerwą gotówki.",
+   "sample_prompt_en": "My home insurance renewal jumped 30%. I could raise the deductible from $1,000 to $5,000 and raise my auto deductibles too, but I only have $8k in savings and a $4,000 health plan deductible. What combination makes sense?",
+   "decision_problem": "Jaki zestaw udziałów własnych (dom, auto, zdrowie) i jaki poziom rezerwy minimalizuje koszt przy akceptowalnym ryzyku braku płynności.",
+   "combined_domains": "Składki a udziały własne trzech polis; częstość szkód według ryzyka (szacunki); korelacja zdarzeń (katastrofa uderza w dom i auto naraz); koszty zdrowotne z kieszeni; rezerwa i czas jej odbudowy; zapasowa płynność (karta, HELOC z ryzykiem zamrożenia); HSA jako rezerwa (hipoteza).",
+   "variants_compared": "Siatka kombinacji udziałów własnych (np. 3 × 3 × 2) razy warianty rezerwy (obecna, docelowa, z HSA).",
+   "key_dependencies": "Oszczędność na składce wobec wzrostu ekspozycji, prawdopodobieństwo co najmniej jednego zdarzenia w roku, korelacja, wielkość rezerwy, koszt alternatywnej płynności (APR karty).",
+   "main_outputs": "Oczekiwany koszt roczny, 95. percentyl wydatków z kieszeni, prawdopodobieństwo, że rezerwa nie wystarczy, okres zwrotu oszczędności na składce, rekomendowana rezerwa, wrażliwość na częstość szkód.",
+   "reason_external_site": "Symulacja Monte Carlo kilku polis z korelacją i rezerwą wykracza poza wygodną odpowiedź w czacie. Wyniki są powtarzalne.",
+   "data_sources": "Wejścia użytkownika (oferty składek dla każdego udziału własnego); domyślne częstości szkód (źródło branżowe do ustalenia – hipoteza); FEMA NRI dla ryzyka katastrof (hipoteza); parametry planu zdrowotnego użytkownika.",
+   "user_data": "Składki dla każdego udziału własnego, rezerwa, dostępne linie kredytowe, plan zdrowotny (udział własny, limit kosztów z kieszeni), lokalizacja, auta.",
+   "nearest_competition": [
+    {
+     "name": "Kalkulatory udziału własnego dla pojedynczej polisy (porównywarki)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); kategoria z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: punkt opłacalności udziału własnego dla jednej polisy.",
+     "paid": "bezpłatne",
+     "notes": "Do sprawdzenia."
+    },
+    {
+     "name": "Jellyvision ALEX i inne narzędzia benefitowe pracodawców",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: wybór planu zdrowotnego z HSA.",
+     "paid": "B2B (dostęp przez pracodawcę)",
+     "notes": "Tylko zdrowie."
+    },
+    {
+     "name": "Ścieżki zakupowe ubezpieczycieli (składka dla każdego udziału własnego)",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: porównanie składek przy różnych udziałach własnych.",
+     "paid": "bezpłatne",
+     "notes": "Bez rezerwy i korelacji."
+    }
+   ],
+   "already_solved": "Hipoteza: pojedyncze kalkulatory i ścieżki zakupowe rozwiązują fragmenty. Nie zweryfikowano.",
+   "gap": "Hipoteza / niezweryfikowane: łączna optymalizacja kilku polis z rezerwą. Wyszukiwania nie wykonano.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Hipoteza / niezweryfikowane (brak wyszukiwań). Pośrednio: napięcia płynnościowe widoczne w opóźnieniach na kartach (NY Fed, Q2 2026).",
+   "ad_environment": "Ubezpieczyciele, porównywarki, banki z HYSA (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Prawdziwie zintegrowany problem (kilka polis, korelacja, płynność) dzielący moduły z rodziną finansowania. Najsłabsze ogniwo: dane o częstości szkód i niezweryfikowany popyt.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-12",
+   "name_en": "Home Insurance Shock Response: Mitigate vs Higher Wind Deductible vs FAIR/Citizens vs Surplus Lines vs Sell",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Właściciel domu w stanie z trudnym rynkiem ubezpieczeń (np. CA, FL, LA, TX, CO – hipoteza) po nieodnowieniu polisy albo dużym wzroście składki. Moment: 30–60 dni przed końcem polisy.",
+   "sample_prompt_en": "My insurer is non-renewing my California home. Should I go with the FAIR Plan plus a DIC policy, try a surplus lines carrier, or harden the house first for discounts? We might sell in 3 years.",
+   "decision_problem": "Jak zabezpieczyć dom ubezpieczeniowo i finansowo w horyzoncie 1–5 lat: inwestycja w zabezpieczenie domu, zmiana rynku ubezpieczenia, zmiana udziału własnego czy sprzedaż.",
+   "combined_domains": "Rynek ubezpieczeń (ubezpieczyciele licencjonowani, rynek nadwyżkowy E&S, FAIR/Citizens), inwestycja w zabezpieczenie domu (dach, okiennice; programy grantowe – hipoteza), rabaty za zabezpieczenie (wymagane w niektórych stanach – hipoteza), procentowy udział własny przy huraganie, wymagania lendera, wartość przy sprzedaży i możliwość ubezpieczenia, finansowanie zabezpieczenia (HELOC).",
+   "variants_compared": "Zabezpieczenie domu plus ubezpieczyciel licencjonowany; FAIR z polisą DIC; rynek nadwyżkowy E&S; wyższy udział własny przy wietrze; sprzedaż.",
+   "key_dependencies": "Koszt zabezpieczenia i grant, wysokość rabatu, różnica składek, ekspozycja przy katastrofie, horyzont sprzedaży, wymogi kredytodawcy.",
+   "main_outputs": "Koszt każdej ścieżki w horyzoncie 1–5 lat, okres zwrotu inwestycji w zabezpieczenie, ekspozycja na udział własny w zdarzeniu katastrofalnym, flagi wykonalności, wrażliwość.",
+   "reason_external_site": "Łączy inwestycję, ubezpieczenia i horyzont nieruchomości. Asystent zna ogólne opcje, ale nie zrobi wieloletniego rachunku z lokalnymi parametrami (hipoteza).",
+   "data_sources": "Reguły i programy stanowe (zmienne, kosztowne w utrzymaniu), FEMA NRI (hipoteza), oferty użytkownika.",
+   "user_data": "Lokalizacja, oferty składek, wiek i typ dachu, koszt zabezpieczenia, horyzont, saldo kredytu.",
+   "nearest_competition": [
+    {
+     "name": "Strony FAIR Plan / Citizens i narzędzia stanowych departamentów ubezpieczeń",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwy z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: informacje o ubezpieczycielu ostatniej instancji, porównania składek.",
+     "paid": "bezpłatne",
+     "notes": "Każdy pokazuje fragment."
+    },
+    {
+     "name": "Niezależni agenci i brokerzy",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: dobór polisy.",
+     "paid": "prowizja",
+     "notes": "Substytut ludzki."
+    }
+   ],
+   "already_solved": "Hipoteza: rozproszone źródła informacji i agenci. Nie zweryfikowano.",
+   "gap": "Hipoteza / niezweryfikowane. Wyszukiwania nie wykonano.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Hipoteza / niezweryfikowane (wiedza modelu): nieodnowienia i wzrosty składek w stanach narażonych na katastrofy. W sesji brak danych.",
+   "ad_environment": "Ubezpieczyciele, wykonawcy zabezpieczeń i dachów, agenci nieruchomości (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Potrzeba jest silna, ale mechanizmy są specyficzne dla stanów (FAIR/Citizens, granty, obowiązkowe rabaty). To wysoki koszt danych i eksperta, sprzeczny z modelem automatycznego utrzymania. Wrócić po walidacji G1-10 i G1-11, ewentualnie pilotaż w 1–2 stanach jako moduły parametryczne, nie osobne strony per stan.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-13",
+   "name_en": "Emergency Fund Sizing & Liquidity Stack Simulator (job-loss risk, state unemployment benefits, credit backup)",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Gospodarstwo budujące lub przeglądające fundusz awaryjny, często po informacjach o zwolnieniach.",
+   "sample_prompt_en": "How big should my emergency fund be? I'm a single-income household in tech, my state's unemployment pays about $450 a week, and I have a $50k HELOC I could tap. Should I keep 3, 6, or 9 months in cash?",
+   "decision_problem": "Docelowa wielkość rezerwy i jej struktura (gotówka, T-bills, linie kredytowe) przy ryzyku utraty pracy i innych wstrząsach.",
+   "combined_domains": "Ryzyko utraty pracy i czas szukania nowej (BLS – hipoteza), zasiłki stanowe (DOL – hipoteza), drugi dochód, udziały własne w polisach, zapasowa płynność (HELOC może zostać zamrożony w kryzysie), rentowność instrumentów.",
+   "variants_compared": "3, 6 lub 9 miesięcy; z HELOC jako zapasem albo bez; struktura HYSA / T-bills / I bonds.",
+   "key_dependencies": "Stabilność dochodu, zasiłek, wydatki stałe, udziały własne, dostępność kredytu w kryzysie.",
+   "main_outputs": "Zakres docelowej rezerwy, prawdopodobieństwo niedoboru, koszt utrzymywania gotówki zamiast inwestowania.",
+   "reason_external_site": "Umiarkowany. Ogólną odpowiedź poda asystent; wartość narzędzia to dane stanowe i scenariusze.",
+   "data_sources": "DOL (maksymalne zasiłki stanowe – hipoteza), BLS (hipoteza), wejścia użytkownika.",
+   "user_data": "Dochody, wydatki, branża, stan, linie kredytowe, udziały własne.",
+   "nearest_competition": [
+    {
+     "name": "Proste kalkulatory funduszu awaryjnego (banki, wydawcy)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); kategoria z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: liczba miesięcy razy wydatki.",
+     "paid": "bezpłatne",
+     "notes": "Do sprawdzenia."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: reguła 3–6 miesięcy.",
+     "paid": "freemium",
+     "notes": "Silny substytut."
+    }
+   ],
+   "already_solved": "Hipoteza: ogólne kalkulatory i reguły kciuka.",
+   "gap": "Hipoteza: dane stanowe i ryzyko zamrożenia kredytu jako zapasu. Niezweryfikowane.",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "low",
+   "demand_evidence": "Pośrednie (search-summary): opóźnienia na kartach (NY Fed, Q2 2026). Reszta niezweryfikowana.",
+   "ad_environment": "Banki z HYSA, brokerzy (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Pokrywa się z G1-11, a asystent dobrze radzi sobie z ogólnym pytaniem. Lepiej jako moduł G1-11 niż jako osobny produkt.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-14",
+   "name_en": "ACA Subsidy Cliff & Plan Tier Planner (early retirees and self-employed managing income vs premium tax credit)",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Wcześniejszy emeryt (przed Medicare) albo samozatrudniony kupujący plan w ACA. Moment: open enrollment (od 1 listopada) i planowanie dochodu na koniec roku (konwersje Roth, zyski kapitałowe).",
+   "sample_prompt_en": "I'm 58, retired early, and buy insurance on the ACA marketplace. If I do a $40k Roth conversion this year, how much subsidy do I lose? Should I pick bronze HSA or silver?",
+   "decision_problem": "Jak ustawić dochód (MAGI) i wybrać poziom planu, żeby zoptymalizować łącznie składkę po dopłacie, podatek i koszty z kieszeni.",
+   "combined_domains": "Dopłaty ACA (premium tax credit) i ich progi (status rozszerzonych dopłat po 2025 – niezweryfikowane), podatki (konwersje Roth, zyski kapitałowe), poziomy planów (bronze jako HSA-eligible od 2026 – hipoteza / niezweryfikowane), oczekiwane wydatki medyczne.",
+   "variants_compared": "Wysokości konwersji i dochodu × poziomy planów (bronze z HSA, silver, gold).",
+   "key_dependencies": "Progi dopłat, krańcowe stawki podatkowe, wydatki medyczne, reguły HSA.",
+   "main_outputs": "Łączny koszt (składka netto + podatek + koszty z kieszeni) w funkcji MAGI, krańcowa efektywna stawka, wrażliwość.",
+   "reason_external_site": "Reguły zmieniają się rok do roku, a modele mogą mieć nieaktualną wiedzę. Rachunek łączy podatki z ubezpieczeniem.",
+   "data_sources": "CMS (PUF planów – hipoteza), IRS (progi, HSA), federalne progi ubóstwa.",
+   "user_data": "Dochody, wiek, gospodarstwo, kod pocztowy, planowane konwersje, wydatki medyczne.",
+   "nearest_competition": [
+    {
+     "name": "HealthCare.gov – window shopping / szacunek dopłaty",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza / niezweryfikowane: szacunek dopłaty i porównanie planów.",
+     "paid": "bezpłatne",
+     "notes": "Bez modułu konwersji i podatków (hipoteza)."
+    },
+    {
+     "name": "KFF Health Insurance Marketplace Calculator",
+     "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+     "type": "partial",
+     "features_claimed": "Hipoteza: szacunek dopłaty według dochodu.",
+     "paid": "bezpłatne",
+     "notes": "Do sprawdzenia."
+    },
+    {
+     "name": "Oprogramowanie do planowania emerytalnego (np. ProjectionLab, Boldin)",
+     "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: modelowanie ACA i konwersji Roth w planach emerytalnych.",
+     "paid": "płatne (hipoteza)",
+     "notes": "Substytut płatny."
+    }
+   ],
+   "already_solved": "Hipoteza: oficjalne i nonprofitowe kalkulatory dopłat oraz płatne narzędzia emerytalne. Nie zweryfikowano.",
+   "gap": "Hipoteza / niezweryfikowane.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Niezweryfikowane w sesji. Sezonowo istotne (open enrollment), ale status regulacji dopłat na 2027 jest nieznany.",
+   "ad_environment": "Ubezpieczyciele zdrowotni, brokerzy ACA, doradcy finansowi (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Regulacje są niepewne (status rozszerzonych dopłat i zmiany HSA niezweryfikowane), ryzyko błędu i koszt eksperta wysokie, a temat może nakładać się na healthscorer.com właściciela. Wrócić po weryfikacji stanu prawnego.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-15",
+   "name_en": "HDHP + HSA vs PPO Chooser",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Pracownik w czasie open enrollment u pracodawcy.",
+   "sample_prompt_en": "Should I pick the HDHP with an HSA or the PPO this year? My employer puts $1,000 in the HSA and I expect a baby in the spring.",
+   "decision_problem": "Wybór planu zdrowotnego pracodawcy.",
+   "combined_domains": "Składki, udziały własne, limit kosztów z kieszeni, wpłata pracodawcy do HSA, podatki.",
+   "variants_compared": "HDHP z HSA vs PPO (ewentualnie EPO).",
+   "key_dependencies": "Przewidywane wydatki medyczne, wpłata pracodawcy do HSA, stopa podatkowa.",
+   "main_outputs": "Oczekiwany i maksymalny koszt roczny.",
+   "reason_external_site": "Słaby: narzędzia pracodawców i asystenci robią to dobrze.",
+   "data_sources": "Wejścia użytkownika (dokumenty benefitowe), limity HSA od IRS.",
+   "user_data": "Parametry planów, przewidywane wydatki.",
+   "nearest_competition": [
+    {
+     "name": "Jellyvision ALEX / Picwell (narzędzia benefitowe pracodawców)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwy z wiedzy modelu",
+     "type": "direct",
+     "features_claimed": "Hipoteza / niezweryfikowane: spersonalizowany wybór planu pracodawcy.",
+     "paid": "B2B (dostęp przez pracodawcę)",
+     "notes": "Do potwierdzenia."
+    },
+    {
+     "name": "Kalkulatory HSA vs PPO dostawców HSA i wydawców",
+     "url": "brak URL – nie pojawił się w wynikach; kategoria z wiedzy modelu",
+     "type": "direct",
+     "features_claimed": "Hipoteza: porównanie kosztów planów.",
+     "paid": "bezpłatne",
+     "notes": "Prawdopodobnie liczne."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: rachunek w czacie.",
+     "paid": "freemium",
+     "notes": "Silny substytut."
+    }
+   ],
+   "already_solved": "Hipoteza (wiedza modelu): bardzo dobrze obsłużone przez narzędzia pracodawców i kalkulatory.",
+   "gap": "Brak istotnej luki (hipoteza).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Sezonowy (open enrollment); niezweryfikowane w sesji.",
+   "ad_environment": "Dostawcy HSA, ubezpieczyciele (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "Zatłoczony obszar z dostępem przez pracodawców (hipoteza), łatwy dla asystenta, a do tego nakłada się na tematykę zdrowotną właściciela.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "G1-16",
+   "name_en": "Drop Collision/Comprehensive on an Older Car?",
+   "family": "Ubezpieczenia, udziały własne i rezerwy gotówkowe",
+   "user_and_moment": "Właściciel starszego auta przy odnowieniu polisy.",
+   "sample_prompt_en": "My 2012 Camry is worth about $6,000. Should I drop collision and comprehensive to save $600 a year?",
+   "decision_problem": "Utrzymać czy zrezygnować z ochrony własnych szkód auta.",
+   "combined_domains": "Wartość auta, składka, udział własny, rezerwa.",
+   "variants_compared": "Utrzymać, podnieść udział własny, zrezygnować.",
+   "key_dependencies": "Wartość auta, składka, prawdopodobieństwo szkody.",
+   "main_outputs": "Punkt opłacalności.",
+   "reason_external_site": "Słaby: prosta arytmetyka i reguła 10%.",
+   "data_sources": "Wejścia użytkownika, wycena auta.",
+   "user_data": "Wartość auta, składka, udział własny.",
+   "nearest_competition": [
+    {
+     "name": "Artykuły z regułą 10% (porównywarki ubezpieczeń)",
+     "url": "brak URL – nie pojawił się w wynikach (limit wyszukiwań); kategoria z wiedzy modelu",
+     "type": "direct",
+     "features_claimed": "Hipoteza / niezweryfikowane: reguła kciuka i przykłady.",
+     "paid": "bezpłatne",
+     "notes": "Do potwierdzenia."
+    },
+    {
+     "name": "Asystent AI",
+     "url": "brak URL – kategoria substytutu",
+     "type": "substitute",
+     "features_claimed": "Hipoteza: natychmiastowa odpowiedź.",
+     "paid": "freemium",
+     "notes": "Rozwiązuje sam."
+    }
+   ],
+   "already_solved": "Hipoteza: powszechne reguły kciuka i kalkulatory.",
+   "gap": "Brak istotnej luki (hipoteza).",
+   "impl_difficulty": "low",
+   "maintenance_burden": "low",
+   "content_risk": "low",
+   "demand_evidence": "Niezweryfikowane.",
+   "ad_environment": "Ubezpieczyciele auto (hipoteza).",
+   "ai_self_solve_risk": "high",
+   "confidence": "medium",
+   "status": "odrzucić",
+   "status_reason": "To trywialny kalkulator, a nie symulator decyzji. Asystent odpowiada sam.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://heireview.com/",
+   "competitor": "HEI Review",
+   "related_idea": "G1-02",
+   "features_checked": "Deklaracja: jedyny niezależny kalkulator HEI; porównuje Point, Hometap, Unlock i Splitero; pokazuje kwotę przy wyjściu; stała prowizja referencyjna.",
+   "access_limits": "Strony nie otwarto (WebFetch zablokowany); dowód: search-summary. Obsługa HELOC, HECM i sprzedaży niezweryfikowana.",
+   "conclusion": "Konkurent częściowy dla G1-02, prawie bezpośredni dla wyboru dostawcy HEI. Dowodzi istnienia modelu referencyjnego w niszy HEI.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://www.hometap.com/blog/helocs-vs-home-equity-investments",
+   "competitor": "Hometap (artykuł i kalkulator dostawcy)",
+   "related_idea": "G1-02, G1-01",
+   "features_checked": "Artykuł porównujący HELOC z HEI; kalkulator dostawcy (przykład z innego źródła: 50 tys. USD rozliczane na 82,8–194,3 tys. USD po 10 latach).",
+   "access_limits": "Strony nie otwarto; search-summary. Szczegóły kalkulatora niezweryfikowane.",
+   "conclusion": "Konkurent częściowy i stronniczy (tylko własny produkt).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://walletgrower.com/blog/hei-vs-heloc",
+   "competitor": "WalletGrower – HEI vs HELOC Worked Math",
+   "related_idea": "G1-02",
+   "features_checked": "Artykuł z obliczeniami na przykładach (według tytułu).",
+   "access_limits": "Strony nie otwarto; search-summary. Interaktywność niezweryfikowana.",
+   "conclusion": "Substytut (treść statyczna, o ile nie ma narzędzia).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://banksdoneright.com/hei-vs-heloc/",
+   "competitor": "Banks Done Right – HEI vs HELOC (2026)",
+   "related_idea": "G1-02",
+   "features_checked": "Koszty, kwalifikacja, jak wybrać (według tytułu i podsumowania).",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (artykuł).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://homeequity101.com/blog/home-equity-investment-vs-heloc",
+   "competitor": "HomeEquity101",
+   "related_idea": "G1-02",
+   "features_checked": "Porównanie HEI i HELOC obok siebie (według tytułu).",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (artykuł).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://lendedu.com/blog/hometap-vs-unlock-home-equity/",
+   "competitor": "LendEDU – Hometap vs Unlock",
+   "related_idea": "G1-02",
+   "features_checked": "Opłaty (np. przy 250 tys. USD: 12,5 tys. Unlock vs 7,5 tys. Hometap), limity (600 tys. vs 500 tys.), częściowe wykupy tylko w Unlock (search-summary).",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (porównanie afiliacyjne); źródło parametrów do weryfikacji u dostawców.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://financebuzz.com/hometap-vs-point",
+   "competitor": "FinanceBuzz – Hometap vs Point",
+   "related_idea": "G1-02",
+   "features_checked": "Porównanie dwóch dostawców HEI (według tytułu).",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (artykuł afiliacyjny).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+   "url": "https://mortgage-info.com/blog/best-home-equity-sharing-companies-hometap-vs-unlock-vs-unison",
+   "competitor": "Mortgage-info.com – Best Home Equity Sharing Companies 2026",
+   "related_idea": "G1-02",
+   "features_checked": "Ranking dostawców HEI (Hometap, Unlock, Unison, Point) według tytułu.",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (artykuł).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+   "url": "https://studentloancalcs.com/save-transition.html",
+   "competitor": "StudentLoanCalcs – SAVE transition",
+   "related_idea": "G1-03",
+   "features_checked": "Strona o przejściu z SAVE na RAP, IBR lub Tiered Standard; domena wskazuje na kalkulatory.",
+   "access_limits": "Strony nie otwarto; search-summary. Interaktywność i zakres obliczeń niezweryfikowane.",
+   "conclusion": "Możliwy konkurent bezpośredni dla G1-03 (oznaczony jako częściowy do czasu weryfikacji). Pokazuje, że niszowe witryny szybko obsługują zmiany przepisów.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+   "url": "https://www.sofi.com/learn/content/repayment-assistance-plan-explained/",
+   "competitor": "SoFi – RAP explained",
+   "related_idea": "G1-03, G1-04",
+   "features_checked": "Przewodnik po RAP na 2026.",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (treść lendera z interesem w refinansowaniu).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+   "url": "https://www.whitecoatinvestor.com/repayment-assistance-plan-rap/",
+   "competitor": "White Coat Investor – RAP explained",
+   "related_idea": "G1-03",
+   "features_checked": "Wyjaśnienie RAP po końcu SAVE (dla lekarzy).",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (treść ekspercka).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+   "url": "https://finnita.com/blog/idr-plans-after-save-shutdown-2026/",
+   "competitor": "Finnita – IDR plans after SAVE",
+   "related_idea": "G1-03",
+   "features_checked": "Przewodnik po planach IDR po końcu SAVE (2026).",
+   "access_limits": "Strony nie otwarto; search-summary. Ewentualne narzędzia niezweryfikowane.",
+   "conclusion": "Substytut.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+   "url": "https://www.fidelity.com/learning-center/personal-finance/repayment-assistance-plan",
+   "competitor": "Fidelity – What is the Repayment Assistance Plan?",
+   "related_idea": "G1-03",
+   "features_checked": "Treść edukacyjna o RAP.",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (treść edukacyjna dużej marki).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC originations 2026 cash-out refinance volume home equity tappable",
+   "url": "https://www.bankrate.com/home-equity/heloc-rates/",
+   "competitor": "Bankrate – HELOC rates",
+   "related_idea": "G1-01",
+   "features_checked": "Strona z aktualnymi stopami HELOC (październik 2026).",
+   "access_limits": "Strony nie otwarto; search-summary. Kalkulatory Bankrate HELOC vs cash-out niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (dane o stopach, wysoki autorytet); integracja niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC originations 2026 cash-out refinance volume home equity tappable",
+   "url": "https://www.amerisave.com/learn/can-you-refinance-a-heloc-your-complete-guide-for",
+   "competitor": "AmeriSave – Can You Refinance a HELOC?",
+   "related_idea": "G1-01",
+   "features_checked": "Poradnik lendera o refinansowaniu HELOC.",
+   "access_limits": "Strony nie otwarto; search-summary.",
+   "conclusion": "Substytut (treść lendera).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "HELOC originations 2026 cash-out refinance volume home equity tappable",
+   "url": "https://www.crowdfundedwealth.com/articles/figure-heloc-review-2026-hmda-rates-complaints",
+   "competitor": "Figure (lender HELOC) – recenzja z danymi HMDA",
+   "related_idea": "G1-01",
+   "features_checked": "Recenzja: 33 415 linii, mediana stopy 9,1% (według tytułu, dane HMDA).",
+   "access_limits": "Strony nie otwarto; search-summary. Narzędzia Figure niezweryfikowane.",
+   "conclusion": "Substytut (lender z własną ścieżką zakupową); kontekst rynkowy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit wyszukiwań wyczerpany)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "competitor": "Federal Student Aid – Loan Simulator",
+   "related_idea": "G1-03, G1-04",
+   "features_checked": "Hipoteza: oficjalny symulator planów spłaty; obsługa RAP niezweryfikowana.",
+   "access_limits": "Strony nie otwarto i nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Prawdopodobnie konkurent częściowy lub bezpośredni; do sprawdzenia.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "competitor": "Student Loan Planner",
+   "related_idea": "G1-03",
+   "features_checked": "Hipoteza: płatne konsultacje i kalkulatory.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Substytut ekspercki.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "NerdWallet / Bankrate – kalkulatory refinansowania, HELOC vs cash-out, konsolidacji, spłaty kart",
+   "related_idea": "G1-01, G1-05, G1-07, G1-08, G1-09",
+   "features_checked": "Hipoteza: pojedyncze kalkulatory par instrumentów.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Prawdopodobnie konkurenci częściowi o wysokim autorytecie; priorytet do weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "competitor": "Undebt.it",
+   "related_idea": "G1-08",
+   "features_checked": "Hipoteza: planer spłaty metodą snowball i avalanche.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Prawdopodobny konkurent bezpośredni dla odrzuconego G1-08.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "competitor": "Upsolve",
+   "related_idea": "G1-06",
+   "features_checked": "Hipoteza: bezpłatne narzędzie do Chapter 7.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (jedna ścieżka).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwa z wiedzy modelu",
+   "competitor": "Kalkulatory pożyczki z 401(k) administratorów planów (Vanguard, Fidelity)",
+   "related_idea": "G1-05",
+   "features_checked": "Hipoteza: koszt pożyczki z 401(k).",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Konkurent częściowy (jeden instrument).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "Kalkulatory kredytów studenckich lenderów prywatnych (np. SoFi, Sallie Mae)",
+   "related_idea": "G1-04",
+   "features_checked": "Hipoteza: rata i koszt kredytu prywatnego.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Konkurent częściowy, stronniczy.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "Policygenius / ValuePenguin / Bankrate – artykuły 'when to file a claim'",
+   "related_idea": "G1-10",
+   "features_checked": "Hipoteza: średnie dopłaty po szkodzie, reguły kciuka.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Prawdopodobni konkurenci częściowi; do sprawdzenia w pierwszej kolejności dla G1-10.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "Jellyvision ALEX / Picwell (narzędzia benefitowe pracodawców)",
+   "related_idea": "G1-15, G1-11",
+   "features_checked": "Hipoteza: wybór planu zdrowotnego u pracodawcy.",
+   "access_limits": "Nie wyszukano; dostęp B2B (logowanie przez pracodawcę – hipoteza); hipoteza / niezweryfikowane.",
+   "conclusion": "Prawdopodobny konkurent bezpośredni dla G1-15 (odrzucony).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "HealthCare.gov window shopping / KFF Marketplace Calculator",
+   "related_idea": "G1-14, G1-15",
+   "features_checked": "Hipoteza: szacunek dopłat ACA i porównanie planów.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Konkurenci częściowi dla G1-14.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – wyszukiwanie niewykonane (limit)",
+   "url": "brak URL – nie pojawił się w wynikach; nazwy z wiedzy modelu",
+   "competitor": "FAIR Plan / Citizens / stanowe departamenty ubezpieczeń",
+   "related_idea": "G1-12",
+   "features_checked": "Hipoteza: informacje o ubezpieczycielu ostatniej instancji i porównania składek.",
+   "access_limits": "Nie wyszukano; hipoteza / niezweryfikowane.",
+   "conclusion": "Konkurenci częściowi (fragmenty decyzji).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "brak – kategoria substytutu",
+   "url": "brak URL – kategoria",
+   "competitor": "Asystenci AI (ChatGPT, Claude, Gemini, Copilot, Perplexity)",
+   "related_idea": "wszystkie (szczególnie G1-08, G1-09, G1-13, G1-15, G1-16)",
+   "features_checked": "Hipoteza: odpowiedź jakościowa i proste obliczenia w czacie (code interpreter).",
+   "access_limits": "Nie testowano w sesji; hipoteza / niezweryfikowane.",
+   "conclusion": "Najsilniejszy substytut przy prostych decyzjach; słabszy przy nowych regułach i symulacjach wielofazowych lub probabilistycznych.",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "[wykonane, standard] New York Fed household debt and credit report 2026 HELOC credit card balances",
+  "[wykonane, extended] HELOC originations 2026 cash-out refinance volume home equity tappable",
+  "[wykonane, extended] student loan Repayment Assistance Plan RAP 2026 SAVE plan borrowers transition calculator",
+  "[wykonane, extended] home equity investment vs HELOC calculator Hometap Unlock Point comparison tool",
+  "[NIEWYKONANE – wyczerpany limit 200 wyszukiwań na turę, wspólny dla agentów] HELOC vs cash-out refinance calculator blended rate compare keep low mortgage rate",
+  "[NIEWYKONANE – limit] debt consolidation calculator compare personal loan balance transfer HELOC 401k loan",
+  "[NIEWYKONANE – limit] student loan simulator compare RAP IBR PSLF refinance private Student Loan Planner calculator 2026",
+  "[NIEWYKONANE – limit] Americans use ChatGPT for financial advice survey 2026 debt loans",
+  "[UWAGA] Zgodnie z instrukcją nie próbowano WebFetch, nie obchodzono limitu przez curl ani inne narzędzia. Rodzina ubezpieczeń i rezerw nie dostała żadnego wyszukiwania. Do dokończenia potrzebna jest kolejna tura z nowym limitem: ok. 25–35 zapytań o konkurencję każdego pomysłu oraz o popyt i stawki w ubezpieczeniach."
+ ]
+}

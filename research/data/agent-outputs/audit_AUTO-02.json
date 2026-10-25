@@ -1,0 +1,390 @@
+{
+ "id": "AUTO-02",
+ "competitors": [
+  {
+   "name": "Calk-USA – Car Lease Buyout Calculator (Buy or Hand It Back)",
+   "url": "https://calk-usa.com/calculator/lease-buyout/",
+   "type": "partial",
+   "access": "darmowy (wg wyników wyszukiwania); strona nieotwierana",
+   "covers_pl": "Według tytułu i podsumowania: porównanie 'wykup czy zwrot'. Strona wykupu: rezydual + opłata za opcję zakupu + podatek od sprzedaży; strona zwrotu: disposition fee + opłaty za nadprzebieg i zużycie. W podsumowaniu jest przykład liczbowy (wykup ok. 20 075 USD vs zwrot ok. 1 695 USD), ale nie da się ustalić, z którego z kalkulatorów pochodzi. To najbliższy fragment rdzenia decyzji.",
+   "misses_or_unverified_pl": "Niezweryfikowane: alternatywa nowego leasingu (money factor, residual, opłaty), wykup na kredyt i trzymanie auta N lat, sprzedaż kapitału dealerowi lub stronie trzeciej (ograniczenia captive), horyzont 1-5 lat, break-even i wrażliwość. W podsumowaniu nic na to nie wskazuje."
+  },
+  {
+   "name": "MyCarCalc – Lease Buyout Calculator (Should You Buy or Return?)",
+   "url": "https://mycarcalc.com/leasing/lease-buyout-calculator",
+   "type": "partial",
+   "access": "darmowy (wg wyników); strona nieotwierana",
+   "covers_pl": "Tytuł wskazuje na porównanie wykupu ze zwrotem. Prawdopodobnie liczy też podatek i opłaty, ale to niepewne.",
+   "misses_or_unverified_pl": "Pola i logika niezweryfikowane. Nie wiadomo, czy uwzględnia nowy leasing, finansowanie wykupu, horyzont wieloletni i sprzedaż kapitału."
+  },
+  {
+   "name": "MyExactCount – Car Lease Buyout Calculator (Should You Buy Out Your Lease?)",
+   "url": "https://www.myexactcount.online/",
+   "type": "partial",
+   "access": "darmowy (wg wyników); strona nieotwierana",
+   "covers_pl": "Kalkulator decyzji o wykupie (tytuł).",
+   "misses_or_unverified_pl": "Zakres funkcji niezweryfikowany. Podsumowanie nie wskazuje na integrację z nowym leasingiem ani na model wieloletni."
+  },
+  {
+   "name": "Lease End – AI-Powered Lease Buyout Calculator + poradniki (leaseend.com)",
+   "url": "https://globalfintechseries.com/artificial-intelligence/lease-end-introduces-ai-powered-lease-buyout-calculator/",
+   "type": "partial",
+   "access": "darmowy; Lease End sprzedaje finansowanie wykupów (konflikt interesów), strona nieotwierana",
+   "covers_pl": "Kalkulator wykupu z AI ogłoszony w kwietniu 2025 (komunikat prasowy). Do tego rozbudowane treści o kapitale w leasingu, kosztach zwrotu, sprzedaży leasingowanego auta i przypadku, gdy auto jest warte mniej niż rezydual. Raport roczny 2026 (Business Wire) podaje oszczędność ok. 100 USD/mies. przy wykupie w porównaniu z nowym leasingiem. To dane dostawcy.",
+   "misses_or_unverified_pl": "Szczegóły kalkulatora AI niezweryfikowane (czy porównuje nowy leasing, sprzedaż stronie trzeciej, horyzont). Narzędzie ma tendencję do promowania wykupu."
+  },
+  {
+   "name": "Lease Maturity Services – Free Lease Buyout Calculator + End of Lease Options + brand guides",
+   "url": "https://leasematurity.com/tools/lease-buyout-calculator/",
+   "type": "partial",
+   "access": "darmowy (wg wyników); prawdopodobnie lead-gen finansowania, strona nieotwierana",
+   "covers_pl": "Wyszukuje dane leasingu po tablicy rejestracyjnej lub VIN i szacuje miesięczną ratę za wykup. Strona ma też poradnik o opcjach końca leasingu (buy, return, sell, extend), przewodniki po wykupach dla 24 marek (polityka captive) i analizy kapitału w 2026.",
+   "misses_or_unverified_pl": "Niezweryfikowane: porównanie kosztu netto wariantów w horyzoncie, nowy leasing, break-even i wrażliwość. Przewodniki to treść, nie zintegrowany model."
+  },
+  {
+   "name": "NerdWallet – Auto Lease Buyout Calculator",
+   "url": "https://www.nerdwallet.com/auto-loans/learn/auto-lease-buyout-calculator-how-much-to-buy-your-leased-vehicle",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Szacuje cenę wykupu z rezydualu, liczby pozostałych rat, raty miesięcznej, opłaty za opcję zakupu i stanowego podatku od sprzedaży. Notatka z fali 1 potwierdzona co do istnienia i URL.",
+   "misses_or_unverified_pl": "Wg podsumowania liczy tylko cenę wykupu. Brak potwierdzenia porównania z wartością rynkową, zwrotem i nowym leasingiem; funkcje poza wejściami niezweryfikowane."
+  },
+  {
+   "name": "Mek Auto Group – Car Lease Equity Calculator / Lease Buyout Calculator",
+   "url": "https://mekautogroup.com/car-lease-equity-calculator/",
+   "type": "partial",
+   "access": "darmowy (strona dealera); strona nieotwierana",
+   "covers_pl": "Szacuje kapitał w leasingu (wartość rynkowa − kwota spłaty) i cenę wykupu. Na stronie dealera są też inne kalkulatory auto.",
+   "misses_or_unverified_pl": "Brak potwierdzenia porównania wariantów, horyzontu i nowego leasingu. Pojedyncze kalkulatory, których wyniki na siebie nie wpływają."
+  },
+  {
+   "name": "Sage Calculator – Lease Equity Calculator",
+   "url": "https://sagecalculator.com/lease-equity-calculator/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Prosta formuła: wartość rynkowa − kwota spłaty = kapitał.",
+   "misses_or_unverified_pl": "Wg podsumowania tylko jedna formuła. Bez podatku, opłat i alternatyw (niezweryfikowane szczegóły)."
+  },
+  {
+   "name": "CarsCounsel – Buyout Price Calculator",
+   "url": "https://carscounsel.com/calculators/buyout-price-calculator/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Kalkulator ceny wykupu (tytuł).",
+   "misses_or_unverified_pl": "Zakres niezweryfikowany; prawdopodobnie tylko cena wykupu."
+  },
+  {
+   "name": "Affinity FCU – Lease Buyout Calculator",
+   "url": "https://www.affinityfcu.com/calculators/lease-buyout-calculator",
+   "type": "partial",
+   "access": "darmowy (unia kredytowa); strona nieotwierana",
+   "covers_pl": "Liczy ratę kredytu na wykup z kwoty, oprocentowania i okresu.",
+   "misses_or_unverified_pl": "Tylko rata kredytu. Bez kapitału, zwrotu i nowego leasingu (wg podsumowania)."
+  },
+  {
+   "name": "Leasehackr Forum (Ask the Hackrs)",
+   "url": "https://forum.leasehackr.com/t/end-of-lease-buyout-vs-residual/590668",
+   "type": "substitute",
+   "access": "darmowe forum; strona nieotwierana",
+   "covers_pl": "Społeczność ekspercka odpowiada na pytania o wykup. W wątku są wyjaśnienia, że wykup = rezydual + opłaty + podatki, a wykup w trakcie umowy = adjusted lease balance. Na forum można też dostać ocenę nowej oferty leasingu.",
+   "misses_or_unverified_pl": "Kalkulator Leasehackr (notatka z fali 1) nie pojawił się w wynikach, więc jest niezweryfikowany. Forum nie daje ustrukturyzowanego porównania wariantów."
+  },
+  {
+   "name": "Gumroad – Easy Buy vs. Lease Calculator for Car Shoppers (arkusz)",
+   "url": "https://hmd.gumroad.com/l/ecWFQ",
+   "type": "substitute",
+   "access": "płatny od 1 USD; strona nieotwierana",
+   "covers_pl": "Arkusz porównujący finansowanie zakupu z leasingiem: dashboard porównawczy, osobne kalkulatory buy i lease.",
+   "misses_or_unverified_pl": "Dotyczy zakupu nowego auta, nie decyzji na koniec leasingu. Kapitał, nadprzebieg i wykup niezweryfikowane."
+  },
+  {
+   "name": "Wyceny instant-offer i sprzedaż leasingowanego auta (Carvana, CarMax, dealerzy; poradnik CarGurus)",
+   "url": "https://www.cargurus.com/research/articles/can-i-sell-my-leased-car",
+   "type": "substitute",
+   "access": "darmowe wyceny (konkretnych narzędzi nie otwierano); dostępność zależy od polityki captive lendera",
+   "covers_pl": "Dają wartość rynkową i realną ofertę zakupu, czyli kluczowe wejście do kapitału. Poradniki porównują dealera, sprzedaż prywatną i online.",
+   "misses_or_unverified_pl": "Nie porównują wariantów w czasie. Narzędzia Carvana i CarMax nie pojawiły się jako URL w wynikach (notatka z fali 1 nadal niezweryfikowana). Ograniczenia third-party buyout różnią się między źródłami."
+  },
+  {
+   "name": "Poradniki treściowe: CarSaver, AutoDecide, AutoLoanRate, Chase, Credit Karma, KBB",
+   "url": "https://www.autodecide.us/end-of-lease-buyout-vs-trade-in/",
+   "type": "substitute",
+   "access": "darmowe artykuły; strony nieotwierane",
+   "covers_pl": "Opisują opcje końca leasingu (zwrot, wykup, przedłużenie, trade-in z kapitałem, nowy leasing) i tabele porównawcze kosztów (koszt początkowy, rata, pozycja na końcu, limity przebiegu).",
+   "misses_or_unverified_pl": "To treść, nie narzędzie. Czy AutoDecide ma interaktywny kalkulator, jest niezweryfikowane."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode z generowanymi narzędziami)",
+   "url": "n/d – brak URL w wynikach (informacja z briefu)",
+   "type": "substitute",
+   "access": "darmowe dla wszystkich użytkowników (wg briefu)",
+   "covers_pl": "Policzą kapitał, koszt wykupu z podatkiem, porównanie z opłatami za zwrot i nowy leasing na liczbach podanych przez użytkownika. Mogą wyrenderować formularz lub kalkulator w odpowiedzi.",
+   "misses_or_unverified_pl": "Aktualne polityki captive dotyczące third-party buyout, bieżące stawki kredytów i realne oferty skupu wymagają świeżych danych. Jakość modelu wieloletniego niezweryfikowana."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (pewność niska). Zakres: 7 wyszukiwań WebSearch, wyłącznie podsumowania wyników, żadnej strony nie otwarto. Rdzeń decyzji jest jednak dobrze pokryty przez darmowe narzędzia częściowe. Kalkulatory typu „buy or return” (Calk-USA, MyCarCalc, MyExactCount) porównują pełny koszt wykupu (rezydual + opłata za opcję zakupu + podatek) z kosztem zwrotu (disposition fee + nadprzebieg + zużycie). Kalkulatory kapitału (Mek Auto Group, Sage) liczą wartość rynkową minus spłatę. Kalkulatory wykupu i finansowania (NerdWallet, Lease Maturity Services z lookupem VIN, Lease End AI, Affinity FCU) liczą cenę wykupu i ratę. Prawdopodobna luka jest wąska: jedno porównanie w horyzoncie 1-5 lat, w którym wyniki modułów wpływają na siebie. Obejmuje ono: (a) wykup gotówką lub na kredyt i trzymanie auta N lat z deprecjacją i kosztami utrzymania, (b) wykup i odsprzedaż albo sprzedaż kapitału dealerowi lub stronie trzeciej z filtrem polityki captive lendera, (c) zwrot i nowy leasing (money factor, residual, acquisition fee, drive-off), (d) zakup innego auta nowego lub używanego, (e) przedłużenie. Do tego break-even wartości rynkowej i wrażliwość na stopę procentową, wartość i przebieg. Czy Calk-USA, MyCarCalc i Lease End AI nie mają już części tych funkcji, jest niezweryfikowane. Luki nie odrzucam, ale jest to luka integracyjna, nie tematyczna.",
+ "search_scope_pl": "7 wyszukiwań WebSearch (tryb extended), angielski, rynek US, 2026-10-25. Typy zapytań: problem w języku naturalnym, krótka kategoria („lease buyout calculator”), terminologia alternatywna (lease equity / sell to Carvana), forum, Reddit i arkusze (Leasehackr, spreadsheet), aplikacje i narzędzia porównujące opcje, zapytanie o całkowity koszt wieloletni, kontekst rynkowy (wolumen zapadających leasingów 2026, ograniczenia third-party buyout). WebFetch zablokowany: nie otwierano stron, nie testowano formularzy, nie sprawdzano paywalli ani logowania. Dowody pochodzą wyłącznie z podsumowań wyszukiwarki. Nie sprawdzono: sklepów z aplikacjami mobilnymi, wątków Reddit (nie pojawiły się w wynikach), kalkulatorów Edmunds, KBB i Leasehackr (nie pojawiły się jako narzędzia), narzędzi instant-offer Carvana i CarMax bezpośrednio, kalkulatorów banków captive. Notatki z fali 1: NerdWallet potwierdzony (partial, URL); Leasehackr potwierdzony tylko jako forum, kalkulator niezweryfikowany; Edmunds niezweryfikowany; Carvana i CarMax tylko pośrednio przez poradniki.",
+ "demand_signals": [
+  {
+   "signal_pl": "Prognoza zwrotów po leasingu: ok. 1,9 mln (2025) i ok. 2,4 mln (2026) w USA. To liczba zdarzeń decyzyjnych rocznie, nie miesięczny popyt w wyszukiwarce.",
+   "url": "https://ship.cars/blog/off-lease-returns-lift-auto-transport-demand/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Analiza dla dealerów: ok. 420 tys. zapadających leasingów u głównych marek w 2026, szczyt maj–wrzesień (zakres węższy niż rynek, sezonowość).",
+   "url": "https://news.dealershipguy.com/p/420k-lease-returns-are-coming-to-market-here-s-how-dealers-are-preparing",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Fala zwrotów EV w 2026: ok. 300 tys. EV. Spadające rezyduały EV utrudniają decyzję wykup czy zwrot.",
+   "url": "https://www.goodcarbadcar.net/300000-evs-coming-home-the-2026-lease-maturity-wave-and-what-it-means-for-dealers/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Ok. 40-50% leasingów ma dodatni kapitał. Edmunds: retained value ok. 66% MSRP w I kw. 2026, najniżej od 5 lat. Decyzja jest niejednoznaczna, co zwiększa potrzebę liczenia.",
+   "url": "https://leasematurity.com/learn/lease-equity-residual-value-optimization-2026-guide/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Captive lenderzy ograniczyli third-party buyout (listy marek różnią się między źródłami: Honda/Acura, GM, Ford, Tesla, Nissan, wg innych też Toyota, Hyundai, Kia). Dodaje to złożoność i niepewność do wariantu sprzedaży kapitału.",
+   "url": "https://www.carcheckervin.com/blog/selling-leased-car",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Pytania użytkowników na forum Leasehackr o rozbieżność między wykupem a rezydualem pokazują realne, konkretne pytania o tę decyzję.",
+   "url": "https://forum.leasehackr.com/t/end-of-lease-buyout-vs-residual/590668",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Dużo treści SEO od banków, lenderów i marketplace'ów (Chase, Navy Federal, Credit Karma, NerdWallet, Lease End, CarSaver, KBB) oraz mnożenie się kalkulatorów (Calk-USA, MyCarCalc, MyExactCount, CarsCounsel). Świadczy to o wartości komercyjnej tematu, ale też o zatłoczeniu.",
+   "url": "https://www.chase.com/personal/auto/education/leasing/lease-to-own-car",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Lease End wprowadził w 2025 kalkulator wykupu z AI i publikuje roczny raport o wykupach (2026). To komercyjne zainteresowanie lead-genem kredytów na wykup.",
+   "url": "https://www.businesswire.com/news/home/20260325264891/en",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Rankingi kredytów na wykup leasingu na 2026 (lead-gen lenderów) sygnalizują reklamodawców w tym segmencie.",
+   "url": "https://www.refimenow.com/best/lease-buyout-loans",
+   "evidence_type": "indirect"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez asystenta AI jest wysokie. Przykładowy prompt („buyout 21 500 USD, rynek 24 000 USD”) to prosta arytmetyka na liczbach od użytkownika. Kapitał = wartość − (wykup + podatek + opłaty), do tego disposition fee i nadprzebieg po stronie zwrotu. Asystent policzy to w odpowiedzi, a od 7.10.2026 ChatGPT Intelligent UI i od 19.08.2026 Google AI Mode potrafią wyrenderować formularz lub kalkulator (wg briefu). Zewnętrzne narzędzie wnosi wartość tylko w trzech obszarach. Po pierwsze, aktualna i utrzymywana baza polityk captive dotyczących third-party buyout. Źródła są tu sprzeczne, więc asystent łatwo się myli, ale baza wymaga ręcznej weryfikacji. Po drugie, stanowe reguły podatku od wykupu (część stanów opodatkowuje raty leasingu i daje kredyt przy wykupie). Po trzecie, audytowalny model wieloletni: wykup na kredyt i N lat z deprecjacją vs kolejne leasingi, z break-even i wrażliwością. Realne oferty skupu i wycenę muszą i tak dostarczyć Carvana, CarMax lub dealerzy, więc asystent odeśle raczej do nich niż do symulatora.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Corocznie bardzo wiele gospodarstw w USA staje przed tą decyzją: szacunkowo ok. 2,4 mln zwrotów po leasingu w 2026, a każdy leasingobiorca decyduje co 2-4 lata. Widoczny jest popyt na pytania (forum, liczne poradniki banków i lenderów, wiele kalkulatorów). Niższe rezyduały i mniejszy odsetek dodatniego kapitału czynią decyzję mniej oczywistą.",
+   "evidence_pl": "ship.cars (prognoza 1,9 do 2,4 mln zwrotów), dealershipguy (420 tys. u głównych marek, szczyt V–IX), goodcarbadcar (300 tys. EV), leasematurity (40-50% z dodatnim kapitałem; 66% MSRP retained), wątek Leasehackr, mnogość treści SEO.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań. Liczby zdarzeń nie są miesięcznym popytem. Prognozy pochodzą od podmiotów branżowych lub vendorów. Popyt jest sezonowy.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Wiele narzędzi częściowych pokrywa rdzeń: wykup vs zwrot z podatkiem, opłatami i nadprzebiegiem, kapitał, ratę kredytu na wykup. W podsumowaniach nie widać narzędzia, które integruje nowy leasing (money factor, residual), wykup na kredyt i trzymanie N lat, sprzedaż kapitału z filtrem captive oraz horyzont 1-5 lat z break-even i wrażliwością.",
+   "evidence_pl": "Tytuły i opisy: Calk-USA „Buy or Hand It Back”, MyCarCalc „Should You Buy or Return?”, MyExactCount, NerdWallet (wejścia wykupu), Lease Maturity (lookup VIN, rata), Lease End AI, Mek i Sage (kapitał), Affinity (rata).",
+   "gaps_pl": "Żadnej strony nie otwarto. Calk-USA, MyCarCalc i Lease End AI mogą mieć więcej funkcji (niezweryfikowane). Nie sprawdzono aplikacji mobilnych ani kalkulatora Leasehackr.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Asystent rozwiąże typowy przypadek sam, na liczbach od użytkownika, i wyrenderuje kalkulator. Odesłanie do zewnętrznego narzędzia jest prawdopodobne raczej do instant-offer (Carvana, CarMax) lub lenderów niż do symulatora. Pewną przewagę dałyby utrzymywana baza polityk captive i stanowych reguł podatku oraz audytowalny model wieloletni.",
+   "evidence_pl": "Brief: ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026). Wyniki: rdzeń decyzji to prosta formuła (market value − payoff), powtarzana przez wiele źródeł. Sprzeczne listy marek z ograniczeniami third-party buyout.",
+   "gaps_pl": "Brak danych o tym, jak asystenci faktycznie cytują lub linkują kalkulatory w tej niszy.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 4,
+   "rationale_pl": "Konsumenci z USA w wartościowych wertykałach: kredyty na wykup i refinansowanie auto, sprzedaż aut (Carvana, CarMax, dealerzy), nowe leasingi i zakupy, ubezpieczenia auto. Bez ograniczeń kategorii wrażliwych typowych dla zdrowia. Odbiorcy są w momencie transakcji.",
+   "evidence_pl": "Rankingi lenderów lease buyout loans (refimenow), lead-gen Lease End i Lease Maturity, treści banków (Chase, Navy Federal) i credit unions.",
+   "gaps_pl": "Brak danych o CPC i RPM AdSense w tej niszy. Silna konkurencja SEO lenderów może ograniczać ruch. Sezonowość.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 3,
+   "rationale_pl": "Większość wejść podaje użytkownik (wykup, rezydual, oferta rynkowa, przebieg, stawki). Matematyka jest standardowa: amortyzacja kredytu, koszt leasingu z money factor, deprecjacja. Trudniejsze są: stanowe reguły podatku od wykupu (różne mechanizmy), utrzymanie listy polityk third-party buyout per captive (zmienne, sprzeczne źródła) i założenia deprecjacji przy trzymaniu auta N lat.",
+   "evidence_pl": "Wyniki: stany różnie opodatkowują wykup; listy marek z ograniczeniami różnią się między źródłami; Lease Maturity ma przewodniki per marka (24 marki), co pokazuje skalę utrzymania.",
+   "gaps_pl": "Nie sprawdzono, czy istnieje darmowe i stabilne źródło polityk captive ani danych deprecjacji.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy nie są katastrofalne: zwykle chodzi o kilkaset do kilku tysięcy USD, a użytkownik weryfikuje kwoty u lessora. Jest jednak ryzyko interpretacji: podatek stanowy przy wykupie, zakaz sprzedaży kapitału stronie trzeciej u danego captive, różnica między payoff a residual. Błędna informacja o polityce captive może wprowadzić w błąd co do wykonalności wariantu.",
+   "evidence_pl": "Wątek Leasehackr o rozbieżności wykup vs rezydual; sprzeczne listy marek; ostrzeżenia dostawców, że wyniki to szacunki do weryfikacji u lessora.",
+   "gaps_pl": "Brak analizy regulacji stanowych (podatek, opłaty dealerskie).",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Mocno wykorzystuje wspólne moduły: oś przepływów pieniężnych, finansowanie (kredyt, leasing z money factor), podatek od sprzedaży, wartość i deprecjację pojazdu. Daje produkty pokrewne: lease vs buy, wcześniejsze zakończenie leasingu, trade-in z ujemnym kapitałem, koniec leasingu EV, refinansowanie kredytu auto, trzymanie vs wymiana auta.",
+   "evidence_pl": "Rodzina „Samochody, finansowanie, leasing, EV”. W wynikach widać tematy pokrewne (fala EV, buyout loans, trade-in equity).",
+   "gaps_pl": "Moduł energii i domu nie ma tu zastosowania. Wartość współdzielenia zależy od realizacji innych produktów z rodziny AUTO.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Ważony wynik orientacyjny to ok. 3,3/5. Za projektem przemawiają duży coroczny wolumen decyzji (szacunkowo ok. 2,4 mln zwrotów w 2026), wartościowi reklamodawcy (kredyty na wykup, sprzedaż aut, ubezpieczenia) i dobre współdzielenie silnika z rodziną AUTO. Przeciw przemawiają: rdzeń decyzji pokryty przez wiele darmowych kalkulatorów „buy or return” i kapitału, zatłoczony SEO lenderów (Lease End, Lease Maturity, NerdWallet, banki) oraz wysokie ryzyko, że asystenci AI policzą to sami. Przed pilotem trzeba ręcznie otworzyć i przetestować Calk-USA, MyCarCalc, MyExactCount, Lease End AI i Lease Maturity, żeby potwierdzić, czy nie modelują już nowego leasingu i horyzontu wieloletniego. Trzeba też sprawdzić wolumen zapytań („lease buyout calculator”, „should I buy out my lease”) i CPC. Do tego dochodzi ocena kosztu utrzymania bazy polityk captive dotyczących third-party buyout i stanowych reguł podatku od wykupu, bo to jedyne realne wyróżniki. Najrozsądniej budować produkt jako moduł wspólnego silnika auto-finansowego, nie samodzielnie.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "lease end calculator buy out vs return vs new lease total cost over years excess mileage",
+   "url": "https://calk-usa.com/calculator/lease-buyout/",
+   "competitor": "Calk-USA Car Lease Buyout Calculator — Buy or Hand It Back",
+   "features_checked": "porównanie wykup vs zwrot; podatek; opłata za opcję zakupu; disposition fee; nadprzebieg; nowy leasing; horyzont",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; paywall/login nieznane",
+   "conclusion": "Partial, najbliższy fragment rdzenia (wykup vs zwrot). Integracja z nowym leasingiem i horyzontem niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease end calculator buy out vs return vs new lease total cost over years excess mileage",
+   "url": "https://mycarcalc.com/leasing/lease-buyout-calculator",
+   "competitor": "MyCarCalc Lease Buyout Calculator — Should You Buy or Return?",
+   "features_checked": "tytuł: wykup vs zwrot; pozostałe funkcje",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; paywall/login nieznane",
+   "conclusion": "Partial. Zakres pól niezweryfikowany.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease end calculator buy out vs return vs new lease total cost over years excess mileage",
+   "url": "https://www.myexactcount.online/",
+   "competitor": "MyExactCount Car Lease Buyout Calculator",
+   "features_checked": "tytuł: czy wykupić leasing",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; paywall/login nieznane",
+   "conclusion": "Partial. Funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease buyout calculator",
+   "url": "https://www.nerdwallet.com/auto-loans/learn/auto-lease-buyout-calculator-how-much-to-buy-your-leased-vehicle",
+   "competitor": "NerdWallet Auto Lease Buyout Calculator",
+   "features_checked": "wejścia: rezydual, pozostałe raty, rata, purchase option fee, podatek stanowy; porównanie z rynkiem i nowym leasingiem",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial. Liczy cenę wykupu. Notatka z fali 1 potwierdzona co do istnienia; porównanie wariantów niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease buyout calculator",
+   "url": "https://leasematurity.com/tools/lease-buyout-calculator/",
+   "competitor": "Lease Maturity Services Free Lease Buyout Calculator",
+   "features_checked": "lookup tablicy lub VIN; szacunek raty; poradniki opcji końca leasingu i polityk marek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; możliwy lead-gen (niezweryfikowane)",
+   "conclusion": "Partial, silny gracz treściowy i danych (VIN, 24 przewodniki marek). Model wieloletni niezweryfikowany.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease buyout calculator",
+   "url": "https://globalfintechseries.com/artificial-intelligence/lease-end-introduces-ai-powered-lease-buyout-calculator/",
+   "competitor": "Lease End AI-Powered Lease Buyout Calculator",
+   "features_checked": "kalkulator wykupu z AI (komunikat prasowy 2025); porównanie z nowym leasingiem; sprzedaż kapitału",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; vendor finansowania wykupów",
+   "conclusion": "Partial, funkcje AI niezweryfikowane. Narzędzie stronnicze na rzecz wykupu.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease equity calculator sell leased car to Carvana or dealer positive equity",
+   "url": "https://mekautogroup.com/car-lease-equity-calculator/",
+   "competitor": "Mek Auto Group Car Lease Equity Calculator",
+   "features_checked": "kapitał w leasingu; kalkulator wykupu; integracja wariantów",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial. Osobne kalkulatory dealera bez widocznej integracji.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease equity calculator sell leased car to Carvana or dealer positive equity",
+   "url": "https://sagecalculator.com/lease-equity-calculator/",
+   "competitor": "Sage Calculator Lease Equity Calculator",
+   "features_checked": "formuła wartość rynkowa − payoff",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, jednoformułowy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease end calculator buy out vs return vs new lease total cost over years excess mileage",
+   "url": "https://carscounsel.com/calculators/buyout-price-calculator/",
+   "competitor": "CarsCounsel Buyout Price Calculator",
+   "features_checked": "cena wykupu (tytuł)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, wąski.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease buyout calculator",
+   "url": "https://www.affinityfcu.com/calculators/lease-buyout-calculator",
+   "competitor": "Affinity FCU Lease Buyout Calculator",
+   "features_checked": "rata kredytu: kwota, oprocentowanie, okres",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, tylko rata kredytu na wykup.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit lease ending buyout vs new lease spreadsheet leasehackr",
+   "url": "https://forum.leasehackr.com/t/end-of-lease-buyout-vs-residual/590668",
+   "competitor": "Leasehackr Forum",
+   "features_checked": "dyskusja o wykupie vs rezydual; kalkulator Leasehackr",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (forum ekspertów). Kalkulator Leasehackr nie pojawił się w wynikach, więc niezweryfikowany. Wątków Reddit nie znaleziono.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit lease ending buyout vs new lease spreadsheet leasehackr",
+   "url": "https://hmd.gumroad.com/l/ecWFQ",
+   "competitor": "Gumroad Easy Buy vs. Lease Calculator for Car Shoppers",
+   "features_checked": "arkusz buy vs lease, dashboard porównawczy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatny od 1 USD",
+   "conclusion": "Substitute. Dotyczy zakupu nowego auta, nie decyzji na koniec leasingu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "lease equity calculator sell leased car to Carvana or dealer positive equity",
+   "url": "https://www.cargurus.com/research/articles/can-i-sell-my-leased-car",
+   "competitor": "Instant-offer i sprzedaż leasingu (Carvana, CarMax, dealerzy) — poradnik CarGurus",
+   "features_checked": "porównanie kanałów sprzedaży; wymóg zgody lessora; ograniczenia third-party",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; narzędzi instant-offer nie testowano",
+   "conclusion": "Substitute dostarczający wartości rynkowej. Brak porównania wariantów w czasie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "end of lease options tool app compare buyout, trade-in equity and new lease payment",
+   "url": "https://www.autodecide.us/end-of-lease-buyout-vs-trade-in/",
+   "competitor": "AutoDecide / CarSaver / AutoLoanRate (poradniki opcji końca leasingu)",
+   "features_checked": "opisy opcji: zwrot, wykup, przedłużenie, trade-in, nowy leasing; tabele porównawcze",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść). Wyszukiwarka sama podsumowała: brak pojedynczego narzędzia lub aplikacji porównującego wszystkie opcje.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "2026 leases maturing volume lease returns equity third-party buyout restrictions captive lenders",
+   "url": "https://leasematurity.com/learn/lease-buyouts-by-manufacturer/",
+   "competitor": "Lease Maturity Services — Lease Buyouts by Manufacturer (24 brand guides)",
+   "features_checked": "polityki wykupu i third-party buyout per marka",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Konkurent treściowy dla wyróżnika „filtr polityki captive”. Listy marek w różnych źródłach są sprzeczne, więc niezweryfikowane.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I buy out my car lease or return it and lease a new one",
+  "lease buyout calculator",
+  "lease equity calculator sell leased car to Carvana or dealer positive equity",
+  "reddit lease ending buyout vs new lease spreadsheet leasehackr",
+  "end of lease options tool app compare buyout, trade-in equity and new lease payment",
+  "lease end calculator buy out vs return vs new lease total cost over years excess mileage",
+  "2026 leases maturing volume lease returns equity third-party buyout restrictions captive lenders"
+ ]
+}

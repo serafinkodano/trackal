@@ -1,0 +1,509 @@
+{
+ "topic": "Portfele narzędzi (multi-calculator) i strategia domenowa: skala, ruch, wpływ aktualizacji Google i AI, programmatic SEO, niszowe narzędzia decyzyjne, autorytet tematyczny, E-E-A-T, nowi gracze",
+ "summary_pl": "ZASTRZEŻENIE METODOLOGICZNE: wspólny limit wyszukiwań (200 na turę, dzielony przez wszystkich agentów) wyczerpał się po 8 wykonanych zapytaniach. 4 kolejne nie zostały wykonane. WebFetch nie był używany. Wnioski do pytań 1-3 opierają się na podsumowaniach wyników wyszukiwania (search-summary). Do pytań 4-7 nie mam żadnego źródła z tej sesji. Te ustalenia pochodzą z wiedzy treningowej i są oznaczone jako „hipoteza / niezweryfikowane”, z pustą listą źródeł. Trzeba je zweryfikować w kolejnej rundzie.\n\nNAJWAŻNIEJSZE WNIOSKI:\n(1) Lider poziomych portfeli, Omni Calculator, to bootstrapowana firma (finansowanie zewnętrzne ok. 30 tys. USD, akcelerator Axel Springer Plug and Play). Utrzymuje się głównie z reklam (AdSense). Ma 3700-3800 kalkulatorów i od 9 do 18 mln wizyt/użytkowników miesięcznie, zależnie od źródła i roku. Szacunki przychodu firm trzecich to około 4-5 mln USD rocznie, a zatrudnienie wynosi 33-67 osób. Model „setki/tysiące narzędzi + reklamy” może więc działać, ale osiągnięcie tego wymagało lat, zespołu i tysięcy stron. Średni przychód na kalkulator jest skromny (szacunek na szacunkach).\n(2) calculator.net ma dziesiątki milionów wizyt miesięcznie. Według Ahrefs to ok. 27 mln wizyt organicznych w 06.2025. Według Semrush ruch całkowity spadł z ok. 62,8 mln w 07.2025 do 56,1 mln w 09.2025. Pole poziomych portali (CalculatorSoup, GigaCalculator, calculators.org, calculator-online.net) jest zatłoczone.\n(3) AI Overviews obniżają CTR pierwszego wyniku o 34,5-61%, zależnie od badania i okresu. Nie znaleziono jednak danych specyficznych dla stron z kalkulatorami. Google od 2015 r. ma natywny kalkulator kredytu hipotecznego i odsetek w SERP. W 06.2025 dodał w AI Mode interaktywne wykresy finansowe (akcje, fundusze). Nie potwierdzono, by AI Mode generował własne kalkulatory lub symulacje; to „niezweryfikowane”, a nie „brak”.\n(4) Po Helpful Content Update (09.2023) narzędzia, kalkulatory i konwertery wymieniano wśród poszkodowanych kategorii. To ogólne twierdzenie agencji, bez liczb. Odbudowa ruchu po degradacji całej witryny była rzadka. Według badania 400+ stron tylko 22% odzyskało co najmniej 20% ruchu, a HouseFresh wrócił do dawnego poziomu dopiero po około dwóch latach.\n(5) Dowody na programmatic SEO dla kalkulatorów są słabe i pochodzą głównie od dostawców. Działa wzorzec „jedna strona = jedno odrębne, realne zapytanie z unikalnym wynikiem” (in2013dollars). Rozkład ruchu jest ekstremalnie skośny: ok. 96,7% stron szablonowych ma do 100 wizyt miesięcznie, nawet na domenach o wysokim autorytecie (twierdzenie dostawcy).\n(6) Według wiedzy treningowej (niezweryfikowane): najbardziej udane niszowe narzędzia decyzyjne (ProjectionLab, Boldin, DealCheck) zarabiają na subskrypcjach lub freemium, a nie na display ads. Inne (ficalc.app, cFIREsim, Open Social Security) są darmowe i zarabiają pośrednio. Ruch zdobywają przez społeczności i polecenia, czyli kanały, które właściciel wyklucza. Wydawcy finansowi (NerdWallet, Bankrate, SmartAsset) traktują kalkulatory jako lejek affiliate/lead-gen, a nie produkt reklamowy.\n(7) Strategia domenowa: nie znaleziono w tej sesji twardych dowodów, że domeny wertykalne wygrywają z jedną szeroką. Szerokie domeny Omni i calculator.net są kontrprzykładem dla dogmatu „topical authority”. Argumenty produktowe, operacyjne i AI (wzmianki o marce) przemawiają za jedną marką z hubami wertykalnymi. Argument SEO (ryzyko degradacji całej domeny) przemawia za dywersyfikacją, ale każda nowa domena startuje od zera.\n\nOgólna implikacja dla projektu: przewaga nie może polegać na liczbie kalkulatorów ani na prostych formułach, które Google, AI i liderzy już pokrywają. Może polegać wyłącznie na głębokich symulatorach wieloczynnikowych z jawnymi założeniami. Ekonomia display ads dla takich stron pozostaje niezweryfikowana.",
+ "findings": [
+  {
+   "question": "1. Skala i model biznesowy Omni Calculator",
+   "claim_pl": "Omni Calculator jest bootstrapowany. Profile firm trzecich podają łączne finansowanie zewnętrzne ok. 30-31 tys. USD, pochodzące z udziału w akceleratorze Axel Springer Plug and Play w Berlinie. Model biznesowy opiera się przede wszystkim na reklamach: Dealroom wymienia AdSense, a case study Google dla wydawców opisuje Omni jako „supported predominantly with ads”. W podcaście z 2021 r. CEO Mateusz Mucha jest przedstawiany jako przedsiębiorca bootstrapowy. Odrzuca pivot w stronę B2B (kalkulatory dla korporacji).",
+   "evidence_type": "indirect",
+   "numbers": "Finansowanie: Craft 31,13 tys. USD; CB Insights 30 tys. USD. Brak rund VC w wynikach.",
+   "sources": [
+    {
+     "url": "https://app.dealroom.co/companies/omni_calculator",
+     "title": "Omni Calculator company information, funding & investors",
+     "publisher": "Dealroom"
+    },
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator (Google publisher story)",
+     "publisher": "Google"
+    },
+    {
+     "url": "https://www.cbinsights.com/company/omni-calculator",
+     "title": "Omni Calculator - Products, Competitors, Financials",
+     "publisher": "CB Insights"
+    },
+    {
+     "url": "https://craft.co/omni-calculator",
+     "title": "Omni Calculator Company Profile",
+     "publisher": "Craft"
+    },
+    {
+     "url": "https://podcasts.apple.com/us/podcast/mateusz-mucha-ceo-of-omni-calculator/id1563085487?i=1000519056598",
+     "title": "Mateusz Mucha CEO of Omni Calculator - Storyteller Interviews",
+     "publisher": "Apple Podcasts"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "To jedyny dobrze udokumentowany dowód, że poziomy portfel kalkulatorów może być samowystarczalnym biznesem opartym na reklamach (AdSense), bez VC. Model właściciela (reklamy jako baza) jest więc wykonalny co do zasady. Omni jest jednak przykładem prostych kalkulatorów, a nie złożonych symulatorów decyzyjnych."
+  },
+  {
+   "question": "1. Przychód, zatrudnienie i ekonomia na kalkulator (Omni)",
+   "claim_pl": "Szacunki przychodu Omni są wyłącznie modelowe, od firm trzecich: Growjo podaje ok. 4,2 mln USD rocznie, ZoomInfo poniżej 5 mln USD. Zatrudnienie wynosi 33 osoby według Tracxn (31.05.2026), 62 według PitchBook, 67 według Growjo i 51-200 według ZoomInfo. Policzyłem pochodne: 4,2 mln USD / ok. 3700 kalkulatorów daje ok. 1,1 tys. USD rocznie na kalkulator, czyli ok. 95 USD miesięcznie. Przy 9-18 mln wizyt miesięcznie implikowany przychód na 1000 wizyt wynosi ok. 19-39 USD. To szacunek na szacunkach: przychód Growjo jest prawdopodobnie wyprowadzany z liczby pracowników, a ruch Omni jest globalny i wielojęzyczny. NIE używać tej liczby jako RPM w modelu.",
+   "evidence_type": "estimate",
+   "numbers": "Przychód 4,2 mln USD (Growjo), poniżej 5 mln USD (ZoomInfo). Pracownicy: 33 / 62 / 67 / 51-200. Pochodne: ok. 1,1 tys. USD/kalkulator/rok; ok. 19-39 USD na 1000 wizyt (niewiarygodne).",
+   "sources": [
+    {
+     "url": "https://growjo.com/company/Omni_Calculator",
+     "title": "Omni Calculator: Revenue, Competitors, Alternatives",
+     "publisher": "Growjo"
+    },
+    {
+     "url": "https://www.zoominfo.com/c/omni-calculator/415384773",
+     "title": "Omni Calculator - Overview, News & Similar companies",
+     "publisher": "ZoomInfo"
+    },
+    {
+     "url": "https://tracxn.com/d/companies/omni-calculator/__zeF4amjaEvGc31pL1tOTWOJhhJrQIoE6wKJbA54VmTg",
+     "title": "Omni Calculator - 2026 Company Profile",
+     "publisher": "Tracxn"
+    },
+    {
+     "url": "https://pitchbook.com/profiles/company/106982-56",
+     "title": "Omni Calculator 2026 Company Profile",
+     "publisher": "PitchBook"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Nawet lider kategorii to firma rzędu kilku mln USD rocznie z kilkudziesięcioma pracownikami. Przychód na pojedynczą stronę narzędzia jest średnio niewielki, a rozkład jest zapewne silnie skośny. Portfel „setek symulatorów” z AdSense nie gwarantuje istotnego przychodu bez wolumenu rzędu milionów wizyt. Zespół Omni sugeruje też, że utrzymanie i redakcja tysięcy narzędzi nie są w pełni automatyczne."
+  },
+  {
+   "question": "1. Ruch i liczba kalkulatorów Omni w czasie",
+   "claim_pl": "Liczby ruchu Omni pochodzą z różnych lat i mierzą różne rzeczy. Case study Google podaje ponad 18 mln wizyt miesięcznie, a Crunchbase 17 mln wizyt miesięcznie. Nowszy tekst z wypowiedziami Muchy (citybiz lub Authority Magazine; przypisanie do konkretnego URL w podsumowaniu niejednoznaczne) mówi o 3800 kalkulatorach i ponad 9 mln użytkowników miesięcznie. Starszy wywiad krakowski z nagłówkiem „900 calculators, 6 million users” wskazuje na wzrost katalogu z ok. 900 do ok. 3800 narzędzi. Wizyt i użytkowników nie da się porównać, więc nie można stwierdzić, czy ruch spada.",
+   "evidence_type": "indirect",
+   "numbers": "Wizyty: 18 mln/mies. (Google), 17 mln/mies. (Crunchbase). Użytkownicy: 9 mln+/mies. (nowsze). Kalkulatory: 900 (starsze) → 3700-3800.",
+   "sources": [
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator (Google publisher story)",
+     "publisher": "Google"
+    },
+    {
+     "url": "https://www.crunchbase.com/organization/omni-calculator",
+     "title": "Omni Calculator - Crunchbase Company Profile & Funding",
+     "publisher": "Crunchbase"
+    },
+    {
+     "url": "https://www.citybiz.co/article/843506/qa-with-mateusz-mucha-founder-ceo-at-omni-calculator/",
+     "title": "Q&A with Mateusz Mucha, Founder & CEO at Omni Calculator",
+     "publisher": "citybiz"
+    },
+    {
+     "url": "https://medium.com/authority-magazine/mateusz-mucha-of-omni-calculator-5-things-i-wish-someone-told-me-when-i-first-became-a-ceo-b8b0e474c10f",
+     "title": "Mateusz Mucha of Omni Calculator: 5 Things I Wish Someone Told Me",
+     "publisher": "Authority Magazine (Medium)"
+    },
+    {
+     "url": "https://www.omgkrk.com/omni_calculator_interview/",
+     "title": "The Kraków Startup with 0 VC Funding, 6 Million Users and 900 Calculators!",
+     "publisher": "OMG KRK"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Liczba wizyt rosła wolniej niż katalog: ok. 4-krotnie więcej kalkulatorów przy podobnym lub niższym rzędzie ruchu. To sugeruje malejący krańcowy ruch na każde nowe narzędzie (hipoteza). Dla właściciela wniosek jest taki, że kolejne setki stron nie skalują ruchu liniowo."
+  },
+  {
+   "question": "1/2. Dywersyfikacja kanałów i pozycjonowanie lidera wobec AI",
+   "claim_pl": "Omni ma case study w TikTok For Business (znany tylko tytuł). Wskazuje to na inwestycje w kanały społecznościowe lub płatne poza SEO. Według podsumowania wyszukiwania Omni opublikował 5.11.2025 (PR Newswire) benchmark ORCA (Omni Research on Calculation in AI), według którego modele AI mylą się w prawie 40% codziennych zadań matematycznych. URL komunikatu nie pojawił się w wynikach, więc to niezweryfikowane.",
+   "evidence_type": "indirect",
+   "numbers": "ORCA: ok. 40% błędów AI w codziennych obliczeniach (twierdzenie firmy, niezweryfikowane).",
+   "sources": [
+    {
+     "url": "https://ads.tiktok.com/business/en/inspiration/omni-calculator-tiktok-success-story",
+     "title": "TikTok For Business Case Study: Omni Calculator",
+     "publisher": "TikTok"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Lider aktywnie pozycjonuje się przeciw asystentom AI jako substytutowi („kalkulator jest dokładniejszy niż LLM”). To pośredni sygnał, że substytucja przez AI jest realnym zagrożeniem dla stron z narzędziami. Może to być też argument marketingowy dla symulatorów z jawną metodologią. Dywersyfikacja Omni poza SEO kłóci się z założeniem właściciela, że wystarczy ruch z wyszukiwarek i od asystentów."
+  },
+  {
+   "question": "1. Skala i trend calculator.net",
+   "claim_pl": "Według Ahrefs calculator.net miał w czerwcu 2025 ok. 27 mln wizyt z wyszukiwarki (ruch organiczny), o 2,7 mln mniej niż miesiąc wcześniej. Semrush szacuje ruch całkowity na ok. 62,8 mln w lipcu, 59,5 mln w sierpniu i 56,1 mln we wrześniu 2025 (-5,7% m/m). Inne strony Semrush podają 61,47 mln (05.2025) i 59,08 mln (10.2025). Rozbieżność Ahrefs i Semrush wynika z zakresu (tylko organiczny vs całkowity).",
+   "evidence_type": "estimate",
+   "numbers": "Ahrefs: 27 mln organicznie (06.2025). Semrush: 62,8 mln (07), 59,5 mln (08), 56,1 mln (09), 59,08 mln (10.2025).",
+   "sources": [
+    {
+     "url": "https://ahrefs.com/top/calculator.net",
+     "title": "calculator.net (Ahrefs Top)",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://zh.semrush.com/website/calculator.net/overview",
+     "title": "calculator.net overview (Last updated 2025-10-12)",
+     "publisher": "Semrush"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Pozioma kategoria prostych kalkulatorów ma ogromnego, starego zwycięzcę z dziesiątkami milionów wizyt. Nowy gracz nie wygra fraz ogólnych typu „mortgage calculator”. Krótkoterminowe wahania (lato 2025) nie dowodzą trwałego spadku z powodu AI. Przypisanie spadków do AI Overviews to hipoteza."
+  },
+  {
+   "question": "1. Zatłoczenie poziomego segmentu kalkulatorów",
+   "claim_pl": "Semrush prowadzi strony analizy konkurencji dla wielu poziomych portali kalkulatorowych: calculatorsoup.com, omnicalculator.com, gigacalculator.com, calculators.org, calculator-online.net i calculis.net. To potwierdza istnienie wielu ugruntowanych portfeli konkurujących o te same frazy. W podsumowaniach nie było ich liczb ruchu.",
+   "evidence_type": "indirect",
+   "numbers": "Brak wyodrębnionych liczb ruchu dla tych domen.",
+   "sources": [
+    {
+     "url": "https://ko.semrush.com/website/calculatorsoup.com/competitors",
+     "title": "calculatorsoup.com competitors",
+     "publisher": "Semrush"
+    },
+    {
+     "url": "https://vi.semrush.com/website/omnicalculator.com/competitors",
+     "title": "omnicalculator.com competitors",
+     "publisher": "Semrush"
+    },
+    {
+     "url": "https://www.semrush.com/website/gigacalculator.com/competitors/",
+     "title": "gigacalculator.com competitors",
+     "publisher": "Semrush"
+    },
+    {
+     "url": "https://www.semrush.com/website/calculators.org/competitors/",
+     "title": "calculators.org competitors",
+     "publisher": "Semrush"
+    },
+    {
+     "url": "https://vi.semrush.com/website/calculator-online.net/competitors",
+     "title": "calculator-online.net competitors",
+     "publisher": "Semrush"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Szerokość katalogu nie jest różnicującym czynnikiem, bo co najmniej kilka domen już ją ma. Dla zintegrowanych symulatorów decyzyjnych te portale są co najwyżej konkurencją CZĘŚCIOWĄ (pojedyncze formuły), dopóki ich wyniki nie są ze sobą powiązane. Trzeba to jednak zweryfikować per temat."
+  },
+  {
+   "question": "2. Wpływ AI Overviews na CTR (ogólnie, nie dla kalkulatorów)",
+   "claim_pl": "Ahrefs: obecność AI Overview koreluje z 58% niższym CTR pierwszego wyniku (wcześniejsza analiza z 04.2025 mówiła o 34,5%). Źródła wtórne powołują się na Seer Interactive (spadek organicznego CTR o 61%, z 1,76% do 0,61%, 09.2025) i Pew Research (8% vs 15% kliknięć z AIO i bez, 07.2025, 68 879 wyszukiwań). AIO pojawiają się w ok. 13% zapytań. Według źródeł wtórnych ruch z Google do wydawców spadł o 38% r/r (Press Gazette). Nie znaleziono danych specyficznych dla zapytań kalkulatorowych.",
+   "evidence_type": "indirect",
+   "numbers": "CTR: -34,5% (04.2025), -58% (aktualizacja Ahrefs), -61% (Seer, wtórnie). Pew: 8% vs 15%. AIO w ok. 13,14% zapytań. Wydawcy: -38% r/r (wtórnie).",
+   "sources": [
+    {
+     "url": "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+     "title": "Update: AI Overviews Reduce Clicks by 58%",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://www.digitalapplied.com/blog/ai-overviews-13-percent-queries-seo-traffic-impact",
+     "title": "AI Overviews in 13% of Queries: SEO Traffic Impact",
+     "publisher": "Digital Applied"
+    },
+    {
+     "url": "https://thedigitalbloom.com/learn/2025-organic-traffic-crisis-analysis-report/",
+     "title": "2025 Organic Traffic Crisis: Zero-Click & AI Impact Report",
+     "publisher": "The Digital Bloom"
+    },
+    {
+     "url": "https://www.omnibound.ai/blog/ai-seo-statistics",
+     "title": "AI SEO Statistics (2026)",
+     "publisher": "Omnibound"
+    },
+    {
+     "url": "https://www.forbes.com/sites/terdawn-deboe/2026/05/18/google-ai-overviews-are-eating-your-website-traffic-fight-back/",
+     "title": "Google AI Overviews Are Eating Your Website Traffic",
+     "publisher": "Forbes",
+     "published": "2026-05-18"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Treści objaśniające wokół narzędzi („what is break-even”, „how solar payback works”) są najbardziej narażone. Hipoteza do testu: interaktywne obliczenie z danymi użytkownika jest trudniejsze do zastąpienia streszczeniem tekstowym. Trzeba ręcznie sprawdzić w US, które zapytania decyzyjne wywołują AIO lub AI Mode. Nie przenosić tych danych z Google na ChatGPT ani Perplexity."
+  },
+  {
+   "question": "2. Helpful Content Update 2023 a strony z narzędziami: straty i (brak) odbudowy",
+   "claim_pl": "Boomcycle wymienia witryny z narzędziami online, kalkulatorami, konwerterami i danymi zagregowanymi wśród kategorii mocno poszkodowanych przez HCU. To ogólne twierdzenie, bez liczb i bez nazwanych domen. Szersze dane: według analizy Lily Ray 129 ze 130 najmocniej dotkniętych stron (09.2023) nadal traciło widoczność. Według badania The Stacc (400+ stron) tylko 22% odzyskało co najmniej 20% ruchu. HouseFresh ogłosił powrót do poziomu sprzed HCU w 10.2025, po około dwóch latach.",
+   "evidence_type": "indirect",
+   "numbers": "129/130 bez odbicia (Lily Ray, wtórnie); 22% odzyskało co najmniej 20% (The Stacc); HouseFresh: ok. 2 lata do odbudowy.",
+   "sources": [
+    {
+     "url": "https://boomcycle.com/blog/googles-helpful-content-update-hcu/",
+     "title": "Google's Helpful Content Update (HCU)",
+     "publisher": "Boomcycle Digital Marketing"
+    },
+    {
+     "url": "https://thestacc.com/blog/helpful-content-update-recovery/",
+     "title": "Helpful Content Update Recovery Study: Data From 400+ Sites",
+     "publisher": "The Stacc"
+    },
+    {
+     "url": "https://godrank.com/helpful-content-update-recovery-guide/",
+     "title": "Google's Helpful Content Update: What Hit, What Recovered, and Why",
+     "publisher": "GodRank"
+    },
+    {
+     "url": "https://serps.io/blog/helpful-content-update-recovery",
+     "title": "Helpful Content Update Recovery: What the Data Shows in 2026",
+     "publisher": "serps.io"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Degradacja jakościowa całej witryny jest w praktyce zdarzeniem niemal nieodwracalnym w horyzoncie 1-2 lat. Dla jednej domeny z setkami szybko generowanych narzędzi to ryzyko pojedynczego punktu awarii. Kategorię kalkulatorów mają jednak z sukcesem Omni i calculator.net, więc samo bycie stroną z kalkulatorami nie jest przyczyną spadku. Liczy się jakość i sposób skalowania (hipoteza)."
+  },
+  {
+   "question": "2/6. Agresywne reklamy a odbudowa po aktualizacjach",
+   "claim_pl": "Badanie The Stacc raportuje korelację -0,52 między natrętnymi reklamami a odbudową po HCU. Metodologia jest własna, niezweryfikowana niezależnie i to korelacja, nie przyczynowość. W wynikach jest też 50-stronicowe badanie zwycięzców i przegranych aktualizacji Google (Zyppy, Cyrus Shepard), ale jego szczegółowych wniosków nie wyodrębniono z podsumowania.",
+   "evidence_type": "indirect",
+   "numbers": "r = -0,52 (natrętne reklamy vs odbudowa; The Stacc).",
+   "sources": [
+    {
+     "url": "https://thestacc.com/blog/helpful-content-update-recovery/",
+     "title": "Helpful Content Update Recovery Study: Data From 400+ Sites",
+     "publisher": "The Stacc"
+    },
+    {
+     "url": "https://zyppy.com/seo/google-update-case-study/",
+     "title": "Winning & Losing Big Google Updates: 50-Site Case Study",
+     "publisher": "Zyppy"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Model „baza = display ads” jest w napięciu z sygnałami jakości. Gęsty układ AdSense na stronie symulatora (YMYL) może zwiększać ryzyko degradacji. Trzeba założyć umiarkowaną gęstość reklam, co obniża przychód na wizytę w modelu ekonomicznym."
+  },
+  {
+   "question": "2. Natywne kalkulatory Google w SERP (kanibalizacja)",
+   "claim_pl": "Od lutego 2015 Google wyświetla w US interaktywny kalkulator kredytu hipotecznego (quick answer) dla zapytań typu „mortgage calculator”, „loan interest calculator” i „interest calculator”. Kalkulator przyjmuje kwotę, oprocentowanie i okres, pokazuje ratę i koszt całkowity, a także maksymalną kwotę kredytu dla zadanej raty. Obsługuje zapytania w języku naturalnym („How much can I borrow at $200 a month?”). Na starcie nie uwzględniał wkładu własnego ani podatków. Obecna postać i zasięg widżetu (2026) nie zostały zweryfikowane, bo źródła pochodzą z lat 2015-2019.",
+   "evidence_type": "direct",
+   "numbers": "Start: 02.2015, tylko US (w momencie startu).",
+   "sources": [
+    {
+     "url": "https://www.cnbc.com/2015/02/04/google-search-engine-launches-mortgage-calculator-.html",
+     "title": "Google search engine launches mortgage calculator",
+     "publisher": "CNBC",
+     "published": "2015-02-04"
+    },
+    {
+     "url": "https://searchengineland.com/googles-mortgage-calculator-quick-answer-now-live-214086",
+     "title": "Google's Mortgage Calculator Quick Answer Now Live",
+     "publisher": "Search Engine Land"
+    },
+    {
+     "url": "https://venturebeat.com/2015/02/03/google-now-has-a-built-in-mortgage-calculator/",
+     "title": "Google now has a built-in mortgage calculator",
+     "publisher": "VentureBeat",
+     "published": "2015-02-03"
+    },
+    {
+     "url": "https://www.housingwire.com/articles/32822-google-launches-built-in-mortgage-calculator/",
+     "title": "Google launches built-in mortgage calculator",
+     "publisher": "HousingWire"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Proste kalkulatory jednej formuły (rata, odsetki, waluta) są od dekady kanibalizowane w samym SERP. To wzmacnia tezę projektu: wartość leży w decyzjach wieloczynnikowych (np. refinansowanie + sprzedaż domu + horyzont), których widżet nie modeluje. Nie należy budować ruchu na frazach ogólnych o prostych formułach."
+  },
+  {
+   "question": "2. AI Mode: interaktywne wizualizacje finansowe i możliwość generowania narzędzi",
+   "claim_pl": "W czerwcu 2025 (Search Labs, US) Google zaczął wdrażać w AI Mode interaktywne wykresy dla pytań o akcje i fundusze. Wykresy powstają na żądanie (np. porównanie spółek CPG w 2024), mają podsumowanie tekstowe i obsługują pytania uzupełniające. Zapowiedziano rozszerzenie na inne obszary, np. sport. W badanym zakresie nie znaleziono potwierdzenia, że AI Mode generuje własne kalkulatory lub symulatory decyzyjne. Status: niezweryfikowane (nie „brak”).",
+   "evidence_type": "direct",
+   "numbers": "Start testów: 06.2025 (zapowiedź na I/O 2025).",
+   "sources": [
+    {
+     "url": "https://www.androidheadlines.com/2025/06/google-searchs-ai-mode-interactive-charts-for-finances.html",
+     "title": "Google Search's AI Mode Just Got Interactive Charts for Finances",
+     "publisher": "Android Headlines",
+     "published": "2025-06"
+    },
+    {
+     "url": "https://www.androidpolice.com/google-ai-mode-stocks/",
+     "title": "Google can now show all your stocks in a custom chart",
+     "publisher": "Android Police"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/googles-ai-mode-now-creates-220000727.html",
+     "title": "Google's AI Mode Now Creates Interactive Stock Charts for You",
+     "publisher": "Yahoo Finance"
+    },
+    {
+     "url": "https://getcoai.com/news/in-the-money-google-tests-interactive-finance-charts-in-ai-mode-for-stock-comparisons/",
+     "title": "Google tests interactive finance charts in AI Mode",
+     "publisher": "CO/AI"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Google zmierza w stronę generatywnego interfejsu z obliczeniami na danych. To największe średnioterminowe ryzyko substytucji dla symulatorów: AI Mode lub Gemini mogą na żądanie policzyć „rent vs buy” z parametrami użytkownika. Trzeba to cyklicznie monitorować na próbie zapytań docelowych (np. co kwartał, automatycznie przez n8n)."
+  },
+  {
+   "question": "3. Udany programmatic SEO dla kalkulatora: in2013dollars",
+   "claim_pl": "in2013dollars (kalkulator inflacji) stosuje szablon „Value of {amount} from {past year} to {current year}”. Według zewnętrznej analizy przykładowe strony mają po ok. 1,3-1,5 tys. wizyt organicznych miesięcznie. Każda strona odpowiada na odrębne, realne zapytanie unikalnym, wyliczonym wynikiem opartym na danych (CPI).",
+   "evidence_type": "estimate",
+   "numbers": "Ok. 1,3-1,5 tys. wizyt/mies. na przykładową stronę (szacunek strony trzeciej).",
+   "sources": [
+    {
+     "url": "https://practicalprogrammatic.com/examples/in2013dollars",
+     "title": "in2013dollars: Programmatic SEO Case Study",
+     "publisher": "Practical Programmatic"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "pSEO działa, gdy permutacje parametrów odpowiadają rzeczywistym, wyszukiwanym zapytaniom o wynik, a nie gdy powiela się tekst. Symulatory decyzyjne to raczej mało głębokich stron niż miliony permutacji. Można jednak rozważyć ograniczony pSEO na stronach scenariuszy (np. stan/region × typ decyzji) tylko tam, gdzie wynik realnie się różni, np. przez lokalne stawki, zachęty czy nasłonecznienie."
+  },
+  {
+   "question": "3. Rozkład ruchu stron programatycznych (porażki skali)",
+   "claim_pl": "Jeden z wyników wyszukiwania o pSEO (źródło konsultingowe; podsumowanie nie przypisało twierdzenia jednoznacznie do konkretnego URL, więc nie podaję go) raportuje analizę 12,3 mln stron programatycznych na 9 domenach o DR 89-94. Według niej 96,7% stron miało do 100 wizyt miesięcznie, a niewielki odsetek stron generował 30-80% ruchu każdej domeny.",
+   "evidence_type": "indirect",
+   "numbers": "12,3 mln stron, 9 domen DR 89-94; 96,7% stron ≤100 wizyt/mies.; mały odsetek = 30-80% ruchu.",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Nawet na domenach o bardzo wysokim autorytecie strony szablonowe mają rozkład potęgowy. Model ekonomiczny dla „setek symulatorów” powinien zakładać, że większość stron zarobi blisko zera, a kilka-kilkanaście przyniesie większość przychodu. Wybór tematów jest ważniejszy niż ich liczba."
+  },
+  {
+   "question": "3. Jakość dowodów na sukcesy pSEO z kalkulatorami",
+   "claim_pl": "Dostępne case studies to głównie marketing agencji i dostawców z nienazwanymi klientami. Przykłady: blog wtyczki kalkulatora twierdzi o +40% użytkowników po pSEO łączącym kalkulatory z danymi lokalizacyjnymi (klient nienazwany). Case study SaaS (nie kalkulatorowe) podaje wzrost z 1920 do 9571 użytkowników miesięcznie (+398%) w ok. 18 miesięcy.",
+   "evidence_type": "indirect",
+   "numbers": "+40% użytkowników (nienazwany klient); 1920 → 9571 użytkowników/mies. (SaaS, nie kalkulatory).",
+   "sources": [
+    {
+     "url": "https://wpcaloriecalculator.com/programmatic-seo-with-calculators/",
+     "title": "Programmatic SEO with Calculators",
+     "publisher": "WP Calorie Calculator"
+    },
+    {
+     "url": "https://susodigital.com/work/saas-programmatic-seo-case-study/",
+     "title": "+398% Monthly Traffic: SaaS Programmatic SEO Case Study",
+     "publisher": "Suso Digital"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Nie ma solidnych publicznych dowodów, że pSEO z kalkulatorami wiarygodnie skaluje ruch po 2024 r. Nie należy opierać biznesplanu na takich case studies. Wymagany jest własny pilotaż na 10-20 symulatorach z pomiarem indeksacji i ruchu przed skalowaniem."
+  },
+  {
+   "question": "3/5. Polityki Google przeciw skalowanym treściom (spam policies 03.2024)",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa, brak URL z wyników). W marcu 2024 Google włączył system Helpful Content do głównego algorytmu i wprowadził polityki spamowe. „Scaled content abuse” obejmuje masowe tworzenie stron głównie w celu manipulacji rankingiem, niezależnie od tego, czy treść tworzy automat, człowiek, czy oba naraz. „Site reputation abuse” i „expired domain abuse” to kolejne polityki z tego pakietu. Google deklarował ok. 40-45% mniej niskiej jakości, nieoryginalnych treści w wynikach.",
+   "evidence_type": "hypothesis",
+   "numbers": "Deklarowana redukcja niskiej jakości treści o ok. 40-45% (niezweryfikowane w sesji).",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Automatyczne generowanie setek stron przez Claude Code i n8n wpada w obszar ryzyka „scaled content abuse”, jeśli strony nie mają unikalnej wartości obliczeniowej. Kryterium bezpieczeństwa to nie sposób wytworzenia, tylko to, czy każda strona rozwiązuje odrębny problem lepiej niż istniejące. Tempo publikacji i jakość trzeba kontrolować bramkami QA."
+  },
+  {
+   "question": "5. Autorytet tematyczny w Google: co jest potwierdzone, a co nie",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa). Google publicznie opisał system „topic authority” w maju 2023, ale dla wyników newsowych (lokalni i wyspecjalizowani wydawcy). W tej sesji nie znaleziono publicznej deklaracji Google o ogólnym czynniku „topical authority” dla stron z narzędziami. Wyciek dokumentacji Content Warehouse API (05.2024) zawierał atrybuty typu siteFocusScore i siteRadius. Sugeruje to, że Google mierzy skupienie tematyczne witryny, ale waga i zastosowanie tych sygnałów są nieznane. Szerokie domeny Omni i calculator.net (wyniki 1 i 5) osiągają ogromny ruch mimo braku skupienia tematycznego.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak.",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Teza „trzeba mieć domeny wertykalne dla topical authority” nie jest poparta dowodami z tej sesji, a istnieją kontrprzykłady. Ci liderzy mają jednak wieloletnią historię i ogromny profil linków, którego nowa domena nie ma. Rozsądny kompromis: jedna domena z wyraźnymi hubami wertykalnymi (folderami), spójnym linkowaniem i możliwością wydzielenia wertykali później."
+  },
+  {
+   "question": "5. Jak asystenci AI wybierają źródła (marka i autorytet a cytowania)",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa, wyszukiwanie przerwane przez limit). Badania branżowe z lat 2024-2025 (m.in. Ahrefs) wskazywały, że widoczność marek w AI Overviews najsilniej koreluje z liczbą wzmianek o marce w sieci, silniej niż z linkami. Cytowania AI Overviews w dużym stopniu pokrywają się z czołówką wyników organicznych Google. Cytowania ChatGPT pokrywają się z top 10 Google słabiej, a Perplexity korzysta z własnego indeksu. Mechanizmy różnią się między asystentami i nie wolno ich utożsamiać.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak zweryfikowanych liczb w sesji.",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Jeśli wzmianki o marce mają znaczenie dla AI, przemawia to za JEDNĄ rozpoznawalną marką zamiast wielu słabych domen (argument AI, nie SEO). Właściciel uznaje polecenia z asystentów AI za kluczowe, ale asystent może sam wykonać obliczenie zamiast odesłać do narzędzia. Trzeba to zmierzyć na rzeczywistych promptach w ChatGPT, Perplexity, Gemini, Claude i Copilot."
+  },
+  {
+   "question": "5/2. Asystenci AI jako substytut symulatora (kategoria C)",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE (wiedza treningowa). ChatGPT (Canvas, wykonywanie kodu), Claude (Artifacts) i Gemini (Canvas) potrafią na żądanie zbudować interaktywny kalkulator lub przeprowadzić analizę scenariuszy z parametrami użytkownika. Pośrednim sygnałem, że lider kategorii traktuje AI jako konkurencję, jest benchmark ORCA (Omni, 11.2025; URL niezweryfikowany), według którego AI myli się w ok. 40% codziennych obliczeń.",
+   "evidence_type": "hypothesis",
+   "numbers": "ORCA: ok. 40% błędów (twierdzenie Omni, niezweryfikowane).",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Najbliższym substytutem dla każdego symulatora jest „zrób to w ChatGPT”. Przewaga musi wynikać z czegoś, czego asystent nie da łatwo lub wiarygodnie: aktualnych, źródłowych danych (stawki, zachęty, ceny), sprawdzonej metodologii, wizualizacji wrażliwości i powtarzalności wyniku. Jednocześnie ta sama zdolność AI obniża barierę wejścia dla konkurentów."
+  },
+  {
+   "question": "1. Wydawcy finansowi (NerdWallet, Bankrate, SmartAsset): model biznesowy narzędzi",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa). NerdWallet (spółka publiczna), Bankrate (Red Ventures) i SmartAsset (lead-gen do doradców finansowych, finansowany przez VC) traktują kalkulatory jako lejek do affiliate i lead-gen (karty, kredyty hipoteczne, ubezpieczenia, doradcy), a nie jako produkt reklamowy. NerdWallet w raportach z lat 2024-2025 wskazywał na presję w ruchu organicznym z Google.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak zweryfikowanych liczb w sesji.",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "W wertykałach finansowych (kredyt hipoteczny, refinansowanie, emerytura) konkurenci zarabiają na użytkowniku prawdopodobnie o rząd wielkości więcej niż z AdSense (hipoteza). Mogą więc przeinwestować w SEO, redakcję i linki. Model „tylko reklamy” jest tam strukturalnie słabszy. Lepsze mogą być niszowe decyzje, gdzie brak drogiego lejka affiliate, lub decyzje domowe i energetyczne."
+  },
+  {
+   "question": "1/4. Narzędzia rządowe i non-profit jako konkurencja i benchmark zaufania",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa). Narzędzia .gov i non-profit są darmowe, bez reklam i mają najwyższe sygnały zaufania. Należą do nich Investor.gov (Compound Interest Calculator), studentaid.gov Loan Simulator (po zalogowaniu korzysta z rzeczywistych danych kredytów federalnych użytkownika), DOE AFDC (Vehicle Cost Calculator), NREL PVWatts (produkcja PV) i Rewiring America (kalkulator zachęt). Funkcje dostępne po zalogowaniu (Loan Simulator) traktuję jako niezweryfikowane.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak.",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Tam, gdzie narzędzie .gov integruje dane osobiste użytkownika (spłata federalnych kredytów studenckich), jest ono prawdopodobnie BEZPOŚREDNIM konkurentem, z którym nowy serwis nie wygra zaufaniem. Przy decyzjach energetycznych narzędzia rządowe (PVWatts, AFDC) są raczej CZĘŚCIOWE i mogą być źródłem danych lub metodologii (z atrybucją), a nie przeszkodą."
+  },
+  {
+   "question": "4. Niszowe narzędzia decyzyjne: jak zdobywają ruch i zarabiają",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa; wyszukiwanie przerwane przez limit). Subskrypcja lub freemium: ProjectionLab (indie, plan Premium), Boldin (dawniej NewRetirement; freemium z planem płatnym i usługami doradczymi, finansowanie VC), DealCheck (SaaS dla inwestorów nieruchomości). Narzędzia darmowe lub open source, czasem z dotacjami: ficalc.app, cFIREsim. Open Social Security jest darmowe, a autor (Mike Piper) zarabia pośrednio na książkach i blogu. NYT „Rent vs Buy” działa w modelu subskrypcji wydawcy. Rewiring America to non-profit, a PVWatts narzędzie rządowe. Nie znam w tej grupie przykładu opartego głównie na display ads. Ruch pochodzi głównie ze społeczności (Reddit r/financialindependence, Bogleheads), podcastów, YouTube i poleceń.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak zweryfikowanych liczb ruchu i przychodów.",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Najbliższe koncepcyjnie produkty, czyli głębokie, jednoproblemowe symulatory, wygrywają głębią, społecznością i subskrypcją. To kanały i modele, które właściciel wyklucza (brak społeczności, brak powracających użytkowników, reklamy jako baza). To poważny sygnał ostrzegawczy dla tezy „głęboki symulator + AdSense + nowi użytkownicy”. Wymaga weryfikacji (Similarweb, wywiady założycieli)."
+  },
+  {
+   "question": "6. E-E-A-T i YMYL dla narzędzi finansowych: praktyki liderów",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE w tej sesji (wiedza treningowa). Wytyczne Quality Rater Guidelines traktują finanse jako YMYL, który wymaga wysokiego E-E-A-T. Aktualizacja ze stycznia 2025 dodała m.in. wskazówki dotyczące treści masowo lub automatycznie generowanych bez wysiłku i oryginalności, które mogą dostać ocenę najniższą. Liderzy stosują podpisanych autorów i recenzentów („Reviewed by”, często z tytułami naukowymi lub CFP), strony polityki redakcyjnej oraz opisy metodologii i źródeł danych. Dotyczy to Omni oraz NerdWallet i Bankrate.",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak.",
+   "sources": [],
+   "confidence": "medium",
+   "implication_pl": "Prawie każdy symulator decyzyjny dotyka pieniędzy, więc należy do YMYL. Pełna automatyzacja bez widocznej odpowiedzialności merytorycznej kłóci się z praktyką liderów. Minimalny standard: strona metodologii dla każdego symulatora, jawne założenia, daty i źródła danych, ograniczenia, changelog i choćby okresowa recenzja ekspercka w wertykałach finansowych. To koszt stały, który trzeba ująć w modelu."
+  },
+  {
+   "question": "5. Jedna szeroka domena vs domeny wertykalne: rozdzielone argumenty",
+   "claim_pl": "Synteza (szacunek/hipoteza). PRODUKT: symulatory łączące obszary (dach + PV + sprzedaż domu) korzystają ze wspólnego silnika i linkowania między wertykałami, co przemawia za jedną domeną. OPERACJE: jedna baza kodu, jedno konto AdSense, jedno zatwierdzenie, jedna analityka, jeden pipeline n8n. Wiele domen to wielokrotny narzut i wielokrotne zatwierdzanie AdSense, co też przemawia za jedną domeną. SEO: degradacja całej witryny po HCU była rzadko odwracana (wynik 8), co przemawia za dywersyfikacją ryzyka. Z drugiej strony każda nowa domena startuje bez autorytetu, a szerokie domeny (Omni, calculator.net) dowodzą, że skupienie tematyczne nie jest warunkiem koniecznym. AI: jeśli wzmianki o marce wpływają na cytowania (wynik 18, niezweryfikowany), jedna marka akumuluje je lepiej.",
+   "evidence_type": "estimate",
+   "numbers": "Brak.",
+   "sources": [
+    {
+     "url": "https://thestacc.com/blog/helpful-content-update-recovery/",
+     "title": "Helpful Content Update Recovery Study: Data From 400+ Sites",
+     "publisher": "The Stacc"
+    },
+    {
+     "url": "https://ahrefs.com/top/calculator.net",
+     "title": "calculator.net (Ahrefs Top)",
+     "publisher": "Ahrefs"
+    },
+    {
+     "url": "https://www.google.com/ads/publisher/stories/omni_calculator/",
+     "title": "Omni Calculator (Google publisher story)",
+     "publisher": "Google"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Rekomendacja wynikająca z dowodów: start na jednej domenie z hubami wertykalnymi i ścisłą kontrolą jakości (żadnych masowych publikacji). Wydzielenie wertykalu na osobną domenę rozważyć dopiero, gdy pojawi się sygnał ryzyka, np. wyraźnie inna jakość lub YMYL w jednym wertykale. Nie ma dowodów, które uzasadniałyby start od wielu domen."
+  },
+  {
+   "question": "7. Nowi gracze z portfelami kalkulatorów 2024-2026",
+   "claim_pl": "HIPOTEZA / NIEZWERYFIKOWANE: w tej sesji nie zebrano żadnych źródeł o indie raportach przychodów ani porażkach nowych portfeli kalkulatorów (wyczerpany limit wyszukiwań). Według wiedzy treningowej od 2023 r. narzędzia AI do kodu bardzo obniżyły koszt budowy prostych kalkulatorów, co wywołało zalew podobnych stron. Liderzy (Omni, calculator.net) utrzymują dziesiątki milionów wizyt miesięcznie (wyniki 1 i 5).",
+   "evidence_type": "hypothesis",
+   "numbers": "Brak.",
+   "sources": [],
+   "confidence": "low",
+   "implication_pl": "Jeśli prosty kalkulator może dziś zbudować każdy w kilka minut, przewaga nie może leżeć w liczbie narzędzi ani w szybkości ich produkcji. Może leżeć tylko w doborze problemów, jakości modelu decyzyjnego, aktualności danych i zaufaniu. To pytanie wymaga osobnej rundy wyszukiwań (Indie Hackers, X, Reddit r/SEO i r/juststart, raporty przychodów)."
+  }
+ ],
+ "contradictions_pl": [
+  "Ruch Omni Calculator: case study Google podaje ponad 18 mln wizyt miesięcznie, Crunchbase 17 mln wizyt, a nowszy tekst z wypowiedziami CEO ponad 9 mln użytkowników miesięcznie. Różne metryki (wizyty vs użytkownicy) i różne lata uniemożliwiają ustalenie trendu.",
+  "Zatrudnienie w Omni: 33 (Tracxn, 05.2026) vs 62 (PitchBook) vs 67 (Growjo) vs 51-200 (ZoomInfo).",
+  "Liczba kalkulatorów Omni: 900 (starszy wywiad) vs 3700+ / 3800 (nowsze źródła). To raczej wzrost w czasie niż sprzeczność, ale bez dat publikacji nie da się tego potwierdzić.",
+  "calculator.net: Ahrefs ok. 27 mln (tylko ruch organiczny, 06.2025) vs Semrush 56-62 mln (ruch całkowity, 05-10.2025). Różnica zakresu metryk, a nie sprzeczne obserwacje.",
+  "Spadek CTR przez AI Overviews: 34,5% (Ahrefs, 04.2025) vs 58% (aktualizacja Ahrefs) vs 61% (Seer, cytowane wtórnie) vs względny spadek ok. 47% (Pew, cytowane wtórnie). Rozbieżność metod i okresów.",
+  "Boomcycle twierdzi, że kalkulatory i konwertery należały do kategorii mocno dotkniętych HCU, a jednocześnie liderzy kategorii (Omni, calculator.net) utrzymują dziesiątki milionów wizyt. Twierdzenie o kategorii nie oznacza losu każdej strony w niej."
+ ],
+ "open_questions_pl": [
+  "Przerwanie z powodu limitu: trzeba powtórzyć wyszukiwania dla pytań 4-7 (niszowe narzędzia, topical authority, wybór źródeł przez asystentów AI, E-E-A-T, nowi gracze). Wszystkie ustalenia oznaczone jako hipotezy wymagają URL.",
+  "Które zapytania decyzyjne (np. „should I install solar before replacing roof”, „rent vs buy calculator”) wywołują w US AI Overviews lub AI Mode? Czy AI Mode generuje dla nich własne obliczenia lub interaktywne narzędzia?",
+  "Czy natywny widżet kalkulatora kredytu hipotecznego Google nadal się wyświetla w 2026 i dla jakich zapytań? Czy pojawiły się nowe natywne narzędzia (refinansowanie, emerytura, energia)?",
+  "Jaki jest rzeczywisty udział ruchu z ChatGPT, Perplexity, Gemini i Copilot w stronach z kalkulatorami? Czy asystenci częściej cytują narzędzie, czy liczą sami?",
+  "Jaki jest ruch (Similarweb lub Semrush) i jego trend 2024-2026 dla CalculatorSoup, Calculator.io, GoodCalculators oraz stron narzędzi NerdWallet, Bankrate i SmartAsset?",
+  "Jakie są realne kanały ruchu i przychody ProjectionLab, Boldin, DealCheck, ficalc.app, cFIREsim i Open Social Security? Czy któryś zarabia istotnie na display ads?",
+  "Czy istnieją udokumentowane przypadki ręcznych działań Google (scaled content abuse) wobec stron z kalkulatorami generowanymi przez AI w latach 2024-2026?",
+  "Brak danych o RPM AdSense dla stron z kalkulatorami w US. Nie wyprowadzać go z szacunków Omni, bo implikowane 19-39 USD na 1000 wizyt to szacunek na szacunkach.",
+  "Jakie są indie raporty przychodów (Indie Hackers, X, Reddit) z portfeli kalkulatorów uruchomionych w latach 2024-2026: sukcesy, porażki, czas do monetyzacji?",
+  "Czy istnieją oficjalne wypowiedzi Google (Search Central, Danny Sullivan, John Mueller) z lat 2024-2026 o reputacji witryny i skupieniu tematycznym poza newsami?"
+ ],
+ "queries_run": [
+  "Omni Calculator revenue funding employees 2025 (extended)",
+  "calculator.net traffic monthly visits 2025 (standard)",
+  "calculator websites traffic decline AI Overviews 2025 (extended)",
+  "Google helpful content update calculator sites lost traffic case study (extended)",
+  "Omni Calculator founder interview business model advertising how many calculators (extended)",
+  "Google search native mortgage calculator loan calculator SERP feature interactive (extended)",
+  "Google AI Mode interactive charts financial tools custom calculators generative UI 2025 (extended)",
+  "programmatic SEO calculator pages success case study traffic (extended)",
+  "[NIE WYKONANO - limit] Google March 2024 core update scaled content abuse policy site reputation abuse",
+  "[NIE WYKONANO - limit] Google \"topic authority\" news ranking system announcement",
+  "[NIE WYKONANO - limit] study what sources ChatGPT Perplexity cite domain authority brand mentions correlation AI citations",
+  "[NIE WYKONANO - limit] Google site-wide signals helpful content system site-level classifier documentation"
+ ]
+}

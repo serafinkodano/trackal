@@ -1,0 +1,138 @@
+{
+ "id": "HOME-04",
+ "demand_evidence": [
+  {
+   "claim_pl": "Blog wtórny, powołujący się na Realtor.com i dane FHFA, podaje dla Q1 2026: ok. 49,9% kredytów hipotecznych w USA ma oprocentowanie 4% lub niższe, ok. 19,5% poniżej 3%, ok. 30,4% w przedziale 3-4%, a ok. 78% poniżej 6%. Nie udało mi się porównać tych liczb z raportem źródłowym.",
+   "url": "https://www.noradarealestate.com/blog/nearly-half-of-mortgages-still-cost-4-percent-lock-in/",
+   "kind": "indirect",
+   "measures_pl": "Wielkość populacji objętej rate lock-in (udział kredytów wg oprocentowania). To NIE jest popyt miesięczny ani liczba osób, które podejmują tę decyzję."
+  },
+  {
+   "claim_pl": "Stacker, na podstawie danych FHFA za Q3 2025: ponad połowa właścicieli ma kredyt poniżej 4%, a niecałe 80% poniżej 6%. Artykuł opisuje 'great staying put': rekordowy udział właścicieli wypłaca equity bez sprzedaży domu.",
+   "url": "https://stacker.com/stories/real-estate/great-staying-put-why-record-share-homeowners-are-cashing-without-selling",
+   "kind": "indirect",
+   "measures_pl": "Strukturalna skala zjawiska lock-in i zachowanie typu 'zostaję i wypłacam equity' (HELOC/cash-out). Pokazuje kontekst, nie wolumen zapytań."
+  },
+  {
+   "claim_pl": "Według Realtor.com w 2. połowie 2025 udział kredytów powyżej 6% przewyższył udział kredytów poniżej 3%. Analityk tłumaczy to m.in. 'swapperami', czyli osobami, które zamieniły tani kredyt na droższy. Efekt lock-in powoli słabnie.",
+   "url": "https://themortgagepoint.com/2026/01/20/mortgage-swappers-altering-nationwide-lock-in-effect/",
+   "kind": "indirect",
+   "measures_pl": "Kierunek zmian: pula kredytów poniżej 3% się kurczy. Narzędzie musi więc obsługiwać także 'zablokowane' stopy 4-5%, a nie tylko 3%."
+  },
+  {
+   "claim_pl": "Redfin (badanie Ipsos, listopad 2025), według podsumowania wyszukiwarki: ok. 65% osób, które niedawno remontowały, wybrało ulepszenie obecnego domu zamiast przeprowadzki. Wśród planujących remont odsetek ten wynosi 71%. Ok. 80% właścicieli z kredytem ma stopę niższą od obecnej rynkowej.",
+   "url": "https://www.redfin.com/news/?p=84873",
+   "kind": "indirect",
+   "measures_pl": "Odsetek ankietowanych, którzy wybrali remont zamiast przeprowadzki. Mierzy rozstrzygnięcia decyzji, nie liczbę wyszukiwań. Przypisanie liczb do tego URL pochodzi z podsumowania wyszukiwarki."
+  },
+  {
+   "claim_pl": "Bank of America (lipiec 2026): ponad ćwierć właścicieli przeznacza na remont obecnego domu pieniądze odłożone wcześniej na następny dom. Raport wiąże to z niskimi zablokowanymi stopami i przywiązaniem do okolicy.",
+   "url": "https://www.wafb.com/2026/07/21/homeowners-are-fixing-up-instead-moving-out-report-finds/",
+   "kind": "indirect",
+   "measures_pl": "Deklarowane przesunięcie budżetu z przeprowadzki na remont, czyli ten sam trade-off, którego dotyczy produkt."
+  },
+  {
+   "claim_pl": "Citizens (kwiecień 2026): 44% właścicieli uważa remont obecnego domu za najbardziej realistyczną opcję mieszkaniową na najbliższe lata. Zakup za osiągalny uważa 13%.",
+   "url": "https://investor.citizensbank.com/about-us/newsroom/latest-news/2026/2026-04-23.aspx",
+   "kind": "indirect",
+   "measures_pl": "Deklarowane preferencje w ankiecie. Wskazuje, że decyzja 'zostać i remontować czy kupić' jest powszechnie rozważana."
+  },
+  {
+   "claim_pl": "Kontr-dowód: w badaniu Point (maj 2026) odsetek osób wskazujących stopy procentowe jako barierę przeprowadzki spadł do 44,9% w 2026 z 55,4% w 2024. Główną barierą pozostają ceny domów.",
+   "url": "https://point.com/blog/point-movers-study-housing-gridlock-report-2026",
+   "kind": "indirect",
+   "measures_pl": "Waga czynnika 'rate lock-in' w decyzji. Maleje, więc narzędzie nie może opierać się wyłącznie na różnicy stóp. Musi też uwzględniać ceny, podatki i koszty transakcyjne."
+  },
+  {
+   "claim_pl": "Prasa lokalna (lipiec 2026) donosi, że popyt na rozbudowy domów rośnie, bo właściciele z kredytem 3% nie chcą zamieniać go na 6-7%. Finansowanie tylko nowego metrażu bywa tańsze niż wymiana całego domu.",
+   "url": "https://cdapress.com/news/2026/jul/13/home-addition-demand-is-rising-because-nobody-wants-to-trade-a-3-rate/",
+   "kind": "indirect",
+   "measures_pl": "Relacja medialna z rynku wykonawców (anegdotyczna). Potwierdza aktualność tematu w 2026."
+  },
+  {
+   "claim_pl": "Pokrycie wydawców: Clark.com (Q&A z czytelnikiem, przedruk w AJC), Citizens Bank (koszty sprzedaży 30-52,5 tys. USD przy domu za 500 tys.), Mortgage Wealth Advisors (case z czerwca 2026: 'potrzebowali więcej miejsca, ale nie chcieli stracić 3%'), Resident.com (lipiec 2026) i Foxes Sell Faster. Temat jest stale obecny w treściach finansowych i realtorskich.",
+   "url": "https://clark.com/homes-real-estate/financing-a-home-addition-vs-buying-a-bigger-house/",
+   "kind": "indirect",
+   "measures_pl": "Podaż treści, czyli zainteresowanie wydawców tematem. Pośrednio wskazuje na popyt SEO, ale nie mierzy wolumenu."
+  },
+  {
+   "claim_pl": "Harvard JCHS (LIRA): wydatki właścicieli na remonty to ok. 518 mld USD (rewizja z kwietnia 2026). Prognozowane jest spowolnienie wzrostu, a według nowszego komunikatu ok. 0,5% r/r do Q2 2027. Wyników LIRA z 22.10.2026 nie sprawdzałem.",
+   "url": "https://www.jchs.harvard.edu/blog/remodeling-growth-set-downshift-late-2026",
+   "kind": "indirect",
+   "measures_pl": "Wielkość rynku remontowego w USD. To kontekst makro, a nie liczba osób porównujących remont z przeprowadzką."
+  },
+  {
+   "claim_pl": "Pojedyncze, bezpośrednie pytania użytkowników na forach. Tiger Droppings: kredyt poniżej 3%, rozważany remont za ok. 260 tys. USD w ramach refinansowania zamiast przeprowadzki. Bob Is The Oil Guy: wątek 'Move vs house addition'. Reddit niedostępny dla wyszukiwarki (błąd domeny).",
+   "url": "https://www.tigerdroppings.com/rant/money/refinancing-renovation-costs/114920087/",
+   "kind": "direct",
+   "measures_pl": "Pokazuje, że użytkownicy zadają dokładnie to pytanie (także o finansowanie przez refi). Próba jest bardzo mała, więc nie świadczy o wolumenie."
+  },
+  {
+   "claim_pl": "Hipoteza: popyt wyszukiwaniowy rozkłada się na długi ogon fraz, m.in. 'remodel or move calculator', 'addition vs buying bigger house', 'HELOC vs cash-out refinance', 'should I give up my 3% mortgage', 'finish basement or move'. Wolumen jest nieznany i nie podaję żadnych liczb. Trzeba go zweryfikować w Google Keyword Planner lub Search Console po starcie.",
+   "url": "n/a (hipoteza, brak źródła)",
+   "kind": "hypothesis",
+   "measures_pl": "Nic nie mierzy. To hipoteza do walidacji danymi o wolumenie słów kluczowych."
+  },
+  {
+   "claim_pl": "Szacunek jakościowy: populacja potencjalnie zainteresowana to część właścicieli z kredytem 4% lub niższym (ok. połowa kredytów według danych z Q1 2026), u których zmieniły się potrzeby (dziecko, praca zdalna, rodzic). Liczby gospodarstw nie przeliczam na popyt miesięczny, bo decyzja zapada rzadko, raz na kilka lat.",
+   "url": "https://www.noradarealestate.com/blog/nearly-half-of-mortgages-still-cost-4-percent-lock-in/",
+   "kind": "estimate",
+   "measures_pl": "Górna granica populacji (TAM), nie ruch miesięczny."
+  }
+ ],
+ "forum_question_examples": [
+  {
+   "paraphrase_en": "Our mortgage is under 3% and we're weighing a ~$260k renovation rolled into a refinance, since anywhere else that gives us more space costs more than the reno. Are these refi closing costs reasonable, and is losing the low rate worth it?",
+   "url": "https://www.tigerdroppings.com/rant/money/refinancing-renovation-costs/114920087/"
+  },
+  {
+   "paraphrase_en": "Should we move or put an addition on the house? Replies said it depends on whether you like the neighborhood and how much of the labor you can do yourself.",
+   "url": "https://bobistheoilguy.com/forums/threads/move-vs-house-addition.203832/"
+  },
+  {
+   "paraphrase_en": "Reader question to a consumer-finance host: is it more practical to finance a home addition or buy a bigger house? The answer stresses that moving puts the whole loan at roughly double the rate.",
+   "url": "https://clark.com/homes-real-estate/financing-a-home-addition-vs-buying-a-bigger-house/"
+  },
+  {
+   "paraphrase_en": "Syndicated newspaper Q&A: which is more practical, financing a home addition or buying a bigger house?",
+   "url": "https://www.ajc.com/news/which-is-more-practical-financing-a-home-addition-or-buying-a-bigger-house/D7UZ5OYRLVBJPN5D3AWHI3EPYI"
+  },
+  {
+   "paraphrase_en": "Older (2005) reader question: should we do a home improvement or buy a new home? This shows the question is evergreen even before the rate lock-in era.",
+   "url": "https://www.thinkglink.com/2005/03/04/home-improvement-or-buy-new-home/"
+  }
+ ],
+ "seasonality_or_triggers_pl": "Wyzwalacze życiowe (hipoteza oparta na briefie i treści artykułów, bez danych wolumenowych):\n- ciąża lub narodziny dziecka;\n- przejście na pracę zdalną i potrzeba biura;\n- rodzic, który się wprowadza (opieka, multigenerational, ADU);\n- dzieci w wieku szkolnym: chęć przeprowadzki przed sierpniem i wrześniem.\n\nWyzwalacze rynkowe:\n- Spadki stóp i nagłówki typu 'rates fall to 6%' zmniejszają różnicę między stopą zablokowaną a rynkową. Decyzja staje się wtedy 'na granicy', a pytanie 'move now or wait' bardziej aktualne. Point (2026) pokazuje, że waga stóp jako bariery spada.\n- Posiedzenia Fed i zmiany prime rate: zmienna stopa HELOC.\n- Powiadomienia o wycenie podatku od nieruchomości.\n- Wyceny domów, które pokazują wzrost equity.\n- Wycena oferty od wykonawcy: moment 'mam quote na 150k, co dalej'.\n\nSezonowość (hipoteza do weryfikacji w Google Trends lub GSC):\n- planowanie remontów zimą i wczesną wiosną (rezerwacja wykonawców na sezon);\n- szczyt rynku sprzedaży w kwietniu-czerwcu;\n- prawdopodobnie mniejsze zainteresowanie w listopadzie-grudniu.\n\nTrend strukturalny: pula kredytów poniżej 3% się kurczy (themortgagepoint, styczeń 2026). Wieloletni potencjał tematu 'stopa 3%' zmaleje, a produkt powinien obsługiwać dowolną zablokowaną stopę (3-5%). Niepewność stóp utrzymuje jednak aktualność pytania.",
+ "prompts_no_tool_request": [
+  "We have a toddler and another baby due in March, and our 3-bedroom in Columbus, Ohio is getting tight. We owe about $280k at 2.875% and new mortgages are around 6.25%. Should we add a bedroom or sell and buy a 4-bedroom?",
+  "My mom is moving in with us next year. We live in Sacramento, have a 3.1% mortgage, and about $400k in equity. Does it make more sense to build an ADU in the backyard or buy a bigger house with an in-law suite?",
+  "I work from home full time now and really need a proper office. Is it crazy to give up my 3.25% rate to move, or should I just finish the basement? House is in suburban Denver, worth about $620k, and I owe $310k.",
+  "Our New Jersey house is worth around $750k and we owe $350k at 2.99%. Property taxes here are already brutal. If we bought a bigger place for $950k, how much more would we actually pay each month compared to a $200k addition?"
+ ],
+ "prompts_calculator_request": [
+  "Build me a calculator that compares remodeling vs. moving when I have a 3% mortgage. Inputs: home value, loan balance, current rate, remodel cost, new home price, new mortgage rate, selling costs. Show the total cost over 10 years.",
+  "Is there a remodel-or-move calculator that accounts for losing my low mortgage rate AND the property tax reassessment when I buy a new house? I'm in Florida with a homestead exemption.",
+  "Give me an interactive tool or spreadsheet to compare a HELOC-funded addition, a cash-out refinance, and selling to buy a bigger home. Our home is worth $540k, we owe $260k at 3.375%, the addition quote is $180k, and the target house is $720k.",
+  "Can you make a break-even calculator that shows how many years we'd have to stay for a $150k basement finish to beat moving? I want sliders for the HELOC rate and for a remodel cost overrun."
+ ],
+ "prompts_scenario_comparison": [
+  "Compare four options over 7 years: (a) a $160k addition on a HELOC at prime + 0.5%, (b) a $90k basement finish paid partly in cash, (c) a cash-out refi at 6.4% to fund the addition, (d) selling and buying a $700k house with a 6.2% mortgage. We're in Texas, house worth $480k, owe $230k at 2.75%.",
+  "We found a house with an assumable FHA loan at 3.5%, but we'd need about $120k cash to cover the seller's equity. Compare that against keeping our 3% loan and adding on for $170k, and against a regular purchase at 6.3%.",
+  "What if rates fall to 5% in two years? Compare moving now, waiting two years to move, and renovating now with the option to refinance later. Home in Charlotte, worth $450k, we owe $240k at 3.125%.",
+  "Run best, expected and worst cases. The remodel quote is $140k but could run 30% over, and the HELOC rate could rise 2 points. The alternative is selling with about 6% in total selling costs and buying at 6.5%. Which option wins over 5 years and over 10 years?"
+ ],
+ "ai_self_solve_assessment_pl": "Ocena: ryzyko samodzielnego rozwiązania przez AI jest wysokie dla wersji prostej i średnie dla wersji pełnej, wielookresowej z niepewnością. Zastrzeżenie: funkcje ChatGPT 'Intelligent UI' (od października 2026, kalkulatory renderowane w odpowiedzi) i generatywnego UI w Google AI Mode przyjmuję za briefem. W tym badaniu ich nie weryfikowałem i nie testowałem promptów.\n\nCo AI zrobi dobrze:\n- Na prompt 'mortgage 3%, rates 6%, add on or buy bigger' asystent poda sensowną odpowiedź jakościową. Pokrywa się ona z narracją wydawców (Clark: przy przeprowadzce cały kredyt idzie na podwójną stopę; addition finansuje tylko nowy metraż).\n- Policzy różnicę rat, koszty sprzedaży 6-10% i ratę HELOC.\n- Przy Intelligent UI może wygenerować doraźny widget z kilkoma suwakami. Dla użytkownika, który chce szybkiej odpowiedzi, to wystarczy, więc ruch z prostych zapytań jest zagrożony.\n\nGdzie AI jest słabsze (i gdzie jest przewaga narzędzia):\n- spójny model wielu wariantów jednocześnie (HELOC, home equity loan, cash-out refi, przeprowadzka, assumable, bez zmian) na wspólnej osi czasu z majątkiem netto, a nie tylko z ratą;\n- niepewność kosztów remontu i ścieżka zmiennej stopy HELOC (okres interest-only, potem szok spłaty);\n- stanowe reguły ponownej wyceny podatku;\n- opcja refinansu przy spadku stóp;\n- powtarzalność: te same dane dają ten sam wynik, a link do scenariusza można udostępnić;\n- przejrzystość założeń.\n\nOdpowiedzi AI różnią się między sesjami. Asystent zwykle porównuje raty, a nie koszt ekonomiczny: myli spłatę kapitału z kosztem i pomija koszt alternatywny equity.\n\nImplikacja dla dystrybucji: AI będzie konkurentem dla zapytań prostych. Szansą jest bycie cytowanym źródłem. Pomoże w tym unikalna metodologia, tabele stanowe podatków, golden cases i 'worked examples' z liczbami, które AI może przytoczyć wraz z linkiem.",
+ "missing_dependencies_ai_likely_ignores_pl": "Zależności, które asystent AI prawdopodobnie pominie lub uprości (hipoteza do sprawdzenia w przyszłym teście manualnym):\n\nKredyt i porównanie kosztów:\n1. Porównanie raty zamiast kosztu ekonomicznego. Część raty to spłata kapitału, a przy 3% po kilku latach udział kapitału jest wysoki. AI często porównuje same raty.\n2. Pozostały okres starego kredytu. Nowy kredyt na 30 lat 'resetuje' amortyzację.\n3. Koszt alternatywny equity i wkładu własnego (down payment z equity zamiast inwestycji).\n\nPodatek od nieruchomości:\n4. Ponowna wycena przy zakupie i różnice stanowe: CA Prop 13 i Prop 19 (przenoszenie bazy dla 55+), FL Save Our Homes portability, 'uncapping' w MI, limity wzrostu wyceny w innych stanach. Także możliwy wzrost wyceny po rozbudowie (new construction reassessment w CA).\n\nHELOC:\n5. Zmienna stopa powiązana z prime.\n6. Okres draw (interest-only), a potem spłata w 20 lat, co oznacza skok raty.\n7. Limit CLTV (zwykle ok. 80-90%), który może uniemożliwić sfinansowanie projektu.\n\nCash-out refi:\n8. Utrata niskiej stopy na CAŁYM saldzie, nie tylko na nowej kwocie. Do tego koszty zamknięcia.\n\nRyzyko remontu:\n9. Przekroczenia budżetu (rezerwa 10-30%), mieszkanie tymczasowe w trakcie budowy, wydłużenie harmonogramu.\n10. Remont nie zwraca 100% kosztu w wartości domu (appraisal gap). Over-improvement względem okolicy.\n\nPodatki dochodowe:\n11. §121: wyłączenie zysku 250 tys./500 tys. USD. Remont zwiększa basis, co ma znaczenie przy dużych zyskach w drogich rynkach.\n12. Odliczenie odsetek: limit 750 tys. USD długu akwizycyjnego. Odsetki HELOC są odliczalne tylko przy 'buy, build or substantially improve'. Większość podatników bierze standard deduction, więc korzyść często wynosi zero.\n\nPrzeprowadzka:\n13. Koszty zakupu (closing 2-5%), PMI przy wkładzie poniżej 20%, przeprowadzka, wyposażenie większego domu.\n14. Wyższe ubezpieczenie i utrzymanie większego domu. Prowizje po ugodzie NAR są negocjowalne.\n\nPozostałe:\n15. Opcja refinansu przy spadku stóp, która obniża koszt wariantu 'move'. Wartość czekania.\n16. Assumable: luka equity wymagająca gotówki lub drugiego kredytu, dostępność tylko FHA/VA/USDA, czas procesu.\n17. ADU: pozwolenia, zoning, możliwy dochód z najmu, wpływ na podatek.\n18. Horyzont zamieszkania i break-even. Inflacja i wzrost wartości domu różne dla dwóch nieruchomości.\n19. Ograniczenia działki, zoningu i układu domu (artykuły wskazują, że czasem rozbudowa jest niemożliwa).",
+ "mvp_scope_pl": "MVP: 'minimum valuable', czyli najmniejszy zakres, który daje przewagę nad odpowiedzią AI i nad częściowymi konkurentami.\n\n1) Dane wejściowe:\n- Obecny dom: wartość, saldo, stopa, pozostały okres, roczny podatek, ubezpieczenie.\n- Horyzont: 5, 7, 10 lub 15 lat.\n- Założenia rynkowe: wzrost wartości domów, stopa zwrotu z gotówki, inflacja kosztów.\n- Wartości domyślne z jawnym źródłem i datą (np. stopa 30Y wpisywana ręcznie co tydzień).\n\n2) Warianty w MVP (wspólny silnik):\n- (A) Zostać i realizować projekt (rozbudowa, piwnica lub ADU jako jeden wariant z presetami kosztu i wartości dodanej) z wyborem finansowania: HELOC (zmienna, draw i repayment), home equity loan (stała), gotówka, cash-out refi.\n- (B) Przeprowadzka z nowym kredytem: koszty sprzedaży i zakupu, nowy podatek, PMI w uproszczeniu.\n- (C) Bez zmian jako baseline.\n- Cash-out refi to wariant finansowania w (A), dzięki czemu widać 'karę za utratę stopy' na całym saldzie.\n\n3) Wyniki:\n- Roczny cash flow i skumulowany koszt.\n- Majątek netto na koniec horyzontu: equity minus koszty sprzedaży przy wyjściu plus zainwestowana różnica.\n- Break-even w latach.\n- Rozbicie 'skąd różnica': stopa, podatek, transakcje, remont.\n\n4) Niepewność:\n- Trzy scenariusze (best, expected, worst): przekroczenie budżetu remontu, ścieżka prime i HELOC, nowa stopa.\n- Tornado (wykres wrażliwości) dla 5-6 parametrów.\n- Scenariusz 'stopy spadają do X% w roku N', czyli refinans dla wariantu move (i dla HELOC przez spadek prime).\n\n5) Podatki w wersji minimalnej:\n- Nowy podatek od nieruchomości = cena × efektywna stawka, z ostrzeżeniami lub presetami dla CA (Prop 13/19) i FL (SOH portability).\n- Śledzenie basis i ostrzeżenie, gdy zysk przekracza limit §121.\n- Bez pełnej kalkulacji odliczeń.\n\n6) Kontrole wykonalności: CLTV dla HELOC (flaga, gdy projekt przekracza limit) i ostrzeżenie o skoku raty po okresie draw.\n\n7) UX: udostępnialny URL scenariusza, wydruk lub PDF podsumowania, lista pytań do wykonawcy i loan officera, jawne założenia i disclaimer 'not financial/tax advice'.",
+ "deferred_features_pl": "Świadomie odroczone:\n- Pełny wariant assumable: luka equity, drugi lien, czas procesu, dostępność FHA/VA/USDA. W MVP najwyżej uproszczony toggle 'assumed rate + cash gap' w wersji 1.1.\n- Silnik podatku od nieruchomości dla wszystkich 50 stanów (MVP: wpis ręczny plus 2-3 presety).\n- Pełna symulacja podatku dochodowego (itemized vs standard, odliczenie odsetek HELOC, zysk ponad §121, podatek stanowy).\n- Dochód z najmu ADU i wpływ na wycenę. Kredyty budowlane i renowacyjne (construction HELOC, RenoFi, FHA 203k).\n- Bridge loans i rent-back. Monte Carlo zamiast trzech scenariuszy. Własne ścieżki stopy HELOC rok po roku.\n- Regionalne koszty remontu (dane typu Cost vs Value per metro) i automatyczny feed stóp (API).\n- Wartość 'miękka' (szkoły, dojazdy) w scoringu. Konta użytkowników i zapisywanie wielu domów.\n- Porównanie konkretnych ofert z MLS.",
+ "data_sources_and_tests_pl": "Źródła danych. Poniżej podaję nazwy. URL-i nie cytuję, bo nie pojawiły się w moich wynikach, poza FHFA (przez blog wtórny) i JCHS.\n\nStopy i struktura rynku:\n- Freddie Mac PMMS: tygodniowa stopa 30Y i 15Y.\n- Prime rate (Fed H.15 lub WSJ Prime) jako baza HELOC plus typowe marże z ofert banków.\n- FHFA NMDB: rozkład stóp istniejących kredytów, kontekst lock-in.\n- Ceny domów: Realtor.com, Redfin. Koszty zamknięcia: ankiety typu ClosingCorp lub Bankrate.\n\nPodatki:\n- Efektywne stawki podatku od nieruchomości: Lincoln Institute 50-State Property Tax Comparison, Tax Foundation.\n- Reguły stanowe: CA BOE (Prop 13/19), FL DOR (Save Our Homes portability).\n- IRS Pub 523 (§121, basis i ulepszenia) i Pub 936 (odsetki, HELOC, limit 750 tys.).\n\nRemonty:\n- Raport Remodeling Cost vs Value (Zonda/JLC): odzysk kosztu w wartości.\n- Harvard JCHS LIRA jako kontekst.\n\nTesty obliczeń:\n(a) Wyrocznie: formuły Excel/Sheets PMT, IPMT, FV, CUMIPMT oraz kalkulatory referencyjne (Bankrate mortgage, Figure HELOC vs cash-out, TrueHomeCosts, BusinessCaseGuy) do porównań kierunkowych.\n\n(b) Golden cases, policzone przeze mnie w Pythonie standardowym wzorem annuitetowym:\n- 300 000 USD, 6,25%, 30 lat: rata 1 847,15 USD.\n- 600 000 USD, 6,25%, 30 lat: 3 694,30 USD.\n- Kredyt 350 000 USD na 3% / 30 lat: rata 1 475,61 USD, saldo po 5 latach 311 172,27 USD.\n- HELOC 150 000 USD przy 8,5%: odsetki w okresie interest-only 1 062,50 USD/mies., spłata w 20 lat 1 301,73 USD/mies.\n- Cash-out 450 000 USD przy 6,5%, 30 lat: 2 844,31 USD.\n\n(c) Niezmienniki i property-based:\n- Gdy nowa stopa = stara stopa, a koszty transakcyjne = 0, różnica move vs stay wynika tylko z różnicy wartości i podatku.\n- Większe przekroczenie budżetu zawsze pogarsza wariant remontu (monotoniczność).\n- Wyższa nowa stopa zawsze pogarsza move.\n- Break-even zgodny z przecięciem krzywych skumulowanych.\n- Suma składowych w rozbiciu równa się całkowitej różnicy.\n- Saldo nigdy nie jest ujemne. Po okresie draw rata HELOC rośnie.\n\n(d) Testy reguł:\n- Zysk ze sprzedaży z basis powiększonym o remont: limit 250 tys./500 tys.\n- Przykład Prop 13: baza = cena zakupu, wzrost max 2% rocznie.\n- Flaga CLTV dla HELOC.\n\n(e) Testy regresji na scenariuszach z promptów powyżej, ręcznie przeliczonych w arkuszu przez drugą osobę.",
+ "expert_review_pl": "Wymagany przegląd ekspercki. Wszystkie godziny to SZACUNEK.\n\n1) Licencjonowany loan officer (NMLS) lub analityk kredytów hipotecznych: 4-6 h. Zakres: HELOC (marże, draw i repayment, limity CLTV), cash-out refi (koszty, LTV), assumable (proces, luka equity), PMI, realizm domyślnych stóp.\n2) CPA lub Enrolled Agent: 3-5 h. Zakres: §121 i basis, odliczalność odsetek HELOC, limit 750 tys., treść disclaimerów podatkowych.\n3) Kosztorysant lub generalny wykonawca remontów: 3-4 h. Zakres: zakresy kosztów rozbudowy, piwnicy i ADU, typowe przekroczenia budżetu i harmonogramy, mieszkanie tymczasowe, pozwolenia.\n4) Agent nieruchomości lub rzeczoznawca: 2-4 h. Zakres: koszty sprzedaży po ugodzie NAR, wartość dodana remontu i over-improvement, koszty zakupu.\n5) Specjalista od podatku od nieruchomości dla CA i FL (presety MVP): 2-3 h.\n6) Opcjonalnie CFP do ramy 'majątek netto i koszt alternatywny' oraz prawnik lub compliance do disclaimerów (nie porada finansowa): 2-3 h.\n\nŁącznie ok. 16-25 h (szacunek) przed startem oraz ok. 2-4 h kwartalnie na aktualizację domyślnych wartości i reguł.",
+ "queries_run": [
+  "share of mortgage holders rate below 4% lock-in effect 2026 FHFA Realtor.com",
+  "reddit 3% mortgage need more space renovate addition or sell and buy bigger house",
+  "Harvard JCHS LIRA remodeling spending 2026 homeowners renovate instead of move lock-in",
+  "low interest rate mortgage outgrown house finish basement or move bigger house [allowed_domains: reddit.com] -> ERROR 400: reddit.com not accessible",
+  "survey 2026 homeowners plan to renovate rather than move because of low mortgage rate",
+  "bogleheads OR city-data OR biggerpockets forum \"3% mortgage\" addition vs move bigger house HELOC"
+ ]
+}

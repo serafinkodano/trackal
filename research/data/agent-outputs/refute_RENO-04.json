@@ -1,0 +1,89 @@
+{
+ "id": "RENO-04",
+ "direct_competitor_found": false,
+ "candidates": [
+  {
+   "name": "HomeScore – Home Maintenance App (Schedule, Track & Prioritize) + Inspection Analyzer",
+   "url": "https://myhomescore.app/home-maintenance-app",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Najbliższy trafiony kandydat (nowy względem poprzedniego audytu). Wg podsumowania łączy wiek systemów, ustalenia z inspekcji, termin wymiany i planowanie rezerwy, żeby zdecydować, co trafia do harmonogramu w tym kwartale, a co w przyszłym roku. Ma też osobny Inspection Analyzer, który zamienia raport na ustalenia i koszty. To samo podsumowanie stwierdza jednak, że żadne narzędzie nie buduje wyraźnie wieloletniego harmonogramu ograniczonego rocznym budżetem. Drugie wyszukiwanie po nazwie HomeScore trafiło na inny produkt (asystent zakupu domu) i nie potwierdziło funkcji planowania wymian.",
+   "what_to_check_manually_pl": "Otworzyć myhomescore.app i sprawdzić: (1) czy da się wpisać twardy roczny budżet (np. 15 tys. USD) i czy plan się do niego dopasowuje, z przenoszeniem środków między latami; (2) czy porównuje warianty kolejności, łączenie prac i finansowanie; (3) czy uwzględnia prawdopodobieństwo awarii, dopłatę za wymianę awaryjną i szkody następcze; (4) czy ujmuje zależności technologiczne, np. panel przed HVAC lub pompą ciepła. Jeśli spełnia (1)+(3), zmienić klasyfikację na direct."
+  },
+  {
+   "name": "Evvy Tools – Home Systems Replacement Budget & Lifespan Calculator",
+   "url": "https://evvytools.com/tools/home-real-estate/home-systems-replacement-budget/",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Na podstawie roku budowy domu buduje harmonogram: dla każdego systemu szacuje rok wymiany, koszt i miesięczną kwotę funduszu celowego. Okresy życia pochodzą ze standardowych badań trwałości, koszty to średnie krajowe skalowane metrażem, wszystkie wartości można edytować. Z opisu wynika model deterministyczny bez limitu rocznego budżetu, bez porównania kolejności i bez ryzyka awarii czy szkód następczych.",
+   "what_to_check_manually_pl": "Sprawdzić, czy da się ustawić limit roczny i przesuwać wymiany, czy jest tryb pay-as-you-go vs finansowanie oraz czy wynik to tylko oś czasu z kwotą funduszu, czy rekomendacja kolejności."
+  },
+  {
+   "name": "Properteer – 10-letni planer wydatków domowych (AI)",
+   "url": "https://properteer.ai/blog/your-10-year-home-financial-fortress-a-budgeting-guide-1789632099082",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Poradnik połączony z narzędziem: wizualizuje 10-letnią oś wydatków i pokazuje, ile odkładać miesięcznie. Brak sygnałów o optymalizacji kolejności przy limicie budżetu i o modelu ryzyka awarii.",
+   "what_to_check_manually_pl": "Ustalić, czy jest interaktywne narzędzie (a nie tylko blog), czy przyjmuje roczny limit i czy porównuje warianty."
+  },
+  {
+   "name": "Shipshape – Home Health Score",
+   "url": "https://shipshape.ai/help/shipshape/home-health-score",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Ocenia każdy główny system (HVAC, bojler, dach, rozdzielnia, AGD) według wieku względem oczekiwanej trwałości; np. bojler po okresie życia obniża wynik. To wskaźnik stanu i priorytetu, bez harmonogramu budżetowego.",
+   "what_to_check_manually_pl": "Sprawdzić, czy aplikacja przekłada wynik na plan wymian w czasie i czy przyjmuje budżet."
+  },
+  {
+   "name": "Arcade demo „Homeowner AI” (dostawca niepotwierdzony)",
+   "url": "https://app.arcade.software/share/XDLThl5J00W09YP5x7kC",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Demo produktu, które na podstawie wieku i wielkości domu prognozuje budżet i rok każdej wymiany. Nie wiadomo, czyje to narzędzie, i nie widać sekwencjonowania przy limicie budżetu.",
+   "what_to_check_manually_pl": "Zidentyfikować dostawcę i sprawdzić, czy to coś więcej niż prognoza rok/koszt (podobna do HomeZada Major Asset Forecasting)."
+  },
+  {
+   "name": "Thumbtack – Home Repair Estimates (upload raportu z inspekcji)",
+   "url": "https://repair.thumbtack.com/",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Przyjmuje raport z inspekcji i zwraca szacunki kosztów napraw dla danego kodu pocztowego. Według podsumowania nie tworzy osi czasu wymian.",
+   "what_to_check_manually_pl": "Sprawdzić, czy wynik zawiera priorytety lub pilność i czy jest jakikolwiek widok planu w czasie lub budżetu."
+  },
+  {
+   "name": "Etsy – CapEx & Replacement Reserve Planner (Excel/Google Sheets, dla wynajmujących)",
+   "url": "https://www.etsy.com/listing/4599194250",
+   "classification": "partial",
+   "evidence_pl": "Źródło: search-summary. Płatny arkusz dla wynajmujących obejmujący dachy, piece i bojlery. Pokazuje, kiedy wypada każda wymiana i ile odkładać miesięcznie. Jest sprzedawany jako produkt, ale z opisu wynika harmonogram rezerwy bez optymalizacji kolejności, ryzyka i wariantów.",
+   "what_to_check_manually_pl": "Przejrzeć zrzuty i opis: czy ma limit roczny, scenariusze kolejności, wymianę awaryjną vs planową."
+  },
+  {
+   "name": "AssetLab – Asset Replacement Planner (B2B)",
+   "url": "https://assetlab.ca/product/asset-replacement-planner",
+   "classification": "substitute",
+   "evidence_pl": "Źródło: search-summary. 10-letnie prognozy kapitałowe i ranking ryzyka w 4 priorytetach (bezpieczeństwo, wpływ na usługę, stan, faza cyklu życia). Logiką jest najbliżej RENO-04, ale to oprogramowanie dla zarządców aktywów i obiektów, a nie dla właściciela pojedynczego domu.",
+   "what_to_check_manually_pl": "Sprawdzić, czy ma scenariusze ograniczonego budżetu i czy oferuje plan dla osób prywatnych lub małych właścicieli. Jeśli tak, ryzyko przesunięcia w stronę direct."
+  },
+  {
+   "name": "FMX Capital Planner (oprogramowanie facility management)",
+   "url": "https://www.gofmx.com/capital-planner/",
+   "classification": "substitute",
+   "evidence_pl": "Źródło: search-summary. Planowanie kapitałowe dla obiektów, wymienione obok narzędzi do 10-letniej prognozy wymian. To domena B2B, nie konsument.",
+   "what_to_check_manually_pl": "Sprawdzić, czy jest modelowanie scenariuszy budżetowych i dostępność dla małych użytkowników."
+  },
+  {
+   "name": "Inspection Professionals – poradnik „inspection report five-year repair budget”",
+   "url": "https://inspectionprofessionals.net/blog/inspection-report-five-year-repair-budget/",
+   "classification": "substitute",
+   "evidence_pl": "Źródło: search-summary. Treść, nie narzędzie: dzieli ustalenia z inspekcji na „do żądania naprawy” i „do zabudżetowania”, a systemy w połowie życia planuje na lata 3–5. To heurystyka, którą RENO-04 by zautomatyzował.",
+   "what_to_check_manually_pl": "Sprawdzić, czy strona nie oferuje arkusza lub kalkulatora do pobrania."
+  }
+ ],
+ "conclusion_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Próba obalenia tezy w ośmiu nowych ujęciach (naturalne sformułowania, „app/planner/tool”, Reddit/fora, arkusze/Etsy, narzędzia AI 2026, „capital plan”, kalkulator run-to-failure) nie dała narzędzia, które jednocześnie: (a) przyjmuje twardy roczny limit budżetu, (b) porównuje kolejności, łączenie prac i finansowanie vs pay-as-you-go, (c) modeluje prawdopodobieństwo awarii z dopłatą za wymianę awaryjną i szkodami następczymi tylko dla wybranych elementów, (d) ujmuje zależności technologiczne. Poza listą poprzedniego audytu doszły nowe częściowe fragmenty: HomeScore (myhomescore.app), Evvy Home Systems Replacement Budget Calculator, Properteer, Shipshape Home Health Score, Thumbtack Repair Estimates, arkusz CapEx z Etsy oraz B2B-owe AssetLab i FMX Capital Planner. Najwyższe ryzyko błędu: HomeScore. Wg jednego podsumowania łączy wiek systemów, inspekcję, terminy wymiany i rezerwę, żeby rozdzielić prace na „ten kwartał” i „przyszły rok”, ale to samo podsumowanie zaznacza, że żadne narzędzie nie buduje wyraźnie harmonogramu ograniczonego rocznym budżetem. Wymaga ręcznej weryfikacji przed uznaniem niszy. Druga strefa ryzyka to oprogramowanie do planowania kapitałowego obiektów (AssetLab, FMX). Ma logikę priorytetu wg ryzyka i 10-letnich prognoz. Gdyby ktoś przepakował je dla właścicieli domów, powstałby bezpośredni konkurent. Wyszukiwania nie znalazły też żadnego konsumenckiego kalkulatora wartości oczekiwanej typu „wymień zapobiegawczo vs eksploatuj do awarii”. Źródła (np. EnergyStar) opisują tylko jakościowo dopłatę awaryjną i szkody wodne. Ryzyko samodzielnego rozwiązania przez AI pozostaje wysokie dla części jakościowej (kolejność według heurystyki bezpieczeństwo → szkody → reszta pojawia się w podsumowaniach wyszukiwarki). Wyróżnikiem może być tylko część ilościowa (limit budżetu, ryzyko, porównanie wariantów).",
+ "search_scope_pl": "8 zapytań WebSearch (4 extended, 4 standard), anglojęzyczny web US, stan na 2026-10-25. Dowody to wyłącznie podsumowania wyszukiwarki (search-summary). Żadnej strony nie otwierano (WebFetch niedostępny), więc funkcji kandydatów nie zweryfikowano. Nie przeszukano bezpośrednio sklepów App Store i Google Play, marketplace’ów szablonów poza Etsy ani narzędzi doradców finansowych. Pewność: średnia.",
+ "confidence": "medium",
+ "queries_run": [
+  "app that prioritizes home repairs from inspection report and builds multi-year replacement schedule within yearly budget",
+  "HomeScore app replacement timing reserve planning roof HVAC water heater schedule this year vs next year",
+  "reddit roof HVAC water heater electrical panel all old which to replace first limited budget spreadsheet plan",
+  "\"capital plan\" for your home homeowner tool 10-year replacement forecast budget roof HVAC prioritize risk",
+  "AI home advisor 2026 tells homeowners what to fix first and when, builds repair roadmap based on budget and failure risk",
+  "home systems replacement planner spreadsheet template roof HVAC water heater lifespan annual budget schedule Etsy OR Google Sheets",
+  "calculator replace water heater HVAC before it fails vs run to failure emergency replacement cost premium water damage risk expected cost",
+  "home repair priority planner tool enter yearly budget get year-by-year plan which systems to replace first roof HVAC panel water heater"
+ ]
+}

@@ -1,0 +1,526 @@
+{
+ "seeds": [
+  {
+   "seed_id": "B",
+   "restated_problem_pl": "Gospodarstwo domowe w USA porównuje 2–4 oferty ubezpieczenia. Najczęściej chodzi o homeowners HO-3, rzadziej o auto lub plan zdrowotny. Oferty różnią się składką i strukturą udziału własnego: stały deductible ($500–$5,000), procentowy deductible wind/hail lub hurricane (np. 1–5% Coverage A), czasem warunki wypłaty za dach (ACV vs RCV). Gospodarstwo ma określoną rezerwę gotówkową i alternatywne finansowanie (karta kredytowa, HELOC). Pytanie decyzyjne: która kombinacja oferta × deductible minimalizuje oczekiwany koszt całkowity w horyzoncie N lat? Na koszt składają się składki, udział własny, koszt finansowania braku gotówki i ewentualne podwyżki po zgłoszeniu szkody. Ryzyko, że pojedyncza szkoda przekroczy rezerwę, musi pozostać akceptowalne. Oczekiwane wyjścia: break-even w latach bez szkody, próg prawdopodobieństwa szkody, przy którym wariant się opłaca, OOP w scenariuszach (brak szkody / szkoda poniżej deductible / średnia / katastrofalna), luka płynności oraz analiza wrażliwości.",
+   "integration_check_pl": "Integracja jest częściowo realna. Istnieją cztery sprzężenia. (1) Deductible wyznacza OOP w każdym scenariuszu. (2) OOP porównane z rezerwą daje lukę płynności i koszt jej finansowania (APR karty/HELOC). To może zmienić ranking ofert, czego zwykły break-even nie robi. (3) Deductible wyznacza próg opłacalności zgłaszania szkód, a zgłoszenie podnosi przyszłe składki (surcharge, utrata zniżki claims-free). (4) Przy % deductible OOP zależy od Coverage A, które rośnie razem z kosztem odbudowy. Nie jest to więc sklejka niezależnych kalkulatorów. Kluczowe parametry tych sprzężeń nie są jednak publicznie dostępne w użytecznej granulacji: prawdopodobieństwo i rozkład szkód dla konkretnego domu i peril oraz reguły surcharge danego ubezpieczyciela w danym stanie. Użytkownik musi je zgadywać. W praktyce model sprowadza się do 3–4 linijek arytmetyki: składki + p × min(szkoda, deductible) + koszt luki płynności. Złożoność leży w założeniach, nie w mechanice, więc głębokość integracji jest niska.",
+   "competitors": [
+    {
+     "name": "COUNTRY Financial – Calculate homeowners insurance deductible",
+     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+     "type": "partial",
+     "features_claimed": "Według search-summary: break-even w latach przy podniesieniu deductible, z przykładem $1,000→$2,500 przy oszczędności $236/rok ≈ 6,4 roku. Strony nie otwarto. Porównanie wielu ofert, scenariusze szkód i luka rezerwy: niezweryfikowane.",
+     "paid": "free",
+     "notes": "Ubezpieczyciel; prawdopodobnie artykuł z kalkulatorem (niezweryfikowane). Pokrywa rdzeń matematyczny seeda."
+    },
+    {
+     "name": "COUNTRY Financial – Car insurance deductible $500 vs $1,000",
+     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/car-insurance-deductible-500-vs-1000.html",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: break-even ok. 3 lata dla dodatkowych $500 i reguła 'wybierz deductible, który zapłacisz bez pożyczania' (test rezerwy).",
+     "paid": "free",
+     "notes": "Treść, nie interaktywne narzędzie (niezweryfikowane)."
+    },
+    {
+     "name": "MoneyGeek – What Car Insurance Deductible Should I Choose?",
+     "url": "https://www.moneygeek.com/insurance/auto/car-insurance-deductible-how-to-choose/",
+     "type": "partial",
+     "features_claimed": "Według search-summary: przykład break-even ($0→$1,000, oszczędność $54/mies., ok. 18,5 mies.) i reguły (min. $1,000 oszczędności, 3+ lata bez szkód). Istnienie interaktywnego kalkulatora: niezweryfikowane.",
+     "paid": "free",
+     "notes": "Wydawca finansowy; prawdopodobnie monetyzuje leady ubezpieczeniowe (hipoteza)."
+    },
+    {
+     "name": "Finhabits – car insurance deductible 500 vs 1500",
+     "url": "https://www.finhabits.com/car-insurance-deductible-500-vs-1500",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: przykład break-even ($500→$1,500, $420/rok, ok. 2,4 roku). Drugi artykuł: 'choose the right number in 2025'.",
+     "paid": "free",
+     "notes": "Treść."
+    },
+    {
+     "name": "CarInsurance.com – $500 vs $1,000 deductible",
+     "url": "https://www.carinsurance.com/ask-our-experts/500-vs-1000-deductible-which-is-better/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: średnia oszczędność ok. $269/rok przy przejściu z $500 na $1,000; rekomendacje zależne od oszczędności i przebiegu.",
+     "paid": "free",
+     "notes": "Treść ekspercka."
+    },
+    {
+     "name": "WalletHub Answers – $500 or $1,000 deductible",
+     "url": "https://wallethub.com/answers/ci/auto-insurance-deductible-500-or-1000-2140693960",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: szacunek oszczędności do 28%.",
+     "paid": "free",
+     "notes": "Treść Q&A."
+    },
+    {
+     "name": "NerdWallet – Home insurance calculator",
+     "url": "https://www.nerdwallet.com/insurance/homeowners/home-insurance-calculator",
+     "type": "partial",
+     "features_claimed": "Według search-summary: estymacja kosztu home insurance i wyjaśnienie % wind/hail deductible (2% od $250k = $5,000). Porównanie scenariuszy deductible, rezerwy i wielu ofert: niezweryfikowane.",
+     "paid": "free",
+     "notes": "Duży wydawca z silną pozycją SEO."
+    },
+    {
+     "name": "Progressive – Homeowners coverage calculator",
+     "url": "https://www.progressive.com/homeowners/insurance-coverages/calculator/",
+     "type": "partial",
+     "features_claimed": "Według search-summary: szacuje limity pokrycia (dwelling, personal property, liability) i pyta o preferencje deductible; nie pokazuje ceny.",
+     "paid": "free",
+     "notes": "Narzędzie ubezpieczyciela, lead-gen."
+    },
+    {
+     "name": "Lively – Health Insurance Plans Comparison Tool",
+     "url": "https://livelyme.com/compare-health-insurance-plans",
+     "type": "partial",
+     "features_claimed": "Według search-summary dla wariantu zdrowotnego: wejścia to składki, deductible, OOP max, przewidywane wydatki medyczne i członkowie rodziny. Przypisanie pól do tej konkretnej strony jest niepewne. Modelowanie podatkowe HSA i scenariusze: niezweryfikowane.",
+     "paid": "free (dostawca HSA)",
+     "notes": "Dla wariantu health może być bliski bezpośredniemu konkurentowi; niezweryfikowane."
+    },
+    {
+     "name": "The Zebra – Ask an Agent: raise deductible",
+     "url": "https://www.thezebra.com/ask/raise-deductible-lower-bill/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: porada oraz zachęta do porównania ofert wielu ubezpieczycieli i zniżek.",
+     "paid": "free",
+     "notes": "Marketplace porównywania ofert, czyli substytut kroku 'zbierz oferty'."
+    },
+    {
+     "name": "Motley Fool – Should you raise your auto insurance deductible",
+     "url": "https://www.fool.com/money/insurance/auto/articles/should-you-raise-your-auto-insurance-deductible-heres-how-to-decide",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: test rezerwy, dane Progressive o ok. 28% niższej składce collision przy $500→$1,000 i rada, by odkładać różnicę w składce, gdy brak gotówki.",
+     "paid": "free",
+     "notes": "Wynik zwrócił co najmniej 4 artykuły Fool na ten temat."
+    },
+    {
+     "name": "Money Crashers – Raise insurance deductible to cut premiums",
+     "url": "https://www.moneycrashers.com/raise-insurance-deductible-cut-premiums/",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: podnoś deductible tylko do poziomu, który pokryje rezerwa bez karty kredytowej.",
+     "paid": "free",
+     "notes": "Treść."
+    },
+    {
+     "name": "Gerald – higher deductible lower premium guide",
+     "url": "https://joingerald.com/learn/financial-wellness/higher-deductible-lower-premium-guide",
+     "type": "substitute",
+     "features_claimed": "Według search-summary: poradnik o kompromisie deductible/składka (wzór break-even). Szczegóły niezweryfikowane.",
+     "paid": "free",
+     "notes": "Treść fintech."
+    },
+    {
+     "name": "nammert.com – tool deductible",
+     "url": "https://www.nammert.com/en/tool-deductible.php",
+     "type": "partial",
+     "features_claimed": "Tytuł wyniku: 'tool deductible'. Funkcje, rynek docelowy (czy US) i rodzaj ubezpieczenia: niezweryfikowane.",
+     "paid": "niezweryfikowane",
+     "notes": "Do sprawdzenia; może nie dotyczyć rynku US."
+    }
+   ],
+   "novelty": "pozorna",
+   "demand_pl": "Dowody są tylko pośrednie (search-summary). Wielu wydawców pisze o wyborze deductible i break-even: CarInsurance.com, WalletHub, MoneyGeek, Motley Fool (co najmniej 4 artykuły), COUNTRY Financial (home i auto), Finhabits (artykuł datowany na 2025), The Zebra, Money Crashers, Gerald. Takie nasycenie sugeruje popyt wyszukiwawczy na pytanie 'which deductible'. Nie mówi jednak nic o wolumenie ani o gotowości do użycia złożonego symulatora. Liczba ofert treści to nie miara popytu. Dla wariantu health wyniki zawierały liczne strony-klony i SEO spam z tytułami 'HSA vs PPO calculator'. To słaby sygnał, że fraza ma wartość SEO. Zapytanie z 'reddit' nie zwróciło wątków Reddit, więc brak dowodów forumowych. Brak danych o wolumenie Google i o wolumenie promptów LLM (to dwie różne rzeczy). Moment decyzji jest realny, ale rozproszony w roku: odnowienie polisy, zakup domu lub auta. Wyjątkiem jest health, skupiony w open enrollment (hipoteza). Liczba ubezpieczonych gospodarstw to nie miesięczny popyt.",
+   "ai_risk_pl": "Wysokie. Rdzeń decyzji to prosta arytmetyka: break-even, wartość oczekiwana przy założonym p i test 'czy rezerwa pokryje deductible'. Asystent AI policzy to z wklejonych ofert lub zdjęcia declarations page, bez zewnętrznego narzędzia. Hipoteza: asystenci rzadko będą tu odsyłać do strony, więc kanał AI-referrals, na którym opiera się model właściciela, jest słaby. Przewaga symulatora (wykres wrażliwości, macierz scenariuszy, luka płynności) jest umiarkowana i łatwa do odtworzenia przez asystenta z code interpreterem. Zachowania ChatGPT, Perplexity, Claude, Copilot i Gemini w zakresie cytowania narzędzi nie zbadano w tej sesji (hipoteza / niezweryfikowane). Reguł Google nie przenoszę na asystentów.",
+   "maintenance_pl": "Wersja generyczna (home/auto, dane wprowadza użytkownik) wymaga niewiele utrzymania, bo matematyka jest stabilna. Utrzymanie rośnie, jeśli dodać parametry domyślne. (a) Prawdopodobieństwa szkód według stanu i peril: brak darmowego, aktualnego źródła o odpowiedniej granulacji (hipoteza). (b) Surcharge po szkodzie: różni się między ubezpieczycielami i stanami, a dane siedzą w filingach stanowych (SERFF), więc ekstrakcja byłaby ręczna i kosztowna (hipoteza). Zmiany 2025–2026, oparte na wiedzy treningowej i niezweryfikowane w tej sesji: rosnące składki i non-renewals w FL/CA/TX/CO, upowszechnianie % deductibles wind/hail oraz harmonogramów wypłat za dach. Samo istnienie % deductibles potwierdza NerdWallet (search-summary). Wariant health wymaga corocznej aktualizacji limitów HSA i OOP max (IRS/HHS). Z ustawy z lipca 2025 (One Big Beautiful Bill Act, wiedza treningowa, niezweryfikowane) wynika, że od 2026 plany bronze i catastrophic na Marketplace mają być HSA-eligible, a direct primary care dopuszczone z HSA. Status rozszerzonych premium tax credits po 2025 to hipoteza / niezweryfikowane. Treść jest YMYL: potrzebne disclaimery i nie wolno wyglądać na licencjonowaną poradę ubezpieczeniową.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "W obecnej, ogólnej formie (dowolne ubezpieczenie + deductible + rezerwa + scenariusze) seed jest słaby. Po pierwsze, rdzeń matematyczny jest trywialny i szeroko opisany: COUNTRY Financial, MoneyGeek, CarInsurance.com, Motley Fool, Finhabits. Po drugie, AI-assistant rozwiąże go sam. Po trzecie, parametry, które czyniłyby model wartościowym (prawdopodobieństwa szkód, surcharge), są niedostępne. Wariant health ma partial competitor (Lively), prawdopodobnie narzędzia pracodawców (niezweryfikowane) i silną sezonowość. Nie odrzucam całości, bo istnieją węższe momenty decyzji z realnym sprzężeniem kilku domen. Pierwszy: homeowner po 'renewal shock' (% wind/hail deductible, ACV na stary dach) wybiera między wymianą dachu, zmianą ubezpieczyciela, większą rezerwą i sprzedażą domu (S2-R1, naturalne rozszerzenie seed A dach+solar). Drugi, słabszy: 'zgłosić szkodę czy zapłacić samemu' (S2-R2). Rekomendacja: nie budować generycznego 'insurance offer comparer'. Pewność niska ze względu na bardzo wąski zakres wyszukiwania.",
+   "search_scope_pl": "Wykonano tylko 5 wyszukiwań (WebSearch standard), wszystkie dla seed B: (1) deductible calculator compare insurance quotes higher deductible vs premium break-even; (2) homeowners insurance deductible calculator; (3) should I raise my deductible emergency fund reddit; (4) health insurance plan comparison calculator expected cost scenarios deductible out-of-pocket max HSA; (5) car insurance deductible calculator $500 vs $1000. Pięć kolejnych zapytań zostało odrzuconych, bo wyczerpał się wspólny budżet wyszukiwań (200 wywołań na turę, współdzielone przez wszystkich agentów workflow). Były to m.in.: wind/hail % deductible calculator, porównanie ofert z prawdopodobieństwem szkody, employer decision support (Jellyvision ALEX), 'file a claim or pay out of pocket calculator'. Wymagane minimum 10 zapytań NIE zostało osiągnięte. WebFetch jest niedostępny, więc żadnej strony nie otwarto; wszystko to search-summary. Nie sprawdzono: płatnych aplikacji, narzędzi brokerów i marketplace'ów (np. Policygenius, Insurify – niezweryfikowane), oprogramowania dla doradców finansowych, arkuszy i templates, wątków Reddit (zapytanie ich nie zwróciło) ani narzędzi benefitowych pracodawców. Nie znaleziono bezpośredniego konkurenta w badanym zakresie (5 zapytań skupionych na deductible; pewność niska). Wniosek: rdzeń jest szeroko pokryty przez partial competitors i treści.",
+   "confidence": "low"
+  },
+  {
+   "seed_id": "C",
+   "restated_problem_pl": "Właściciel domu jednorodzinnego w strefie zagrożenia powodziowego (SFHA lub obszar przyległy) ma hipotekę. W SFHA kredyt federalnie regulowany wymaga ubezpieczenia powodziowego. Dom ma polisę NFIP (Risk Rating 2.0 z rocznymi podwyżkami w ramach glide path) albo prywatną polisę flood. W horyzoncie N lat właściciel rozważa cztery obszary decyzji. (a) Mitygacja: podniesienie instalacji (HVAC, piec, bojler, panel elektryczny) powyżej poziomu zalewania, flood vents w fundamencie lub crawlspace, zasypanie piwnicy, wet/dry floodproofing, bariery albo podniesienie całego domu. (b) Ubezpieczenie: NFIP vs prywatne, poziom pokrycia budynku i zawartości, deductible. (c) Finansowanie: gotówka, HELOC, cash-out refi, granty mitygacyjne (przez gminę lub stan), ICC po szkodzie. (d) Zostać czy sprzedać (teraz, po mitygacji, za X lat), z uwzględnieniem obowiązków ujawniania ryzyka powodzi i przenoszalności polisy NFIP. Pytanie: która sekwencja daje najniższy oczekiwany koszt całkowity i akceptowalne ryzyko katastrofalnej straty przy budżecie i horyzoncie użytkownika? Sekwencje do porównania: mitygować teraz / ubezpieczyć i czekać / mitygować i sprzedać / sprzedać bez mitygacji.",
+   "integration_check_pl": "Integracja jest realna i silniejsza niż w seed B. Mitygacja działa jednocześnie na kilka rzeczy. (1) Obniża oczekiwaną roczną stratę (krzywe głębokość-szkoda). (2) Może obniżyć składkę NFIP; RR2.0 uwzględnia m.in. wyniesienie instalacji, flood vents i elewację, ale wielkość rabatów to hipoteza / niezweryfikowane. (3) Zmienia przepływy, a więc zdolność obsługi finansowania. (4) Wpływa na atrakcyjność domu przy sprzedaży (składka dla kupującego, ujawnienia). Horyzont sprzedaży decyduje, czy payback nastąpi. Dochodzi sprzężenie regulacyjne: zasada substantial improvement/damage (50% wartości) może wymusić pełną elewację przy większym remoncie lub po szkodzie (hipoteza co do lokalnego stosowania). Moduły naprawdę wpływają na siebie. Problem w tym, że dwa najważniejsze parametry wymagają danych dla konkretnego adresu: częstość i głębokość powodzi dla działki oraz realna składka RR2.0 po mitygacji. Potrzebne byłyby NFHL/BFE, modele typu First Street i wycena agenta. Bez nich narzędzie degraduje się do kalkulatora payback z założeniami użytkownika.",
+   "competitors": [],
+   "novelty": "częściowa",
+   "demand_pl": "Brak danych z tej sesji: dla seed C nie wykonano żadnego wyszukiwania, bo budżet się wyczerpał. Poniższe to hipotezy / niezweryfikowane. Popyt jest wąski: właściciele w strefach powodziowych, rzędu kilku mln polis NFIP (wiedza treningowa; liczba polis to nie miesięczny popyt). Jest też silnie skokowy: pojawia się po zdarzeniach (np. Helene 2024, powodzie w Texas Hill Country w lipcu 2025) i przy odnowieniu polisy z kolejną podwyżką. Intencja w momencie decyzji jest wysoka, bo decyzje opiewają na $10k–$150k+. Liczba nowych osób z tym zadaniem w danym miesiącu może być jednak mała. Nie zweryfikowano Reddit, forów ani wolumenów wyszukiwań i promptów.",
+   "ai_risk_pl": "Średnie (hipoteza). Asystent AI dobrze wyjaśni opcje i policzy payback z danych od użytkownika. Bez narzędzi nie zna jednak głębokości zalewu dla adresu, reguł rabatów RR2.0 ani lokalnych kosztów mitygacji. Z web search może część tych danych znaleźć, co podnosi ryzyko. Możliwe też, że asystent odeśle do FEMA FloodSmart lub agenta, a nie do nowej strony (hipoteza). Zachowania konkretnych asystentów nie zbadano.",
+   "maintenance_pl": "Wysokie. Zmiany 2025–2026 z wiedzy treningowej, NIEZWERYFIKOWANE w tej sesji: (1) wielokrotne krótkoterminowe przedłużenia autoryzacji NFIP i lapse podczas shutdownu rządu od 1.10.2025 (przywrócone ustawą z listopada 2025 do 30.01.2026; stan późniejszy nieznany); (2) anulowanie programu grantów BRIC przez FEMA w kwietniu 2025 i spory sądowe na ten temat; (3) dyskusje o reformie lub ograniczeniu roli FEMA; (4) rozszerzanie stanowych obowiązków ujawniania ryzyka powodzi przy sprzedaży (np. Floryda od 2024); (5) usunięcie ocen ryzyka klimatycznego (First Street) z ogłoszeń Zillow pod koniec 2025; (6) statutowy limit podwyżek NFIP ok. 18% rocznie dla większości głównych rezydencji. Każda z tych zmian wpływa na wynik: finansowanie grantami, prognozę składek i wartość przy sprzedaży. Dane FEMA (NFHL, OpenFEMA) są publiczne (dostępność API w 2026 niezweryfikowana). Modelowanie strat wymaga jednak krzywych głębokość-szkoda i lokalnych kosztów, czyli okresowej kontroli eksperckiej. To kłóci się z oczekiwaniem właściciela, że utrzymanie będzie automatyczne. Ryzyko treści jest wysokie: bezpieczeństwo, decyzje powyżej $100k, odpowiedzialność za błędne szacunki ryzyka.",
+   "verdict": "zmodyfikować",
+   "verdict_reason_pl": "Problem jest naprawdę zintegrowany (mitygacja ↔ składka ↔ finansowanie ↔ horyzont sprzedaży) i pasuje do definicji dobrego symulatora. Przeciw przemawia pięć rzeczy: (1) brak jakiejkolwiek weryfikacji konkurencji i popytu w tej sesji; (2) wynik zależy od danych adresowych i reguł RR2.0, których narzędzie nie dostarczy bez kosztownej integracji; (3) wysokie ryzyko regulacyjne i utrzymaniowe w latach 2025–2026 (NFIP, FEMA); (4) wysokie ryzyko treści; (5) popyt wąski i skokowy. Rekomendacja: nie budować pełnej wersji 'od adresu'. Zawęzić do wariantu opartego na dokumentach użytkownika: declarations page z obecną składką i, jeśli widnieje, składką pełnego ryzyka, plus wyceny mitygacji od wykonawców. Narzędzie dawałoby projekcję glide path i payback przed sprzedażą (S2-R3). Wariant po powodzi (S2-R4) odłożyć. Przed budową wykonać pełny audyt konkurencji: FEMA FloodSmart, FloodHelpNY, First Street/Risk Factor, Neptune Flood, kalkulatory producentów flood vents, programy stanowe. Ta lista pochodzi z wiedzy treningowej i jest niezweryfikowana. Bez tego audytu werdykt jest bardzo niepewny i równie dobrze może się zmienić na 'odrzucić'.",
+   "search_scope_pl": "Dla seed C wykonano ZERO wyszukiwań. Wspólny budżet (200 wywołań na turę, współdzielony przez wszystkich agentów workflow) wyczerpał się po 5 zapytaniach dla seed B. Wymagane minimum 10 zapytań nie zostało osiągnięte. Cała ocena opiera się na wiedzy treningowej (cut-off czerwiec 2026) i jest oznaczona jako hipoteza / niezweryfikowane. Kandydaci do weryfikacji, niepotwierdzeni w tej sesji i bez URL z wyników: FEMA FloodSmart (narzędzie 'cost of flooding', wyszukiwarka agentów), FEMA P-312 Homeowner's Guide to Retrofitting, FloodHelpNY (NYC: strefa, szacunek składki, audyty odporności), First Street / Risk Factor (Flood Factor), Neptune Flood i inni prywatni ubezpieczyciele (quote tools), producenci flood vents (ewentualne kalkulatory oszczędności, hipoteza) oraz FEMA BCA Toolkit (dla wnioskodawców grantów, nie dla właścicieli). Nie stwierdzono ani nie wykluczono bezpośredniego konkurenta. Potrzebna jest kontynuacja badania w kolejnej turze z nowym budżetem.",
+   "confidence": "low"
+  }
+ ],
+ "replacement_ideas": [
+  {
+   "temp_id": "S2-R1",
+   "name_en": "Home Insurance Renewal Shock Simulator: Roof, Wind/Hail Deductible & Cash Reserve",
+   "family": "Dom: ubezpieczenie × capex dachu × płynność × sprzedaż (rozszerzenie seed A)",
+   "user_and_moment": "Właściciel domu w regionie z gradem, wiatrem lub huraganami (np. TX, CO, OK, FL, wybrzeże Zatoki; zasięg to hipoteza) na 30–60 dni przed odnowieniem polisy. Dostał renewal z wyraźną podwyżką, zmianą na procentowy deductible wind/hail albo ograniczeniem wypłaty za dach (ACV lub roof payment schedule) z powodu wieku dachu.",
+   "sample_prompt_en": "My homeowners renewal went up 35% and switched to a 2% wind/hail deductible and actual cash value on my 17-year-old roof. Should I replace the roof now with impact-resistant shingles, shop a new carrier, or keep the policy and build a bigger cash reserve? I might sell in 4 years.",
+   "decision_problem": "Wybór sekwencji działań na 3–7 lat minimalizującej koszt całkowity (składki + capex + oczekiwany OOP + koszt długu) przy akceptowalnym ryzyku, że szkoda gradowa przekroczy rezerwę. Uwzględnia plan sprzedaży domu.",
+   "combined_domains": "Ubezpieczenie domu (składka, % deductible, ACV vs RCV, zniżki za dach odporny na grad lub wind mitigation), capex i finansowanie wymiany dachu, rezerwa gotówkowa i koszt długu, ryzyko szkody wiatr/grad, sprzedaż domu (wiek dachu w inspekcji, ubezpieczalność dla kupującego). Opcjonalnie łączy się z seed A (solar + dach).",
+   "variants_compared": "(1) Zostać na obecnej polisie i zwiększyć rezerwę. (2) Wymienić dach teraz: standard vs impact-resistant Class 4, z renegocjacją polisy. (3) Zmienić ubezpieczyciela na ofertę z innym deductible i warunkami dachu. (4) Czekać na szkodę i wymienić dach z polisy, z ryzykiem ACV i potrącenia amortyzacji. (5) Sprzedać dom przed wymianą dachu.",
+   "key_dependencies": "Wiek dachu → ACV vs RCV → wypłata i OOP w scenariuszu szkody. % deductible × Coverage A → OOP. Wymiana dachu → zniżka składki i powrót do RCV → payback capexu. OOP vs rezerwa → luka płynności → koszt kredytu. Horyzont sprzedaży → czy payback zostanie osiągnięty i czy nowy dach podnosi cenę lub skraca czas sprzedaży.",
+   "main_outputs": "Tabela wariantów: koszt całkowity (NPV) w horyzoncie, OOP w scenariuszach (brak szkody / średni grad / katastrofa), maksymalna luka płynności, break-even prawdopodobieństwa szkody między wariantami, wykres tornado (koszt dachu, p szkody, zniżka, rok sprzedaży), jawna lista założeń i ograniczeń.",
+   "reason_external_site": "Ubezpieczyciel i dekarz mają konflikt interesów. Arkusz wymaga zbudowania modelu od zera. Asystent AI nie ma pewnych, aktualnych przedziałów kosztów dachu i typowych zniżek, a macierz scenariuszy z wrażliwością wymaga kilku iteracji. Hipoteza: użytkownik woli gotowe, neutralne i ustrukturyzowane narzędzie.",
+   "data_sources": "Dane użytkownika (declarations page, oferty). Publiczne przedziały kosztów wymiany dachu (źródło do wybrania, niezweryfikowane). Stanowe regulacje zniżek za impact-resistant roofs i wind mitigation (do weryfikacji). Wyjaśnienie % deductibles: NerdWallet (search-summary).",
+   "user_data": "Składki obecna i nowa, Coverage A, deductible (stały i %), warunki dachu (ACV/RCV), wiek i materiał dachu, wycena wymiany, rezerwa, APR dostępnego kredytu, planowany rok sprzedaży, subiektywne p szkody (z presetami niski/średni/wysoki).",
+   "nearest_competition": [
+    {
+     "name": "NerdWallet – Home insurance calculator",
+     "url": "https://www.nerdwallet.com/insurance/homeowners/home-insurance-calculator",
+     "type": "partial",
+     "features_claimed": "Estymacja składki i wyjaśnienie % wind/hail deductible (search-summary). Integracja z decyzją o dachu: niezweryfikowana."
+    },
+    {
+     "name": "Progressive – Homeowners coverage calculator",
+     "url": "https://www.progressive.com/homeowners/insurance-coverages/calculator/",
+     "type": "partial",
+     "features_claimed": "Dobór limitów pokrycia i preferencji deductible, bez ceny (search-summary)."
+    },
+    {
+     "name": "COUNTRY Financial – Calculate homeowners insurance deductible",
+     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+     "type": "partial",
+     "features_claimed": "Break-even zmiany deductible (search-summary)."
+    }
+   ],
+   "already_solved": "Rozwiązane są fragmenty: break-even zmiany deductible (COUNTRY Financial), estymacja składki i wyjaśnienie % deductible (NerdWallet), dobór limitów (Progressive) – wszystko search-summary. Nie znaleziono bezpośredniego konkurenta łączącego dach, ubezpieczenie, rezerwę i sprzedaż w badanym zakresie. Zakres był jednak bardzo wąski: 5 zapytań o deductible, żadne nie dotyczyło tej kombinacji. Pewność niska.",
+   "gap": "Hipoteza: brakuje neutralnego narzędzia, które przelicza decyzję o wymianie dachu przez pryzmat zmian w polisie (ACV/RCV, % deductible, zniżki) i horyzontu sprzedaży. Do weryfikacji: narzędzia dekarzy i producentów pokryć, IBHS FORTIFIED, kalkulatory stanowe (np. wind mitigation na Florydzie), Reddit (r/Insurance, r/homeowners).",
+   "impl_difficulty": "medium",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Pośrednie: liczne treści o wyborze deductible (search-summary), a NerdWallet opisuje % wind/hail deductibles. Brak danych o wolumenie fraz typu 'roof actual cash value', 'homeowners renewal increase'. Trend non-renewals, % deductibles i ACV dla starych dachów pochodzi z wiedzy treningowej (hipoteza / niezweryfikowane).",
+   "ad_environment": "Hipoteza: kontekst przyciąga reklamodawców z kategorii home insurance, roofing, home improvement i HELOC, co jest tematycznie wartościowe dla AdSense. Faktycznych stawek CPC i RPM nie zweryfikowano. Treść YMYL może ograniczać część formatów (hipoteza).",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "Ten wariant jest najlepszą częścią seed B: ostry moment decyzji (renewal), kilka domen z realnymi sprzężeniami, naturalne połączenie z seed A i dane w rękach użytkownika. Najpierw trzeba zweryfikować konkurencję (narzędzia dekarzy, kalkulatory stanowe, IBHS) i sygnały popytu (Reddit, wolumen fraz). Ten krok jest tani.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "S2-R2",
+   "name_en": "Should I File This Claim? Home & Auto Claim-vs-Pay-Out-of-Pocket Simulator",
+   "family": "Ubezpieczenia × płynność × przyszłe składki",
+   "user_and_moment": "Właściciel domu lub auta tuż po szkodzie (gałąź na ogrodzeniu, przeciek wody, drobna stłuczka), przed zgłoszeniem jej ubezpieczycielowi.",
+   "sample_prompt_en": "A tree branch damaged my fence and gutters, about $3,800 in repairs. My deductible is $1,000. Should I file a claim or pay out of pocket if it might raise my premium or get me non-renewed?",
+   "decision_problem": "Zgłosić szkodę, pokryć ją samemu czy rozłożyć naprawę w czasie? Uwzględnia surcharge przez 3–5 lat, utratę zniżki claims-free, ryzyko non-renewal, wpis w historii szkód (CLUE) oraz to, czy gotówka pokryje naprawę bez kredytu.",
+   "combined_domains": "Ubezpieczenia (deductible, surcharge, non-renewal), płynność (rezerwa, koszt kredytu), ryzyko przyszłych szkód (zgłoszenie małej szkody może utrudnić przyszłą), rynek nieruchomości (historia szkód domu przy sprzedaży – hipoteza).",
+   "variants_compared": "(1) Zgłosić teraz. (2) Zapłacić z rezerwy. (3) Zapłacić kredytem lub w ratach. (4) Naprawa częściowa i odroczenie.",
+   "key_dependencies": "Kwota szkody minus deductible → wypłata. Surcharge × składka × lata → koszt zgłoszenia. Prawdopodobieństwo kolejnej szkody → koszt utraty claims-free i ryzyko non-renewal. Rezerwa → czy wariant 'zapłać sam' wymaga długu.",
+   "main_outputs": "Próg kwoty szkody, powyżej którego zgłoszenie się opłaca; koszt całkowity wariantów w 3–5 latach; wrażliwość na % surcharge i p kolejnej szkody; jawne założenia.",
+   "reason_external_site": "Ubezpieczyciel ma konflikt interesów, a użytkownik potrzebuje szybkiego, neutralnego progu. Matematyka jest jednak prosta, więc przewaga nad asystentem AI jest mała.",
+   "data_sources": "Dane użytkownika. Typowe przedziały surcharge są ewentualnie dostępne z filingów stanowych (SERFF), ale to hipoteza: wymaga ręcznej ekstrakcji i nie było weryfikowane.",
+   "user_data": "Kwota szkody, deductible, składka, historia szkód, rezerwa, APR, stan.",
+   "nearest_competition": [
+    {
+     "name": "The Zebra – Ask an Agent",
+     "url": "https://www.thezebra.com/ask/raise-deductible-lower-bill/",
+     "type": "substitute",
+     "features_claimed": "Porady o deductible i porównywaniu ofert (search-summary). Narzędzie 'claim or not': niezweryfikowane."
+    },
+    {
+     "name": "COUNTRY Financial – Calculate homeowners insurance deductible",
+     "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+     "type": "partial",
+     "features_claimed": "Break-even deductible i uwaga, że kalkulacja zakłada brak szkód (search-summary)."
+    }
+   ],
+   "already_solved": "Niezweryfikowane. Zapytanie 'file a claim or pay out of pocket calculator' nie zostało wykonane z powodu limitu. Prawdopodobnie istnieją liczne artykuły i porady agentów (hipoteza).",
+   "gap": "Hipoteza: brak narzędzia, które łączy próg zgłoszenia z surcharge, ryzykiem non-renewal i rezerwą. Sygnał słaby, bo rdzeń to prosta arytmetyka.",
+   "impl_difficulty": "low",
+   "maintenance_burden": "medium",
+   "content_risk": "medium",
+   "demand_evidence": "Brak bezpośrednich danych z tej sesji. Moment o wysokiej intencji (świeża szkoda) jest zgodny z modelem 'nowy użytkownik z konkretnym zadaniem' (hipoteza).",
+   "ad_environment": "Hipoteza: home/auto insurance, usługi naprawcze, finansowanie. Stawek nie zweryfikowano.",
+   "ai_self_solve_risk": "high",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Moment jest ostry, ale asystent AI rozwiąże problem sam, a kluczowe dane (surcharge per ubezpieczyciel i stan) są trudno dostępne. Warto do niego wrócić tylko wtedy, gdy uda się tanio i automatycznie zdobyć dane o surcharge, albo jako moduł S2-R1.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "S2-R3",
+   "name_en": "NFIP Premium Glide Path & Flood Mitigation Payback Before You Sell",
+   "family": "Dom: ubezpieczenie powodziowe × mitygacja × finansowanie × sprzedaż",
+   "user_and_moment": "Właściciel domu z polisą NFIP zaraz po odnowieniu z kolejną podwyżką w ramach glide path RR2.0 albo przed planowaną sprzedażą lub remontem. Ma wycenę wykonawcy na mitygację.",
+   "sample_prompt_en": "My NFIP flood premium keeps going up every year under Risk Rating 2.0. Would elevating my HVAC and adding flood vents ($14k) pay off if I plan to sell in 6 years, or should I switch to private flood insurance or just sell now?",
+   "decision_problem": "Wybór między brakiem działań (NFIP glide path), polisą prywatną, lekką mitygacją, elewacją domu i sprzedażą (teraz lub po mitygacji). Cel: najniższy koszt całkowity i akceptowalne ryzyko katastrofalnej straty w horyzoncie posiadania.",
+   "combined_domains": "Ścieżka składki NFIP (glide path, limit rocznych podwyżek – hipoteza ok. 18%), capex mitygacji, finansowanie (HELOC, granty – niepewne), oczekiwana strata powodziowa, sprzedaż (składka widziana przez kupującego, ujawnienia, przenoszalność polisy – hipoteza).",
+   "variants_compared": "(1) Status quo NFIP. (2) Prywatny flood. (3) Lekka mitygacja (instalacje, flood vents, zasypanie piwnicy) + NFIP. (4) Elewacja domu (z grantem lub bez). (5) Sprzedaż teraz vs po mitygacji. (6) Zmiana deductible lub limitów pokrycia.",
+   "key_dependencies": "Mitygacja → niższa oczekiwana strata i (możliwie) niższa składka RR2.0 → cash flow → zdolność obsługi długu. Glide path → przyszła składka → koszt posiadania i atrakcyjność dla kupującego. Horyzont sprzedaży → czy payback zostanie osiągnięty. Duży remont → ryzyko reguły substantial improvement (50%).",
+   "main_outputs": "Projekcja składki na 5–10 lat dla każdego wariantu, koszt całkowity (NPV), payback mitygacji, wpływ na koszt posiadania dla kupującego, wrażliwość (rabat RR2.0, koszt mitygacji, rok sprzedaży, p powodzi), lista założeń i ostrzeżeń.",
+   "reason_external_site": "Agent NFIP i wykonawca mitygacji mają różne interesy. Narzędzia FEMA (hipoteza) informują o ryzyku, ale prawdopodobnie nie modelują decyzji sprzedażowej z finansowaniem. Asystent AI nie zna reguł rabatów RR2.0 ani lokalnych kosztów.",
+   "data_sources": "Declarations page użytkownika (obecna składka, ewentualnie składka pełnego ryzyka – hipoteza, że widnieje). FEMA NFHL (strefa, BFE), OpenFEMA, publikacje FEMA o kosztach mitygacji (P-312). Wszystko niezweryfikowane w tej sesji.",
+   "user_data": "Składka i jej historia, strefa, typ fundamentu, wyceny mitygacji, rezerwa i APR, planowany rok sprzedaży, wartość domu.",
+   "nearest_competition": [],
+   "already_solved": "Niezweryfikowane, bo nie wykonano żadnych wyszukiwań. Kandydaci do sprawdzenia (wiedza treningowa, brak URL): FEMA FloodSmart, FloodHelpNY, First Street/Risk Factor, agenci NFIP, prywatni ubezpieczyciele (Neptune Flood), producenci flood vents.",
+   "gap": "Hipoteza: brak narzędzia łączącego projekcję glide path, payback mitygacji i horyzont sprzedaży z finansowaniem. Wymaga pełnej weryfikacji.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych z tej sesji. Hipoteza: wąska populacja polis NFIP, skokowe zainteresowanie po powodziach i przy odnowieniach.",
+   "ad_environment": "Hipoteza: flood insurance, home improvement, HELOC i real estate to wartościowe kategorie. Ruch będzie nierówny (sezonowość huraganów, skoki po zdarzeniach). Stawek nie zweryfikowano.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "zbadać",
+   "status_reason": "To najlepsza wersja seed C: oparta na dokumentach użytkownika zamiast modelowania od adresu, z realną integracją. Wysokie ryzyko utrzymania (NFIP i FEMA w latach 2025–2026) i treści oznacza, że badanie musi przede wszystkim rozstrzygnąć konkurencję (FEMA FloodSmart, FloodHelpNY, First Street) i stabilność reguł RR2.0, zanim zapadnie jakakolwiek decyzja.",
+   "verification_level": "koncepcyjny"
+  },
+  {
+   "temp_id": "S2-R4",
+   "name_en": "After the Flood: Repair vs Elevate vs Sell Simulator",
+   "family": "Dom po katastrofie: odszkodowanie × regulacje odbudowy × finansowanie × sprzedaż/buyout",
+   "user_and_moment": "Właściciel zalanego domu w pierwszych tygodniach po powodzi, po wstępnej wycenie szkody i przed decyzją o remoncie. Gmina może wydać decyzję substantial damage.",
+   "sample_prompt_en": "Our house took 3 feet of water. NFIP will pay about $120k and the county may declare it substantially damaged. Should we repair, elevate using ICC money and a loan, or sell as-is or wait for a buyout?",
+   "decision_problem": "Wybór między naprawą w obecnej formie, elewacją lub przebudową zgodną z przepisami, sprzedażą as-is i oczekiwaniem na buyout. Uwzględnia wypłatę NFIP (budynek i zawartość), ICC, limity kredytów pomocowych, czas i ryzyko kolejnej powodzi.",
+   "combined_domains": "Odszkodowanie NFIP i prywatne, ICC i regulacje substantial damage, finansowanie pomocowe (SBA – limity to hipoteza) i prywatne, rynek nieruchomości po katastrofie, programy buyout (dostępność niepewna po zmianach FEMA w 2025 – hipoteza).",
+   "variants_compared": "(1) Naprawa. (2) Elewacja z ICC i kredytem. (3) Sprzedaż as-is. (4) Oczekiwanie na buyout. (5) Rozbiórka i odbudowa.",
+   "key_dependencies": "Ocena szkody vs wartość budynku → decyzja substantial damage → wymóg elewacji. Wypłata + ICC + kredyt → luka finansowa. Wariant → przyszła składka i ryzyko → wartość przy sprzedaży.",
+   "main_outputs": "Luka finansowa per wariant, koszt całkowity i czas, wrażliwość na wycenę szkody i decyzję gminy, lista kroków i założeń.",
+   "reason_external_site": "Sytuacja jest kryzysowa i złożona proceduralnie, a ludzie w niej szukają struktury. Asystent AI może jednak prowadzić rozmowę równie dobrze, a lokalne reguły wymagają kontaktu z urzędem.",
+   "data_sources": "Dokumenty użytkownika (wycena, decyzja gminy). Reguły NFIP, ICC i SBA, programy buyout. Wszystko niezweryfikowane w tej sesji.",
+   "user_data": "Wycena szkody, wartość budynku, polisa (limity, deductible), wyceny elewacji, dochody i zadłużenie, plany co do pozostania.",
+   "nearest_competition": [],
+   "already_solved": "Niezweryfikowane (brak wyszukiwań). Kandydaci: FEMA, organizacje non-profit typu FloodHelpNY, lokalne urzędy i programy odbudowy (wiedza treningowa, brak URL).",
+   "gap": "Hipoteza; wymaga weryfikacji.",
+   "impl_difficulty": "high",
+   "maintenance_burden": "high",
+   "content_risk": "high",
+   "demand_evidence": "Brak danych z tej sesji. Hipoteza: popyt bardzo skokowy i regionalny, skupiony w tygodniach po dużych powodziach.",
+   "ad_environment": "Hipoteza: reklamy display obok treści dla osób w kryzysie po katastrofie mogą być nieodpowiednie (ryzyko reputacyjne i polityk reklamowych). Ruch nieprzewidywalny.",
+   "ai_self_solve_risk": "medium",
+   "confidence": "low",
+   "status": "później",
+   "status_reason": "Integracja jest realna, ale popyt jest skokowy, ryzyko treści bardzo wysokie (ludzie w kryzysie, decyzje życiowe), utrzymanie wysokie (zmiany w FEMA, NFIP i SBA), a kontekst reklamowy wątpliwy. Nie pasuje do modelu automatycznego utrzymania. Wrócić tylko wtedy, gdy S2-R3 okaże się wykonalne.",
+   "verification_level": "koncepcyjny"
+  }
+ ],
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+   "competitor": "COUNTRY Financial – Calculate homeowners insurance deductible",
+   "related_idea": "Seed B; S2-R1; S2-R2",
+   "features_checked": "Break-even deductible ($1,000→$2,500, $236/rok ≈ 6,4 roku) według search-summary. Wiele ofert, scenariusze, rezerwa: niezweryfikowane.",
+   "access_limits": "Tylko search-summary; WebFetch niedostępny, strony nie otwarto.",
+   "conclusion": "PARTIAL: pokrywa rdzeń matematyczny (break-even), nie całą decyzję (niezweryfikowane).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "car insurance deductible calculator should I choose $500 or $1000 deductible",
+   "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/car-insurance-deductible-500-vs-1000.html",
+   "competitor": "COUNTRY Financial – Car insurance deductible 500 vs 1000",
+   "related_idea": "Seed B",
+   "features_checked": "Break-even ok. 3 lata dla dodatkowych $500; reguła 'deductible bez pożyczania'.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść z regułą rezerwy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://www.moneygeek.com/insurance/auto/car-insurance-deductible-how-to-choose/",
+   "competitor": "MoneyGeek – What Car Insurance Deductible Should I Choose?",
+   "related_idea": "Seed B",
+   "features_checked": "Przykład break-even ($0→$1,000, $54/mies., ok. 18,5 mies.), reguły oszczędności i historii szkód. Interaktywny kalkulator: niezweryfikowany.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "PARTIAL/SUBSTITUTE: treść z obliczeniem break-even.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://www.finhabits.com/car-insurance-deductible-500-vs-1500",
+   "competitor": "Finhabits – car insurance deductible 500 vs 1500",
+   "related_idea": "Seed B",
+   "features_checked": "Przykład break-even ($500→$1,500, $420/rok, ok. 2,4 roku).",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "car insurance deductible calculator should I choose $500 or $1000 deductible",
+   "url": "https://www.carinsurance.com/ask-our-experts/500-vs-1000-deductible-which-is-better/",
+   "competitor": "CarInsurance.com – 500 vs 1000 deductible",
+   "related_idea": "Seed B",
+   "features_checked": "Średnia oszczędność ok. $269/rok; rekomendacje według oszczędności i przebiegu.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść; sygnał nasycenia tematu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "car insurance deductible calculator should I choose $500 or $1000 deductible",
+   "url": "https://wallethub.com/answers/ci/auto-insurance-deductible-500-or-1000-2140693960",
+   "competitor": "WalletHub Answers",
+   "related_idea": "Seed B",
+   "features_checked": "Szacunek oszczędności do 28%.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść Q&A.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowners insurance deductible calculator",
+   "url": "https://www.nerdwallet.com/insurance/homeowners/home-insurance-calculator",
+   "competitor": "NerdWallet – Home insurance calculator",
+   "related_idea": "Seed B; S2-R1",
+   "features_checked": "Estymacja składki; wyjaśnienie % wind/hail deductible (2% od $250k = $5,000). Porównanie scenariuszy deductible i rezerwa: niezweryfikowane.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "PARTIAL: estymator składki, nie symulator decyzji (niezweryfikowane).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowners insurance deductible calculator",
+   "url": "https://www.progressive.com/homeowners/insurance-coverages/calculator/",
+   "competitor": "Progressive – Homeowners coverage calculator",
+   "related_idea": "Seed B; S2-R1",
+   "features_checked": "Szacunek limitów pokrycia, pytanie o preferencje deductible, brak ceny.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "PARTIAL: dobór limitów, bez kosztów i scenariuszy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "health insurance plan comparison calculator expected cost scenarios deductible out-of-pocket max HSA",
+   "url": "https://livelyme.com/compare-health-insurance-plans",
+   "competitor": "Lively – Health Insurance Plans Comparison Tool",
+   "related_idea": "Seed B (wariant health)",
+   "features_checked": "Wejścia: składki, deductible, OOP max, przewidywane wydatki, członkowie rodziny (przypisanie do tej strony niepewne). HSA tax i scenariusze: niezweryfikowane.",
+   "access_limits": "Tylko search-summary; atrybucja funkcji niepewna.",
+   "conclusion": "PARTIAL (możliwie bliski direct dla wariantu health); wymaga weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I raise my deductible emergency fund reddit",
+   "url": "https://www.thezebra.com/ask/raise-deductible-lower-bill/",
+   "competitor": "The Zebra – Ask an Agent",
+   "related_idea": "Seed B; S2-R2",
+   "features_checked": "Porada o deductible; zachęta do porównania ofert i zniżek.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: marketplace i porady.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I raise my deductible emergency fund reddit",
+   "url": "https://www.fool.com/money/insurance/auto/articles/should-you-raise-your-auto-insurance-deductible-heres-how-to-decide",
+   "competitor": "Motley Fool – Should You Raise Your Auto Insurance Deductible",
+   "related_idea": "Seed B",
+   "features_checked": "Test rezerwy, ok. 28% niższa składka collision ($500→$1,000, za Progressive), odkładanie różnicy w składce.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść (co najmniej 4 artykuły Fool).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I raise my deductible emergency fund reddit",
+   "url": "https://www.moneycrashers.com/raise-insurance-deductible-cut-premiums/",
+   "competitor": "Money Crashers",
+   "related_idea": "Seed B",
+   "features_checked": "Reguła: deductible do poziomu rezerwy, bez karty kredytowej.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://joingerald.com/learn/financial-wellness/higher-deductible-lower-premium-guide",
+   "competitor": "Gerald – higher deductible lower premium guide",
+   "related_idea": "Seed B",
+   "features_checked": "Poradnik o kompromisie deductible/składka; szczegóły niezweryfikowane.",
+   "access_limits": "Tylko search-summary.",
+   "conclusion": "SUBSTITUTE: treść fintech.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://www.nammert.com/en/tool-deductible.php",
+   "competitor": "nammert.com – tool deductible",
+   "related_idea": "Seed B",
+   "features_checked": "Tylko tytuł wyniku 'tool deductible'; funkcje i rynek niezweryfikowane.",
+   "access_limits": "Tylko tytuł/URL z wyników.",
+   "conclusion": "NIEZWERYFIKOWANE: do sprawdzenia, czy dotyczy rynku US.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "deductible calculator compare insurance quotes higher deductible vs premium break-even",
+   "url": "https://completemarkets.com/consumer/articles/Understanding-Your-Deductibles/",
+   "competitor": "Complete Markets – Understanding Your Deductibles",
+   "related_idea": "Seed B",
+   "features_checked": "Artykuł o deductibles; szczegóły niezweryfikowane.",
+   "access_limits": "Tylko tytuł/URL z wyników.",
+   "conclusion": "SUBSTITUTE: treść edukacyjna.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "BRAK – wyszukiwanie niewykonane (wyczerpany budżet); kandydat z wiedzy treningowej",
+   "url": "n/d – brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "FEMA FloodSmart (narzędzie 'cost of flooding', wyszukiwarka agentów)",
+   "related_idea": "Seed C; S2-R3; S2-R4",
+   "features_checked": "Żadne – nie sprawdzono w tej sesji.",
+   "access_limits": "Brak wyszukiwania i fetch; tylko wiedza treningowa.",
+   "conclusion": "DO WERYFIKACJI: prawdopodobnie PARTIAL (informacja o ryzyku i kosztach powodzi) – hipoteza.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "BRAK – wyszukiwanie niewykonane (wyczerpany budżet); kandydat z wiedzy treningowej",
+   "url": "n/d – brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "FloodHelpNY (Center for NYC Neighborhoods)",
+   "related_idea": "Seed C; S2-R3",
+   "features_checked": "Żadne – nie sprawdzono w tej sesji.",
+   "access_limits": "Brak wyszukiwania i fetch; tylko wiedza treningowa.",
+   "conclusion": "DO WERYFIKACJI: możliwie PARTIAL dla NYC (strefa, szacunek składki, rekomendacje mitygacji) – hipoteza.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "BRAK – wyszukiwanie niewykonane (wyczerpany budżet); kandydat z wiedzy treningowej",
+   "url": "n/d – brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "First Street / Risk Factor (Flood Factor)",
+   "related_idea": "Seed C; S2-R3",
+   "features_checked": "Żadne – nie sprawdzono w tej sesji.",
+   "access_limits": "Brak wyszukiwania i fetch; tylko wiedza treningowa.",
+   "conclusion": "DO WERYFIKACJI: PARTIAL (ryzyko powodzi dla adresu); modelowanie decyzji niezweryfikowane – hipoteza.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "BRAK – wyszukiwanie niewykonane (wyczerpany budżet); kandydat z wiedzy treningowej",
+   "url": "n/d – brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "Neptune Flood i inni prywatni ubezpieczyciele powodziowi (quote tools)",
+   "related_idea": "Seed C; S2-R3",
+   "features_checked": "Żadne – nie sprawdzono w tej sesji.",
+   "access_limits": "Brak wyszukiwania i fetch; tylko wiedza treningowa.",
+   "conclusion": "DO WERYFIKACJI: SUBSTITUTE/PARTIAL (wycena polisy) – hipoteza.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "BRAK – wyszukiwanie niewykonane (wyczerpany budżet); kandydat z wiedzy treningowej",
+   "url": "n/d – brak URL w wynikach wyszukiwania (niezweryfikowane)",
+   "competitor": "FEMA P-312 Homeowner's Guide to Retrofitting",
+   "related_idea": "Seed C; S2-R3",
+   "features_checked": "Żadne – nie sprawdzono w tej sesji.",
+   "access_limits": "Brak wyszukiwania i fetch; tylko wiedza treningowa.",
+   "conclusion": "DO WERYFIKACJI: SUBSTITUTE (poradnik metod i kosztów mitygacji) – hipoteza.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "deductible calculator compare insurance quotes higher deductible vs premium break-even [standard, wykonane]",
+  "homeowners insurance deductible calculator [standard, wykonane]",
+  "should I raise my deductible emergency fund reddit [standard, wykonane; nie zwróciło wątków Reddit]",
+  "health insurance plan comparison calculator expected cost scenarios deductible out-of-pocket max HSA [standard, wykonane]",
+  "car insurance deductible calculator should I choose $500 or $1000 deductible [standard, wykonane]",
+  "NIEWYKONANE (wyczerpany wspólny budżet 200/turę): wind hail percentage deductible calculator hurricane deductible cost what would I pay",
+  "NIEWYKONANE (limit): compare insurance quotes side by side deductible scenarios tool expected annual cost claim probability [extended]",
+  "NIEWYKONANE (limit): \"deductible\" \"emergency fund\" \"break-even\" calculator insurance home auto 2025",
+  "NIEWYKONANE (limit): health plan cost estimator employer open enrollment decision support tool Jellyvision ALEX",
+  "NIEWYKONANE (limit): should I file a claim or pay out of pocket calculator premium increase after claim",
+  "Seed C: ZERO wyszukiwań wykonanych – budżet wyczerpany przed rozpoczęciem; wymagana kontynuacja w kolejnej turze"
+ ]
+}

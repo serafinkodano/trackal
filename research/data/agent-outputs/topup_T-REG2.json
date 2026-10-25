@@ -1,0 +1,638 @@
+{
+ "topic": "Krajobraz USA: energia, ubezpieczenia, dane i prawo. TOP-UP część 2 (net metering, ceny prądu wg EIA, ubezpieczenia domów, NFIP, FORTIFIED, API danych, ryzyka prawne)",
+ "summary_pl": "Wykonałem 20 z 20 dozwolonych WebSearch. WebFetch nie był używany. Cały materiał dowodowy to podsumowania wyników wyszukiwania (search-summary): żadnej strony nie otworzyłem i żadnego formularza nie testowałem.\n\nWNIOSKI DLA PROJEKTU:\n\n(1) Domena „dom + energia + ubezpieczenie” bardzo szybko zmienia reguły. W ciągu 12 miesięcy:\n- Federalna ulga 25D dla właścicieli instalacji wygasła 31.12.2025 (OBBBA). Leasing i PPA (48E) mają osobne terminy.\n- Kalifornijski NEM 3.0 ostatecznie przetrwał spór sądowy (wg jednego źródła Sąd Najwyższy CA odmówił rozpatrzenia 10.06.2026). Stawki eksportu wynoszą ok. 4–8 c/kWh wobec ok. 30 c w NEM 2.0.\n- Arizona, Idaho i Karolina Północna (Duke: koniec legacy NM 31.12.2026) dalej tną stawki eksportu.\n- NFIP wygasał co najmniej dwukrotnie (X–XI 2025 oraz po 30.01.2026). Obecny termin to 30.09.2026 lub, wg niezweryfikowanego źródła, 11.12.2026.\n- Luizjana ogłosiła benchmarki zniżek FORTIFIED od 1.01.2027, Kentucky obowiązkowe zniżki od III 2026.\n\nTo potwierdza, że istnieje problem decyzyjny wielozmiennowy (czas, sprzedaż domu, bateria, leasing kontra zakup, ubezpieczenie). Jednocześnie oznacza wysoki koszt utrzymania: parametry polityk (taryfy eksportowe, terminy NFIP, ulgi, zniżki) NIE są dostępne przez stabilne API. n8n może monitorować źródła, ale weryfikacja wymaga człowieka. To osłabia założenie „automatycznego utrzymania bez pracy redakcyjnej”.\n\n(2) Ceny prądu wg EIA (STEO, maj 2026): średnio 18,2 c/kWh w 2026, czyli ok. +5% r/r. Na 2027 prognoza to ok. +2%. Kolejne edycje STEO podnosiły prognozę na 2026 (17,6, potem 18,02, potem 18,2). Na wschodnim wybrzeżu wzrost ma wynieść 5–7% rocznie w latach 2024–2027. Tempo wzrostu cen to kluczowa zmienna wrażliwości, którą da się aktualizować automatycznie.\n\n(3) Ubezpieczenia domów:\n- Średnia składka wzrosła o 33% w latach 2020–2023.\n- Senacki raport z XII 2024 pokazuje najwyższe wskaźniki nieodnowień (non-renewal) na Florydzie, w Luizjanie i Karolinie Północnej, a nie w Kalifornii.\n- Dane o Florydzie w 2025 są sprzeczne (+18% kontra −3%).\n- Krajowych danych o wzroście składek w latach 2024–2026 nie znalazłem: to luka.\n\n(4) Dane:\n- PVWatts v8: 1000 zapytań na godzinę, dokumentacja przeniesiona na developer.nlr.gov.\n- URDB: ponad 3700 zakładów energetycznych, ale tylko część jest corocznie weryfikowana.\n- EIA, OpenFEMA, HUD FMR i fueleconomy.gov są darmowe. Niektóre wymagają klucza lub tokenu, OpenFEMA i HUD wymagają klauzuli „not endorsed”.\n- FRED: serie oznaczone „Copyright” wymagają zgody właściciela przy użyciu innym niż osobiste, a strona z reklamami jest użyciem komercyjnym.\n- Licencji Zillow, Redfin i CareScout nie udało się zweryfikować.\n\n(5) Prawo:\n- Wyłączenie wydawcy z Lowe v. SEC chroni treści bezosobowe. Wyrok z 2024 objął Seeking Alpha razem ze spersonalizowanymi alertami. Wyników o kalkulatorach interaktywnych brak, więc ich zastosowanie to hipoteza. Większość decyzji domowo-energetycznych i tak nie dotyczy papierów wartościowych.\n- Licencja agenta ubezpieczeniowego (producer license) staje się realnym ryzykiem, gdy narzędzie rekomenduje konkretne polisy lub przewoźników i bierze opłatę za lead lub wycenę. Waszyngton wprost uznaje nielicencjonowane strony z recenzjami, które „solicit”, za naruszenie przepisów. To wzmacnia model „display ads jako baza”.\n- FTC: Endorsement Guides zaktualizowane w VII 2023. Consumer Review Rule obowiązuje od X 2024, pierwsze listy ostrzegawcze wysłano 22.12.2025, kara wynosi do 53 088 USD za naruszenie.\n- Nowe stanowe prawa prywatności w IN, KY i RI obowiązują od 1.01.2026 (progi 100 tys. lub 35 tys. konsumentów, ocena DPIA przy reklamie targetowanej).\n- ADA: 3117 federalnych pozwów dotyczących stron w 2025, czyli +27%. DOJ przesunął terminy reguły Title II na IV 2027 i IV 2028, ale ta reguła dotyczy władz stanowych i lokalnych, nie prywatnych stron. Ryzyko z Title III pozostaje.\n\nRekomendacja robocza:\n- Liczyć po stronie klienta i nie przechowywać danych finansowych.\n- Projektować wyniki jako porównanie wariantów z jawnymi założeniami, a nie „kup polisę X”.\n- Unikać lead-gen ubezpieczeniowego jako filaru.\n- Budować zgodnie z WCAG.\n- Każdy parametr polityki opatrywać datą „as of” i źródłem.",
+ "findings": [
+  {
+   "question": "a) CA NEM 3.0: wpływ na ekonomikę solar + bateria",
+   "claim_pl": "Według źródeł branżowych (search-summary) kredyty eksportowe w NEM 3.0 (Net Billing Tariff) wynoszą ok. 4–8 c/kWh, wobec ok. 30 c/kWh w NEM 2.0. Jedno źródło podaje średnie na 2026: PG&E ok. 3,9 c, SCE ok. 4,6 c, SDG&E ok. 3,7 c, zablokowane na 9 lat według roku złożenia wniosku. Szacunki zwrotu: sam solar 9–14 lat, solar z baterią 7–10 lat. Inne źródło podaje 10–12 lat. Bateria zamienia eksport wart ok. 4 c w oszczędność ok. 35–39 c na rachunku. Status prawny: wg jednego źródła sąd apelacyjny w III 2026 utrzymał NEM 3.0, a Sąd Najwyższy CA odmówił rozpatrzenia 10.06.2026 (niezweryfikowane w źródle pierwotnym). Uwaga konkurencyjna: roofvista.com ma przewodnik 'NEM 3.0 Solar + Roof + Battery California Guide (2026)', czyli treść odpowiadającą dokładnie flagowemu przykładowi. Czy zawiera zintegrowany symulator: niezweryfikowane.",
+   "evidence_type": "indirect",
+   "numbers": "Eksport 4–8 c/kWh (NEM 3.0) wobec ok. 30 c (NEM 2.0); 2026: PG&E 3,9 c, SCE 4,6 c, SDG&E 3,7 c; blokada stawki 9 lat; zwrot: solar 9–14 lat, z baterią 7–10 lat (inne źródło 10–12)",
+   "sources": [
+    {
+     "url": "https://nrgcleanpower.com/learning-center/nem-3-0-is-final/",
+     "title": "NEM 3.0 Is Final: What California's Court Ruling Means for Solar Buyers in 2026 - NRG Clean Power",
+     "publisher": "NRG Clean Power"
+    },
+    {
+     "url": "https://www.surgepv.com/solar-compliance/usa/guides/california-nem-3",
+     "title": "California NEM 3.0 Guide 2026: Export Rates, Storage Economics & What Changed",
+     "publisher": "SurgePV"
+    },
+    {
+     "url": "https://roofvista.com/resources/guides/california-nem-3-solar-roof-battery-guide-2026",
+     "title": "NEM 3.0 Solar + Roof + Battery California Guide (2026)",
+     "publisher": "Roofvista"
+    },
+    {
+     "url": "https://caenergysavings.com/blog/nem-3-explained-california-solar-2026/",
+     "title": "NEM 3.0 Explained: What It Means for California Solar in 2026",
+     "publisher": "CA Energy Savings"
+    },
+    {
+     "url": "https://energy-solutions.co/articles/sub/net-metering-2-3-selling-power-grid",
+     "title": "Net Metering 2.0 & 3.0 2026: Solar Export Economics — State-by-State Intelligence",
+     "publisher": "Energy Solutions"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Symulator „dach/solar/bateria/sprzedaż domu” dla CA musi modelować godzinowe wartości eksportu (ACC), autokonsumpcję z baterią i 9-letnią blokadę stawki. Kalkulator ze stałą stawką eksportu daje błędny wynik. Liczby pochodzą głównie od sprzedawców, więc do produkcji potrzebne są dane CPUC lub taryfy utility. Rynek treści o tym problemie jest gęsty (instalatorzy, agregatory), więc nie można zakładać niszy bez osobnego audytu narzędzi."
+  },
+  {
+   "question": "a) Inne stany zmieniające net metering 2025–2026",
+   "claim_pl": "Arizona (APS, UNS, TEP): net billing ze stawką eksportu RCP ok. 3–6 c/kWh. Wg jednego źródła ACC w VIII 2026 zatwierdziła kolejną, siódmą z rzędu obniżkę o 10%, a zmiana stawki TEP weszła w X 2026 (niezweryfikowane). Idaho Power: przejście na net billing od 1.01.2024 i obniżki stawki eksportu w 2025. Źródła są sprzeczne co do daty i skali (Order No. 36785, limit 40% kontra 31% we IX 2025); istniejące systemy mają ochronę do 2045. Karolina Północna (Duke): nowe ridery od 1.10.2023, legacy Rider NM dostępny dla chronionych uczestników do 31.12.2026, potem Bridge Rate od 1.01.2027. Jedno źródło sprzecznie nazywa NC stanem 'full retail'. Puerto Rico: brak wyników. Istnieje kilka agregatorów śledzących net metering stan po stanie (netmeteringbystate.com, ohmsnap.com, sunfigure.com, thegreenwatt.com).",
+   "evidence_type": "indirect",
+   "numbers": "AZ RCP ok. 0,03–0,06 USD/kWh; AZ −10% (VIII 2026, jedno źródło); NC legacy do 31.12.2026; ID ochrona do 20.12.2045",
+   "sources": [
+    {
+     "url": "https://netmeteringbystate.com/changes/",
+     "title": "Solar export changes 2026: what is changing, and when — Net Metering by State",
+     "publisher": "netmeteringbystate.com"
+    },
+    {
+     "url": "https://www.ohmsnap.com/net-metering-tracker",
+     "title": "Net Metering Tracker: Which States Are Changing the Rules in 2026?",
+     "publisher": "Ohmsnap"
+    },
+    {
+     "url": "https://solardisclosure.io/articles/solar-net-metering-policy-history-by-state.html",
+     "title": "Solar Policy History by State: Net Metering and Solar Laws Timeline",
+     "publisher": "solardisclosure.io"
+    },
+    {
+     "url": "https://www.thegreenwatt.com/net-metering-by-state/",
+     "title": "Net Metering By State: Which States Still Offer Full Retail Credit? (2026)",
+     "publisher": "The Green Watt"
+    },
+    {
+     "url": "https://sunfigure.com/net-metering",
+     "title": "Net Metering by State (2026): Who Still Has Full Retail?",
+     "publisher": "Sunfigure"
+    },
+    {
+     "url": "https://solarenergynerds.com/net-metering-by-state-2026",
+     "title": "Net Metering by State 2026: What Your Utility Pays You",
+     "publisher": "Solar Energy Nerds"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Reguły eksportu zmieniają się per utility, nieraz kilka razy w roku, a nawet agregatory są ze sobą sprzeczne. Każdy symulator solarny wymaga rejestru parametrów polityki z datą obowiązywania i źródłem (komisja stanowa). To praca ręczna lub półautomatyczna. Agregatory 'by state' są treściowym substytutem lub konkurencją częściową w zakresie samych reguł, nie decyzji."
+  },
+  {
+   "question": "a) (kontekst) Federalne ulgi solarne po OBBBA",
+   "claim_pl": "Ustawa OBBB zakończyła ulgę 25D dla właścicieli domów dla wydatków po 31.12.2025, bez okresu przejściowego. Płatność w 2025 nie ratuje ulgi, jeśli instalację ukończono później. Systemy w leasingu lub PPA (third-party owned) mogą korzystać z 48E po stronie właściciela systemu, jeśli budowę rozpoczęto do 4.07.2026 albo system oddano do użytku do 31.12.2027. Nie ma obowiązku przeniesienia korzyści na klienta. Terminy 48E dla magazynów energii są w źródłach sprzeczne. Prognoza z bloga lead-gen: rynek domowy ok. 4,0–4,5 GWdc w 2026 wobec 5,1 GWdc w 2025 (prognoza, nie dane).",
+   "evidence_type": "indirect",
+   "numbers": "25D: koniec 31.12.2025; 48E: rozpoczęcie budowy do 4.07.2026 lub oddanie do 31.12.2027; prognoza 4,0–4,5 GWdc (2026) wobec 5,1 GWdc (2025)",
+   "sources": [
+    {
+     "url": "https://www.solar.com/learn/trump-and-the-fate-of-the-30-solar-tax-credit/",
+     "title": "Trump and the Fate of the 30% Solar Tax Credit",
+     "publisher": "Solar.com"
+    },
+    {
+     "url": "https://www.solarpermitsolutions.com/blog/solar-tax-credits-2026-what-changed-after-obbba",
+     "title": "Solar tax credits 2026: what changed after OBBBA",
+     "publisher": "Solar Permit Solutions"
+    },
+    {
+     "url": "https://nrgcleanpower.com/learning-center/federal-solar-tax-credit-updates/",
+     "title": "federal solar tax credit updates",
+     "publisher": "NRG Clean Power"
+    },
+    {
+     "url": "https://www.leadgen-economy.com/blog/first-quarter-without-25d-solar-credit-cpl-reset.md",
+     "title": "first quarter without 25d solar credit cpl reset",
+     "publisher": "leadgen-economy.com"
+    },
+    {
+     "url": "https://arka360.com/ros/what-big-beautiful-bill-and-25d-section-actually-means",
+     "title": "what big beautiful bill and 25d section actually means",
+     "publisher": "Arka360"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Decyzja „kupić teraz, leasing/PPA czy czekać” zmieniła strukturę. Wiele starszych kalkulatorów i artykułów ma wpisane 30% ITC i jest nieaktualnych: to okno dla aktualnego symulatora. Jednocześnie pokazuje to ryzyko przyszłych zmian. Spadek rynku i wzrost udziału leasingu (hipoteza) może też obniżyć popyt na treści typu 'should I buy solar'."
+  },
+  {
+   "question": "b) Trend cen prądu dla gospodarstw domowych w USA 2024–2026 (EIA)",
+   "claim_pl": "STEO z V 2026 prognozuje średnią cenę dla gospodarstw domowych 18,2 c/kWh w 2026, czyli prawie +5% wobec 2025. Na 2027 prognoza to ok. +2%. Tabela letnia SF02 (tylko miesiące letnie): 16,54 c (2024), 17,51 c (2025), 18,27 c (2026). Wcześniejsze edycje: STEO z XII 2025 podawało 17,29 c (2025) i 18,02 c (2026), a STEO z IV 2025 dawało 17,0 c (2025) i 17,6 c (2026). Prognoza na 2026 była więc systematycznie podnoszona. EIA oczekuje największych wzrostów w Mid-Atlantic, East North Central i South Atlantic: 5–7% rocznie w latach 2024–2027. Średniej rocznej za 2024 nie znalazłem.",
+   "evidence_type": "direct",
+   "numbers": "2026: 18,2 c/kWh (+~5% r/r); 2027: +~2%; lato: 16,54 / 17,51 / 18,27 c; regiony wschodnie: 5–7% rocznie",
+   "sources": [
+    {
+     "url": "https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php",
+     "title": "EIA Short-Term Energy Outlook — Electricity, coal and renewables",
+     "publisher": "U.S. EIA"
+    },
+    {
+     "url": "https://www.eia.gov/outlooks/steo/tables/pdf/SF02.pdf",
+     "title": "STEO Table SF02 (summer residential electricity)",
+     "publisher": "U.S. EIA"
+    },
+    {
+     "url": "https://www.consumeraffairs.com/news/your-electric-bill-will-probably-go-up-in-2026-heres-why-122325.html",
+     "title": "Your electric bill will probably go up in 2026: Here's why",
+     "publisher": "ConsumerAffairs"
+    },
+    {
+     "url": "https://www.utilitydive.com/news/eia-expects-more-solar-capacity-higher-power-prices-thru-2026/745108/",
+     "title": "EIA expects more solar capacity, higher power prices thru 2026",
+     "publisher": "Utility Dive"
+    },
+    {
+     "url": "https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/",
+     "title": "Data centers, electricity, residential rates (EIA)",
+     "publisher": "Utility Dive"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Tempo wzrostu cen energii to jedna z najsilniejszych zmiennych wrażliwości w symulatorach (solar, pompa ciepła, EV, izolacja). Domyślne „3% rocznie” jest dziś zaniżone dla części regionów. Prognozy EIA są publiczne i aktualizowane co miesiąc, co nadaje się do automatyzacji (n8n i EIA API). Należy pokazywać zakres scenariuszy, nie jedną liczbę."
+  },
+  {
+   "question": "c) Ubezpieczenia domów: wzrost składek, wycofania ubezpieczycieli, nieodnowienia",
+   "claim_pl": "Średnia składka homeowners wzrosła o 33% w latach 2020–2023, z 1902 do 2530 USD rocznie (badanie z 2024 cytowane przez CBS). Raport senackiej Komisji Budżetowej z XII 2024 (dane do 2023): wyższe wskaźniki nieodnowień niż w Kalifornii miały Floryda, Luizjana i Karolina Północna. Rosną też w Oklahomie, południowej Nowej Anglii, Nowym Meksyku, północnych Górach Skalistych i na Hawajach. Florida Insurance Information Institute nazwał te dane mylącymi. Floryda w 2025: sprzeczne dane (Insurify: 8292 USD, +18%; inne źródło: spadek o ok. 3%). Kalifornia: State Farm przestał przyjmować nowe polisy w V 2023 (Allstate wcześniej), a w III 2024 State Farm General ogłosił nieodnowienie ok. 30 tys. polis. Moratorium po pożarach z I 2025 wygasło (jedno źródło typu blog). Krajowych danych o wzroście składek w latach 2024–2026 nie znalazłem.",
+   "evidence_type": "indirect",
+   "numbers": "Wzrost 2020–2023: +33% (1902 → 2530 USD); FL 2025: 8292 USD (+18%) albo −3%; State Farm CA: ok. 30 tys. nieodnowień (2024)",
+   "sources": [
+    {
+     "url": "https://www.cbsnews.com/news/los-angeles-fires-california-insurance-rates-dropped-coverage-us/",
+     "title": "As climate risks mount, homeowners far beyond California face soaring insurance bills - CBS News",
+     "publisher": "CBS News"
+    },
+    {
+     "url": "https://www.cfpublic.org/housing-homelessness/2025-07-22/florida-leads-nation-in-home-insurance-non-renewal-rates",
+     "title": "Florida leads nation in home insurance non-renewal rates",
+     "publisher": "Central Florida Public Media"
+    },
+    {
+     "url": "https://www.cbsnews.com/news/fires-california-palisades-fire-homeowners-insurance-state-farm-fair-losses/",
+     "title": "Thousands of Los Angeles homeowners were dropped by their insurers before the Palisades Fire - CBS News",
+     "publisher": "CBS News"
+    },
+    {
+     "url": "https://www.insurancebusinessmag.com/us/news/property/florida-homeowners-arent-buying-the-insurance-recovery-as-it-becomes-a-midterm-issue-591248.aspx",
+     "title": "Florida homeowners aren't buying the insurance recovery as it becomes a midterm issue",
+     "publisher": "Insurance Business"
+    },
+    {
+     "url": "https://www.latentinsure.com/blog/california-homeowners-insurance-news",
+     "title": "California Homeowners Insurance News: 2026 Market Roundup",
+     "publisher": "Latent Insure"
+    },
+    {
+     "url": "https://www.congress.gov/119/meeting/house/117864/documents/HHRG-119-JU05-20250206-SD011.pdf",
+     "title": "More homeowners lose insurance in areas hard-hit by... (Jan 18, 2025)",
+     "publisher": "congress.gov"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Koszt i dostępność ubezpieczenia to realna, rosnąca zmienna w decyzjach mieszkaniowych (gdzie kupić, wymiana dachu, mitygacja, sprzedaż). Nie znalazłem publicznego API składek, więc symulator musi przyjmować własną wycenę użytkownika i zakresy scenariuszy (hipoteza). Dane są zmienne i sporne, więc wynik musi jawnie pokazywać założenia."
+  },
+  {
+   "question": "c) NFIP: status reautoryzacji 2026",
+   "claim_pl": "NFIP wygasał od 1.10 do połowy XI 2025 oraz ponownie po terminie 30.01.2026. Wiele źródeł podaje przedłużenie do 30.09.2026. Jedno źródło twierdzi, że sekcja 139 Continuing Appropriations and Extensions Act, 2027 (H.R. 6500, P.L. 119-103) przesunęła termin na 11.12.2026 (niezweryfikowane w congress.gov ani na stronach FEMA). Przy wygaśnięciu FEMA wypłaca roszczenia, ale nie sprzedaje ani nie odnawia polis, a limit pożyczek z Treasury spada z 30,425 mld do 1 mld USD. Program obejmuje ok. 4,6 mln polis i ok. 1,3 bln USD ochrony. Długoterminowa reforma (H.R. 5484) nie została uchwalona (stan na VIII 2026).",
+   "evidence_type": "indirect",
+   "numbers": "Ok. 4,6 mln polis; ok. 1,3 bln USD ochrony; limit pożyczek 30,425 mld → 1 mld USD przy wygaśnięciu; terminy: 30.09.2026 lub 11.12.2026 (jedno źródło)",
+   "sources": [
+    {
+     "url": "https://proctorlp.com/compliance/nfip-extended-to-september-30-2026/",
+     "title": "NFIP EXTENDED TO SEPTEMBER 30, 2026 - Proctor Loan Protector",
+     "publisher": "Proctor"
+    },
+    {
+     "url": "https://csfi.info/nfip-reauthorized-until-september-30-2026/",
+     "title": "NFIP Reauthorized Until September 30, 2026",
+     "publisher": "CSFI"
+    },
+    {
+     "url": "https://www.cbo.gov/publication/62012",
+     "title": "H.R. 5577, NFIP Extension Act of 2026",
+     "publisher": "CBO"
+    },
+    {
+     "url": "https://outofthestormnews.com/data/nfip-reauthorization-tracker",
+     "title": "NFIP Reauthorization Tracker: 2026 Status Snapshot — Out of the Storm News",
+     "publisher": "Out of the Storm News"
+    },
+    {
+     "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN10835/IN10835.60.pdf",
+     "title": "CRS INSIGHT (NFIP reauthorization)",
+     "publisher": "Congressional Research Service"
+    },
+    {
+     "url": "https://stormbag.co/blogs/stormbag-flood-protection-blog/nfip-expires-september-30-2026-what-homeowners-need-to-do-before-the-lapse",
+     "title": "NFIP Extended to December 11, 2026: Homeowner Update",
+     "publisher": "Stormbag"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Ryzyko wygaśnięcia NFIP to zdarzenie w osi czasu dla decyzji „kupić dom w strefie zalewowej / zamknąć transakcję teraz czy później”. Termin zmienia się kilka razy w roku, więc symulator musi mieć monitorowany parametr z datą. Bez tego wynik szybko staje się błędny, a błąd w tej kwestii jest wizerunkowo kosztowny."
+  },
+  {
+   "question": "c) Skutki NFIP Risk Rating 2.0",
+   "claim_pl": "Fact sheet FEMA (2025): większość rocznych podwyżek ograniczona do 18%, a składki rosną do osiągnięcia stawki pełnego ryzyka (glide path). GAO 2023 (GAO-23-105977): mediana składki 689 USD (XII 2022) wobec 1288 USD przy pełnym ryzyku; ok. 1/3 polis już na pełnym ryzyku, 2/3 na ścieżce +18%; 95% polis osiągnie pełne ryzyko do 2037. Wg listu senatora Cassidy'ego (II 2026) FEMA szacuje, że ok. 77% ubezpieczonych płaci więcej. Badanie z XII 2025 (Journal of Catastrophe Risk and Resilience, znane z wtórnych relacji) szacuje spadek nowych polis o 11–39% i istniejących o 5–13%, zależnie od skali podwyżki.",
+   "evidence_type": "indirect",
+   "numbers": "Limit 18% rocznie; mediana 689 USD wobec 1288 USD przy pełnym ryzyku; 1/3 na pełnym ryzyku; rok 2037; ok. 77% płaci więcej; −11% do −39% nowych polis, −5% do −13% istniejących",
+   "sources": [
+    {
+     "url": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-08/fema-understanding-risk-rating-2.0-fact-sheet-2025.pdf",
+     "title": "FEMA Understanding Risk Rating 2.0 fact sheet 2025",
+     "publisher": "FEMA / FloodSmart"
+    },
+    {
+     "url": "https://www.carriermanagement.com/news/2023/08/03/251484.htm",
+     "title": "GAO on NFIP Risk Rating 2.0 (2023)",
+     "publisher": "Carrier Management"
+    },
+    {
+     "url": "https://www.insurancejournal.com/news/national/2025/12/17/851428.htm",
+     "title": "Study on Risk Rating 2.0 policy declines (Dec 2025)",
+     "publisher": "Insurance Journal"
+    },
+    {
+     "url": "https://www.cassidy.senate.gov/wp-content/uploads/2026/02/Cassidy_Senate_Letter_to_FEMA_2.3.26.pdf",
+     "title": "Cassidy Senate Letter to FEMA 2.3.26",
+     "publisher": "U.S. Senate (Sen. Cassidy)"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Składka powodziowa jest naturalną ścieżką wieloletnią (+18% rocznie aż do pełnego ryzyka). To dobry przykład zmiennej zależnej od czasu, której zwykłe kalkulatory nie modelują. Do symulacji kosztu posiadania domu potrzebne jest jednak, żeby użytkownik podał bieżącą i docelową składkę: publicznego API wycen per adres nie znalazłem (hipoteza)."
+  },
+  {
+   "question": "c) Programy dachów FORTIFIED i obowiązkowe zniżki ubezpieczeniowe",
+   "claim_pl": "Alabama: ponad 53 tys. oznaczeń FORTIFIED oraz obowiązkowe zniżki za mitygację wiatrową (mandat dotyczy wind mitigation, nie wyłącznie FORTIFIED). Luizjana: Bulletin 2026-04 (6.03.2026) wdraża Regulation 136 z tabelą benchmarków zniżek FORTIFIED od 1.01.2027. Komisarz podkreśla, że to benchmarki, nie sztywne mandaty. Program Louisiana Fortify Homes przyznał 4688 grantów, losowania obejmują granty 10 tys. USD. Kentucky: obowiązkowe zniżki dla domów FORTIFIED od III 2026. Nowy Jork: projekt S7265 (2025), nieuchwalony. Connecticut: promocja standardu bez obowiązku zniżek. Missisipi i Oklahoma: niezweryfikowane (brak wyników).",
+   "evidence_type": "indirect",
+   "numbers": "AL: ponad 53 tys. oznaczeń; LA: 4688 grantów, grant 10 tys. USD, benchmarki od 1.01.2027; KY: od III 2026",
+   "sources": [
+    {
+     "url": "https://www.roofingcontractor.com/articles/102002-louisiana-orders-insurers-to-offer-fortified-roof-discounts",
+     "title": "Louisiana orders insurers to offer fortified roof discounts",
+     "publisher": "Roofing Contractor"
+    },
+    {
+     "url": "https://www.wafb.com/2026/03/04/bill-would-increase-number-fortified-roofs-louisiana-lower-insurance-premiums/",
+     "title": "Bill would increase the number of fortified roofs in Louisiana, lower insurance premiums",
+     "publisher": "WAFB"
+    },
+    {
+     "url": "https://www.ktbs.com/news/louisiana/mandated-discounts-coming-for-fortified-roofs-in-louisiana/article_659fb08e-8a2c-514c-9c96-304ad4c9784e.html",
+     "title": "Mandated discounts coming for fortified roofs in Louisiana",
+     "publisher": "KTBS"
+    },
+    {
+     "url": "https://www.businessreport.com/?p=270477",
+     "title": "State working on benchmark insurance discounts for fortified roofs",
+     "publisher": "Business Report"
+    },
+    {
+     "url": "https://www.insurancebusinessmag.com/us/news/property/connecticut-regulators-promote-fortified-roofing-standards-to-boost-storm-resilience-582855.aspx",
+     "title": "Connecticut regulators promote FORTIFIED roofing standards to boost storm resilience",
+     "publisher": "Insurance Business"
+    },
+    {
+     "url": "https://www.nysenate.gov/legislation/bills/2025/S7265",
+     "title": "NY Senate Bill S7265 (2025)",
+     "publisher": "NY Senate"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "„Wymienić dach teraz czy później, standardowy czy FORTIFIED, z grantem czy bez, przy planowanej sprzedaży domu” to mocny kandydat na symulator dla stanów Zatoki. Łączy koszt, grant, zniżkę składki (zależną od stanu i od daty), horyzont posiadania i ryzyko. Parametry są per stan i zmieniają się rzadziej niż net metering, ale nadal wymagają monitoringu."
+  },
+  {
+   "question": "d) API energetyczne: NREL PVWatts i OpenEI Utility Rate Database",
+   "claim_pl": "PVWatts v8 jest bieżącą wersją, a dokumentacja jest pod adresem developer.nlr.gov (zmiana z developer.nrel.gov; nowej nazwy laboratorium nie potwierdziłem). Obowiązują standardowe limity: najwyżej 1000 zapytań na godzinę. Zmian warunków w 2026 nie potwierdziłem. OpenEI URDB: struktury taryf dla ponad 3700 zakładów energetycznych w USA (lista zgodna z EIA). Darmowy klucz API, wersje 3–7 lub 'latest'. Tylko podzbiór taryf jest corocznie weryfikowany, każdy rekord ma datę ostatniej aktualizacji. Źródła różnią się co do opiekuna danych (NREL kontra Illinois State University na zlecenie DOE). Osobne NREL Utility Rate API zwraca tylko średnie roczne $/kWh.",
+   "evidence_type": "direct",
+   "numbers": "PVWatts: 1000 zapytań/h; URDB: ponad 3700 zakładów; wersje API 3–7",
+   "sources": [
+    {
+     "url": "https://developer.nlr.gov/docs/solar/pvwatts/v8/",
+     "title": "PVWatts V8 API",
+     "publisher": "developer.nlr.gov"
+    },
+    {
+     "url": "https://openei.org/wiki/Utility_Rate_Database",
+     "title": "Utility Rate Database",
+     "publisher": "OpenEI"
+    },
+    {
+     "url": "https://openei.org/services/doc/rest/util_rates/?version=7",
+     "title": "Web Services (util_rates v7)",
+     "publisher": "OpenEI"
+    },
+    {
+     "url": "https://openei.org/services/doc/rest/util_rates?version=3",
+     "title": "util rates (v3)",
+     "publisher": "OpenEI"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Rdzeń danych solarnych (produkcja wg lokalizacji, taryfy TOU) jest darmowy i automatyzowalny. Limit 1000 zapytań/h wymaga cache'owania wyników po siatce lokalizacji i parametrów, co jest proste. Ryzyka: jakość taryf w URDB jest nierówna (trzeba pokazywać datę), a zależność od federalnego laboratorium widać już po zmianie domeny. Czy URDB zawiera kalifornijskie wartości eksportu ACC: niezweryfikowane (hipoteza: nie w pełni)."
+  },
+  {
+   "question": "d) API rządowe: EIA API v2, fueleconomy.gov, OpenFEMA, HUD FMR",
+   "claim_pl": "EIA API v2: darmowy klucz (e-mail i akceptacja ToS), klucz przekazywany w URL. Limity nie są publikowane. Strona vendora (oilpriceapi.com) podaje orientacyjnie ok. 9000 zapytań/h, poniżej 5 na sekundę i 5000 wierszy JSON na odpowiedź (niezweryfikowane u EIA). fueleconomy.gov: usługi REST (JSON/XML) bez klucza, limitu nie znalazłem. OpenFEMA: bez klucza i subskrypcji. Wymagana klauzula 'This product uses the Federal Emergency Management Agency's OpenFEMA API, but is not endorsed by FEMA'. Wg katalogu apis.io domyślnie 1000 rekordów na zapytanie, maks. 10 000 ($top), dalej stronicowanie $skip. HUD USER FMR API: darmowy token po rejestracji i wymóg informacji, że produkt nie jest popierany ani certyfikowany przez HUD User. Limitów nie znalazłem.",
+   "evidence_type": "direct",
+   "numbers": "EIA: ok. 9000/h i 5000 wierszy (źródło vendora, niezweryfikowane); OpenFEMA: 1000 rekordów domyślnie, 10 000 maks. (apis.io)",
+   "sources": [
+    {
+     "url": "https://www.oilpriceapi.com/eia-api",
+     "title": "EIA API v2: how to use it, its limits, and the OilPriceAPI mirror",
+     "publisher": "OilPriceAPI"
+    },
+    {
+     "url": "https://docs.ropensci.org/eia/articles/api.html",
+     "title": "eia R package — API details",
+     "publisher": "rOpenSci"
+    },
+    {
+     "url": "https://fueleconomy.gov/feg/ws",
+     "title": "FuelEconomy.gov Web Services",
+     "publisher": "fueleconomy.gov (DOE/EPA)"
+    },
+    {
+     "url": "https://www.fema.gov/it/about/openfema/terms-conditions",
+     "title": "OpenFEMA terms and conditions",
+     "publisher": "FEMA"
+    },
+    {
+     "url": "https://apis.io/rate-limits/fema/fema-rate-limits/",
+     "title": "OpenFEMA · Rate Limits",
+     "publisher": "apis.io"
+    },
+    {
+     "url": "https://www.huduser.gov/portal/datasets/fmr.html",
+     "title": "Fair Market Rents dataset",
+     "publisher": "HUD USER"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Rządowy stos danych (energia, pojazdy, katastrofy, czynsze) jest darmowy, licencyjnie bezpieczny dla strony z reklamami i nadaje się do automatyzacji przez n8n. Koszt to obsługa kluczy, klauzule atrybucji i cache. Ten stos realnie wspiera model „setki symulatorów” w zakresie danych tła, ale nie zastępuje parametrów polityk (ulgi, taryfy eksportowe, terminy)."
+  },
+  {
+   "question": "d) FRED API: warunki użycia komercyjnego",
+   "claim_pl": "Warunki FRED API: serie dostępne przez API mogą należeć do stron trzecich i być chronione prawem autorskim. Udostępnienie ich przez St. Louis Fed nie znosi praw właścicieli i nie stanowi zgody. Użycie wykraczające poza osobiste wymaga zgody właściciela danych, a za zgodność odpowiada użytkownik. Serie chronione mają słowo 'Copyright' w notach i można je wyszukać przez endpoint wyszukiwania. FAQ wymienia tworzenie aplikacji jako dozwolone, z zastrzeżeniem dodatkowych warunków API. Pełnej listy zakazów nie odczytałem.",
+   "evidence_type": "direct",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://fred.stlouisfed.org/docs/api/terms_of_use.html",
+     "title": "Terms of Use (FRED API)",
+     "publisher": "Federal Reserve Bank of St. Louis"
+    },
+    {
+     "url": "https://fred.stlouisfed.org/legal/terms/",
+     "title": "Legal Notices, Information and Disclaimers",
+     "publisher": "Federal Reserve Bank of St. Louis"
+    }
+   ],
+   "confidence": "high",
+   "implication_pl": "Strona z AdSense to użycie komercyjne. Pipeline n8n musi automatycznie odfiltrowywać serie z notą 'Copyright' albo uzyskać zgody. Czy popularne serie (np. oprocentowanie kredytów hipotecznych) są oznaczone jako chronione: niezweryfikowane, do sprawdzenia per seria przed użyciem."
+  },
+  {
+   "question": "d) Zillow i Redfin: warunki danych; CareScout: dostępność danych o kosztach opieki",
+   "claim_pl": "Zillow Research udostępnia ZHVI i inne zbiory do pobrania na zillow.com/research/data i odsyła do ZHVI User Guide w sprawie cytowania. Tekstu licencji nie znalazłem (niezweryfikowane). Publiczne API Zillow zamknięto w 2021, a API Zestimate i Bridge wymagają zatwierdzenia i umowy. Redfin Data Center: sprzeczne źródła (pobieranie i redystrybucja z atrybucją kontra rzekome NDA z 30-dniowym embargiem, źródło typu vendor). Obie wersje niezweryfikowane. CareScout (Genworth) opublikował 2.03.2026 wyniki Cost of Care Survey 2025: 50 stanów i DC, dane zbierane VII–XI 2025, poziom MSA. Mediany krajowe: assisted living 74 400 USD/rok (6200/mies., +5%), dom opieki pokój dwuosobowy 114 975 USD, jednoosobowy 129 575 USD, opieka domowa niemedyczna 80 080 USD/rok, nowa kategoria private duty nursing 90 USD/h. Warunków licencji i pobierania hurtowego nie znalazłem (niezweryfikowane).",
+   "evidence_type": "indirect",
+   "numbers": "Assisted living 74 400 USD/rok; dom opieki 114 975 / 129 575 USD; opieka domowa 80 080 USD; private duty nursing 90 USD/h",
+   "sources": [
+    {
+     "url": "https://www.zillow.com/research/data/",
+     "title": "Housing Data",
+     "publisher": "Zillow Research"
+    },
+    {
+     "url": "https://blog.iq.dwellsy.com/zillow-data-overview-2026-rental-and-home-value-data-explained/",
+     "title": "Zillow Data Overview (2026): Rental and Home Value Data Explained - Dwellsy IQ",
+     "publisher": "Dwellsy IQ"
+    },
+    {
+     "url": "https://blog.iq.dwellsy.com/redfin-data-overview-2026-market-data-reports-and-licensing-explained/",
+     "title": "Redfin Data Overview (2026): Market Data, Reports, and Licensing Explained - Dwellsy IQ",
+     "publisher": "Dwellsy IQ"
+    },
+    {
+     "url": "https://zillapi.com/blog/redfin-api/",
+     "title": "Redfin API in 2026: access, limits & alternatives",
+     "publisher": "Zillapi"
+    },
+    {
+     "url": "https://www.businesswire.com/news/home/20260302283881/en/CareScout-Releases-2025-Cost-of-Care-Survey-Results",
+     "title": "CareScout Releases 2025 Cost of Care Survey Results",
+     "publisher": "Business Wire"
+    },
+    {
+     "url": "https://investor.genworth.com/news-events/press-releases/detail/1054",
+     "title": "CareScout Releases 2025 Cost of Care Survey Results",
+     "publisher": "Genworth"
+    }
+   ],
+   "confidence": "low",
+   "implication_pl": "Dane prywatnych portali i firm (Zillow, Redfin, CareScout) nie mogą być fundamentem automatycznie odświeżanego produktu, dopóki licencja nie zostanie potwierdzona w źródle pierwotnym. Bezpieczniej oprzeć się na danych publicznych (HUD FMR, EIA, FEMA) i podawać mediany CareScout jako cytowany punkt odniesienia z datą. Hurtowe osadzanie tabel MSA to ryzyko licencyjne (hipoteza)."
+  },
+  {
+   "question": "e) Investment Advisers Act: wyłączenie wydawcy (Lowe v. SEC) a narzędzia online",
+   "claim_pl": "Lowe v. SEC (1985): publikacje bezosobowe, które nie przeradzają się w relację powierniczą person-to-person, są domniemanie objęte wyłączeniem wydawcy, nawet jeśli komentują konkretne papiery wartościowe. Poza wyłączeniem jest porada dopasowana do portfela lub potrzeb konkretnego klienta. W 2024 sąd federalny uznał Seeking Alpha (w tym spersonalizowane alerty e-mail) za objęte wyłączeniem i odrzucił jego wąską interpretację (alert Greenberg Traurig). Wyników dotyczących interaktywnych kalkulatorów i narzędzi decyzyjnych NIE znalazłem: zastosowanie do symulatorów to hipoteza.",
+   "evidence_type": "indirect",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://caselaw.findlaw.com/court/us-supreme-court/472/181.html",
+     "title": "LOWE v. SEC, 472 U.S. 181 (1985)",
+     "publisher": "FindLaw"
+    },
+    {
+     "url": "https://tile.loc.gov/storage-services/service/ll/usrep/usrep472/usrep472181/usrep472181.pdf",
+     "title": "LOWE v. SEC Syllabus",
+     "publisher": "Library of Congress"
+    },
+    {
+     "url": "https://www.gtlaw.com/en/insights/2024/8/no-need-for-seeking-alpha-to-seek-registration",
+     "title": "No Need for Seeking Alpha to Seek Registration",
+     "publisher": "Greenberg Traurig"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Większość symulatorów domowo-energetycznych, ubezpieczeniowych i opiekuńczych nie dotyczy papierów wartościowych, więc Advisers Act zwykle nie ma zastosowania (hipoteza). Dla symulatorów typu 'spłacić kredyt czy inwestować' bezpieczniej: brak rekomendacji konkretnych papierów lub funduszy, wynik jako porównanie wariantów z jawnymi założeniami, brak relacji 1:1. Przed uruchomieniem kategorii inwestycyjnej warto uzyskać opinię prawnika."
+  },
+  {
+   "question": "e) Licencja agenta ubezpieczeniowego (producer license) a narzędzia porównawcze",
+   "claim_pl": "Model NAIC 218 (podstawa przepisów w 50 stanach i DC) dopuszcza opłaty dla osób bez licencji, o ile nie sprzedają, nie zabiegają o klienta (solicit) i nie negocjują. Regulatorzy oceniają całość zachowania. Płatność za kliknięcie jest raczej zgodna, za wycenę lub wniosek wątpliwa (źródło typu law review). Waszyngton (OIC): strony z recenzjami bez licencji, które zabiegają o mieszkańców stanu, naruszają kodeks ubezpieczeniowy. Odpowiedzialność mogą ponieść także płacący im ubezpieczyciele i agenci. Stała opłata za polecenie jest dopuszczalna tylko pod warunkiem braku wypowiedzi o warunkach lub potrzebie polisy. Źródło vendora opisuje dochodzenie w NY, gdzie język porównawczy i logotypy przewoźników uznano za solicitation (anegdota). Foley (2025) ostrzega przed różnicami między stanami.",
+   "evidence_type": "indirect",
+   "numbers": "",
+   "sources": [
+    {
+     "url": "https://lawfilesext.leg.wa.gov/law/WSR/2021/07/21-07-036.htm",
+     "title": "WSR 21-07-036",
+     "publisher": "Washington State Legislature / OIC"
+    },
+    {
+     "url": "https://forc.org/Public/Journals/2021/Articles/Fall/Vol32Ed3Article1.aspx",
+     "title": "FORC Journal 2021 Vol32 Ed3 Article 1",
+     "publisher": "FORC"
+    },
+    {
+     "url": "https://www.foley.com/news/2025/06/opell-and-goeringer-author-article-on-legal-risks-of-insurance-referral-fees/",
+     "title": "Opell and Goeringer Author Article on Legal Risks of Insurance Referral Fees",
+     "publisher": "Foley & Lardner"
+    },
+    {
+     "url": "https://www.insurereinsure.com/topic/state-legislative-developments/page/3/",
+     "title": "New Insurance Platforms Arguably Require Producer Licenses",
+     "publisher": "Insure/Reinsure (Carlton Fields)"
+    },
+    {
+     "url": "https://www.leadgen-economy.com/blog/insurance-lead-compliance-state-licensing-requirements/",
+     "title": "Insurance Lead Compliance: State-Specific Licensing Requirements",
+     "publisher": "leadgen-economy.com"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Symulator porównujący generyczne opcje (wysokość udziału własnego, FORTIFIED, wariant ubezpieczenia powodziowego) jako treść edukacyjna to niskie ryzyko (hipoteza). Wskazywanie konkretnych przewoźników lub polis z płatnością za wycenę lub lead to ryzyko licencyjne, zwłaszcza w WA i NY. To potwierdza zasadę właściciela: lead-gen ubezpieczeniowy wyłącznie jako ostrożny dodatek, nie filar."
+  },
+  {
+   "question": "e) FTC: Endorsement Guides 2023 i Consumer Review Rule",
+   "claim_pl": "Endorsement Guides zaktualizowano w VII 2023 (recenzje, rekomendacje, media społecznościowe). Odrębna Consumer Reviews and Testimonials Rule obowiązuje od X 2024. Zakazuje fałszywych i przeinaczonych recenzji, zachęt uzależnionych od wydźwięku, nieujawnionych recenzji osób z wewnątrz, tłumienia negatywnych recenzji i kupowania fałszywych wskaźników społecznościowych. 22.12.2025 FTC wysłała pierwsze listy ostrzegawcze do 10 firm, z groźbą kar do 53 088 USD za naruszenie. Alert Benesch z IV 2026 opisuje regułę jako aktywny priorytet egzekucyjny. Szczegółów Guides o linkach afiliacyjnych i standardzie 'clear and conspicuous' nie pobrałem.",
+   "evidence_type": "indirect",
+   "numbers": "Kara do 53 088 USD za naruszenie; 10 listów ostrzegawczych (22.12.2025)",
+   "sources": [
+    {
+     "url": "https://insideprivacy.com/united-states/federal-trade-commission/ftc-issues-warning-letters-for-violations-of-consumer-reviews-rule/",
+     "title": "FTC issues warning letters for violations of Consumer Reviews Rule",
+     "publisher": "Covington – Inside Privacy"
+    },
+    {
+     "url": "https://www.jdsupra.com/legalnews/five-stars-zero-tolerance-ftc-turns-up-3594404/",
+     "title": "Five Stars, Zero Tolerance: FTC Turns Up Enforcement Under Consumer Review Rule",
+     "publisher": "JD Supra / Benesch"
+    },
+    {
+     "url": "https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/ftc-warns-companies-of-potential-violations-of-the-consumer-review-rule",
+     "title": "FTC Warns Companies of Potential Violations of the Consumer Review Rule",
+     "publisher": "Kelley Drye"
+    },
+    {
+     "url": "https://www.khlaw.com/index%2ephp/insights/ftc-warns-10-companies-comply-consumer-review-rule",
+     "title": "FTC warns 10 companies to comply with Consumer Review Rule",
+     "publisher": "Keller and Heckman"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Przy modelu reklamowym ryzyko jest niskie. Przy dodatkach afiliacyjnych wymagane jest widoczne ujawnienie przy linku. Nie wolno stosować generowanych testimoniali ani „ocen użytkowników” narzędzi, czego kusi automatyzacja przez Claude Code i n8n."
+  },
+  {
+   "question": "e) Stanowe prawa prywatności istotne dla danych finansowych wpisywanych przez użytkownika",
+   "claim_pl": "Ustawy w Indianie (INCDPA), Kentucky (KCDPA) i Rhode Island (RIDTPPA) obowiązują od 1.01.2026. Progi: IN i KY obejmują ponad 100 tys. mieszkańców stanu albo ponad 25 tys. przy ≥50% przychodu ze sprzedaży danych. RI obejmuje ponad 35 tys. albo ponad 10 tys. przy ≥20% przychodu. Dane wrażliwe wymagają zgody opt-in. Ocena DPIA jest wymagana m.in. przy reklamie targetowanej, sprzedaży danych i przetwarzaniu danych wrażliwych. Egzekwują prokuratorzy generalni, bez prywatnego prawa do pozwu. Czy dane finansowe są w tych ustawach kategorią wrażliwą: niezweryfikowane.",
+   "evidence_type": "indirect",
+   "numbers": "IN/KY: 100 tys. (lub 25 tys. przy ≥50% przychodu); RI: 35 tys. (lub 10 tys. przy ≥20%)",
+   "sources": [
+    {
+     "url": "https://trustarc.com/resource/new-in-2026-state-privacy-laws-in-indiana-kentucky-and-rhode-island/",
+     "title": "New in 2026: State Privacy Laws in Indiana, Kentucky and Rhode Island",
+     "publisher": "TrustArc"
+    },
+    {
+     "url": "https://bakerdonelson.com/privacy-laws-ring-in-the-new-year-state-requirements-expand-across-the-us-in-2026",
+     "title": "Privacy Laws Ring in the New Year: State Requirements Expand Across the US in 2026",
+     "publisher": "Baker Donelson"
+    },
+    {
+     "url": "https://www.jdsupra.com/legalnews/no-slowing-down-three-more-state-8826203/",
+     "title": "No Slowing Down: Three More State Privacy Laws Take Effect",
+     "publisher": "JD Supra"
+    },
+    {
+     "url": "https://www.clym.io/blog/us-privacy-law-comparison-map",
+     "title": "US privacy law comparison map",
+     "publisher": "Clym"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Strona z AdSense (reklama targetowana) i dużym ruchem może przekroczyć progi w większych stanach. Architektura powinna liczyć symulacje po stronie przeglądarki i nie zapisywać danych finansowych ani zdrowotnych na serwerze. Potrzebny jest mechanizm zgód i opt-out dla reklam. Czy Google wymaga CMP dla stanów USA: niezweryfikowane. Prawne ryzyko prywatności jest zarządzalne, o ile projekt ich nie gromadzi."
+  },
+  {
+   "question": "e) Pozwy o dostępność stron (ADA) 2024–2025 i reguła DOJ Title II",
+   "claim_pl": "Seyfarth Shaw: 3117 federalnych pozwów o dostępność stron w 2025, +27% wobec 2452 w 2024. Stanowią 36% wszystkich federalnych pozwów ADA Title III. Liczby UsableNet z sądami stanowymi wahają się od 4605 do ponad 5000 (sprzeczne, a UsableNet ma interes komercyjny). DOJ wydał 20.04.2026 interim final rule przesuwający terminy reguły Title II na 26.04.2027 (duże podmioty) i 26.04.2028 (mniejsze). Wymogi merytoryczne bez zmian, uwagi przyjmowano do 22.06.2026. Title II dotyczy władz stanowych i lokalnych. Prywatne pozwy z Title III nadal się toczą.",
+   "evidence_type": "indirect",
+   "numbers": "2025: 3117 pozwów federalnych (+27%), 2024: 2452; 36% pozwów ADA Title III; UsableNet 4605 do ponad 5000; nowe terminy Title II: 26.04.2027 i 26.04.2028",
+   "sources": [
+    {
+     "url": "https://www.adatitleiii.com/2026/04/doj-extends-ada-title-ii-website-accessibility-deadlines-for-governmental-entities-but-litigation-and-compliance-risks-remain/",
+     "title": "DOJ Extends ADA Title II Website Accessibility Deadlines for Governmental Entities—But Litigation and Compliance Risks Remain",
+     "publisher": "Seyfarth Shaw – ADA Title III blog"
+    },
+    {
+     "url": "https://www.consumerfinancialserviceslawmonitor.com/2026/04/doj-extends-title-ii-ada-web-accessibility-rule-compliance-deadlines-for-state-and-local-governments/",
+     "title": "DOJ Extends Title II ADA Web Accessibility Rule Compliance Deadlines for State and Local Governments",
+     "publisher": "Consumer Financial Services Law Monitor"
+    },
+    {
+     "url": "https://bbklaw.com/resources/department-of-justice-delays-compliance-deadlines-for-ada-web-accessibility",
+     "title": "Department of Justice Delays Compliance Deadlines for ADA Web Accessibility",
+     "publisher": "Best Best & Krieger"
+    },
+    {
+     "url": "https://www.aapd.com/aapd-statement-title-ii-doj-web-rule-ifr/",
+     "title": "AAPD Statement on DOJ Title II Web Rule Interim Final Rule",
+     "publisher": "AAPD"
+    },
+    {
+     "url": "https://sitecomply.app/guides/ada-website-lawsuits-2025",
+     "title": "ADA website lawsuits in 2025: what the numbers actually say",
+     "publisher": "SiteComply"
+    },
+    {
+     "url": "https://inclusifyapp.com/blog/ada-website-lawsuit-statistics",
+     "title": "ADA Website Lawsuit Statistics 2025: The Honest Data",
+     "publisher": "Inclusify"
+    }
+   ],
+   "confidence": "medium",
+   "implication_pl": "Reguła Title II nie dotyczy prywatnej strony. Rosnąca fala pozwów z Title III (głównie e-commerce, NY i CA) to jednak ryzyko niezerowe. Czy strona tylko z treścią i reklamami jest „place of public accommodation”, zależy od okręgu sądowego: niezweryfikowane. Interaktywne symulatory (suwaki, wykresy, tabele) od początku trzeba budować zgodnie z WCAG 2.1 AA, co przy generowaniu komponentów z jednego szablonu jest tanie."
+  }
+ ],
+ "contradictions_pl": [
+  "CA NEM 3.0: zwrot solar z baterią 7–10 lat (Energy Solutions) wobec 10–12 lat (SurgePV). Status prawny: apelacja w III 2026 i odmowa Sądu Najwyższego CA 10.06.2026 to dane z dwóch różnych źródeł, niezweryfikowane w źródle pierwotnym.",
+  "Idaho Power: data i skala obniżki stawki eksportu się różnią (Order No. 36785 z limitem 40%, X 2025, wobec 31% we IX 2025).",
+  "Karolina Północna: większość źródeł opisuje koniec legacy NM 31.12.2026 i Bridge Rate od 2027, a jeden przewodnik klasyfikuje NC jako 'full retail' dzięki HB 589.",
+  "Floryda 2025: składki +18% (Insurify, 8292 USD) wobec spadku o ok. 3% w innym źródle. FL III kwestionuje senackie dane o nieodnowieniach.",
+  "NFIP: część źródeł podaje termin 30.09.2026, jedno twierdzi, że P.L. 119-103 przesunęła go na 11.12.2026.",
+  "48E dla magazynów energii (TPO): stopniowe wygaszanie do 2035 wobec dostępności do 2032. Źródła się różnią.",
+  "Redfin Data Center: pobieranie i redystrybucja z atrybucją wobec rzekomego NDA z 30-dniowym embargiem.",
+  "OpenEI URDB: aktualizację danych przypisuje się NREL albo Illinois State University (na zlecenie DOE).",
+  "Pozwy ADA 2025: Seyfarth 3117 (tylko sądy federalne) wobec UsableNet 4605, 4928 lub ponad 5000 (z sądami stanowymi; różne liczby w różnych relacjach).",
+  "Louisiana FORTIFIED: wcześniejsze relacje mówią o „obowiązkowych” zniżkach, komisarz w 2026 o „benchmarkach, nie mandatach”."
+ ],
+ "open_questions_pl": [
+  "Krajowy wzrost średnich składek homeowners w latach 2024–2026 (np. raporty Treasury FIO, NAIC, S&P): w tej sesji nie znaleziono.",
+  "Puerto Rico i inne stany (np. Kalifornia poza NEM, Nevada, Utah) w zakresie zmian net metering 2025–2026: brak wyników.",
+  "Czy OpenEI URDB zawiera kalifornijskie godzinowe wartości eksportu (ACC) dla NEM 3.0, czy trzeba je pobierać z CPUC lub od utility.",
+  "Potwierdzenie zmiany nazwy NREL i warunków developer.nlr.gov oraz ewentualnych zmian w limitach i ToS w 2026.",
+  "Tekst licencji Zillow Research (ZHVI, ZORI) i Redfin Data Center dla użytku komercyjnego z reklamami; licencja i pobieranie hurtowe CareScout na poziomie MSA.",
+  "Które popularne serie FRED (np. oprocentowanie kredytów hipotecznych) mają notę 'Copyright'.",
+  "Rozdział wyłączenia wydawcy (Lowe) na interaktywne narzędzia z wynikiem spersonalizowanym: brak orzecznictwa i stanowisk SEC w wynikach.",
+  "FORTIFIED w Missisipi, Oklahomie, Karolinie Południowej i Północnej, Georgii: grant i mandaty zniżek niezweryfikowane.",
+  "Czy dane finansowe są kategorią wrażliwą w nowych ustawach stanowych i czy Google AdSense wymaga CMP dla stanów USA.",
+  "ADA Title III: aktualny podział okręgów sądowych co do stron bez fizycznej placówki (website-only).",
+  "Ile realnego popytu (Google i prompty LLM) mają zapytania o FORTIFIED, NFIP i NEM 3.0: poza zakresem tego zadania, nie mylić z istnieniem problemu."
+ ],
+ "queries_run": [
+  "[extended] California NEM 3.0 impact solar battery payback 2025 2026 installations decline export rates",
+  "[extended] states net metering changes 2025 2026 net billing successor tariff Idaho Arizona North Carolina Puerto Rico",
+  "[standard] EIA Short-Term Energy Outlook 2026 residential electricity price cents per kWh 2024 2025 2026 increase",
+  "[extended] homeowners insurance premiums rose 2023 2024 2025 2026 non-renewals insurer exits California Florida Senate report",
+  "[extended] NFIP reauthorization 2026 lapse extension September 30 2026 Risk Rating 2.0 premium increases policies decline",
+  "[standard] FORTIFIED roof insurance discount mandated by law states Alabama Louisiana Oklahoma Mississippi grant program 2025 2026",
+  "[extended] NREL PVWatts API v8 rate limit 1000 requests per hour developer.nrel.gov terms 2026 National Laboratory of the Rockies",
+  "[standard] OpenEI Utility Rate Database URDB API coverage number of utilities rates updated",
+  "[standard] FRED API terms of use commercial use third-party copyrighted series restrictions St. Louis Fed",
+  "[extended] Zillow Research data ZHVI terms of use commercial attribution; Redfin Data Center download terms commercial use; Zillow API Bridge restrictions",
+  "[standard] CareScout Cost of Care Survey 2025 median assisted living nursing home home care cost data download license",
+  "[standard] HUD USER Fair Market Rents API access token; OpenFEMA API no key rate limits terms",
+  "[extended] Lowe v. SEC publisher exclusion interactive website financial calculator tool personalized advice investment adviser registration",
+  "[standard] insurance comparison website lead generator producer license required referral fee unlicensed \"solicit\" state law NAIC",
+  "[standard] FTC Endorsement Guides 2023 update affiliate disclosure clear and conspicuous; FTC Consumer Reviews and Testimonials Rule 2024 civil penalties enforcement 2025",
+  "[standard] state comprehensive consumer privacy laws effective 2026 Indiana Kentucky Rhode Island thresholds 100,000 consumers sensitive data financial information website",
+  "[extended] ADA website accessibility lawsuits 2025 total number UsableNet Seyfarth; DOJ Title II web accessibility rule April 2026 deadline delayed interim final rule",
+  "[standard] Risk Rating 2.0 NFIP effects policies in force decline premium glide path 18% annual cap full-risk premium share 2025 GAO",
+  "[standard] 25D residential clean energy credit ended December 31 2025 One Big Beautiful Bill homeowners solar battery 2026 demand TPO lease 48E",
+  "[standard] EIA API v2 free API key registration rate limit; fueleconomy.gov web services API vehicle data no key"
+ ]
+}

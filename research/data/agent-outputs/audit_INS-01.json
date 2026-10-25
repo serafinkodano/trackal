@@ -1,0 +1,371 @@
+{
+ "id": "INS-01",
+ "competitors": [
+  {
+   "name": "Calcbee – Claim Frequency Impact on Premium Calculator",
+   "url": "https://calcbee.com/calculators/insurance/home/claim-frequency-impact/",
+   "type": "partial",
+   "access": "darmowy (wg search-summary); strona nieotwierana",
+   "covers_pl": "Najbliższy znaleziony odpowiednik rdzenia: wynik = wypłata minus koszt dodatkowy, gdzie koszt dodatkowy = roczna dopłata × liczba lat dopłaty + utracona zniżka za bezszkodowość; przykład $2,500 wypłaty daje stratę netto. Nazwa sugeruje uwzględnienie częstotliwości szkód (liczby wcześniejszych szkód). Procenty dopłat to reguły kciuka, nie dane ubezpieczycieli.",
+   "misses_or_unverified_pl": "Niezweryfikowane: scenariusze ryzyka nieodnowienia i koszt przejścia do droższego ubezpieczyciela, wariant połączenia z planowaną wymianą dachu/upgrade, procentowe udziały własne (huragan/grad), zakresy i wrażliwość, próg minimalnej szkody, reguły stanowe. Tylko home (ścieżka /home/)."
+  },
+  {
+   "name": "AdvoraHQ – Insurance Claim or Pay Out of Pocket? Run the Break-Even Math",
+   "url": "https://advorahq.com/file-claim-or-pay-out-of-pocket/",
+   "type": "partial",
+   "access": "darmowy (wg search-summary); strona nieotwierana",
+   "covers_pl": "Rachunek progu opłacalności zgłoszenie vs płatność z własnej kieszeni: wypłata (szkoda − udział własny) wobec dopłaty do składki przez kilka lat (założenie ok. 3–7 lat).",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy to interaktywny kalkulator czy artykuł z rachunkiem; ryzyko nieodnowienia, wcześniejsze szkody, połączenie z wymianą dachu, auto vs home, zakresy/scenariusze."
+  },
+  {
+   "name": "Toolzie – Insurance Deductible Calculator — Should I File a Claim?",
+   "url": "https://toolzie.ca/insurance_deductible_calculator/",
+   "type": "partial",
+   "access": "darmowy (wg search-summary); domena kanadyjska (.ca); strona nieotwierana",
+   "covers_pl": "Porównanie kosztu naprawy, udziału własnego i prawdopodobnej podwyżki składki; reguły typu 'naprawa < 2× udział własny = zapłać sam'; w notach kalkulatorów pojawia się ostrzeżenie, że kilka szkód w 3 lata może prowadzić do nieodnowienia (nie jest jasne, którego kalkulatora dotyczy).",
+   "misses_or_unverified_pl": "Niezweryfikowane: kalibracja do rynku USA, wieloletni model, scenariusze nieodnowienia jako liczba, wariant wymiany dachu, procentowe udziały własne."
+  },
+  {
+   "name": "The Zebra – When and How to File a Car Insurance Claim [Calculator]",
+   "url": "https://www.thezebra.com/auto-insurance/accidents/car-insurance-claims/",
+   "type": "partial",
+   "access": "darmowy (wg search-summary); strona nieotwierana",
+   "covers_pl": "Decyzja zgłoszenia szkody komunikacyjnej z kalkulatorem; dane: szkoda z OC/AC (collision) może podnieść składkę o 25–50% na ok. 3 lata; wskazania kiedy zgłaszać zawsze (obrażenia, niejasna wina, szkoda całkowita); szkody bez winy.",
+   "misses_or_unverified_pl": "Tylko auto. Niezweryfikowane: co dokładnie liczy kalkulator (wieloletni koszt vs prosty próg), wcześniejsze szkody, ryzyko nieodnowienia, zakresy."
+  },
+  {
+   "name": "Insuranceopedia – Claims Assistant (Insurance Claim Help)",
+   "url": "https://www.insuranceopedia.com/insurance-claim-help",
+   "type": "partial",
+   "access": "werdykt 'should you file' darmowy bez rejestracji; pełny claim kit płatny $99 za szkodę (deklaracja producenta wg search-summary); strona nieotwierana",
+   "covers_pl": "Deklaruje werdykt czy zgłaszać szkodę (także gdy się nie opłaca) i odczyt strony deklaracji polisy (udział własny, limity). Potencjalnie najbliższy 'całościowemu' przeprowadzeniu użytkownika przez decyzję, w tym w modelu płatnym.",
+   "misses_or_unverified_pl": "Niezweryfikowane: czy werdykt modeluje dopłatę × lata, wcześniejsze szkody, ryzyko nieodnowienia, wariant wymiany dachu; jakość i metoda werdyktu (tylko marketing producenta). Nacisk raczej na prowadzenie roszczenia home."
+  },
+  {
+   "name": "COUNTRY Financial – Homeowners Insurance Deductible: How To Calculate the Right Amount",
+   "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+   "type": "partial",
+   "access": "darmowy artykuł/poradnik (wg search-summary); strona nieotwierana",
+   "covers_pl": "Metoda: oszacuj wypłatę, zapytaj ubezpieczyciela o wpływ szkody na stawkę, pomnóż roczną podwyżkę × 3–5 lat; plus próg opłacalności wyższego udziału własnego (przykład ok. 6,4 roku). Notatka z fali 1 potwierdzona – pojawił się w wynikach.",
+   "misses_or_unverified_pl": "To metoda opisowa, nie zintegrowany symulator (niezweryfikowane, czy jest interaktywny kalkulator). Brak w summary: nieodnowienie, wcześniejsze szkody, wariant wymiany dachu."
+  },
+  {
+   "name": "Palmbld – Insurance Claim Calculator — ACV vs RCV & Denial Risk",
+   "url": "https://www.palmbld.com/tools/insurance-claim-estimator",
+   "type": "partial",
+   "access": "darmowy (wg tytułu w wynikach); strona nieotwierana",
+   "covers_pl": "Fragment: szacowanie wypłaty (ACV vs RCV) i ryzyka odmowy – istotne dla szkód dachowych.",
+   "misses_or_unverified_pl": "Niezweryfikowane: wpływ na składkę w czasie, nieodnowienie, porównanie wariantów zgłoś/zapłać."
+  },
+  {
+   "name": "Switchwize – Homeowners Deductible Calculator",
+   "url": "https://www.switchwize.com/calculators/homeowners-deductible",
+   "type": "partial",
+   "access": "darmowy (wg tytułu w wynikach); strona nieotwierana",
+   "covers_pl": "Fragment sąsiedni: wybór wysokości udziału własnego (decyzja przed szkodą, nie po).",
+   "misses_or_unverified_pl": "Nie dotyczy decyzji po szkodzie wprost; funkcje niezweryfikowane."
+  },
+  {
+   "name": "Artykuły o podwyżkach po szkodzie (MoneyGeek, Insurify, LendingTree, Insure.com, The Zebra, Kiplinger, State Farm)",
+   "url": "https://www.moneygeek.com/insurance/auto/how-much-does-car-insurance-go-up-after-an-accident/",
+   "type": "substitute",
+   "access": "darmowe artykuły (wg search-summary)",
+   "covers_pl": "Średnie podwyżki: auto z winy ok. 34–49% (Insurify/MoneyGeek/LendingTree), bez winy 4–22%; duże różnice między ubezpieczycielami (State Farm 24,3% vs Progressive 58,1% w jednej analizie); home: pierwsza szkoda 16–28%, druga w 5 lat do 49% (Insure.com i inne); Kiplinger o szkodach gradowych i procentowych udziałach własnych.",
+   "misses_or_unverified_pl": "Treść, nie narzędzie: brak spersonalizowanego wieloletniego rachunku i scenariuszy; użytkownik musi sam połączyć liczby."
+  },
+  {
+   "name": "Havn.ai – Organize your homeowners insurance claim",
+   "url": "https://www.myhavn.ai/",
+   "type": "substitute",
+   "access": "aplikacja/serwis (warunki cenowe niezweryfikowane)",
+   "covers_pl": "Organizacja dokumentów roszczenia i wyjaśnianie polisy.",
+   "misses_or_unverified_pl": "Wprost deklaruje, że nie mówi użytkownikowi, co zrobić ze szkodą – nie rozstrzyga decyzji zgłosić/nie zgłosić."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI, Google AI Mode)",
+   "url": "brak URL – kategoria substytutu",
+   "type": "substitute",
+   "access": "darmowe dla wszystkich (ChatGPT Intelligent UI od 7.10.2026; Google AI Mode interaktywne narzędzia od 19.08.2026 – wg kontekstu zadania)",
+   "covers_pl": "Potrafią policzyć wypłatę vs dopłata × lata na liczbach z promptu, podać średnie podwyżki i ostrzeżenia, wygenerować ad hoc kalkulator.",
+   "misses_or_unverified_pl": "Brak danych specyficznych dla ubezpieczyciela/stanu; spójność i audytowalność scenariuszy nieodnowienia niezweryfikowane."
+  },
+  {
+   "name": "Agent ubezpieczeniowy / public adjuster",
+   "url": "brak URL – kategoria substytutu",
+   "type": "substitute",
+   "access": "agent zwykle bezpłatnie; public adjuster za prowizję (z wiedzy ogólnej, niezweryfikowane w tej fali)",
+   "covers_pl": "Agent zna zasady dopłat swojego ubezpieczyciela; COUNTRY Financial wprost radzi zapytać ubezpieczyciela o wpływ szkody na stawkę.",
+   "misses_or_unverified_pl": "Konflikt interesów / obawa, że samo zapytanie zostanie odnotowane (CA SB 1301 dotyczy m.in. nieodnowienia z powodu zapytania); brak niezależnego wieloletniego rachunku."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 wyszukiwań WebSearch extended, język angielski, rynek USA, dowody wyłącznie z search-summary bez otwierania stron; pewność: niska–średnia). Rdzeń decyzji jest jednak już pokryty przez darmowe kalkulatory: Calcbee (wypłata − dopłata × lata − utracona zniżka za bezszkodowość), AdvoraHQ (break-even), Toolzie i The Zebra (auto). Potencjalna luka jest wąska i niezweryfikowana – dotyczy rozszerzeń, a nie nowej kategorii: (a) ryzyko nieodnowienia jako scenariusze kosztowe (prawdopodobieństwo × droższa polisa u innego ubezpieczyciela/plan rezydualny przez N lat), zależne od liczby wcześniejszych szkód i typu szkody (woda vs pogoda); (b) wariant połączenia szkody z planowaną wymianą dachu / upgrade (dopłata do różnicy) oraz 'zapłać sam + upgrade z rabatem'; (c) procentowe udziały własne huraganowe/gradowe; (d) wynik jako zakres + minimalna opłacalna kwota szkody + wrażliwość na procent dopłaty; (e) ostrzeżenia stanowe (np. TX – ograniczenia po pojedynczej szkodzie wg blogów; CA SB 1301 rozdział 693/2026 – zakaz nieodnowienia wyłącznie z powodu niektórych szkód/zapytań/wieku dachu) oraz wspólny model home + auto. Nie można stwierdzić, że Calcbee/Insuranceopedia tych elementów nie mają – są 'niezweryfikowane'. Jeśli ręczna weryfikacja pokaże, że Calcbee lub Insuranceopedia Claims Assistant modelują liczbę wcześniejszych szkód i nieodnowienie, luka praktycznie znika.",
+ "search_scope_pl": "7 zapytań WebSearch (tryb extended), angielskie, wyniki US-only: fraza naturalna (should I file... or pay out of pocket), krótka kategoria (file a claim or not calculator), terminologia alternatywna (break-even, surcharge, claims-free discount, nonrenewal risk estimator), Reddit/forum (hail roof claim reddit – brak wątków Reddit w wynikach), aplikacje płatne/narzędzia doradcze (app/software, public adjuster review tool), auto (how much will my insurance go up after a claim calculator), popyt/rynek (nonrenewals rising 2026). WebFetch zablokowany – żadna strona nie została otwarta; nie testowano formularzy, nie widziano paywalli. Nie sprawdzono osobno: arkuszy/szablonów (Google Sheets/Excel), App Store dla kalkulatorów, Policygenius/ValuePenguin/Bankrate (nie pojawiły się w wynikach), narzędzi wewnątrz portali ubezpieczycieli za logowaniem.",
+ "demand_signals": [
+  {
+   "signal_pl": "Duzi wydawcy afiliacyjni ubezpieczeń (MoneyGeek, The Zebra, LendingTree, Insurify, CNBC Select, WalletHub, autoinsurance.com, Insure.com) mają osobne artykuły 'how much does car insurance go up after an accident' – silny sygnał popytu na pytanie o skutki zgłoszenia szkody auto (wolumenów nie widać).",
+   "url": "https://www.thezebra.com/auto-insurance/accidents/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Strona home: Insure.com 'Will my homeowners insurance go up if I file a claim?' oraz liczne strony dekarzy i kancelarii o szkodach gradowych ('Is hail damage worth claiming', 'Will filing a roof claim increase my insurance') – rynek treści wokół dokładnie tej decyzji.",
+   "url": "https://www.insure.com/home-insurance/one-claim.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kiplinger publikuje poradnik 'Hail Damage Insurance Claims: Are They Worth the Hassle?' – temat w mediach finansów osobistych.",
+   "url": "https://www.kiplinger.com/personal-finance/home-insurance/hail-damage-insurance-claims-is-filing-worth-the-cost-and-hassle",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieje kilka niszowych kalkulatorów 'file or pay' (Calcbee, AdvoraHQ, Toolzie, The Zebra) – podaż narzędzi sugeruje popyt wyszukiwaniowy, ale też nasycenie.",
+   "url": "https://advorahq.com/file-claim-or-pay-out-of-pocket/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Nieodnowienia polis domowych rosną w 2026 (NerdWallet, poradniki agencji); doradcy zalecają unikanie małych szkód – podnosi wagę pytania 'czy zgłosić' i składnika ryzyka nieodnowienia.",
+   "url": "https://www.nerdwallet.com/insurance/homeowners/learn/home-insurance-nonrenewal",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Kalifornia: SB 1301 (rozdział 693, Statutes of 2026) ogranicza nieodnowienie wyłącznie na podstawie niektórych szkód, zapytań i wieku dachu – temat ważny regulacyjnie (jednocześnie zmiana reguł do utrzymywania).",
+   "url": "https://calmatters.digitaldemocracy.org/bills/ca_202520260sb1301",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Insuranceopedia sprzedaje claim kit za $99 za szkodę z darmowym werdyktem 'should you file' – sygnał gotowości do płacenia za pomoc w tej decyzji (deklaracja producenta).",
+   "url": "https://www.insuranceopedia.com/insurance-claim-help",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: miliony gospodarstw w USA co roku mają szkodę auto lub domową bliską progu opłacalności; brak danych liczbowych z wyszukiwań – nie traktować jako miesięcznego popytu. Brak wątków Reddit w wynikach nie dowodzi braku dyskusji forumowej.",
+   "url": "brak URL – hipoteza",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI: wysokie. Przykładowy prompt (szkoda $9,500, udział $2,500, szkoda wodna 2 lata temu) to prosta arytmetyka: wypłata $7,000 vs dopłata (np. 16–49% składki przez 3–5 lat) – asystent poda zakres, ostrzeże o drugiej szkodzie w 5 lat i ryzyku nieodnowienia, a ChatGPT Intelligent UI (od 7.10.2026) i Google AI Mode (od 19.08.2026) mogą od razu wyrenderować kalkulator. Kluczowe dane (dopłaty konkretnego ubezpieczyciela w danym stanie, reguły nieodnowienia) nie są publiczne w ustrukturyzowanej formie – nie ma ich ani AI, ani nasz produkt, więc przewaga 'świeżych danych' jest ograniczona. Szansa na odesłanie do zewnętrznego narzędzia: gdy produkt opublikuje cytowalną, źródłowaną tabelę dopłat wg typu szkody/stanu i reguł stanowych (TX, CA SB 1301 itd.) oraz audytowalne scenariusze nieodnowienia i wariant wymiany dachu – wtedy może być cytowany jako źródło, a nie jako kalkulator.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzja 'zgłosić czy zapłacić sam' dotyczy szerokiej grupy właścicieli domów i aut; widoczny popyt pytaniowy (wielu dużych wydawców i lokalnych firm pisze o podwyżkach po szkodzie), rosnące nieodnowienia 2026 zwiększają wagę pytania.",
+   "evidence_pl": "Artykuły MoneyGeek/Zebra/LendingTree/Insurify/CNBC/WalletHub o podwyżkach po wypadku; Insure.com i Kiplinger o szkodach domowych/gradowych; NerdWallet o rosnących nieodnowieniach; istnienie kilku kalkulatorów niszowych.",
+   "gaps_pl": "Brak wolumenów wyszukiwań, brak liczby szkód rocznie z wyszukiwań, brak wątków Reddit w wynikach; popyt na samo narzędzie (a nie artykuł) niezmierzony.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 2,
+   "rationale_pl": "Nie znaleziono bezpośredniego konkurenta, ale darmowe kalkulatory (Calcbee, AdvoraHQ, Toolzie, The Zebra) pokrywają rdzeń wieloletniego rachunku; pozostała luka (nieodnowienie jako scenariusz, wymiana dachu, % udziały, zakresy) to rozszerzenia, których brak u konkurentów jest niezweryfikowany. Insuranceopedia deklaruje werdykt 'should you file'.",
+   "evidence_pl": "Search-summary Calcbee: wypłata − (dopłata × lata + utracona zniżka); AdvoraHQ: break-even; Zebra: kalkulator szkody auto; Insuranceopedia: werdykt + odczyt deklaracji polisy.",
+   "gaps_pl": "Żadna strona nie została otwarta; nie wiadomo, czy Calcbee/Insuranceopedia modelują liczbę wcześniejszych szkód i nieodnowienie; nie sprawdzono arkuszy ani App Store.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Obliczenie jest krótkie i oparte na średnich, które asystent zna; generatywne UI w ChatGPT i Google AI Mode renderuje kalkulator w odpowiedzi. Odesłanie do zewnętrznego narzędzia prawdopodobne tylko przy cytowalnych, aktualnych danych stanowych i audytowalnych scenariuszach.",
+   "evidence_pl": "Średnie podwyżki szeroko opublikowane (Insurify, MoneyGeek, LendingTree, Insure.com); kontekst zadania o Intelligent UI (7.10.2026) i AI Mode (19.08.2026).",
+   "gaps_pl": "Nie testowano, jak asystenci odpowiadają na przykładowy prompt i czy cytują kalkulatory.",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsument z USA w momencie szkody: ubezpieczenia domu i auta (porównywarki, zmiana ubezpieczyciela po obawie nieodnowienia), usługi domowe (dekarze, renowacja po zalaniu), auto (blacharstwo) – najwyżej płatne wertykały, bez ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "Wyniki zdominowane przez afiliacyjnych wydawców ubezpieczeniowych i firmy dekarskie/renowacyjne oraz kancelarie – sygnał wartości reklamowej tematu.",
+   "gaps_pl": "Brak danych CPC/RPM; silna konkurencja SEO dużych wydawców może ograniczyć ruch; część ruchu przejmą odpowiedzi AI.",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Logika prosta (przepływy składki w 3–5 latach, scenariusze), brak potrzeby API. Dane (średnie podwyżki wg typu szkody, czas trwania dopłat, reguły stanowe) są publiczne, ale miękkie i zmieniają się co rok; reguły stanowe (np. CA SB 1301 z 2026) wymagają okresowego przeglądu.",
+   "evidence_pl": "Rozbieżne średnie w źródłach (home 16–28%, druga szkoda do 49%; auto z winy 34–49%); różnice ubezpieczycieli 24,3% vs 58,1%; nowe ustawy CA/LA w 2026.",
+   "gaps_pl": "Brak wolnego, ustrukturyzowanego zbioru dopłat wg ubezpieczyciela/stanu; nie sprawdzono, ile stanów ma reguły dotyczące dopłat po szkodach.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błąd zwykle kosztuje kilka tysięcy USD, ale rada 'nie zgłaszaj' może prowadzić do przekroczenia terminów zgłoszenia lub pominięcia szkód osobowych, a 'zgłoś' – do nieodnowienia na trudnym rynku. Wyniki są z natury niepewne (duży rozrzut między ubezpieczycielami), w grę wchodzi interpretacja polis i prawa stanowego.",
+   "evidence_pl": "Terminy zgłaszania szkód burzowych bywają krótkie (6–12 mies. wg jednego źródła); rozbieżne opinie o wpływie pojedynczej szkody pogodowej; reguły TX/CA różne.",
+   "gaps_pl": "Nie zweryfikowano przepisów stanowych w źródłach pierwotnych poza rekordem CA SB 1301.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 4,
+   "rationale_pl": "Wykorzystuje oś czasu przepływów (składka × lata), moduł udziałów własnych i scenariuszy ryzyka; rodzi produkty siostrzane w rodzinie ubezpieczeń: wybór udziału własnego (break-even), opłacalność claim forgiveness/ochrony zniżki, rezerwa na procentowy udział huraganowy, rezygnacja z AC (collision) w starym aucie, timing wymiany dachu wobec ACV/nieodnowienia.",
+   "evidence_pl": "Źródła łączą tematy: wybór udziału własnego (COUNTRY, Switchwize), claim forgiveness, procentowe udziały wind/hail (Kiplinger), nieodnowienie z powodu wieku dachu.",
+   "gaps_pl": "Słabe powiązanie z modułami podatkowymi, energetycznymi i wartości domu.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Wysoki potencjał reklamowy (ubezpieczenia, dekarze, auto) i realny popyt pytaniowy, ale rdzeń rachunku jest już darmowo dostępny (Calcbee, AdvoraHQ, Toolzie, The Zebra), a ryzyko, że AI rozwiąże to samo, jest wysokie. Średnia ważona ok. 3,35/5. Zanim zapadnie decyzja o pilocie: (1) ręcznie otworzyć Calcbee, AdvoraHQ, Toolzie, kalkulator The Zebra i Insuranceopedia Claims Assistant i sprawdzić, czy modelują wcześniejsze szkody, nieodnowienie i procentowe udziały własne; (2) sprawdzić, jak ChatGPT/Google AI Mode odpowiadają na przykładowy prompt i czy cytują narzędzia; (3) oszacować wolumen fraz 'should I file a claim' (home + auto). Kryterium odrzucenia jako osobnego produktu: jeśli którykolwiek darmowy konkurent pokrywa nieodnowienie i liczbę wcześniejszych szkód. Wtedy budować to jako moduł w szerszym symulatorze ubezpieczeniowym (udział własny / rezerwa na katastrofę / wymiana dachu), a nie jako osobną stronę.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "should I file a homeowners insurance claim or pay out of pocket calculator premium increase",
+   "url": "https://calcbee.com/calculators/insurance/home/claim-frequency-impact/",
+   "competitor": "Calcbee – Claim Frequency Impact on Premium Calculator",
+   "features_checked": "wypłata vs dopłata × lata; utracona zniżka za bezszkodowość; częstotliwość szkód; nieodnowienie; wymiana dachu; zakresy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; brak informacji o loginie/paywallu",
+   "conclusion": "Partial, najbliższy rdzeniowi: formuła wypłata − (roczna dopłata × lata + utracona zniżka). Nieodnowienie, wymiana dachu, zakresy – niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a homeowners insurance claim or pay out of pocket calculator premium increase",
+   "url": "https://advorahq.com/file-claim-or-pay-out-of-pocket/",
+   "competitor": "AdvoraHQ – File Claim or Pay Out of Pocket break-even",
+   "features_checked": "break-even zgłoszenie vs płatność własna; horyzont dopłaty 3–7 lat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: rachunek progu opłacalności; interaktywność i dodatkowe zależności niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a homeowners insurance claim or pay out of pocket calculator premium increase",
+   "url": "https://www.countryfinancial.com/en/planning/common-topics/insurance-coverage/calculate-homeowners-insurance-deductible.html",
+   "competitor": "COUNTRY Financial – Calculate homeowners insurance deductible",
+   "features_checked": "metoda wypłata vs podwyżka × 3–5 lat; break-even wyższego udziału własnego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Notatka z fali 1 potwierdzona; partial – metoda opisowa, nie zintegrowany symulator.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I file a homeowners insurance claim or pay out of pocket calculator premium increase",
+   "url": "https://www.insure.com/home-insurance/one-claim.html",
+   "competitor": "Insure.com – Will my homeowners insurance go up if I file a claim?",
+   "features_checked": "dane o podwyżkach po szkodzie (typ szkody, kolejne szkody)",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść); źródło średnich danych do modelu, nie narzędzie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "file a claim or not calculator",
+   "url": "https://toolzie.ca/insurance_deductible_calculator/",
+   "competitor": "Toolzie – Insurance Deductible Calculator — Should I File a Claim?",
+   "features_checked": "naprawa vs udział własny vs podwyżka; reguła 2× udział własny; uwagi o nieodnowieniu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; domena .ca – kalibracja USA niezweryfikowana",
+   "conclusion": "Partial: prosty kalkulator decyzji; wieloletni model i scenariusze niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "file a claim or not calculator",
+   "url": "https://www.thezebra.com/auto-insurance/accidents/car-insurance-claims/",
+   "competitor": "The Zebra – When and How to File a Car Insurance Claim [Calculator]",
+   "features_checked": "kalkulator zgłoszenia szkody auto; podwyżka 25–50% na 3 lata; kiedy zgłaszać zawsze",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial dla auto; zakres obliczeń kalkulatora niezweryfikowany; brak home.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "file a claim or not calculator",
+   "url": "https://www.palmbld.com/tools/insurance-claim-estimator",
+   "competitor": "Palmbld – Insurance Claim Calculator (ACV vs RCV & Denial Risk)",
+   "features_checked": "szacunek wypłaty ACV/RCV; ryzyko odmowy",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial – fragment (wysokość wypłaty), bez rachunku składki w czasie (niezweryfikowane).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "insurance claim break-even surcharge years claims-free discount nonrenewal risk estimator",
+   "url": "https://insurancecurator.com/comprehensive-vs-collision-cost-tradeoffs-and-when-filing-a-claim-is-worth-the-premium-hit/",
+   "competitor": "Insurance Curator – when filing a claim is worth the premium hit",
+   "features_checked": "scenariusze niskiej/średniej/wysokiej dopłaty; horyzont; nieodnowienie przy 2–3 szkodach w 3 lata",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (artykuł) – opisuje metodę scenariuszową, którą produkt chce automatyzować; nie narzędzie.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "insurance claim break-even surcharge years claims-free discount nonrenewal risk estimator",
+   "url": "https://www.statefarm.com/simple-insights/auto-and-vehicles/will-my-insurance-increase-after-a-claim",
+   "competitor": "State Farm – Will My Insurance Increase After a Claim?",
+   "features_checked": "treść ubezpieczyciela o podwyżkach po szkodzie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Substitute (treść ubezpieczyciela); brak narzędzia w summary.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit hail roof claim deductible worth filing premium increase nonrenewal",
+   "url": "https://www.kiplinger.com/personal-finance/home-insurance/hail-damage-insurance-claims-is-filing-worth-the-cost-and-hassle",
+   "competitor": "Kiplinger – Hail Damage Insurance Claims: Are They Worth the Hassle?",
+   "features_checked": "reguła szkoda vs udział własny; procentowe udziały wind/hail 1–5%",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; brak wątków Reddit w wynikach",
+   "conclusion": "Substitute (treść); potwierdza znaczenie procentowych udziałów własnych.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app or software helps homeowners decide whether to file insurance claim, public adjuster claim review tool",
+   "url": "https://www.insuranceopedia.com/insurance-claim-help",
+   "competitor": "Insuranceopedia – Claims Assistant",
+   "features_checked": "werdykt should-you-file; odczyt deklaracji polisy; cena $99 za claim kit",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatny claim kit $99/szkoda, werdykt darmowy bez rejestracji (deklaracja producenta)",
+   "conclusion": "Partial, potencjalnie najbliżej pełnej decyzji; metoda werdyktu (dopłaty, nieodnowienie) niezweryfikowana – priorytet ręcznej weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "app or software helps homeowners decide whether to file insurance claim, public adjuster claim review tool",
+   "url": "https://www.myhavn.ai/",
+   "competitor": "Havn.ai",
+   "features_checked": "organizacja roszczenia; czy doradza zgłosić/nie zgłosić",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; cennik niezweryfikowany",
+   "conclusion": "Substitute; wprost nie mówi użytkownikowi, co zrobić ze szkodą.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "how much will my insurance go up after a claim calculator car accident",
+   "url": "https://www.moneygeek.com/insurance/auto/how-much-does-car-insurance-go-up-after-an-accident/",
+   "competitor": "MoneyGeek / Insurify / LendingTree / WalletHub – artykuły o podwyżkach po wypadku",
+   "features_checked": "średnie podwyżki z winy/bez winy; różnice między ubezpieczycielami; okres 3–5 lat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute/źródła danych; summary stwierdza brak spersonalizowanego kalkulatora w wynikach.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "homeowners insurance nonrenewals rising 2026 small claims fear of filing",
+   "url": "https://calmatters.digitaldemocracy.org/bills/ca_202520260sb1301",
+   "competitor": "Nie konkurent – regulacja CA SB 1301 (rozdział 693, 2026)",
+   "features_checked": "ograniczenia nieodnowienia z powodu szkód/zapytań/wieku dachu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Reguła stanowa do uwzględnienia w ostrzeżeniach; zwiększa koszt utrzymania i ryzyko interpretacji.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(fala 1 – notatki; w tej fali nie pojawiły się w wynikach)",
+   "url": "brak URL – nie pojawił się w wynikach",
+   "competitor": "Policygenius / ValuePenguin / Bankrate – artykuły 'when to file a claim'",
+   "features_checked": "nie sprawdzono w tej fali",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: brak – nazwy z wiedzy modelu (fala 1)",
+   "conclusion": "Niezweryfikowane; prawdopodobnie treść (substitute/partial), nie zintegrowany symulator.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "(fala 1 – notatki; nie sprawdzano ponownie)",
+   "url": "https://www.thezebra.com/ask/raise-deductible-lower-bill/",
+   "competitor": "The Zebra – Ask an Agent (raise deductible)",
+   "features_checked": "porada o podniesieniu udziału własnego",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary z fali 1 (w tej fali nie pojawiła się)",
+   "conclusion": "Substitute o niskiej trafności (decyzja przed szkodą); istotniejszy jest kalkulator szkody auto The Zebra znaleziony w tej fali.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I file a homeowners insurance claim or pay out of pocket calculator premium increase",
+  "file a claim or not calculator",
+  "insurance claim break-even surcharge years claims-free discount nonrenewal risk estimator",
+  "reddit hail roof claim deductible worth filing premium increase nonrenewal",
+  "app or software helps homeowners decide whether to file insurance claim, public adjuster claim review tool",
+  "how much will my insurance go up after a claim calculator car accident",
+  "homeowners insurance nonrenewals rising 2026 small claims fear of filing"
+ ]
+}

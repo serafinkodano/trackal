@@ -1,0 +1,457 @@
+{
+ "id": "HOME-02",
+ "competitors": [
+  {
+   "name": "RentUPM - Rent vs Sell Calculator",
+   "url": "https://www.rentupm.com/rent-vs-sell/calculator/",
+   "type": "partial",
+   "access": "darmowy, strona firmy zarządzającej najmem (lead-gen); strona nieotwierana",
+   "covers_pl": "Wg search-summary pokazuje tabelę rok po roku: cash-flow z najmu, equity i wpływy ze sprzedaży z kosztami sprzedaży i podatkiem od zysku kapitałowego w ostatnim roku. Pokrywa porównanie 'sprzedaj teraz' z 'wynajmuj N lat i sprzedaj'.",
+   "misses_or_unverified_pl": "Niezweryfikowane: liczenie daty granicznej okna 121, oddzielenie recapture amortyzacji (25%) od wyłączonego zysku, wartość niskiego kredytu jako osobny wynik, wpływ zamrożonego kapitału na wkład i ratę nowego domu, porównanie property managera z samodzielnym zarządzaniem, najem średnioterminowy (mid-term), wrażliwość."
+  },
+  {
+   "name": "NorthPoint Asset Management - Rent vs Sell Calculator",
+   "url": "https://northpointam.com/rent-sell-calculator",
+   "type": "partial",
+   "access": "darmowy (lead-gen PM); strona nieotwierana",
+   "covers_pl": "Pojawił się w 4 z 7 zapytań, w tym w zapytaniu o recapture i regułę '2 out of 5', więc prawdopodobnie porusza temat wyłączenia. Search-summary opisuje ogólnie model obu ścieżek: sprzedaż minus koszty i podatek kontra najem rok po roku.",
+   "misses_or_unverified_pl": "Konkretne funkcje NorthPoint nie zostały w summary przypisane do tej strony. Zegar 121, recapture, nowy dom i wartość niskiej stopy są niezweryfikowane."
+  },
+  {
+   "name": "Stratton Vantage - Rent vs Sell Calculator",
+   "url": "https://strattonvantage.com/rent-sell-calculator",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "5-letnie porównanie wartości netto (cash-flow, wzrost cen, spłata kapitału) z wariantem 'sprzedaj i zainwestuj'. Wejścia: wartość domu, saldo kredytu, czynsz, wzrost cen, próg podatkowy, podatki od nieruchomości, ubezpieczenie, opłata za zarządzanie. Podaje rekomendację, a niską stopę kredytu wymienia jako powód zatrzymania domu.",
+   "misses_or_unverified_pl": "Stały 5-letni horyzont: wariant 'sprzedaj przed końcem okna 121' (ok. 3 lata) jest niezweryfikowany. Recapture, wpływ na ratę nowego domu, mid-term i analiza wrażliwości są niezweryfikowane."
+  },
+  {
+   "name": "Financial Aha - Rent vs Sell Calculator (+ szablon arkusza)",
+   "url": "https://www.financialaha.com/financial-calculators/rent-vs-sell-calculator/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Wejścia: wartość domu, saldo i oprocentowanie kredytu, wzrost cen, koszty sprzedaży, stawka podatku od zysków, stopa zwrotu z inwestycji. Udostępnia też szablon arkusza.",
+   "misses_or_unverified_pl": "Niezweryfikowane: data graniczna 121, recapture, wartość niskiej stopy, nowy dom, warianty zarządzania i mid-term."
+  },
+  {
+   "name": "NARPM - Rent vs Sell Calculator",
+   "url": "https://www.narpm.org/members/resources/rent-vs-sell-calculator/",
+   "type": "partial",
+   "access": "Ścieżka '/members/' sugeruje, że narzędzie może wymagać logowania członka (niezweryfikowane). Strona nieotwierana.",
+   "covers_pl": "Wejścia: cena zakupu, początkowe i bieżące saldo kredytu, oprocentowanie, koszty sprzedaży, stopa reinwestycji po podatku. Narzędzie stowarzyszenia, którego członkowie (firmy zarządzające najmem) używają go przy pozyskiwaniu klientów.",
+   "misses_or_unverified_pl": "Zegar 121, recapture, nowy dom, mid-term i wrażliwość: niezweryfikowane."
+  },
+  {
+   "name": "Opesway - Sell or Keep the House Calculator",
+   "url": "https://www.opesway.com/tool/sell-or-keep-the-house",
+   "type": "partial",
+   "access": "darmowy (dostęp do pełnej funkcjonalności niezweryfikowany); strona nieotwierana",
+   "covers_pl": "Porównuje majątek przy zatrzymaniu domu (equity, przyszła wartość, przychód z najmu minus koszty utrzymania) z majątkiem po sprzedaży (po kosztach sprzedaży i podatku od zysku). Pokazuje wpływ długoterminowy.",
+   "misses_or_unverified_pl": "Niezweryfikowane: termin 121, recapture, wartość niskiej stopy, rata nowego domu, PM vs samodzielnie, mid-term."
+  },
+  {
+   "name": "BiggerPockets - Keep or Sell (Seller Keep) analysis",
+   "url": "https://www.biggerpockets.com/blog/money-572",
+   "type": "partial",
+   "access": "Wg summary narzędzie jest dostępne dla członków BiggerPockets Pro (płatna subskrypcja). Strona nieotwierana.",
+   "covers_pl": "Arkusz 'Keep or Sell' dla inwestorów. Przykład z podcastu pokazuje zatrzymanie domu z nisko oprocentowanym kredytem jako najmu z dobrym cash-flow w pierwszym roku.",
+   "misses_or_unverified_pl": "Za paywallem. Zegar 121, recapture, nowy dom i warianty niezweryfikowane. Narzędzie jest kierowane do inwestorów, nie do relokującej się rodziny."
+  },
+  {
+   "name": "MortgageFig / The Mortgage Curve - Sell vs Rent Calculator",
+   "url": "https://www.mortgagefig.com/sell-vs-rent-calculator",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Summary opisuje kalkulatory z tej grupy jako modelujące obie ścieżki obok siebie: sprzedaż (koszty, spłata kredytu, odświeżenie domu, podatek) i najem rok po roku (pustostany, zarządzanie, utrzymanie, HOA, ubezpieczenie, podatki, zysk z najmu opodatkowany stawką krańcową). Przypisanie tych funkcji do konkretnej strony jest niepewne. Drugi URL: https://themortgagecurve.com/sell-vs-rent",
+   "misses_or_unverified_pl": "Niezweryfikowane: data graniczna 121 jako wynik, recapture, wartość niskiej stopy, nowy dom, mid-term."
+  },
+  {
+   "name": "Financial Web Tools - Sell Decision Tool",
+   "url": "https://financialwebtools.com/tools/sell-decision/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Proste porównanie sprzedaży z zatrzymaniem domu.",
+   "misses_or_unverified_pl": "Wg summary nie modeluje szczegółowo pełnych podatków, recapture amortyzacji, refinansowania ani amortyzacji kredytu. Słaby fragment problemu."
+  },
+  {
+   "name": "RentBumper - Sell vs. Rent Calculator",
+   "url": "https://www.rentbumper.com/sell-vs-rent-calculator/",
+   "type": "partial",
+   "access": "darmowy; strona nieotwierana",
+   "covers_pl": "Pojawił się w zapytaniu o recapture i regułę '2 out of 5'. Jeden z kalkulatorów w wynikach uczciwie przyznaje, że stosuje jedną stawkę do całego zysku jako uproszczenie (która strona to robi, jest nieustalone).",
+   "misses_or_unverified_pl": "Konkretne funkcje niezweryfikowane: zegar 121, rozdział recapture, nowy dom, wartość niskiej stopy."
+  },
+  {
+   "name": "Klaster lokalnych PM/brokerów (RL PMG, Eaton Realty [Excel], San Diego PM/Harland, Kenny Realty, Stowers, Boise PM, SA Rents, Sheepdog PM, Dagwood, Bellhaven)",
+   "url": "https://rlpmg.com/rent-vs-sell-calculator/",
+   "type": "partial",
+   "access": "darmowe, lead-gen firm zarządzających najmem; Eaton oferuje plik Excel; strony nieotwierane",
+   "covers_pl": "Kilkanaście niemal identycznych kalkulatorów: koszty sprzedaży, podatek od zysku, parametry kredytu, czynsz, pustostany, zarządzanie i utrzymanie. SA Rents podaje koszty sprzedaży na poziomie 7-9%. Inne URL: https://www.eatonrealty.com/blog/selling/free-rent-vs-sell-calculator, https://www.sarents.com/rent-vs-sell-calculator, https://www.sheepdogpm.com/rent-vs-sell-calculator/, https://www.bellhaven.org/tools/rent-vs-sell-calculator",
+   "misses_or_unverified_pl": "Tendencyjnie promują najem, bo to model biznesowy PM. Integracja 121 + recapture + nowy dom jest niezweryfikowana. Ich liczba świadczy o zatłoczonym SERP."
+  },
+  {
+   "name": "Overline IQ - Keep vs. Sell a Rental Property calculator",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "type": "partial",
+   "access": "darmowy (zakres niezweryfikowany); strona nieotwierana",
+   "covers_pl": "Decyzja keep vs sell dla nieruchomości, która już jest wynajmowana. Ta sama firma pisze o pułapce bazy przy konwersji domu na najem.",
+   "misses_or_unverified_pl": "Sąsiedni problem (istniejący najem, nie konwersja przy przeprowadzce). Zegar 121 i nowy dom są niezweryfikowane."
+  },
+  {
+   "name": "1031 Specialists - Depreciation Recapture Calculator",
+   "url": "https://www.1031specialists.com/depreciation-recapture-calculator",
+   "type": "partial",
+   "access": "darmowy (lead-gen 1031); strona nieotwierana",
+   "covers_pl": "Liczy recapture amortyzacji przy sprzedaży nieruchomości na wynajem.",
+   "misses_or_unverified_pl": "Kalkulator jednozadaniowy: nie porównuje sprzedaży z najmem, nie liczy okna 121, niskiej stopy ani nowego domu."
+  },
+  {
+   "name": "SmartFinance.fyi - 'Should I Sell My House or Rent It Out? Complete Calculator Guide for 2026'",
+   "url": "https://smartfinance.fyi/articles/should-i-sell-my-house-or-rent-it-out-calculator-guide",
+   "type": "substitute",
+   "access": "artykuł/przewodnik; czy zawiera interaktywny kalkulator, jest niezweryfikowane; strona nieotwierana",
+   "covers_pl": "Pojawił się w 3 zapytaniach (język naturalny, Reddit/arkusz, deadline wyłączenia). Prawdopodobnie omawia okno 3 lat i zasady liczenia.",
+   "misses_or_unverified_pl": "Interaktywność i zakres modelu niezweryfikowane."
+  },
+  {
+   "name": "HomeApproach - Rent vs Sell Home in Relocation: Cash Flow & Tax Analysis",
+   "url": "https://www.homeapproach.com/blog/rent-vs-sell-relocation-guide",
+   "type": "substitute",
+   "access": "artykuł; strona nieotwierana",
+   "covers_pl": "Treść celowana dokładnie w moment relokacji: cash-flow i analiza podatkowa.",
+   "misses_or_unverified_pl": "Narzędzie interaktywne niezweryfikowane. To konkurent w SEO i cytowaniach AI, nie w funkcji."
+  },
+  {
+   "name": "Doradcy finansowi / CPA (Noda Wealth, Morkel Financial, Kitces, The Real Estate CPA)",
+   "url": "https://www.nodawealth.com/blog/should-i-rent-or-sell-my-house-when-i-move",
+   "type": "substitute",
+   "access": "treści darmowe; usługa doradcy lub CPA płatna; strony nieotwierane",
+   "covers_pl": "Ramy decyzji z przykładami liczbowymi. Noda pokazuje ujemny cash-flow (-$117/mies.) po doliczeniu zarządzania, pustostanów, utrzymania i ubezpieczenia. Morkel liczy koszt przekroczenia terminu 121 (przykład: ok. $9,8k vs $71k federalnie). Kitces omawia strategie podatkowe konwersji. Inne URL: https://morkelfinancial.com/blog/rent-out-my-house-or-sell-it, https://www.kitces.com/blog/primary-residence-rental-tax-planning-strategies-cost-1031-exchange-1152-plan-121-agi-scorp/",
+   "misses_or_unverified_pl": "Brak samoobsługowego modelu wielowariantowego (wg summary). Doradca jest płatny i niedostępny od ręki."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT z Intelligent UI od 7.10.2026, Google AI Mode z interaktywnymi narzędziami od 19.08.2026, Claude, Gemini, Perplexity)",
+   "url": "brak - nie pojawił się w wynikach (nie wyszukiwano)",
+   "type": "substitute",
+   "access": "darmowe lub freemium",
+   "covers_pl": "Odpowiadają na sample prompt jakościowo: kredyt zostaje przy pożyczce, okno 2 z 5 lat (ok. 3 lata), recapture. Mogą wyrenderować formularz lub kalkulator i policzyć prosty 3-5-letni scenariusz.",
+   "misses_or_unverified_pl": "Spójność i audytowalność wielookresowego modelu z 6 wariantami i wrażliwością niezweryfikowane. Ryzyko błędów podatkowych: same summary wyszukiwarki pomyliły zasadę nonqualified use i podważały regułę 3 lat."
+  },
+  {
+   "name": "SmartAsset Capital Gains Tax Calculator (z notatek wave-1, oznaczony tam jako 'direct')",
+   "url": "brak - nie pojawił się w wynikach tej sesji",
+   "type": "partial",
+   "access": "niezweryfikowane w tej sesji",
+   "covers_pl": "Jeśli istnieje w opisanej formie, liczy podatek od zysku kapitałowego. Klasyfikacja wave-1 jako 'direct' jest błędna: to jednozadaniowy kalkulator, który nie porównuje sprzedaży z najmem.",
+   "misses_or_unverified_pl": "Istnienie i funkcje niezweryfikowane w tej sesji. Na pewno nie integruje najmu, okna 121 ani nowego domu."
+  },
+  {
+   "name": "DealCheck / Mashvisor / Bogleheads (z notatek wave-1)",
+   "url": "brak - nie pojawiły się w wynikach tej sesji",
+   "type": "substitute",
+   "access": "DealCheck i Mashvisor to aplikacje freemium lub płatne (niezweryfikowane); Bogleheads to forum",
+   "covers_pl": "Narzędzia analizy najmu dla inwestorów (cash-flow, ROI) oraz dyskusje forumowe jako zamiennik.",
+   "misses_or_unverified_pl": "W tej sesji nie potwierdzono ich istnienia ani zakresu funkcji. Zegar 121 i nowy dom niezweryfikowane."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 wyszukiwań extended (US), wyłącznie search-summary, stron nie otwierano. Pewność: niska-średnia. Kategoria 'rent vs sell calculator' jest mocno zatłoczona: ponad 15 darmowych kalkulatorów, głównie lead-gen firm zarządzających najmem i brokerów (RentUPM, NorthPoint, Stratton Vantage, NARPM, Financial Aha, Opesway, MortgageFig i inne) oraz płatny BiggerPockets Keep or Sell. Pokrywają one rdzeń: sprzedaż teraz z reinwestycją kontra najem przez N lat (często 5) z cash-flow, wzrostem cen, kosztami sprzedaży i podatkiem od zysku. Luka dotyczy integracji, nie kategorii. W żadnym summary nie potwierdzono narzędzia, które jednocześnie: (1) liczy datę graniczną wyłączenia Sec. 121 od daty wyprowadzki i traktuje 'najem N lat i sprzedaż przed terminem' jako osobny, optymalizowany wariant; (2) oddziela recapture amortyzacji ('allowed or allowable', do 25%) od wyłączonego zysku; (3) pokazuje wartość niskiego kredytu (np. PV różnicy stóp) jako osobny wynik; (4) łączy kapitał zamrożony w starym domu z wkładem i ratą nowego domu; (5) porównuje PM z samodzielnym zarządzaniem i najem średnioterminowy; (6) daje wrażliwość na ceny, czynsze i pustostany. Te funkcje w kalkulatorach PM są niezweryfikowane, a nie 'brak'. Część z nich, zwłaszcza NorthPoint i RentBumper pojawiające się przy zapytaniach o recapture i '2 out of 5', może już obsługiwać wyłączenie lub recapture. Przed budową trzeba to sprawdzić ręcznie. Luka jest wąska i łatwa do skopiowania przez istniejących graczy.",
+ "search_scope_pl": "7 wyszukiwań WebSearch w trybie extended (limit wykorzystany), rynek US, angielskie zapytania: problem w języku naturalnym, krótka kategoria, alternatywna terminologia (konwersja na najem / Sec. 121 / recapture), narzędzia płatne i dla doradców, arkusze/Reddit, 'sell now vs rent then sell later' oraz recapture + '2 out of 5'. WebFetch zablokowany: żadnej strony nie otwarto, nie testowano formularzy, nie widziano paywalli. Dowody pochodzą wyłącznie z podsumowań wyszukiwarki. Wątki Reddit nie pojawiły się w wynikach. Oprogramowania dla doradców (RightCapital, eMoney itp.) nie znaleziono w wynikach, co nie oznacza, że nie mają takiej funkcji. Notatki wave-1 (SmartAsset, DealCheck, Mashvisor, Bogleheads, HomeLight, Zillow) pozostają niezweryfikowane.",
+ "demand_signals": [
+  {
+   "signal_pl": "Duże portale finansowe piszą o tym dylemacie (lock-in niskiej stopy przy przeprowadzce), np. Yahoo Finance: 'You locked in a low mortgage rate — now you want to move'.",
+   "url": "https://finance.yahoo.com/personal-finance/mortgages/article/selling-your-house-when-you-have-a-low-mortgage-interest-rate-205501072.html",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Redfin ma zarówno wpis blogowy, jak i przewodnik 'Should I Sell or Rent My House?'. To portal o dużym ruchu inwestujący w ten temat.",
+   "url": "https://www.redfin.com/blog/should-you-sell-or-rent-your-home/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Ponad 15 firm zarządzających najmem i brokerów z różnych miast utrzymuje własne kalkulatory 'rent vs sell', a NARPM udostępnia je członkom. Wskazuje to na stały ruch wyszukiwań, wartościowy dla lead-gen (brak danych o wolumenie).",
+   "url": "https://www.narpm.org/members/resources/rent-vs-sell-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Według artykułu PM w połowie 2026 średnia stopa 30-letnia wynosi ok. 6,5%. Luka między nią a kredytami 2,9-3% nadal istnieje, więc problem jest aktualny (źródło marketingowe PM).",
+   "url": "https://1836propertymanagement.com/should-i-sell-or-rent-my-house/",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Temat przenika do branż pobocznych (firma przeprowadzkowa pisze 'Renting Your Way to a Move: How to Break Free From the Lock-In'), co sygnalizuje szerokie zainteresowanie konsumentów.",
+   "url": "https://www.littleguys.com/news/renting-your-way-to-a-move-break-free-from-lock-in",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Stawka decyzji jest wysoka: w przykładzie doradcy przekroczenie terminu 121 o jeden dzień zmienia podatek federalny z ok. $9,8k na ok. $71k (ilustracja jednego bloga). Motywuje to do szukania precyzyjnego narzędzia.",
+   "url": "https://morkelfinancial.com/blog/rent-out-my-house-or-sell-it",
+   "evidence_type": "estimate"
+  },
+  {
+   "signal_pl": "Treści celowane w moment relokacji ('Rent vs Sell Home in Relocation') oraz w doradców ('A Financial Planner's Framework') potwierdzają, że moment decyzji jest rozpoznawalny.",
+   "url": "https://www.homeapproach.com/blog/rent-vs-sell-relocation-guide",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: co roku znaczna część właścicieli, którzy się przeprowadzają (z kilku mln transakcji domów rocznie), ma kredyt poniżej 4%. W tej sesji nie znaleziono liczby osób rozważających najem zamiast sprzedaży ani wolumenu zapytań.",
+   "url": "brak - brak źródła w wynikach",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest średnio-wysokie. Na sample prompt ChatGPT, Gemini i Claude dają poprawną jakościowo odpowiedź: kredyt zostaje przy pożyczce, test 2 z 5 lat (sprzedaż do ok. 3 lat po wyprowadzce), recapture nie podlega wyłączeniu, cash-flow musi pokryć koszty. Od 7.10.2026 ChatGPT Intelligent UI renderuje formularze i kalkulatory, a od 19.08.2026 Google AI Mode generuje interaktywne narzędzia, więc prosty 3-5-letni scenariusz 'sprzedaj kontra wynajmij' powstanie w czacie. Szanse dla zewnętrznego narzędzia: (a) długi, audytowalny model wielookresowy z 6 wariantami i wrażliwością, który użytkownik chce zapisać lub porównać z partnerem; (b) ryzyko błędów podatkowych w odpowiedziach AI, bo nawet summary wyszukiwarki w tej sesji błędnie zastosowały nonqualified use do najmu po wyprowadzce i podważały regułę 3 lat, co daje autorytatywnemu narzędziu powód do cytowania; (c) asystenci często odsyłają do kalkulatorów, ale w SERP dominują kalkulatory PM. Nie ma potrzeby świeżych danych lokalnych poza czynszem i ceną, które użytkownik wpisuje sam, co osłabia argument za odesłaniem do narzędzia.",
+ "scores": {
+  "demand": {
+   "score": 4,
+   "rationale_pl": "Decyzję podejmują co roku liczni właściciele, którzy się przeprowadzają, a lock-in niskich stóp jest głównym tematem rynku 2023-2026. Widać silną podaż treści i kalkulatorów, ale brak twardych danych o wolumenie zapytań.",
+   "evidence_pl": "Artykuły Yahoo Finance, Redfin (blog i guide), The Mortgage Reports, Bottom Line. Ponad 15 kalkulatorów lead-gen PM. Luka stóp ok. 6,5% vs 2,9% wg źródła PM z 2026.",
+   "gaps_pl": "Brak wolumenu wyszukiwań, brak liczby relokujących się właścicieli z niską stopą, brak potwierdzonych wątków Reddit w wynikach.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Kalkulatory częściowe pokrywają większość fragmentów (sprzedaż kontra najem, cash-flow, podatek od zysku, wzrost cen). W summary nie potwierdzono integracji zegara 121 z recapture, wartością niskiej stopy i ratą nowego domu. Kategoria jest jednak zatłoczona, a różnicą jest głębokość modelu.",
+   "evidence_pl": "RentUPM (tabela rok po roku z podatkiem w roku sprzedaży), Stratton Vantage (5 lat, próg podatkowy, niska stopa jako argument), Financial Aha, NARPM, Opesway, MortgageFig, BiggerPockets Pro. Financial Web Tools wg summary nie modeluje recapture.",
+   "gaps_pl": "Funkcje NorthPoint, RentBumper, SmartFinance.fyi i MortgageFig dotyczące 121 i recapture niezweryfikowane (strony nieotwierane). BiggerPockets jest za paywallem. Oprogramowanie dla doradców niesprawdzone.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 3,
+   "rationale_pl": "Wielookresowy model z wieloma wariantami i realne ryzyko błędów podatkowych dają powód do odesłania do narzędzia. Sam problem asystent jednak dobrze tłumaczy i potrafi wyrenderować prosty kalkulator (Intelligent UI, AI Mode). Nie ma potrzeby świeżych danych zewnętrznych.",
+   "evidence_pl": "Summary wyszukiwarki same popełniły błąd interpretacyjny (nonqualified use, '3 lata niezweryfikowane'), co pokazuje wartość audytowalnego narzędzia. Wyniki są zdominowane przez kalkulatory PM, które AI może cytować zamiast nowego serwisu.",
+   "gaps_pl": "Nie testowano rzeczywistych odpowiedzi ChatGPT ani AI Mode na sample prompt ani tego, czy i do jakich narzędzi odsyłają.",
+   "confidence": "low"
+  },
+  "ad_potential": {
+   "score": 5,
+   "rationale_pl": "Konsumenci z USA w trakcie przeprowadzki to wartościowa grupa dla reklamodawców: kredyty hipoteczne na nowy dom, HELOC i cash-out, agenci nieruchomości, property management, ubezpieczenie landlorda, przeprowadzki i home services. Treść nie jest kategorią wrażliwą dla wydawcy.",
+   "evidence_pl": "Rynek wypełniają lead-gen firm PM, brokerów, lenderów (MortgageFig, ClearValue Lending) i firm 1031, co świadczy o komercyjnej wartości tej publiczności.",
+   "gaps_pl": "Brak danych o RPM i CPC. Zasady Google dotyczące reklam mieszkaniowych (ograniczenia targetowania reklamodawców) mogą nieco obniżać konkurencję aukcji (niezweryfikowane).",
+   "confidence": "medium"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Dane są głównie wprowadzane przez użytkownika, a reguły IRS stabilne: Sec. 121 ($250k/$500k od 1997), amortyzacja 27,5 roku, recapture do 25%. Coroczna aktualizacja progów podatków od zysków. Model średnio złożony: amortyzacja kredytu, cash-flow, podatki, warianty.",
+   "evidence_pl": "Źródła zgodnie opisują reguły: 2 z 5 lat, recapture 'allowed or allowable', baza = niższa z wartości rynkowej i bazy skorygowanej w dniu konwersji. IRS FAQ potwierdza, że najem w ciągu 3 lat przed sprzedażą nie dyskwalifikuje wyłączenia.",
+   "gaps_pl": "Podatki stanowe zwiększają złożoność. Możliwe zmiany ustawowe dotyczące wyłączenia przy sprzedaży domu (np. propozycje zniesienia podatku) niezweryfikowane w tej sesji. Domyślne wskaźniki wzrostu cen i czynszów wymagają darmowego źródła danych.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Rdzeń reguł jest jasny, ale wymaga interpretacji: nonqualified use z wyjątkiem dla okresu po wyprowadzce, częściowe wyłączenie przy relokacji zawodowej, depreciation allowable, bazy przy konwersji, stawki recapture. Błędna data graniczna może kosztować dziesiątki tysięcy dolarów.",
+   "evidence_pl": "Summary wyszukiwarki były sprzeczne (data od wyprowadzki czy od sprzedaży; 25% czy stawka zwykła; nonqualified use). Przykład Morkel: spóźnienie o jeden dzień zmienia podatek z ok. $9,8k na ok. $71k.",
+   "gaps_pl": "Ryzyko można ograniczyć buforem bezpieczeństwa daty, disclaimerem i odesłaniem do CPA, ale ryzyko treści pozostaje istotne.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 5,
+   "rationale_pl": "Produkt wykorzystuje niemal wszystkie wspólne moduły (oś cash-flow, finansowanie i amortyzacja, podatki od zysków i najmu, prognoza wartości domu) i otwiera wiele produktów pokrewnych.",
+   "evidence_pl": "Pokrewne decyzje widoczne w wynikach: keep vs sell istniejącego najmu (Overline IQ), recapture i 1031 (1031 Specialists), powrót do domu dla wyłączenia (Financial Samurai), rent vs buy (Fidelity, buyvsrent.org).",
+   "gaps_pl": "Brak.",
+   "confidence": "high"
+  }
+ },
+ "recommendation": "zbadać",
+ "recommendation_reason_pl": "Profil jest mocny w popycie, potencjale reklamowym i wspólnym silniku (ważony wynik orientacyjny ok. 3,8), ale luka jest niepewna i wąska. Kategoria 'rent vs sell calculator' ma ponad 15 darmowych narzędzi zajmujących SERP, a dwa z nich (NorthPoint, RentBumper) pojawiają się przy zapytaniach o recapture i '2 out of 5', więc mogą już częściowo modelować wyłączenie. Przed pilotem trzeba: (1) ręcznie otworzyć NorthPoint, RentUPM, MortgageFig, RentBumper, SmartFinance.fyi, Opesway i NARPM i sprawdzić zegar 121, rozdział recapture, wartość niskiej stopy i powiązanie z nowym domem; (2) sprawdzić wolumen i trudność fraz 'rent or sell house', 'should I rent out my house when I move', 'capital gains exclusion rental 3 years'; (3) przetestować sample prompt w ChatGPT (Intelligent UI) i Google AI Mode pod kątem jakości i odsyłania do narzędzi. Jeśli integracja się potwierdzi jako unikalna, produkt nadaje się na flagowy pilot rodziny 'dom' dzięki ponownemu użyciu silnika.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell house calculator",
+   "url": "https://www.rentupm.com/rent-vs-sell/calculator/",
+   "competitor": "RentUPM Rent vs Sell Calculator",
+   "features_checked": "tabela rok po roku, cash-flow, equity, koszty sprzedaży, podatek od zysku, zegar 121, recapture, nowy dom",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: model N-letni z podatkiem w roku sprzedaży; zegar 121, recapture i nowy dom niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell calculator depreciation recapture \"2 out of 5\" exclusion",
+   "url": "https://northpointam.com/rent-sell-calculator",
+   "competitor": "NorthPoint Rent vs Sell Calculator",
+   "features_checked": "obecność w zapytaniach o recapture i 2 z 5, model obu ścieżek",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (potencjalnie najbliższy): pojawia się w 4 zapytaniach, funkcje 121 i recapture niezweryfikowane. Priorytet do ręcznej weryfikacji.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell house calculator",
+   "url": "https://strattonvantage.com/rent-sell-calculator",
+   "competitor": "Stratton Vantage",
+   "features_checked": "horyzont 5 lat, cash-flow, wzrost cen, spłata kapitału, sprzedaż i inwestycja, próg podatkowy, PM fee, niska stopa",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: stały horyzont 5 lat; wariant sprzedaży przed końcem okna 121 i recapture niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell house calculator",
+   "url": "https://www.financialaha.com/financial-calculators/rent-vs-sell-calculator/",
+   "competitor": "Financial Aha (+ arkusz)",
+   "features_checked": "wartość, kredyt, wzrost cen, koszty sprzedaży, stawka od zysków, stopa zwrotu, szablon arkusza",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial i arkusz jako substytut; integracja 121 i nowego domu niezweryfikowana.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell house calculator",
+   "url": "https://www.narpm.org/members/resources/rent-vs-sell-calculator/",
+   "competitor": "NARPM Rent vs Sell Calculator",
+   "features_checked": "cena zakupu, salda kredytu, stopa, koszty sprzedaży, reinwestycja po podatku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; ścieżka /members/ - możliwe logowanie (niezweryfikowane)",
+   "conclusion": "Partial; narzędzie branżowe PM.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial advisor software rent or sell home analysis tool relocation keep low mortgage rate",
+   "url": "https://www.opesway.com/tool/sell-or-keep-the-house",
+   "competitor": "Opesway Sell or Keep the House",
+   "features_checked": "porównanie majątku keep vs sell, koszty sprzedaży, podatek od zysku, przychód z najmu, utrzymanie",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial; zegar 121, recapture i nowy dom niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "financial advisor software rent or sell home analysis tool relocation keep low mortgage rate",
+   "url": "https://www.biggerpockets.com/blog/money-572",
+   "competitor": "BiggerPockets Keep or Sell",
+   "features_checked": "arkusz keep vs sell, przykład z niską stopą i cash-flow",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; wg summary dostęp tylko dla BiggerPockets Pro (paywall)",
+   "conclusion": "Partial, płatny, dla inwestorów; funkcje 121 niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell now vs rent then sell later calculator home sale exclusion deadline",
+   "url": "https://www.mortgagefig.com/sell-vs-rent-calculator",
+   "competitor": "MortgageFig / The Mortgage Curve Sell vs Rent",
+   "features_checked": "model sprzedaży i najmu rok po roku: pustostany, PM, HOA, ubezpieczenie, podatek od najmu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (funkcje opisane zbiorczo, przypisanie niepewne)",
+   "conclusion": "Partial; data graniczna 121 jako wynik niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sell now vs rent then sell later calculator home sale exclusion deadline",
+   "url": "https://financialwebtools.com/tools/sell-decision/",
+   "competitor": "Financial Web Tools Sell Decision Tool",
+   "features_checked": "podatki, recapture, refinansowanie, amortyzacja",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Słaby partial: wg summary nie modeluje szczegółowo pełnych podatków ani recapture.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell calculator depreciation recapture \"2 out of 5\" exclusion",
+   "url": "https://www.rentbumper.com/sell-vs-rent-calculator/",
+   "competitor": "RentBumper Sell vs Rent",
+   "features_checked": "obecność w zapytaniu o recapture i 2 z 5",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial; funkcje niezweryfikowane, do ręcznego sprawdzenia.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell house calculator",
+   "url": "https://rlpmg.com/rent-vs-sell-calculator/",
+   "competitor": "Klaster lokalnych PM/brokerów (RL PMG, Eaton Realty, SA Rents, Sheepdog, Bellhaven, Kenny, Stowers, Boise PM, Dagwood)",
+   "features_checked": "koszty sprzedaży, podatek od zysku, parametry kredytu, czynsz, pustostany, PM, utrzymanie; Eaton: plik Excel",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, lead-gen, tendencyjne w stronę najmu; zatłoczony SERP.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell calculator depreciation recapture \"2 out of 5\" exclusion",
+   "url": "https://overlineiq.com/blog/keep-vs-sell-rental-property-calculator",
+   "competitor": "Overline IQ Keep vs Sell Rental",
+   "features_checked": "keep vs sell dla istniejącego najmu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (problem sąsiedni), nie konwersja przy przeprowadzce.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "rent vs sell calculator depreciation recapture \"2 out of 5\" exclusion",
+   "url": "https://www.1031specialists.com/depreciation-recapture-calculator",
+   "competitor": "1031 Specialists Depreciation Recapture Calculator",
+   "features_checked": "liczenie recapture",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (fragment, jednozadaniowy).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I sell my house or rent it out when I move low mortgage rate",
+   "url": "https://smartfinance.fyi/articles/should-i-sell-my-house-or-rent-it-out-calculator-guide",
+   "competitor": "SmartFinance.fyi calculator guide 2026",
+   "features_checked": "czy jest interaktywny kalkulator, okno 3 lat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy (pojawił się w 3 zapytaniach); interaktywność niezweryfikowana.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I sell my house or rent it out when I move low mortgage rate",
+   "url": "https://www.homeapproach.com/blog/rent-vs-sell-relocation-guide",
+   "competitor": "HomeApproach relocation guide",
+   "features_checked": "cash-flow i analiza podatkowa przy relokacji",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut treściowy, konkurent w SEO i cytowaniach AI.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit rent out old house or sell spreadsheet capital gains exclusion 3 years after moving",
+   "url": "https://morkelfinancial.com/blog/rent-out-my-house-or-sell-it",
+   "competitor": "Morkel Financial (doradca)",
+   "features_checked": "przykład kosztu przekroczenia terminu 121, stawki 24% i 3,8%, recapture",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (doradca i treść); brak potwierdzonego narzędzia interaktywnego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I sell my house or rent it out when I move low mortgage rate",
+   "url": "https://www.nodawealth.com/blog/should-i-rent-or-sell-my-house-when-i-move",
+   "competitor": "Noda Wealth (planer finansowy)",
+   "features_checked": "rama decyzji, przykład cash-flow -$117/mies.",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (doradca).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "converting primary residence to rental calculator section 121 three-year window depreciation recapture",
+   "url": "https://www.kitces.com/blog/primary-residence-rental-tax-planning-strategies-cost-1031-exchange-1152-plan-121-agi-scorp/",
+   "competitor": "Kitces / The Real Estate CPA (treści dla doradców i CPA)",
+   "features_checked": "strategie podatkowe konwersji, 121, 1031, recapture",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substytut (wiedza doradcza); nie znaleziono w wynikach kalkulatora konwersji z zegarem 121.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit rent out old house or sell spreadsheet capital gains exclusion 3 years after moving",
+   "url": "https://irs.gov/zh-hant/faqs/sale-or-trade-of-business-depreciation-rentals/sales-trades-exchanges/sales-trades-exchanges-3",
+   "competitor": "IRS FAQ (źródło reguł, nie konkurent)",
+   "features_checked": "recapture 'allowed or allowable' nie podlega wyłączeniu; najem przed sprzedażą a test 2 z 5",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Potwierdza zależności modelu; summary innych źródeł bywały sprzeczne (ryzyko niezawodności).",
+   "confidence": "medium"
+  }
+ ],
+ "queries_run": [
+  "should I sell my house or rent it out when I move low mortgage rate",
+  "rent vs sell house calculator",
+  "converting primary residence to rental calculator section 121 three-year window depreciation recapture",
+  "financial advisor software rent or sell home analysis tool relocation keep low mortgage rate",
+  "reddit rent out old house or sell spreadsheet capital gains exclusion 3 years after moving",
+  "sell now vs rent then sell later calculator home sale exclusion deadline",
+  "rent vs sell calculator depreciation recapture \"2 out of 5\" exclusion"
+ ]
+}

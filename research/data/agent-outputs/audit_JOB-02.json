@@ -1,0 +1,477 @@
+{
+ "id": "JOB-02",
+ "competitors": [
+  {
+   "name": "Calcuja Golden Handcuff Calculator",
+   "url": "https://calcuja.com/golden-handcuff-calculator/",
+   "type": "partial",
+   "access": "darmowy, web (strona nieotwierana, dowód: search-summary)",
+   "covers_pl": "Wg streszczeń: liczy koszt odejścia, czyli utracony bonus (wypłata zwykle w Q1), niezwestowane RSU po podatku, retention pay i match emerytalny. Podaje też break-even podwyżki w nowej pracy. Jedno streszczenie (q1) mówi, że zestawia to z kosztem alternatywnym opóźnienia zmiany pracy. Kwota kosztu odejścia w praktyce równa się kwocie make-whole do negocjacji.",
+   "misses_or_unverified_pl": "Streszczenia są sprzeczne: q4 nie potwierdza logiki opóźnienia startu ani daty startu. Niezweryfikowane: porównanie wielu kandydackich dat odejścia, data break-even, malejący clawback sign-on/relokacji, ryzyko wycofania oferty, wrażliwość na cenę akcji i prawdopodobieństwo bonusu, wariant counteroffer. Słowo 'pension matching' i strony 'By Country' w serwisie sugerują ramę międzynarodową, a nie ściśle US (401k vesting), co też jest niezweryfikowane. To najbliższy znaleziony konkurent."
+  },
+  {
+   "name": "The Salary Negotiator – Total Compensation Calculator",
+   "url": "https://www.thesalarynegotiator.com/total-compensation-calculator",
+   "type": "partial",
+   "access": "darmowy, web; firma oferuje też poradniki negocjacyjne (coaching płatny: niezweryfikowany)",
+   "covers_pl": "Liczy total comp oferty z polem sign-on i zaznacza, że sign-on zwykle podlega zwrotowi (payback) przy wczesnym odejściu.",
+   "misses_or_unverified_pl": "Niezweryfikowane: modelowanie utraty świadczeń w obecnej pracy, oś czasu daty odejścia, kwota make-whole, ryzyko oferty."
+  },
+  {
+   "name": "SheCodes Job Offer Comparison Calculator",
+   "url": "https://tools.shecodes.io/career-tools/offer",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Porównuje do 3 ofert (base, sign-on, bonus, vesting equity, benefity) i pokazuje wartość za rok 1 i za 4 lata. Notatka z fali 1 potwierdzona.",
+   "misses_or_unverified_pl": "Porównanie statyczne od wspólnego startu: w streszczeniu nie ma daty odejścia, utraconych vestów ani bonusu w obecnej pracy, clawbacku ani make-whole. Pełna lista pól niezweryfikowana."
+  },
+  {
+   "name": "SheetsResume Job Offer Comparison Calculator",
+   "url": "https://sheetsresume.com/job-offer-comparison",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Porównuje oferty pod kątem take-home pay i total comp (z tytułu wyniku). Notatka z fali 1 potwierdzona co do istnienia narzędzia.",
+   "misses_or_unverified_pl": "Niezweryfikowane: jakiekolwiek modelowanie terminu odejścia, forfeiture, clawbacku i make-whole."
+  },
+  {
+   "name": "Cliff and Vest Offer Comparison Calculator",
+   "url": "https://cliffandvest.com/offer-comparison-calculator/",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Modeluje oferty rok po roku po podatku (equity opodatkowane w momencie dochodu, progresja) i testuje, jakie prawdopodobieństwo musi mieć ryzykowne equity, żeby oferta wygrała. To element analizy ryzyka.",
+   "misses_or_unverified_pl": "Niezweryfikowane: data odejścia z obecnej pracy, utracone vesty, bonus, match 401k, clawback, make-whole, ryzyko wycofania oferty. Streszczenie q7 mówi ogólnie, że większość kalkulatorów ofert nie modeluje forfeiture ani clawbacku wprost."
+  },
+  {
+   "name": "Feel Valued Tech Job Offer Calculator",
+   "url": "https://www.feelvalued.co/tech-job-offer-calculator",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Harmonogramy vestingu konkretnych firm (np. front-weighted Google, back-weighted Amazon), RSU/ISO, projekcja na 4 lata.",
+   "misses_or_unverified_pl": "Niezweryfikowane: oś czasu odejścia z obecnej pracy, utracone świadczenia, make-whole, ryzyko oferty."
+  },
+  {
+   "name": "ShouldApply Offer Comparison",
+   "url": "https://shouldapply.com/tools/offer-comparison",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Ocenia oferty na 10 składnikach, w tym signing bonus (amortyzowany na 4 lata) i ryzyko equity.",
+   "misses_or_unverified_pl": "Niezweryfikowane: timing odejścia, utracone świadczenia, kwota make-whole."
+  },
+  {
+   "name": "Vesting Strategy – Job Offer Equity Comparison Tool",
+   "url": "https://www.vestingstrategy.com/tools/job-offer-equity-comparison",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Porównuje equity w ofertach z podatkami i haircutem dla niepłynnego equity.",
+   "misses_or_unverified_pl": "Niezweryfikowane: oś czasu odejścia, bonus, 401k, clawback, make-whole."
+  },
+  {
+   "name": "Finzbyte RSU Vesting & Take-Home Calculator",
+   "url": "https://www.finzbyte.com/investments/equity/rsu-vesting-and-take-home-calculator/",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Harmonogram vestingu RSU i wartość netto. Zaznacza, że niezwestowane jest tracone przy odejściu i że spadek ceny przed vestem obniża wypłatę. To fragment: wartość utraconych vestów.",
+   "misses_or_unverified_pl": "Kalkulator jednozadaniowy: nie łączy bonusu, 401k, nowej pensji, clawbacku ani ryzyka oferty."
+  },
+  {
+   "name": "Kalkulatory podatku RSU (VestingTax, GGM Wealth, CalcBold, Domain Money)",
+   "url": "https://www.vestingtax.com/calculators/rsu-tax",
+   "type": "partial",
+   "access": "darmowe, web; Domain Money i GGM Wealth to firmy doradcze (lead-gen)",
+   "covers_pl": "Podatek od vestu RSU i luka withholdingu (GGM: withholding może nie pokryć realnego podatku przy dużym veście). To fragment: wartość netto utraconego vestu.",
+   "misses_or_unverified_pl": "Narzędzia jednozadaniowe, bez decyzji o dacie odejścia i make-whole."
+  },
+  {
+   "name": "JobsByCulture Vesting Schedule Calculator",
+   "url": "https://jobsbyculture.com/tools/vesting-schedule-calculator",
+   "type": "partial",
+   "access": "darmowy, web",
+   "covers_pl": "Śledzi daty vestingu grantów i podkreśla znaczenie cliffu (odejście dzień przed cliffem kosztuje cały pierwszy rok).",
+   "misses_or_unverified_pl": "Jednozadaniowy: brak integracji z nową ofertą, bonusem, 401k, clawbackiem i make-whole (w streszczeniu)."
+  },
+  {
+   "name": "Etsy – arkusze 'Golden Handcuffs' calculator",
+   "url": "https://www.etsy.com/market/golden_handcuffs",
+   "type": "substitute",
+   "access": "płatne szablony (marketplace), strona listingu nieotwierana",
+   "covers_pl": "Wg streszczenia jest szablon/kalkulator 'Golden Handcuffs' z kosztem walk-away i liczbą miesięcy pensji.",
+   "misses_or_unverified_pl": "Konkretny produkt, cena i logika niezweryfikowane. Prawdopodobnie statyczny koszt odejścia bez wielu dat i bez ryzyka oferty (niezweryfikowane)."
+  },
+  {
+   "name": "Bogleheads / Blind / Reddit (wątki forumowe)",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=374573",
+   "type": "substitute",
+   "access": "darmowe; Blind częściowo wymaga konta (niezweryfikowane)",
+   "covers_pl": "Porady społeczności: przesunąć start za vest albo poprosić o sign-on lub dodatkowy grant. Jeden użytkownik wynegocjował sign-on równy wartości vestu, firmy częściej ustępują w equity niż w sign-on.",
+   "misses_or_unverified_pl": "Anegdotyczne, brak modelu liczbowego, brak wrażliwości i ryzyka oferty."
+  },
+  {
+   "name": "Poradniki negocjacji sign-on i daty startu (CareerBldr, SalaryScript, Jobrizzer, The Salary Negotiator)",
+   "url": "https://careerbldr.com/blog/signing-bonus-negotiation/",
+   "type": "substitute",
+   "access": "darmowe artykuły",
+   "covers_pl": "Procedura: policz wartość, która wygaśnie w ciągu 6/12/24 miesięcy, i podaj kwotę z datami vestów. Skrypty negocjacyjne, negocjacja okna clawbacku (12 zamiast 24 mies.), propozycja konkretnej daty startu.",
+   "misses_or_unverified_pl": "Treść, nie narzędzie: brak obliczeń, osi czasu, break-even i ryzyka wycofania oferty."
+  },
+  {
+   "name": "Asystenci AI (ChatGPT Intelligent UI od 7.10.2026; Google AI Mode z interaktywnymi narzędziami od 19.08.2026)",
+   "url": "n/d (brak URL w wynikach; informacja z kontekstu zadania)",
+   "type": "substitute",
+   "access": "darmowe dla wszystkich użytkowników (wg kontekstu zadania)",
+   "covers_pl": "Przykładowy prompt to głównie arytmetyka na danych podanych przez użytkownika: wartość vestu po podatku, bonus, niezwestowany match, różnica pensji razy miesiące opóźnienia, kwota sign-on. Asystent może to policzyć i wyrenderować formularz.",
+   "misses_or_unverified_pl": "Spójność wielookresowego modelu, audytowalność i powtarzalność wrażliwości są niezweryfikowane. Ryzyko błędów podatkowych (supplemental withholding vs faktyczna stawka)."
+  },
+  {
+   "name": "AllocateAI Comp Comparison (notatka fali 1)",
+   "url": "https://allocateai.io/calculators/comp-comparison",
+   "type": "partial",
+   "access": "nieznany; URL z notatek fali 1, nie pojawił się w wynikach tej fali",
+   "covers_pl": "Wg notatki z fali 1: porównanie kompensacji.",
+   "misses_or_unverified_pl": "Całość niezweryfikowana w tej fali."
+  },
+  {
+   "name": "offer-comparison-analyzer (agent skill, Smithery; notatka fali 1)",
+   "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+   "type": "substitute",
+   "access": "skill dla agentów AI; URL z notatek fali 1, nie pojawił się w wynikach tej fali",
+   "covers_pl": "Wg notatki z fali 1: analiza porównawcza ofert przez agenta AI.",
+   "misses_or_unverified_pl": "Całość niezweryfikowana. Sygnał, że funkcja trafia wprost do ekosystemu asystentów."
+  },
+  {
+   "name": "Secfi / Carta – poradniki equity przy odejściu (notatki fali 1)",
+   "url": "https://secfi.com/learn/should-i-stay-in-my-underpaid-job-and-wait-for-the-ipo-or-quit",
+   "type": "substitute",
+   "access": "URL z notatek fali 1; nie pojawiły się w wynikach tej fali; Secfi to płatne doradztwo equity (niezweryfikowane)",
+   "covers_pl": "Wg notatek z fali 1: treści o tym, czy zostać i czekać (IPO) albo co z equity przy odejściu (Carta: https://carta.com/blog/what-to-know-about-equity-when-leaving-company/).",
+   "misses_or_unverified_pl": "Niezweryfikowane w tej fali. Prawdopodobnie treść, nie zintegrowany symulator."
+  },
+  {
+   "name": "SmartTaxCalc Salary Offer Comparison (notatka fali 1)",
+   "url": "https://smarttaxcalc.in/tools/salary-offer-comparison/",
+   "type": "partial",
+   "access": "URL z notatek fali 1; nie pojawił się w wynikach tej fali",
+   "covers_pl": "Wg notatki z fali 1: porównanie ofert płacowych.",
+   "misses_or_unverified_pl": "Niezweryfikowane. Domena .in sugeruje rynek indyjski (hipoteza), więc trafność dla US jest niska."
+  }
+ ],
+ "direct_competitor_found": false,
+ "gap_statement_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Zakres: 7 wyszukiwań WebSearch (US, EN), tylko streszczenia wyników, bez otwierania stron. Pewność: niska do średniej.\n\nNajbliższy jest Calcuja Golden Handcuff Calculator. Liczy koszt odejścia (utracony bonus, niezwestowane RSU po podatku, retention pay, match emerytalny) i break-even podwyżki. Jedno streszczenie sugeruje, że uwzględnia też koszt alternatywny opóźnienia zmiany pracy, drugie tego nie potwierdza. Ten koszt odejścia pełni już funkcję kwoty make-whole do negocjacji. Dlatego hipoteza z fali 1 („nie optymalizują kwoty make-whole”) jest częściowo nietrafna: kwotę make-whole da się wyliczyć istniejącymi narzędziami.\n\nKalkulatory ofert (SheCodes, SheetsResume, Cliff and Vest, Feel Valued, ShouldApply, Salary Negotiator, Vesting Strategy) porównują oferty statycznie, od wspólnego startu i przy założeniu pełnego pobytu. Streszczenie q7 wprost mówi, że zwykle nie modelują forfeiture ani clawbacku. Tę część hipotezy potwierdzam.\n\nDoprecyzowana luka (wciąż hipoteza) to porównanie wielu kandydackich dat odejścia na jednej osi czasu: teraz, po veście, po bonusie, po cliffie 401k, teraz z make-whole, counteroffer. Model powinien łączyć:\n- opóźnioną wyższą pensję,\n- kolejne vesty przy niepewnej cenie akcji,\n- prawdopodobieństwo wypłaty bonusu,\n- malejący clawback sign-on/relokacji,\n- rosnące ryzyko wycofania oferty.\n\nWynikami byłyby data break-even oraz make-whole skorygowany o ryzyko i porównany z alternatywą „poczekaj”. W znalezionych narzędziach nie widać tych elementów, ale u Calcuja są niezweryfikowane, a nie potwierdzone jako brakujące. Luka jest węższa niż w hipotezie z fali 1, a jej główną częścią jest timing przy ryzyku. Dużą część obliczeń może też wykonać asystent AI.",
+ "search_scope_pl": "7 wyszukiwań (limit wyczerpany), tryb extended, wyszukiwarka US-only, język angielski. Typy zapytań:\n- naturalny problem użytkownika (q1, q6 w stylu Reddit),\n- krótka kategoria (q2: sign-on bonus buyout calculator),\n- alternatywna terminologia (q3: cost of leaving, golden handcuffs; q4: weryfikacja Calcuja),\n- płatne narzędzia i doradcy (q5: Levels.fyi/Rora, coaching negocjacyjny),\n- arkusze i fora (q6; Etsy wyszło przy q4),\n- ponowna weryfikacja kalkulatorów ofert z fali 1 (q7).\n\nOgraniczenia: WebFetch zablokowany, żadna strona nie była otwierana ani testowana, dowody to wyłącznie streszczenia wyszukiwarki. Nie sprawdzano App Store, Google Play, rozszerzeń, GitHuba ani płatnych platform (Levels.fyi, Rora, Candor), bo q5 nie zwróciło o nich nic. Notatki z fali 1 dla AllocateAI, Smithery, SmartTaxCalc, Secfi i Carta nie pojawiły się w wynikach tej fali i pozostają niezweryfikowane.",
+ "demand_signals": [
+  {
+   "signal_pl": "Wątek na Blind 'stupid to quit 3 months away from next vesting' dotyczy dokładnie decyzji o timingu odejścia względem vestu (tytuł; treść niewidoczna).",
+   "url": "https://www.teamblind.com/post/stupid-to-quit-3-months-away-from-next-vesting-crjdhbvy",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątek na Blind 'join early or wait': dylemat wcześniejszego startu kontra czekania. Streszczenie wspomina, że nowy pracodawca może źle przyjąć niejasno komunikowane opóźnienie.",
+   "url": "https://www.teamblind.com/post/join-early-or-wait-nokoa1mb",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątek na Blind 'quitting 1 month short of 100% 401k vestment': pytanie o utratę matchu 401k przy odejściu przed cliffem.",
+   "url": "https://www.teamblind.com/post/quitting-1-month-short-of-100-401k-vestment-help-wp6qo8co",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Wątek na Blind 'wait 6 months or…' (tytuł sugeruje dylemat timingu; treść niewidoczna).",
+   "url": "https://www.teamblind.com/post/wait-6-months-or-mhf4xd23",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Bogleheads 'Loss of RSUs / Sign On Bonus Negotiation': użytkownicy negocjują sign-on równy utraconym vestom. Firmy częściej ustępują w equity niż w sign-on.",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=374573",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Bogleheads 'RSU Vest Date' i 'Layoff: last day 2 weeks before RSU vest': powracające pytania o odejście tuż przed vestem.",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=337242",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "Artykuł AOL na bazie wątku z Reddita: podwyżka 20 tys. USD kontra utrata ok. 18 tys. USD niezwestowanego matchu 401k. Temat ma zasięg medialny poza tech.",
+   "url": "https://www.aol.com/finance/m-considering-job-change-20k-161436938.html",
+   "evidence_type": "direct"
+  },
+  {
+   "signal_pl": "SalaryScript: sign-on dla mid-level tech (L4-L5) to 20-60 tys. USD i często jest powiązany z equity buyout. Make-whole to standardowa praktyka w tech (dane bez źródła, orientacyjne).",
+   "url": "https://salaryscript.com/blog/sign-on-bonus-negotiation/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Listy ofertowe w SEC/Justia (Wells Fargo buyout liczony od średniej ceny akcji poprzedniego pracodawcy razy utracone akcje; sign-on w dwóch ratach za utracone incentives i equity). Formalna praktyka make-whole przy zatrudnieniach seniorskich.",
+   "url": "https://contracts.justia.com/companies/wells-fargo-1431/contract/108869/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Istnieje podaż narzędzi i treści: kalkulator Golden Handcuff (Calcuja), arkusze na Etsy oraz wiele poradników negocjacji sign-on i daty startu (CareerBldr, Jobrizzer, The Salary Negotiator). Wydawcy targetują te zapytania.",
+   "url": "https://calcuja.com/golden-handcuff-calculator/",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Firmy wealth management (Domain Money, GGM Wealth, Concierge WM, Schmidt FM, Summitry) publikują treści i kalkulatory dla posiadaczy RSU. To sygnał wartości tej grupy dla reklamodawców finansowych, nie wolumenu zapytań.",
+   "url": "https://www.conciergewm.com/blog/what-should-i-do-with-my-rsus-when-i-leave-your-job",
+   "evidence_type": "indirect"
+  },
+  {
+   "signal_pl": "Hipoteza: decyzja dotyczy corocznie części amerykańskich zmieniających pracę, którzy mają RSU, roczny bonus, niezwestowany match lub clawback. Grupa koncentruje się w tech, finansach i korporacjach. Nie znaleziono danych liczbowych o liczbie osób ani o wolumenie wyszukiwań; liczby gospodarstw nie są miarą popytu miesięcznego.",
+   "url": "n/d",
+   "evidence_type": "hypothesis"
+  }
+ ],
+ "ai_self_solve_pl": "Ryzyko samodzielnego rozwiązania przez AI jest wysokie. Przykładowy prompt zawiera wszystkie potrzebne dane: termin vestu, miesiąc bonusu, datę vestingu matchu i datę startu. Obliczenie to prosta arytmetyka: wartość vestu razy (1 - stopa podatku), bonus razy prawdopodobieństwo, niezwestowany match, minus różnica pensji razy miesiące opóźnienia. Wynik to kwota sign-on i rekomendacja. ChatGPT od 7.10.2026 (Intelligent UI) renderuje formularze i kalkulatory w odpowiedzi, a Google AI Mode od 19.08.2026 generuje interaktywne narzędzia. Mogą więc wygenerować prosty model z suwakiem daty. Jedyne świeże dane to cena akcji, którą asystent z wyszukiwarką też pobierze. Ryzyko wycofania oferty i prawdopodobieństwo bonusu to subiektywne założenia, które asystent i tak przyjmie od użytkownika.\n\nGdzie zewnętrzne narzędzie mogłoby wygrać:\n- spójna, audytowalna oś czasu wielu wariantów (6 dat plus counteroffer),\n- wrażliwość dwuwymiarowa (cena akcji i ryzyko oferty),\n- poprawne traktowanie podatków: supplemental withholding 22%/37% kontra faktyczna stawka oraz podatek przy zwrocie sign-on w kolejnym roku,\n- zapis i udostępnienie wyniku jako argumentu w negocjacji.\n\nTo jednak przewagi jakościowe, nie konieczność. Asystent nie musi odsyłać do zewnętrznego narzędzia.",
+ "scores": {
+  "demand": {
+   "score": 3,
+   "rationale_pl": "Pytanie o odejście przed vestem lub bonusem albo o sign-on na pokrycie utraconych świadczeń pojawia się regularnie na Blind, Bogleheads i Reddicie (relacja AOL). Make-whole to standardowa praktyka w tech i u kadry seniorskiej. Grupa jest jednak węższa niż ogół zmieniających pracę: koncentruje się w tech, finansach i korporacjach z RSU i bonusami. Szersza część populacji (cliff matchu 401k, roczny bonus) zwiększa zasięg, ale dla nich problem jest prostszy.",
+   "evidence_pl": "Wątki na Blind ('stupid to quit 3 months away from next vesting', 'join early or wait', '401k vestment'), na Bogleheads ('Loss of RSUs / Sign On Bonus Negotiation', 'RSU Vest Date'), artykuł AOL/Reddit o utracie matchu 401k, SalaryScript (sign-on często powiązany z equity buyout), listy ofertowe w SEC/Justia, liczne poradniki negocjacji.",
+   "gaps_pl": "Brak danych o wolumenie wyszukiwań i o liczbie osób w US, które corocznie stają przed tą decyzją. Nie sprawdzono Reddita bezpośrednio (wyniki z q6 to Bogleheads i Blind). Nie wiadomo, jaka część zapytań szuka narzędzia, a jaka porady.",
+   "confidence": "medium"
+  },
+  "gap": {
+   "score": 3,
+   "rationale_pl": "Nie znaleziono bezpośredniego konkurenta w badanym zakresie. Calcuja Golden Handcuff liczy jednak kluczowy fragment, czyli koszt odejścia, który jest jednocześnie kwotą make-whole. Możliwe, że uwzględnia też koszt opóźnienia (streszczenia sprzeczne). Kalkulatory ofert są statyczne. Fragmenty są pokryte, zintegrowana sekwencja wielu dat z ryzykiem oferty i malejącym clawbackiem nie jest. Pasuje to do definicji 3: partiale pokrywają większość fragmentów, ale nie zintegrowaną sekwencję.",
+   "evidence_pl": "q1/q3/q4: Calcuja (koszt odejścia: bonus, RSU po podatku, retention, match; break-even podwyżki). q7: SheCodes, Cliff and Vest, Feel Valued, ShouldApply, SheetsResume, przy czym streszczenie mówi, że większość nie modeluje forfeiture ani clawbacku. q1/q2: kalkulatory vestingu i podatku RSU jako fragmenty. q4: arkusze 'Golden Handcuffs' na Etsy.",
+   "gaps_pl": "Nie dało się otworzyć Calcuja: jeśli ma suwak lub porównanie dat odejścia, luka spada do 2. Nie sprawdzono płatnych platform (Levels.fyi, Rora, Candor, Secfi), aplikacji mobilnych ani szablonów Google Sheets. Notatki z fali 1 (AllocateAI, Smithery, Secfi, Carta) niezweryfikowane.",
+   "confidence": "low"
+  },
+  "ai_distribution": {
+   "score": 2,
+   "rationale_pl": "Problem to arytmetyka na danych użytkownika z kilkoma założeniami subiektywnymi (ryzyko oferty, szansa bonusu). Asystenci z renderowaniem formularzy (ChatGPT Intelligent UI, Google AI Mode) mogą to rozwiązać w odpowiedzi. Brak potrzeby świeżych lub lokalnych danych poza ceną akcji. Pewną przewagą narzędzia jest wielowariantowy, wielookresowy model z wrażliwością i audytowalnością, ale to za mało, by asystent musiał odsyłać na zewnątrz.",
+   "evidence_pl": "Przykładowy prompt zawiera wszystkie wejścia. Wyniki wyszukiwania pokazują, że nawet streszczenia wyszukiwarki dają gotową regułę decyzyjną (q1: 'jeśli kwota utracona jest duża, a vest za kilka miesięcy, czekanie często ma sens'). Kontekst zadania: ChatGPT Intelligent UI od 7.10.2026, Google AI Mode od 19.08.2026.",
+   "gaps_pl": "Nie testowano faktycznych odpowiedzi asystentów na przykładowy prompt ani tego, czy cytują zewnętrzne kalkulatory (np. Calcuja).",
+   "confidence": "medium"
+  },
+  "ad_potential": {
+   "score": 3,
+   "rationale_pl": "Odbiorcy to konsumenci w US o wysokich dochodach (RSU, bonusy), atrakcyjni dla reklamodawców wealth management, doradztwa podatkowego i equity, brokerów i usług finansowych. To jednak nie są topowe wertykały z rubryki (home services, ubezpieczenia, hipoteka, auto). Treści o karierze i negocjacjach płacowych mają zwykle niższą wartość reklamową, a ruch jest niszowy. Brak ograniczeń kategorii wrażliwych.",
+   "evidence_pl": "Firmy doradcze (Domain Money, GGM Wealth, Concierge WM, Schmidt FM, Summitry, AdvisorFinder) inwestują w treści i kalkulatory RSU, co wskazuje na wartość tego segmentu dla reklamodawców finansowych.",
+   "gaps_pl": "Brak danych o CPC i RPM dla tej niszy oraz o wielkości ruchu. To szacunek oparty na profilu odbiorców, nie pomiar.",
+   "confidence": "low"
+  },
+  "feasibility": {
+   "score": 4,
+   "rationale_pl": "Wejścia podaje użytkownik (harmonogram vestów, bonus, match, clawback, oferta). Opcjonalna cena akcji może być wpisywana ręcznie albo pobierana z darmowego lub opóźnionego źródła. Reguły podatkowe (federalne progi, supplemental withholding, FICA, stany) wymagają corocznej aktualizacji, ale są stabilne. Logika vestingu 401k i clawbacku jest prosta parametrycznie. Rdzeń to model scenariuszowy na osi czasu, bez zewnętrznych API.",
+   "evidence_pl": "Wyniki (q1, q2, q7) pokazują, że istniejące narzędzia działają na prostych wejściach: liczba akcji razy cena razy stopa podatku, harmonogramy vestingu, sign-on z okresem zwrotu.",
+   "gaps_pl": "Podatki stanowe i lokalne zwiększają zakres utrzymania. Podatek przy zwrocie sign-on (repayment w kolejnym roku) jest złożony.",
+   "confidence": "medium"
+  },
+  "reliability": {
+   "score": 3,
+   "rationale_pl": "Błędy mogą kosztować tysiące lub dziesiątki tysięcy USD i wpłynąć na negocjacje. Wynik zależy od warunków planu, których narzędzie nie zna: wymóg zatrudnienia w dniu wypłaty bonusu, vesting w okresie wypowiedzenia, clawback pełny czy pro-rata, gross czy net. Ryzyko wycofania oferty to subiektywne założenie. Wymaga jasnych zastrzeżeń, ale nie interpretacji prawa w stopniu krytycznym. Decyzję podejmuje użytkownik, a wynik jest wsparciem negocjacji.",
+   "evidence_pl": "Streszczenia wielokrotnie podkreślają, że dokumenty planu i oferty są rozstrzygające (q2, q3), że zwrot sign-on bywa pełny lub pro-rata (q2) oraz że trzeba być zatrudnionym w dniu vestu (q6, wątek z thelayoff).",
+   "gaps_pl": "Nie zbadano przepisów stanowych o bonusach i clawbackach ani ryzyka 'porady finansowej'.",
+   "confidence": "medium"
+  },
+  "shared_engine": {
+   "score": 3,
+   "rationale_pl": "Wykorzystuje wspólne moduły: oś czasu cash-flow, podatek od wynagrodzeń i supplemental, a także wycenę equity w czasie. Nie korzysta z modułów finansowania, wartości domu ani energii. Daje produkty siostrzane w rodzinie praca, relokacja i świadczenia: porównanie ofert z datą startu, timing zwolnienia lub odprawy, relokacja z clawbackiem, decyzja o counteroffer, sabbatical, przejście na samozatrudnienie.",
+   "evidence_pl": "Calcuja ma w tym samym serwisie kalkulatory Sabbatical, Salary Comparison i Plan B (q4). Rynek grupuje te tematy, a moduły vestingu i podatku się powtarzają (q1, q2, q7).",
+   "gaps_pl": "Brak informacji, które inne produkty z rodziny są planowane. Reuse poza rodziną pracy jest ograniczony.",
+   "confidence": "medium"
+  }
+ },
+ "recommendation": "później",
+ "recommendation_reason_pl": "Średnia ważona wynosi ok. 2,95 i jest to porządkowanie hipotez, nie pomiar.\n\nPopyt istnieje i jest widoczny na forach, a bezpośredniego konkurenta nie znaleziono w badanym zakresie. Trzy czynniki obniżają jednak priorytet:\n- Kanał AI jest słaby. Problem to arytmetyka na danych użytkownika, którą ChatGPT i Google AI Mode rozwiążą i wyrenderują same, więc asystent nie musi odsyłać do zewnętrznej strony.\n- Calcuja Golden Handcuff Calculator już liczy koszt odejścia, czyli kwotę make-whole, i być może koszt opóźnienia (niezweryfikowane). Luka jest węższa niż w hipotezie z fali 1.\n- Odbiorcy to nisza tech/finanse w wertykale kariery o umiarkowanej wartości reklamowej, poza topowymi wertykałami z rubryki.\n\nSensowne jest zbudowanie tego później jako modułu rodziny praca, relokacja i świadczenia (wspólna oś czasu, podatek, vesting), jeśli rodzina dostanie pilota. Przed tym trzeba ręcznie sprawdzić Calcuja (czy porównuje daty odejścia) oraz płatne platformy (Levels.fyi, Rora, Candor, Secfi), a także przetestować odpowiedzi ChatGPT i Google na przykładowy prompt.",
+ "register": [
+  {
+   "date": "2026-10-25",
+   "query": "should I wait for my RSU vest and bonus before quitting for a new job, calculator | \"cost of leaving\" job calculator unvested RSUs 401k match vesting bonus clawback start date | calcuja golden handcuff calculator break-even months wait vest delay start date sign-on",
+   "url": "https://calcuja.com/golden-handcuff-calculator/",
+   "competitor": "Calcuja Golden Handcuff Calculator",
+   "features_checked": "koszt odejścia (bonus, RSU, retention, match), podatek, break-even, koszt opóźnienia, wiele dat odejścia, clawback, ryzyko oferty, make-whole, wrażliwość",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; darmowy (brak sygnału paywalla)",
+   "conclusion": "Partial, najbliższy. Potwierdzone w streszczeniach: koszt odejścia po podatku i break-even podwyżki. Koszt opóźnienia: streszczenia sprzeczne (q1 tak, q4 nie). Niezweryfikowane: wiele dat odejścia, clawback, ryzyko oferty, wrażliwość.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sign-on bonus buyout calculator unvested equity forfeited | job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://www.thesalarynegotiator.com/total-compensation-calculator",
+   "competitor": "The Salary Negotiator – Total Compensation Calculator",
+   "features_checked": "total comp, pole sign-on, warunki zwrotu sign-on, utracone świadczenia, timing odejścia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatny coaching firmy niezweryfikowany",
+   "conclusion": "Partial: total comp z sign-on i wzmianką o payback. Modelowanie odejścia niezweryfikowane.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://tools.shecodes.io/career-tools/offer",
+   "competitor": "SheCodes Job Offer Comparison Calculator",
+   "features_checked": "porównanie do 3 ofert, sign-on, bonus, vesting, benefity, wartość rok 1 i 4 lata, forfeiture, data odejścia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (potwierdza notatkę z fali 1). Porównanie statyczne, w streszczeniu brak modelu daty odejścia i make-whole.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://sheetsresume.com/job-offer-comparison",
+   "competitor": "SheetsResume Job Offer Comparison Calculator",
+   "features_checked": "take-home pay, total comp, forfeiture, timing",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary (tylko tytuł)",
+   "conclusion": "Partial (istnienie potwierdzone). Funkcje związane z timingiem odejścia niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://cliffandvest.com/offer-comparison-calculator/",
+   "competitor": "Cliff and Vest Offer Comparison Calculator",
+   "features_checked": "model rok po roku po podatku, prawdopodobieństwo equity (break-even ryzyka), forfeiture, clawback, data odejścia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: dobry silnik podatkowo-ryzykowy dla ofert, ale bez potwierdzonej osi odejścia z obecnej pracy.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://www.feelvalued.co/tech-job-offer-calculator",
+   "competitor": "Feel Valued Tech Job Offer Calculator",
+   "features_checked": "harmonogramy vestingu firm, RSU/ISO, projekcja 4 lat, utracone świadczenia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial: porównanie ofert z realnymi harmonogramami, bez potwierdzonego timingu odejścia.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://shouldapply.com/tools/offer-comparison",
+   "competitor": "ShouldApply Offer Comparison",
+   "features_checked": "10 składników, signing bonus amortyzowany, ryzyko equity, timing odejścia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial, statyczny scoring ofert.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year",
+   "url": "https://www.vestingstrategy.com/tools/job-offer-equity-comparison",
+   "competitor": "Vesting Strategy – Job Offer Equity Comparison Tool",
+   "features_checked": "podatek i haircut equity w ofertach, timing odejścia",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial (fragment wyceny equity).",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I wait for my RSU vest and bonus before quitting for a new job, calculator",
+   "url": "https://www.finzbyte.com/investments/equity/rsu-vesting-and-take-home-calculator/",
+   "competitor": "Finzbyte RSU Vesting & Take-Home Calculator",
+   "features_checked": "harmonogram vestingu, wartość netto, forfeiture, ryzyko ceny",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial jednozadaniowy (fragment: wartość vestów). Brak integracji z ofertą.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "should I wait for my RSU vest and bonus before quitting for a new job, calculator",
+   "url": "https://www.vestingtax.com/calculators/rsu-tax",
+   "competitor": "Kalkulatory podatku RSU (VestingTax, GGM Wealth, CalcBold, Domain Money)",
+   "features_checked": "podatek od vestu, luka withholdingu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial jednozadaniowe (fragment podatkowy). Nie są konkurentami bezpośrednimi.",
+   "confidence": "high"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sign-on bonus buyout calculator unvested equity forfeited",
+   "url": "https://jobsbyculture.com/tools/vesting-schedule-calculator",
+   "competitor": "JobsByCulture Vesting Schedule Calculator",
+   "features_checked": "daty vestingu, cliff",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Partial jednozadaniowy (fragment harmonogramu).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "calcuja golden handcuff calculator break-even months wait vest delay start date sign-on",
+   "url": "https://www.etsy.com/market/golden_handcuffs",
+   "competitor": "Etsy – arkusze 'Golden Handcuffs' calculator",
+   "features_checked": "koszt walk-away, miesiące pensji, cena, logika wielu dat",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; płatne szablony, konkretny produkt nieidentyfikowany",
+   "conclusion": "Substitute (płatny arkusz). Funkcje niezweryfikowane.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit push start date to wait for RSU vest or ask new company sign-on to cover unvested",
+   "url": "https://www.bogleheads.org/forum/viewtopic.php?t=374573",
+   "competitor": "Bogleheads – 'Loss of RSUs / Sign On Bonus Negotiation'",
+   "features_checked": "porady społeczności o make-whole i dacie startu",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (forum) oraz sygnał popytu. Brak modelu liczbowego.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit push start date to wait for RSU vest or ask new company sign-on to cover unvested",
+   "url": "https://www.teamblind.com/post/join-early-or-wait-nokoa1mb",
+   "competitor": "Blind – wątki 'join early or wait' / 'stupid to quit 3 months away from next vesting'",
+   "features_checked": "dylemat timingu, ryzyko odbioru opóźnienia przez nowego pracodawcę",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary; Blind może wymagać konta (niezweryfikowane)",
+   "conclusion": "Substitute (forum) oraz sygnał popytu.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "sign-on bonus buyout calculator unvested equity forfeited | negotiate equity buyout new employer forfeited RSUs bonus negotiation coach Levels.fyi Rora",
+   "url": "https://careerbldr.com/blog/signing-bonus-negotiation/",
+   "competitor": "Poradniki negocjacji sign-on (CareerBldr, SalaryScript, The Salary Negotiator, Resumeva, TalentFB)",
+   "features_checked": "metoda wyceny utraconych świadczeń, skrypty, negocjacja clawbacku",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (treść). Brak narzędzia z osią czasu. Q5 nie zwróciło wyników o Levels.fyi ani Rora, więc płatny coaching pozostaje niezweryfikowany.",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "reddit push start date to wait for RSU vest or ask new company sign-on to cover unvested",
+   "url": "https://jobrizzer.com/guides/how-to-negotiate-a-start-date-for-a-new-job",
+   "competitor": "Jobrizzer – How to Negotiate a Start Date",
+   "features_checked": "przesunięcie startu za vest, konkretna data, offset jako sign-on lub grant",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary",
+   "conclusion": "Substitute (poradnik). Opisuje dokładnie tę decyzję, ale bez kalkulatora (w streszczeniu).",
+   "confidence": "medium"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (notatki fali 1; URL nie pojawił się w wynikach tej fali)",
+   "url": "https://allocateai.io/calculators/comp-comparison",
+   "competitor": "AllocateAI Comp Comparison",
+   "features_checked": "nie sprawdzono",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny w tej fali (tylko notatka z fali 1)",
+   "conclusion": "Niezweryfikowany partial z fali 1.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (notatki fali 1; URL nie pojawił się w wynikach tej fali)",
+   "url": "https://smithery.ai/skills/paramchoudhary/offer-comparison-analyzer",
+   "competitor": "offer-comparison-analyzer (agent skill, Smithery)",
+   "features_checked": "nie sprawdzono",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny w tej fali (tylko notatka z fali 1)",
+   "conclusion": "Niezweryfikowany substitute AI z fali 1.",
+   "confidence": "low"
+  },
+  {
+   "date": "2026-10-25",
+   "query": "n/d (notatki fali 1; URL nie pojawił się w wynikach tej fali)",
+   "url": "https://secfi.com/learn/should-i-stay-in-my-underpaid-job-and-wait-for-the-ipo-or-quit",
+   "competitor": "Secfi (oraz Carta – leaving company guide)",
+   "features_checked": "nie sprawdzono",
+   "access_limits": "strona nieotwierana (WebFetch zablokowany), dowód: search-summary niedostępny w tej fali (tylko notatka z fali 1); Secfi to płatne doradztwo (niezweryfikowane)",
+   "conclusion": "Niezweryfikowane treści i doradztwo z fali 1, prawdopodobnie substitute.",
+   "confidence": "low"
+  }
+ ],
+ "queries_run": [
+  "should I wait for my RSU vest and bonus before quitting for a new job, calculator",
+  "sign-on bonus buyout calculator unvested equity forfeited",
+  "\"cost of leaving\" job calculator unvested RSUs 401k match vesting bonus clawback start date",
+  "calcuja golden handcuff calculator break-even months wait vest delay start date sign-on",
+  "negotiate equity buyout new employer forfeited RSUs bonus negotiation coach Levels.fyi Rora",
+  "reddit push start date to wait for RSU vest or ask new company sign-on to cover unvested",
+  "job offer comparison calculator forfeited unvested equity sign-on clawback multi-year"
+ ]
+}
