@@ -1,0 +1,249 @@
+{
+ "reviewer": "Audytor jakości CSV (bez wyszukiwania w sieci)",
+ "summary_pl": "Sprawdziłem pliki skryptami w Pythonie, bez edycji. Formalnie wszystko się zgadza. product-opportunities.csv ma 100 wierszy, 100 unikalnych ID i żadnych pustych pól wymaganych. competitor-audit.csv ma 1106 wierszy i wszystkie wymagane kolumny. economics.csv ma jednostki w 93/93 wierszach i kolumnę typu (założenie, plan, wynik, hipoteza, ilustracja). Nie ma w nim przeliczenia CPC na RPM. Po uruchomieniu kopii tools/economics_model.py w scratchpadzie wynik jest identyczny jak w economics.csv. Pola konkurencji w top 25 rzeczywiście pochodzą z audit_*.json (build_outputs.py, linie 37–45). Nie znalazłem żadnego wiersza, który twierdzi, że stronę otwarto lub przetestowano. Wszystkie deklarują „nieotwierana” albo nic o tym nie mówią (30 wierszy). Merytorycznie są jednak poważne problemy. (1) 5 pilotów ma status „pilot”, choć audytor zalecił „zbadać”, a ich uzasadnienie dopiero warunkuje pilota. HOME-02 i HOME-04 awansowano mimo kalibracji luki w dół. (2) Kolumna ocena_wazona zawiera oceny sprzed kalibracji, więc ranking w CSV jest inny niż w top-10. (3) Etykieta podstawa_dowodu jest nadawana mechanicznie (build_outputs.py, linia 98) i myli się w obie strony. (4) 356 wierszy fali 1 ma produkt_ID, którego nie da się połączyć z listą produktów, co psuje m.in. poziomy weryfikacji. (5) „100 odrębnych pomysłów” jest zawyżone: RENO-01 jest jawnie scalony, a kilka par różni się tylko stanem, wiekiem lub kwotą. (6) Wyniki fali 2b i plików demand_*.json nie trafiły do pól top 25. (7) W rejestrze są niedopasowania URL–konkurent i brak opisany jako fakt, choć stron nie otwierano. W ekonomice główny problem to kalibracja page RPM na RPM sesyjnym sieci premium i na własnym szacunku autora.",
+ "findings": [
+  {
+   "severity": "blocker",
+   "file": "product-opportunities.csv",
+   "location": "wiersze RENO-02, RENO-03, HOME-02, HOME-04, AUTO-01; kolumny status i uzasadnienie_statusu",
+   "quote": "RENO-02 | pilot | „…Jeśli luka się potwierdzi, a asystenci nie budują modelu wieloletniego, produkt warto przenieść do pilota.”; HOME-02 | pilot | „Kalibracja: luka 3→2 — … Jeśli integracja się potwierdzi jako unikalna, produkt nadaje się na flagowy pilot rodziny 'dom'…”; RENO-03 | pilot | „…Jeśli integracja … się potwierdzi jako nieobecna – pilot…”; HOME-04 | pilot | „…Jeśli BusinessCaseGuy lub Dr. Brian Jones mają większość z nich, trzeba zejść do 'później'…”",
+   "problem_pl": "Status „pilot” przeczy uzasadnieniu w tym samym wierszu. Tekst jest dosłownie rekomendacją audytora „zbadać”: wymienia warunki, które trzeba spełnić przed pilotem. W HOME-02 i HOME-04 kalibracja obniżyła lukę (3→2), a status mimo to podniesiono z „zbadać” na „pilot”. Kierunki są sprzeczne. Wszystkie 6 wierszy pilot/pilot-gałąź ma poziom_pewnosci „niska”. Czytelnik CSV dostaje decyzję bez argumentu.",
+   "evidence_pl": "audit_RENO-02/RENO-03/HOME-02/HOME-04/AUTO-01.json: \"recommendation\": \"zbadać\". final_status.json nadpisuje status na „pilot”, ale zachowuje reason audytora. Uzasadnienie pilotów jest tylko w top-10-products.md (linie 69–73: „Dlaczego pilotaż to RENO-02, RENO-03, HOME-04, HOME-02, AUTO-01…”). W CSV go nie ma. AUTO-01 (3,30) jest pilotem, a RENO-04 (3,65), LIFE-01 (3,60) i INS-03 (3,45) mają „zbadać”.",
+   "fix_pl": "Do uzasadnienia_statusu każdego pilota dopisz na początku jedno zdanie o tym, dlaczego to pilot mimo rekomendacji audytora, przeniesione z top-10 §3. Przykład AUTO-01: „Pilot jako druga pula popytu (auta) przy niskim koszcie eksperckim; audytor: zbadać”. Dodaj kolumnę rekomendacja_audytora („zbadać”). Przy HOME-02 i HOME-04 wyjaśnij, dlaczego po obniżeniu luki status wzrósł. Alternatywa: zmień status na „pilot warunkowy (bramka: ręczna weryfikacja X)”."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "wiersze CARE-01, ENER-03, INS-01, RENT-01, HOME-01, HOME-03, AUTO-03, FIN-02; status vs uzasadnienie_statusu",
+   "quote": "CARE-01 | później | „…Jeśli integracja okaże się nieobecna, przejść do pilotu…”; ENER-03 | później | „…Jeśli żaden nie integruje tych zależności, produkt nadaje się na pilota…”; RENT-01 | później | „…Jeśli luka się potwierdzi, warto rozważyć pilot w okrojonej wersji MVP…”; INS-01 | później | „Zanim zapadnie decyzja o pilocie: …”",
+   "problem_pl": "W 8 wierszach audytor zalecił „zbadać”, a CSV ma „później”. Tekst uzasadnienia nadal opisuje kroki do pilota, czyli semantykę „zbadać”. W HOME-01, HOME-03, INS-01, RENT-01, AUTO-03 i FIN-02 zmiany nie wyjaśnia żaden prefiks „Kalibracja”. Status jest niespójny z uzasadnieniem.",
+   "evidence_pl": "Porównanie audit_*.json[\"recommendation\"] z kolumną status: AUTO-03, CARE-01, ENER-03, FIN-02, HOME-01, HOME-03, INS-01 i RENT-01 mają u audytora „zbadać”, a w CSV „później”. Przed tekstem audytora jest pusty prefiks, z wyjątkiem CARE-01 i ENER-03.",
+   "fix_pl": "Dla każdego z 8 wierszy dopisz jedno zdanie, dlaczego „później”, a nie „zbadać” (np. „poza zakresem startowym domeny”, „kolejność po pilotach”). Albo przywróć „zbadać” i przenieś warunki do osobnej kolumny warunek_awansu."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna „ocena_wazona_0_5 (tylko top 25)”: HOME-02, HOME-04, FIN-01, CARE-01, ENER-03",
+   "quote": "HOME-02 = 3.80; HOME-04 = 3.70; FIN-01 = 3.50; CARE-01 = 3.55; ENER-03 = 3.40 (top-10-products.md: „| 4 | HOME-02 | … | 3.80 | **3.60** |”, „| 7 | HOME-04 | … | 3.70 | **3.50** |”)",
+   "problem_pl": "Kolumna ma oceny agentów sprzed kalibracji, a nagłówek tego nie mówi. Sortowanie CSV stawia HOME-02 (3,80) na 1. miejscu, a raport stawia RENO-02. FIN-01 i ENER-03 są zawyżone o 0,20.",
+   "evidence_pl": "build_outputs.py, linia 46: weighted = sum(W[k] * a['scores'][k]['score']) liczone z surowych ocen audytu. calibration.json nie jest używany. Prefiksy „Kalibracja: luka 3→2” w uzasadnieniach potwierdzają, że kalibracja istnieje.",
+   "fix_pl": "Zmień nazwę kolumny na „ocena_agenta_0_5” i dodaj kolumnę „ocena_po_kalibracji_0_5” z wartościami z top-10 §2 (HOME-02 3.60, HOME-04 3.50, FIN-01 3.30, CARE-01 3.45, ENER-03 3.20). Dodaj też kolumnę zmienione_kryteria (np. „luka 3→2”)."
+  },
+  {
+   "severity": "major",
+   "file": "competitor-audit.csv",
+   "location": "kolumna podstawa_dowodu; linie 62, 574, 596, 96, 150, 165, 184, 253 oraz 171, 304, 316, 322, 569, 615, 686, 687, 689, 693, 860",
+   "quote": "l.62: URL „brak URL w wynikach – wzmianka w search-summary” → podstawa „wiedza modelu, bez wyszukiwania (niezweryfikowane)”; l.171: „dowód: brak w search-summary; tylko notatka z fali 1” → podstawa „search-summary (strona nieotwierana)”; l.689: „Kalkulator PV i baterii oraz marketplace ofert znane z wiedzy treningowej.” → „search-summary (strona nieotwierana)”",
+   "problem_pl": "Etykietę nadaje reguła mechaniczna: brak URL zaczynającego się od http oznacza „wiedza modelu”, URL http oznacza „search-summary”. Poziomy dowodu mylą się w obie strony. (a) Wiersze z realnym dowodem z wyszukiwania (wzmianka w summary, AI-podsumowanie wyszukiwarki dla FIN-01, CARE-01, HLTH-02, HOME-04) są oznaczone jako „bez wyszukiwania”. W liniach 10, 15, 46, 160, 202, 211, 249, 325, 387, 430 i 433 zapytanie wykonano, a wynik był pusty. (b) Wiersze oparte na notatce z fali 1 albo na wiedzy treningowej są oznaczone jako search-summary, co zawyża siłę dowodu.",
+   "evidence_pl": "build_outputs.py, linia 98: basis = 'wiedza modelu…' if NOQ.search(query) or NOQ.search(url[:60]) or not url.startswith('http') else 'search-summary…'. Wszystkie 171 wierszy bez http mają „wiedza modelu”, niezależnie od treści.",
+   "fix_pl": "Etykietę wyprowadzaj z treści, nie z URL. Użyj czterech wartości: „search-summary – opis narzędzia w wyniku”, „wyszukiwanie wykonane – brak w wynikach; wiedza modelu”, „wiedza modelu – bez wyszukiwania”, „notatka fali 1 – niepotwierdzona w fali 2”. Popraw ręcznie wymienione linie. 171, 304, 316 i 322 oznacz jako notatkę fali 1. 569, 615, 686, 687, 689, 693 i 860 oznacz jako wiedzę modelu: URL to inny artykuł. 62, 574, 596, 96, 150, 165, 184 i 253 oznacz jako search-summary."
+  },
+  {
+   "severity": "major",
+   "file": "competitor-audit.csv",
+   "location": "kolumna produkt_ID; 356 z 547 wierszy etapu „fala 1: rodziny/seedy”",
+   "quote": "produkt_ID = „Seed B” (24 wiersze), „Seed D” (32), „G” (23), „Seed E” (20), „S5” (17), „S2-F” (14), „H” (10), „G2-01, G2-03, G2-10”, „wszystkie (G3-01 – G3-16)”",
+   "problem_pl": "65% wierszy fali 1 nie daje się złączyć z product-opportunities.csv. Filtrowanie po ID produktu gubi dowody. Przykład: RET-01 i RET-02 mają bezpośrednio przypisany tylko wiersz „wiedza modelu”, a INS-02, INS-04 i RENT-02 wyglądają na nieweryfikowane, choć dowody istnieją pod „Seed B”, „Seed C / T-S2-R2” i „H / T-S4-R5”.",
+   "evidence_pl": "build_outputs.py, linie 92–93: fid = temp2final.get(...) or tid. Nierozpoznane ID tymczasowe przechodzą bez zmian. Mapowanie jest dostępne w kolumnie scalone_z_pomyslow_agentow (np. G2-01→HOME-01, G4-11→RET-01) i w top-10 §0 (Seed B→INS-02/INS-01, C→INS-04/INS-05, D→AUTO-01, E→JOB-02, F→INS-06/ENER-03, G→CARE-01, H→RENT-01/RENT-02, I→BIZ-04).",
+   "fix_pl": "Dodaj kolumnę produkt_ID_final (lista ID oddzielona „;”) wypełnioną przez mapowanie: G-ID z scalone_z_pomyslow_agentow, seedy i S/T-ID z tabeli top-10 §0. Zachowaj oryginał jako produkt_ID_agenta. W README podaj liczbę wierszy bez mapowania (cel: 0)."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna poziom_weryfikacji/poziom_pewnosci: INS-02, INS-04, INS-05, RENT-02, RET-05, RET-06, CARE-03",
+   "quote": "INS-02 | koncepcyjny | niska | „Seed B w formie ogólnej odrzucony z wysoką pewnością (top-up T-S2): rdzeń pokrywają darmowe kalkulatory (np. calcbee…)”; CARE-03 | koncepcyjny | „…Wymaga weryfikacji (brak wyszukiwań).”; RET-06 | koncepcyjny | „…Wymaga weryfikacji.”",
+   "problem_pl": "Poziomy weryfikacji są pomylone. Te pomysły mają w rejestrze wiersze search-summary, a CSV podaje „koncepcyjny”. INS-02 przeczy sam sobie: uzasadnienie mówi o wysokiej pewności z wyszukiwań, a kolumny o niskiej pewności i braku weryfikacji. Zdanie „brak wyszukiwań” w CARE-03 jest nieprawdziwe.",
+   "evidence_pl": "competitor-audit.csv: Seed B (INS-02) – linie 962–991, ok. 30 wierszy search-summary, w tym 967 „Calcbee – Insurance Deductible Optimizer”. INS-04 – linie 999–1004. INS-05 – linie 813–814. RENT-02 – linie 768–770 i 1104. RET-05 – linia 881. RET-06 – linie 883–885 i 887–891: 8 wierszy search-summary, w tym 885 „Najbliższy konkurent dla rdzenia G7-04 (…może prawie bezpośredni)”. CARE-03 – linie 608–609 (topup_T-S4).",
+   "fix_pl": "Zmień poziom_weryfikacji na „wstępnie sprawdzony w wyszukiwarce” dla INS-02, INS-04, INS-05, RENT-02, RET-05, RET-06 i CARE-03. W INS-02 ustaw poziom_pewnosci zgodnie z werdyktem seeda (top-10 §0: „pewność wysoka”) albo usuń słowa „z wysoką pewnością”. W CARE-03 usuń „(brak wyszukiwań)” i zacytuj HomeAdditionCostCalculator. W RET-06 wpisz takehometax.com jako najbliższego konkurenta."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "wiersz RENO-01 oraz deklaracja README.md: „długa lista 100 odrębnych pomysłów”",
+   "quote": "RENO-01 | status „pilot (jako gałąź RENO-02)” | „Scalony z RENO-02 jako opcjonalna gałąź PV…”; top-10 §0: „PV jako opcjonalna gałąź (RENO-01 scalony)”; RENO-02 warianty: „…wymiana z PV (moduł opcjonalny)”",
+   "problem_pl": "Raport sam stwierdza, że RENO-01 nie jest odrębnym pomysłem, a nadal liczy go do 100 i do top 25 (pozycja 6 w rankingu). Lista 25 propozycji zawiera więc duplikat.",
+   "evidence_pl": "Uzasadnienie RENO-01 i tabela top-10 §0, wiersz A. Wariant E RENO-01 (dach + PV) pokrywa się z opcjonalnym modułem PV w RENO-02.",
+   "fix_pl": "Usuń RENO-01 z listy odrębnych pomysłów albo nadaj mu status „scalony → RENO-02” poza liczbą 100. Uzupełnij top 25 kolejną pozycją (np. AUTO-03 lub HLTH-02 w zależności od rankingu). W README zmień liczbę na faktyczną."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "pary JOB-10/RET-05, INS-07/INS-03, FIN-02/CARE-02, RET-01/RET-03, FIN-04/LIFE-04",
+   "quote": "JOB-10: „We're retiring next year… Would moving from New Jersey to Florida or North Carolina actually save us money…” vs RET-05: „We're 66 and thinking of selling our New Jersey house and moving to South Carolina…”; INS-07: „…I'm on the California FAIR Plan… can I get back to a regular insurer…” vs INS-03: „My insurer is non-renewing my California home. Should I go with the FAIR Plan plus a DIC policy… or harden the house first…”; FIN-02: „I'm 64… I need $70k… reverse mortgage, or… sell and downsize” vs CARE-02: „We're 70 and 73… We need about $60k… reverse mortgage line of credit, a HELOC, or sell and downsize?”",
+   "problem_pl": "To pozornie odrębne pomysły: ta sama decyzja, różna tylko stanem, wiekiem, kwotą lub etapem. JOB-10 i RET-05 to emeryt przenoszący się z NJ na południe (różnią się stanem docelowym); uzasadnienie JOB-10 samo mówi „Pary stanów to cienkie warianty, nie odrębne produkty”. INS-07 to INS-03 zawężony do Kalifornii, a uzasadnienie INS-03 zaleca „Zawęzić zakres do jednego stanu na start, np. Kalifornia: FAIR+DIC vs E&S vs zabezpieczenie+admitted vs sprzedaż”, czyli dokładnie warianty A–D z INS-07. FIN-02 i CARE-02 to dom 62+ z potrzebą 60–70 tys. USD: HECM vs HELOC vs downsizing (różnią się wiekiem i kwotą). RET-01 i RET-03 to wieloletnie konwersje Roth z progiem (IRMAA/ACA), przy czym tytuł RET-01 zawiera „ACA”. FIN-04 i LIFE-04 to luka finansowania po limitach federalnych 2026 (Grad PLUS vs Parent PLUS).",
+   "evidence_pl": "Pola przykladowe_pytanie_do_LLM_en, warianty_porownania i uzytkownik_i_moment_potrzeby wymienionych wierszy. Uzasadnienie JOB-10 i INS-03 (cytaty powyżej).",
+   "fix_pl": "Scal pary w jeden pomysł z parametrem (stan, wiek, poziom studiów): RET-05 ⊃ JOB-10, INS-03 ⊃ INS-07 (wariant CA), FIN-02 ⊃ CARE-02 (preset „opieka 70+”), RET-03 ⊃ ACA-gałąź RET-01 albo odwrotnie, FIN-04 + LIFE-04 → „luka finansowania studiów 2026”. W uwagi_scalenia wpisz źródła. Liczbę pomysłów odrębnych podaj po scaleniu."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "pary AUTO-01/AUTO-03, CARE-04/LIFE-01, LIFE-01/LIFE-02, INS-06/ENER-03, BIZ-05/BIZ-06, RENO-07/HOME-03, CARE-07/CARE-01, INS-08/INS-09/INS-10/CARE-06",
+   "quote": "AUTO-01 moment: „…po wycenie poważnej naprawy starego auta…”; AUTO-03: „Właściciel auta…, który właśnie dostał wycenę dużej naprawy”; LIFE-01: „rozważyć wspólny rdzeń z kalkulatorem domu przy rozwodzie”; INS-09: „Najwyżej tani moduł po zbudowaniu wspólnego silnika 'insure vs self-insure'”; RENO-07: „Część dotycząca sprzedaży as-is jest pokryta przez G2-03”; CARE-07: „Lepiej jako moduł capex w G5-09 niż osobny produkt”",
+   "problem_pl": "To bliskie duplikaty: ten sam silnik decyzyjny, różny tylko wyzwalacz lub przedmiot. AUTO-01 i AUTO-03: keep vs trade/replace, a ten sam URL MotoWatchdog jest w obu audytach (linie 14 i 51), FindSkill „Car Repair vs Replace” w liniach 57 i 453. CARE-04 i LIFE-01: dom rodzica sprzedać/wynająć/zatrzymać przed i po śmierci. LIFE-01 i LIFE-02: wykup współwłaściciela. INS-06 ⊂ ENER-03: moment ENER-03 „z sump pump”, warianty INS-06 obejmują generator i stację zasilania. BIZ-05 i BIZ-06: porównanie ofert MCA/RBF/LOC/karta. INS-08, INS-09, INS-10 i CARE-06: jeden szablon „ubezpieczyć vs samoubezpieczyć”.",
+   "evidence_pl": "Teksty uzasadnień (cytaty), pola warianty_porownania oraz wspólne URL w competitor-audit.csv, linie 14/51 i 57/453.",
+   "fix_pl": "Oznacz te pary w uwagi_scalenia jako „wariant/moduł X” albo scal je. Podgrupy (INS-08/09/10/CARE-06) zwiń do jednego pomysłu „insure vs self-insure” z presetami. Przelicz liczbę odrębnych pomysłów."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "wiersz BIZ-15: uwagi_scalenia vs uzasadnienie_statusu",
+   "quote": "uwagi_scalenia: „Inny model (newsvendor, jednorazowy zakup sezonowy) niż BIZ-04.”; uzasadnienie: „Ciekawy jako tryb silnika R1 (ten sam model gotówki)…”",
+   "problem_pl": "Ten sam wiersz twierdzi raz, że model jest inny niż w BIZ-04 (S5-R1 = R1), a raz, że jest ten sam. Nie wiadomo, czy BIZ-15 to odrębny pomysł.",
+   "evidence_pl": "BIZ-04 ← seed_S5:S5-R1 (scalone_z_pomyslow_agentow); BIZ-15 ← topup_T-S5:T-S5-R2.",
+   "fix_pl": "Ujednolić: „Inny model popytu (newsvendor), ten sam silnik gotówki co BIZ-04”. Albo scal BIZ-15 jako tryb BIZ-04."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "HOME-02: najblizsza_konkurencja / istotny_brak_w_istniejacych_produktach; ogólnie 10 finalistów",
+   "quote": "HOME-02 istotny_brak: „W żadnym summary nie potwierdzono narzędzia, które jednocześnie: … (3) pokazuje wartość niskiego kredytu … (4) łączy kapitał zamrożony w starym domu z wkładem i ratą nowego domu…”; competitor-audit l.492 (fala 2b): „To jedyny kandydat, którego summary łączy wartość niskiego kredytu z zakupem kolejnego domu… Poprzedni audyt go nie znalazł.”",
+   "problem_pl": "Pola konkurencji top 25 pochodzą wyłącznie z audytu fali 2. Wyniki próby obalenia (fala 2b) nie trafiły do CSV. W HOME-02 (pilot) brakuje TrueHomeCosts (linia 492). Brakuje też większości kandydatów fali 2b: 11 z 14 dla AUTO-01, 10 z 11 dla INS-03, 11 z 14 dla RENO-02, 10 z 12 dla HOME-04.",
+   "evidence_pl": "build_outputs.py, linie 37–45: comps = audit['competitors']; pliki refute_*.json nie są czytane przy budowie wierszy produktów. Porównanie skryptem nazw i domen kandydatów refute_*.json z polami wiersza.",
+   "fix_pl": "Dla 10 finalistów dopisz do najblizsza_konkurencja i co_juz_rozwiazano kandydatów z refute_*.json z oznaczeniem „[fala 2b]”. W HOME-02 dodaj TrueHomeCosts i Bellhaven do zdania o luce: „TrueHomeCosts wg summary łączy (3) i (4), bez §121/recapture”."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna dowody_popytu: HOME-01, HOME-02, HOME-03, HOME-04, RENO-04, INS-01, INS-03, LIFE-01, AUTO-02, AUTO-03, BIZ-04",
+   "quote": "HOME-02: „Brak danych z wyszukiwania. Pośrednio [wiedza modelu, niezweryfikowane]: efekt lock-in…”; INS-03: „Hipoteza / niezweryfikowane (wiedza modelu)… W sesji brak danych.”; BIZ-04: „Brak danych z tej sesji (hipoteza).”",
+   "problem_pl": "W top 25 pole dowodów popytu zostało z długiej listy fali 1, choć audyty zebrały po 6–12 sygnałów popytu, a dla HOME-02, HOME-04, RENO-04, INS-03 i LIFE-01 istnieją osobne pliki demand_*.json. CSV twierdzi „brak danych”, a top-10 cytuje E-DEM. Zaniża to wiarygodność i jest sprzeczne z raportem.",
+   "evidence_pl": "audit_HOME-02.json: demand_signals = 8, plik demand_HOME-02.json istnieje. audit_INS-03: 8 sygnałów i demand_INS-03.json. build_outputs.py, linia 72: 'dowody_popytu': x['demand_evidence'] (z longlist.json).",
+   "fix_pl": "Dla wierszy z audytem nadpisz dowody_popytu skrótem z audit[…]['demand_signals'] i demand_*.json (z ID E-DEM i rodzajem: bezpośrednie/pośrednie). Tekst fali 1 przenieś do osobnej kolumny albo usuń."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna „bezposredni_konkurent (tylko top 25)”: ENER-03, RENT-01",
+   "quote": "ENER-03 = „nie znaleziono w badanym zakresie”; RENT-01 = „nie znaleziono w badanym zakresie”; competitor-audit l.908: „Home Energy Planner Backup Power Calculator… Bezpośredni (rdzeń problemu pokryty wg opisu)”; l.760: „OverlineIQ – Keep vs Sell calculator… Bezpośredni dla hold vs sell z podatkami”; l.768: „BiggerPockets – Sell vs. Keep Calculator… Bezpośredni dla rdzenia H.”",
+   "problem_pl": "Pole jest kategoryczne, a w rejestrze są sprzeczne klasyfikacje tego samego URL. Dla homeenergyplanner.com linia 139 mówi „częściowy”, a linia 908 „bezpośredni”. Dla overlineiq.com linie 231 i 418 mówią „partial”, a linia 760 „bezpośredni”. Ten sam plik w wierszu RENT-02 pisze „BiggerPockets Sell vs Keep, OverlineIQ jako konkurenci bezpośredni”, a seed H ma zamiennik RENT-01 (top-10 §0). Podobny konflikt: heireview.com, linia 171 („nie pojawił się w żadnym wyniku”) i linia 627 („prawie bezpośredni”, średnia).",
+   "evidence_pl": "Grupowanie competitor-audit.csv po URL: 22 URL-e mają rozbieżne klasyfikacje. Uzasadnienie ENER-03 samo wspomina konflikt („agent seedów sklasyfikował Home Energy Planner jako konkurenta bezpośredniego”).",
+   "fix_pl": "Dla ENER-03 i RENT-01 wpisz „sporny: fala 1 – bezpośredni (linie 908 / 760, 768), fala 2 – częściowy; do ręcznej weryfikacji”. W competitor-audit dodaj kolumnę konflikt_z_wierszem z numerem przeciwnego wiersza dla 22 URL-i."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "wiersz FIN-03 (uzasadnienie_statusu vs najblizsza_konkurencja); competitor-audit l.635",
+   "quote": "FIN-03 uzasadnienie: „Oficjalny StudentAid.gov Loan Simulator jako konkurent bezpośredni … prawdopodobnie federalny symulator…”; najblizsza_konkurencja: „Federal Student Aid – Loan Simulator [częściowy] brak URL – nie pojawił się w wynikach (limit wyszukiwań); nazwa z wiedzy modelu”; l.635: „Prawdopodobnie konkurent częściowy lub bezpośredni; do sprawdzenia.”",
+   "problem_pl": "Odrzucenie opiera się na „konkurencie bezpośrednim”, którego nie sprawdzono (wiedza modelu, bez wyszukiwania). W tym samym wierszu jest on też „częściowy” i „prawdopodobny”. Hipoteza jest podana jako fakt.",
+   "evidence_pl": "competitor-audit.csv, linia 635: podstawa „wiedza modelu, bez wyszukiwania (niezweryfikowane)”, pewnosc „niska”.",
+   "fix_pl": "Zmień na „StudentAid.gov Loan Simulator – prawdopodobnie konkurent częściowy/bezpośredni (wiedza modelu, niezweryfikowane)”. Główny argument odrzucenia oprzyj na zmienności reguł i na StudentLoanCalcs (linia 674, search-summary)."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna poziom_pewnosci przy poziom_weryfikacji = „koncepcyjny” i status „odrzucić”: FIN-08, FIN-09, INS-08, INS-10, HOME-05, HOME-06, RENO-07, RENO-08, ENER-04, AUTO-05, AUTO-06, AUTO-07, JOB-09, RENT-04, RENT-05, RENT-06, CARE-06, LIFE-05; oraz JOB-06",
+   "quote": "HOME-05 | koncepcyjny | średnia | „Bardzo zatłoczone; dodatkowe pola nie tworzą niszy.”; competitor-audit l.685: „SmartAsset… Bezpośredni dla wąskich kalkulatorów; główny argument za odrzuceniem G2-12 i G2-13.” (wiedza modelu, pewnosc średnia); JOB-06 | odrzucić | „Odrzucenie warunkowe: prawdopodobna gęsta konkurencja fintechów (niezweryfikowane)… Do ponownego rozpatrzenia tylko wtedy, gdy weryfikacja nie potwierdzi konkurencji.”",
+   "problem_pl": "18 odrzuceń na poziomie „koncepcyjny” ma pewność „średnia”, czyli wyższą niż wszystkie 6 pilotów („niska”). Odrzucenie HOME-05 stoi na wierszach z wiedzy modelu (linie 685, 807, 808), oznaczonych pewnością „średnia” i opisanych jako „Bezpośredni konkurent”. JOB-06 jest „odrzucony” warunkowo na niezweryfikowanej przesłance, co semantycznie odpowiada statusowi „później”.",
+   "evidence_pl": "Tabela krzyżowa (poziom_weryfikacji × status × poziom_pewnosci): („koncepcyjny”, „odrzucić”, „średnia”) = 18. competitor-audit.csv: wiersze z wiedzy modelu z pewnością „średnia” to linie 685, 807 i 808 (oraz 62, 96, 114, 150, 165, 184, 253, 574, 1105 i 1107).",
+   "fix_pl": "Zdefiniuj w README, czego dotyczy poziom_pewnosci (statusu czy dowodów). Wiersze koncepcyjne ogranicz do „niska” albo dodaj kolumnę pewnosc_statusu. W linii 685, 807 i 808 ustaw pewnosc „niska” i „Prawdopodobnie bezpośredni (wiedza modelu)”. JOB-06 zmień na „później”."
+  },
+  {
+   "severity": "major",
+   "file": "competitor-audit.csv",
+   "location": "kolumny URL vs konkurent: linie 474, 505, 507, 472, 785, 716, 928, 943, 896, 892, 897, 693, 687, 689, 207, 209, 238, 239, 247, 28, 186; product-opportunities.csv ENER-02",
+   "quote": "l.474: URL „https://www.etsy.com/listing/4451367129/film-call-sheet-template-excel-video” | „Etsy – Cash-out Refinance Calculator…” | częściowy | średnia; l.505: „California FAIR Plan online premium estimator (cfpnet.com)” → „https://www.latentinsure.com/california-fair-plan/cost”; l.507: „Florida OIR - Homeowners Insurance Choices” → „https://www.coveragecat.com/blog/…”; l.785: „Health Plan Comparison Calculator – PEBA (South Carolina)” → „https://schsa.centralbank.net/…”; ENER-02: „EnergySage (battery calculator) [częściowy] https://www.energysage.com/news/10-questions-about-the-ev-tax-credit-ending/”",
+   "problem_pl": "Domena lub ścieżka URL nie należy do konkurenta z kolumny konkurent. W 474 slug to szablon „film call sheet”. 505 i 507 wskazują blog brokera zamiast regulatora. 716 to strona Boldin o MaxiFi, 928 to prediko.io „inventory-planner-alternatives”, a 943 to kickfurther.com „wayflyer-alternatives” (strony konkurentów opisują rywali). 687 i 689 to artykuły o ulgach na EV przypisane do kalkulatorów PV. 207, 209, 238, 239, 247 i 28 to recenzje lub newsy. Kolumna URL sugeruje stronę narzędzia, a pewnosc „średnia” nie uwzględnia niedopasowania. ENER-02 linkuje „battery calculator” do artykułu o EV.",
+   "evidence_pl": "Porównanie domeny z nazwą skryptem: 64 kandydatów, ręcznie potwierdzone powyższe. W liniach 474 i 505 sam tekst wiersza przyznaje niedopasowanie („slug URL… nie pasuje do tytułu”, „domeny cfpnet.com nie było”), a mimo to wniosek to „częściowy” z pewnością „średnia”. Audytor fali 2 (RENO-01) pisze: „URL-e z fali 1 dotyczą EV tax credit i są nieadekwatne”.",
+   "fix_pl": "Rozdziel kolumny na URL_zrodla (gdzie padła wzmianka) i URL_narzedzia (pusty lub „nieustalony”, gdy brak własnej domeny). W 474, 505, 507, 785, 687 i 689 ustaw pewnosc „niska” i wniosek „niezweryfikowane – URL nie należy do konkurenta”. Linię 474 usuń albo oznacz jako błędnie zindeksowaną. W ENER-02 usuń URL EV i wpisz „brak URL – wiedza modelu”."
+  },
+  {
+   "severity": "major",
+   "file": "competitor-audit.csv",
+   "location": "116 wierszy etapu „fala 2b: próba obalenia (finaliści)” (linie 445–556): kolumny pewnosc, kwerenda",
+   "quote": "pewnosc = „średnia” we wszystkich 116 wierszach; kwerenda = „jedno z 8 zapytań agenta obalającego: … | … | …” (np. l.492)",
+   "problem_pl": "Pewność w wierszu to pewność całego agenta, skopiowana do każdego kandydata. Dlatego wiersze z błędnie zindeksowanym listingiem (474) albo z URL innego podmiotu (505, 507) mają „średnia”. Kwerenda nie wskazuje, które zapytanie zwróciło kandydata, więc nie da się odtworzyć dowodu.",
+   "evidence_pl": "build_outputs.py, linia 114: 'pewnosc': LV.get(d['confidence']…), gdzie d to cały plik refute. Linia 110: 'kwerenda': 'jedno z 8 zapytań agenta obalającego: ' + ' | '.join(d['queries_run'][:8]). Wszystkie refute_*.json mają confidence „medium”.",
+   "fix_pl": "Nadawaj pewność na poziomie kandydata według reguły: URL własny i opis funkcji → „średnia”; tylko tytuł, cudzy URL albo artykuł → „niska”. Przypisz konkretne zapytanie z queries_run, a jeśli agent tego nie podał, wpisz „nieprzypisane (1 z 8)” i przenieś pełną listę zapytań do osobnego pliku."
+  },
+  {
+   "severity": "major",
+   "file": "competitor-audit.csv",
+   "location": "kolumna wniosek / sprawdzone_funkcje: linie 261, 154, 158, 164, 267, 27, 45, 2, 89, 124, 311, 410, 896, 989, 17, 360, 367 (search-summary) oraz 62, 690, 694, 729, 877 (wiedza modelu)",
+   "quote": "l.261: ograniczenia „dowód: search-summary (tylko tytuł, bez opisu funkcji)” → wniosek „Nie porównuje z przeprowadzką.”; l.154: „Brak widocznego modelu w czasie.”; l.164: „nie porównuje z HELOC.”; l.896: „nie modeluje dachu ani sprzedaży”; l.17 (pewnosc wysoka): „bez spersonalizowanego modelu liczbowego”; l.62 (wiedza modelu): „Partial: poziom jednostki, bez scenariuszy wielookresowych”",
+   "problem_pl": "Brak funkcji jest podany jako fakt („brak”, „nie porównuje”, „bez …”), choć strony nie otwarto. W linii 261 jedynym dowodem był tytuł, a w liniach 62, 690, 694, 729 i 877 wiedza modelu. Narusza to zasadę „niezweryfikowana, nie »brak«”, którą stosują inne wiersze (np. 97, 325, 433). Linie 17, 360 i 367 mają do tego pewność „wysoka”.",
+   "evidence_pl": "Regex na „brak|nie ma|nie porównuje|nie modeluje|bez (modelu|scenariuszy|…)” bez zastrzeżeń typu „wg summary/niezweryfikowane” daje 64 trafienia. Ręcznie potwierdzone wymienione linie.",
+   "fix_pl": "Przepisz na „X niezweryfikowane (summary nie wspomina)”. Przykład dla linii 261: „Porównania z przeprowadzką nie widać w tytule; funkcje niezweryfikowane”. W liniach 17, 360 i 367 obniż pewność do „średnia”. W wierszach z wiedzy modelu (62, 690, 694, 729, 877) zamień „bez …” na „zakres niezweryfikowany”."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv",
+   "location": "kolumna ograniczenia_dostepu: linie 598–602, 664, 666, 762, 768, 769, 881, 920–931, 935, 940–944, 946, 1099 (30 wierszy)",
+   "quote": "l.599: „darmowa treść”; l.920: „darmowy”; l.946: „płatne od $49/mies., trial 30 dni”; l.768: „5 darmowych raportów, potem Pro (wg recenzji 39 USD miesięcznie lub 390 USD rocznie)…”",
+   "problem_pl": "W tych wierszach nie ma informacji, że strony nie otwarto ani skąd pochodzi dowód. Ceny i trial są podane jak fakt sprawdzony u źródła. Dla czytelnika wygląda to na zweryfikowany dostęp.",
+   "evidence_pl": "Filtr: ograniczenia_dostepu bez słów otw/summary/tytuł/wiedz/webfetch/wyszuk/test/hipotez daje 30 wierszy.",
+   "fix_pl": "Dopisz w każdym standardowy prefiks „strona nieotwierana (WebFetch zablokowany), dowód: search-summary” albo „wiedza modelu”. Ceny oznacz „wg summary/recenzji, niezweryfikowane”."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv",
+   "location": "kolumna konkurent: linie 16, 85, 132, 222, 281, 288, 763, 881, 893, 907, 999",
+   "quote": "l.281: „Nie konkurent – regulacja CA SB 1301 (rozdział 693, 2026)”; l.288: „(brak konkurenta - sygnał popytu dla wariantu 'sprzedaż')”; l.132: „(sygnał popytu) EIA – godziny przerw 2024”; l.881: „Brak narzędzia w wynikach – artykuły o I[RMAA]…”",
+   "problem_pl": "Rejestr konkurencji zawiera wiersze, które nie są konkurentami: regulacje, sygnały popytu, źródła danych i „brak wyników”. Liczniki i filtry konkurentów są przez to zawyżone.",
+   "evidence_pl": "Wyszukanie fraz „nie konkurent”, „sygnał popytu”, „brak konkurenta” i „źródło danych” w kolumnach konkurent/wniosek.",
+   "fix_pl": "Dodaj kolumnę typ_wiersza (konkurent / substytut / sygnał_popytu / źródło_reguł / brak_wyniku) albo przenieś te wiersze do rejestru dowodów (evidence-and-assumptions.md)."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv",
+   "location": "kolumna wniosek (klasyfikacja); duplikaty produkt_ID+URL",
+   "quote": "pierwsze słowo wniosku: „partial” 297×, „częściowy” 219×, „substitute” 147×, „substytut” 166×, „direct”/„DIRECT”/„bezpośredni”; duplikaty np. l.157 i l.478 (Mothebroker, FIN-01: pewnosc „niska” vs „średnia”)",
+   "problem_pl": "Klasyfikacja jest zaszyta w tekście wniosku w dwóch językach i różnej wielkości liter, więc nie da się jej filtrować. 36 par (73 wiersze) ma ten sam produkt_ID i URL z różną pewnością, bez wskazania, która ocena obowiązuje.",
+   "evidence_pl": "Counter na pierwszym słowie wniosku oraz grupowanie po (produkt_ID, URL).",
+   "fix_pl": "Dodaj kolumnę klasyfikacja ze słownikiem {bezpośredni, częściowy, substytut, niezweryfikowany, nie-konkurent}. Duplikaty scal albo dodaj kolumnę „zastępuje wiersz N” z oceną obowiązującą (najnowsza fala)."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "kolumna status: RENO-01, BIZ-01, BIZ-04, HLTH-02, BIZ-07, FIN-04",
+   "quote": "„pilot (jako gałąź RENO-02)”; „później (osobna domena)” (BIZ-01, BIZ-04); „zbadać (test na healthscorer.com)” (HLTH-02); BIZ-07 status „później” przy uzasadnieniu „rodzina B2B poza domeną startową (osobna domena, jeśli w ogóle)”; FIN-04 „zbadać” bez znacznika „[Poza zakresem startowym domeny…]”",
+   "problem_pl": "Status poza słownikiem {pilot, zbadać, później, odrzucić} w 4 wierszach psuje filtrowanie: status == „pilot” daje 5 wierszy, a status zaczynający się od „pilot” daje 6. Kwalifikator „osobna domena” jest stosowany niekonsekwentnie (BIZ-07). FIN-04 to kredyty studenckie, czyli obszar poza zakresem według executive-summary.md (linia 36), ale nie ma znacznika, który ma LIFE-04.",
+   "evidence_pl": "Counter statusów: 7 wartości zamiast 4. executive-summary.md, linia 36: „Poza zakresem: … kredyty studenckie…”.",
+   "fix_pl": "Status ogranicz do 4 wartości. Kwalifikatory przenieś do kolumny uwaga_statusu („gałąź RENO-02”, „osobna domena”, „test na healthscorer.com”). Dodaj „osobna domena” do BIZ-07 i znacznik zakresu do FIN-04."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "wiersz AUTO-01: uzasadnienie_statusu i dowody_popytu; kolumna poziom_weryfikacji dla 10 finalistów",
+   "quote": "AUTO-01: „30.9% trade-in z negative equity, średnio $7,183”; raport: „29,1% wymian z ujemnym kapitałem… średnio −7 107 USD (Q3 2026)” [E-DEM-14]; poziom_weryfikacji: „audyt konkurencji (fala 2, search-summary, 7 zapytań)”",
+   "problem_pl": "CSV podaje starszy odczyt (Edmunds, Q1 2026) bez daty, a raport nowszy (Q3 2026). Liczby się różnią. Poziom weryfikacji 10 finalistów pomija dodatkowe 8 zapytań fali 2b.",
+   "evidence_pl": "evidence-and-assumptions.md, linia 371 (E-DEM-14) i top-10-products.md, linie 904–905 (obie wartości z datami).",
+   "fix_pl": "W AUTO-01 wpisz „29,1% (Q3 2026; Q1 2026: 30,9%), średnio 7 107 USD [E-DEM-14]”. Dla 10 finalistów zmień poziom weryfikacji na „audyt fali 2 (7 zapytań) + próba obalenia fali 2b (8 zapytań), search-summary”."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "pola wymagane z treścią zastępczą: AUTO-07, AUTO-05, AUTO-06, BIZ-08, BIZ-11, BIZ-12, BIZ-14, RET-02, INS-08",
+   "quote": "AUTO-07 dowody_popytu: „Hipoteza.”; AUTO-07 powod_wejscia_na_zewnetrzna_strone: „Słaby.”; BIZ-08/BIZ-11/BIZ-12/BIZ-14 co_juz_rozwiazano: „Niezweryfikowane.”; RET-02 istotny_brak_w_istniejacych_produktach: „Nie zidentyfikowano.”; INS-08 dowody_popytu: „Niezweryfikowane.”",
+   "problem_pl": "Pola są niepuste formalnie, ale merytorycznie puste. Kontrola niepustych pól tego nie wychwytuje.",
+   "evidence_pl": "Pola krótsze niż 25 znaków, wyłączając kolumny słownikowe.",
+   "fix_pl": "Uzupełnij jednym zdaniem, co wiadomo i skąd (np. „Hipoteza: brak wyszukiwań; kategorię NerdWallet/Bankrate zna model”). Albo wprowadź jawną wartość „brak danych – nie badano” i wyjaśnij ją w README."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "wiersz 2 (page_rpm_us), kolumna basis_or_formula",
+   "quote": "„ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-11, E-ADS-12, E-ADS-28; vendorskie i self-reported)”",
+   "problem_pl": "Kalibracja AdSense page RPM dla stron-narzędzi powołuje się na E-ADS-12, czyli RPM sesyjny sieci premium (Mediavine, Journey, Raptive) dla blogów treściowych. To inna metryka i inna sieć, a więc konwersja metryk podobna do CPC→RPM. Powołuje się też na E-ADS-28, czyli własne wyliczenie autora („moje wyliczenie na niezweryfikowanych założeniach”), co daje dowód kołowy. Scenariusz konserwatywny (4,0 USD) leży powyżej jedynej mediany z E-ADS-11 (ok. 2,40 USD z 75 stawek).",
+   "evidence_pl": "evidence-and-assumptions.md: E-ADS-12 „Raporty blogerów… (RPM sesyjne, self-reported)… To blogi treściowe… a nie narzędzia”. E-ADS-28 „Szacunek scenariuszowy (moje wyliczenie…)”. E-ADS-11 „Jeden benchmark podaje medianę ok. 2,40 USD z 75 stawek”.",
+   "fix_pl": "Z basis usuń E-ADS-12 i E-ADS-28 albo opisz je jako „kontekst, nie kalibracja”. Scenariusz konserwatywny ustaw na ≤2,4 USD albo dodaj wiersz wrażliwości z page RPM = 2,4. Dopisz: „brak danych pierwotnych dla stron-narzędzi; wartość rozstrzygnie pilotaż”."
+  },
+  {
+   "severity": "minor",
+   "file": "economics.csv",
+   "location": "wiersze 8 (ai_share_of_sessions) oraz 60–65; tools/economics_model.py linie 147–150",
+   "quote": "wiersz 8: „Udział ruchu z asystentów AI w sesjach ludzi” | 0.02 / 0.1 / 0.3 | „benchmarki rynkowe 0,1-1% ruchu witryn”; wiersz 61: „W tym sesje z asystentów AI/mies. dla 1000 USD” = 11000 / 14300 / 13400",
+   "problem_pl": "Udział jest zdefiniowany względem sesji ludzi, a w wierszach 60–65 mnożony przez wszystkie zarejestrowane sesje, razem z botami (human_share 0,85–0,97). Sesje AI są więc zawyżone o 3–15%, a suma z wierszy 60 i 61 zawiera boty. Scenariusz „konserwatywny” (2%) jest 2–20 razy powyżej benchmarków (0,1–1%) z tego samego wiersza.",
+   "evidence_pl": "Skrypt, linia 150: t / rpm[s] * 1000 * p(\"ai_share_of_sessions\", s), bez × human_share. Bazowo 142 926 × 0,1 = 14 300, a powinno być 142 926 × 0,92 × 0,1 ≈ 13 150.",
+   "fix_pl": "W wierszach 60–65 mnóż przez human_share i dodaj wiersz „w tym boty”. Scenariusz konserwatywny ustaw na ≤0,01 albo opisz go jako „wyższy niż benchmark; obserwacja właściciela niezweryfikowana”."
+  },
+  {
+   "severity": "minor",
+   "file": "economics.csv",
+   "location": "wiersz 26 (zipf_s, unit „-”), wiersz 89 (wartości „2 / 8”, „5 / 10”, „12 / 13”), wiersz 84 („26640.0”)",
+   "quote": "„zipf_s: Wykładnik rozkładu ruchu… | - |”; „ILUSTRACJA: narzędzia z ruchem / bez istotnego ruchu | szt. | 2 / 8 | 5 / 10 | 12 / 13”",
+   "problem_pl": "Wiersz 89 ma tekst w kolumnach liczbowych, co psuje import do arkusza i obliczenia. Jednostka „-” jest nieopisana. Formatowanie liczb jest niespójne (26640.0 obok liczb całkowitych).",
+   "evidence_pl": "Odczyt csv.DictReader. Wszystkie inne wiersze scenariuszy są liczbowe.",
+   "fix_pl": "Wiersz 89 rozbij na dwa wiersze liczbowe (z ruchem / bez ruchu). Jednostkę zipf_s ustaw na „bezwymiarowy”. Wiersze 84–86 formatuj jako liczby całkowite."
+  }
+ ]
+}

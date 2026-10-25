@@ -1,0 +1,402 @@
+{
+ "reviewer": "RULE-COMPLIANCE AUDITOR (reguły 1–13 właściciela)",
+ "summary_pl": "Raport w większości przestrzega reguł. Nigdzie nie pada „brak konkurencji” ani „no competition”, w kartach finalistów konsekwentnie użyto formuły „Nie znaleziono bezpośredniego konkurenta w badanym zakresie” z zakresem i pewnością. Testów asystentów nie symulowano, nie podano wolumenów słów kluczowych, a model bazowy nie zawiera lead-genu. Zabroniono stron dla kombinacji parametrów, „topic authority” opisano poprawnie, a progi z §3.1 i §4.3 są oznaczone jako propozycje. Wszystkie URL-e (ok. 2,3 tys.) dają się prześledzić do surowych wyników agentów w data/agent-outputs/; nie znalazłem linków dopisanych na etapie syntezy.\n\nSą jednak istotne naruszenia, skupione głównie w executive-summary.md, czyli w pliku czytanym najczęściej:\n(1) Bramka G0 da się „przejść” samą deklaracją właściciela (warunek c), bez żadnego pomiaru popytu w Google. To podważa podstawę werdyktu „budować warunkowo” (reguła 13).\n(2) Klasyfikacja konkurentów w streszczeniu jest sprzeczna z rejestrem. Wprowadzono niezdefiniowaną kategorię „prawie bezpośredni”, a calcbee jest w rejestrze „PARTIAL” (reguła 2).\n(3) Wybrane liczby są selektywne lub przedstawione jako fakty, choć źródło mówi inaczej: ruch Omni 18–23 mln zamiast 9–23 / 14,3 mln; „~1–1,5 odsłony na sesję” dla narzędzi, choć źródło mówi, że benchmarku brak (reguły 4 i 11).\n(4) Ocena popytu (waga 20%) w kartach opiera się na podaży treści i kalkulatorów, wbrew własnemu E-DEM-23 (reguła 4).\n(5) Twierdzenia o „systemach AI” i „kanale AI” są uogólniane na wszystkie platformy przy niskiej pewności (JSON-LD, „nagradza markę”) (reguła 8).\n(6) CPC reklamodawcy porównano z „RPM display” (reguła 5).\n(7) Streszczenia generowane przez narzędzie wyszukiwania potraktowano jako „dowód” zachowania asystentów (reguła 3).\n(8) Są niespójności liczbowe między plikami: godziny właściciela, udział ruchu AI w scenariuszach, nieaktualne pola CSV dla produktów pilotażowych.\n\nŁącznie: 1 blocker, 19 major, 24 minor.",
+ "findings": [
+  {
+   "severity": "blocker",
+   "file": "executive-summary.md (także architecture-and-validation.md)",
+   "location": "executive-summary.md §1 l.10 i §6 l.69–72; architecture-and-validation.md §4.2 l.287–292",
+   "quote": "Najpierw **2-tygodniowa bramka pomiarowa** (koszt ≈ 0 USD), która rozstrzyga, czy w ogóle zaczynać budowę. […] **Bramka G0:** budujemy RENO-02, jeśli spełniony jest przynajmniej jeden warunek: […] - właściciel świadomie przyjmuje Google organic jako kanał bazowy.",
+   "problem_pl": "„Bramka pomiarowa” przepuszcza budowę bez żadnego pomiaru: wystarczy decyzja właściciela (warunek c). Przy tej ścieżce werdykt „budować warunkowo” nie ma podstawy dowodowej, bo raport nie ma żadnych danych o popycie w Google (brak wolumenów, K-04 dopiero w kolejce) i sam dokumentuje, że Google oddaje coraz mniej kliknięć. Progi (a) ≥10% i (b) ≥300 sesji nie są w streszczeniu oznaczone jako propozycje. Warunek (b) mierzy ruch AI domeny zdrowotnej, czyli dane pośrednie dla symulatorów domu i auta, a to nie jest zaznaczone (reguły 4, 10, 13).",
+   "evidence_pl": "evidence-and-assumptions.md §2: „wolumenów słów kluczowych brak”; §6 K-04 (wolumeny) i K-05 (AI Mode) „wysoki” priorytet, niewykonane. economics.csv: bazowo potrzeba ok. 143 tys. sesji/mies. na 1000 USD, „w praktyce głównie Google organic” (wiersz 60). executive-summary §2.3: AIO −35–61% CTR, AI Mode −18,8 pp. Architektura oznacza jako propozycje tylko progi z §3.1 i §4.3, nie G0.",
+   "fix_pl": "Przepisać G0: warunek (c) nie może sam otwierać budowy. Proponowane brzmienie: „(c) jeśli właściciel wybiera Google organic jako kanał bazowy, budowa RENO-02 dopiero po K-04 i K-05: wolumeny Keyword Planner/GSC dla 3–5 klastrów fraz RENO-02 oraz sprawdzenie, czy AI Mode/AIO generuje własny kalkulator; próg [X wyszukiwań/mies.] — propozycja decyzyjna, nie norma rynkowa”. W §6 streszczenia dopisać „progi to propozycje decyzyjne”. Przy (b) dopisać „wskaźnik pośredni (inna domena i tematyka)”. W §1 podać pewność werdyktu, np. „pewność: średnia dla ‘nie budować wersji szerokiej’, niska dla ‘budować wersję wąską’”."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md (także top-10-products.md, market-and-distribution.md)",
+   "location": "executive-summary.md §2 pkt 6, l.20; top-10-products.md §0 seed H (l.16); market-and-distribution.md l.161",
+   "quote": "Pomysły startowe B, F i H oraz kandydat RET-03 mają konkurentów bezpośrednich lub prawie bezpośrednich: „Insurance Deductible Optimizer”, Home Energy Planner, BiggerPockets „Sell vs. Keep”, RothHelper/QuantCalc.",
+   "problem_pl": "Kategoria „prawie bezpośredni” nie istnieje w definicjach (bezpośredni / częściowy / substytut). Wymienione narzędzia są w rejestrze sklasyfikowane inaczej, niż sugeruje streszczenie. „Insurance Deductible Optimizer” (calcbee) to w rejestrze konkurent częściowy. Home Energy Planner ma klasyfikację sporną. OverlineIQ (seed H, rynek l.161) jest „bezpośredni” tylko w fali 1 przy pewności niskiej, z niezweryfikowanym wariantem remontu, a w fali 2 jest „Partial” (reguła 2).",
+   "evidence_pl": "competitor-audit.csv rekord 967: calcbee „PARTIAL, najbliższy rdzeniowi seedu B; podważa nowość”. Rekord 908 (Home Energy Planner, fala 1): „Bezpośredni”; rekord 139 (fala 2): „Częściowy, najbliższy kandydat… niska”. Rekord 760 OverlineIQ: „Bezpośredni… (na podstawie deklaracji). Wariant remontowy niezweryfikowany”, niska; rekord 418: „Partial, najbliższy fragment”. evidence-and-assumptions §5: Home Energy Planner „możliwy konkurent bezpośredni, do weryfikacji”.",
+   "fix_pl": "W streszczeniu: „RET-03: konkurenci bezpośredni (RothHelper, QuantCalc ACA Bridge Optimizer; search-summary, pewność średnia). Seed B: rdzeń pokrywają konkurenci częściowi (calcbee i in.). Seed F: Home Energy Planner — klasyfikacja sporna (bezpośredni vs częściowy), do ręcznej weryfikacji. Seed H: BiggerPockets Sell vs Keep — bezpośredni dla rdzenia hold/sell (pewność średnia); OverlineIQ — częściowy/sporny”. Usunąć „prawie bezpośrednich”. Tak samo poprawić seed H w top-10 §0 i l.161 w market-and-distribution.md."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 6, l.20",
+   "quote": "W 24 z 25 audytów nie znaleziono konkurenta bezpośredniego, ale wszędzie fragmenty pokrywają darmowe narzędzia, a ocena opiera się na streszczeniach wyszukiwarki (strony nieotwierane).",
+   "problem_pl": "Kluczowe zdanie streszczenia nie używa wymaganej formuły „Nie znaleziono bezpośredniego konkurenta w badanym zakresie”. Brakuje zakresu (liczba zapytań, rynek, data) i pewności w tym samym miejscu. Pewność pojawia się dopiero w §7 (reguła 1).",
+   "evidence_pl": "Karty w top-10-products.md (np. l.112, 208) stosują pełną formułę z zakresem „7 wyszukiwań WebSearch… 2026-10-25” i pewnością. W streszczeniu tego brak.",
+   "fix_pl": "„W 24 z 25 audytów nie znaleziono bezpośredniego konkurenta w badanym zakresie (7 zapytań WebSearch na produkt, u 10 finalistów +8 zapytań próby obalenia; anglojęzyczny web US; 2026-10-25; wyłącznie search-summary, strony nieotwierane). Pewność: niska–średnia. Wszędzie fragmenty pokrywają darmowe narzędzia.”"
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md (także market-and-distribution.md)",
+   "location": "executive-summary.md §2 pkt 5, l.19; market-and-distribution.md A1 pkt 3, l.27",
+   "quote": "Display działa u Omni Calculator przy ~3,7 tys. kalkulatorów, 18–23 mln wizyt/mies. i ~70 osobach zespołu [E-POR2-05].",
+   "problem_pl": "Streszczenie bierze górne krańce sprzecznych szacunków i podaje je w czasie teraźniejszym. 18 mln pochodzi z niedatowanego case study Google, 23,1 mln to „początek 2024”. Najnowszy szacunek z tego samego raportu (Semrush, VI 2026) to ok. 14,3 mln, a zatrudnienie waha się od 33 do 70 osób. Ten sam dokument rynkowy w l.43 podaje „~14 mln wizyt” (reguły 3, 11: szacunki ruchu muszą być oznaczone i niewybiórcze).",
+   "evidence_pl": "evidence-and-assumptions.md §5: „Omni Calculator: ruch 9–23 mln/mies. zależnie od metryki i źródła; zatrudnienie 33–70”. E-VER-C4: „0,028% z 14,3 mln”. E-POR-02: „33 według Tracxn (31.05.2026), 62 według PitchBook, 67 według Growjo”. E-POR2-05: „23,1 mln miesięcznie na początku 2024 (BoringCashCow)”.",
+   "fix_pl": "„Display działa u Omni Calculator przy ~3,7–3,8 tys. kalkulatorów; szacunki ruchu stron trzecich 9–23 mln wizyt/mies. (Semrush VI 2026: ok. 14,3 mln), zatrudnienie 33–70 osób (szacunki nieaudytowane) [E-POR-02, E-POR-03, E-POR2-05, E-VER-C4]”. Analogicznie poprawić l.27 w market-and-distribution.md."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 4, l.18",
+   "quote": "Strony-narzędzia mają ~1–1,5 odsłony na sesję [E-ADS-26].",
+   "problem_pl": "Wartość dla landing pages przedstawiono jako zmierzony fakt o stronach-narzędziach, choć cytowane źródło wprost mówi, że takiego benchmarku nie znaleziono. To założenie Z-02, nie dana. Od tego parametru zależy nagłówek „symulator ma ich mało” (reguły 4 i 11).",
+   "evidence_pl": "E-ADS-26: „landing pages nastawione na jedną konwersję 1-1,5 […] Semrush podaje średnią sesję na calculator.net 4:57. Nie znaleziono publicznych benchmarków odsłon na sesję dla stron-narzędzi”. Z-02: „1,1 / 1,3 / 1,6 | założenie”. market-and-distribution l.25 pisze ostrożniej: „przypominają landing pages”.",
+   "fix_pl": "„Brak benchmarku odsłon na sesję dla stron-narzędzi. Przez analogię do landing pages (1–1,5) przyjęto założenie 1,1–1,6 (Z-02) [E-ADS-26]; do weryfikacji w GA4.”"
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md (także product-opportunities.csv)",
+   "location": "top-10 karty, wiersz „Dowody popytu (20%)”: l.120 (RENO-02), l.216 (RENO-03), l.410 (HOME-02), l.798 (CARE-01), l.894 (AUTO-01), l.992 (FIN-01); product-opportunities.csv: RENO-03.uzasadnienie_statusu, RENO-02 i BIZ-01.dowody_popytu",
+   "quote": "l.216: „widoczny popyt na pytania online (fora, poradniki wykonawców, wysyp kalkulatorów 2026, lead-gen)”; l.992: „Widoczne nasycenie treściami 'HELOC vs cash-out' i wariantem 'low rate' wskazuje na realny popyt na pytania”; l.894: „temat intensywnie obsługiwany przez wydawców i kalkulatory, co wskazuje na widoczny popyt na pytania”; l.120: „dużo treści targetuje pokrewne frazy”",
+   "problem_pl": "Kryterium o wadze 20% (Pop = 4/5, pewność „średnia”) uzasadniono podażą treści i liczbą kalkulatorów, czyli tym, co raport sam uznaje za „nie miarę popytu”. Łamie to regułę 4: liczba wyników lub stron nie jest konkurencją ani popytem. Popytu nie mierzono.",
+   "evidence_pl": "market-and-distribution.md l.124: „Liczba konkurencyjnych stron nie jest miarą popytu.” E-DEM-23: „To dowód podaży treści (SEO instalatorów), a nie zmierzonego wolumenu pytań.” product-opportunities.csv RENO-03.uzasadnienie_statusu: „solidny popyt” przy dowody_popytu „wiedza treningowa, niezweryfikowane”.",
+   "fix_pl": "Usunąć podaż treści i kalkulatorów z kolumny „Dowody” albo przenieść ją jako „pośrednie: podaż treści (nie popyt)”. Obniżyć pewność kryterium popytu do „niska” we wszystkich kartach bez wolumenów lub przeliczyć Pop. „solidny popyt” zastąpić „popyt niezmierzony (hipoteza)”."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 7, l.21",
+   "quote": "**Popyt przesuwa się w stronę „zostać i remontować”.** […] Duży przepływ decyzji: 7,75 mln dostaw AC/pomp ciepła w 2025 r. [E-DEM-08]",
+   "problem_pl": "Dane o zachowaniu rynku mieszkaniowego (mediana posiadania, liczba transakcji) przedstawiono jako „popyt”. W dokumencie rynkowym ten sam wniosek ma etykietę „hipoteza”, w streszczeniu ją usunięto. Dostawy urządzeń (sztuki, w tym nowe budownictwo) nazwano „przepływem decyzji”. Reguła 4: liczba zdarzeń lub gospodarstw to nie popyt online ani gotowość do kliknięcia.",
+   "evidence_pl": "market-and-distribution.md l.122: „**Wniosek (hipoteza):** …”, l.96: „liczby mierzą roczne zdarzenia… a nie miesięczny popyt”. E-DEM-08: „Udziału wymian w stosunku do nowego budownictwa nie znaleziono. Sztuki to nie gospodarstwa”.",
+   "fix_pl": "„Hipoteza: ciężar decyzji gospodarstw przesuwa się w stronę ‘zostać i remontować’ (mediana posiadania 12 lat, sprzedaż najniższa od 1995) [E-DEM-02/04/05]. Skala zdarzeń: 7,75 mln sztuk dostaw AC/HP w 2025 (sztuki, w tym nowe budownictwo; nie gospodarstwa ani decyzje) [E-DEM-08]. Popytu na narzędzia online nie zmierzono.”"
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§3, wiersz „Najwyższy potencjał skali”, l.64",
+   "quote": "Największe roczne przepływy decyzji: 16,1 mln nowych aut w 2026 i 29,1% wymian z ujemnym kapitałem [E-DEM-13, E-DEM-14]; 7,75 mln dostaw AC i pomp ciepła w 2025 [E-DEM-08].",
+   "problem_pl": "„Potencjał skali” wywiedziono z liczby pojazdów (sprzedaż nowych obejmuje floty) i sztuk urządzeń, utożsamiając je z decyzjami gospodarstw. Przy 29,1% pominięto, że chodzi o wymiany z niespłaconym kredytem przy zakupie nowego auta (reguła 4).",
+   "evidence_pl": "E-DEM-13: „Liczby mierzą pojazdy, nie gospodarstwa, a sprzedaż nowych obejmuje floty.” E-DEM-14: „29,1% wymian z niespłaconym kredytem przy zakupie nowego auta”. E-DEM-08: „Sztuki to nie gospodarstwa”.",
+   "fix_pl": "„Największa skala zdarzeń (nie popyt): 16,1 mln nowych pojazdów w 2026, w tym floty [E-DEM-13]; ujemny kapitał w 29,1% wymian z niespłaconym kredytem przy zakupie nowego auta [E-DEM-14]; 7,75 mln sztuk AC/HP [E-DEM-08]. Wolumenu wyszukiwań i promptów nie zmierzono”. Pewność rankingu: „niska”."
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md (także competitor-audit.csv)",
+   "location": "top-10 l.159 (RENO-02, „Ryzyko, że asystent rozwiąże sam”); l.25 (§1 Metoda); competitor-audit.csv rekordy 96, 150, 165, 184",
+   "quote": "Dowód z tej sesji: silnik podsumowań wyszukiwarki sam, bez pytania o to, wygenerował sensowną rekomendację dla 18-letniego dachu […]; l.25: „Audytorzy niezależnie uznali, że rdzeń decyzji asystent (z Intelligent UI / generatywnym UI) obsłuży sam.”; rekord 184: „Silny substytut: summary samo dało poprawną odpowiedź jakościową. Wysokie ryzyko samodzielnego rozwiązania przez AI.” (pewność: średnia)",
+   "problem_pl": "Wynik generatora streszczeń wewnętrznego narzędzia WebSearch przedstawiono jako „dowód” zachowania konsumenckich asystentów (ChatGPT, AI Mode, Perplexity, Copilot, Claude). Asystentów nie testowano, więc to faktycznie zastępczy test, którego reguła 3 zabrania. Słowo „niezależnie” jest mylące: wszyscy audytorzy dostali ten sam brief o Intelligent UI i to samo narzędzie, więc ich zbieżność nie jest niezależnym potwierdzeniem. Na tym opiera się ocena „dystrybucja AI” (waga 15%).",
+   "evidence_pl": "competitor-audit.csv rekord 184, ograniczenia: „nie testowano bezpośrednio ChatGPT ani AI Mode”; rekordy 253, 323, 357, 372: „informacja z kontekstu zadania”. evidence-and-assumptions §1: „Testy asystentów… brak dostępu”.",
+   "fix_pl": "Zastąpić „Dowód z tej sesji” sformułowaniem „Obserwacja pośrednia (hipoteza): generator streszczeń narzędzia WebSearch odpowiedział na prompt bez narzędzia. To nie jest test żadnego asystenta konsumenckiego”. „niezależnie uznali” zamienić na „wszyscy audytorzy, na podstawie tego samego briefu i streszczeń wyszukiwarki, ocenili”. W rekordach 96/150/165/184 obniżyć pewność do „niska” i dopisać „proxy, nie test asystenta”."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md (także architecture-and-validation.md)",
+   "location": "market-and-distribution.md §3 l.140; architecture-and-validation.md §2 „Treść czytelna bez JS”, l.195",
+   "quote": "Systemy AI czytają widoczny HTML, a JSON-LD ignorują lub traktują marginalnie [E-POR2-14].",
+   "problem_pl": "Wynik jednego testu (Ahrefs, 5 systemów, strony już cytowane) uogólniono na wszystkie „systemy AI”. Pominięto kontrdowody z tego samego wpisu: Bing/Copilot deklaruje, że schema pomaga, a AirOps wykazuje korelację dodatnią. Pewność wpisu jest niska. Narusza to regułę 8: nie przenosić wniosków między platformami i nie formułować twierdzeń uniwersalnych.",
+   "evidence_pl": "E-POR2-14 (pośrednie, niska): „Fabrice Canel z Bing twierdzi, że schema pomaga LLM-om Microsoftu… AirOps znalazł korelację 38,5% vs 32,0% na korzyść stron z JSON-LD”.",
+   "fix_pl": "„W teście Ahrefs (1885 stron; 5 systemów, w tym ChatGPT i Perplexity) JSON-LD był ignorowany. Bing (Copilot) deklaruje, że schema pomaga; pozostałe dane to korelacje (pewność niska) [E-POR2-14]. Wniosek: kluczowa treść w widocznym HTML, JSON-LD jako tani dodatek”. Tak samo w architecture l.195."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md (także executive-summary.md)",
+   "location": "market-and-distribution.md §5 pkt 2, l.204; executive-summary.md §3 pkt 6, l.31",
+   "quote": "2. **Kanał AI nagradza markę i obecność poza witryną** (YouTube, Reddit, Wikipedia, wzmianki) [E-POR2-12, E-AI-19].",
+   "problem_pl": "Korelacje o niskiej pewności, pochodzące od dostawców narzędzi i różne dla różnych platform, przedstawiono jako uniwersalny mechanizm przyczynowy („nagradza”) całego „kanału AI”. Dla Claude i Copilota brak danych (reguła 8). E-AI-19 sam zastrzega, że to korelacja.",
+   "evidence_pl": "E-POR2-12 (pośrednie, pewność: niska): „Dowody pochodzą niemal wyłącznie od dostawców narzędzi SEO… Wikipedia ok. 47,9% (ChatGPT); Reddit ok. 46,7% (Perplexity); korelacja wzmianek YouTube 0,737 [ChatGPT, AI Mode, AIO]”. E-AI-19: „To korelacja.”",
+   "fix_pl": "„W danych dostawców (pewność niska) widoczność w ChatGPT, AI Mode i AIO koreluje ze wzmiankami na YouTube; ChatGPT najczęściej cytuje Wikipedię, Perplexity Reddita [E-POR2-12]. Dla Claude i Copilota brak danych. Związku przyczynowego nie wykazano”. W streszczeniu §3.6 dopisać „(korelacja, pewność niska)”."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md",
+   "location": "§3 tabela platform, wiersz Perplexity, l.135",
+   "quote": "świeżość treści (82% cytowań z treści <30 dni wg źródła wtórnego) [E-CAP2-02]",
+   "problem_pl": "Statystykę przeinaczono. Źródło podaje warunkowy odsetek cytowania („treści zaktualizowane w ciągu 30 dni są cytowane w 82% przypadków, starsze w 37%”), a nie udział 82% cytowań przypadający na treści młodsze niż 30 dni. Wersja z raportu przeczy też innemu wpisowi rejestru (reguła 11).",
+   "evidence_pl": "E-CAP2-02 oraz surowy data/agent-outputs/topup_T-CAP.json: „Perplexity cytuje treści zaktualizowane w ciągu 30 dni w 82% przypadków, starsze w 37%”. E-POR2-12: „Seer Interactive: ok. połowa cytowań Perplexity dotyczy treści z bieżącego roku”.",
+   "fix_pl": "„świeżość treści: wg źródła wtórnego (Whitehat SEO via Slate) treści zaktualizowane w ciągu 30 dni były cytowane w 82% przypadków vs 37% starszych; Seer: ok. połowa cytowań z bieżącego roku (pewność niska) [E-CAP2-02, E-POR2-12]”."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md (także top-10-products.md)",
+   "location": "market-and-distribution.md A1 pkt 6, l.30; top-10-products.md §3 l.65; evidence-and-assumptions.md E-ADS-15",
+   "quote": "6. **Wysoki CPC reklamodawców nie przekłada się na RPM display.** Finance & Insurance: ok. 3,46 USD CPC w Search wobec ok. 0,86 USD w Display Network [E-ADS-15].",
+   "problem_pl": "Teza dotyczy RPM wydawcy, ale dowodem są wyłącznie stawki CPC płacone przez reklamodawców w Search i w GDN. Brak danych o przychodzie wydawcy i page RPM, a reguła 5 wymaga rozdzielenia tych warstw. Do tego zestawiono dwa różne źródła (WordStream 3,46 i Promodo 0,86), choć Promodo podaje własny CPC Search 3,44. W rejestrze zostało uproszczenie „RPM = CPC × CTR”, sprzeczne z rozliczaniem AdSense za wyświetlenie od 2024 r.",
+   "evidence_pl": "E-ADS-15: „Promodo podaje dla Finance & Insurance 3,44 USD w Search wobec 0,86 USD w Google Display Network… RPM = CPC × CTR… Od 2024 AdSense płaci za wyświetlenie”. E-VER-C7: rozliczenie eCPM, 80% po opłacie kupującego.",
+   "fix_pl": "„Stawki reklamodawców w sieci Display są ok. 4× niższe niż w Search (Promodo, F&I: 3,44 vs 0,86 USD CPC) [E-ADS-15]. CPC reklamodawcy ≠ przychód wydawcy: AdSense rozlicza za wyświetlenie, a wydawca dostaje ok. 68% [E-VER-C7]; page RPM nie zmierzono (Z-01)”. W E-ADS-15 oznaczyć „RPM = CPC × CTR” jako uproszczenie nieaktualne dla rozliczeń eCPM."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md / economics.csv / executive-summary.md",
+   "location": "architecture-and-validation.md §3 l.241–247; economics.csv wiersze owner_hours_new_tool, owner_hours_engine, „Czas właściciela na uruchomienie…”; executive-summary.md §5 tabela; evidence-and-assumptions.md Z-16 (l.96)",
+   "quote": "architecture l.247: „**silnik 90–220 h + 5 produktów 185–265 h** pracy właściciela” vs executive-summary: „| ~27 tys. USD / ~520 h | ~13 tys. USD / ~315 h | ~6 tys. USD / ~190 h |”",
+   "problem_pl": "Szacunki czasu uruchomienia są sprzeczne między plikami. Według architektury to 275–485 h (silnik 90–220 h + 185–265 h na produkty, po 30–70 h na produkt). Economics.csv i streszczenie podają 190–520 h (20/35/60 h na narzędzie), więc wariant optymistyczny (190 h) jest poniżej minimum architektury. To samo dotyczy godzin eksperta: Z-16 „9 / 13 / 18 h” daje dla 5 narzędzi 45 h, czyli mniej niż „łącznie ~55–90 h”, a kolejność wartości jest odwrotna niż w pozostałych wpisach Z (kons./baz./opt.).",
+   "evidence_pl": "architecture §3, tabela: RENO-02 „50–70 h”, RENO-03 „40–60 h”, HOME-04 „30–45 h”, HOME-02 „35–50 h”, AUTO-01 „30–40 h”. economics.csv: owner_hours_new_tool 60/35/20, owner_hours_engine 220/140/90 → 520/315/190. expert_hours_new_tool 18/13/9.",
+   "fix_pl": "Ujednolicić. Albo ustawić owner_hours_new_tool na 53/45/37 (średnie z tabeli architektury) i przeliczyć launch, albo dopisać w architekturze, że economics używa innego, uproszczonego założenia, i podać oba zakresy w streszczeniu. Z-16 zapisać jako „18 / 13 / 11 h (kons./baz./opt.)”, tak aby suma dla 5 produktów mieściła się w 55–90 h."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "wiersz input „ai_share_of_sessions” oraz wiersze required_traffic „W tym sesje z asystentów AI/mies. dla 1000/3000/10000 USD”",
+   "quote": "ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi | ułamek | 0.02 | 0.1 | 0.3 | założenie | HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn",
+   "problem_pl": "Nazwy scenariuszy wprowadzają w błąd. „Konserwatywny” 2% przekracza górną granicę benchmarku (1%), a „bazowy” 10% jest 10–100 razy wyższy od benchmarku. Wiersz wynikowy pokazuje, że baza zakłada ok. 14,3 tys. sesji z AI miesięcznie dla 1000 USD, czyli ok. 2,5 raza więcej, niż Semrush przypisuje całemu Omni Calculator (~5,8 tys.). Mieszanie hipotezy z bazą narusza regułę 4.",
+   "evidence_pl": "Ten sam wiersz: „benchmarki rynkowe 0,1-1%”. Wiersz 61: „11000 | 14300 | 13400 … porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini”. E-VER-C5, E-AI-14.",
+   "fix_pl": "Ustawić 0.003 / 0.01 / 0.03 (kons./baz./opt.) zgodnie z benchmarkiem. Obecne 2/10/30% przenieść do osobnej sekcji „WRAŻLIWOŚĆ (hipoteza właściciela, niezweryfikowana)”. Opisać wiersze 60–65 jako ilustrację podziału, nie prognozę."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md (także economics.csv)",
+   "location": "executive-summary.md §5, l.61; economics.csv wiersze addon_separate (konwersja 0.002/0.005/0.01; „potwierdza to model biznesowy NerdWallet/SmartAsset”)",
+   "quote": "Lead-gen/afiliacja (osobny model, poza bazą) dałaby ilustracyjnie 20–500 USD na 1000 sesji. To pokazuje, dlaczego rynek głębokich narzędzi finansowych zarabia głównie na leadach.",
+   "problem_pl": "Kwotę policzono z założonej konwersji 0,2–1%, która nie ma źródła, i z cen leadów płaconych przez kupujących (estymacja, pewność niska). Ten wynik własnego założenia użyto potem jako wyjaśnienia zachowania rynku („To pokazuje…”, „potwierdza to model NerdWallet”), co jest rozumowaniem w kółko. Reguły 4 i 11 wymagają rozdzielenia hipotez od danych. Reguła 6 jest formalnie zachowana (dodatek poza bazą), ale streszczenie podaje tę kwotę jak wynik.",
+   "evidence_pl": "economics.csv: „udział sesji kończących się kwalifikowaną konwersją… 0.002 | 0.005 | 0.01 | założenie | ZAŁOŻENIE”. E-ADS-33: „estymacja | niska”. E-POR2-06/07 dokumentują przychody NerdWallet i SmartAsset, nie konwersję małego serwisu.",
+   "fix_pl": "„Lead-gen/afiliacja (osobny model, poza bazą): przy niezweryfikowanym założeniu konwersji 0,2–1% i wypłacie 10–50 USD wychodzi 20–500 USD/1000 sesji (hipoteza). Niezależnie od tego, duzi wydawcy narzędzi finansowych (NerdWallet, SmartAsset) raportują przychody głównie z partnerów i leadów [E-POR2-06/07]”. Usunąć „To pokazuje, dlaczego” i „potwierdza to”."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "ID: FIN-08, FIN-09, INS-08, INS-10, HOME-05, HOME-06, RENO-07, RENO-08, ENER-04, AUTO-05, AUTO-06, AUTO-07, JOB-09, RENT-04, RENT-05, RENT-06, CARE-06, LIFE-05; kolumny najblizsza_konkurencja / poziom_pewnosci / status",
+   "quote": "FIN-09: najblizsza_konkurencja „Kalkulatory 'pay off mortgage or invest' (wielu wydawców) [bezpośredni] brak URL – nie pojawił się w wynikach (limit wyszukiwań); kategoria z wiedzy modelu”; dowody_popytu „Niezweryfikowane w sesji.”; poziom_pewnosci „średnia”; status „odrzucić”",
+   "problem_pl": "18 pomysłów odrzucono z pewnością „średnia” na podstawie konkurentów „bezpośrednich”, które wzięto z wiedzy modelu, bez żadnego wyszukiwania (poziom_weryfikacji „koncepcyjny”). Reguły 3 i 11: elementy niezweryfikowane muszą mieć etykietę hipotezy i nie mogą dawać średniej pewności. Reguła 2: klasyfikacja „bezpośredni” wymaga sprawdzenia funkcji.",
+   "evidence_pl": "Wszystkie 18 wierszy: poziom_weryfikacji = „koncepcyjny”, a w najblizsza_konkurencja „brak URL… wyszukiwanie niewykonane (limit)” lub „wiedza modelu”. evidence-and-assumptions §1: hipoteza = „wiedza modelu lub wniosek bez źródła”.",
+   "fix_pl": "W tych 18 wierszach ustawić poziom_pewnosci = „niska”, klasyfikację zapisać jako „[bezpośredni – hipoteza, wiedza modelu, niezweryfikowane]”, a status jako „odrzucić (wstępnie; wymaga wyszukiwania)” albo „później”. W uzasadnieniu dopisać „brak wyszukiwania w tej sesji”."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§1.1 tabela, wiersz „Zaufanie i kontrola jakości”, kolumna A, l.12",
+   "quote": "trudne: wiele dziedzin, wielu ekspertów, jedna słaba strona obciąża całość (sygnały site-wide, E-POR2-08)",
+   "problem_pl": "Stanowcze twierdzenie, że „jedna słaba strona obciąża całość”, przeczy cytowanemu źródłu. Google opisuje systemy działające głównie na poziomie stron, a Sullivan zaprzeczył, że jedna strona zmienia ocenę witryny. Służy to jako argument przeciw szerokiej domenie, czyli zakłada karę za szerokość (reguła 8). market-and-distribution l.89 formułuje to poprawnie, z „może”.",
+   "evidence_pl": "E-POR2-08: „Danny Sullivan zaprzeczał, że edycja jednej strony zmieni ocenę całej witryny („doesn't work that way”)… systemy core są „primarily designed to work on the page level”, ale uwzględniają też niektóre sygnały site-wide”.",
+   "fix_pl": "„trudne: wiele dziedzin i ekspertów; Google stosuje też niektóre sygnały site-wide, więc większy odsetek słabych stron może obniżyć ocenę witryny (bez udokumentowanej kary za samą szerokość) [E-POR2-08, E-POR2-09]”."
+  },
+  {
+   "severity": "major",
+   "file": "evidence-and-assumptions.md",
+   "location": "§7, wpis E-AI-02 (l.150), kolumny „Typ” i „Pewność”",
+   "quote": "| bezpośrednie | wysoka |",
+   "problem_pl": "Szacunki panelowe dostawców (Conductor, Ahrefs, Datos), znane tylko ze streszczeń wyszukiwarki, oznaczono jako dane „bezpośrednie” o pewności „wysoka”. Weryfikator ustalił, że część tych liczb jest nieaktualna lub źle opisana (np. „345x” zamiast ok. 100x w 2026). Reguła 4 wymaga rozdzielenia danych bezpośrednich od estymacji, a legenda raportu definiuje „bezpośrednie” jako dane pierwotne lub oficjalną deklarację.",
+   "evidence_pl": "E-VER-C5 („weryfikacja: częściowo”): „część liczb jest nieaktualna albo źle opisana… '0,1% ruchu referencyjnego' i '345x' pochodzą z badania Ahrefs z marca 2025… stosunek Google do AI rzędu ~100x, a nie 345x”. Legenda §1: „estymacja — szacunek stron trzecich”.",
+   "fix_pl": "Zmienić typ E-AI-02 na „estymacja”, pewność na „średnia”. Zaktualizować liczby według E-VER-C5 (0,28% w III 2026, ~100x) albo dopisać „zob. korekty w E-VER-C5”."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "ID HOME-04, HOME-02, RENO-03 (kolumna dowody_popytu); ID HOME-02, HOME-04, CARE-01, FIN-01, ENER-03 (kolumna „ocena_wazona_0_5 (tylko top 25)”)",
+   "quote": "HOME-04.dowody_popytu: „Brak danych z wyszukiwania. Pośrednio [wiedza modelu, niezweryfikowane]: lock-in skłania właścicieli do remontów zamiast przeprowadzek”; RENO-03: „Przepływ wymian HVAC to miliony rocznie (wiedza treningowa, niezweryfikowane).”; HOME-02.ocena_wazona = 3.80 (top-10: 3.60)",
+   "problem_pl": "Długa lista nie została zsynchronizowana z wynikami fali 2b i kalibracji, więc dla produktów pilotażowych dwa pliki opisują dowody inaczej. W CSV jest „brak danych / wiedza modelu”, a karty top-10 mają dane z wyszukiwania (np. Redfin 65% remontujących, AHRI 7,75 mln). Oceny ważone w CSV są sprzed kalibracji (HOME-02 3.80 vs 3.60, HOME-04 3.70 vs 3.50, CARE-01 3.55 vs 3.45, FIN-01 3.50 vs 3.30, ENER-03 3.40 vs 3.20), choć top-10 odsyła do CSV po uzasadnienie kalibracji.",
+   "evidence_pl": "top-10-products.md l.604 (HOME-04): „Redfin: ok. 65% ostatnich remontujących wybrało remont…”; l.47–55 ranking „Po kalibracji”. data/agent-outputs/demand_HOME-02.json i demand_HOME-04.json istnieją.",
+   "fix_pl": "Zaktualizować dowody_popytu dla 10 finalistów na podstawie sekcji „Popyt (fala 2b)” z etykietami [bezpośrednie/pośrednie/estymacja]. W kolumnie ocena_wazona wpisać wartości po kalibracji albo dodać kolumnę „ocena_po_kalibracji” z powodem korekty."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§2 Ranking 25 propozycji, kolumna „Konkurent bezpośredni” (l.31–55)",
+   "quote": "| 1 | RENO-02 | … | **3.75** | nie znaleziono | pilot |",
+   "problem_pl": "Kolumna podaje samo „nie znaleziono”, bez „w badanym zakresie”, zakresu i pewności (reguła 1). W CSV jest przynajmniej „nie znaleziono w badanym zakresie”.",
+   "evidence_pl": "product-opportunities.csv, kolumna bezposredni_konkurent: „nie znaleziono w badanym zakresie”. Pewność w karcie: średnia (RENO-02), niska–średnia (inne).",
+   "fix_pl": "Zmienić nagłówek na „Konkurent bezpośredni (7 zapytań/produkt, search-summary)” i wartości na „nie znaleziono w badanym zakresie; pewność: średnia/niska–średnia” (z karty)."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv (także market-and-distribution.md)",
+   "location": "competitor-audit.csv rekordy 48, 359, 370 (kolumna wniosek); market-and-distribution.md l.44",
+   "quote": "rekord 48: „substitute + sygnał popytu; brak narzędzia”; rekord 359: „brak narzędzia; nie znaleziono wątku Reddit ani szablonu arkusza”; market l.44: „Brak jakiegokolwiek badania, które wyodrębnia kalkulatory/symulatory wśród cytowanych lub klikanych URL-i”",
+   "problem_pl": "Wynik negatywny podano jako absolutny („brak”) zamiast „nie znaleziono w badanym zakresie” ze wskazaniem zakresu, co jest sprzeczne z duchem reguły 1 i z regułą 3. Wpis źródłowy E-AI-14 ma zakres i pewność, w tabeli rynkowej je usunięto.",
+   "evidence_pl": "E-AI-14: „Nie znaleziono badania… (zakres: ok. 8 zapytań…; pewność średnia)”.",
+   "fix_pl": "„Nie znaleziono narzędzia w wynikach tego zapytania (search-summary)”. W market l.44: „Nie znaleziono badania… (ok. 8 zapytań; pewność średnia) [E-AI-14]”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md / competitor-audit.csv",
+   "location": "top-10 l.99, l.100, l.877, l.878 (kolumna „Czego brak / co niezweryfikowane”); competitor-audit.csv rekordy 27, 89, 124, 267, 336",
+   "quote": "top-10 l.100: „Tylko koszt naprawy; brak horyzontu, ubezpieczenia, sprzedaży, finansowania.”; rekord 267: „Partial (tylko fragment wejściowy: koszt remontu). Brak porównania z przeprowadzką.”; rekord 89: „Brak finansowania i bufora gotówki.”",
+   "problem_pl": "Funkcji niewidocznych w streszczeniu wyszukiwarki nie należy nazywać „brakiem”, tylko „niezweryfikowanymi”, bo strony nie były otwierane (reguła 9). W większości wierszy jest to zrobione poprawnie, w tych nie.",
+   "evidence_pl": "evidence-and-assumptions §1: „funkcje niewidoczne w streszczeniu oznaczono „niezweryfikowana”, a nie „brak””. Kolumna ograniczenia_dostepu tych rekordów: „strona nieotwierana… search-summary”.",
+   "fix_pl": "Zamienić na „W search-summary nie widać: horyzontu, ubezpieczenia… (niezweryfikowane)”. Tak samo w pozostałych wskazanych miejscach."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv / tools/build_outputs.py",
+   "location": "rekordy 62, 96, 150, 165, 184 (kolumna podstawa_dowodu); tools/build_outputs.py l.98",
+   "quote": "rekord 96: kwerenda „is it cheaper to keep my parent at home with home care or move to assisted living”, ograniczenia „dowód: search-summary”, podstawa_dowodu „wiedza modelu, bez wyszukiwania (niezweryfikowane)”",
+   "problem_pl": "Etykieta podstawy dowodu przeczy treści wiersza. Wiersze z wykonanym zapytaniem i streszczeniem wyszukiwarki oznaczono jako „bez wyszukiwania”, bo skrypt przypisuje etykietę według obecności URL-a. Reguła 4 wymaga rozdzielenia rodzajów danych.",
+   "evidence_pl": "build_outputs.py l.98: basis = 'wiedza modelu…' if … or not r['url'].startswith('http').",
+   "fix_pl": "Dodać trzecią wartość „search-summary (odpowiedź generatywna wyszukiwarki, bez URL)” i przypisywać ją, gdy kwerenda jest wypełniona, a URL brak. Przegenerować CSV."
+  },
+  {
+   "severity": "minor",
+   "file": "competitor-audit.csv / tools/build_outputs.py",
+   "location": "rekordy 674, 702, 703, 710, 712, 716, 746, 747, 818, 821, 875 (kolumna wniosek); build_outputs.py mapowanie 'probably_direct_unverified'",
+   "quote": "rekord 746: „Konkurent częściowy lub bezpośredni dla prostego porównania; potwierdza zatłoczenie rdzenia.”; rekord 703: „Hipotetycznie direct dla G3-12”",
+   "problem_pl": "Klasyfikacje są niejednoznaczne („częściowy lub bezpośredni”, „hipotetycznie direct”, „prawdopodobnie bezpośredni (niezweryfikowane)”), a słownictwo niespójne (PARTIAL / Częściowy / partial, SUBSTITUTE / Substytut). Reguła 2 wymaga jednej z trzech kategorii, z osobną flagą weryfikacji.",
+   "evidence_pl": "Zliczenie kolumny wniosek: 647 częściowych zapisanych w kilku wariantach, 58 bezpośrednich, 48 innych.",
+   "fix_pl": "Dodać kolumny „klasa” {bezpośredni|częściowy|substytut} i „status_weryfikacji” {zweryfikowane-deklaracja|niezweryfikowane|sporne}. W przypadkach niejednoznacznych wpisać klasę najostrożniejszą (częściowy) i status „sporne/do weryfikacji”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§3 tabela platform, kolumna „Udział w referencjach AI”, l.135–138",
+   "quote": "| Copilot | Bing | Bing Webmaster Tools, IndexNow (niezweryfikowane w tym badaniu) | ~1% |",
+   "problem_pl": "Udziały „~1%” dla Perplexity, Copilota i Claude podano bez odwołania. Dla Copilota w rejestrze nie ma żadnej liczby (reguła 11).",
+   "evidence_pl": "E-AI-03: „Gemini miał 2,4%, Perplexity 1,1%, Claude 0,8%” (BrightEdge VIII 2026); Copilot nieobecny.",
+   "fix_pl": "Perplexity: „1,1% (BrightEdge VIII 2026) [E-AI-03]”; Claude: „0,8% (tamże)”; Copilot: „brak danych (hipoteza / niezweryfikowane)”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 1, l.15",
+   "quote": "ChatGPT daje 81–95% referencji AI [E-AI-03].",
+   "problem_pl": "Pominięto dolną granicę z tego samego źródła (63%, Goodie) i różnice metod trackerów, choć sekcja sprzeczności w evidence-and-assumptions je zachowuje (reguła 11: nie uśredniać i nie przycinać).",
+   "evidence_pl": "E-AI-03: „Inne trackery dają ChatGPT od ok. 63% (Goodie, B2B) do ok. 92%”. §5: „63% (Goodie, B2B) – 81,4% – 87,4% – 95,1%”.",
+   "fix_pl": "„ChatGPT daje 63–95% referencji z chatbotów, zależnie od trackera i miesiąca (najczęściej 81–95%) [E-AI-03]”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 3, l.17",
+   "quote": "AI Overviews obniżają CTR o 35–61% [E-AI-06..08]. […] Długie pytania decyzyjne mają najwyższy odsetek AI Overviews [E-AI-11].",
+   "problem_pl": "Korelację przedstawiono jako przyczynowość („obniżają”), choć źródła wprost temu przeczą. „Długie pytania decyzyjne… najwyższy odsetek” to uogólnienie: źródło mówi o zapytaniach 7+ słów (73,9% wg WebFX; 46,4% wg Ahrefs), zdrowie ma 88%, a słowa „decyzyjne” w źródle nie ma.",
+   "evidence_pl": "E-AI-07: „To korelacja, a nie dowód przyczynowości.” E-AI-08: „Przyczynowości nie udowodniono.” E-AI-11 i E-CAP2-06: „siedem i więcej słów: 46,4%”.",
+   "fix_pl": "„Przy AI Overviews CTR jest niższy o 35–61% (korelacje: Ahrefs, Seer; Pew: 8% vs 15% kliknięć) [E-AI-06..08]; efekt przyczynowy wykazano dla AI Mode (RCT, −18,8 pp) [E-VER-C6]. Zapytania z 7+ słowami częściej wywołują AIO (46–74% zależnie od źródła) [E-AI-11, E-CAP2-06]”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md / product-opportunities.csv / competitor-audit.csv",
+   "location": "top-10 l.159, l.933 (i ok. 8 innych wystąpień „wg briefu”/„kontekst zadania” przy Intelligent UI); product-opportunities.csv (5 komórek); competitor-audit.csv rekordy 184, 253, 323, 357, 372",
+   "quote": "„ChatGPT Intelligent UI (wg briefu od 2026-10-07, w tej sesji niezweryfikowane)”",
+   "problem_pl": "Etykieta jest nieaktualna i niespójna. Wydanie Intelligent UI zostało potwierdzone w źródle pierwotnym (E-VER-C2), a karty nadal piszą „niezweryfikowane”, podczas gdy streszczenie podaje to jako fakt.",
+   "evidence_pl": "E-VER-C2: „weryfikacja: potwierdzone… https://openai.com/index/gpt-6-for-everyone/ (pierwotne)”.",
+   "fix_pl": "Zastąpić „wg briefu…, niezweryfikowane” wpisem „potwierdzone [E-VER-C2]” wszędzie tam, gdzie chodzi o fakt wydania. Zostawić „niezweryfikowane” tylko przy twierdzeniach o jakości lub zachowaniu w danej niszy."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md / executive-summary.md",
+   "location": "architecture l.37 (warunek 3 osobnej domeny), l.256 (RENO-03 warunek zatrzymania), l.259 (AUTO-01 warunek zatrzymania); executive-summary l.70–71",
+   "quote": "l.37: „3. i ma **zwalidowany popyt**: ≥ 3 symulatory z ≥ 5 tys. sesji ludzi/mies. łącznie albo ≥ 10% ruchu domeny”; l.259: „CTR < 0,5% przy ≥ 1 000 wyświetleń (SERP zdominowany przez kalkulatory i lenderów) albo < 150 wyświetleń/mies.”",
+   "problem_pl": "Część progów nie ma etykiety „propozycja decyzyjna, nie norma rynkowa” (l.37, G0 w streszczeniu). Warunki zatrzymania RENO-03 i AUTO-01 nie mają okna czasowego, więc mogą zadziałać już po kilku tygodniach (reguła 10).",
+   "evidence_pl": "Etykieta „propozycje decyzyjne” występuje tylko w §3.1 (l.251) i §4.3 (l.310).",
+   "fix_pl": "Dopisać „(propozycja decyzyjna, nie norma rynkowa)” przy l.37 i przy G0. W l.256 i l.259 dodać „po 90 dniach od indeksacji”, tak jak przy RENO-02."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§1.2, l.34–40",
+   "quote": "- **Warunki uzasadniające osobną domenę** (wszystkie muszą być spełnione): 1. … 2. albo **inny profil ryzyka** … 3. i ma **zwalidowany popyt** … Przykład: symulatory e-commerce (BIZ-04, BIZ-01) — jeżeli w ogóle — od razu na osobnej domenie",
+   "problem_pl": "Logika jest sprzeczna. Zapis „wszystkie muszą być spełnione” kłóci się z „albo” w pkt 2. Przykład e-commerce („od razu na osobnej domenie”) nie spełnia pkt 3 (zwalidowany popyt).",
+   "evidence_pl": "Treść l.34–40.",
+   "fix_pl": "„Osobna domena, gdy: (1 LUB 2) ORAZ 3 ORAZ 4”. Przykład e-commerce: „poza tą domeną; własna domena dopiero po spełnieniu warunku 3 (np. test na istniejącym serwisie właściciela)”."
+  },
+  {
+   "severity": "minor",
+   "file": "evidence-and-assumptions.md",
+   "location": "§7: E-POR-15, E-POR-18, E-POR-19, E-POR-20, E-POR-22, E-CAP-19, E-REG-07, E-REG-08, E-REG-09, E-REG-10, E-REG-11, E-REG-12, E-REG-14, E-REG-18, E-REG-21, E-REG-22, E-REG-24, E-REG-26, E-REG-27",
+   "quote": "E-REG-08: „[hipoteza / niezweryfikowane – wiedza modelu] Limit SALT wynosi $40,000…” | hipoteza | średnia | —",
+   "problem_pl": "19 wpisów oznaczonych jako hipoteza z wiedzy modelu, bez URL, ma pewność „średnia”. Według własnej legendy hipoteza to „wiedza modelu lub wniosek bez źródła”, więc pewność nie może przewyższać „niska” (reguły 3 i 11).",
+   "evidence_pl": "Tabulacja typ × pewność: („hipoteza”, „średnia”) = 19 wpisów.",
+   "fix_pl": "Ustawić pewność „niska” we wszystkich wpisach typu „hipoteza” bez źródła albo zweryfikować je źródłem pierwotnym (IRS, SSA) i zmienić typ."
+  },
+  {
+   "severity": "minor",
+   "file": "evidence-and-assumptions.md",
+   "location": "§7, wpis E-VER-C4 (l.385)",
+   "quote": "Strona Semrush omnicalculator.com/overview (nagłówek 'June 2026') pokazuje ChatGPT na poziomie ok. 0,028% ruchu",
+   "problem_pl": "Sformułowanie sugeruje odczyt strony, choć WebFetch był zablokowany. W rzeczywistości to streszczenie lub snippet wyszukiwarki (reguła 3: nie udawać użycia niedostępnych narzędzi).",
+   "evidence_pl": "§1: „żadna strona konkurenta ani źródła nie została otwarta”.",
+   "fix_pl": "„Snippet wyszukiwarki ze strony Semrush omnicalculator.com/overview (nagłówek 'June 2026') podaje…”."
+  },
+  {
+   "severity": "minor",
+   "file": "economics.csv / executive-summary.md",
+   "location": "economics.csv wiersz input page_rpm_us (basis_or_formula); executive-summary.md §5 l.57",
+   "quote": "ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-11, E-ADS-12, E-ADS-28; vendorskie i self-reported) | streszczenie: „Wszystkie wartości to **założenia** skalibrowane do zakresów rynkowych”",
+   "problem_pl": "Page RPM AdSense „kalibrowano” m.in. na E-ADS-12, czyli sesyjnym RPM blogów treściowych w sieciach premium (Mediavine, Raptive, Journey: 12–68 USD/sesję). To inna metryka i inny produkt. Reguła 5 wymaga rozdzielenia page RPM, przychodu na 1000 sesji i rodzaju sieci. Określenie „zakresy rynkowe” zawyża wiarygodność (E-ADS-11: „bez metodologii”).",
+   "evidence_pl": "E-ADS-12: „RPM sesyjne, self-reported… To blogi treściowe… a nie narzędzia”. E-ADS-11: „estymacja | niska”.",
+   "fix_pl": "Usunąć E-ADS-12 z kalibracji page RPM AdSense, zostawić E-ADS-11/28 z dopiskiem „vendorskie, bez metodologii, pewność niska”. W streszczeniu zamiast „zakresów rynkowych” napisać „niezweryfikowanych zakresów vendorskich”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§3 l.63 („Najlepszy pierwszy produkt”); karta RENO-02 l.123 („Potencjał reklamowy 5”)",
+   "quote": "„Bardzo dobre otoczenie reklamowe: dachy, ubezpieczenia, finansowanie.”; l.123: „Konsumencka publiczność US w wertykałach o wysokiej wartości: dekarstwo/usługi domowe, ubezpieczenia domu, HELOC/finansowanie (PACE, pożyczki), solar, nieruchomości”",
+   "problem_pl": "Ocena 5/5 i „bardzo dobre otoczenie” wynikają z zestawienia kilku drogich kategorii, jakby się sumowały. Każde wyświetlenie to osobna aukcja, a kontekst wielu wertykałów nie podnosi stawki (reguła 5). „Gęstość reklamodawców” wywnioskowano z wyników organicznych. W tym samym wierszu: „Brak danych CPC/RPM”.",
+   "evidence_pl": "E-ADS-15: „podaż reklam o wysokim RPM nie jest nieskończona; gdy ich brak, wyświetla się tańsza kategoria”.",
+   "fix_pl": "Dopisać: „Łączenie kategorii nie sumuje stawek; RPM zależy od aukcji pojedynczego wyświetlenia (niezmierzone)”. Ocenę opisać jako „5 (hipoteza, pewność niska)”."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv / top-10-products.md / architecture-and-validation.md",
+   "location": "product-opportunities.csv FIN-01.uzasadnienie_statusu, AUTO-01.otoczenie_reklamowe, RENO-03.uzasadnienie_statusu; top-10 l.945; architecture l.259",
+   "quote": "FIN-01: „SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL)”; AUTO-01: „Silna konkurencja wydawców finansowych w SERP (Bankrate, kredytodawcy)”",
+   "problem_pl": "Wnioski o składzie SERP Google wyciągnięto z wyników innego narzędzia (WebSearch), bo Google SERP nie obserwowano. Wyniki wyszukiwania pomylono z konkurencją w Google (reguły 4 i 8).",
+   "evidence_pl": "evidence-and-assumptions §1: źródłem są streszczenia WebSearch. K-05 (sprawdzenie Google/AI Mode) niewykonane.",
+   "fix_pl": "„W wynikach narzędzia WebSearch dominują Bankrate, NerdWallet i lenderzy (skład SERP Google niezweryfikowany; K-04/K-05)”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§3 l.66 i l.67",
+   "quote": "l.66: „RENO-02 ma najlepiej potwierdzoną lukę (pewność średnia).”; l.67: „Realny potencjał: 15–30 odrębnych symulatorów bez sztucznego mnożenia stron.”",
+   "problem_pl": "Luka wynika z braku znalezisk, więc nie jest „potwierdzona”. Liczba 15–30 to szacunek bez źródła i bez etykiety hipotezy. Liczba narzędzi nie przekłada się na ruch (reguły 1, 7, 11).",
+   "evidence_pl": "Karty: „negatywne stwierdzenia z search-summary to słaby dowód” (l.114).",
+   "fix_pl": "„RENO-02: najlepiej udokumentowany brak znalezisk (15 zapytań, dwie niezależne próby; pewność średnia)”. „Hipoteza: 15–30 odrębnych decyzji w rodzinie RENO/HOME; liczba narzędzi nie przesądza o ruchu”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md (także market-and-distribution.md)",
+   "location": "executive-summary.md §3 pkt 2, l.27; market-and-distribution.md A2, l.46",
+   "quote": "„**Substytucja przez generatywne UI asystentów** — interaktywność przestała być przewagą.”; market: „Interakcja z narzędziami przenosi się do wnętrza czatu”",
+   "problem_pl": "Twierdzenia absolutne o skutku (przewaga „przestała”, interakcja „przenosi się”) bez testów asystentów i bez danych o adopcji. Źródła dokumentują istnienie funkcji, nie zmianę zachowań (reguły 3 i 4: istnienie możliwości ≠ użycie).",
+   "evidence_pl": "E-VER-C1, C2, C10 opisują wydanie funkcji, a nie skalę jej użycia. K-05 niewykonane.",
+   "fix_pl": "„Interaktywność prawdopodobnie przestaje być przewagą: ChatGPT i AI Mode generują kalkulatory w odpowiedzi [E-VER-C1, C2]; jakości i skali użycia nie testowano (hipoteza)”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§3 pkt 3, l.28",
+   "quote": "(bazowo ~7 USD na 1000 sesji) → potrzeba ~150 tys. sesji/mies. na 1000 USD.",
+   "problem_pl": "Liczba jest niespójna z tabelą §5 tego samego dokumentu i z economics.csv: ~140 tys. (143 000).",
+   "evidence_pl": "economics.csv: „Sesje/mies. potrzebne dla 1000 USD… 548000 | 143000 | 45000”.",
+   "fix_pl": "Zmienić na „~140 tys.”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 „Dni 31–60”, l.302 (oraz l.308)",
+   "quote": "- pierwszy pomiar RPM na realnym ruchu, nawet małym (minimum 2 000 odsłon do odczytu kierunkowego);",
+   "problem_pl": "Przy starcie 2026-10-25 dni 31–60 przypadają na koniec listopada i grudzień, czyli szczyt Q4 (mnożnik grudnia 1,357 w economics.csv). Pierwszy odczyt RPM będzie zawyżony o ok. 20–35%, a plan ostrzega tylko przed I–II (reguła 5: nie mylić RPM chwilowego z rocznym).",
+   "evidence_pl": "economics.csv seasonality_Nov 1.206, seasonality_Dec 1.357; E-ADS-20.",
+   "fix_pl": "Dopisać: „Odczyty RPM z XI–XII korygować o mnożnik sezonowy (÷1,2–1,36); decyzji nie opierać na samym Q4”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "A3 tabela, l.59; A2 tabela, l.46",
+   "quote": "l.59: „błąd UTM w ChatGPT 8–15.10.2026 przesunął ok. 31 tys. wizyt dziennie do Direct na ~500 stronach”; l.46: „aplikacje w ChatGPT mogą dziś monetyzować tylko towary fizyczne przez zewnętrzny checkout”",
+   "problem_pl": "Oba sformułowania odbiegają od źródła. Według źródła ruch z ChatGPT spadł o ok. 31 tys., a Direct wzrósł o ok. 26 tys. Oprócz checkoutu zewnętrznego istnieje też Instant Checkout (beta) (reguła 11).",
+   "evidence_pl": "E-VER-C12: „spadek ruchu z ChatGPT o ok. 31 tys. wizyt dziennie przy wzroście Direct o ok. 26 tys.”. E-VER-C10: „Istnieje jednak też Instant Checkout (beta, tylko wybrane marketplace'y)”.",
+   "fix_pl": "„…obniżył ruch z ChatGPT o ok. 31 tys. wizyt dziennie, przy wzroście Direct o ok. 26 tys. (ok. 500 stron, pomiar Adobe)”. „…tylko towary fizyczne; domyślnie przez checkout zewnętrzny (Instant Checkout w becie)”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§3.1, wiersz HOME-02, l.258",
+   "quote": "Moduł „zegar §121” to unikalny, cytowalny wynik (konkretna data)",
+   "problem_pl": "Słowo „unikalny” przeczy zebranym dowodom: TeamzLab modeluje „aging-out §121”, Taxstra opisuje zegar, Bellhaven liczy §121. Unikalność nie jest potwierdzona (reguły 1 i 9).",
+   "evidence_pl": "top-10-products.md l.404: „(3) TeamzLab Keep Current Home NPV: utrzymany niski kredyt, 10-letnie NPV i 'aging-out' §121”; tabela l.400: Taxstra „Opisuje zegar wyłączenia (ok. 3 lata od wyprowadzki…)”.",
+   "fix_pl": "„Moduł ‘zegar §121’ (data graniczna z daty wyprowadzki) to potencjalnie wyróżniający, cytowalny wynik; w badanym zakresie nie znaleziono narzędzia, które liczy go jako osobny wariant (TeamzLab i Bellhaven do ręcznej weryfikacji)”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 5 l.19; §2 pkt 8 l.22",
+   "quote": "„ProjectionLab (subskrypcja, ~1 mln USD ARR)”; „[E-REG3-*, E-REG2-*]”",
+   "problem_pl": "Deklarację założyciela podano jako fakt, choć źródło zawiera sprzeczne dane (GetLatka). Odwołania wieloznacznikowe („*”) nie wskazują źródła konkretnych twierdzeń (25D, NFIP, FORTIFIED, ACA, RAP) (reguła 11).",
+   "evidence_pl": "E-POR2-02: „deklaruje 1 mln USD ARR… GetLatka podaje dla 2023 r. tylko 201,6 tys. USD przychodu, co jest sprzeczne z deklaracjami założyciela”.",
+   "fix_pl": "„ProjectionLab (subskrypcja; ~1 mln USD ARR wg deklaracji założyciela, dane sprzeczne)”. Zamiast „E-REG3-*” podać konkretne ID, np. „25D [E-REG-01], NFIP [E-REG3-06], FORTIFIED [E-REG3-08], ACA [E-REG2-13], RAP [E-REG2-07]”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§1 Werdykt, l.7–12",
+   "quote": "**Budować warunkowo — i tylko w wersji znacznie węższej niż hipoteza.**",
+   "problem_pl": "Werdykt nie ma jawnie podanego poziomu pewności. Granice pewności są tylko w §7 (reguła 13: decyzja z podstawą i granicami pewności).",
+   "evidence_pl": "§7 opisuje ograniczenia, ale nie podaje pewności samej decyzji.",
+   "fix_pl": "Dodać pod werdyktem: „Pewność: średnia dla ‘nie budować wersji szerokiej’; niska dla ‘budować wąską wersję’ (brak danych o popycie w Google, brak testów asystentów, strony konkurentów nieotwierane)”."
+  }
+ ]
+}

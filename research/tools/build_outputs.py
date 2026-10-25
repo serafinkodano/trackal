@@ -193,6 +193,7 @@ TEXT_SUBS = [
     ('SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL)', 'w wynikach wyszukiwania (search-summary) dominują domeny o wysokim autorytecie (YMYL); pełnego SERP nie badano (K-05)'),
     ('SERP jest zatłoczony', 'wyniki wyszukiwania (search-summary) są zatłoczone'),
     ('solidny popyt', 'dobrą ocenę popytu (4/5, sygnały pośrednie)'),
+    ('ekspert 11–17 h (nie jest tani)', 'ekspert 24–36 h wg agenta fali 2b (nie jest tani)'),
     ('Popyt jest realny i rosnący', 'Sygnały popytu są pośrednie (zdarzenia, podaż treści); wolumenów nie zmierzono'),
     ('Popyt istnieje i jest widoczny na forach', 'Pytania pojawiają się na forach (anegdotycznie); wolumenów nie zmierzono'),
     ('Profil jest mocny w popycie', 'Ocena popytu jest wysoka, ale opiera się na sygnałach pośrednich'),
@@ -489,6 +490,8 @@ for x in ll:
         note = 'odrębna decyzja (forma własności PV); korzysta z modułu PV RENO-02'
     if fid == 'INS-01':
         note = 'odrębna decyzja (czy zgłaszać szkodę); próg „zgłosić szkodę” wchodzi też jako moduł RENO-02'
+    if fid == 'AUTO-03':
+        note = 'ten sam silnik co AUTO-01; odrębna decyzja (naprawa vs wymiana)'
     if fid == 'RENT-02':
         note = 'wariant capex seeda H (rdzeń hold/sell seeda H odrzucony)'
     if fid == 'ENER-03':

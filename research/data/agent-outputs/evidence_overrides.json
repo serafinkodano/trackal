@@ -1,0 +1,226 @@
+{
+ "_opis": "Poprawki rejestru dowodów po recenzji adwersaryjnej (fala 3). Stosuje je tools/build_evidence.py. 'set' zastępuje wskazane pola wiersza; 'replace' podmienia fragment tekstu (stary fragment musi wystąpić dokładnie raz); 'append' dopisuje nowe wiersze na końcu rejestru; 'reguly' to reguły nakładane na wszystkie wiersze. Pola: tresc, liczby, typ, pewnosc, zrodla (źródła rozdzielone '; '). Druga runda (kontrola spójności): E-DEM-03, E-DEM-14, E-ADS-28, E-POR-02, E-VER-C2, E-REG3-11.",
+ "reguly": {
+  "hipoteza_max_pewnosc": "niska",
+  "bez_skracania_prefiksy": [
+   "E-VER-",
+   "E-REV-"
+  ]
+ },
+ "set": {
+  "E-AI-02": {
+   "tresc": "[search-summary] Ruch z asystentów AI to od ułamka procenta do ok. 1% ruchu witryny (benchmarki 0,1–1%). Conductor (raport 2026 AEO/GEO Benchmarks) podaje 1,08% (10 branż, USA, V–IX 2025; próba z bazy klientów Conductor): IT 2,80%, Communication Services 0,25%, sektor finansowy ok. 0,5%. Ahrefs podawał 0,17% ruchu przeciętnej strony (ok. 3 tys. stron, II 2025) oraz 0,1% ruchu referencyjnego (ok. 35 tys. stron, III 2025); Google wysyłał wtedy 345x więcej ruchu niż ChatGPT, Perplexity i Gemini łącznie. Nowsze dane Ahrefs: ok. 0,25% (VII 2025) i 0,28% (III 2026), a stosunek Google do AI to ok. 100x. Datos/SparkToro: narzędzia AI to 0,77% całej aktywności desktopowej w USA w XII 2025 (ok. +50% r/r). Wszystkie liczby to szacunki panelowe dostawców znane ze streszczeń wyszukiwarki; zob. korekty w E-VER-C5.",
+   "liczby": "1,08% (Conductor; 10 branż, USA, V–IX 2025; próba z bazy klientów Conductor); Ahrefs: 0,17% (II 2025), 0,1% ruchu referencyjnego i 345x (III 2025), 0,25% (VII 2025), 0,28% i ok. 100x (III 2026); 0,77% aktywności desktop USA (Datos XII 2025)",
+   "typ": "estymacja",
+   "pewnosc": "średnia"
+  },
+  "E-AI-11": {
+   "tresc": "[search-summary] Szacunki udziału zapytań w USA z AI Overview mocno się różnią: ok. 20% (jeden tracker), 30% (Semrush, III 2026), 48–50% (BrightEdge, Q1 2026). Ochrona zdrowia: 88% (BrightEdge) lub 51% (WebFX, ponad 130 tys. zapytań). Finanse: nagłówkowo 21–28%, ale zapytania edukacyjne o finansach ok. 67%. Zapytania z 7 lub więcej słowami wywołują AI Overview w ok. 46–55% przypadków (Ahrefs 46,4%, IX 2025; WebFX 54,7%, 2,37 mln słów kluczowych), a zapytania jednowyrazowe w ok. 10%. Wartość 73,9% (WebFX) dotyczy wyłącznie zbioru ponad 130 tys. zapytań zdrowotnych, a nie wszystkich zapytań (zob. E-REV-02).",
+   "liczby": "20–50% zapytań w USA; zdrowie 51–88%; finanse edukacyjne 67%; zapytania 7+ słów: 46,4% (Ahrefs) – 54,7% (WebFX), jednowyrazowe ok. 10%; 73,9% tylko w zbiorze zapytań zdrowotnych (WebFX)"
+  },
+  "E-ADS-15": {
+   "tresc": "Według benchmarków WordStream/LocaliQ 2025 średni CPC w Search wynosi 5,26 USD dla wszystkich branż, 3,46 USD dla Finance & Insurance i 8,58 USD dla prawa. Promodo podaje dla Finance & Insurance 3,44 USD w Search wobec 0,86 USD w Google Display Network (dane historyczne); relacja Search/GDN ok. 4:1 jest orientacyjna. Kategoria słów „insurance” z CPC 54,91 USD to wartość dla kategorii słów kluczowych, nie średnia kont. Wzór RPM ≈ CPC × CTR to uproszczenie z dawnych materiałów (z okresu rozliczeń za kliknięcie) i w raporcie nie służy do przeliczeń: CPC reklamodawcy to inna warstwa niż page RPM wydawcy. Inżynier AdSense pisał w 2012, że system maksymalizuje RPM, a podaż reklam o wysokim RPM nie jest nieskończona; gdy ich brak, wyświetla się tańsza kategoria. Od 2024 AdSense płaci za wyświetlenie, więc CPC słowa kluczowego jest jeszcze słabszym predyktorem (search-summary).",
+   "liczby": "Search CPC: ogółem 5,26 USD, F&I 3,46 USD, prawo 8,58 USD (WordStream 2025); F&I: Search 3,44 USD vs GDN 0,86 USD (Promodo, dane historyczne; relacja ~4:1 orientacyjna); nie przeliczać na przychód serwisu"
+  },
+  "E-DEM-01": {
+   "tresc": "MBA (październik 2025) szacowało refinansowanie w 2025 na ok. 694 mld USD i prognozowało 737 mld USD na 2026. W sierpniu 2026 obniżyło prognozę na 2026 do 713 mld USD. W październiku 2026 przewiduje spadek refinansowania w 2027 o 17% do 571 mld USD; wynika z tego refinansowanie w 2026 ok. 690 mld USD (weryfikacja fali 3, E-REV-08). Powód: tylko 23% kredytobiorców ma oprocentowanie powyżej 6%, a stopy rynkowe są w okolicach 7%. Liczby mierzą kwotę w USD, nie liczbę gospodarstw. Rzeczywistej wartości za 2025 nie znaleziono.",
+   "liczby": "2025 ok. 694 mld USD (szacunek); 2026: 737 mld (prognoza z X 2025) → 713 mld (VIII 2026) → ok. 690 mld (wynika z prognozy z X 2026); 2027: 571 mld (−17%); 23% kredytobiorców z oprocentowaniem >6%. Szacunek własny, niezweryfikowany: przy średniej kwocie kredytu 300–400 tys. USD to rząd ok. 2 mln kredytów rocznie."
+  },
+  "E-DEM-06": {
+   "tresc": "Wskaźnik LIRA Harvard JCHS prognozuje roczne wydatki właścicieli na remonty i naprawy na poziomie ok. 518–526 mld USD, zależnie od komunikatu. Najnowszy komunikat („Remodeling Spending Poised for Further Slowdown”; weryfikacja fali 3, E-REV-06) podaje ok. 519 mld USD do II kw. 2027, a wzrost r/r spada do 0,5%. Wcześniejsze komunikaty: 526 mld (wiosna 2025), 524 mld (X 2025) i 522 mld USD; wzrost r/r +1,2% w Q2 2026 według jednego z nich i +1,6% na koniec 2026 według późniejszego. JCHS wspomina, że cięcia federalnych zachęt do modernizacji energetycznej mogą chwilowo podbić aktywność. Liczba mierzy dolary, nie gospodarstwa. Daty części komunikatów są niejasne.",
+   "liczby": "najnowszy: ok. 519 mld USD do II kw. 2027, wzrost r/r 0,5% (E-REV-06); wcześniej 522 mld, 524 mld (X 2025), 526 mld (wiosna 2025); wzrost r/r 2,9% → 1,6% na koniec 2026"
+  },
+  "E-DEM-12": {
+   "tresc": "Sprzedaż Generac dla domów w Q4 2025 spadła o ok. 23% do 572 mln USD. Spółka wiąże to ze słabą aktywnością awarii i zmianą platformy. W Q2 2026 przychody segmentu domowego spadły o 2% (według 8-K z 29.07.2026: 617 wobec 631 mln USD; wcześniejsze streszczenie podawało 621 mln USD). Spadki dotyczyły generatorów przenośnych i magazynów energii, a sprzedaż generatorów standby wróciła do wzrostu (weryfikacja fali 3, E-REV-03). Zarząd opisuje konsultacje domowe jako odporne. Penetracja generatorów standby to ok. 6,75% rynku adresowalnego (szacunek strony trzeciej, niepotwierdzony w raportach Generac).",
+   "liczby": "Q4 2025 domowe: 572 mln USD (−23%); Q2 2026: 617 mln USD (−2% r/r wg 8-K; inne streszczenie: 621 mln); standby: powrót do wzrostu w Q2 2026; przenośne i magazyny: spadek; prognoza 2026: ok. +10% (bez dużej awarii); penetracja ok. 6,75% (szacunek zewnętrzny)"
+  },
+  "E-DEM-14": {
+   "tresc": "Według Edmunds (w streszczeniach zebranych przez agentów fali 1 i 2b) w Q3 2026 ujemny kapitał miało 29,1% aut oddanych w rozliczeniu (trade-in) przy zakupie nowego auta, a średni niedobór wyniósł 7 107 USD. Mianownik w streszczeniach jest niejasny: nie wiadomo, czy chodzi o wszystkie auta oddane w rozliczeniu, czy tylko o auta z niespłaconym kredytem. Dane za Q3 2026 pochodzą z jednego artykułu i nie potwierdzono ich w drugim źródle, dlatego typ wpisu to „pośrednie”. W weryfikacji fali 3 potwierdzono ostatnio Q2 2026: 29,6% wymian z ujemnym kapitałem i średnio 6 884 USD (Edmunds według Ford Authority i CBT News; E-REV-07). Wcześniej: 30,9% i 7 183 USD w Q1 2026, 29,3% i rekordowe 7 214 USD w Q4 2025, 28,1% w Q3 2025. Kupujący, którzy wliczają ten dług w nowy kredyt, finansują średnio 57 235 USD i płacą 952 USD miesięcznie. Ponad 90% z nich ma kredyty na 72 miesiące lub dłużej (dane z Q1). Liczby zawsze podawać z kwartałem.",
+   "liczby": "Q3 2026: 29,1% aut oddanych w rozliczeniu / −7 107 USD (jedno źródło, niepotwierdzone w drugim; mianownik niejasny); Q2 2026: 29,6% / −6 884 USD (E-REV-07); Q1 2026: 30,9% / −7 183 USD; Q4 2025: 29,3% / −7 214 USD; finansowanie 57 235 USD, rata 952 USD/mies.; ponad 90% kredytów na 72+ mies.",
+   "typ": "pośrednie",
+   "pewnosc": "średnia"
+  },
+  "E-REG3-06": {
+   "tresc": "NFIP wygasł 1.10.2025 na 43 dni (do połowy XI 2025) i ponownie po terminie 30.01.2026. Starsze źródła podawały przedłużenie do 30.09.2026. CRS Insight IN10835 (wersja z 11.09.2026) podaje, że NFIP jest autoryzowany do 11.12.2026 (weryfikacja fali 3, E-REV-05); po tej dacie istnieje kolejne ryzyko wygaśnięcia. Jedno źródło wiąże przesunięcie terminu z sekcją 139 Continuing Appropriations and Extensions Act, 2027 (H.R. 6500, P.L. 119-103); tej podstawy prawnej nie sprawdzono w congress.gov. Przy wygaśnięciu FEMA wypłaca roszczenia, ale nie sprzedaje ani nie odnawia polis, a limit pożyczek z Treasury spada z 30,425 mld do 1 mld USD. Program obejmuje ok. 4,6 mln polis i ok. 1,3 bln USD ochrony. Długoterminowa reforma (H.R. 5484) nie została uchwalona (stan na VIII 2026).",
+   "liczby": "ok. 4,6 mln polis; ok. 1,3 bln USD ochrony; limit pożyczek 30,425 mld → 1 mld USD przy wygaśnięciu; autoryzacja do 11.12.2026 (CRS IN10835, 11.09.2026); wygaśnięcie na 43 dni od 1.10.2025"
+  }
+ },
+ "replace": {
+  "E-REG-18": [
+   {
+    "pole": "tresc",
+    "stare": "Status po 30.09.2026 (FY2027) nie został sprawdzony.",
+    "nowe": "Według weryfikacji fali 3 NFIP jest autoryzowany do 11.12.2026 (CRS IN10835; zob. E-REG3-06, E-REV-05)."
+   }
+  ],
+  "E-VER-C4": [
+   {
+    "pole": "tresc",
+    "stare": "Strona Semrush omnicalculator.com/overview (nagłówek 'June 2026') pokazuje ChatGPT",
+    "nowe": "Snippet wyszukiwarki ze strony Semrush omnicalculator.com/overview (nagłówek 'June 2026') podaje ChatGPT"
+   },
+   {
+    "pole": "tresc",
+    "stare": "Ta z kwietnia 2026 podaje 16,48 mln wizyt",
+    "nowe": "Snippet migawki z kwietnia 2026 podaje 16,48 mln wizyt"
+   },
+   {
+    "pole": "tresc",
+    "stare": "Wartości 14,3 mln za czerwiec 2026 nie znalazłem.",
+    "nowe": "Wartości 14,3 mln za czerwiec 2026 nie znalazłem. Weryfikacja fali 3 (search-summary): Semrush podaje 16,48 mln wizyt w IV 2026 i 16,28 mln w V 2026 (E-REV-04)."
+   }
+  ],
+  "E-AI-03": [
+   {
+    "pole": "tresc",
+    "stare": "Conductor podaje 87,4%.",
+    "nowe": "Conductor podaje 87,4%. SE Ranking (2026; weryfikacja fali 3, E-REV-01): ChatGPT 74,78%, Gemini 11,56%, Perplexity 7,23%, Copilot 3,51%, Claude 2,62%. Rozrzut zależy od trackera i próby, więc dla mniejszych platform podajemy zakresy: Perplexity 1–7%, Copilot 1–3,5%, Claude 0,8–2,6%."
+   },
+   {
+    "pole": "liczby",
+    "stare": "rozrzut trackerów 63–95%",
+    "nowe": "SE Ranking 2026: ChatGPT 74,78%, Gemini 11,56%, Perplexity 7,23%, Copilot 3,51%, Claude 2,62% (E-REV-01); rozrzut trackerów 63–95%"
+   }
+  ],
+  "E-AI-14": [
+   {
+    "pole": "tresc",
+    "stare": "Semrush (estymacja, VI 2026) przypisuje omnicalculator.com ok. 14,29 mln wizyt,",
+    "nowe": "Semrush (estymacja; snippet wyszukiwarki z nagłówkiem VI 2026) przypisuje omnicalculator.com ok. 14,29 mln wizyt (wartości 14,3 mln za VI 2026 nie potwierdzono w weryfikacji; Semrush 2026: 16,48 mln w IV i 16,28 mln w V; zob. E-VER-C4, E-REV-04),"
+   }
+  ],
+  "E-AI-25": [
+   {
+    "pole": "tresc",
+    "stare": "według analizy z 2 VII 2026 Brave nadal tam jest, obok drugiego dostawcy (turbopuffer).",
+    "nowe": "według analizy z 2 VII 2026 Brave nadal tam jest; obecność Brave na liście podprocesorów potwierdzono w weryfikacji fali 3 (E-REV-09). Drugi dostawca (turbopuffer) pojawia się tylko w jednym źródle wtórnym i pozostaje niezweryfikowany."
+   }
+  ],
+  "E-POR2-05": [
+   {
+    "pole": "tresc",
+    "stare": "Ruch: ponad 18 mln wizyt miesięcznie (case study Google) lub 23,1 mln miesięcznie na początku 2024 (BoringCashCow).",
+    "nowe": "Ruch według starszych deklaracji: ponad 18 mln wizyt miesięcznie (case study Google) lub 23,1 mln miesięcznie na początku 2024 (BoringCashCow). Nowsze szacunki Semrush: 16,48 mln (IV 2026) i 16,28 mln (V 2026) (E-REV-04)."
+   },
+   {
+    "pole": "liczby",
+    "stare": "18–23,1 mln wizyt/mies.;",
+    "nowe": "starsze deklaracje: >18 mln (case study Google) i 23,1 mln (początek 2024) wizyt/mies.; Semrush 2026: 16,48 / 16,28 mln (IV / V);"
+   }
+  ],
+  "E-DEM-03": [
+   {
+    "pole": "tresc",
+    "stare": "7,6 mln w Q4 2025 (+21,7%).",
+    "nowe": "7,6 mln w Q4 2025 (+21,7%; ta liczba tylko w źródle wtórnym, które przypisuje ją raportowi za Q1 2026). Wartość 7,2 mln za Q3 2025 pochodzi ze streszczenia komunikatu TransUnion (search-summary)."
+   }
+  ],
+  "E-ADS-28": [
+   {
+    "pole": "tresc",
+    "stare": "RPM sesyjnego.",
+    "nowe": "RPM sesyjnego. Uwaga po kontroli spójności: to szacunek wstępny z fali 1 (bez adblocka, botów, braku wypełnienia i ruchu spoza USA). Zastąpił go model w economics.csv: 1,0 / 5,9 / 21 USD na 1000 sesji zarejestrowanych i ok. 980 / 171 / 48 tys. sesji zarejestrowanych dla 1000 USD/mies. (kons. / baz. / opt.). Tego wpisu nie używać do wniosków."
+   },
+   {
+    "pole": "liczby",
+    "stare": "220-900 tys. sesji na 5 000 USD/mies.",
+    "nowe": "220-900 tys. sesji na 5 000 USD/mies. (szacunek wstępny, zastąpiony przez economics.csv: ok. 980 / 171 / 48 tys. sesji zarejestrowanych na 1 000 USD/mies.)"
+   }
+  ],
+  "E-POR-02": [
+   {
+    "pole": "liczby",
+    "stare": "19-39 USD na 1000 wizyt (niewiarygodne)",
+    "nowe": "19-39 USD na 1000 wizyt przy 9-18 mln wizyt (niewiarygodne); w raporcie obowiązuje zakres 15-30 USD na 1000 wizyt przy 14-23 mln wizyt (economics.csv, sekcja rpm_bridge)"
+   }
+  ],
+  "E-VER-C2": [
+   {
+    "pole": "tresc",
+    "stare": "Teza się potwierdza, i to w źródle pierwotnym, nie tylko we wtórnych.",
+    "nowe": "Teza się potwierdza. Potwierdzają ją streszczenia wyników wyszukiwania dla stron OpenAI (źródła pierwotne; stron nie otwierano) oraz źródła wtórne."
+   }
+  ],
+  "E-REG3-11": [
+   {
+    "pole": "tresc",
+    "stare": "Pełnej listy zakazów nie odczytałem.",
+    "nowe": "Pełnej listy zakazów nie było w streszczeniu wyszukiwarki."
+   }
+  ]
+ },
+ "append": [
+  {
+   "id": "E-REV-01",
+   "tresc": "SE Ranking (2026): udziały w referencjach AI — ChatGPT 74,78%, Gemini 11,56%, Perplexity 7,23%, Copilot 3,51%, Claude 2,62%; BrightEdge VIII 2026: ChatGPT 95,1%. Rozrzut zależy od trackera i próby.",
+   "liczby": "SE Ranking 2026: ChatGPT 74,78% / Gemini 11,56% / Perplexity 7,23% / Copilot 3,51% / Claude 2,62%; BrightEdge VIII 2026: ChatGPT 95,1%",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://thenextweb.com/news/chatgpt-ai-referral-traffic-95-percent-brightedge; https://seranking.com/blog/ai-traffic-research-study/"
+  },
+  {
+   "id": "E-REV-02",
+   "tresc": "AIO a długość zapytania: 7+ słów — 54,7% (WebFX, 2,37 mln słów kluczowych), 46,4% (Ahrefs, IX 2025); jednowyrazowe ok. 10%; 73,9% dotyczy wyłącznie >130 tys. zapytań zdrowotnych (WebFX).",
+   "liczby": "7+ słów: 54,7% (WebFX), 46,4% (Ahrefs, IX 2025); 1 słowo: ok. 10%; 73,9% tylko w zbiorze zapytań zdrowotnych",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://www.webfx.com/blog/seo/ai-overview-statistics/; https://ahrefs.com/blog/ai-overview-triggers/; https://www.aol.com/ai-overviews-healthcare-study-more-143021435.html"
+  },
+  {
+   "id": "E-REV-03",
+   "tresc": "Generac Q2 2026 (8-K, 29.07.2026): sprzedaż generatorów standby wróciła do wzrostu; segment Residential −2% (617 vs 631 mln USD) przez generatory przenośne i magazyny energii.",
+   "liczby": "Residential Q2 2026: 617 vs 631 mln USD (−2% r/r); standby: wzrost",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://www.sec.gov/Archives/edgar/data/0001474735/000143774926024731/ex_994826.htm; https://www.barchart.com/story/news/3520202/generac-reports-second-quarter-2026-results"
+  },
+  {
+   "id": "E-REV-04",
+   "tresc": "Semrush: omnicalculator.com 16,48 mln wizyt (IV 2026), 16,28 mln (V 2026); estymacja panelowa.",
+   "liczby": "16,48 mln (IV 2026); 16,28 mln (V 2026)",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://www.semrush.com/website/omnicalculator.com/overview/"
+  },
+  {
+   "id": "E-REV-05",
+   "tresc": "CRS Insight IN10835 (11.09.2026): NFIP autoryzowany do 11.12.2026; wcześniej wygasł m.in. na 43 dni od 1.10.2025.",
+   "liczby": "autoryzacja do 11.12.2026; wygaśnięcie na 43 dni od 1.10.2025",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://www.everycrsreport.com/files/2026-09-11_IN10835_1177d2de1e2916fd50e80100ff618a10dbb6bb04.html"
+  },
+  {
+   "id": "E-REV-06",
+   "tresc": "JCHS LIRA („Remodeling Spending Poised for Further Slowdown”): ok. 519 mld USD do II kw. 2027, wzrost r/r spada do 0,5%.",
+   "liczby": "ok. 519 mld USD do II kw. 2027; wzrost r/r 0,5%",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://www.jchs.harvard.edu/press-releases/remodeling-spending-poised-further-slowdown"
+  },
+  {
+   "id": "E-REV-07",
+   "tresc": "Edmunds Q2 2026 (wg Ford Authority/CBT News): 29,6% wymian z ujemnym kapitałem, średnio 6 884 USD; raportu za Q3 2026 nie potwierdzono w drugim źródle.",
+   "liczby": "Q2 2026: 29,6%, średnio 6 884 USD; Q3 2026: niepotwierdzone",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://fordauthority.com/2026/07/new-car-shoppers-break-record-for-being-underwater-in-q2-2026/"
+  },
+  {
+   "id": "E-REV-08",
+   "tresc": "MBA (X 2026): refinansowanie w 2027 spadnie o 17% do 571 mld USD; zakupy 2027 +0,8%; wynika z tego refinansowanie 2026 ≈ 690 mld USD.",
+   "liczby": "2027: 571 mld USD (−17%); 2026 ≈ 690 mld USD (wyliczone); zakupy 2027: +0,8%",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://nationalmortgageprofessional.com/news/mba-forecasts-17-refi-drop-2027-purchase-growth-below-1"
+  },
+  {
+   "id": "E-REV-09",
+   "tresc": "Anthropic: Brave Search na liście podprocesorów (od 19.03.2025); turbopuffer jako drugi dostawca — tylko jedno źródło wtórne.",
+   "liczby": "Brave na liście podprocesorów od 19.03.2025",
+   "typ": "weryfikacja fali 3 (search-summary)",
+   "pewnosc": "średnia",
+   "zrodla": "https://simonwillison.net/2025/Mar/21/anthropic-use-brave/"
+  }
+ ]
+}

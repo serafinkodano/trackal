@@ -1,0 +1,258 @@
+{
+ "reviewer": "COMPLETENESS CHECKER: zgodność ze specyfikacją etapów A–H, rankingu i walidacji",
+ "summary_pl": "Pokrycie formalne jest dobre. Jest 8 plików. Etap A ma sprawdzenie narzędzi, pytania A1–A6, lejek „obecność → cytowanie → link → wizyta → wizyta z przychodem” oraz zadania trwałe i nietrwałe. Etap B ocenia 35 rodzin, w tym wszystkie wymagane i nieoczywiste. Długa lista ma 100 pomysłów ze wszystkimi kolumnami i poziomem weryfikacji. Są werdykty dla seedów A–I, rejestr konkurencji z wymaganymi kolumnami (1106 wierszy, każdy z top 25 audytowany), 10 kart finalistów (każda z 12 promptami EN w 3 kategoriach i oceną ryzyka samodzielnego rozwiązania przez AI), model ekonomiczny w 3 scenariuszach z wymaganymi parametrami, warianty domen A/B/C na 8 kryteriach, kompletny etap H, 5 produktów pilotażowych z MVP i warunkami zatrzymania, plan 30/60/90, 6 warstw lejka i kryteria decyzji. Najważniejsze braki i słabości: (1) uzasadnienia, dowody, luki i pewność per kryterium są tylko dla 10 z 25 propozycji; dla rodzin z etapu B są same liczby; (2) brak reguł selekcji 100→25 i 25→10, a finaliści odbiegają od rankingu; (3) product-opportunities.csv nie uwzględnia wyników fali 2b i przeczy kartom; (4) są pseudo-warianty (FIN-02/CARE-02, JOB-10/RET-05, RENO-01 jako gałąź liczona w top 25); (5) etykiety dowodów popytu mieszają siłę źródła z tym, co źródło mierzy; (6) w ekonomice brakuje mostu CPC → page RPM → marża, kosztu budowy kolejnych narzędzi i skalowania czasu właściciela, a bazowy udział AI (10%) przeczy benchmarkom z raportu (0,1–1%); (7) plan walidacji jest nierealny czasowo, ma niespójne reguły zatrzymania, dzień 90 nie zgadza się z miarami „90 dni po indeksacji”, a G0 nie mierzy popytu w Google; (8) prywatność pomija CMP, zgody i GPC dla reklam; (9) granica domeny wyklucza „podatki osobiste”, a pilot HOME-02 jest produktem podatkowym. Blockerów nie stwierdzono.",
+ "findings": [
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§2 Ranking 25 propozycji (oraz brak §2a); product-opportunities.csv kolumna `ocena_wazona_0_5 (tylko top 25)`",
+   "quote": "| 10 | INS-01 | Should I File This Claim? Home & Auto Claim Net-Benefit Simulator | 4 | 2 | 2 | 5 | 4 | 3 | 4 | 3.35 | **3.35** | nie znaleziono | później |",
+   "problem_pl": "Specyfikacja wymaga, by ranking 25 propozycji pokazywał dla każdego z 7 ważonych kryteriów uzasadnienie, dowody, luki i pewność. Pełną tabelę „Ocena kryteriów” (Ocena/Uzasadnienie/Dowody/Luki/Pewność) mają tylko karty 10 finalistów. Dla 15 pozostałych propozycji (RENO-01, INS-01, RENT-01, HOME-03, AUTO-02, FIN-02, ENER-03, AUTO-03, HLTH-02, HOME-01, JOB-02, BIZ-04, ENER-01, RET-03, BIZ-01) są wyłącznie liczby. Tabela rankingu nie ma też kolumny pewności.",
+   "evidence_pl": "INS-01 ma Pop=4, choć `dowody_popytu` w CSV brzmi: „Hipoteza / niezweryfikowane: szkody gradowe i wodne oraz stłuczki są częste. W sesji brak danych o wyszukiwaniach i forach (limit)”. Analogicznie AUTO-02 (Pop=4): „Wiedza treningowa (niezweryfikowane): miliony kończących się leasingów rocznie” oraz AUTO-03 (Pop=4): „Wiedza treningowa (niezweryfikowane)…”. Uzasadnienia per kryterium istnieją tylko w surowych data/agent-outputs/audit_*.json, do których ranking nie odsyła.",
+   "fix_pl": "Dodać w top-10-products.md §2a „Uzasadnienie ocen 15 propozycji spoza finału”: dla każdej tabelę 7 kryteriów × (ocena, uzasadnienie, dowód E-ID/URL lub „hipoteza”, luki, pewność), przeniesioną z audit_*.json. Dodać do tabeli §2 kolumnę „pewność oceny”. Gdy popyt opiera się wyłącznie na hipotezie lub wiedzy modelu, obniżyć Pop do 3 albo oznaczyć „4 (hipoteza)”. W evidence-and-assumptions.md §2 zmienić status wiersza 14 na „częściowo”."
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§2 Ranking (poz. 6, 10–13) vs §4 Karty 10 finalistów; brak akapitu o wyborze finalistów w §3",
+   "quote": "| 6 | RENO-01 | Roof + Solar Timing Planner (with home-sale horizon) | 3 | 4 | 2 | 5 | 3 | 3 | 5 | 3.55 | **3.55** | nie znaleziono | pilot (jako gałąź RENO-02) |",
+   "problem_pl": "10 finalistów to nie 10 najwyżej ocenionych propozycji. Pominięto RENO-01 (#6, 3,55), INS-01 (#10, 3,35) i RENT-01 (#11, 3,35), a włączono FIN-01 (#12, 3,30) i AUTO-01 (#13, 3,30). Dokument uzasadnia tylko wybór 5 pilotów („Dlaczego pilotaż to RENO-02, RENO-03, HOME-04, HOME-02, AUTO-01…”), a wyboru 10 finalistów do głębokiej analizy (etap D/E) nie uzasadnia wcale.",
+   "evidence_pl": "Lista finalistów jest zakodowana na sztywno w tools/build_top10.py (linia 17: `TOP10 = ['RENO-02','RENO-03','RENO-04','HOME-02','LIFE-01','HOME-04','INS-03','CARE-01','AUTO-01','FIN-01']`) bez żadnej reguły. W §1 i §3 nie ma kryterium wyboru.",
+   "fix_pl": "Dodać w §3 akapit „Dlaczego te 10 finalistów”, np.: RENO-01 scalony jako gałąź RENO-02; INS-01 pominięty, bo rdzeń pokrywają Calcbee/AdvoraHQ (luka 2); RENT-01 pominięty, bo rodzina jest ograniczona; FIN-01 włączony jako wspólny silnik finansowania; AUTO-01 jako druga pula popytu. Albo zmienić skład finalistów zgodnie z rankingiem."
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§1 Metoda oceny (brak opisu selekcji 100 → 25); evidence-and-assumptions.md §2 wiersze 7 i 9",
+   "quote": "Ocenę wystawiał niezależny audytor fali 2 (7 zapytań na produkt, wymagany miks zapytań: naturalne pytania, nazwy kategorii, alternatywne terminy, płatne aplikacje, arkusze/fora).",
+   "problem_pl": "Żaden plik nie opisuje, jak z 100 pomysłów wybrano 25 do audytu konkurencji (kryterium, próg, kto oceniał). Nie wiadomo, czy pomysły ze statusem „zbadać” spoza top 25 odpadły na podstawie oceny, czy arbitralnie. Dotyczy to np. CARE-02, CARE-04, INS-06, AUTO-04, JOB-03 i BIZ-05. INS-06 widnieje w architekturze (§3.2) jako przyszła gałąź, choć nie był audytowany.",
+   "evidence_pl": "Przeszukanie wszystkich plików .md i skryptów tools/ nie daje reguły selekcji. evidence §2 wymienia tylko „100 pomysłów” i „25 audytów po 7 zapytań”.",
+   "fix_pl": "Dodać w top-10-products.md §1 punkt „Selekcja 100 → 25”: reguła (np. wstępna ocena 7 kryteriów z fali 1 i próg), wykluczenia (status „odrzucić”, pseudo-warianty, obszary bez monetyzacji) oraz tabela pomysłów „zbadać” spoza top 25 z powodem pominięcia. W product-opportunities.csv dodać kolumnę `wstepna_ocena_selekcji`."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "wiersze 10 finalistów; kolumny `dowody_popytu`, `najblizsza_konkurencja`, `poziom_weryfikacji`",
+   "quote": "LIFE-01 … dowody_popytu: Hipoteza / niezweryfikowane (zapytanie 'inherited house keep rent or sell calculator stepped-up basis' nie zostało wykonane z powodu limitu).",
+   "problem_pl": "Długa lista, opisana w README jako zawierająca „wszystkie wymagane pola”, nie uwzględnia wyników fali 2b (popyt i próba obalenia). Pola CSV przeczą kartom finalistów w top-10-products.md, więc czytelnik CSV dostaje nieaktualny i słabszy obraz dowodów.",
+   "evidence_pl": "Karta LIFE-01: „[bezpośrednie] Cotality … rekordowe ok. 340 000 domów … 7,4% wszystkich transferów”. CSV RENO-03: „Przepływ wymian HVAC to miliony rocznie (wiedza treningowa, niezweryfikowane)”, a karta podaje AHRI: 7 749 529 szt. CSV RENO-02 opisuje popyt na temat PV („o terminie wymiany dachu przy PV”) i stwierdza „Popytu na wątek ubezpieczeniowy nie zbadano”, a karta ma Verisk/Mass.gov. W CSV RENO-02 `najblizsza_konkurencja` brakuje konkurentów z fali 2b (Hammerio, BuildFolio, InsuranceCostCity). `poziom_weryfikacji` dla finalistów to wciąż „audyt konkurencji (fala 2, search-summary, 7 zapytań)”.",
+   "fix_pl": "Zregenerować dla 10 finalistów kolumny dowody_popytu, najblizsza_konkurencja, poziom_pewnosci i poziom_weryfikacji z data/agent-outputs/demand_*.json i refute_*.json, np. poziom_weryfikacji = „audyt fali 2 + próba obalenia 2b + popyt 2b”. Ewentualnie dodać kolumnę `aktualizacja_fala_2b` z odsyłaczem do karty i krótkim streszczeniem."
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§4, sekcje „Popyt (fala 2b)” w kartach (np. RENO-02 linie 131–132, LIFE-01 linia 519, FIN-01 linia 1005); legenda w evidence-and-assumptions.md §1",
+   "quote": "- [bezpośrednie] Raport Verisk 2026 U.S. Roof Report (dane za 2025): średni koszt wymiany dachu mieszkalnego to 17 631 USD, a naprawy 4 699 USD.",
+   "problem_pl": "Etap E wymaga rozdzielenia dowodów popytu na bezpośrednie, pośrednie, estymacje i hipotezy. Etykieta [bezpośrednie] trafia jednak do danych, które nie mierzą popytu (koszt dachu, ekspozycja na grad), do danych ze źródeł wtórnych i do danych z niepewną atrybucją. Legenda w evidence §1 („bezpośrednie — dane pierwotne lub oficjalna deklaracja”) dotyczy siły źródła, a nie tego, czy źródło mierzy popyt. W efekcie RENO-02 ma „2 bezpośrednie dowody popytu”, które w rzeczywistości dotyczą kosztów.",
+   "evidence_pl": "Dane Verisk w RENO-02 pochodzą z insurancejournal.com i insurancebusinessmag.com (źródła wtórne). LIFE-01: „[bezpośrednie] Badanie 2026 wśród 1 350 spadkobierców … (z tytułu komunikatu prasowego; próba prawdopodobnie…)”. FIN-01: „[bezpośrednie] TransUnion … Przypisanie do URL jest niepewne”. Jednocześnie HOME-04, AUTO-01, RENO-04 i INS-03 nie mają żadnego dowodu bezpośredniego, a mimo to Pop=3–4.",
+   "fix_pl": "W nagłówku §4 wprowadzić legendę z dwiema osiami: (1) siła dowodu (bezpośredni / pośredni / estymacja / hipoteza) i (2) co mierzy (popyt informacyjny / zdarzenia i populacja / parametr modelu). Dane kosztowe Verisk przenieść do „Dane i testy obliczeń”. Źródła wtórne i z niepewną atrybucją oznaczyć jako [pośrednie]. W każdej karcie dodać wiersz „Bezpośrednie dowody popytu: N (rodzaj)”."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md",
+   "location": "§4 ETAP B — tabela ocen rodzin (brak kart rodzin); §2 Popyt",
+   "quote": "Oceny 1–5 (wyżej = lepiej, łatwiej albo mniejsze ryzyko) pochodzą od agentów rodzin.",
+   "problem_pl": "Specyfikacja wymaga dla każdej rodziny opisu: popyt z dowodami, charakter komercyjny, konkurencja zintegrowana, fit AI, wspólne modelowanie, koszt danych, ryzyko błędu, potencjał katalogu, fit reklamowy, koszt eksperta. Tabela §4 ma tylko liczby 1–5 i jednozdaniowy werdykt. Nie ma uzasadnień, dowodów (E-ID/URL) ani nazw zintegrowanych konkurentów dla poszczególnych rodzin. §2 nie ma wskaźników popytu m.in. dla rodzin: freelancer/1099, spadki, rozwód, opieka nad dziećmi, plan zdrowotny, import/cła, ubezpieczenie zwierząt, finansowanie małej firmy.",
+   "evidence_pl": "Teksty `demand_pl`, `integrated_competition_pl`, `ai_fit_pl`, `data_cost_pl`, `error_risk_pl`, `catalog_potential_pl`, `expert_cost_pl` istnieją w data/agent-outputs/family_G1..G7.json (35 rodzin), ale żaden plik wynikowy ich nie przytacza i do nich nie odsyła.",
+   "fix_pl": "Dodać §4.1 „Karty rodzin” (albo plik pomocniczy z odsyłaczem w §4): dla każdej z 35 rodzin 10 kryteriów × (ocena, 1–2 zdania uzasadnienia, dowód E-ID/URL lub „hipoteza”, pewność) oraz 2–3 najbliższe narzędzia zintegrowane. W §2 dopisać wskaźniki popytu dla brakujących rodzin albo jawnie oznaczyć „brak danych”."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "wiersze FIN-02, CARE-02, JOB-10, RET-05, RENO-01; top-10-products.md §0 seed A i §2 poz. 6",
+   "quote": "CARE-02 | Paying for Aging in Place: Reverse Mortgage vs HELOC vs Cash-Out Refi vs Downsize",
+   "problem_pl": "Specyfikacja wymaga 60–100 odrębnych pomysłów bez pseudo-wariantów. FIN-02 i CARE-02 mają tego samego użytkownika (właściciel 62+, duży kapitał w domu, małe oszczędności) i te same warianty (HECM vs HELOC vs downsizing). JOB-10 i RET-05 to w obu przypadkach emeryt rozważający przeprowadzkę do innego stanu (zostać vs stan X, z kupnem lub wynajmem). RENO-01 jest liczony jako odrębny pomysł i jako #6 w top 25, choć seed A mówi „PV jako opcjonalna gałąź (RENO-01 scalony)”, a status to „pilot (jako gałąź RENO-02)”.",
+   "evidence_pl": "FIN-02: „niski dochód emeryta 62+ … HECM; sprzedaż i tańszy dom”. CARE-02: „Właściciele domu 62+ z dużym kapitałem w domu i ograniczonymi oszczędnościami … HECM … sprzedaż i downsizing”. JOB-10: „Emeryt lub pracownik zdalny rozważający przeprowadzkę do 2–4 stanów”. RET-05: „Para lub osoba 58–75 rozważająca … przeprowadzkę … do innego stanu”.",
+   "fix_pl": "Scalić FIN-02 z CARE-02 (HEI jako wariant, finansowanie opieki lub modyfikacji jako preset) oraz JOB-10 z RET-05 (emeryt jako preset). RENO-01 usunąć z listy odrębnych pomysłów i z top 25 (wprowadzić pozycję #26) albo napisać wprost „24 odrębne propozycje + 1 gałąź”. Zaktualizować liczby w README i w evidence §1–2 („137 → 100 odrębnych”)."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "sekcja input (brak mostu CPC → RPM i marży); market-and-distribution.md §A1 pkt 6",
+   "quote": "input | page_rpm_us: Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom | USD / 1000 odsłon | 4.0 | 9.0 | 18.0 | założenie | ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD",
+   "problem_pl": "Etap F wymaga rozdzielenia: CPC reklamodawcy, display, przychód wydawcy, page RPM, przychód na 1000 sesji i marża. Model zaczyna od założonego page RPM. Brakuje ogniw: CPC/CPM display → udział wydawcy (68–80%) → liczba slotów dopuszczalnych politykami na stronie-symulatorze → viewability → page RPM. Brakuje też marży operacyjnej w %. CPC pojawia się tylko w jednym zdaniu w A1 („3,46 USD CPC w Search wobec ok. 0,86 USD w Display Network”) i nie jest liczbowo powiązany z bazowym RPM 9 USD.",
+   "evidence_pl": "economics.csv nie ma żadnego wiersza z CPC, CPM, CTR, liczbą slotów, revenue share ani marżą %. Formuła w wierszu output zaczyna się od `page_rpm_us`. operating_profit podaje tylko kwoty USD.",
+   "fix_pl": "Dodać w economics.csv sekcję `rpm_bridge` dla 3 scenariuszy: CPC display (E-ADS-15), CTR display, eCPM brutto, udział wydawcy 0,68–0,80 (E-VER-C7), liczba slotów na stronie-symulatorze dopuszczalnych przez E-ADS-02/03, viewability, a z tego wyliczony page RPM porównany z założonym. Dodać wiersze „marża operacyjna %” przy 1, 3 i 10 tys. USD. W market-and-distribution.md A1 dodać tabelę definicji tych 6 miar."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "sekcje costs / breakeven / operating_profit / illustration_m12; tools/economics_model.py `monthly_fixed_cash`, `owner_cost`",
+   "quote": "illustration_m12 | ILUSTRACJA: wynik gotówkowy/mies. w mies. 12 | USD / mies. | -1287 | -399 | 4235 | ilustracja | przychód - koszty stałe",
+   "problem_pl": "Model pomija koszt budowy narzędzi powyżej 5, choć tools_live_m12 = 10/15/25, a reguła „Kontynuować” zakłada 2–4 nowe symulatory miesięcznie. Czas właściciela na utrzymanie jest stały (bazowo 20 h/mies.) niezależnie od liczby narzędzi (5, 15 czy 50). Brakuje skumulowanego przepływu gotówki za 12 i 24 miesiące, okresu zwrotu kosztu uruchomienia oraz wiersza kosztów stałych dla 25 narzędzi, choć zysk operacyjny liczony jest właśnie dla 25.",
+   "evidence_pl": "W skrypcie `monthly_fixed_cash` liczy tylko roczne utrzymanie eksperckie, a `owner_cost(s)` = owner_hours_month × stawka, bez zależności od liczby narzędzi. Bazowo 10 dodatkowych narzędzi × 13 h × 175 USD ≈ 22,8 tys. USD plus 350 h właściciela nie pojawia się w żadnym wierszu. Przy 2–4 narzędziach miesięcznie to ok. 4,5–9,1 tys. USD/mies. za ekspertów.",
+   "fix_pl": "Dodać wiersze: koszt nowego narzędzia (ekspert + czas właściciela), budżet rozwoju przy 2 i 4 narzędziach/mies., skumulowany wynik gotówkowy i wynik z wyceną czasu właściciela za 12 i 24 miesiące, okres zwrotu z kosztu uruchomienia. Uzależnić owner_hours_month od liczby narzędzi (np. 8 h + 0,8 h/narzędzie). Dodać wiersz kosztów stałych dla 25 narzędzi."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "input `ai_share_of_sessions` i wiersze required_traffic „W tym sesje z asystentów AI…”",
+   "quote": "input | ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi | ułamek | 0.02 | 0.1 | 0.3 | założenie | HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn",
+   "problem_pl": "Wymagane rozdzielenie ruchu AI i SEO opiera się na scenariuszu bazowym 10% i optymistycznym 30%. To 10–300 razy więcej niż benchmarki cytowane w tym samym raporcie. Wiersze „W tym sesje z asystentów AI/mies. dla 1000 USD” (bazowo 14 300) sugerują wolumen AI sprzeczny z werdyktem.",
+   "evidence_pl": "executive-summary.md §3 pkt 1: „Kanał AI nie dostarczy wolumenu (0,1–1%)”. market-and-distribution.md A2: Ahrefs 0,28%, Conductor 1,08%, omnicalculator.com ok. 0,05%.",
+   "fix_pl": "Ustawić ai_share_of_sessions np. na 0,003 / 0,01 / 0,05. Udział 0,10–0,30 przenieść do osobnego wariantu „po spełnieniu warunku G0 (b)”. W wierszach AI vs nie-AI pokazać także przychód z każdego kanału w USD/mies."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 Bramka G0 i plan dni 0–14; executive-summary.md §6",
+   "quote": "- (c) właściciel świadomie akceptuje, że kanałem bazowym będzie Google organic (wtedy oceniać według §4.3 bez oczekiwań co do AI).",
+   "problem_pl": "Warunek (c) pozwala przejść bramkę G0 bez żadnego pomiaru. Plan dni 0–14 nie obejmuje sprawdzenia popytu w Google (wolumeny fraz, SERP, udział AI Overviews), choć raport sam stwierdza brak wolumenów. Budowa ruszyłaby więc na kanale bazowym, którego popytu nikt nie zmierzył.",
+   "evidence_pl": "evidence-and-assumptions.md §6 K-04: „Wolumeny i trendy zapytań (Keyword Planner, Google Trends, Semrush/Ahrefs) … | wysoki | popyt” — tego zadania nie ma w dniach 0–14. market-and-distribution.md §2: „Nie znaleziono żadnych opublikowanych wolumenów wyszukiwań ani danych Google Trends”.",
+   "fix_pl": "Dodać w dniach 0–14 krok 4: K-04 (Keyword Planner jest bezpłatny z kontem Google Ads, do tego Google Trends) oraz ręczny przegląd SERP i AI Overviews/AI Mode dla 5 produktów. Warunek (c) uzupełnić minimalnym progiem, np. „≥ 2 z 5 produktów z łącznym wolumenem fraz ≥ X/mies. i SERP bez dominacji AIO lub generatywnego kalkulatora”. To samo poprawić w executive-summary §6."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 Harmonogram (dni 0–14 i 15–30); §5 Protokół; evidence-and-assumptions.md K-02; executive-summary.md §6 pkt 2",
+   "quote": "**Dni 0–14 — eksperyment pomiarowy, bez budowy (koszt ≈ 0 USD, ~15–20 h pracy):**",
+   "problem_pl": "Plan 30/60/90 nie zgadza się z własnymi szacunkami pracochłonności, a w żadnym pliku nie ma założenia o tygodniowej dostępności właściciela. Panel 5 produktów × 5 asystentów × 8–12 promptów × 3 powtórzenia to 600–900 ręcznych uruchomień z pełnym zapisem (§5 pkt 4: zrzut, typy linków, brakujące zależności). Według K-02 panel obejmuje 10 finalistów (1 200–1 800 uruchomień). Do tego analiza logów i test konkurentów, a wszystko to w 15–20 h. W dniach 15–30 plan zakłada „silnik osi czasu + 1 symulator”, czyli według §3 90–220 h + 50–70 h = 140–290 h w 16 dni.",
+   "evidence_pl": "§3: „Łącznie, szacunkowo: silnik 90–220 h + 5 produktów 185–265 h”. economics.csv: owner_hours_engine 140 + owner_hours_new_tool 35 (bazowo). executive-summary §6 pkt 2: „5 asystentów × prompty z top-10-products.md × 3 powtórzenia” — bez liczby produktów.",
+   "fix_pl": "Dodać założenie dostępności właściciela (h/tydz.) i przeliczyć kalendarz, np. silnik + RENO-02 w dniach 15–45 przy 40 h/tydz. Doszacować panel w godzinach (minuty na uruchomienie) i ujednolicić jego zakres (5 czy 10 produktów) w exec §6, arch §4.2 i K-02. Ewentualnie zawęzić G0 do 4 promptów „z prośbą o kalkulator” × 5 produktów × 5 asystentów × 2 powtórzenia."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§3.1 (miary „90 dni po indeksacji”) vs §4.3 kolumna „Dzień 90”",
+   "quote": "| **Kontynuować** (dodawać 2–4 symulatory/mies.) | ≥ 3 z 5 produktów zaindeksowane i z ≥ 500 wyświetleniami GSC/mies.;",
+   "problem_pl": "§3.1 mówi: „Miary liczymy od dnia, w którym strona jest zaindeksowana” i podaje miary sukcesu „90 dni po indeksacji”. Tymczasem produkt 1 powstaje w dniach 15–30, produkty 2–3 w dniach 31–60, a 4–5 w dniach 61–90. W dniu 90 żaden produkt nie ma 90 dni od indeksacji, a produkty 4–5 mają ich 0–30. Progi dnia 90 (3 z 5 produktów z ≥ 500 wyświetleń GSC/mies.) są więc z definicji niemierzalne albo nieosiągalne, a decyzja z dnia 90 nie ma danych.",
+   "evidence_pl": "§4.2: „Dni 61–90 — ocena: produkty nr 4 i 5; … decyzja według §4.3”.",
+   "fix_pl": "Przesunąć decyzję „dzień 90” na „90 dni od indeksacji produktu nr 3” (ok. dzień 150). Alternatywnie zdefiniować progi dnia 90 tylko dla produktów 1–2, a ocenę „3 z 5” przenieść do miesiąca 6. Dopisać kalendarz dla każdego produktu: publikacja → oczekiwana indeksacja → data pomiaru."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.3 wiersze „Wstrzymać”/„Odrzucić” vs §4.4 i executive-summary.md §8",
+   "quote": "| **Odrzucić** (zamknąć projekt jako biznes reklamowy) | — | po 9–12 mies.: < 10 tys. sesji/mies. łącznie **i** przychód < 3 USD / 1000 sesji **i** udział AI < 5% sesji ludzi; albo kara ręczna / algorytmiczna obejmująca domenę |",
+   "problem_pl": "Raport podaje trzy niespójne reguły zatrzymania. §4.3 „Wstrzymać”: w 6. miesiącu < 5 tys. sesji albo < 50 USD/mies. §4.3 „Odrzucić”: po 9–12 miesiącach trzy warunki łącznie. §4.4 i exec §8: po 6 miesiącach przychód < ok. 100 USD/mies. i brak wzrostu przez 3 miesiące → przerwać. Przykład: w 6. miesiącu przychód 80 USD/mies. bez wzrostu — §4.4 każe przerwać, a §4.3 nie każe nawet wstrzymać. W 12. miesiącu 9 tys. sesji × 6 USD/1000 = 54 USD/mies. — „Odrzucić” nie zachodzi, bo przychód na 1000 sesji ≥ 3 USD.",
+   "evidence_pl": "§4.4: „Przerwać, jeżeli po 6 miesiącach od publikacji pierwszych 3 symulatorów przychód reklamowy pozostaje poniżej ok. 100 USD/mies. i ruch nie rośnie przez 3 kolejne miesiące”.",
+   "fix_pl": "Ujednolicić reguły w jednej tabeli §4.3 i powtórzyć tę samą regułę przerwania w exec §8 i §4.4. W wierszu „Odrzucić” zastąpić koniunkcję trzech warunków regułą opartą na przychodzie i trendzie (np. przychód < 100 USD/mies. i trend < +5% m/m przez 3 miesiące ALBO kara obejmująca domenę). Udział AI traktować informacyjnie."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.3 wiersz „Kontynuować”, kolumna „Miesiąc 6”",
+   "quote": "≥ 15 tys. sesji/mies. łącznie z trendem ≥ +15% m/m przez 3 mies.; przychód ≥ 5 USD / 1000 sesji z USA; ≥ 2 produkty z ≥ 3 tys. sesji/mies.",
+   "problem_pl": "Kryterium „Kontynuować (dodawać 2–4 symulatory/mies.)” nie jest powiązane z progiem rentowności z economics.csv. 15 tys. sesji × 5–7 USD/1000 daje ok. 75–105 USD/mies., a gotówkowy próg rentowności to ok. 49,6 tys. sesji przy 5 narzędziach i ok. 91,3 tys. przy 15. Do tego dochodzi nieuwzględniony koszt 2–4 nowych narzędzi miesięcznie. Brakuje limitu skumulowanej straty i terminu dojścia do progu.",
+   "evidence_pl": "economics.csv breakeven: „Próg rentowności gotówkowej przy 5 narzędziach | … | 481800 | 49600 | 8200” oraz „… przy 15 narzędziach | … | 938700 | 91300 | 12800”.",
+   "fix_pl": "Dodać w §4.3 wiersz „ścieżka do progu rentowności”: wymagany ruch w 12. i 18. miesiącu (z economics.csv) i limit skumulowanej straty gotówkowej (kwota w USD). Tempo dodawania narzędzi uzależnić od przychodu, np. 1 narzędzie/mies., dopóki przychód < koszty stałe."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Prywatność danych finansowych” oraz §4.2 „Dni 15–30”",
+   "quote": "- Analityka rejestruje zdarzenia (`tool_started`, `tool_completed`, `variant_view`, `export`) i co najwyżej zgrubne kubełki, nigdy wartości kwot ani adresów.",
+   "problem_pl": "Sekcja prywatności pomija warstwę reklamową, choć model biznesowy to AdSense. Brakuje CMP i obsługi zgód, honorowania GPC, mechanizmu „Do Not Sell or Share” (stanowe przepisy o prywatności w USA), trybu RDP / reklam niespersonalizowanych i ich wpływu na RPM. Nie zapewniono też, że wartości z formularza (także w fragmencie URL) nie trafiają do tagów reklamowych. Lista działań na dni 15–30 nie zawiera CMP ani polityki prywatności dla reklam.",
+   "evidence_pl": "economics.csv: „adblock_loss: Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)”. market-and-distribution.md A3: „GPC/RDP w części stanów → reklamy niespersonalizowane [E-ADS-19]”. Lista dni 15–30: „domena, hosting statyczny za CDN, robots.txt …, GSC, Bing WMT, IndexNow, GA4 z kanałem AI i zdarzeniami” — bez CMP.",
+   "fix_pl": "Dodać w §2 podsekcję „Zgody i prywatność reklam”: CMP (certyfikowany przez Google dla ruchu z EOG/UK, sygnały stanowe dla USA), obsługa GPC i RDP, link „Do Not Sell or Share”, zakaz przekazywania wartości z formularza do tagów reklamowych i analityki, zgodność z politykami AdSense dotyczącymi danych osobowych. W dniach 15–30 dodać punkt „CMP + polityka prywatności + konfiguracja RDP”."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§1.2 „Kategorie wyłączone z tej domeny”; executive-summary.md §4 „Domena”",
+   "quote": "  - emerytura i podatki osobiste (rynek zajęty przez Boldin, ProjectionLab, MaxiFi, Open Social Security; wysoki koszt eksperta);",
+   "problem_pl": "Rekomendowana granica domeny wyklucza „podatki osobiste”, a pilot HOME-02 jest w istocie produktem podatkowym: zegar wyłączenia §121, amortyzacja 27,5 roku, recapture, LTCG, „CPA/EA 6–10 h (bez tego nie publikować)”. Na liście kategorii do dodania jest LIFE-01 (stepped-up basis), a AUTO-01 wymaga tabeli podatku od sprzedaży dla 51 jurysdykcji. Przy takim sformułowaniu granica jest nieoperacyjna: nie wiadomo, które moduły podatkowe mieszczą się w zakresie.",
+   "evidence_pl": "executive-summary.md §4: „Poza zakresem: emerytura, podatki osobiste, zdrowie …”. architecture §3, HOME-02: „(C) podatki uproszczone, ale poprawne co do struktury (amortyzacja 27,5 roku, recapture, LTCG)”.",
+   "fix_pl": "Przeformułować wyłączenie na „samodzielne narzędzia planowania podatku dochodowego (zeznanie, Roth, withholding, planowanie emerytalne)”. Dopisać: „moduły podatkowe osadzone w decyzji o domu lub aucie (§121, recapture, sales tax, step-up) są w zakresie, poziom R1 z obowiązkowym przeglądem CPA/EA”. Tak samo poprawić executive-summary §4."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§1.2 „Warunki uzasadniające osobną domenę”",
+   "quote": "- **Warunki uzasadniające osobną domenę** (wszystkie muszą być spełnione):",
+   "problem_pl": "Wstęp mówi, że wszystkie warunki muszą być spełnione, a warunek 2 zaczyna się od „albo **inny profil ryzyka**”. Logika warunków jest więc sprzeczna i nie da się jej jednoznacznie zastosować.",
+   "evidence_pl": "Warunek 2 w tej samej liście: „2. albo **inny profil ryzyka** (zdrowie/medycyna, prawo);”, a warunki 3 i 4 zaczynają się od „i”.",
+   "fix_pl": "Napisać: „Osobna domena ma sens, gdy spełniony jest warunek (1 lub 2) oraz warunek 3 i warunek 4”."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "kolumna `status`",
+   "quote": "pilot (jako gałąź RENO-02)",
+   "problem_pl": "Specyfikacja przewiduje statusy zbadać / pilot / później / odrzucić. W CSV występują też wartości z dopiskami („później (osobna domena)”, „zbadać (test na healthscorer.com)”, „pilot (jako gałąź RENO-02)”), co psuje filtrowanie i liczenie: „pilot” daje 5 wierszy, a nie 6.",
+   "evidence_pl": "Rozkład: później 36, zbadać 29, odrzucić 26, pilot 5, „później (osobna domena)” 2, „pilot (jako gałąź RENO-02)” 1, „zbadać (test na healthscorer.com)” 1.",
+   "fix_pl": "W kolumnie status zostawić tylko 4 dozwolone wartości. Dopiski przenieść do `uzasadnienie_statusu` albo do nowej kolumny `uwaga_statusu`."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§3 Rankingi szczegółowe, wiersz „Najmocniejsza luka”",
+   "quote": "| **Najmocniejsza luka** | **RENO-02**, dalej **INS-03**, **RENO-04**, **RENT-01**, **FIN-02** (luka 4/5) |",
+   "problem_pl": "Lista pomija RENO-01 i HLTH-02, które w tabeli §2 też mają lukę 4/5, i nie wyjaśnia dlaczego.",
+   "evidence_pl": "§2: RENO-01 „| 3 | 4 | 2 | …” oraz HLTH-02 „| 3 | 4 | 2 | …” (Luka = 4).",
+   "fix_pl": "Dopisać RENO-01 i HLTH-02 albo dodać uzasadnienie, np. „RENO-01 pominięty jako gałąź RENO-02; HLTH-02 poza domeną”."
+  },
+  {
+   "severity": "minor",
+   "file": "evidence-and-assumptions.md",
+   "location": "§2 Status wykonania zadania, wiersze 6 i 14",
+   "quote": "| 6. Etap B — rodziny (11 + nieoczywiste) | wykonane, pewność niska–średnia | ocena 34 rodzin/podrodzin; część agentów z małą liczbą zapytań |",
+   "problem_pl": "Tabela w market-and-distribution.md §4 ma 35 wierszy rodzin, a status podaje 34. Wiersz 14 nazywa ranking „Ranking 25 finalistów” ze statusem „wykonane”, choć finalistów jest 10, a uzasadnienia per kryterium są tylko dla nich.",
+   "evidence_pl": "Policzone wiersze tabeli §4 (bez nagłówka): 35. Wiersz 14: „| 14. Ranking 25 finalistów | wykonane | `top-10-products.md` §1–2 |”.",
+   "fix_pl": "Poprawić na „35 rodzin/podrodzin”. Wiersz 14 zmienić na „Ranking 25 propozycji — częściowo (uzasadnienia per kryterium tylko dla 10 finalistów)”."
+  },
+  {
+   "severity": "minor",
+   "file": "economics.csv",
+   "location": "input `adblock_loss`",
+   "quote": "input | adblock_loss: Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia) | ułamek | 0.28 | 0.2 | 0.15",
+   "problem_pl": "Specyfikacja wymienia osobno adblock i zgody. Model łączy w jednym parametrze adblock, brak zgody i brak wypełnienia, więc nie da się ocenić wpływu GPC/RDP ani zweryfikować każdego składnika osobno (Z-03).",
+   "evidence_pl": "Podstawa parametru: „ZAŁOŻENIE oparte na E-ADS-17, E-ADS-19 (adblock w USA 19-33% zależnie od metody) + GPC/RDP” — bez rozbicia na składniki.",
+   "fix_pl": "Rozbić parametr na `adblock_rate`, `no_consent_or_rdp_rpm_factor` (RPM reklam niespersonalizowanych względem personalizowanych) i `unfilled_rate`. Każdy z nich dopisać osobno do Z-03."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Bezpieczne aktualizacje przez n8n”",
+   "quote": "[cron n8n] → pobierz dane (API publiczne) → zapisz surowe + sumę kontrolną",
+   "problem_pl": "Brak harmonogramu aktualizacji dla poszczególnych źródeł pilotażu (częstotliwość, próg alarmu, odpowiedzialny). Tabela warstw podaje tylko ogólne „od dni do roku”.",
+   "evidence_pl": "Źródła z §3 mają różne cykle (PMMS tygodniowo, EIA miesięcznie, FHFA HPI kwartalnie, Verisk rocznie, tabele sales tax i reguły FL nieregularnie), ale nigdzie nie zestawiono ich z cronem.",
+   "fix_pl": "Dodać tabelę „źródło → częstotliwość crona → test regresji → próg akceptacji przez człowieka → właściciel” dla wszystkich źródeł 5 produktów pilotażowych."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Proces kontroli eksperckiej”",
+   "quote": "| R1 — przepisy i pieniądze z konsekwencjami prawnymi | podatki, zasiłki, Medicare/ACA, wypłaty emerytalne, ubezpieczenia | ekspert zewnętrzny (EA/CPA/CFP lub licencjonowany agent) przed publikacją i po zmianach reguł |",
+   "problem_pl": "Architektura i ocena ryzyka treści nie przenoszą ustaleń prawnych z rejestru dowodów: warunków wyłączenia wydawcy (treść bezosobowa, ogólna, publikowana regularnie), ryzyka porady ubezpieczeniowej bez licencji ani wymaganych zastrzeżeń. Te ustalenia są tylko w evidence.",
+   "evidence_pl": "evidence-and-assumptions.md: E-REG-24 i E-REG3-13 (Lowe v. SEC); karta RENO-02: „interpretacja polis … zbliża się do porady ubezpieczeniowej i wymaga wyraźnych zastrzeżeń”.",
+   "fix_pl": "Dodać w §2 podsekcję „Ryzyko prawne treści”: zasady formułowania wyników (warianty i progi zamiast „zrób X”), zastrzeżenia, regulamin, kryteria eskalacji do prawnika oraz odsyłacze do E-REG-24 i E-REG3-13."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§3.1 tabela miar sukcesu",
+   "quote": "| AUTO-01 | Druga pula popytu (auta) o niskim koszcie eksperckim; integracja 6 wariantów wyróżnia się mimo 10+ prostych kalkulatorów | ≥ 800 wyświetleń/mies.; CTR ≥ 1%; ukończenie ≥ 30% |",
+   "problem_pl": "Model biznesowy opiera się na reklamach, ale 4 z 5 produktów (RENO-02, HOME-04, HOME-02, AUTO-01) nie mają miary monetyzacji. Tylko RENO-03 ma „RPM strony ≥ średniej serwisu”. AUTO-01 jako jedyny nie ma miary cytowania w asystentach AI.",
+   "evidence_pl": "Kolumna „Miara sukcesu” dla RENO-02, HOME-04, HOME-02 i AUTO-01 nie zawiera RPM ani przychodu na 1000 sesji.",
+   "fix_pl": "Dodać do każdego produktu miarę page RPM albo przychodu na 1000 sesji ludzi z USA (z progiem). Do AUTO-01 dodać „≥ 1 cytowanie w panelu lub w Bing AI Performance”."
+  },
+  {
+   "severity": "minor",
+   "file": "evidence-and-assumptions.md",
+   "location": "§4 Rejestr założeń, Z-16",
+   "quote": "| Z-16 | Godziny eksperta na nowy symulator | 9 / 13 / 18 h (śr. dla 5 produktów pilotażowych: łącznie ~55–90 h) |",
+   "problem_pl": "Pozostałe założenia podają wartości w kolejności kons./baz./opt. Z-16 ma odwrotną kolejność i nie ma oznaczenia, a w economics.csv wartości są odwrotne (conservative 18, optimistic 9).",
+   "evidence_pl": "economics.csv: „expert_hours_new_tool … | h / narzędzie | 18 | 13 | 9”.",
+   "fix_pl": "Zapisać „18 / 13 / 9 h (kons./baz./opt.)”."
+  },
+  {
+   "severity": "minor",
+   "file": "tools/build_top10.py",
+   "location": "linia 19 (oraz tools/build_evidence.py linie 2–3); README.md",
+   "quote": "doc = open('top10_head.md').read() + '\\n'.join(rows) + '\\n' + open('top10_rankings.md').read() + open('raw/cards.md').read()",
+   "problem_pl": "Skrypty, które według README „złożyły CSV i karty”, czytają pliki nieobecne w repozytorium: top10_head.md, top10_rankings.md, evidence_head.md, raw/evidence_rows.json. Odtworzyć da się tylko economics.csv, więc nie można zweryfikować, jak powstały ranking i rejestr dowodów.",
+   "evidence_pl": "Polecenie `ls research/top10_head.md research/top10_rankings.md` zwraca „No such file or directory”. W data/agent-outputs/ nie ma evidence_rows.json.",
+   "fix_pl": "Dodać brakujące pliki wejściowe do research/data/ albo napisać w README wprost, że odtwarzalny jest tylko tools/economics_model.py, a pozostałe skrypty są archiwalne."
+  },
+  {
+   "severity": "minor",
+   "file": "economics.csv",
+   "location": "sekcja input `seasonality_*`",
+   "quote": "input | seasonality_Jan: mnożnik RPM w miesiącu | mnożnik | 0.754 | 0.754 | 0.754",
+   "problem_pl": "Model uwzględnia sezonowość tylko po stronie RPM. Nie ma sezonowości popytu, a ta jest istotna dla pilotów: awarie HVAC latem i zimą, sezon burz i gradu dla dachów, sprzedaż domów wiosną. W połączeniu ze słabym RPM w I–II może to przesunąć próg rentowności i odczyt pilotażu.",
+   "evidence_pl": "Karty finalistów opisują wyzwalacze sezonowe („Sezonowość / wyzwalacze”), ale economics.csv ich nie używa. §4.2 ostrzega tylko: „Nie oceniać RPM na danych z I–II”.",
+   "fix_pl": "Dodać mnożniki sezonowości ruchu dla rodzin RENO, HOME i AUTO (jako założenia) albo wprost zaznaczyć ich brak w economics.csv i w Z-07."
+  }
+ ]
+}

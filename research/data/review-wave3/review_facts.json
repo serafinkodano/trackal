@@ -1,0 +1,249 @@
+{
+ "reviewer": "FACT-CHECKER",
+ "summary_pl": "Zakres: executive-summary.md, market-and-distribution.md, architecture-and-validation.md §1–3. Wykonano 33 wywołania WebSearch (limit 35). Skryptem sprawdzono, że każdy identyfikator E-… cytowany w tych trzech plikach istnieje w rejestrze (30, 86 i 20 unikalnych ID; zakresy typu E-AI-06..08 też się rozwiązują). Brakujących ID nie ma. Rozbieżności dotyczą treści: rejestr mówi co innego niż tekst, liczby są zawężone, nieaktualne albo źle przypisane. Nie znalazłem błędu, który odwracałby werdykt („budować warunkowo, wąsko, najpierw bramka G0”). Znalazłem natomiast 7 istotnych przekłamań (major), które systematycznie wzmacniają tezę raportu bardziej, niż pozwalają dowody:\n- odsłony na sesję podane jako fakt;\n- „generatory słabną”;\n- AIO w „długich pytaniach decyzyjnych”;\n- zawężony udział ChatGPT i ~1% dla pozostałych platform;\n- nieaktualny i niespójny ruch Omni;\n- „3 linki na odpowiedź” obok 6,8%;\n- błędna rekomendacja co do Google-Extended.\nDo tego 20 drobnych usterek. Usterka „istnieje konkurent bezpośredni (Home Energy Planner)” została już poprawiona w commicie deba9eb, więc jej nie zgłaszam.\n\nPOTWIERDZONE (rejestr + WebSearch; ID istnieją, liczby się zgadzają):\n- NerdWallet FY2025: 836,6 mln USD (komunikat z 25.02.2026);\n- ProjectionLab: ~1 mln USD ARR, 3 FTE (deklaracja założyciela z VI 2025);\n- NAR: 4,06 mln transakcji w 2025, najmniej od 1995;\n- Redfin: mediana posiadania 12 lat w 2025;\n- AHRI: 7 749 529 szt. w 2025 (−20,0%);\n- MBA: refinansowanie 571 mld USD w 2027 (−17%), ale z inną bazą (zob. finding);\n- Cox: prognoza 16,1 mln na 2026 (24.09.2026);\n- BLS JOLTS: 38,0 mln quits w 2025;\n- GA4: kanał „AI Assistant” od 13.05.2026;\n- Bing AI Performance: od II 2026, w becie bez kliknięć;\n- BrightEdge: ChatGPT 95,1% referencji AI w VIII 2026;\n- Ahrefs: AIO −34,5% (IV 2025) i −58% (aktualizacja z 4.02.2026);\n- Semrush: zbieżność domen z top 10 Google — Perplexity >91%, ChatGPT ~45%;\n- ACA: Izba 8.01.2026, 230–196; w Senacie bez 60 głosów (nowszych zmian nie znaleziono);\n- Kentucky: wymogi FORTIFIED od 1.03.2026;\n- aplikacje w ChatGPT nadal bez dóbr cyfrowych;\n- Similarweb: 6,8% (V 2026) to wciąż najnowsza dostępna wartość;\n- NFIP: wygasł na 43 dni od 1.10.2025 i ponownie po 30.01.2026, więc „dwukrotnie” jest poprawne;\n- spadek domowego PV po wygaśnięciu 25D (kierunek potwierdzony; dokładnego −12% nie sprawdziłem).\n\nE-VER-C1…C12 zgadzają się z treścią w raporcie, z zastrzeżeniami opisanymi niżej.\n\nNIEPOTWIERDZONE W WYSZUKIWANIU (zostawić z adnotacją):\n- Edmunds Q3 2026 (29,1% / 7 107 USD): ostatni potwierdzony odczyt to Q2 2026 (29,6% / 6 884 USD);\n- Similarweb 770,7 mln: tylko źródło wtórne;\n- start generatywnego UI Google 19.08.2026: tylko SEJ, brak wpisu Google;\n- TransUnion 7,6 mln w Q4 2025: tylko źródło wtórne, liczba pochodzi z raportu za Q1 2026.\n\nŹródła web użyte w weryfikacji (wybór): businesswire.com (NerdWallet FY2025), semrush.com/website/vcalc.com/competitors (Omni 16,28 mln w V 2026), projectionlab.com/blog, inman.com/2026/01/14, redfin.com/news/homeowner-tenure, nationalmortgageprofessional.com (MBA −17% do 571 mld), barchart/sec.gov 8-K Generac Q2 2026, thenextweb.com (BrightEdge 95,1%; SE Ranking 74,78/11,56/7,23/3,51/2,62), webfx.com/blog/seo/ai-overview-statistics (54,7%), ahrefs.com/blog/ai-overview-triggers (46,4%), aol.com (WebFX zdrowie 73,9%), everycrsreport.com IN10835 z 11.09.2026 (NFIP do 11.12.2026), jchs.harvard.edu („Remodeling Spending Poised for Further Slowdown”), xponent21.com i simonwillison.net (Brave/turbopuffer), cbtnews/fordauthority (Edmunds Q2 2026), techwyse/SEJ (GA4), searchinfluence/SEL (Bing AI Performance).",
+ "findings": [
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 4",
+   "quote": "Strony-narzędzia mają ~1–1,5 odsłony na sesję [E-ADS-26].",
+   "problem_pl": "Twierdzenie podano jako zmierzony fakt o stronach-narzędziach. Cytowany dowód mówi wprost coś przeciwnego: takich benchmarków nie ma. Wartość 1–1,5 dotyczy landing pages. To kluczowy argument tezy „AdSense płaci za wyświetlenia, a symulator ma ich mało”.",
+   "evidence_pl": "E-ADS-26: „Nie znaleziono publicznych benchmarków odsłon na sesję dla stron-narzędzi”; „landing pages nastawione na jedną konwersję 1-1,5”; jedyna dana o kalkulatorach to średnia sesja 4:57 na calculator.net. W economics.csv ta sama wartość jest oznaczona jako ZAŁOŻENIE (pages_per_session 1,1/1,3/1,6; Z-02).",
+   "fix_pl": "Zastąpić tekstem: „Publicznych benchmarków odsłon na sesję dla stron-narzędzi nie znaleziono; przez analogię do landing pages (1–1,5 PV/sesję) przyjęto założenie 1,1/1,3/1,6 (Z-02), do weryfikacji w GA4 [E-ADS-26].”"
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 7 (to samo w market-and-distribution.md §2, wniosek pod tabelą popytu)",
+   "quote": "PV i generatory słabną po wygaśnięciu 25D i przy braku dużych awarii [E-DEM-10, E-DEM-12].",
+   "problem_pl": "W części o generatorach tekst przeczy własnemu dowodowi. Generatory stacjonarne (standby) w 2026 r. rosną. Spadają generatory przenośne i magazyny energii. Ulga 25D nigdy nie obejmowała generatorów, więc ich związek z jej wygaśnięciem jest mylący. W market-and-distribution.md jest to samo: „Energia (PV, generatory) słabnie po wygaśnięciu 25D i przy braku dużych awarii [E-DEM-10, E-DEM-12].”",
+   "evidence_pl": "E-DEM-12: „W Q2 2026 przychody z segmentu domowego spadły o 2% … magazyny energii i generatory przenośne słabły, standby rosło”; prognoza 2026 ok. +10%. Generac Q2 2026 (8-K, 29.07.2026): „home standby generator sales returned to solid growth”, segment Residential −2% (617 vs 631 mln USD) przez generatory przenośne i magazyny.",
+   "fix_pl": "„Domowe PV słabnie po wygaśnięciu 25D (Q2 2026: −12% r/r) [E-DEM-10]. W zasilaniu awaryjnym spadają generatory przenośne i magazyny, ale generatory standby wróciły w Q2 2026 do wzrostu [E-DEM-12].” Analogicznie poprawić zdanie w market-and-distribution.md §2."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 3; źródło błędu: evidence-and-assumptions.md E-AI-11",
+   "quote": "Długie pytania decyzyjne mają najwyższy odsetek AI Overviews [E-AI-11].",
+   "problem_pl": "Dwa problemy:\n(a) Żadne źródło nie mierzy „pytań decyzyjnych”. E-AI-11 mówi tylko o długości zapytań, a najwyższy odsetek AIO ma sektor zdrowia.\n(b) Liczba 73,9% dla zapytań 7+ słów jest w rejestrze błędnie przypisana jako ogólna statystyka WebFX. W rzeczywistości pochodzi z badania wyłącznie zapytań zdrowotnych.",
+   "evidence_pl": "WebSearch: 73,9% to wynik WebFX dla >130 tys. zapytań zdrowotnych (relacja AOL/Stacker). Ogólne badanie WebFX (2,37 mln słów kluczowych) daje 54,7% dla 7+ słów, Ahrefs (IX 2025) 46,4%. E-AI-11: zdrowie 51–88%, finanse ogółem 21–28%.",
+   "fix_pl": "Exec: „Długie zapytania (7+ słów) wywołują AI Overviews w ok. 46–55% przypadków, wobec ~10% dla zapytań jednowyrazowych (Ahrefs, WebFX) [E-AI-11].” Rejestr E-AI-11: „73,9% w zapytaniach zdrowotnych (WebFX); ogółem 54,7% (WebFX) / 46,4% (Ahrefs)”."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 1; market-and-distribution.md §3, kolumna „Udział w referencjach AI” (wiersze Perplexity, Copilot, Claude)",
+   "quote": "ChatGPT daje 81–95% referencji AI [E-AI-03]. / market §3: „| ~1% |” dla Perplexity, Copilot i Claude",
+   "problem_pl": "Tekst zawęża przedział wbrew rejestrowi. Wiersze Perplexity, Copilot i Claude dostały „~1%” bez cytatu. Copilot nie występuje w E-AI-03 w ogóle. Przyjęto wartości tylko jednego dostawcy (BrightEdge), który pokazuje skrajną koncentrację.",
+   "evidence_pl": "E-AI-03 i evidence §5: ChatGPT 63% (Goodie) – 81,4% – 87,4% – 95,1%. WebSearch: SE Ranking 2026 podaje ChatGPT 74,78%, Gemini 11,56%, Perplexity 7,23%, Copilot 3,51%, Claude 2,62%. BrightEdge VIII 2026: 95,1 / 2,4 / 1,1 / 0,8.",
+   "fix_pl": "Exec: „ChatGPT daje 63–95% referencji AI zależnie od trackera (BrightEdge VIII 2026: 95,1%; SE Ranking 2026: ok. 75%) [E-AI-03]”. Tabela §3: Perplexity „1–7%”, Copilot „1–3,5% (SE Ranking)”, Claude „0,8–2,6%”, z cytatem [E-AI-03]. Do rejestru dodać źródło SE Ranking."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 5; market-and-distribution.md §1 A1 pkt 3 oraz tabela A2 (wiersz omnicalculator)",
+   "quote": "Display działa u Omni Calculator przy ~3,7 tys. kalkulatorów, 18–23 mln wizyt/mies. i ~70 osobach zespołu [E-POR2-05].",
+   "problem_pl": "Raport jest wewnętrznie niespójny i opiera się na nieaktualnych danych:\n- exec i market A1.3 („ok. 3,7–3,8 tys. kalkulatorów, 18–23 mln wizyt/mies., ok. 70 pracowników”) podają 18–23 mln;\n- tabela A2 (Omni „przy ~14 mln wizyt”) podaje ~14 mln.\nLiczba 18 mln pochodzi ze starego case study Google, a 23,1 mln z BoringCashCow (początek 2024). Tekst wybiera górne granice zarówno ruchu, jak i zatrudnienia.",
+   "evidence_pl": "Semrush 2026: 16,48 mln (IV), 16,28 mln (V 2026). E-VER-C4: wartości 14,3 mln za VI 2026 nie potwierdzono, bezpieczniej 14–16,5 mln. Evidence §5: ruch 9–23 mln zależnie od metryki, zatrudnienie 33–70 (Tracxn 31.05.2026: 33).",
+   "fix_pl": "Wszędzie ujednolicić: „~3,7–3,8 tys. kalkulatorów, ok. 14–16,5 mln wizyt/mies. wg Semrush (2026; starsze deklaracje 17–23 mln), zespół 33–70 osób wg różnych baz [E-POR-02, E-POR2-05, E-VER-C4]”."
+  },
+  {
+   "severity": "major",
+   "file": "market-and-distribution.md",
+   "location": "§3, tabela platform, wiersz ChatGPT (search), kolumna Uwagi",
+   "quote": "ok. 3 linki na odpowiedź [E-CAP2-02]",
+   "problem_pl": "Liczba stoi w sprzeczności z kluczowym dowodem raportu, że tylko 6,8% odpowiedzi ChatGPT zawiera jakikolwiek link. Nie ma przy niej wyjaśnienia, że dotyczy tylko odpowiedzi z wyszukiwaniem. Czytelnik może wnioskować, że ChatGPT linkuje często.",
+   "evidence_pl": "E-CAP2-02: „ChatGPT podaje średnio ok. 3,1 linku na odpowiedź … (Slate, badanie własne firmy)” — źródło vendorskie. E-VER-C3: 6,8% odpowiedzi (USA, desktop, V 2026) zawiera link zewnętrzny. WebSearch potwierdza, że 6,8% to wciąż najnowsza wartość Similarweb.",
+   "fix_pl": "„ok. 3 linki na odpowiedź, w której uruchomiono wyszukiwanie (badanie własne Slate, niezweryfikowane) [E-CAP2-02]; we wszystkich odpowiedziach link zawiera tylko 6,8% (USA, desktop, V 2026) [E-VER-C3]”."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Układ strony pod politykę reklam i czytelność dla AI”, punkt robots.txt i CDN",
+   "quote": "Boty treningowe (`GPTBot`, `ClaudeBot`, `Google-Extended`) to osobna decyzja, bez wpływu na wyszukiwanie [E-AI-22].",
+   "problem_pl": "Dla Google-Extended to nieprawda. Token steruje nie tylko treningiem, ale też groundingiem w aplikacji Gemini. Jego zablokowanie usuwa stronę z odpowiedzi Gemini, a Gemini jest jednym z 5 asystentów w panelu G0 i ma 2–13% referencji AI. Rekomendacja przeczy własnemu rejestrowi.",
+   "evidence_pl": "E-AI-22: „Google-Extended dotyczy treningu i groundingu Gemini, nie Search ani AI Overviews”. E-AI-25: „Google-Extended reguluje użycie treści w groundingu Gemini Apps”.",
+   "fix_pl": "„GPTBot i ClaudeBot (trening) nie wpływają na wyszukiwanie w ChatGPT/Claude. Google-Extended nie wpływa na Google Search, AIO ani AI Mode, ale steruje groundingiem w aplikacji Gemini: blokada usuwa stronę z odpowiedzi Gemini [E-AI-22, E-AI-25]. Nie blokować Google-Extended, jeśli Gemini ma być kanałem.”"
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§2, tabela popytu, wiersz Refinansowanie (oraz E-DEM-01 w rejestrze)",
+   "quote": "713 → 571 mld USD (−17%)",
+   "problem_pl": "Liczby się nie sumują: 571/713 to −19,9%, nie −17%. Wartość 713 to prognoza MBA na 2026 z VIII 2026. Z kolei −17% to zmiana względem październikowego (X 2026) szacunku MBA dla 2026, czyli ok. 688 mld. Zestawiono dwie różne edycje prognozy.",
+   "evidence_pl": "WebSearch (National Mortgage Professional, HousingWire, X 2026): „refinance originations are estimated to fall by 17% to $571 billion”; łącznie 2026: 2,1 bln, zakupy 2027: 1,42 bln (+0,8%). Wynika z tego refinansowanie 2026 ≈ 0,69 bln.",
+   "fix_pl": "„ok. 690 → 571 mld USD (−17%; prognoza MBA z X 2026; w VIII 2026 MBA prognozowało 713 mld na 2026)”. To samo poprawić w E-DEM-01."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 1; market-and-distribution.md §1 A2 (tabela, pierwszy wiersz); rejestr E-AI-02",
+   "quote": "Conductor: 1,08% dla domen enterprise",
+   "problem_pl": "Opis próby jest błędny i weryfikator już go zakwestionował. Mimo to etykieta została w tekście, a w E-AI-02 nadal widnieje „13 770 domen enterprise, 3,3 mld sesji”.",
+   "evidence_pl": "E-VER-C5: „Conductor 1,08% to udział ruchu referencyjnego z AI w całym ruchu witryn z 10 branż. Dane z USA, maj–wrzesień 2025 … Liczba 13 770 domen dotyczy analizy cytowań … 'Enterprise' to określenie z opracowań wtórnych”.",
+   "fix_pl": "„Conductor: 1,08% (10 branż, USA, V–IX 2025; próba z bazy klientów Conductor) [E-VER-C5]”. W E-AI-02 usunąć „13 770 domen enterprise”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§1 A2, tabela, wiersz „Asystenci sami generują interaktywne narzędzia” (podobnie executive-summary.md §2 pkt 2)",
+   "quote": "7.10.2026 OpenAI udostępniło wszystkim użytkownikom ChatGPT, także darmowym, „Intelligent UI”",
+   "problem_pl": "Data jest nieprecyzyjna: 7.10 dotyczy tylko planów płatnych. Pominięto też zastrzeżenie samego OpenAI, które osłabia tezę, że „interaktywność przestała być przewagą”.",
+   "evidence_pl": "E-VER-C2: „Rollout … ruszył tego dnia [7.10] dla Plus, Pro, Business i Enterprise, a od 8.10.2026 objął Free i Go”; „OpenAI sam przyznaje, że Intelligent UI nie jest jeszcze dopracowany”.",
+   "fix_pl": "„7–8.10.2026 (plany płatne 7.10, Free/Go od 8.10) OpenAI udostępniło „Intelligent UI”…; OpenAI zaznacza, że funkcja nie jest jeszcze dopracowana [E-VER-C2]”. Analogicznie w exec §2 pkt 2."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§1 A2, tabela, wiersz „Interakcja z narzędziami przenosi się do wnętrza czatu”",
+   "quote": "aplikacje w ChatGPT mogą dziś monetyzować tylko towary fizyczne przez zewnętrzny checkout [E-VER-C10]",
+   "problem_pl": "Tekst powtarza sformułowanie, które weryfikator ocenił jako „częściowo” poprawne. Pomija Instant Checkout i zmianę nazwy na „plugins”. Stan na X 2026 nie jest też potwierdzony.",
+   "evidence_pl": "E-VER-C10: „Domyślną … ścieżką jest checkout zewnętrzny … Istnieje jednak też Instant Checkout (beta…) … Dokumentacja przemianowała „apps” na „plugins” … Nie znalazłem potwierdzenia stanu na październik 2026”. WebSearch: forum OpenAI (I 2026) — dobra cyfrowe nadal niedozwolone.",
+   "fix_pl": "„aplikacje (w dokumentacji obecnie „plugins”) w ChatGPT mogą prowadzić handel wyłącznie towarami fizycznymi (checkout zewnętrzny lub Instant Checkout w becie); dobra cyfrowe i subskrypcje są zakazane (stan dokumentacji z 2026) [E-VER-C10]”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§1 A3, tabela lejka, etap 4, kolumna „przecieki”",
+   "quote": "błąd UTM w ChatGPT 8–15.10.2026 przesunął ok. 31 tys. wizyt dziennie do Direct na ~500 stronach [E-VER-C12]",
+   "problem_pl": "Liczby są przekręcone, a „błąd” podano jako fakt. 31 tys. to spadek ruchu z ChatGPT, a Direct wzrósł o 26 tys. To, że był to błąd, wiadomo tylko z drugiej ręki.",
+   "evidence_pl": "E-VER-C12 i E-AI-20: „spadek ruchu z ChatGPT o ok. 31 tys. wizyt dziennie przy wzroście Direct o ok. 26 tys.”; „OpenAI nie wydało publicznego oświadczenia… potwierdziło to Hueslerowi”; okno 8–15.10 lub 9–13.10 zależnie od źródła.",
+   "fix_pl": "„ok. 8–15.10.2026 linki z ChatGPT straciły UTM: na ~500 stronach ruch z ChatGPT spadł o ok. 31 tys. wizyt dziennie, a Direct wzrósł o ok. 26 tys. (pomiar C. Hueslera, Adobe; błąd potwierdzony nieoficjalnie) [E-VER-C12]”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 3",
+   "quote": "AI Overviews obniżają CTR o 35–61% [E-AI-06..08].",
+   "problem_pl": "Sformułowanie sugeruje związek przyczynowy, choć dane Ahrefs i Seer to korelacje. Pominięto też odnotowane w rejestrze częściowe odbicie w 2026 r.",
+   "evidence_pl": "E-AI-07: „To korelacja, a nie dowód przyczynowości”. E-AI-08: „Raport z 2026 r. pokazuje częściowe odbicie: z 1,3% (XII 2025) do 2,4% (II 2026), nadal poniżej bazy 3,82%”. WebSearch potwierdza Ahrefs −34,5% i −58% (aktualizacja z 4.02.2026, oparta na prognozie).",
+   "fix_pl": "„Przy AI Overviews CTR jest niższy o 35–61% (korelacje Ahrefs i Seer; Pew: 8% vs 15% kliknięć); Seer odnotował częściowe odbicie w 2026 [E-AI-06..08]”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§2, tabela popytu, wiersz Remonty (oraz E-DEM-06)",
+   "quote": "ok. 522–526 mld USD/rok",
+   "problem_pl": "Wartości są nieaktualne. Najnowsze wydania LIRA obniżyły poziom i tempo wzrostu wydatków.",
+   "evidence_pl": "WebSearch, JCHS „Remodeling Spending Poised for Further Slowdown” (z zapowiedzią kolejnego wydania na 22.10.2026): ok. 519 mld USD do II kw. 2027, wzrost r/r spada do 0,5%. Wydanie z początku 2026: 518 mld na koniec 2026. E-DEM-06 podaje 522–526 mld i +1,6% na koniec 2026.",
+   "fix_pl": "„ok. 518–526 mld USD/rok (najnowszy LIRA: ok. 519 mld do II kw. 2027, wzrost r/r spada do 0,5%)”. Zaktualizować E-DEM-06."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§2, tabela popytu, wiersz Kredyty gotówkowe",
+   "quote": "7,6 mln w kwartale",
+   "problem_pl": "Cytat nie zgadza się ze źródłem. E-DEM-03 jako źródło liczby za Q4 2025 podaje raport TransUnion Q4 2025 CIIR. TransUnion raportuje jednak udzielone kredyty z kwartalnym opóźnieniem, więc w tym raporcie jest rekord 7,2 mln za Q3 2025.",
+   "evidence_pl": "WebSearch (newsroom.transunion.com/q4-2025-ciir): „Originations reached a record 7.2M in Q3 2025”. Liczbę 7,6 mln za Q4 2025 (+21,7%) znalazłem tylko w źródle wtórnym (financer.com), które przypisuje ją raportowi za Q1 2026.",
+   "fix_pl": "Dodać źródło: raport TransUnion Q1 2026 CIIR, albo oznaczyć wartość jako „źródło wtórne”. Alternatywnie podać „7,2 mln (Q3 2025, rekord) [E-DEM-03]”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§3, tabela platform, wiersz Claude",
+   "quote": "Brave Search + drugi dostawca (wg listy podprocesorów) [E-AI-25]",
+   "problem_pl": "„Drugi dostawca” (turbopuffer) to teza z jednego bloga GEO, niepotwierdzona na liście Anthropic. Turbopuffer jest bazą wyszukiwania wektorowego, której klientem jest Anthropic, a nie indeksem webowym.",
+   "evidence_pl": "WebSearch: Brave figuruje na liście podprocesorów od 19.03.2025 (Simon Willison; nadal obecny wg wpisu z 2.07.2026). Turbopuffer jako drugi dostawca wyszukiwania występuje tylko na xponent21.com; profile firmy opisują go jako backend wyszukiwania, z którego korzysta Anthropic.",
+   "fix_pl": "„Brave Search (potwierdzone na liście podprocesorów) [E-AI-25]; ewentualny drugi dostawca (turbopuffer) — niezweryfikowane, jedno źródło wtórne”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§3, tabela pilotażu, wiersz 1 (RENO-02), kolumna „Źródła danych i testy obliczeń”",
+   "quote": "FEMA NRI (v1.1)",
+   "problem_pl": "Numer wersji nie ma źródła. Nie występuje w rejestrze ani w żadnym wyniku agenta. Znane wersje NRI to v1.19 (III 2023) i v1.20, a „v1.1” wygląda na wartość zmyśloną albo literówkę.",
+   "evidence_pl": "grep po data/agent-outputs: NRI pojawia się bez numeru wersji (demand_RENO-02, demand_INS-03). WebSearch: dokumentacja FEMA z III 2023 (v1.19); wtórna wzmianka o v1.20.",
+   "fix_pl": "Usunąć „(v1.1)” albo zastąpić tekstem „(wersję sprawdzić przed budową; ostatnio v1.19/v1.20)”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§1.1, tabela, wiersz „Zrozumiałość marki”, kolumna A",
+   "quote": "„kalkulatory do wszystkiego” to pozycja Omni/calculator.net, które mają tysiące narzędzi i lata przewagi",
+   "problem_pl": "Calculator.net nie ma tysięcy narzędzi, tylko około 200–300. Ten fakt komplikuje też tezę z market A1.3, że display działa „przy ogromnej skali i szerokim, płytkim katalogu”: calculator.net ma bardzo duży ruch przy kilkuset narzędziach.",
+   "evidence_pl": "WebSearch: strona opisuje się jako „around 200 calculators” (cytat w zasobie PolyU). E-AI-14: calculator.net 62,84 mln (VII 2025) → 56,12 mln (IX 2025) wizyt/mies. wg Semrush.",
+   "fix_pl": "„… to pozycja Omni (~3,8 tys. narzędzi) i calculator.net (kilkaset narzędzi, ale 56–63 mln wizyt/mies.), które mają lata przewagi”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Strony indeksowalne…”, akapit „Zakaz:”",
+   "quote": "Polityka Google „scaled content abuse” dotyczy masowego tworzenia stron o niskiej wartości niezależnie od metody — patrz evidence-and-assumptions.md.",
+   "problem_pl": "Brakuje identyfikatora dowodu. Odesłanie do całego pliku narusza konwencję cytowania E-ID.",
+   "evidence_pl": "W rejestrze są właściwe wpisy: E-ADS-06 („scaled content abuse” od III 2024, „niezależnie od sposobu ich stworzenia”) i E-POR2-11.",
+   "fix_pl": "Zastąpić „— patrz evidence-and-assumptions.md” przez „[E-ADS-06, E-POR2-11]”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§3 pkt 3",
+   "quote": "potrzeba ~150 tys. sesji/mies. na 1000 USD",
+   "problem_pl": "Liczba jest niespójna z tabelą w tym samym dokumencie (§5: „~140 tys.”) i z modelem.",
+   "evidence_pl": "economics.csv, wiersz required_traffic „Sesje/mies. potrzebne dla 1000 USD” — base: 143 000.",
+   "fix_pl": "Zmienić na „~140 tys. sesji/mies.”."
+  },
+  {
+   "severity": "minor",
+   "file": "evidence-and-assumptions.md",
+   "location": "§5 Sprzeczności, punkt NFIP; E-REG3-06; wpis rejestru w wierszu ~311 („Status po 30.09.2026 … nie został sprawdzony”)",
+   "quote": "**NFIP:** termin reautoryzacji 30.09.2026 vs 11.12.2026 (jedno źródło) [E-REG3-06].",
+   "problem_pl": "Sprzeczność da się już rozstrzygnąć źródłem pierwotnym CRS. Rejestr wciąż trzyma nieaktualną datę 30.09.2026, a 11.12.2026 opisuje jako „niezweryfikowane”.",
+   "evidence_pl": "WebSearch: CRS Insight IN10835 (wersja z 11.09.2026): „the NFIP is currently authorized until December 11, 2026”. Ten sam dokument: wygaśnięcie na 43 dni od 1.10.2025. Potwierdza to stwierdzenie z exec §2 pkt 8 „NFIP wygasający dwukrotnie”.",
+   "fix_pl": "„NFIP autoryzowany do 11.12.2026 (CRS IN10835, 11.09.2026); kolejne ryzyko wygaśnięcia po 11.12.2026”. Usunąć sprzeczność z §5 i zaktualizować E-REG3-06."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§2, tabela popytu, wiersz Home equity",
+   "quote": "1,4–2,6 mln zależnie od dostawcy",
+   "problem_pl": "Przedział sugeruje, że dostawcy się ze sobą nie zgadzają. W rzeczywistości mierzą różne rzeczy: TransUnion liczy HELOC razem z kredytami home equity, a Cotality i Equifax tylko HELOC.",
+   "evidence_pl": "E-DEM-02: „TransUnion liczy 2,554 mln kredytów home equity łącznie (HELOC i HELOAN) … Cotality … ok. 1,5 mln HELOC … Equifax … 1,409 mln HELOC”.",
+   "fix_pl": "„HELOC: 1,4–1,5 mln (Equifax, Cotality); HELOC + HELOAN: 2,55 mln (TransUnion) [E-DEM-02]”."
+  },
+  {
+   "severity": "minor",
+   "file": "market-and-distribution.md",
+   "location": "§1 A1 pkt 6",
+   "quote": "Finance & Insurance: ok. 3,46 USD CPC w Search wobec ok. 0,86 USD w Display Network [E-ADS-15].",
+   "problem_pl": "Zestawiono liczby z dwóch różnych źródeł i lat. 3,46 to Search wg WordStream 2025. 0,86 to GDN wg Promodo, które dla Search podaje 3,44 i nie ma znanej daty danych. Bezpośrednie porównanie jest mylące.",
+   "evidence_pl": "E-ADS-15: „WordStream/LocaliQ 2025 … 3,46 USD dla Finance & Insurance … Promodo podaje dla Finance & Insurance 3,44 USD w Search wobec 0,86 USD w Google Display Network”. WebSearch: inne zestawienia 2025 podają dla F&I CPC w Search powyżej 7 USD, więc dane są niespójne.",
+   "fix_pl": "„Promodo: 3,44 USD (Search) vs 0,86 USD (GDN), dane historyczne; relacja ~4:1 jest orientacyjna [E-ADS-15]”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 7",
+   "quote": "29,1% wymian aut z kredytem ma ujemny kapitał [E-DEM-14]",
+   "problem_pl": "Mianownik opisano błędnie. Metryka Edmunds to odsetek aut oddanych w rozliczeniu przy zakupie nowego auta, nie „wymian z kredytem”. Wartości za Q3 2026 nie udało się potwierdzić.",
+   "evidence_pl": "WebSearch (Edmunds via CBT News / Ford Authority): Q2 2026 — 29,6% wymian z ujemnym kapitałem, średnio 6 884 USD; Q1 2026 — 30,9%; Q4 2025 — rekord 7 214 USD. Raportu Edmunds za Q3 2026 nie znaleziono.",
+   "fix_pl": "„29,1% aut oddanych w rozliczeniu przy zakupie nowego miało ujemny kapitał (Edmunds Q3 2026; Q2 2026: 29,6%) [E-DEM-14]”. W rejestrze oznaczyć Q3 2026 jako niepotwierdzone w drugim źródle."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 5",
+   "quote": "ProjectionLab (subskrypcja, ~1 mln USD ARR)",
+   "problem_pl": "Deklarację założyciela podano jako fakt. Rejestr notuje sprzeczne dane, a market A1.4 poprawnie pisze „deklarowane”.",
+   "evidence_pl": "E-POR2-02: „Założyciel Kyle Nolan deklaruje 1 mln USD ARR … GetLatka podaje dla 2023 r. tylko 201,6 tys. USD”. WebSearch: wpis założyciela z 30.06.2025.",
+   "fix_pl": "„ProjectionLab (subskrypcja; deklarowane ~1 mln USD ARR, VI 2025)”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§2 „Prywatność danych finansowych”, punkt 3",
+   "quote": "Link do scenariusza: parametry w fragmencie URL (`#…`), który nie trafia do logów serwera ani do referrera; strony z parametrami `noindex`.",
+   "problem_pl": "Zdanie jest wewnętrznie sprzeczne. Fragment `#…` nie trafia na serwer i Google go ignoruje, więc nie powstaje osobny URL, któremu można by nadać `noindex`. Serwer nie wie zresztą, że parametry istnieją.",
+   "evidence_pl": "Fragment URL nie jest wysyłany w żądaniu HTTP ani w nagłówku Referer, a wyszukiwarki traktują URL z `#…` jak stronę bazową. Pierwsza część zdania jest więc poprawna, druga niewykonalna.",
+   "fix_pl": "„… parametry w fragmencie URL (`#…`) nie trafiają do logów, referrera ani indeksu, więc `noindex` nie jest potrzebny; `noindex` stosować tylko wtedy, gdy parametry trafią do query string”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 2; market-and-distribution.md §1 A2 i A4; rejestr E-VER-C1",
+   "quote": "Google od 19.08.2026 generuje interaktywne narzędzia w AI Mode globalnie po angielsku i wprowadza je do AI Overviews [E-VER-C1].",
+   "problem_pl": "Datę 19.08.2026 podano jako potwierdzoną, choć stoją za nią wyłącznie źródła wtórne. Rejestr oznacza C1 jako „potwierdzone” bez zastrzeżenia co do tej daty.",
+   "evidence_pl": "E-VER-C1 (evidence_pl): „Oryginalnego wpisu Google z sierpnia nie było w wynikach”. WebSearch potwierdza tylko relację SEJ („launched globally in English in AI Mode… rollout in AI Overviews has started”), bez wpisu Google. Wpis Google z I/O 2026 zapowiadał jedynie „this summer”.",
+   "fix_pl": "Dodać „(wg relacji SEJ; brak wpisu Google z VIII 2026; zapowiedź na I/O 2026: „this summer”)”. W E-VER-C1 oznaczyć datę 19.08 jako potwierdzoną źródłami wtórnymi."
+  }
+ ]
+}

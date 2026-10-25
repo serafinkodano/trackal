@@ -1,0 +1,240 @@
+{
+ "reviewer": "Sceptyczny inwestor (spójność ekonomiki, werdykt, bramka G0, wybór pilotażu, strategie alternatywne)",
+ "summary_pl": "Sprawdziłem ekonomikę obliczeniowo. Skrypt tools/economics_model.py, uruchomiony w kopii w scratchpadzie, odtwarza economics.csv co do bajtu. Wzory są arytmetycznie poprawne: 1,3 × 9 × 0,8125 × 0,8 × 0,92 = 7,00 USD na 1000 sesji. Model ma jednak dwie luki. Nie liczy kosztu budowy narzędzi 6–15 w ilustracji dla miesiąca 12. Progi rentowności nie obejmują amortyzacji kosztu uruchomienia. Liczby z executive-summary zgadzają się z CSV, z jednym wyjątkiem: w tekście jest „~150 tys.”, a w tabeli „~140 tys.”. Zweryfikowałem też oceny ważone wszystkich 25 propozycji (25/25 zgodne), stwierdzenie „24 z 25 audytów” i „AI 2/5 w 16 z 25”.\n\nGłówny zarzut dotyczy werdyktu. Raport jest bardzo transparentny co do słabości, ale „budować warunkowo” jest łagodniejsze niż jego własne dowody. Scenariusz bazowy kończy miesiąc 12 stratą: −399 USD/mies. gotówkowo i −1 199 USD/mies. z wyceną czasu właściciela. Streszczenie tego nie pokazuje. Bramka G0 przechodzi z samej deklaracji właściciela, bo warunek (c) to akceptacja Google organic, a raport i tak go zaleca. G0 nie zawiera żadnego testu popytu w Google. Progi zatrzymania nie są powiązane z progiem rentowności. Ścieżka „Kontynuować” oznacza w bazie około 40 tys. USD skumulowanej straty gotówkowej, a gotówka wraca dopiero około miesiąca 36. Dodatkowe narzędzie w bazie nie zwraca nawet kosztu eksperta.\n\nW modelu „AdSense jako baza” lepiej udokumentowany jest werdykt „nie budować”. Dopuszczalny byłby najwyżej ograniczony test opcji z twardymi warunkami. Wybór pilotażu jest częściowo niespójny: AUTO-01 jest 13. w rankingu, a jego „niski koszt ekspercki” przeczy tabeli w architekturze. Harmonogram 30/60/90 nie zgadza się z liczbą godzin, z miarami „90 dni po indeksacji” ani z etapowym finansowaniem ekspertów. Strategie alternatywne nie są ocenione jako równorzędne opcje, a etykieta „lead-gen nie ratuje modelu” przeczy liczbom tego samego modelu.",
+ "findings": [
+  {
+   "severity": "blocker",
+   "file": "executive-summary.md",
+   "location": "§1 Werdykt, l.7 (oraz l.10)",
+   "quote": "Budować warunkowo — i tylko w wersji znacznie węższej niż hipoteza.",
+   "problem_pl": "Werdykt nie wynika z dowodów raportu w modelu narzuconym przez właściciela (AdSense jako baza, bez lead-gen i bez budowy linków). ZA „warunkowo”: (i) koszt opcji do pierwszego sygnału jest mały (G0 to kilkanaście–kilkadziesiąt godzin; ekspert dla RENO-02 to 12–19 h, czyli 1,5–4,75 tys. USD); (ii) scenariusz optymistyczny jest zyskowny (+4 235 USD/mies. w m12); (iii) odgórny benchmark Omni (E-POR-02: ~19–39 USD na 1000 wizyt) sugeruje, że bazowe 7 USD może być zaniżone; (iv) lead-gen mógłby odwrócić ekonomikę. PRZECIW (mocniej udokumentowane): (1) scenariusz BAZOWY daje w m12 wynik −399 USD/mies. gotówkowo i −1 199 USD/mies. z czasem właściciela; (2) dowody dla obu kanałów są negatywne: AI to 0,1–1% ruchu, AIO obniża CTR o 35–61%, AI Mode o 18,8 pp, a generatywne UI działa w AI Mode i AIO; brak wolumenów słów kluczowych; (3) wszystkie 5 pilotów ma w product-opportunities.csv poziom_pewnosci = „niska”, a HOME-02 i HOME-04 mają w dowody_popytu wpis „Brak danych z wyszukiwania”; (4) market-and-distribution.md A1 sam nazywa ograniczenie „reklama bazą” „najsłabszym elementem modelu”; (5) przeciętne narzędzie w bazie zarabia ~16 USD/mies., a jego utrzymanie eksperckie kosztuje ~29 USD/mies. Warunek (c) bramki G0 jest deklaracją, więc „warunkowo” w praktyce znaczy „budować”.",
+   "evidence_pl": "Przeliczenie (python, model odtwarza CSV 1:1). Baza: 7,00 USD/1000 sesji. W m12: 34 200 sesji, 240 USD przychodu, wynik −399 / −1 199 USD/mies. Średnio 2 283 sesje na narzędzie, czyli 15,98 USD/mies.; utrzymanie eksperckie 2 h × 175 / 12 = 29,17 USD/mies. W CSV RENO-02, RENO-03, HOME-04, HOME-02 i AUTO-01 mają poziom_pewnosci „niska”.",
+   "fix_pl": "Zmienić werdykt na: „Nie budować w modelu AdSense-first. Dopuszczalny jest tylko ograniczony test opcji: 1 symulator RENO-02 bez pełnego silnika, limit ~5 tys. USD gotówki i ~100 h. Test startuje wyłącznie po spełnieniu mierzalnych warunków G0: popyt w Google potwierdzony wolumenami, RPM zmierzony, brak konkurenta bezpośredniego”. Jeśli „warunkowo” ma zostać, trzeba dopisać: „w scenariuszu bazowym projekt w mies. 12 przynosi stratę (−399 USD/mies. gotówkowo); budowa to zakład na scenariusz optymistyczny lub zmianę monetyzacji”. Do tego usunąć (c) jako samodzielny warunek startu."
+  },
+  {
+   "severity": "blocker",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 Bramka G0, l.290; to samo w executive-summary.md §6 l.72 i §1 l.10–11",
+   "quote": "(c) właściciel świadomie akceptuje, że kanałem bazowym będzie Google organic (wtedy oceniać według §4.3 bez oczekiwań co do AI).",
+   "problem_pl": "Warunek (c) nie jest pomiarem, tylko deklaracją, a bramka przechodzi przy „przynajmniej jednym warunku”. G0 przechodzi więc zawsze, gdy właściciel chce budować. Sam raport zaleca Google organic jako kanał bazowy (market-and-distribution.md §5 pkt 1: „Traktować go jako kanał mierzalny i wtórny wobec Google organic”), więc czytelnik, który go posłucha, spełni (c) automatycznie. G0 nie zawiera żadnego testu popytu ani konkurencyjności w Google: K-04 (wolumeny) ma priorytet „wysoki”, ale jest poza bramką. Tymczasem wszystkie twarde dowody raportu o Google są negatywne. Zdanie z exec l.11 („Jeśli bramka wypadnie negatywnie, a właściciel nie zaakceptuje Google organic…”) jest tautologią, a twierdzenie z l.10, że bramka „rozstrzyga, czy w ogóle zaczynać budowę”, jest nieprawdziwe.",
+   "evidence_pl": "exec l.10–11, l.72; arch l.286–292; market l.203; evidence-and-assumptions.md K-04 i K-05 (oba „wysoki”, oba poza G0); dowody o Google: E-AI-06..08, E-VER-C6, E-VER-C1.",
+   "fix_pl": "Zastąpić (c) warunkiem mierzalnym, np.: „(c) Keyword Planner i Trends (darmowe): łączny wolumen US dla 10–20 fraz RENO-02 ≥ X tys./mies.; w top 10 SERP dla ≥ 3 fraz są ≥ 2 wyniki z domen o niskim autorytecie lub forów; sprawdzono (K-05), czy AIO/AI Mode generują dla nich kalkulator”. Regułę bramki zapisać jako „(a lub b) albo zmierzone (c)”, nigdy jako samą deklarację. Z exec l.11 usunąć zdanie tautologiczne. Jeśli deklaracja zostaje, z l.10 usunąć słowa „która rozstrzyga, czy w ogóle zaczynać budowę”."
+  },
+  {
+   "severity": "blocker",
+   "file": "executive-summary.md",
+   "location": "§5 Ekonomika, tabela l.47–55 (brak wierszy illustration_m12); tools/economics_model.py l.199",
+   "quote": "| Uruchomienie 5 symulatorów: gotówka (głównie przegląd ekspercki) / czas właściciela | ~27 tys. USD / ~520 h | ~13 tys. USD / ~315 h | ~6 tys. USD / ~190 h |",
+   "problem_pl": "Streszczenie pokazuje koszt uruchomienia i progi, ale pomija jedyny wynik modelu o trajektorii. economics.csv illustration_m12 daje: baza 240 USD/mies. przychodu, −399 USD/mies. gotówkowo, −1 199 USD/mies. z czasem właściciela; konserwatywnie −1 287 / −2 787. Model zakłada 15 narzędzi w m12 (tools_live_m12 = 15), ale nie liczy kosztu budowy narzędzi 6–15: 10 × 13 h × 175 USD = 22 750 USD eksperta plus 350 h właściciela. Wiersz „wynik gotówkowy w mies. 12” odejmuje tylko koszty stałe. Ścieżka „Kontynuować (dodawać 2–4 symulatory/mies.)” z arch §4.3 oznacza 18–36 nowych narzędzi w miesiącach 4–12, czyli 41–82 tys. USD na ekspertów. Kapitał zagrożony jest więc wielokrotnie wyższy niż „~13 tys. USD”.",
+   "evidence_pl": "Moja symulacja dla bazy na ścieżce, która spełnia kryterium „Kontynuować”: 15 tys. sesji ludzi w m6, potem stałe +15% m/m, liczba narzędzi rośnie z 5 do 15 do m11, koszty z economics.csv. Skumulowana gotówka: −38,7 tys. USD w m12, ok. −40 tys. w m18, −37,6 tys. w m24; na plus dopiero ok. m36, przy ~1 mln sesji/mies. Z wyceną czasu właściciela: −83 tys. USD w m24 i −53 tys. w m36.",
+   "fix_pl": "Dodać do tabeli §5 dwa wiersze. Pierwszy: „Wynik w mies. 12 (ilustracja): −1,3 / −0,4 / +4,2 tys. USD/mies. gotówkowo”. Drugi: „Szczytowe skumulowane zaangażowanie gotówki na ścieżce ‘Kontynuować’ (baza): ~40 tys. USD; zwrot ok. mies. 36”. W economics_model.py doliczyć w illustration_m12 koszt (tools_live_m12 − 5) × expert_hours_new_tool × expert_hourly oraz godziny właściciela, a także dodać wiersz skumulowanego cash-flow na 24 i 36 mies."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.3 tabela l.316–319, §4.4 l.323, §3.1 l.251; executive-summary.md §8 l.85",
+   "quote": "≥ 15 tys. sesji/mies. łącznie z trendem ≥ +15% m/m przez 3 mies.; przychód ≥ 5 USD / 1000 sesji z USA; ≥ 2 produkty z ≥ 3 tys. sesji/mies.",
+   "problem_pl": "Progi nie pasują do ekonomiki i różnią się między dokumentami. (1) 15 tys. sesji ludzi w m6 to w bazie ~114 USD/mies., czyli 33% kosztów stałych przy 5 narzędziach (347 USD) i 18% przy 15 (639 USD). Próg gotówkowy przy 15 narzędziach (84 tys. sesji ludzi) wypada w m18 przy stałym +15% m/m albo w m24 przy +10%. Pełny próg (189 tys.) to m24–33. „Kontynuować” jest więc zgodą na 1,5–2,5 roku strat, a nie „sygnałem ekonomicznym”. (2) „USD / 1000 sesji z USA” to inna jednostka niż w modelu (USD/1000 zarejestrowanych sesji, baza 7,00). W jednostkach §4.3 baza wynosi 9,36, a scenariusz konserwatywny 3,17. Przy przychodzie 5 USD/1000 sesji z USA i 15 narzędziach próg gotówkowy to ~157 tys. sesji. (3) Reguły zatrzymania są cztery: exec §8 i arch §4.4 („< ~100 USD/mies. i ruch nie rośnie”, 6 mies. od publikacji 3 symulatorów), §4.3 Wstrzymać („< 5 tys. sesji albo < 50 USD”), §4.3 Odrzucić (po 9–12 mies., trzy warunki połączone „i”) oraz §3.1 (zegar od indeksacji). (4) Tabela ma luki: 20 tys. sesji, +5% m/m i 4 USD/1000 nie mieszczą się w żadnym wierszu. (5) Warunek „udział AI < 5%” w „Odrzucić” chroni małe witryny: przy 2 tys. sesji, z czego 150 z AI (7,5%), projekt nigdy nie zostanie odrzucony. (6) Próg zabicia 100 USD/mies. pozwala trwać bezterminowo przy ~250 USD/mies. straty gotówkowej i ~800 USD/mies. czasu właściciela.",
+   "evidence_pl": "Przychód na 1000 sesji ludzi: 7,00 / 0,92 = 7,61 USD. 15 000 × 7,61 / 1000 = 114 USD. Koszty stałe: 347 USD (5 narzędzi), 639 USD (15 narzędzi). ln(84 024 / 15 000) / ln(1,15) = 12,3 mies., czyli próg w m18,3.",
+   "fix_pl": "Zastąpić tabelę jedną regułą opartą na trajektorii do progu rentowności, w jednostce modelu (USD/1000 sesji ludzi, wszystkie kraje) i z jednym zegarem (mies. od indeksacji produktu nr 1). Przykład: Kontynuować w m6 tylko, gdy przychód ≥ 50% bieżących kosztów stałych i tempo wzrostu daje pokrycie kosztów gotówkowych do m12–15; w przeciwnym razie Wstrzymać; Odrzucić w m9 przy przychodzie < 30% kosztów stałych, bez warunku AI. Ujednolicić exec §8 oraz arch §3.1, §4.3 i §4.4."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.3 wiersz „Kontynuować”, l.316",
+   "quote": "**Kontynuować** (dodawać 2–4 symulatory/mies.)",
+   "problem_pl": "W bazie modelu dodatkowe narzędzie nie zwraca nawet kosztu eksperta. Nowe narzędzie kosztuje 13 h × 175 = 2 275 USD gotówki plus 35 h × 40 = 1 400 USD czasu, a utrzymanie eksperckie 29,17 USD/mies. Przeciętne narzędzie w m12 ma 2 283 sesje, czyli ~16 USD/mies., mniej niż utrzymanie. Żeby zwrócić sam koszt eksperta w 24 mies., potrzeba ~17,7 tys. sesji/mies. na narzędzie, a najlepsze narzędzie w bazie ma 15 tys. Nawet przy przychodzie Omni (~95 USD/mies. na kalkulator, E-POR-02) zwrot kosztu eksperta trwa ~35 mies., a z czasem właściciela ~56 mies. Kryterium „≥ 2 produkty z ≥ 3 tys. sesji/mies.” to ~21 USD/mies. na produkt, czyli poniżej kosztu utrzymania. Tempo 2–4 narzędzi/mies. daje 23–41 narzędzi w m12, co przeczy „wersji znacznie węższej” z werdyktu i parametrowi tools_live_m12 = 15.",
+   "evidence_pl": "economics.csv: expert_hours_new_tool 13, expert_hourly 175, expert_hours_upkeep_tool_year 2, owner_hours_new_tool 35, owner_hourly_value 40; illustration_m12: 34 200 sesji na 15 narzędzi. E-POR-02: „ok. 95 USD miesięcznie” na kalkulator.",
+   "fix_pl": "Uzależnić dodawanie narzędzi od zmierzonego przychodu: „nowe narzędzie tylko wtedy, gdy mediana przychodu narzędzi z ruchem ≥ (koszt eksperta + czas) / 24 ≈ 150 USD/mies. (baza); maksymalnie 1 nowe narzędzie miesięcznie do osiągnięcia progu gotówkowego”. Dodać do economics.csv wiersz „sesje/mies. na narzędzie potrzebne do zwrotu kosztu budowy w 24 mies.” (baza ~17,7 tys.) z porównaniem do Omni."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§5 tabela, l.53–54",
+   "quote": "| Próg rentowności gotówkowej (5 narzędzi) | ~480 tys. sesji | ~50 tys. sesji | ~8 tys. sesji |",
+   "problem_pl": "Próg jest liczony dla 5 narzędzi, choć plan zakłada 10/15/25 w m12, a ścieżka „Kontynuować” jeszcze więcej. Obejmuje wyłącznie koszty stałe: bez amortyzacji uruchomienia (w bazie 13 tys. USD gotówki i 12,6 tys. USD czasu) i bez kosztu kolejnych narzędzi. Próg jest przez to zaniżony 2–3×, a czytelnik dostaje obraz „~50 tys. sesji i jesteśmy na plusie”.",
+   "evidence_pl": "economics.csv, baza: próg gotówkowy przy 15 narzędziach 91 300 sesji, z czasem właściciela 205 700. Moje przeliczenie: koszty stałe 5 narzędzi plus amortyzacja gotówki uruchomienia w 24 mies. daje ~127 tys. sesji/mies. w bazie i ~1,09 mln w scenariuszu konserwatywnym.",
+   "fix_pl": "Pokazać próg dla liczby narzędzi z planu (15: ~91 tys. / ~206 tys.) i dodać wiersz „próg z amortyzacją uruchomienia w 24 mies.” (baza ~127 tys.). Ten sam wiersz dodać w economics_model.py."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§3, l.247 vs economics.csv (owner_hours_new_tool, owner_hours_engine, expert_hours_new_tool) vs executive-summary.md l.55",
+   "quote": "Łącznie, szacunkowo: **silnik 90–220 h + 5 produktów 185–265 h** pracy właściciela oraz **~55–90 h eksperta**",
+   "problem_pl": "Streszczenie podaje za economics.csv 190 / 315 / 520 h i 6 / 13 / 27 tys. USD. Wyliczenie oddolne z architektury daje 275–485 h właściciela i 55–87 h eksperta. Scenariusz optymistyczny (90 + 5 × 20 = 190 h) leży 85 h poniżej dolnej granicy architektury. owner_hours_new_tool = 20 h jest niższe od minimum każdego z 5 produktów (najtańsze AUTO-01 i HOME-04 to 30 h). Bazowe 35 h/narzędzie jest poniżej średniego minimum 37 h (185 / 5). Optymistyczne 9 h eksperta × 5 = 45 h jest niższe od 55 h, które podaje sam opis tego parametru („łącznie ~55–90 h”). Optymistyczna gotówka uruchomienia (6,38 tys.) jest niższa niż sam koszt eksperta według architektury (55 h × 125 = 6,9 tys.).",
+   "evidence_pl": "Sumy z tabeli arch §3. Właściciel: 50–70 + 40–60 + 30–45 + 35–50 + 30–40 = 185–265 h. Ekspert: 12–19 + 14–22 + 10–15 + 8–14 + 11–17 = 55–87 h.",
+   "fix_pl": "Skalibrować economics_model.py do architektury (kons./baz./opt.): owner_hours_new_tool ≈ 53/45/37, owner_hours_engine 220/155/90, expert_hours_new_tool ≈ 17,5/14/11. Przeliczyć model i w exec §5 podać 275–485 h właściciela oraz ≥ 7 tys. USD gotówki w scenariuszu optymistycznym."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 harmonogram l.294–308; §3 l.237; §3.1 l.251",
+   "quote": "silnik osi czasu + **1 symulator** (produkt nr 1) + strona metodologii + 3–5 stron-presetów z udokumentowaną odrębną intencją;",
+   "problem_pl": "(1) Na dni 15–30 (16 dni) zaplanowano silnik (90–220 h) i RENO-02 (50–70 h), razem 140–290 h, czyli 9–18 h dziennie. Na dni 15–90 przypada 275–485 h, czyli 3,6–6,4 h dziennie przez 7 dni w tygodniu. (2) Miary produktów liczone są „90 dni po indeksacji” (§3.1), a decyzja w „dniu 90” (§4.3) wymaga „≥ 3 z 5 produktów … z ≥ 500 wyświetleniami GSC/mies.”. Produkty 2–5 publikowane w dniach 31–90 nie mogą mieć 90 dni od indeksacji, a produkt 1 ma najwyżej ~60. (3) Zasada „produkt nr N dostaje eksperta dopiero po przejściu bramki dla produktu N−1” jest sprzeczna z budową produktów 2–5 przed upływem 90 dni od indeksacji produktu 1. HOME-02 ma adnotację „bez tego nie publikować”. Albo harmonogram, albo finansowanie etapowe jest fikcją.",
+   "evidence_pl": "arch l.237, l.247, l.251, l.296, l.300–307, l.316.",
+   "fix_pl": "Rozciągnąć harmonogram: dni 15–60 to minimalny silnik i RENO-02; decyzja o produkcie 2 dopiero 60–90 dni po indeksacji RENO-02; ocena całego pilotażu w mies. 6–9. Alternatywnie zrezygnować z finansowania etapowego i wpisać pełny koszt eksperta z góry. W §4.3 zamienić „Dzień 90” na „90 dni od indeksacji danego produktu”."
+  },
+  {
+   "severity": "major",
+   "file": "top-10-products.md",
+   "location": "§3, uzasadnienie pilotażu, l.73 (oraz ranking l.39 i arch §3)",
+   "quote": "**AUTO-01** (3,30) celowo testuje **drugą pulę popytu** (auta) przy niskim koszcie eksperckim.",
+   "problem_pl": "AUTO-01 jest 13. w rankingu (ex aequo z FIN-01, HOME-03 i AUTO-02), ma AI 2/5 i jako jedyny pilot ma ryzyko_ze_asystent_AI_rozwiaze_sam = „wysoka”. CSV pisze wprost: „CarCalcPro już łączy rollover, LTV i moment wyjścia z underwater”. Uzasadnienie „niski koszt ekspercki” przeczy tabeli arch §3: AUTO-01 wymaga 11–17 h eksperta (F&I 8–12 h i CPA sales tax 3–5 h), więcej niż HOME-02 (8–14 h) i HOME-04 (10–15 h). Potrzebuje też nowych modułów (auto, podatek od sprzedaży w 51 jurysdykcjach) i nowych ekspertów, czym łamie argument spójnej granicy i wspólnych recenzentów z arch §1.1. Tymczasem RENO-04 (3,65, złożony z modułów RENO-02 i RENO-03, bez nowych ekspertów) wypada z pilotażu. Do tego HOME-02 i HOME-04 mają po kalibracji lukę 2/5 (najniższą) i w dowody_popytu wpis „Brak danych z wyszukiwania”. Pilotaż rozprasza mały budżet na trzy publiczności zamiast testować jedną hipotezę.",
+   "evidence_pl": "top-10 l.39 (ranking, poz. 13); product-opportunities.csv AUTO-01: ryzyko_ze_asystent_AI_rozwiaze_sam = „wysoka”, uzasadnienie_statusu; arch §3, kolumna „Ekspert (szac.)”.",
+   "fix_pl": "Usunąć z l.73 frazę „przy niskim koszcie eksperckim” albo zastąpić AUTO-01 przez RENO-04 (lub FIN-01, który współdzieli silnik finansowania). Rozważyć pilotaż 2+3: najpierw RENO-02 i RENO-03 (najwyższe oceny, ta sama publiczność); HOME-04 i HOME-02 dopiero po ręcznym potwierdzeniu luki (Bellhaven, TrueHomeCosts, AgentCalc)."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 Bramka G0, warunki (a) i (b), l.288–289; exec l.70–71",
+   "quote": "(b) healthscorer.com ma ≥ 300 sesji ludzi z AI miesięcznie po odfiltrowaniu botów;",
+   "problem_pl": "(b): 300 sesji × 7,61 USD/1000 to 2,3 USD/mies., a model bazowy zakłada 14,3 tys. sesji z AI miesięcznie przy celu 1000 USD. Próg nie ma związku z ekonomiką. healthscorer.com to domena zdrowotna, z innym zachowaniem linkowania i reklam (E-VER-C9), więc wyniku nie da się przenieść na dom i auto. Pomiar przez referrer/UTM jest systematycznie zaniżony: według E-VER-C12 „Referrer nadal brakuje w większości kliknięć z ChatGPT także po poprawce”, a okno 8–15.10.2026 bez UTM wpada w badane „30–90 dni” logów. (a): liczony jest link do „dowolnego” zewnętrznego narzędzia, a link do NerdWallet czy Omni nie dowodzi, że nowa domena bez marki zostanie zalinkowana. Odsetek jest liczony łącznie dla 5 asystentów, choć ChatGPT daje 81–95% referencji AI. Prompty typu „Is there a tool where I can plug in…” wprost proszą o link, więc próg 10% jest łatwy do spełnienia.",
+   "evidence_pl": "E-VER-C12, E-AI-03; economics.csv: „W tym sesje z asystentów AI/mies. dla 1000 USD” = 14 300 (baza).",
+   "fix_pl": "(a): liczyć osobno dla ChatGPT i Google AI Mode, tylko na promptach bez prośby o narzędzie, i raportować udział linków do domen spoza ~20 największych wydawców finansowych. (b): zastąpić progiem wyrażonym udziałem lub kwotą (np. AI ≥ 1% sesji ludzi i ≥ 2 000 sesji/mies.), doliczać szacunek ruchu „Direct” na podstronach wejściowych i wykluczyć okno 8–15.10.2026. Dopisać, że healthscorer.com to tylko wskaźnik kierunkowy z innej branży."
+  },
+  {
+   "severity": "major",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 dni 0–14, krok 3, l.285 (brak reguły decyzyjnej w G0)",
+   "quote": "3. Ręczne otwarcie stron najbliższych konkurentów (lista w `top-10-products.md`) i test formularzy, czyli tego, czego ta sesja nie mogła zrobić.",
+   "problem_pl": "Krok 3 zbiera najważniejszą brakującą informację, ale G0 nie mówi, co zrobić z wynikiem. Dla HOME-02 próba obalenia wskazała Bellhaven (łączy §121 i recapture) i TrueHomeCosts (wartość niskiej stopy plus „Keep & Rent”), czyli dokładnie wyróżniki z hipotezy HOME-02. Dla AUTO-01 wskazała CarCalcPro, dla RENO-02 Weathershield i CalculateMyRoof („najbliższe zagrożenie”). Warunek zatrzymania HOME-02 („wykrycie konkurenta, który liczy zegar i 4 warianty”) jest sprawdzany dopiero 90 dni po indeksacji, czyli po wydaniu pieniędzy.",
+   "evidence_pl": "data/agent-outputs/refute_HOME-02.json, refute_RENO-02.json, refute_AUTO-01.json; arch §3.1, wiersz HOME-02.",
+   "fix_pl": "Dopisać do G0: „Produkt wypada z pilotażu przed budową, jeśli ręczna weryfikacja znajdzie narzędzie pokrywające ≥ 3 jego kluczowe zależności z karty. RENO-02 jest warunkiem startu: jeśli wypadnie, nie budować”."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§7 Granice pewności, l.79",
+   "quote": "RPM to najsłabiej zmierzony parametr (zakresy vendorskie różnią się kilkukrotnie). Rozstrzygnie go dopiero pilotaż.",
+   "problem_pl": "Właściciel ma działające konto AdSense i witrynę (Z-13). Odsłony na sesję, udział odsłon bez reklamy, RPM stron z formularzem i udział ruchu z USA (Z-01…Z-05) można kierunkowo odczytać z healthscorer.com w G0 za 0 USD. Krok 1 G0 mierzy jednak tylko sesje z AI. Raport odrzuca też jedyny odgórny benchmark (Omni: ~19–39 USD na 1000 wizyt i ~95 USD/mies. na kalkulator, E-POR-02) jako „niewiarygodny”, bez konfrontacji z bazowymi 7 USD. Rozbieżność 3–5× wymaga wyjaśnienia, bo działa w obie strony: albo model jest zbyt pesymistyczny, albo szacunki Omni są zawyżone.",
+   "evidence_pl": "evidence-and-assumptions.md: Z-01..Z-05, Z-13, E-POR-02 („ok. 19-39 USD na 1000 wizyt (niewiarygodne)”).",
+   "fix_pl": "Dodać do G0 krok 1b: „z AdSense i GA4 healthscorer.com: page RPM (USA i ogółem), odsłony na sesję i udział odsłon z wyświetloną reklamą na stronach z formularzem; wyniki wpisać do economics.csv jako kalibrację”. W l.79 napisać: „Kierunkowo można go zmierzyć na healthscorer.com w G0; dla branży dom/auto rozstrzygnie go pilotaż”. Do economics.csv dodać wiersz porównawczy z Omni."
+  },
+  {
+   "severity": "major",
+   "file": "economics.csv",
+   "location": "input ai_share_of_sessions (l.8); tools/economics_model.py l.31",
+   "quote": "ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi,ułamek,0.02,0.1,0.3",
+   "problem_pl": "Wartości 10% (baza) i 2% (konserwatywnie) są 2–100× wyższe od benchmarku cytowanego w tym samym wierszu (0,1–1%). Opierają się wyłącznie na niezweryfikowanej obserwacji właściciela, a analityka healthscorer.com jest „nieprzekazana”. W efekcie wiersz „W tym sesje z asystentów AI” pokazuje w bazie 14 300 sesji AI/mies. przy 1000 USD przychodu. To 2–3× więcej niż cały ruch AI Omni (~4–6 tys.) przy 3,7 tys. kalkulatorów. Na przychód nie wpływa (ai_rpm_factor = 1,0 w bazie), ale utrwala fałszywy obraz roli kanału AI, który raport gdzie indziej sam podważa.",
+   "evidence_pl": "E-VER-C4 (Omni ~0,05% ruchu z AI, ok. 4 tys. wizyt z ChatGPT); E-VER-C5; evidence-and-assumptions.md §1: „Analityka healthscorer.com | nieprzekazana”.",
+   "fix_pl": "Ustawić 0,003 / 0,01 / 0,05 (kons./baz./opt.), opisać 10–30% jako hipotezę właściciela do weryfikacji w G0 i przeliczyć wiersze „W tym sesje z asystentów AI”."
+  },
+  {
+   "severity": "major",
+   "file": "tools/economics_model.py",
+   "location": "ADDONS, l.217 (economics.csv, wiersze addon_separate)",
+   "quote": "ZAŁOŻENIE; nie ratuje modelu bazowego; wymaga zgód (TCPA - niezbadane) i neutralności rekomendacji",
+   "problem_pl": "Liczby tego samego modelu przeczą tej etykiecie. Lead-gen daje 20 / 125 / 500 USD na 1000 sesji, a display 1,82 / 7,00 / 22,39, czyli 11–22× mniej. Przy samym lead-genie bazowy próg gotówkowy dla 5 narzędzi spada z 49,6 tys. do ~2,8 tys. sesji/mies. Sąsiedni wiersz sam przyznaje, że „nawet ostrożny lead-gen może przewyższyć display”. Ma to wpływ na werdykt: z lead-genem ekonomika zmienia znak, a raport trzyma go jako „dodatek” wyłącznie z powodu ograniczenia właściciela.",
+   "evidence_pl": "economics.csv, wiersze addon_separate; 347 / 0,125 = 2 776 sesji.",
+   "fix_pl": "Zmienić na: „ZAŁOŻENIE; poza modelem bazowym z powodu ograniczenia właściciela. Liczbowo zmienia ekonomikę (próg gotówkowy w bazie ~2,8 tys. zamiast 49,6 tys. sesji), ale wymaga zgód TCPA i rodzi konflikt z neutralnością”. Dodać to porównanie jednym zdaniem w exec §5."
+  },
+  {
+   "severity": "major",
+   "file": "executive-summary.md",
+   "location": "§8, ostatnie zdanie; arch §4.2 l.292",
+   "quote": "Dalsza praca miałaby wtedy sens tylko w innym modelu (lead-gen, B2B embed, subskrypcja) i jako osobna decyzja.",
+   "problem_pl": "Alternatywy pojawiają się tylko jako plan awaryjny po porażce, a nie jako równorzędne strategie oceniane równolegle. Pominięte lub niedoważone: (1) test na healthscorer.com przed założeniem nowej domeny: istniejące konto AdSense, autorytet i ruch, bez oceny nowej witryny i rozruchu SEO; w raporcie jest tylko fallback HLTH-02 (poz. 19, wiarygodność 2/5); (2) B2B embed lub white-label RENO-02 i RENO-03 dla dekarzy, wykonawców HVAC, agentów ubezpieczeniowych i credit unions (model Rewiring America, E-POR2-04); 5 klientów po 50–100 USD/mies. przewyższa bazowy przychód reklamowy w m12 (240 USD); (3) płatny test ruchu (300–500 USD w Google Ads na MVP), który mierzy ukończenie i RPM w 2 tygodnie zamiast 90 dni po indeksacji; (4) MVP bez silnika: pojedynczy symulator (50–70 h) zamiast silnika (90–220 h) budowanego przed jakimkolwiek sygnałem popytu; (5) zakup istniejącej strony z kalkulatorami i ruchem; (6) płatny raport lub eksport (ProjectionLab: ~1 mln USD ARR przy 3 FTE). Żadna z tych opcji nie ma nawet przybliżonej ekonomiki.",
+   "evidence_pl": "E-POR2-02, E-POR2-04; arch l.292 i l.296; economics.csv illustration_m12, baza 240 USD.",
+   "fix_pl": "Dodać w exec sekcję „Strategie alternatywne” z tabelą: koszt testu, czas do sygnału, przychód na 1000 sesji lub na klienta, zgodność z ograniczeniem właściciela. Dopisać do G0 opcję najtańszego testu: MVP RENO-02 bez silnika, 300–500 USD płatnego ruchu i rozmowy z 5 potencjalnymi klientami B2B."
+  },
+  {
+   "severity": "major",
+   "file": "product-opportunities.csv",
+   "location": "kolumna ocena_wazona_0_5 (tylko top 25), wiersze HOME-02, HOME-04, FIN-01, ENER-03, CARE-01; poziom_pewnosci, wiersz RENO-02",
+   "quote": "HOME-02: ocena_wazona_0_5 (tylko top 25) = 3.80 (top-10-products.md: „**3.60**”)",
+   "problem_pl": "CSV przechowuje wyniki sprzed kalibracji (HOME-02 3.80, HOME-04 3.70, FIN-01 3.50, ENER-03 3.40, CARE-01 3.55), a top-10 wyniki po kalibracji (3.60, 3.50, 3.30, 3.20, 3.45). Po sortowaniu CSV HOME-02 jest na 1. miejscu, a w rankingu na 4. RENO-02 ma w CSV poziom_pewnosci „niska”, a w top-10 §3 „Najmocniejsza luka … pewność średnia”.",
+   "evidence_pl": "Odczyt CSV pythonem; tabela w top-10-products.md §2.",
+   "fix_pl": "Dodać kolumnę ocena_po_kalibracji albo nadpisać wartości wynikami po kalibracji. Ujednolicić pewność RENO-02 do „niska–średnia”, bo dowodem są negatywne streszczenia wyszukiwarki."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§3 pkt 3, l.28 vs tabela §5",
+   "quote": "potrzeba ~150 tys. sesji/mies. na 1000 USD",
+   "problem_pl": "W tym samym dokumencie tabela §5 podaje „~140 tys.”, a economics.csv 143 000 (sesje zarejestrowane).",
+   "evidence_pl": "economics.csv: „Sesje/mies. potrzebne dla 1000 USD” (baza) = 143000.",
+   "fix_pl": "Zmienić na „~140 tys. sesji/mies. (zarejestrowanych; ~130 tys. sesji ludzi)”."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§4.2 l.282; market-and-distribution.md §5 l.206; evidence K-02",
+   "quote": "**Dni 0–14 — eksperyment pomiarowy, bez budowy (koszt ≈ 0 USD, ~15–20 h pracy):**",
+   "problem_pl": "Panel to 5 asystentów × 8–12 promptów × 3 powtórzenia × 5 produktów, czyli 600–900 uruchomień z zrzutem ekranu i opisem linków i zależności. Przy ~2 min na uruchomienie sam panel zajmuje 20–30 h, a do tego dochodzą logi i ręczny przegląd konkurentów. Zakres jest niespójny: arch mówi o 5 produktach, a market l.206 („panel promptów w 5 asystentach dla 10 finalistów”) i K-02 o 10 finalistach (1 200–1 800 uruchomień). Hasło „≈ 0 USD” ukrywa koszt czasu (wg stawki z modelu 40 USD/h).",
+   "evidence_pl": "arch l.284; market l.206; evidence K-02.",
+   "fix_pl": "Ujednolicić zakres do 5 produktów, podać 30–50 h pracy i jej wycenę (~1,2–2 tys. USD wg owner_hourly_value)."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§2 pkt 5, l.19",
+   "quote": "Display działa u Omni Calculator przy ~3,7 tys. kalkulatorów, 18–23 mln wizyt/mies. i ~70 osobach zespołu [E-POR2-05].",
+   "problem_pl": "Streszczenie wybiera górne krańce zakresów. evidence §5 podaje „ruch 9–23 mln/mies.; zatrudnienie 33–70”, a market A2 i economics.csv używają ~14 mln wizyt.",
+   "evidence_pl": "evidence-and-assumptions.md §5 (Omni Calculator); E-VER-C4 (14,3 mln); market-and-distribution.md A2.",
+   "fix_pl": "Napisać „9–23 mln wizyt/mies. (zależnie od źródła i metryki), 33–70 osób”."
+  },
+  {
+   "severity": "minor",
+   "file": "product-opportunities.csv",
+   "location": "AUTO-01, uzasadnienie_statusu; top-10-products.md, karta AUTO-01",
+   "quote": "(30.9% trade-in z negative equity, średnio $7,183)",
+   "problem_pl": "Exec §2 i market §2 podają 29,1% i −7 107 USD (Edmunds, Q3 2026), a CSV i karta 30,9% i 7 183 USD (Q1 2026) bez oznaczenia kwartału w CSV.",
+   "evidence_pl": "E-DEM-14 zawiera obie wartości.",
+   "fix_pl": "Wszędzie użyć danych Q3 2026 (29,1%, 7 107 USD) albo dopisać kwartał."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§3, wiersz „Najlepszy pierwszy produkt”, l.63",
+   "quote": "Najmocniejsza luka po dwóch niezależnych przeszukaniach (15 zapytań; próba obalenia nie znalazła konkurenta bezpośredniego, pewność średnia)",
+   "problem_pl": "Przeszukania nie były niezależne: agent obalający znał wyniki audytora („do tego 7 wyszukiwań poprzedniego audytora”, „Szukałem inaczej niż poprzedni audytor”). Oba opierają się na negatywnych streszczeniach wyszukiwarki, które exec §7 sam nazywa „słabym dowodem”. Do tego Weathershield i CalculateMyRoof są opisane jako „najbliższe zagrożenie”, nieotwarte.",
+   "evidence_pl": "data/agent-outputs/refute_RENO-02.json; karta RENO-02 („Próba obalenia”).",
+   "fix_pl": "Zmienić na „najlepiej sprawdzona luka (dwa przeszukania, drugie celowo inaczej sformułowane; wyłącznie streszczenia wyszukiwarki; pewność niska–średnia; 3 kandydatów do ręcznej weryfikacji)”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "nagłówek i §2 (reguła wyboru 10 finalistów)",
+   "quote": "# Finaliści: ranking 25 propozycji i karty 10 finalistów",
+   "problem_pl": "Finalistami są AUTO-01 (poz. 13) i FIN-01 (poz. 12), a INS-01 (poz. 10, 3,35) i RENT-01 (poz. 11, 3,35) nie są. Reguły wyboru nie podano.",
+   "evidence_pl": "Ranking w §2 vs karty w §4.",
+   "fix_pl": "Dopisać w §1 regułę wyboru finalistów (np. „top 10 sprzed kalibracji z wyłączeniem RENO-01 scalonego z RENO-02, plus AUTO-01 jako druga pula popytu”) albo zastąpić finalistów zgodnie z rankingiem."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§1.2, l.29",
+   "quote": "ChatGPT nie pokazuje reklam przy tematach zdrowotnych [E-VER-C9]",
+   "problem_pl": "To argument bez związku z wnioskiem. Reklamy wewnątrz ChatGPT nie wpływają na przychód AdSense wydawcy; market-and-distribution.md l.165 sam pisze, że to „neutralne dla nas”.",
+   "evidence_pl": "market-and-distribution.md l.165.",
+   "fix_pl": "Usunąć ten fragment albo zastąpić argumentem merytorycznym (spójność marki healthscorer.com, inny profil YMYL)."
+  },
+  {
+   "severity": "minor",
+   "file": "architecture-and-validation.md",
+   "location": "§1.2, l.34–38",
+   "quote": "**Warunki uzasadniające osobną domenę** (wszystkie muszą być spełnione):",
+   "problem_pl": "Nagłówek mówi „wszystkie muszą być spełnione”, a punkt 2 zaczyna się od „albo”. Logika jest niejednoznaczna.",
+   "evidence_pl": "Punkty 1–4 z §1.2.",
+   "fix_pl": "Zapisać jako: „(1 lub 2) oraz 3 oraz 4”."
+  },
+  {
+   "severity": "minor",
+   "file": "executive-summary.md",
+   "location": "§5, l.57",
+   "quote": "Wszystkie wartości to **założenia** skalibrowane do zakresów rynkowych",
+   "problem_pl": "Godziny właściciela, koszt silnika, koszty stałe i wycena godziny właściciela w economics.csv mają podstawę „ZAŁOŻENIE” bez źródła rynkowego. Kalibrację do rynku mają tylko RPM, adblock i odsłony na sesję.",
+   "evidence_pl": "economics.csv, kolumna basis_or_formula dla owner_hours_*, cost_*, owner_hourly_value.",
+   "fix_pl": "Napisać: „Wszystkie wartości to założenia; parametry przychodowe skalibrowano do zakresów rynkowych, a koszty i czas to szacunki własne do weryfikacji (Z-09, Z-15, Z-16)”."
+  },
+  {
+   "severity": "minor",
+   "file": "top-10-products.md",
+   "location": "§3, wiersz „Najlepsza rodzina do masowego rozwoju”, l.67",
+   "quote": "Realny potencjał: 15–30 odrębnych symulatorów bez sztucznego mnożenia stron.",
+   "problem_pl": "To nadmierna pewność. Raport nie ma wolumenów zapytań dla żadnego z tych tematów, a sam ocenia ten wiersz na pewność „średnią”. Słowo „realny” sugeruje zweryfikowany popyt.",
+   "evidence_pl": "evidence-and-assumptions.md §1: „żadnych wolumenów słów kluczowych nie podano”.",
+   "fix_pl": "Zmienić na „Hipoteza: 15–30 odrębnych decyzji; popyt na każdą do potwierdzenia wolumenami (K-04)”."
+  }
+ ]
+}
