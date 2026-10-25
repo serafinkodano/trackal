@@ -182,6 +182,26 @@ def cap(conf, top):
     return conf if RANK.get(conf, 0) <= RANK[top] else top
 
 
+
+TEXT_SUBS = [
+    ('(kontekst zadania: od 7.10.2026 i 19.08.2026)', '(daty z briefu właściciela potwierdzone w weryfikacji [E-VER-C1, E-VER-C2]: AI Mode od 19.08.2026, Intelligent UI od 7–8.10.2026)'),
+    ('kontekst zadania: ChatGPT Intelligent UI od 2026-10-07, Google AI Mode od 2026-08-19', 'brief właściciela, daty potwierdzone w weryfikacji [E-VER-C1, E-VER-C2]: Intelligent UI od 7–8.10.2026, AI Mode od 19.08.2026'),
+    ('kontekst zadania', 'brief właściciela; daty potwierdzone w weryfikacji [E-VER-C1, E-VER-C2]'),
+    ('prawie bezpośredni', 'możliwie bezpośredni (niezweryfikowane)'),
+    ('SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL)', 'w wynikach wyszukiwania (search-summary) dominują domeny o wysokim autorytecie (YMYL); pełnego SERP nie badano (K-05)'),
+    ('SERP jest zatłoczony', 'wyniki wyszukiwania (search-summary) są zatłoczone'),
+    ('solidny popyt', 'dobrą ocenę popytu (4/5, sygnały pośrednie)'),
+]
+
+
+def apply_subs(rows_):
+    for r in rows_:
+        for k, v in r.items():
+            if isinstance(v, str):
+                for a_, b_ in TEXT_SUBS:
+                    v = v.replace(a_, b_)
+                r[k] = v
+
 # =========================== competitor register ===========================
 reg = []
 for f in sorted(glob.glob('raw/*.json')):
@@ -298,6 +318,7 @@ for (p, k), idx in by_pu.items():
             nsup += 1
 
 out.sort(key=lambda r: (-WAVE[r['etap']], r['produkt_ID_final'], r['konkurent']))
+apply_subs(out)
 with open(f'{OUT}/competitor-audit.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
 unm = [r for r in out if r['produkt_ID_final'] == 'nieprzypisany']
@@ -442,7 +463,7 @@ for x in ll:
         if fid == 'ENER-03':
             direct = 'sporny: Home Energy Planner — w fali 1 bezpośredni, w fali 2 częściowy; do ręcznej weryfikacji'
         elif fid == 'RENT-01':
-            direct = 'sporny: OverlineIQ / BiggerPockets Sell vs Keep — w fali 1 (seed H) bezpośredni dla rdzenia hold vs sell, w fali 2 częściowy; do ręcznej weryfikacji'
+            direct = 'sporny: OverlineIQ — w fali 1 (seed H) bezpośredni, w audycie fali 2 częściowy; BiggerPockets Sell vs Keep (bezpośredni dla ogólnego rdzenia hold/sell seeda H) w audycie RENT-01 się nie pojawił; do ręcznej weryfikacji'
         elif c and c['direct']:
             direct = f'tak ({scope}; pewność średnia)'
         else:
@@ -513,6 +534,7 @@ for row in rows:
             row[k] = f"{(v or '').strip().rstrip('.')} — ocena koncepcyjna agenta; nie badano w tej sesji (brak danych)."
             nfill += 1
 
+apply_subs(rows)
 with open(f'{OUT}/product-opportunities.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 STATS.update({
