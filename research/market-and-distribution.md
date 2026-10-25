@@ -16,7 +16,7 @@ Data badania: 2026-10-25. Identyfikatory `E-…` odsyłają do rejestru dowodów
 | Wykonanie kodu (Python, bash) | dostępne | użyte do skryptów w `tools/` i modelu `tools/economics_model.py`; bez wysyłki danych na zewnątrz |
 | Analiza plików repozytorium | dostępna | przed pracą przejrzano strukturę repo (scraper.py, test_history.py, requirements.txt, public/); istniejących plików nie zmieniano, raport zapisano w nowym katalogu `research/` |
 
-Badanie wykonało 17 agentów w fali 1 (fundamenty, rodziny, pomysły startowe), 10 agentów uzupełniających, 2 weryfikatorów adwersaryjnych i 25 audytorów konkurencji (fala 2) oraz agentów pogłębionej weryfikacji finalistów (fala 2b). Rejestr konkurencji (`competitor-audit.csv`, 1159 wierszy) ma cztery podstawy dowodu: 946 wierszy to opisy z wyników wyszukiwania (search-summary), 194 — wiedza modelu bez wyszukiwania, 13 — niepotwierdzone notatki fali 1, a 6 — wiedza modelu po wyszukiwaniu, które nie dało wyniku. Żadnej strony konkurenta nie otwarto.
+Badanie wykonało 17 agentów w fali 1 (fundamenty, rodziny, pomysły startowe), 10 agentów uzupełniających, 2 weryfikatorów adwersaryjnych i 25 audytorów konkurencji (fala 2) oraz agentów pogłębionej weryfikacji finalistów (fala 2b). Rejestr konkurencji (`competitor-audit.csv`, 1192 wiersze) ma cztery podstawy dowodu: 949 wierszy to opisy z wyników wyszukiwania (search-summary), 224 — wiedza modelu bez wyszukiwania, 13 — niepotwierdzone notatki fali 1, a 6 — wiedza modelu po wyszukiwaniu, które nie dało wyniku. Żadnej strony konkurenta nie otwarto.
 
 ---
 

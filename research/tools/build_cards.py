@@ -7,6 +7,11 @@ Moduł jest też importowany przez build_top10.py (funkcje fix, one, criteria_ro
 Runda 2 kontroli spójności: pełne teksty (bez ucinania) w kartach i tabelach kryteriów, kompletne listy konkurentów,
 lista do ręcznej weryfikacji RENO-02 (G0 krok 4), nagłówki kart z pozycją w rankingu, godziny eksperta pilotów (kanon K4),
 twierdzenia o asystentach jako hipotezy, polityki reklamowe jako niezweryfikowane, klasyfikacja przykładów pytań.
+
+Runda 3 (końcowa kontrola spójności, kanon v3): zachowanie asystentów w „powodzie wejścia”, uzasadnieniach statusu, lukach i MVP jako
+hipoteza (wzorce SUBS działają też na product-opportunities.csv, bo koordynator stosuje fix() do każdej komórki); w kartach pole
+„Powód wejścia” z prefiksem „Hipoteza agenta (asystentów nie testowano)”; zdania streszczeń „no tool…” jako słaby dowód negatywny;
+Paperform i EnergySage bez stwierdzeń braku; RENT-01: sporny tylko OverlineIQ; identyfikatory agentów (G5-11) → finalne ID.
 """
 import csv, json, os, re, sys
 
@@ -45,8 +50,123 @@ VER = 'wydanie potwierdzone w weryfikacji [E-VER-C1, E-VER-C2]'
 IUI = 'ChatGPT Intelligent UI (od 7–8.10.2026; potwierdzone w weryfikacji [E-VER-C2])'
 AIM = 'Google AI Mode z generatywnym UI (od 19.08.2026 wg relacji SEJ [E-VER-C1])'
 
+# Znacznik hipotezy o zachowaniu asystentów (runda 3 kontroli spójności, rules#0; kanon v3 pkt 9). W kartach pole
+# „Powód wejścia” dostaje wspólny prefiks, więc ten znacznik jest tam usuwany (card_reason), a w CSV zostaje.
+HYP = ' (hipoteza; asystentów nie testowano)'
+HYP_A = ' (ocena audytora, hipoteza)'
+WEAK_NEG = ' (słaby dowód negatywny; niezweryfikowane)'
+
 # Poprawki tekstów agentów (kolejność ma znaczenie: najpierw dłuższe, konkretne wzorce).
 SUBS = [
+    # --- runda 3 kontroli spójności (końcowa kontrola; findings_top10 rules#0–#2, #7–#9) ---
+    # rules#0: powód wejścia na zewnętrzną stronę i uzasadnienia statusu — zachowanie asystentów to hipoteza (asystentów nie testowano).
+    (r"Czat AI zwykle daje ogólną poradę bez rachunku\.",
+     "Hipoteza (Z-12; asystentów nie testowano): odpowiedź czatu może nie zawierać spójnego wieloletniego rachunku z polisą i ryzykiem regionalnym; "
+     "ChatGPT (Intelligent UI) i Google AI Mode potrafią jednak generować kalkulatory [E-VER-C1, E-VER-C2]; sprawdzą to G0 kroki 3 i 5."),
+    (r"Asystent daje ogólnik albo nieaktualną informację o 25C\.",
+     "Hipoteza (asystentów nie testowano): asystent może podać ogólną regułę albo nieaktualną informację o 25C."),
+    (r"W rozmowie z asystentem wyniki są niespójne i bez aktualnych danych lokalnych\.",
+     "Hipoteza (asystentów nie testowano): odpowiedź asystenta może być niespójna i bez aktualnych danych lokalnych."),
+    (r"wykracza poza prostą odpowiedź asystenta\.", "prawdopodobnie wykracza poza prostą odpowiedź asystenta" + HYP + "."),
+    (r"W czacie trudno to policzyć bez błędu,", "W czacie prawdopodobnie trudno to policzyć bez błędu" + HYP + ","),
+    (r"Asystent da przybliżenie, ale", "Asystent prawdopodobnie da przybliżenie" + HYP + ", ale"),
+    (r"Prosty punkt opłacalności asystent policzy jednak sam\.", "Prosty punkt opłacalności asystent prawdopodobnie policzy jednak sam" + HYP + "."),
+    (r"Słaby: asystent rozwiąże to sam,", "Słaby: asystent prawdopodobnie rozwiąże to sam" + HYP + ","),
+    (r"Słaby: klasyczne pytanie, które asystent rozwiązuje sam\.", "Słaby: klasyczne pytanie, które asystent prawdopodobnie rozwiąże sam" + HYP + "."),
+    (r"\bAsystent poda regułę kciuka([.;])", r"Asystent prawdopodobnie poda regułę kciuka" + HYP + r"\1"),
+    (r"wykracza poza wygodną odpowiedź w czacie\.", "prawdopodobnie wykracza poza wygodną odpowiedź w czacie" + HYP + "."),
+    (r"Asystent AI nie zna reguł rabatów RR2\.0 ani lokalnych kosztów\.",
+     "Asystent AI prawdopodobnie nie zna reguł rabatów RR2.0 ani lokalnych kosztów" + HYP + "."),
+    (r"Czat poda listę opcji, ale rzadko policzy wartość oczekiwaną\.",
+     "Czat prawdopodobnie poda listę opcji, ale rzadko policzy wartość oczekiwaną" + HYP + "."),
+    (r"ale asystent da zadowalającą odpowiedź jakościową\.", "ale asystent prawdopodobnie da zadowalającą odpowiedź jakościową" + HYP + "."),
+    (r"Wieloetapowa sekwencja z ograniczeniem jest nietrywialna w rozmowie",
+     "Wieloetapowa sekwencja z ograniczeniem jest prawdopodobnie trudna do przeprowadzenia w rozmowie z asystentem" + HYP),
+    (r"Słaby: mało zależności, a asystent odpowiada dobrze\.", "Słaby: mało zależności, a asystent prawdopodobnie odpowie dobrze" + HYP + "."),
+    (r"Asystent może pomóc, ale bez powtarzalnego modelu i aktualnych danych lokalnych\.",
+     "Asystent może pomóc, ale prawdopodobnie bez powtarzalnego modelu i aktualnych danych lokalnych" + HYP + "."),
+    (r"której asystent nie wykona wiarygodnie\.", "której asystent prawdopodobnie nie wykona wiarygodnie" + HYP + "."),
+    (r"Część obliczeń AI zrobi samo, jeśli użytkownik poda warunki umowy\.",
+     "Część obliczeń AI prawdopodobnie zrobi samo, jeśli użytkownik poda warunki umowy" + HYP + "."),
+    (r"Czat AI liczy jednorazowo i mało przejrzyście, bez stałych tabel stanowych\.",
+     "Czat AI prawdopodobnie liczy jednorazowo i mało przejrzyście, bez stałych tabel stanowych" + HYP + "."),
+    (r"Słaby\. Asystent policzy to sam w rozmowie,", "Słaby. Asystent prawdopodobnie policzy to sam w rozmowie" + HYP + ","),
+    (r"Słaby: problem jest już dobrze obsłużony przez narzędzia zintegrowane i asystentów\.",
+     "Słaby: problem jest już dobrze obsłużony przez narzędzia zintegrowane, a prawdopodobnie także przez asystentów" + HYP + "."),
+    (r"Asystent da jakościowe porady, ale", "Asystent prawdopodobnie da jakościowe porady" + HYP + ", ale"),
+    (r"migracją trudno policzyć wiarygodnie w czacie bez aktualnych stawek\.",
+     "migracją prawdopodobnie trudno policzyć wiarygodnie w czacie bez aktualnych stawek" + HYP + "."),
+    (r"Wiedza LLM o bieżącym stosie taryf jest zawodna\.", "Wiedza LLM o bieżącym stosie taryf może być zawodna" + HYP + "."),
+    (r"trudno przeprowadzić w czacie\.", "prawdopodobnie trudno przeprowadzić w czacie (hipoteza)."),
+    (r"ryzyko, że asystent zrobi to sam, jest średnie\.", "ryzyko, że asystent zrobi to sam, jest średnie (ocena agenta, hipoteza; asystentów nie testowano)."),
+    (r"Wieloetapowe NPV z podatkami i wrażliwością łatwo w czacie popsuć\.",
+     "Wieloetapowe NPV z podatkami i wrażliwością prawdopodobnie łatwo w czacie popsuć" + HYP + "."),
+    (r"asystent poda wzór CCC, ale rzadko zbuduje symulację\.", "asystent prawdopodobnie poda wzór CCC, ale rzadko zbuduje symulację" + HYP + "."),
+    (r"Asystent zwykle nie zbuduje tygodniowej symulacji z ograniczeniami\.",
+     "Asystent prawdopodobnie nie zbuduje tygodniowej symulacji z ograniczeniami" + HYP + "."),
+    (r"asystent policzy prosty przypadek, ale", "asystent prawdopodobnie policzy prosty przypadek" + HYP + ", ale"),
+    (r"asystent poda ogólne ostrzeżenia, ale rzadko zbuduje symulację na osi czasu\.",
+     "asystent prawdopodobnie poda ogólne ostrzeżenia, ale rzadko zbuduje symulację na osi czasu" + HYP + "."),
+    (r"daje przewagę nad AI z nieaktualną wiedzą", "daje przewagę nad AI, jeśli jej wiedza jest nieaktualna" + HYP),
+    (r"Model wieloletni; asystent zrobi wersję uproszczoną\.", "Model wieloletni; asystent prawdopodobnie zrobi wersję uproszczoną" + HYP + "."),
+    # rules#0: uzasadnienia statusu (RENO-03, LIFE-01, CARE-01, HOME-03, INS-09, JOB-02; też RENO-04 i INS-03 z top 10).
+    (r"a asystenci AI rozwiązują rdzeń porady sami\.", "a asystenci AI prawdopodobnie rozwiążą rdzeń porady sami" + HYP_A + "."),
+    (r"asystenci AI pokrywają warstwę jakościową;", "asystenci AI prawdopodobnie pokrywają warstwę jakościową" + HYP + ";"),
+    (r"a odpowiedź pierwszego poziomu asystenci AI dają sami\.", "a odpowiedź pierwszego poziomu asystenci AI prawdopodobnie dadzą sami" + HYP + "."),
+    (r"Asystenci AI policzą wersję podstawową sami\.", "Asystenci AI prawdopodobnie policzą wersję podstawową sami" + HYP + "."),
+    (r"asystenci odpowiadają sami,", "asystenci prawdopodobnie odpowiedzą sami" + HYP + ","),
+    (r"którą ChatGPT i Google AI Mode rozwiążą i wyrenderują same, więc asystent nie musi odsyłać do zewnętrznej strony\.",
+     "którą ChatGPT i Google AI Mode prawdopodobnie rozwiążą i wyrenderują same" + HYP + ", więc asystent może nie odsyłać do zewnętrznej strony."),
+    (r"bo asystenci i AI-podsumowania same dają akceptowalną kolejność,",
+     "bo asystenci i AI-podsumowania prawdopodobnie same dają akceptowalną kolejność" + HYP_A + ","),
+    (r"bo asystenci sami tworzą ramę decyzji,", "bo asystenci prawdopodobnie sami tworzą ramę decyzji" + HYP_A + ","),
+    # rules#0: karty (luka RENO-04, MVP HOME-02, próby obalenia LIFE-01/CARE-01/INS-03, kryteria RENO-04, §2a).
+    (r"Asystenci AI dobrze rozwiązują jakościową część problemu,", "Asystenci AI prawdopodobnie dobrze rozwiązują jakościową część problemu" + HYP + ","),
+    (r"wartość, której AI nie dostarcza powtarzalnie\.", "wartość, której AI prawdopodobnie nie dostarcza powtarzalnie" + HYP + "."),
+    (r"Asystenci AI częściowo zastępują wartość\.", "Asystenci AI prawdopodobnie częściowo zastępują wartość" + HYP + "."),
+    (r"Asystenci AI \(ChatGPT, Google AI Mode\) są realnym zamiennikiem dla warstwy jakościowej i prostego wykupu\.",
+     "Asystenci AI (ChatGPT, Google AI Mode) są prawdopodobnie realnym zamiennikiem dla warstwy jakościowej i prostego wykupu" + HYP + "."),
+    (r"Potwierdza to wysokie ryzyko samodzielnego rozwiązania przez asystenta dla wersji uproszczonej\.",
+     "Wskazuje to pośrednio (generator streszczeń WebSearch to nie asystent konsumencki) na wysokie ryzyko samodzielnego rozwiązania "
+     "przez asystenta dla wersji uproszczonej" + HYP + "."),
+    (r"- Asystenci AI sami budują pełną ramę decyzji\.", "- Asystenci AI prawdopodobnie sami zbudują pełną ramę decyzji" + HYP + "."),
+    (r"część ruchu przejmą odpowiedzi AI\.", "część ruchu prawdopodobnie przejmą odpowiedzi AI (hipoteza)."),
+    # rules#1: FIN-01 — w danych fali 1 nie ma źródła dla „rekomendacji HEL”; wniosek ze streszczenia WebSearch to hipoteza o asystentach.
+    (r"\s*Fala wave-1 dostała analogiczną rekomendację HEL dla przykładowego promptu\.", ""),
+    (r"Wniosek: odpowiedź 'zachowaj 3% i weź drugą hipotekę' oraz prosty kalkulator raty i blended rate są już skomodytyzowane w AI\.",
+     "Wniosek: gotową regułę HELOC vs cash-out podało streszczenie wyszukiwarki (narzędzie WebSearch), a nie asystent konsumencki; hipoteza: taka odpowiedź "
+     "('zachowaj 3% i weź drugą hipotekę') i prosty kalkulator raty i blended rate mogą być już powszechne u asystentów — do sprawdzenia w G0, krok 5."),
+    # rules#2: zdania streszczeń „no calculator…/no single tool…” to słaby dowód negatywny, nie stwierdzony brak narzędzia.
+    (r"Search trzykrotnie wprost zwrócił brak narzędzia: ([^.]+)\.",
+     r"Streszczenia wyszukiwarki trzykrotnie zawierały zdanie, że takiego narzędzia nie znaleziono (\1); to słaby dowód negatywny "
+     r"(tekst generowany przez wyszukiwarkę, strony nieotwierane; niezweryfikowane)."),
+    (r"a search trzykrotnie wprost raportował brak takiego narzędzia\.",
+     "a trzy streszczenia wyszukiwarki zawierały zdanie o nieznalezieniu takiego narzędzia" + WEAK_NEG + "."),
+    (r"Pięć wyników wprost zgłosiło brak narzędzia\.",
+     "Pięć streszczeń wyszukiwarki zawierało zdanie, że takiego narzędzia nie znaleziono" + WEAK_NEG + "."),
+    # CSV RENO-02 (część fali 2b ucięta przed zastrzeżeniem): dopisać je przy uciętym zdaniu.
+    (r"Brak kalkulatora kredytu dla kupują\w*…",
+     "W streszczeniach nie widać kalkulatora kredytu dla kupującego vs wymiana (niezweryfikowane). Uwaga: negatywne stwierdzenia z search-summary to słaby dowód. …"),
+    (r"wprost stwierdziło brak jednego narzędzia:",
+     "wprost stwierdziło, że nie znaleziono jednego narzędzia (negatywne stwierdzenia ze streszczeń to słaby dowód; niezweryfikowane):"),
+    (r"Dwa podsumowania wprost stwierdziły brak jednego narzędzia porównującego wszystkie ścieżki 'side by side'\.",
+     "Dwa podsumowania wprost stwierdziły, że nie znaleziono jednego narzędzia porównującego wszystkie ścieżki 'side by side'" + WEAK_NEG + "."),
+    (r"Podsumowania Q2 i Q6: brak jednego narzędzia porównującego wszystkie ścieżki;",
+     "Podsumowania Q2 i Q6: nie znaleziono jednego narzędzia porównującego wszystkie ścieżki" + WEAK_NEG + ";"),
+    (r"Nr 4: brak wersji reserve study dla domu jednorodzinnego\.",
+     "Nr 4: w streszczeniu nie widać wersji reserve study dla domu jednorodzinnego. Negatywne stwierdzenia ze streszczeń to słaby dowód (niezweryfikowane)."),
+    (r"Kilka podsumowań wprost stwierdza, że takiego narzędzia nie znaleziono \(([^)]*)\)\.",
+     r"Kilka podsumowań wprost stwierdza, że takiego narzędzia nie znaleziono (\1); to słaby dowód negatywny (niezweryfikowane)."),
+    # rules#7: funkcje na nieotwartych stronach = „niezweryfikowane” (Paperform: G0 krok 4, priorytet 3; HOME-03 bez założenia braku).
+    (r"Pokrywa tylko moduł finansowania, bez decyzji o terminie\.", "W streszczeniu widać tylko moduł finansowania (niezweryfikowane)."),
+    (r"Brak potrzeby głębszej weryfikacji; ewentualnie sprawdzić, czy szablon ma pola ubezpieczenia albo sprzedaży\.",
+     "Sprawdzić, czy szablon ma pola ubezpieczenia albo sprzedaży (G0 krok 4, priorytet 3)."),
+    (r"żeby potwierdzić brak tych funkcji", "żeby sprawdzić, czy mają te funkcje"),
+    # rules#8: bezwzględne stwierdzenie braku na podstawie streszczenia (EnergySage, fala 2b RENO-02).
+    (r"Żadnego narzędzia łączącego dach, PV i sprzedaż\.", "W streszczeniach nie widać narzędzia łączącego dach, PV i sprzedaż (niezweryfikowane)."),
+    # rules#9: afiliacja i lead-gen tylko jako dodatek albo osobna decyzja poza modelem bazowym (kanon K9; §2a BIZ-01).
+    (r"lepszym modelem mogą być afiliacja lub lead-gen do 3PL niż AdSense\.",
+     "afiliacja lub lead-gen do 3PL mogą lepiej pasować do tej publiczności, ale tylko jako dodatek albo osobna decyzja poza modelem bazowym."),
     # --- runda 2 kontroli spójności: wzorce, które muszą zadziałać przed ogólnymi ---
     # JOB-02: data „7.10.2026” rozcinana przez ogólny wzorzec „Kontekst zadania: …”.
     (r"Kontekst zadania: ChatGPT Intelligent UI od 7\.10\.2026, Google AI Mode od 19\.08\.2026\.",
@@ -263,13 +383,40 @@ def fix(s):
     return s
 
 
+# Identyfikatory agentów fali 1 (G2-06, G5-11…) → finalne ID z długiej listy (runda 3, completeness#10; jak w CSV:
+# pierwsze final_id, którego merged_from zawiera dany identyfikator — tools/longlist_map.py). Tylko karty i §2a (funkcja one);
+# CSV mapuje te identyfikatory sam w build_outputs_v2.py.
+_AGENT_ID = re.compile(r'(?<![\w:-])(G\d-\d\d)(?![\w-])')
+_TEMP2FINAL = None
+
+
+def map_agent_ids(s):
+    global _TEMP2FINAL
+    if _TEMP2FINAL is None:
+        _TEMP2FINAL = {}
+        for x in json.load(open('raw/longlist.json')):
+            for k in x['merged_from']:
+                _TEMP2FINAL.setdefault(k.split(':', 1)[1], x['final_id'])
+    return _AGENT_ID.sub(lambda m: _TEMP2FINAL.get(m.group(1), m.group(1)), s)
+
+
 def one(s, n=None):
     """Tekst agenta po poprawkach słownictwa (fix). Runda 2 kontroli spójności: karty i tabele kryteriów
     pokazują pełne brzmienie (n=None); limit n zostaje tylko jako opcja i wtedy dopisuje „…”."""
-    s = fix(s)
+    s = map_agent_ids(fix(s))
     if n is None or len(s) <= n:
         return s
     return s[:n].rsplit(' ', 1)[0] + ' …'
+
+
+def card_reason(s):
+    """Pole „Powód wejścia na zewnętrzną stronę” w karcie (runda 3, rules#0): całe pole to hipoteza agenta, więc dostaje
+    wspólny prefiks, a znaczniki hipotezy dopisane wzorcami SUBS (potrzebne w CSV) są w karcie usuwane, żeby się nie powtarzały."""
+    s = one(s)
+    z12 = 'Hipoteza (Z-12; asystentów nie testowano):' in s
+    s = s.replace(HYP, '')
+    s = re.sub(r'Hipoteza \((?:Z-12; )?asystentów nie testowano\): (\w)', lambda m: m.group(1).upper(), s)
+    return f"Hipoteza agenta ({'Z-12; ' if z12 else ''}asystentów nie testowano): " + s
 
 
 def cell(s, n=None):
@@ -514,9 +661,11 @@ def verify_list_reno02():
 COMPETITOR_OVERRIDE = {
     'RET-03': ('Znaleziono konkurentów bezpośrednich: RothHelper i QuantCalc ACA Bridge Optimizer realizują rdzeń decyzji '
                '(audyt fali 2: 7 zapytań WebSearch; search-summary, strony nieotwierane; pewność: średnia)'),
-    'RENT-01': ('Sporny, do ręcznej weryfikacji. BiggerPockets Sell vs Keep jest konkurentem bezpośrednim dla rdzenia hold/sell z seeda H '
-                '(search-summary, pewność średnia), ale w jego opisie z fali 1 (proformy 5/10/20+ lat) nie widać pozostałych wariantów RENT-01: 1031, step-up, sprzedaży ratalnej (niezweryfikowane). '
-                'OverlineIQ Keep vs. Sell a Rental: w fali 1 bezpośredni, w fali 2 częściowy. Audyt fali 2: 7 zapytań WebSearch, anglojęzyczny web USA, '
+    # Runda 3 (decisions#1; kanon v3 pkt 7): sporny jest tylko OverlineIQ; BiggerPockets jest bezpośredni dla rdzenia seeda H, a dla zakresu RENT-01 niezweryfikowany.
+    'RENT-01': ('Sporny, do ręcznej weryfikacji: OverlineIQ Keep vs. Sell a Rental (w fali 1 bezpośredni, w fali 2 częściowy). '
+                'BiggerPockets Sell vs Keep jest konkurentem bezpośrednim dla rdzenia hold/sell seeda H (search-summary, pewność średnia), '
+                'ale w audycie RENT-01 się nie pojawił, a w jego opisie z fali 1 (proformy 5/10/20+ lat) nie widać wariantów RENT-01: 1031, step-up, '
+                'sprzedaży ratalnej — dla zakresu RENT-01 niezweryfikowany. Audyt fali 2: 7 zapytań WebSearch, anglojęzyczny web USA, '
                 '2026-10-25, wyłącznie streszczenia wyszukiwarki, strony nieotwierane'),
     'ENER-03': ('Sporny, do ręcznej weryfikacji: Home Energy Planner (Backup Power Calculator) — w fali 1 bezpośredni, w fali 2 częściowy. '
                 'Audyt fali 2: 7 zapytań WebSearch, anglojęzyczny web USA, 2026-10-25, wyłącznie streszczenia wyszukiwarki, strony nieotwierane'),
@@ -579,7 +728,7 @@ def main(top10, position=None):
         out.append(f"- **Warianty:** {one(x['variants_compared'])}")
         out.append(f"- **Kluczowe zależności:** {one(x['key_dependencies'])}")
         out.append(f"- **Główne wyniki:** {one(x['main_outputs'])}")
-        out.append(f"- **Powód wejścia na zewnętrzną stronę:** {one(x['reason_external_site'])}\n")
+        out.append(f"- **Powód wejścia na zewnętrzną stronę:** {card_reason(x['reason_external_site'])}\n")
         n_a = len(a['competitors']) if a else 0
         n_r = len(r['candidates']) if r else 0
         out.append(f"**Konkurencja (audyt fali 2: {n_a} pozycji + próba obalenia w fali 2b: {n_r} kandydatów; wszystkie pozycje w pełnym brzmieniu; "

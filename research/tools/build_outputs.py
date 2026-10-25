@@ -512,7 +512,7 @@ for x in ll:
     if fid == 'RENO-01':
         status, qual = 'później', 'przełącznik PV jest w MVP RENO-02; pełna ekonomika PV później'
     if fid == 'INS-06':
-        status, qual = 'później', 'gałąź ENER-03 (nie odrębny); zamiennik seeda F; wraca razem z ENER-03'
+        status, qual, note = 'później', 'gałąź ENER-03 (nie odrębny); zamiennik seeda F; wraca razem z ENER-03', ''
     note = fs.get('note', '')
     if note in ('osobna domena, jeśli w ogóle', 'poza domeną', 'poza zakresem startowym domeny'):
         note = ''
@@ -649,6 +649,12 @@ for row in rows:
             continue
         row[k] = TEMP_ID.sub(lambda m: temp2final.get(('*', m.group(1)), m.group(1)), row[k])
 apply_subs(rows, cards_fix=True)
+AI_CLAIM = re.compile(r'(asystent|ChatGPT|AI Mode|czat|\bAI\b|LLM)', re.I)
+for row in rows:
+    for k in ('uzasadnienie_statusu', 'istotny_brak_w_istniejacych_produktach'):
+        v = row[k]
+        if AI_CLAIM.search(v) and not re.search(r'asystentów nie testowano', v):
+            row[k] = v.rstrip() + ' [Twierdzenia o zachowaniu asystentów AI w tym polu to hipotezy agenta; asystentów nie testowano (Z-12; plan testu: G0 krok 5).]'
 with open(f'{OUT}/product-opportunities.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 STATS.update({

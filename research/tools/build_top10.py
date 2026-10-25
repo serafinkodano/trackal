@@ -37,7 +37,9 @@ NOT_FINAL = {
     'RENO-01': 'Po audycie scalony z RENO-02 jako opcjonalna gałąź PV (przełącznik PV jest w MVP RENO-02), więc nie jest odrębną propozycją.',
     'INS-01': ('Luka 2/5: rdzeń rachunku „zgłosić szkodę czy zapłacić” pokrywają darmowe kalkulatory częściowe (Calcbee, AdvoraHQ, Toolzie). '
                'To odrębna decyzja (dom i auto); RENO-02 korzysta tylko z progu zgłoszenia szkody jako modułu.'),
-    'RENT-01': 'Rodzina wynajmu jest ograniczona do wąskich momentów (właściciel podejmuje tę decyzję zwykle raz, wymaga CPA), a klasyfikacja najbliższych narzędzi (BiggerPockets Sell vs Keep, OverlineIQ) jest sporna.',
+    # Runda 3 (decisions#1; kanon v3 pkt 7): sporny jest tylko OverlineIQ.
+    'RENT-01': ('Rodzina wynajmu jest ograniczona do wąskich momentów (właściciel podejmuje tę decyzję zwykle raz, wymaga CPA). OverlineIQ ma klasyfikację '
+                'sporną (fala 1: bezpośredni, fala 2: częściowy), a BiggerPockets Sell vs Keep jest bezpośredni dla rdzenia hold/sell seeda H (zakres RENT-01 niezweryfikowany).'),
     'HOME-03': 'Remis 3,30 z AUTO-01 i AUTO-02; FairOffer i kalkulatory lead-gen pokrywają rdzeń „fix vs as-is vs cash”, a kolejność w rodzinie HOME ustalono po HOME-04 i HOME-02.',
     'AUTO-02': 'Remis 3,30 z AUTO-01; korzysta z tego samego silnika, więc ma sens dopiero po wyniku AUTO-01 (produkt nr 10).',
     'FIN-02': 'Wykonalność i wiarygodność 2/5 (warunki HEI i HECM są niestandaryzowane i wymagają ręcznej aktualizacji).',
@@ -46,7 +48,8 @@ NOT_FINAL = {
     'HLTH-02': 'Zdrowie jest poza granicą domeny (`architecture-and-validation.md` §1.2); ewentualny tani test na healthscorer.com, nie na nowej domenie.',
     'HOME-01': 'Luka 2/5: sum.money i kalkulatory bridge/HELOC pokrywają większość sekwencji „kup przed sprzedażą”.',
     'JOB-02': 'Poza granicą domeny (`architecture-and-validation.md` §1.2); Calcuja Golden Handcuff Calculator pokrywa kluczowy fragment (koszt odejścia).',
-    'BIZ-04': ('Publiczność B2B słabo pasuje do AdSense, a znaczną część problemu pokrywają płatne narzędzia (Cogsy, 8fig, Float). E-commerce jest poza domeną; '
+    'BIZ-04': ('Publiczność B2B słabo pasuje do AdSense, a znaczną część problemu mogą pokrywać płatne narzędzia (Cogsy, 8fig, Float; funkcje za logowaniem '
+               'niezweryfikowane). E-commerce jest poza domeną; '
                'ewentualny test w istniejącym serwisie e-commerce właściciela, osobna domena dopiero po spełnieniu warunków 3 i 4 (`architecture-and-validation.md` §1.2).'),
     'ENER-01': ('Luka 2/5 i AI 2/5 przy czasowym oknie 48E. To odrębna decyzja (forma własności PV: gotówka, kredyt, leasing, PPA), '
                 'ale może korzystać z modułu PV z RENO-02, dlatego status „później”.'),
@@ -56,11 +59,10 @@ NOT_FINAL = {
 }
 
 # Selekcja 100 → 25: pomysły ze statusem „zbadać” (CSV), które nie trafiły do audytu fali 2, z powodem pominięcia.
+# Runda 3 (completeness#9; kanon v3 pkt 8): INS-06 (gałąź ENER-03) ma status „później”, więc nie ma go w tej tabeli; 21 wierszy, wszystkie odrębne.
 # Powody to rekonstrukcja z uzasadnień fali 1 (kolumny uzasadnienie_statusu, uwagi_scalenia_i_bliskie_duplikaty).
 SKIPPED = {
     'FIN-05': 'W rodzinie FIN pierwszeństwo dostały FIN-01 i FIN-02 z lepiej opisanymi dowodami; FIN-05 korzysta z tego samego silnika finansowania, a jego konkurencji w fali 1 nie zbadano.',
-    'INS-06': ('Nie jest odrębnym pomysłem: to gałąź ENER-03 (pompa sump to jedno z obciążeń zasilania awaryjnego), a nie osobny produkt; '
-               'w fali 1 nie zebrano też dowodów popytu. Dlatego nie jest kandydatem do kolejnego audytu.'),
     'AUTO-04': ('W rodzinie AUTO wybrano trzy pomysły z wyraźniejszym momentem decyzji (AUTO-01–03); popyt na AUTO-04 opisano tylko hipotezą. '
                 'Odrębny pomysł z domeny B — następny kandydat do audytu (25. pozycja rankingu).'),
     'JOB-03': 'Popytu na powroty do biur w 2026 i konkurencji nie zweryfikowano (limit wyszukiwań), trudność implementacji jest wysoka, a rodzina JOB jest poza granicą domeny (`architecture-and-validation.md` §1.2).',
@@ -146,12 +148,13 @@ for r in skipped:
     idn = r['ID'] + ('' if r['odrebny_pomysl'].startswith('tak') else ' (nie jest odrębny)')
     sel.append(f"| {idn} | {nm} | {r['rodzina']} | {ver} | {SKIPPED[r['ID']]} |")
 n_nd = sum(1 for r in skipped if not r['odrebny_pomysl'].startswith('tak'))
+assert PR['INS-06']['status'] == 'później', PR['INS-06']['status']
 distinct = [r for r in PR.values() if r['odrebny_pomysl'].startswith('tak')]
 st = Counter(r['status'] for r in distinct)
 assert (len(PR), len(distinct), st['pilot'], st['zbadać'], st['później'], st['odrzucić']) == (96, 92, 5, 27, 35, 25), (len(PR), len(distinct), st)
-assert n_nd == 1
-sel_md = '\n'.join(sel) + (f"\n\nWierszy ze statusem „zbadać” poza audytem fali 2: {len(skipped)} (status końcowy z `product-opportunities.csv`), "
-                           f"w tym {n_nd} nieodrębny (INS-06, gałąź ENER-03), czyli {len(skipped) - n_nd} odrębnych pomysłów. "
+assert (n_nd, len(skipped)) == (0, 21), (n_nd, len(skipped))
+sel_md = '\n'.join(sel) + (f"\n\nWierszy ze statusem „zbadać” poza audytem fali 2: {len(skipped)} (wszystkie odrębne; status końcowy z `product-opportunities.csv`). "
+                           f"INS-06 (gałąź ENER-03, nie jest odrębny) ma status „później” i wraca razem z ENER-03. "
                            f"Statusy wszystkich {len(distinct)} odrębnych pomysłów: pilot {st['pilot']}, zbadać {st['zbadać']}, później {st['później']}, odrzucić {st['odrzucić']}.\n")
 
 # ---------- §2a: uzasadnienia per kryterium dla 15 propozycji spoza finału ----------

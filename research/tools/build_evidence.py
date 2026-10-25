@@ -8,7 +8,8 @@ Wejście (ścieżki względem katalogu nadrzędnego wobec tools/):
     set      — zastępuje wskazane pola wiersza,
     replace  — podmienia fragment tekstu (stary fragment musi wystąpić dokładnie raz),
     append   — dopisuje nowe wiersze na końcu rejestru (np. E-REV-01…09),
-    reguly   — reguły dla wszystkich wierszy (pewność hipotez, wyjątki od skracania).
+    reguly   — reguły dla wszystkich wierszy (pewność hipotez, pewność wpisów opartych na
+               streszczeniach z wyjątkami i powodami, wyjątki od skracania).
 
 W evidence_head.md można używać znaczników liczonych z plików CSV w research/:
     {{rows:plik.csv}}                    — liczba wierszy danych,
@@ -16,7 +17,8 @@ W evidence_head.md można używać znaczników liczonych z plików CSV w researc
     {{n:plik.csv:k1=w1&&k2=w2}}          — liczba wierszy spełniających wszystkie warunki naraz,
     {{nonempty:plik.csv:kolumna}}        — liczba wierszy z niepustą wartością,
     {{distinct:plik.csv:kolumna}}        — liczba różnych niepustych wartości,
-    {{register_rows}}                    — liczba wierszy rejestru dowodów po poprawkach.
+    {{register_rows}}                    — liczba wierszy rejestru dowodów po poprawkach,
+    {{high_conf}}                        — ID wpisów z pewnością „wysoka” po regułach.
 
 Uruchomienie:
     cd <scratchpad> && python3 tools/build_evidence.py
@@ -120,6 +122,34 @@ if cap:
             r['pewnosc'] = cap
             lowered.append(r['id'])
 
+# Reguła: wpisy oparte na streszczeniach wyszukiwarki (typy z listy, np. „bezpośrednie”, „pośrednie”)
+# mają pewność najwyżej sm['max'], chyba że wpis jest wyjątkiem z podanym powodem wyższej pewności;
+# powód trafia na koniec treści wpisu, a wpis jest podawany w całości.
+sm = rules.get('streszczenie_max_pewnosc')
+lowered_summary, kept_high = [], []
+if sm:
+    smax = sm['max']
+    typy = tuple(t.lower() for t in sm.get('typy', []))
+    wyjatki = sm.get('wyjatki', {})
+    for rid in wyjatki:
+        if rid not in by_id:
+            errors.append(f'streszczenie_max_pewnosc: brak wiersza {rid}')
+        elif not by_id[rid]['typ'].strip().lower().startswith(typy):
+            errors.append(f'streszczenie_max_pewnosc: {rid} ma typ {by_id[rid]["typ"]!r} spoza listy')
+        elif CONF_RANK.get(by_id[rid]['pewnosc'], -1) <= CONF_RANK[smax]:
+            warnings.append(f'streszczenie_max_pewnosc: wyjątek {rid} nie ma pewności wyższej niż „{smax}”')
+    for r in rows:
+        if not r['typ'].strip().lower().startswith(typy) or \
+                CONF_RANK.get(r['pewnosc'], -1) <= CONF_RANK[smax]:
+            continue
+        if r['id'] in wyjatki:
+            r['tresc'] = r['tresc'].rstrip() + ' ' + wyjatki[r['id']]
+            touched.add(r['id'])
+            kept_high.append(r['id'])
+        else:
+            r['pewnosc'] = smax
+            lowered_summary.append(r['id'])
+
 no_cut_prefixes = tuple(rules.get('bez_skracania_prefiksy', []))
 
 lines = []
@@ -154,6 +184,8 @@ def token(m):
     try:
         if body == 'register_rows':
             return str(len(rows))
+        if body == 'high_conf':
+            return ', '.join(r['id'] for r in rows if r['pewnosc'] == 'wysoka') or 'brak'
         kind, rest = body.split(':', 1)
         if kind == 'rows':
             return str(len(load_csv(rest)))
@@ -215,7 +247,7 @@ if head_rev != sorted(a for a in appended if a.startswith('E-REV-')):
 #    (w surowych wierszach rejestru tylko ostrzeżenie).
 REF = r'\bE-[A-Z]+[0-9]?-(?:C)?\d+\b'
 ids = {r['id'] for r in rows}
-ov_text = json.dumps({k: ov.get(k) for k in ('set', 'replace', 'append')}, ensure_ascii=False)
+ov_text = json.dumps({k: ov.get(k) for k in ('set', 'replace', 'append', 'reguly')}, ensure_ascii=False)
 for where, src in (('części opisowej', head), ('poprawkach', ov_text)):
     for ref in sorted(set(re.findall(REF, src))):
         if ref not in ids:
@@ -243,5 +275,9 @@ open(OUT, 'w', encoding='utf-8').write(text)
 print(f'wiersze rejestru: {len(lines)} (z czego dopisane: {len(appended)}: {", ".join(appended)})')
 print(f'poprawione wiersze: {len(touched)}: {", ".join(sorted(touched))}')
 print(f'hipotezy obniżone do „{cap}”: {len(lowered)}: {", ".join(lowered)}')
+if sm:
+    print(f'wpisy {"/".join(sm.get("typy", []))} obniżone do „{sm["max"]}”: {len(lowered_summary)}: '
+          f'{", ".join(lowered_summary)}')
+    print(f'pewność „wysoka” z podanym powodem: {len(kept_high)}: {", ".join(kept_high)}')
 for w in warnings:
     print('UWAGA:', w)

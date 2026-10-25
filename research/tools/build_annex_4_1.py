@@ -76,7 +76,7 @@ CARDS = [
      'agent G6 nie szukał danych dla tej rodziny (limit), oceny to hipotezy; populację opisuje [E-DEM-21]; seed I (fala 1) i BIZ-04 (audyt fali 2) dostarczyły dowodów o konkurencji',
      'niska',
      'Popyt 3: dylemat „większe zamówienie z rabatem vs koszt finansowania i magazynu” dotyczy tylko firm z fizycznym zapasem; ok. 500 tys. aktywnych sprzedawców Amazon w USA to szacunek o niskiej pewności [E-DEM-21]. '
-     'Luka 4 to hipoteza agenta; seed I pokazał jednak, że płatne narzędzia (Cogsy, 8fig, Float, Inventory Planner) i Shopify Sidekick pokrywają znaczną część problemu, a w audycie BIZ-04 nie znaleziono bezpośredniego konkurenta w badanym zakresie. '
+     'Luka 4 to hipoteza agenta; według seeda I płatne narzędzia (Cogsy, 8fig, Float, Inventory Planner) i Shopify Sidekick mogą jednak pokrywać znaczną część problemu (funkcje za logowaniem niezweryfikowane; wiedza modelu), a w audycie BIZ-04 nie znaleziono bezpośredniego konkurenta w badanym zakresie. '
      'AI 3: asystent policzy prosty przypadek; przewaga narzędzia wynika ze struktury wielookresowej, a nie z danych. '
      'Wykonalność dobra: dane głównie od użytkownika (Dane 4), niski koszt eksperta dzięki doświadczeniu właściciela w e-commerce (Eksp 4) i najlepszy rdzeń modelowy zestawu (Wsp 5: tygodniowy rejestr zapasu i gotówki). '
      'Reklama tylko 3: wąska publiczność B2B i słabe dopasowanie do AdSense; ta tematyka jest poza domeną wariantu B, więc ewentualny test powinien odbyć się w istniejącym serwisie e-commerce właściciela, a osobna domena wchodzi w grę dopiero po spełnieniu warunków 3 i 4 (`architecture-and-validation.md` §1.2).'),
@@ -102,12 +102,12 @@ CARDS = [
      'Luka obniżona z 4 do 2: Home Energy Planner ma klasyfikację sporną (fala 1: bezpośredni, fala 2: częściowy) i wymaga ręcznej weryfikacji, a rynek wypełniają kalkulatory producentów (Generac, EcoFlow, BLUETTI, Jackery, Tesla, Enphase). '
      'AI 3: dobór mocy asystent policzy sam; przewagą narzędzia jest porównanie technologii w czasie (koszt 10-letni, przerwy wielodniowe i zimowe). '
      'Wykonalność dobra: dane są tanie (EIA-861, EAGLE-I; Dane 4), wystarczy przegląd elektryka (Eksp 4), ale potrzebne są ostrzeżenia bezpieczeństwa (CO, zasilanie zwrotne). '
-     'Reklama 4 to hipoteza (reklamy sezonowe); werdykt: ograniczyć do wąskich przypadków, np. INS-06 (pompa sump przy przerwie zasilania; gałąź ENER-03, nie odrębny pomysł).'),
+     'Reklama 4 to hipoteza (reklamy sezonowe); werdykt: ograniczyć; ogólny ENER-03 ma status „później”, a wąski przypadek INS-06 (pompa sump przy przerwie zasilania; gałąź ENER-03, nie odrębny pomysł) wraca razem z nim.'),
     (13, {'integrated_gap': 2}, 'M',
      'agent G5 nie wykonał żadnego wyszukiwania (limit); populację opisuje [E-DEM-18]; luka obniżona po seedzie H (fala 1) i audycie RENT-01 (fala 2)',
      'niska',
      'Popyt 4 to hipoteza agenta: duża, stała populacja drobnych właścicieli (osoby fizyczne mają ok. 59% nieruchomości na wynajem; w 2021 r. 15,9 mln nieruchomości 1–4 lokalowych należało do osób fizycznych [E-DEM-18]) i powtarzalne decyzje o wysokiej stawce; odsetek szukających narzędzia jest nieznany. '
-     'Luka obniżona z 3 do 2: BiggerPockets „Sell vs Keep” jest konkurentem bezpośrednim dla rdzenia hold/sell (search-summary, pewność średnia), OverlineIQ ma klasyfikację sporną (fala 1: bezpośredni, fala 2: częściowy), a segment zakupowy (DealCheck, kalkulatory BiggerPockets) jest nasycony. '
+     'Luka obniżona z 3 do 2: BiggerPockets „Sell vs Keep” jest konkurentem bezpośrednim dla rdzenia hold/sell seeda H (search-summary, pewność średnia; dla zakresu RENT-01 — 1031, step-up, sprzedaż ratalna — niezweryfikowany), OverlineIQ ma klasyfikację sporną (fala 1: bezpośredni, fala 2: częściowy), a segment zakupowy (DealCheck, kalkulatory BiggerPockets) jest nasycony. '
      'AI 3: asystent da ramę decyzji, ale łatwo pominie zależności (recapture mimo §121, zawieszone straty pasywne). '
      'Ryzyko błędu jest wysokie (Błąd 2) i wymaga przeglądu CPA lub EA (Eksp 3); dane są tanie (Dane 4), a jeden silnik obsłuży 10–20 symulatorów, wspólny z rodziną opieki (Wsp 5).'),
     (5, {'demand': 2}, 'R',
@@ -117,7 +117,7 @@ CARDS = [
      'Luka 3: ogólne „czy PV się opłaca” jest zatłoczone (PVWatts, EnergySage, SolarReviews, oprogramowanie instalatorów); dla decyzji łączących dach, demontaż PV, horyzont sprzedaży i formę własności w audytach ENER-01 i RENO-01 nie znaleziono bezpośredniego konkurenta w badanym zakresie, choć fragmenty pokrywają m.in. roofcalc.org (seed A). '
      'AI 3: asystent nie zna nasłonecznienia adresu ani taryfy eksportowej, ale przewaga aktualnych założeń jest przejściowa. '
      'Ryzyko błędu jest wysokie (Błąd 2: jedno złe założenie o eksporcie energii odwraca wynik), a okno 48E do 2027 skraca życie części produktów. '
-     'Silniki produkcji PV, taryf i finansowania są wspólne z innymi rodzinami (Wsp 5), dlatego PV tylko jako gałąź innych symulatorów.'),
+     'Silniki produkcji PV, taryf i finansowania są wspólne z innymi rodzinami (Wsp 5); dlatego forma własności PV (ENER-01, na module PV z RENO-02) i magazyn przy istniejącej PV (ENER-02) to odrębne pomysły ze statusem „później”, a pozostałe pytania PV wchodzą jako gałęzie, na przykład RENO-01 w RENO-02.'),
     (6, {}, 'R',
      'wyszukiwania agenta G3 dotyczyły tylko wygaśnięcia 25C; 0 zapytań o konkurencję; dane o dostawach urządzeń (sztuki, nie popyt online) z fali uzupełniającej [E-DEM-08]; RENO-03 w audycie fali 2 i w fali 2b',
      'niska dla rodziny; niska–średnia dla RENO-03',

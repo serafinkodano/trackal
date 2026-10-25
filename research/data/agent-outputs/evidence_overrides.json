@@ -1,11 +1,24 @@
 {
- "_opis": "Poprawki rejestru dowodów po recenzji adwersaryjnej (fala 3). Stosuje je tools/build_evidence.py. 'set' zastępuje wskazane pola wiersza; 'replace' podmienia fragment tekstu (stary fragment musi wystąpić dokładnie raz); 'append' dopisuje nowe wiersze na końcu rejestru; 'reguly' to reguły nakładane na wszystkie wiersze. Pola: tresc, liczby, typ, pewnosc, zrodla (źródła rozdzielone '; '). Druga runda (kontrola spójności): E-DEM-03, E-DEM-14, E-ADS-28, E-POR-02, E-VER-C2, E-REG3-11.",
+ "_opis": "Poprawki rejestru dowodów po recenzji adwersaryjnej (fala 3). Stosuje je tools/build_evidence.py. 'set' zastępuje wskazane pola wiersza; 'replace' podmienia fragment tekstu (stary fragment musi wystąpić dokładnie raz); 'append' dopisuje nowe wiersze na końcu rejestru; 'reguly' to reguły nakładane na wszystkie wiersze. Pola: tresc, liczby, typ, pewnosc, zrodla (źródła rozdzielone '; '). Druga runda (kontrola spójności): E-DEM-03, E-DEM-14, E-ADS-28, E-POR-02, E-VER-C2, E-REG3-11. Trzecia runda (końcowa kontrola spójności): reguła 'streszczenie_max_pewnosc' (wpisy „bezpośrednie” i „pośrednie” mają pewność najwyżej „średnia”; wyjątki z powodem dopisywanym do treści), E-ADS-05 (reguły Google oddzielone od opinii z bloga i anegdot z forów), E-POR2-06 (streszczenie 10-K), E-AI-17 (pierwotne ogłoszenie OpenAI znalezione w E-VER-C2).",
  "reguly": {
   "hipoteza_max_pewnosc": "niska",
   "bez_skracania_prefiksy": [
    "E-VER-",
    "E-REV-"
-  ]
+  ],
+  "streszczenie_max_pewnosc": {
+   "_opis": "Wpisy typów z listy 'typy' (podstawa: streszczenia wyszukiwarki) mają pewność najwyżej 'max'. Wyjątek tylko z powodem wyższej pewności; powód dopisuje się na końcu treści wpisu, a wpis jest podawany w całości.",
+   "typy": [
+    "bezpośrednie",
+    "pośrednie"
+   ],
+   "max": "średnia",
+   "wyjatki": {
+    "E-ADS-01": "Pewność wysoka: rozliczenie za wyświetlenie od 2024 oraz podział 80% po opłacie platformy kupującej (w Google Ads średnio ok. 15%, efektywnie ok. 68%) niezależnie potwierdziła weryfikacja adwersaryjna, także w streszczeniach stron Google (E-VER-C7).",
+    "E-AI-17": "Pewność wysoka: daty i zakres obu wdrożeń (generatywne UI w AI Mode od 18.11.2025, „Intelligent UI” w ChatGPT od 7–8.10.2026) niezależnie potwierdziła weryfikacja adwersaryjna, także w streszczeniach stron pierwotnych Google i OpenAI (E-VER-C1, E-VER-C2).",
+    "E-CAP2-08": "Pewność wysoka: datę ogłoszenia, zakres startowy (AI Pro i Ultra w USA, tryb „Thinking”) i przykład kalkulatora kredytu niezależnie potwierdziła weryfikacja adwersaryjna, także w streszczeniu wpisu Google (E-VER-C1)."
+   }
+  }
  },
  "set": {
   "E-AI-02": {
@@ -43,6 +56,12 @@
   "E-REG3-06": {
    "tresc": "NFIP wygasł 1.10.2025 na 43 dni (do połowy XI 2025) i ponownie po terminie 30.01.2026. Starsze źródła podawały przedłużenie do 30.09.2026. CRS Insight IN10835 (wersja z 11.09.2026) podaje, że NFIP jest autoryzowany do 11.12.2026 (weryfikacja fali 3, E-REV-05); po tej dacie istnieje kolejne ryzyko wygaśnięcia. Jedno źródło wiąże przesunięcie terminu z sekcją 139 Continuing Appropriations and Extensions Act, 2027 (H.R. 6500, P.L. 119-103); tej podstawy prawnej nie sprawdzono w congress.gov. Przy wygaśnięciu FEMA wypłaca roszczenia, ale nie sprzedaje ani nie odnawia polis, a limit pożyczek z Treasury spada z 30,425 mld do 1 mld USD. Program obejmuje ok. 4,6 mln polis i ok. 1,3 bln USD ochrony. Długoterminowa reforma (H.R. 5484) nie została uchwalona (stan na VIII 2026).",
    "liczby": "ok. 4,6 mln polis; ok. 1,3 bln USD ochrony; limit pożyczek 30,425 mld → 1 mld USD przy wygaśnięciu; autoryzacja do 11.12.2026 (CRS IN10835, 11.09.2026); wygaśnięcie na 43 dni od 1.10.2025"
+  },
+  "E-ADS-05": {
+   "tresc": "Strona Google o jakości ruchu (znana ze streszczenia wyszukiwarki) podaje, że przy zablokowaniu konta za invalid traffic Google zatrzymuje całość niewypłaconych środków. Odwołanie jest możliwe tylko wtedy, gdy wydawca w dobrej wierze twierdzi, że ruch nie wynikał z jego działań ani zaniedbania, i nie gwarantuje przywrócenia. Google nie ujawnia metod detekcji. Potrącenia z zarobków za IVT są ostateczne i nieodwoływalne. Tylko ta część wpisu to dowód bezpośredni. Osobno, jako dowód pośredni lub anegdota o pewności niskiej (to nie są reguły Google): według jednego bloga 1-2% potrąceń to „norma”, a powyżej 4-5% trzeba reagować; na forach opisywano pojedyncze potrącenia sięgające 70-80%.",
+   "liczby": "reguły Google: bez progów liczbowych; pośrednie/anegdota, pewność niska: 1-2% potrąceń jako „norma” (jeden blog, opinia), skrajne przypadki 70-80% (fora)",
+   "typ": "bezpośrednie",
+   "pewnosc": "średnia"
   }
  },
  "replace": {
@@ -146,6 +165,20 @@
     "pole": "tresc",
     "stare": "Pełnej listy zakazów nie odczytałem.",
     "nowe": "Pełnej listy zakazów nie było w streszczeniu wyszukiwarki."
+   }
+  ],
+  "E-POR2-06": [
+   {
+    "pole": "tresc",
+    "stare": "Według 10-K za FY2025 przychód NerdWallet",
+    "nowe": "Według streszczenia wyszukiwarki dla 10-K za FY2025 przychód NerdWallet"
+   }
+  ],
+  "E-AI-17": [
+   {
+    "pole": "tresc",
+    "stare": "Źródła wtórne (bez pierwotnego ogłoszenia OpenAI) podają,",
+    "nowe": "Źródła wtórne (agent nie znalazł pierwotnego ogłoszenia OpenAI; znalazła je weryfikacja adwersaryjna, E-VER-C2) podają,"
    }
   ]
  },
