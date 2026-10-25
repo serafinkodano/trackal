@@ -281,10 +281,10 @@ def main():
     upkeep = {s: p('expert_hours_upkeep_tool_year', s) * p('expert_hourly', s) / 12 for s in SCEN}
     add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie)", "sesje / narzędzie / mies.",
          *[int(round((build_cost_cash(s) / 24 + upkeep[s]) / rpm[s] * 1000, -2)) for s in SCEN], "wynik",
-         "porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"])
+         "na tym progu opiera się reguła dodawania narzędzi (architecture-and-validation.md §4.3); porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"])
     add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.", "sesje / narzędzie / mies.",
          *[int(round(((build_cost_cash(s) + build_cost_owner(s)) / 24 + upkeep[s]) / rpm[s] * 1000, -2)) for s in SCEN], "wynik",
-         "reguła dodawania narzędzi w §4.3 architecture-and-validation.md opiera się na tym progu"])
+         "próg pomocniczy z wyceną czasu właściciela (nie jest regułą dodawania narzędzi)"])
 
     for t in TARGETS:
         op = {s: t - fixed_cash(s, 25) for s in SCEN}

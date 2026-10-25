@@ -107,8 +107,8 @@ breakeven,Próg rentowności gotówkowej przy 5 narzędziach z amortyzacją got�
 breakeven,Próg rentowności gotówkowej przy 15 narzędziach z amortyzacją gotówki uruchomienia w 24 mies.,sesje / mies.,2655300,200700,27800,wynik,(koszty stałe + gotówka uruchomienia/24) / przychód na sesję
 unit_economics,Koszt budowy jednego nowego narzędzia: gotówka (ekspert),USD,4500,2450,1375,wynik,expert_hours_new_tool × expert_hourly
 unit_economics,Koszt budowy jednego nowego narzędzia: czas właściciela (wycena),USD,2650,1800,1110,wynik,owner_hours_new_tool × owner_hourly_value
-unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie),sesje / narzędzie / mies.,265200,22400,3200,wynik,"porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"
-unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.,sesje / narzędzie / mies.,373300,35200,5400,wynik,reguła dodawania narzędzi w §4.3 architecture-and-validation.md opiera się na tym progu
+unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie),sesje / narzędzie / mies.,265200,22400,3200,wynik,"na tym progu opiera się reguła dodawania narzędzi (architecture-and-validation.md §4.3); porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"
+unit_economics,Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.,sesje / narzędzie / mies.,373300,35200,5400,wynik,próg pomocniczy z wyceną czasu właściciela (nie jest regułą dodawania narzędzi)
 operating_profit,Zysk operacyjny gotówkowy przy 1000 USD przychodu i 25 narzędziach,USD / mies.,-1545,69,608,wynik,przychód - koszty stałe (25 narzędzi)
 operating_profit,Marża operacyjna gotówkowa przy 1000 USD i 25 narzędziach,%,-155,7,61,wynik,zysk gotówkowy / przychód
 operating_profit,Zysk po wycenie czasu właściciela przy 1000 USD i 25 narzędziach,USD / mies.,-3395,-1051,-22,wynik,j.w. - utrzymanie × stawka właściciela
