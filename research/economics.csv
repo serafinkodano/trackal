@@ -1,11 +1,11 @@
 section,metric,unit,conservative,base,optimistic,type,basis_or_formula
-input,"page_rpm_us: Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",USD / 1000 odsłon,4.0,9.0,18.0,założenie,"ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-05, vendorskie i self-reported); nie pochodzi z danych healthscorer.com"
-input,non_us_rpm_factor: RPM ruchu spoza USA jako ułamek RPM USA,ułamek,0.2,0.25,0.35,założenie,ZAŁOŻENIE (E-ADS-06: tier-1 vs reszta świata)
+input,"page_rpm_us: Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",USD / 1000 odsłon,4.0,9.0,18.0,założenie,"ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-11, E-ADS-12, E-ADS-28; vendorskie i self-reported); nie pochodzi z danych healthscorer.com"
+input,non_us_rpm_factor: RPM ruchu spoza USA jako ułamek RPM USA,ułamek,0.2,0.25,0.35,założenie,ZAŁOŻENIE (E-ADS-16: tier-1 vs reszta świata)
 input,us_share: Udział sesji z USA wśród sesji ludzi,ułamek,0.6,0.75,0.85,założenie,"ZAŁOŻENIE (serwis anglojęzyczny, treści USA)"
-input,pages_per_session: Odsłony na sesję (narzędzie + metodologia/wyniki),odsłony / sesję,1.1,1.3,1.6,założenie,"ZAŁOŻENIE oparte na E-ADS-09 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"
-input,"adblock_loss: Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)",ułamek,0.28,0.2,0.15,założenie,ZAŁOŻENIE oparte na E-ADS-07 (adblock w USA 19-33% zależnie od metody) + GPC/RDP
+input,pages_per_session: Odsłony na sesję (narzędzie + metodologia/wyniki),odsłony / sesję,1.1,1.3,1.6,założenie,"ZAŁOŻENIE oparte na E-ADS-26 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"
+input,"adblock_loss: Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)",ułamek,0.28,0.2,0.15,założenie,"ZAŁOŻENIE oparte na E-ADS-17, E-ADS-19 (adblock w USA 19-33% zależnie od metody) + GPC/RDP"
 input,human_share: Udział sesji ludzi w sesjach zarejestrowanych (po filtrach GA4),ułamek,0.85,0.92,0.97,założenie,ZAŁOŻENIE; boty/agenci AI nie są monetyzowani
-input,ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi,ułamek,0.02,0.1,0.3,założenie,"HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"
+input,ai_share_of_sessions: Udział ruchu z asystentów AI w sesjach ludzi,ułamek,0.02,0.1,0.3,założenie,"HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02, E-VER-C5), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"
 input,"ai_rpm_factor: RPM sesji z AI względem średniej (mobile, aplikacje, zaangażowanie)",mnożnik,0.8,1.0,1.15,założenie,HIPOTEZA; brak danych pierwotnych o RPM ruchu AI
 input,cost_domain: Domena,USD / mies.,2,1.5,1.5,założenie,ZAŁOŻENIE (~18-24 USD/rok)
 input,cost_vps_cdn: VPS + CDN + kopie,USD / mies.,60,30,30,założenie,ZAŁOŻENIE
@@ -24,18 +24,18 @@ input,tools_live_m12: Liczba symulatorów po 12 mies.,szt.,10,15,25,plan,PLAN
 input,share_tools_with_traffic: Udział narzędzi osiągających istotny ruch,ułamek,0.2,0.35,0.5,założenie,"ZAŁOŻENIE (rozkład potęgowy, nie liniowy)"
 input,sessions_top_tool_m12: Sesje/mies. najlepszego narzędzia w mies. 12,sesje / mies.,3000,15000,60000,założenie,"ILUSTRACJA, nie prognoza"
 input,zipf_s: Wykładnik rozkładu ruchu między narzędziami z ruchem (Zipf),-,1.2,1.0,0.9,założenie,ZAŁOŻENIE
-input,seasonality_Jan: mnożnik RPM w miesiącu,mnożnik,0.754,0.754,0.754,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Feb: mnożnik RPM w miesiącu,mnożnik,0.854,0.854,0.854,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Mar: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Apr: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_May: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Jun: mnożnik RPM w miesiącu,mnożnik,0.975,0.975,0.975,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Jul: mnożnik RPM w miesiącu,mnożnik,0.925,0.925,0.925,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Aug: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Sep: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Oct: mnożnik RPM w miesiącu,mnożnik,1.055,1.055,1.055,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Nov: mnożnik RPM w miesiącu,mnożnik,1.206,1.206,1.206,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
-input,seasonality_Dec: mnożnik RPM w miesiącu,mnożnik,1.357,1.357,1.357,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"
+input,seasonality_Jan: mnożnik RPM w miesiącu,mnożnik,0.754,0.754,0.754,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Feb: mnożnik RPM w miesiącu,mnożnik,0.854,0.854,0.854,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Mar: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Apr: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_May: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Jun: mnożnik RPM w miesiącu,mnożnik,0.975,0.975,0.975,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Jul: mnożnik RPM w miesiącu,mnożnik,0.925,0.925,0.925,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Aug: mnożnik RPM w miesiącu,mnożnik,0.955,0.955,0.955,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Sep: mnożnik RPM w miesiącu,mnożnik,1.005,1.005,1.005,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Oct: mnożnik RPM w miesiącu,mnożnik,1.055,1.055,1.055,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Nov: mnożnik RPM w miesiącu,mnożnik,1.206,1.206,1.206,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
+input,seasonality_Dec: mnożnik RPM w miesiącu,mnożnik,1.357,1.357,1.357,założenie,"ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"
 output,Przychód reklamowy na 1000 zarejestrowanych sesji (średnia roczna),USD / 1000 sesji,1.82,7.0,22.39,wynik,pages_per_session × page_rpm_us × (us_share + (1-us_share)×non_us_rpm_factor) × (1-adblock_loss) × mix_AI × human_share
 output,Przychód na 1000 sesji w styczniu (najsłabszy miesiąc),USD / 1000 sesji,1.37,5.27,16.88,wynik,× mnożnik sezonowy
 output,Przychód na 1000 sesji w grudniu (najsilniejszy miesiąc),USD / 1000 sesji,2.47,9.49,30.38,wynik,× mnożnik sezonowy
@@ -57,12 +57,12 @@ required_traffic,Sesje/dzień dla 10000 USD/mies.,sesje / dzień,180370,47020,14
 required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 10 narzędziach z ruchem,sesje / narzędzie / mies.,548310,142930,44650,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
 required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 25 narzędziach z ruchem,sesje / narzędzie / mies.,219320,57170,17860,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
 required_traffic,Średnio sesji/mies. NA NARZĘDZIE dla 10000 USD przy 100 narzędziach z ruchem,sesje / narzędzie / mies.,54830,14290,4470,wynik,"ilustruje, że katalog nie zastępuje ruchu na narzędzie"
-required_traffic,W tym sesje z asystentów AI/mies. dla 1000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,11000,14300,13400,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14)"
-required_traffic,W tym sesje z asystentów AI/mies. dla 3000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,32900,42900,40200,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14)"
-required_traffic,W tym sesje z asystentów AI/mies. dla 10000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,109700,142900,134000,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 1000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,457000,95000,22000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-08/12)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 3000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,1371000,286000,67000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-08/12)"
-sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 10000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,4569000,953000,223000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-08/12)"
+required_traffic,W tym sesje z asystentów AI/mies. dla 1000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,11000,14300,13400,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
+required_traffic,W tym sesje z asystentów AI/mies. dla 3000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,32900,42900,40200,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
+required_traffic,W tym sesje z asystentów AI/mies. dla 10000 USD (przy udziale ai_share_of_sessions),sesje AI / mies.,109700,142900,134000,wynik,"porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 1000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,457000,95000,22000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 3000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,1371000,286000,67000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
+sensitivity,WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla 10000 USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view,sesje / mies.,4569000,953000,223000,hipoteza,"mnożnik przychodu na sesję {'conservative': 1.2, 'base': 1.5, 'optimistic': 2.0}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"
 costs,Stałe koszty gotówkowe/mies. przy 5 narzędziach (z utrzymaniem eksperckim),USD / mies.,879,347,184,wynik,domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12
 breakeven,Próg rentowności gotówkowej przy 5 narzędziach,sesje / mies.,481800,49600,8200,wynik,koszty stałe / przychód na sesję
 breakeven,Próg rentowności z wyceną czasu właściciela przy 5 narzędziach,sesje / mies.,1304300,164000,24300,wynik,(koszty stałe + godziny właściciela × stawka) / przychód na sesję
@@ -87,5 +87,5 @@ illustration_m12,ILUSTRACJA: narzędzia z ruchem / bez istotnego ruchu,szt.,2 / 
 illustration_m12,ILUSTRACJA: wynik gotówkowy/mies. w mies. 12,USD / mies.,-1287,-399,4235,ilustracja,przychód - koszty stałe
 illustration_m12,ILUSTRACJA: wynik po wycenie czasu właściciela w mies. 12,USD / mies.,-2787,-1199,3875,ilustracja,j.w. - czas właściciela
 addon_separate,DODATEK (poza modelem bazowym): afiliacja/lead-gen — udział sesji kończących się kliknięciem partnera,ułamek,0.005,0.015,0.03,założenie,ZAŁOŻENIE; nie ratuje modelu bazowego
-addon_separate,DODATEK: przychód na kliknięcie/lead partnera (średnio),USD,5,15,40,założenie,"ZAŁOŻENIE; stawki CPL w energii/ubezpieczeniach/kredytach są wyższe, ale wymagają kwalifikacji leadu (E-ADS-*)"
+addon_separate,DODATEK: przychód na kliknięcie/lead partnera (średnio),USD,5,15,40,założenie,"ZAŁOŻENIE; stawki CPL w energii/ubezpieczeniach/kredytach są wyższe, ale wymagają kwalifikacji leadu (E-ADS-33, E-ADS-34)"
 addon_separate,DODATEK: przychód z afiliacji na 1000 sesji,USD / 1000 sesji,25.0,225.0,1200.0,wynik,udział × stawka × 1000

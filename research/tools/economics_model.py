@@ -16,20 +16,20 @@ INPUTS = [
     # --- revenue per session -------------------------------------------------
     ("page_rpm_us", "Page RPM wydawcy (AdSense, netto po udziale Google) dla ruchu z USA na stronach narzędzi finanse/dom",
      "USD / 1000 odsłon", {"conservative": 4.0, "base": 9.0, "optimistic": 18.0},
-     "ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-05, vendorskie i self-reported); nie pochodzi z danych healthscorer.com"),
+     "ZAŁOŻENIE skalibrowane do zakresów 3-5 / 8-12 / 15-25 USD (E-ADS-11, E-ADS-12, E-ADS-28; vendorskie i self-reported); nie pochodzi z danych healthscorer.com"),
     ("non_us_rpm_factor", "RPM ruchu spoza USA jako ułamek RPM USA", "ułamek",
-     {"conservative": 0.20, "base": 0.25, "optimistic": 0.35}, "ZAŁOŻENIE (E-ADS-06: tier-1 vs reszta świata)"),
+     {"conservative": 0.20, "base": 0.25, "optimistic": 0.35}, "ZAŁOŻENIE (E-ADS-16: tier-1 vs reszta świata)"),
     ("us_share", "Udział sesji z USA wśród sesji ludzi", "ułamek",
      {"conservative": 0.60, "base": 0.75, "optimistic": 0.85}, "ZAŁOŻENIE (serwis anglojęzyczny, treści USA)"),
     ("pages_per_session", "Odsłony na sesję (narzędzie + metodologia/wyniki)", "odsłony / sesję",
-     {"conservative": 1.1, "base": 1.3, "optimistic": 1.6}, "ZAŁOŻENIE oparte na E-ADS-09 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"),
+     {"conservative": 1.1, "base": 1.3, "optimistic": 1.6}, "ZAŁOŻENIE oparte na E-ADS-26 (landing pages 1-1,5 PV/sesję; AdSense bez odświeżania): interaktywne przeliczenia nie generują odsłon"),
     ("adblock_loss", "Udział odsłon bez monetyzacji (adblock, brak zgody, brak wypełnienia)", "ułamek",
-     {"conservative": 0.28, "base": 0.20, "optimistic": 0.15}, "ZAŁOŻENIE oparte na E-ADS-07 (adblock w USA 19-33% zależnie od metody) + GPC/RDP"),
+     {"conservative": 0.28, "base": 0.20, "optimistic": 0.15}, "ZAŁOŻENIE oparte na E-ADS-17, E-ADS-19 (adblock w USA 19-33% zależnie od metody) + GPC/RDP"),
     ("human_share", "Udział sesji ludzi w sesjach zarejestrowanych (po filtrach GA4)", "ułamek",
      {"conservative": 0.85, "base": 0.92, "optimistic": 0.97}, "ZAŁOŻENIE; boty/agenci AI nie są monetyzowani"),
     # --- traffic structure ---------------------------------------------------
     ("ai_share_of_sessions", "Udział ruchu z asystentów AI w sesjach ludzi", "ułamek",
-     {"conservative": 0.02, "base": 0.10, "optimistic": 0.30}, "HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"),
+     {"conservative": 0.02, "base": 0.10, "optimistic": 0.30}, "HIPOTEZA; benchmarki rynkowe 0,1-1% ruchu witryn (E-AI-02, E-VER-C5), właściciel obserwuje więcej na healthscorer.com (niezweryfikowane)"),
     ("ai_rpm_factor", "RPM sesji z AI względem średniej (mobile, aplikacje, zaangażowanie)", "mnożnik",
      {"conservative": 0.8, "base": 1.0, "optimistic": 1.15}, "HIPOTEZA; brak danych pierwotnych o RPM ruchu AI"),
     # --- costs (monthly, cash) -----------------------------------------------
@@ -67,7 +67,7 @@ INPUTS = [
      {"conservative": 1.2, "base": 1.0, "optimistic": 0.9}, "ZAŁOŻENIE"),
 ]
 
-SEASONALITY = {  # multiplier on RPM; normalised to mean 1.0 below. ASSUMPTION (E-ADS-*)
+SEASONALITY = {  # multiplier on RPM; normalised to mean 1.0 below. ASSUMPTION (E-ADS-20)
     "Jan": 0.75, "Feb": 0.85, "Mar": 0.95, "Apr": 0.95, "May": 1.0, "Jun": 0.97,
     "Jul": 0.92, "Aug": 0.95, "Sep": 1.0, "Oct": 1.05, "Nov": 1.2, "Dec": 1.35,
 }
@@ -119,7 +119,7 @@ def main():
         add(["input", f"{k}: {label}", unit, *[vals[s] for s in SCEN], "założenie" if "ZAŁOŻENIE" in basis or "HIPOTEZA" in basis or "ILUSTRACJA" in basis else "plan", basis])
     for mth, v in SEASONALITY.items():
         add(["input", f"seasonality_{mth}: mnożnik RPM w miesiącu", "mnożnik", round(v, 3), round(v, 3), round(v, 3), "założenie",
-             "ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-10)"])
+             "ZAŁOŻENIE; średnia roczna = 1.0; styczeń ok. 55% grudnia (raporty: spadek 35-75% po szczycie Q4, E-ADS-20)"])
 
     rpm = {s: session_rpm(s) for s in SCEN}
     add(["output", "Przychód reklamowy na 1000 zarejestrowanych sesji (średnia roczna)", "USD / 1000 sesji",
@@ -145,11 +145,11 @@ def main():
     for t in TARGETS:
         add(["required_traffic", f"W tym sesje z asystentów AI/mies. dla {t} USD (przy udziale ai_share_of_sessions)", "sesje AI / mies.",
              *[int(round(t / rpm[s] * 1000 * p("ai_share_of_sessions", s), -2)) for s in SCEN], "wynik",
-             "porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14)"])
+             "porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"])
     for t in TARGETS:
         add(["sensitivity", f"WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla {t} USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view", "sesje / mies.",
              *[int(round(t / (rpm[s] * PREMIUM_UPLIFT[s]) * 1000, -3)) for s in SCEN], "hipoteza",
-             f"mnożnik przychodu na sesję {PREMIUM_UPLIFT}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-08/12)"])
+             f"mnożnik przychodu na sesję {PREMIUM_UPLIFT}; HIPOTEZA - brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"])
     for tools in (5, 15, 50):
         fixed = {s: monthly_fixed_cash(s, tools) for s in SCEN}
         add(["costs", f"Stałe koszty gotówkowe/mies. przy {tools} narzędziach (z utrzymaniem eksperckim)", "USD / mies.",
@@ -213,7 +213,7 @@ ADDONS = [
     ["addon_separate", "DODATEK (poza modelem bazowym): afiliacja/lead-gen — udział sesji kończących się kliknięciem partnera", "ułamek",
      0.005, 0.015, 0.03, "założenie", "ZAŁOŻENIE; nie ratuje modelu bazowego"],
     ["addon_separate", "DODATEK: przychód na kliknięcie/lead partnera (średnio)", "USD",
-     5, 15, 40, "założenie", "ZAŁOŻENIE; stawki CPL w energii/ubezpieczeniach/kredytach są wyższe, ale wymagają kwalifikacji leadu (E-ADS-*)"],
+     5, 15, 40, "założenie", "ZAŁOŻENIE; stawki CPL w energii/ubezpieczeniach/kredytach są wyższe, ale wymagają kwalifikacji leadu (E-ADS-33, E-ADS-34)"],
     ["addon_separate", "DODATEK: przychód z afiliacji na 1000 sesji", "USD / 1000 sesji",
      round(0.005 * 5 * 1000, 2), round(0.015 * 15 * 1000, 2), round(0.03 * 40 * 1000, 2), "wynik", "udział × stawka × 1000"],
 ]
