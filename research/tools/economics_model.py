@@ -143,6 +143,9 @@ def main():
                  *[int(round(req[s] / n, -1)) for s in SCEN], "wynik", "ilustruje, że katalog nie zastępuje ruchu na narzędzie"])
 
     for t in TARGETS:
+        add(["required_traffic", f"W tym sesje z wyszukiwarek i innych źródeł (nie-AI)/mies. dla {t} USD", "sesje / mies.",
+             *[int(round(t / rpm[s] * 1000 * (1 - p("ai_share_of_sessions", s)), -2)) for s in SCEN], "wynik",
+             "sesje łączne × (1 - ai_share_of_sessions); w praktyce głównie Google organic"])
         add(["required_traffic", f"W tym sesje z asystentów AI/mies. dla {t} USD (przy udziale ai_share_of_sessions)", "sesje AI / mies.",
              *[int(round(t / rpm[s] * 1000 * p("ai_share_of_sessions", s), -2)) for s in SCEN], "wynik",
              "porównaj: Omni Calculator ~5-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini przy ~14 mln wizyt (szacunek Semrush, E-AI-14, E-VER-C4)"])
@@ -210,12 +213,13 @@ def main():
 
 # Add-on models are reported separately and never enter the base model above.
 ADDONS = [
-    ["addon_separate", "DODATEK (poza modelem bazowym): afiliacja/lead-gen — udział sesji kończących się kliknięciem partnera", "ułamek",
-     0.005, 0.015, 0.03, "założenie", "ZAŁOŻENIE; nie ratuje modelu bazowego"],
-    ["addon_separate", "DODATEK: przychód na kliknięcie/lead partnera (średnio)", "USD",
-     5, 15, 40, "założenie", "ZAŁOŻENIE; stawki CPL w energii/ubezpieczeniach/kredytach są wyższe, ale wymagają kwalifikacji leadu (E-ADS-33, E-ADS-34)"],
-    ["addon_separate", "DODATEK: przychód z afiliacji na 1000 sesji", "USD / 1000 sesji",
-     round(0.005 * 5 * 1000, 2), round(0.015 * 15 * 1000, 2), round(0.03 * 40 * 1000, 2), "wynik", "udział × stawka × 1000"],
+    ["addon_separate", "DODATEK (poza modelem bazowym): udział sesji kończących się kwalifikowaną konwersją u partnera (lead/wniosek)", "ułamek",
+     0.002, 0.005, 0.01, "założenie", "ZAŁOŻENIE; nie ratuje modelu bazowego; wymaga zgód (TCPA - niezbadane) i neutralności rekomendacji"],
+    ["addon_separate", "DODATEK: wypłata dla wydawcy za konwersję (po marży sieci)", "USD",
+     10, 25, 50, "założenie", "ZAŁOŻENIE; ceny płacone przez kupujących leady: solar 25-250, ubezp. auto 8-80, home 6-18, refi 40-200 USD (E-ADS-33); wydawca dostaje mniej"],
+    ["addon_separate", "DODATEK: przychód z lead-gen/afiliacji na 1000 sesji", "USD / 1000 sesji",
+     round(0.002 * 10 * 1000, 2), round(0.005 * 25 * 1000, 2), round(0.01 * 50 * 1000, 2), "wynik",
+     "udział × wypłata × 1000; ILUSTRACJA rzędu wielkości: nawet ostrożny lead-gen może przewyższyć display - potwierdza to model biznesowy NerdWallet/SmartAsset (E-POR2-06, E-POR2-07)"],
 ]
 
 if __name__ == "__main__":
