@@ -12,7 +12,7 @@ Data badania: 2026-10-25. Identyfikatory `E-…` odsyłają do rejestru dowodów
 | Testy asystentów (ChatGPT, Perplexity, Gemini, Copilot, Claude w wersjach konsumenckich) | brak dostępu | wyników testów **nie symulowano**; przygotowano plan testu i pule promptów (`top-10-products.md`, `architecture-and-validation.md`) |
 | Analityka healthscorer.com | nieprzekazana | nie wyciągam wniosków o RPM ani o udziale ruchu AI na tej domenie |
 
-Badanie wykonało ~19 agentów w fali 1 (fundamenty, rodziny, pomysły startowe), 10 agentów uzupełniających, 2 weryfikatorów adwersaryjnych i 25 audytorów konkurencji (fala 2) oraz agentów pogłębionej weryfikacji finalistów. Łącznie kilkaset zapytań; wszystkie dowody o konkurencji mają status „search-summary”.
+Badanie wykonało 17 agentów w fali 1 (fundamenty, rodziny, pomysły startowe), 10 agentów uzupełniających, 2 weryfikatorów adwersaryjnych i 25 audytorów konkurencji (fala 2) oraz agentów pogłębionej weryfikacji finalistów. Łącznie kilkaset zapytań; wszystkie dowody o konkurencji mają status „search-summary”.
 
 ---
 
@@ -157,8 +157,8 @@ Kolumny: Pop = popyt i jego dowody; Kom = komercyjny charakter; Luka = luka zint
 | Zapas i finansowanie zapasów (e-commerce) | 3 | 4 | 4 | 3 | 5 | 4 | 3 | 4 | 3 | 4 | 3,7 | **pilotaż poboczny** (founder-market fit); mała, B2B-owa populacja, płatne narzędzia (Cogsy, 8fig) |
 | Freelancer / 1099: forma, emerytura, zdrowie | 4 | 5 | 3 | 4 | 5 | 3 | 2 | 4 | 5 | 2 | 3,7 | **później** — gęsta konkurencja częściowa, wysokie ryzyko podatkowe |
 | Wczesna emerytura i klif ACA/MAGI | 3 | 4 | 4 | 4 | 5 | 3 | 2 | 4 | 4 | 3 | 3,6 | **zbadać** — realna zmiana 2026 (powrót klifu 400% FPL) [E-REG2-13]; wysoki koszt ekspercki |
-| Zasilanie awaryjne | 3 | 4 | 4→2 | 3 | 4 | 4 | 3 | 3 | 4 | 4 | 3,4 | **ograniczyć** — po fali uzupełniającej luka obniżona: istnieje konkurent bezpośredni (Home Energy Planner) [seed F] |
-| Nieruchomości na wynajem | 4 | 4 | 3→2 | 3 | 5 | 4 | 2 | 4 | 4 | 3 | 3,5 | **ograniczyć** do wąskich momentów; BiggerPockets „Sell vs Keep” i OverlineIQ to konkurenci bezpośredni [seed H] |
+| Zasilanie awaryjne | 3 | 4 | 4→2 | 3 | 4 | 4 | 3 | 3 | 4 | 4 | 3,4 | **ograniczyć** — po fali uzupełniającej luka obniżona: możliwy konkurent bezpośredni (Home Energy Planner — klasyfikacja sporna między agentami, do ręcznej weryfikacji) (`top-10-products.md` §0, seed F) |
+| Nieruchomości na wynajem | 4 | 4 | 3→2 | 3 | 5 | 4 | 2 | 4 | 4 | 3 | 3,5 | **ograniczyć** do wąskich momentów; BiggerPockets „Sell vs Keep” i OverlineIQ to konkurenci bezpośredni (`top-10-products.md` §0, seed H) |
 | PV i magazyny | 3→2 | 5 | 3 | 3 | 5 | 3 | 2 | 4 | 4 | 3 | 3,4 | **tylko jako gałąź** innych symulatorów; rynek kurczy się po 25D [E-DEM-10] |
 | Ogrzewanie/chłodzenie, ciepła woda | 4 | 4 | 3 | 3 | 4 | 3 | 3 | 4 | 4 | 3 | 3,5 | **rozwijać przez moment awarii** (repair vs replace vs heat pump) |
 | Sprzęt: buy vs lease vs loan (firmy) | 3 | 4 | 3 | 3 | 4 | 4 | 3 | 4 | 4 | 3 | 3,5 | później |
@@ -178,7 +178,7 @@ Kolumny: Pop = popyt i jego dowody; Kom = komercyjny charakter; Luka = luka zint
 | Relokacja międzystanowa (podatki, koszty życia) | 4 | 4 | 2 | 3 | 4 | 1 | 3 | 3 | 4 | 3 | 3,1 | później |
 | Opieka długoterminowa (LTC) | 3 | 4 | 3 | 3 | 3 | 3 | 2 | 3 | 4 | 2 | 3,0 | później |
 | Opieka nad dziećmi vs praca | 4 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 2 | 4 | 3,0 | później (słaba reklama) |
-| Ubezpieczenia ogólnie (udziały własne, rezerwy) | 3 | 4 | 3→1 | 2 | 4 | 2 | 2 | 3 | 4 | 2 | 2,9 | **odrzucić jako rodzinę**; zostają moduły („zgłosić szkodę?”, udział procentowy vs rezerwa) [seed B] |
+| Ubezpieczenia ogólnie (udziały własne, rezerwy) | 3 | 4 | 3→1 | 2 | 4 | 2 | 2 | 3 | 4 | 2 | 2,7 | **odrzucić jako rodzinę**; zostają moduły („zgłosić szkodę?”, udział procentowy vs rezerwa) (`top-10-products.md` §0, seed B) |
 | Import, cła, landed cost | 4 | 4 | 3 | 3 | 4 | 1 | 2 | 3 | 3 | 2 | 2,9 | tylko timing, nie stawki celne |
 | Rozwód (dom) | 3 | 4 | 3 | 3 | 3 | 3 | 1 | 3 | 3 | 2 | 2,8 | później |
 | Zatrudnienie W-2 vs 1099 | 3 | 4 | 2 | 2 | 3 | 2 | 2 | 3 | 4 | 2 | 2,7 | nie wchodzić |
