@@ -8,6 +8,8 @@ import csv, glob, json, os, re, sys
 from urllib.parse import urlparse
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else '/home/user/trackal/research'
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+import build_cards as bc  # wspólne poprawki tekstu (bc.fix) i dwuosiowe etykiety popytu (bc.demand_label)
 W = {'demand': .20, 'gap': .20, 'ai_distribution': .15, 'ad_potential': .15, 'feasibility': .10, 'reliability': .10, 'shared_engine': .10}
 KPL = {'demand': 'popyt', 'gap': 'luka', 'ai_distribution': 'dystrybucja AI', 'ad_potential': 'reklama', 'feasibility': 'wykonalność',
        'reliability': 'wiarygodność', 'shared_engine': 'wspólny silnik'}
@@ -191,15 +193,26 @@ TEXT_SUBS = [
     ('SERP jest zdominowany przez domeny o wysokim autorytecie (YMYL)', 'w wynikach wyszukiwania (search-summary) dominują domeny o wysokim autorytecie (YMYL); pełnego SERP nie badano (K-05)'),
     ('SERP jest zatłoczony', 'wyniki wyszukiwania (search-summary) są zatłoczone'),
     ('solidny popyt', 'dobrą ocenę popytu (4/5, sygnały pośrednie)'),
+    ('Popyt jest realny i rosnący', 'Sygnały popytu są pośrednie (zdarzenia, podaż treści); wolumenów nie zmierzono'),
+    ('Popyt istnieje i jest widoczny na forach', 'Pytania pojawiają się na forach (anegdotycznie); wolumenów nie zmierzono'),
+    ('Profil jest mocny w popycie', 'Ocena popytu jest wysoka, ale opiera się na sygnałach pośrednich'),
+    ('Popyt i potencjał reklamowy są mocne', 'Ocena popytu (sygnały pośrednie) i potencjału reklamowego jest wysoka'),
+    ('Popyt i wartość reklamowa wyglądają mocno', 'Ocena popytu (sygnały pośrednie) i wartości reklamowej jest wysoka'),
+    ('realny popyt pytaniowy', 'pytania widoczne online (sygnał pośredni, bez wolumenu)'),
+    ('Silny popyt wymuszony zdarzeniem', 'Duża skala zdarzenia (sygnał pośredni, nie pomiar popytu online)'),
+    ('Silny popyt tematyczny', 'Duża podaż treści na temat (sygnał pośredni)'),
+    ('decyzja dotyczy bardzo dużej grupy kupujących rocznie', 'to skala zdarzeń, nie popyt online'),
 ]
 
 
-def apply_subs(rows_):
+def apply_subs(rows_, cards_fix=False):
     for r in rows_:
         for k, v in r.items():
             if isinstance(v, str):
                 for a_, b_ in TEXT_SUBS:
                     v = v.replace(a_, b_)
+                if cards_fix and k not in ('ID', 'status', 'odrebny_pomysl'):
+                    v = bc.fix(v)
                 r[k] = v
 
 # =========================== competitor register ===========================
@@ -262,7 +275,7 @@ for fid, d in sorted(refutes.items()):
         reg.append({
             'data': '2026-10-25', 'etap': 'fala 2b: próba obalenia (finaliści)', 'agent_zrodlowy': f'refute_{fid}', 'produkt_ID_agenta': fid,
             'produkt_ID_final': fid,
-            'kwerenda': 'nieprzypisane – jedno z 8 zapytań agenta obalającego (pełna lista: data/agent-outputs/refute_' + fid + '.json, pole queries_run)',
+            'kwerenda': ' ; '.join(d['queries_run']) + ' (kandydat nieprzypisany do konkretnego zapytania; lista z data/agent-outputs/refute_' + fid + '.json)',
             'URL_zrodla': cnd['url'], 'url_zgodny_z_nazwa_konkurenta': um, 'konkurent': cnd['name'],
             'typ_wiersza': 'konkurent', 'klasyfikacja (automatyczna z wniosku)': klas,
             'sprawdzone_funkcje': cnd['evidence_pl'],
@@ -272,6 +285,29 @@ for fid, d in sorted(refutes.items()):
             'status_weryfikacji': 'strona nieotwierana; ' + ('URL nie należy do konkurenta (wzmianka lub artykuł); strona narzędzia nieustalona' if um.startswith('nie') else 'do ręcznej weryfikacji przed decyzją o pilocie'),
             'konflikt_klasyfikacji': '', 'zastapiony_przez_nowsza_fale': '',
         })
+
+# wave-1 rows whose conclusion classifies several ideas differently ("DIRECT dla G6-03; PARTIAL dla G6-02") -> one row per product
+TID = re.compile(r'T-S\d-R\d|(?<!T-)S\d-R\d|G\d-\d\d')
+split = []
+for r in reg:
+    finals = r['produkt_ID_final'].split(';')
+    if not r['etap'].startswith('fala 1') or len(finals) < 2 or r['typ_wiersza'] != 'konkurent':
+        split.append(r); continue
+    per = {}
+    for seg in re.split(r';', r['wniosek']):
+        k = classify(seg, r['konkurent'])
+        for t in TID.findall(seg):
+            f = temp2final.get((r['agent_zrodlowy'], t)) or temp2final.get(('*', t))
+            if f and k != 'niezweryfikowany':
+                per.setdefault(f, k)
+    if not per:
+        split.append(r); continue
+    for f in finals:
+        r2 = dict(r)
+        r2['produkt_ID_final'] = f
+        r2['klasyfikacja (automatyczna z wniosku)'] = per.get(f, 'niezweryfikowany (wniosek dotyczy innego zakresu)')
+        split.append(r2)
+reg = split
 
 # dedup exact duplicates
 seen, out = set(), []
@@ -317,6 +353,20 @@ for (p, k), idx in by_pu.items():
             out[i]['zastapiony_przez_nowsza_fale'] = f"tak – dla {p} obowiązuje ocena z etapu „{out[newest[0]]['etap']}”"
             nsup += 1
 
+CONTESTED = {'ENER-03', 'RENT-01'}
+for r in out:
+    if not r['etap'].startswith('fala 1') or r['typ_wiersza'] != 'konkurent':
+        continue
+    if not r['klasyfikacja (automatyczna z wniosku)'].startswith(('bezpośredni', 'prawdopodobnie bezpośredni', 'sporny')):
+        continue
+    notes_ = []
+    for pid in r['produkt_ID_final'].split(';'):
+        if pid in CONTESTED:
+            notes_.append(f'nie – dla {pid} klasyfikacja sporna (fala 1: bezpośredni, fala 2: częściowy); rozstrzyga ręczna weryfikacja (K-03)')
+        elif pid in audits and not cal.get(pid, {}).get('direct'):
+            notes_.append(f"tak – dla {pid} w audycie fali 2{' i próbie obalenia fali 2b' if pid in refutes else ''} nie potwierdzono konkurenta bezpośredniego; obowiązuje ocena nowszej fali")
+    if notes_:
+        r['zastapiony_przez_nowsza_fale'] = ' | '.join(notes_)
 out.sort(key=lambda r: (-WAVE[r['etap']], r['produkt_ID_final'], r['konkurent']))
 apply_subs(out)
 with open(f'{OUT}/competitor-audit.csv', 'w', newline='', encoding='utf-8') as f:
@@ -346,32 +396,39 @@ for r in out:
 
 # =========================== product opportunities ===========================
 NEAR = {
-    'AUTO-01': 'Bliski duplikat AUTO-03 (ten sam silnik keep vs trade/replace; AUTO-01 = wyzwalacz ujemny kapitał, AUTO-03 = wyzwalacz wycena naprawy). Traktować jako dwa wejścia do jednego symulatora.',
-    'AUTO-03': 'Bliski duplikat AUTO-01: ten sam silnik, inny wyzwalacz (wycena naprawy). Wejście/preset AUTO-01, nie osobny produkt.',
-    'CARE-04': 'Bliski duplikat LIFE-01 (dom rodzica: sprzedać/wynająć/zatrzymać — przed i po śmierci). Wariant czasowy LIFE-01.',
-    'LIFE-01': 'Bliskie duplikaty: CARE-04 (ten sam dom przed śmiercią rodzica) i LIFE-02 (wykup współwłaściciela = moduł LIFE-01).',
-    'LIFE-02': 'Bliski duplikat LIFE-01: wykup współwłaściciela to moduł LIFE-01.',
-    'INS-06': 'Podzbiór ENER-03 (pompa sump jako jedno z obciążeń zasilania awaryjnego). Gałąź ENER-03, nie osobny produkt.',
+    'AUTO-01': 'Wspólny silnik z AUTO-03, ale inna decyzja (AUTO-01: wyjście z ujemnego kapitału; AUTO-03: naprawa vs wymiana po wycenie naprawy) i inne warianty — oba liczone jako odrębne pomysły.',
+    'AUTO-03': 'Wspólny silnik z AUTO-01, ale inna decyzja (naprawa vs wymiana) i inne warianty; budować jako drugi tryb tego samego silnika, po wyniku AUTO-01.',
+    'CARE-04': 'Wspólny silnik z LIFE-01, ale inna decyzja (dom rodzica przed jego śmiercią: Medicaid, brak step-up, darowizna) — odrębny pomysł.',
+    'LIFE-01': 'Wspólne moduły z CARE-04 (ten sam dom przed śmiercią rodzica) i LIFE-02 (wykup współwłaściciela); to odrębne decyzje z innymi regułami.',
+    'LIFE-02': 'Wspólny moduł wykupu współwłaściciela z LIFE-01, ale inna decyzja (rozwód: QDRO, refinansowanie, §1041) — odrębny pomysł.',
+    'INS-06': 'Podzbiór ENER-03 (pompa sump jako jedno z obciążeń zasilania awaryjnego). Gałąź ENER-03 — nie liczy się do odrębnych pomysłów.',
     'ENER-03': 'Obejmuje INS-06 (pompa sump) jako gałąź.',
-    'BIZ-05': 'Bliski duplikat BIZ-06 (porównanie ofert MCA/RBF/LOC/karta). Jeden silnik porównania kosztu finansowania firmy.',
-    'BIZ-06': 'Bliski duplikat BIZ-05: ten sam silnik porównania ofert finansowania.',
+    'BIZ-05': 'Obejmuje BIZ-06 (czekanie na SBA vs finansowanie pomostowe) jako wariant tego samego porównania ofert.',
+    'BIZ-06': 'Wariant BIZ-05 (to samo porównanie ofert finansowania z opcją czekania na SBA) — nie liczy się do odrębnych pomysłów.',
     'RENO-07': 'Część „sprzedaż as-is” pokrywa HOME-03; reszta to wariant RENO-02.',
     'HOME-03': 'Pokrywa część RENO-07 (sprzedaż as-is).',
-    'CARE-07': 'Lepiej jako moduł capex w CARE-01 niż osobny produkt (bliski duplikat).',
+    'CARE-07': 'Moduł capex CARE-01 (warianty CARE-07 są podzbiorem wariantów CARE-01) — nie liczy się do odrębnych pomysłów.',
     'CARE-01': 'Wchłania CARE-07 jako moduł capex.',
-    'INS-08': 'Jeden szablon „ubezpieczyć vs samoubezpieczyć” z INS-09, INS-10 i CARE-06 — presety jednego silnika.',
-    'INS-09': 'Jeden szablon „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-10 i CARE-06 — preset.',
-    'INS-10': 'Jeden szablon „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-09 i CARE-06 — preset.',
-    'CARE-06': 'Jeden szablon „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-09 i INS-10 — preset.',
+    'INS-08': 'Wspólny szablon obliczeń „ubezpieczyć vs samoubezpieczyć” z INS-09, INS-10 i CARE-06; to różne decyzje i modele (auto, zwierzę, gwarancja domu, LTC), nie presety.',
+    'INS-09': 'Wspólny szablon obliczeń „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-10 i CARE-06; inna decyzja i model (ubezpieczenie zwierzęcia).',
+    'INS-10': 'Wspólny szablon obliczeń „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-09 i CARE-06; inna decyzja i model (gwarancja domu).',
+    'CARE-06': 'Wspólny szablon obliczeń „ubezpieczyć vs samoubezpieczyć” z INS-08, INS-09 i INS-10; inna decyzja i znacznie bardziej złożony model (LTC).',
     'RET-01': 'Bliski duplikat RET-03 (wieloletnie konwersje Roth z progiem IRMAA/ACA). RET-03 odrzucony (konkurenci bezpośredni) — dotyczy to też gałęzi ACA w RET-01.',
     'RET-03': 'Bliski duplikat RET-01 (gałąź ACA).',
-    'BIZ-15': 'Inny model popytu (newsvendor, jednorazowy zakup sezonowy), ten sam silnik gotówki co BIZ-04 — tryb BIZ-04, nie osobny silnik.',
+    'BIZ-15': 'Inny model popytu (newsvendor, jednorazowy zakup sezonowy) i inne warianty niż BIZ-04; wspólny silnik gotówki — odrębny pomysł.',
     'RENO-01': 'Scalony z RENO-02 po audycie: przełącznik PV (demontaż/ponowny montaż) jest w MVP RENO-02, pełna ekonomika PV odroczona. Nie liczy się do odrębnych pomysłów.',
 }
-OUTSIDE = {'JOB-02': 'poza zakresem startowym domeny', 'HLTH-02': 'poza zakresem startowym domeny (zdrowie)', 'HLTH-01': 'poza zakresem startowym domeny (zdrowie)',
-           'LIFE-04': 'poza zakresem startowym domeny (finansowanie studiów)', 'FIN-03': 'poza zakresem startowym domeny (kredyty studenckie)',
-           'BIZ-07': 'osobna domena, jeśli w ogóle'}
+OUTSIDE = {'HLTH-02': 'poza zakresem startowym domeny (zdrowie)', 'HLTH-01': 'poza zakresem startowym domeny (zdrowie)',
+           'LIFE-04': 'poza zakresem startowym domeny (finansowanie studiów)', 'FIN-03': 'poza zakresem startowym domeny (kredyty studenckie)'}
+NOT_DISTINCT = {'RENO-01': 'nie (gałąź RENO-02)', 'INS-06': 'nie (gałąź ENER-03)', 'CARE-07': 'nie (moduł CARE-01)', 'BIZ-06': 'nie (wariant BIZ-05)'}
+DOMAIN_NOTE = {
+    'RET': 'poza zakresem startowym domeny (emerytura)', 'CARE': 'poza zakresem startowym domeny (opieka i starzenie)',
+    'JOB': 'poza zakresem startowym domeny (praca, relokacja, benefity)',
+    'BIZ': 'poza domeną; ewentualny test w istniejącym serwisie e-commerce właściciela, osobna domena dopiero po spełnieniu warunków 3 i 4 (architecture-and-validation.md §1.2)',
+}
 TEXT_FIX = [
+    ('BIZ-13', 'uzasadnienie_statusu', 'Dobry kandydat na drugi symulator w pilocie wspólnego silnika.',
+     'Poza domeną wariantu B (mała firma/e-commerce); ewentualny test w istniejącym serwisie e-commerce właściciela (architecture-and-validation.md §1.2).'),
     ('CARE-03', 'uzasadnienie_statusu', 'Wymaga weryfikacji (brak wyszukiwań).',
      'Wymaga dalszej weryfikacji: w fali 1 (T-S4) wyszukiwanie znalazło tylko moduły częściowe, np. HomeAdditionCostCalculator (koszt ADU, czynsz, okres zwrotu; search-summary), bez modułu opieki.'),
     ('CARE-03', 'co_juz_rozwiazano', 'Według wiedzy modelu (niezweryfikowane) istnieją osobne kalkulatory ADU i senior living oraz artykuły o życiu wielopokoleniowym. Integracja jest nieznana.',
@@ -399,19 +456,18 @@ def demand_text(fid, fallback):
         ex = []
         for s in sig[:3]:
             rid = url2ev.get((s.get('url') or '').rstrip('/'))
-            ex.append(f"[{EVK.get(s['evidence_type'], s['evidence_type'])}] {s['signal_pl'][:220].rstrip()}" + (f' [{rid}]' if rid else ''))
-        parts.append(f"Audyt fali 2: {len(sig)} sygnałów (" + ', '.join(f'{k}: {v}' for k, v in cnt.items()) + '). Przykłady: ' + ' | '.join(ex))
+            ex.append(f"[siła źródła wg audytora: {EVK.get(s['evidence_type'], s['evidence_type'])}] {s['signal_pl'][:220].rstrip()}" + (f' [{rid}]' if rid else ''))
+        parts.append(f"Audyt fali 2: {len(sig)} sygnałów (siła źródła wg audytora — " + ', '.join(f'{k}: {v}' for k, v in cnt.items()) + '). Przykłady: ' + ' | '.join(ex))
     d = demands.get(fid)
     if d:
         de = d['demand_evidence']
-        cnt = Counter(EVK.get(x['kind'], x['kind']) for x in de)
         ex = []
-        for x in [y for y in de if y['kind'] == 'direct'][:2] + [y for y in de if y['kind'] != 'direct'][:2]:
+        for i, x in enumerate(de[:4]):
             rid = url2ev.get((x.get('url') or '').rstrip('/'))
-            ex.append(f"[{EVK.get(x['kind'], x['kind'])}] {x['claim_pl'][:200].rstrip()}" + (f' [{rid}]' if rid else ''))
-        parts.append(f"Fala 2b (popyt): {len(de)} dowodów (" + ', '.join(f'{k}: {v}' for k, v in cnt.items()) + '). Przykłady: ' + ' | '.join(ex))
+            ex.append(f"{bc.demand_label(fid, i, x)} {x['claim_pl'][:200].rstrip()}" + (f' [{rid}]' if rid else ''))
+        parts.append(f"Fala 2b (popyt): {len(de)} dowodów; pokazano 4 pierwsze z etykietami w dwóch osiach jak w top-10-products.md (pełna lista: data/agent-outputs/demand_{fid}.json). Przykłady: " + ' | '.join(ex))
     if parts:
-        parts.append('Wolumenów wyszukiwań ani promptów nie zmierzono (brak dostępu do danych SEO); „bezpośredni” = pytanie istnieje w tej formie, nie jego skala.')
+        parts.append('Legenda: „siła źródła” ocenia źródło (pierwotne/wtórne), nie popyt; dwuosiowe etykiety (siła · co mierzy) jak w top-10-products.md §1.2. Wolumenów wyszukiwań ani promptów nie zmierzono (brak dostępu do danych SEO): bezpośrednich dowodów popytu online w tej sesji jest 0.')
         return ' '.join(parts)
     return fallback
 
@@ -427,7 +483,13 @@ for x in ll:
     if fid == 'RENO-01':
         status, qual = 'później', 'przełącznik PV jest w MVP RENO-02; pełna ekonomika PV później'
     note = fs.get('note', '')
-    uw = '; '.join(v for v in dict.fromkeys([qual, note, OUTSIDE.get(fid, '')]) if v)
+    if note in ('osobna domena, jeśli w ogóle', 'poza domeną', 'poza zakresem startowym domeny'):
+        note = ''
+    if fid == 'RENT-02':
+        note = 'wariant capex seeda H (rdzeń hold/sell seeda H odrzucony)'
+    if fid == 'ENER-03':
+        note = 'ogólna wersja seeda F; konkurent sporny (Home Energy Planner: fala 1 bezpośredni, fala 2 częściowy)'
+    uw = '; '.join(v for v in dict.fromkeys([qual, note, OUTSIDE.get(fid, '') or DOMAIN_NOTE.get(x['family_code'], '')]) if v)
     reason = fs.get('reason') or (a['recommendation_reason_pl'] if a else x['status_reason'])
     comps = x['nearest_competition']
     gap = x['gap']; solved = x['already_solved']
@@ -471,7 +533,7 @@ for x in ll:
     row = {
         'ID': fid,
         'nazwa_robocza_en': fs.get('name') or x['name_en'],
-        'odrebny_pomysl': 'nie (scalony z RENO-02)' if fid == 'RENO-01' else 'tak',
+        'odrebny_pomysl': NOT_DISTINCT.get(fid, 'tak'),
         'rodzina': x['family_pl'],
         'uzytkownik_i_moment_potrzeby': x['user_and_moment'],
         'przykladowe_pytanie_do_LLM_en': x['sample_prompt_en'],
@@ -534,7 +596,7 @@ for row in rows:
             row[k] = f"{(v or '').strip().rstrip('.')} — ocena koncepcyjna agenta; nie badano w tej sesji (brak danych)."
             nfill += 1
 
-apply_subs(rows)
+apply_subs(rows, cards_fix=True)
 with open(f'{OUT}/product-opportunities.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 STATS.update({

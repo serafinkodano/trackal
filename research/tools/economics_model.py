@@ -37,7 +37,7 @@ INPUTS = [
     # --- traffic structure ---------------------------------------------------
     ("ai_share_of_sessions", "Udział ruchu z asystentów AI w sesjach ludzi", "ułamek",
      {"conservative": 0.003, "base": 0.01, "optimistic": 0.05},
-     "ZAŁOŻENIE zgodne z benchmarkami 0,1-1% (E-AI-02, E-VER-C5); obserwacja właściciela (10-30%) tylko jako wrażliwość niżej"),
+     "ZAŁOŻENIE: kons. i baz. w zakresie benchmarków 0,1-1% (baz. na górnej granicy; sektor finansowy ok. 0,5% wg Conductora) (E-AI-02, E-VER-C5); opt. 5% powyżej benchmarków (hipoteza wzrostu kanału); obserwacja właściciela (10-30%) tylko jako wrażliwość niżej"),
     ("ai_rpm_factor", "RPM sesji z AI względem średniej (mobile, aplikacje, zaangażowanie)", "mnożnik",
      {"conservative": 0.8, "base": 1.0, "optimistic": 1.15}, "HIPOTEZA; brak danych pierwotnych o RPM ruchu AI"),
     # --- costs (monthly, cash) -----------------------------------------------
@@ -52,10 +52,12 @@ INPUTS = [
     ("expert_hourly", "Stawka eksperta (EA/CPA/CFP/fachowiec)", "USD / h",
      {"conservative": 250, "base": 175, "optimistic": 125}, "ZAŁOŻENIE (do potwierdzenia ofertą, K-07)"),
     ("expert_hours_new_tool", "Godziny eksperta na nowy symulator", "h / narzędzie",
-     {"conservative": 18, "base": 14, "optimistic": 11},
-     "SZACUNEK agentów fali 2b dla 5 produktów pilotażowych (łącznie ok. 55-90 h); Z-16"),
+     {"conservative": 27, "base": 22, "optimistic": 17},
+     "SZACUNEK agentów fali 2b dla 5 pilotów: łącznie 86-135 h (RENO-02 20-30, RENO-03 16-27, HOME-04 16-25, HOME-02 10-17, AUTO-01 24-36 h), czyli średnio 17-27 h na narzędzie; Z-16"),
+    ("expert_hours_reno02", "Godziny eksperta dla RENO-02 (pierwszy symulator testu opcji)", "h",
+     {"conservative": 30, "base": 25, "optimistic": 20}, "SZACUNEK agenta fali 2b: ok. 20-30 h (underwriter/agent P&C, dekarz/inspektor, agent nieruchomości); Z-16"),
     ("expert_hours_upkeep_tool_year", "Godziny eksperta na utrzymanie narzędzia rocznie", "h / narzędzie / rok",
-     {"conservative": 4, "base": 2, "optimistic": 1}, "ZAŁOŻENIE"),
+     {"conservative": 12, "base": 6, "optimistic": 3}, "SZACUNEK z danych agentów fali 2b (HOME-04: 2-4 h kwartalnie; AUTO-01: 3-4 h rocznie; RENO-02: coroczny przegląd kosztów) + ZAŁOŻENIE"),
     ("owner_maint_hours_fixed", "Czas właściciela na utrzymanie: część stała", "h / mies.",
      {"conservative": 12, "base": 8, "optimistic": 6}, "ZAŁOŻENIE"),
     ("owner_maint_hours_per_tool", "Czas właściciela na utrzymanie: na każde żywe narzędzie", "h / narzędzie / mies.",
@@ -64,6 +66,10 @@ INPUTS = [
      {"conservative": 50, "base": 40, "optimistic": 30}, "ZAŁOŻENIE"),
     ("owner_hours_new_tool", "Czas właściciela na zbudowanie symulatora z Claude Code (po zbudowaniu silnika)", "h / narzędzie",
      {"conservative": 53, "base": 45, "optimistic": 37}, "SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 30-70 h/produkt)"),
+    ("owner_hours_reno02", "Czas właściciela na RENO-02 (pierwszy symulator; buduje moduły wspólne: dach, ubezpieczenie, sprzedaż, finansowanie)", "h",
+     {"conservative": 70, "base": 60, "optimistic": 50}, "SZACUNEK z tabeli pilotażu (architecture-and-validation.md §3: 50-70 h)"),
+    ("start_month", "Miesiąc kalendarzowy pierwszego miesiąca ilustracji (start po G0)", "nr miesiąca",
+     {"conservative": 11, "base": 11, "optimistic": 11}, "PLAN: G0 pod koniec X 2026, budowa od XI 2026; wyznacza sezonowość RPM w trajektorii"),
     ("owner_hours_engine", "Jednorazowa budowa silnika, CI, szablonów, analityki", "h",
      {"conservative": 220, "base": 155, "optimistic": 90}, "SZACUNEK (architecture-and-validation.md §3: 90-220 h)"),
     ("owner_build_hours_month", "Godziny właściciela dostępne na budowę (po utrzymaniu)", "h / mies.",
@@ -140,6 +146,10 @@ def build_cost_cash(s):
     return p("expert_hours_new_tool", s) * p("expert_hourly", s)
 
 
+def reno02_cost_cash(s):
+    return p("expert_hours_reno02", s) * p("expert_hourly", s)
+
+
 def build_cost_owner(s):
     return p("owner_hours_new_tool", s) * p("owner_hourly_value", s)
 
@@ -147,7 +157,8 @@ def build_cost_owner(s):
 def simulate(s, months=36):
     """Capacity-limited launch schedule + Zipf/ramp traffic. Returns monthly records (illustration)."""
     cap = p("owner_build_hours_month", s)
-    queue = [("engine", p("owner_hours_engine", s))] + [("tool", p("owner_hours_new_tool", s))] * int(p("max_tools", s))
+    queue = ([("engine", p("owner_hours_engine", s)), ("tool", p("owner_hours_reno02", s))]
+             + [("tool", p("owner_hours_new_tool", s))] * (int(p("max_tools", s)) - 1))
     qi, remaining = 0, queue[0][1]
     launches, traffic_rank, nrank = [], [], 0
     rpm = session_rpm(s)
@@ -175,8 +186,9 @@ def simulate(s, months=36):
         live = len(launches)
         sessions = sum(top / (rk ** z) * min(1.0, (m - lm) / ramp)
                        for lm, rk in zip(launches, traffic_rank) if rk is not None and m > lm)
-        revenue = sessions * rpm / 1000 * SEASONALITY[MONTHS[(m - 1) % 12]]
-        cash_cost = fixed_cash(s, live) + launched_now * build_cost_cash(s) + (p("one_time_legal", s) if m == 1 else 0)
+        revenue = sessions * rpm / 1000 * SEASONALITY[MONTHS[(int(p("start_month", s)) - 1 + m - 1) % 12]]
+        expert = sum(reno02_cost_cash(s) if k == 1 else build_cost_cash(s) for k in range(live - launched_now + 1, live + 1))
+        cash_cost = fixed_cash(s, live) + expert + (p("one_time_legal", s) if m == 1 else 0)
         owner_cost = (owner_maint_hours(s, live) + used) * p("owner_hourly_value", s)
         recs.append(dict(m=m, live=live, sessions=sessions, revenue=revenue, cash_cost=cash_cost, owner_cost=owner_cost))
     return recs
@@ -188,7 +200,7 @@ ADDONS = [
      0.002, 0.005, 0.01, "założenie", "ZAŁOŻENIE bez źródła; poza bazą z powodu ograniczenia właściciela"],
     ["addon_separate", "DODATEK: wypłata dla wydawcy za konwersję (po marży sieci)", "USD",
      10, 25, 50, "założenie", "ZAŁOŻENIE; ceny płacone przez kupujących leady: solar 25-250, ubezp. auto 8-80, home 6-18, refi 40-200 USD (E-ADS-33); wydawca dostaje mniej"],
-    ["addon_separate", "DODATEK: przychód z lead-gen/afiliacji na 1000 sesji (hipoteza)", "USD / 1000 sesji",
+    ["addon_separate", "DODATEK: przychód z lead-gen/afiliacji na 1000 sesji ludzi (hipoteza)", "USD / 1000 sesji ludzi",
      ADDON_RPM["conservative"], ADDON_RPM["base"], ADDON_RPM["optimistic"], "hipoteza",
      "udział × wypłata × 1000; wynik własnych założeń. Niezależnie od tego NerdWallet i SmartAsset raportują przychody głównie z partnerów i leadów (E-POR2-06, E-POR2-07)"],
 ]
@@ -212,10 +224,10 @@ def main():
          "(1-adblock)×(1-unfilled)×(1-rdp_share×(1-rdp_rpm_factor))"])
     add(["output", "Przychód reklamowy na 1000 sesji LUDZI (średnia roczna)", "USD / 1000 sesji ludzi", *[round(hrpm[s], 2) for s in SCEN], "wynik",
          "pages_per_session × page_rpm_us × (us_share + (1-us_share)×non_us_rpm_factor) × monetyzacja × mix_AI"])
-    add(["output", "Przychód reklamowy na 1000 sesji ZAREJESTROWANYCH (z botami; średnia roczna)", "USD / 1000 sesji", *[round(rpm[s], 2) for s in SCEN], "wynik",
+    add(["output", "Przychód reklamowy na 1000 sesji ZAREJESTROWANYCH (z botami; średnia roczna)", "USD / 1000 sesji zarejestrowanych", *[round(rpm[s], 2) for s in SCEN], "wynik",
          "× human_share; jednostka używana w progach ruchu poniżej"])
-    add(["output", "Przychód na 1000 sesji w styczniu (najsłabszy miesiąc)", "USD / 1000 sesji", *[round(rpm[s] * SEASONALITY['Jan'], 2) for s in SCEN], "wynik", "× mnożnik sezonowy"])
-    add(["output", "Przychód na 1000 sesji w grudniu (najsilniejszy miesiąc)", "USD / 1000 sesji", *[round(rpm[s] * SEASONALITY['Dec'], 2) for s in SCEN], "wynik",
+    add(["output", "Przychód na 1000 sesji w styczniu (najsłabszy miesiąc)", "USD / 1000 sesji zarejestrowanych", *[round(rpm[s] * SEASONALITY['Jan'], 2) for s in SCEN], "wynik", "× mnożnik sezonowy"])
+    add(["output", "Przychód na 1000 sesji w grudniu (najsilniejszy miesiąc)", "USD / 1000 sesji zarejestrowanych", *[round(rpm[s] * SEASONALITY['Dec'], 2) for s in SCEN], "wynik",
          "× mnożnik sezonowy; odczyty z XI-XII dzielić przez 1,2-1,36 przed porównaniem z rokiem"])
 
     bridge = {s: p("bridge_slots_per_page", s) * p("bridge_viewable_filled", s) * p("bridge_net_ecpm_us", s) for s in SCEN}
@@ -226,37 +238,37 @@ def main():
          "Promodo (E-ADS-15); relacja ~4:1 orientacyjna; nie przeliczać na RPM strony"])
     add(["rpm_bridge", "Kontekst odgórny: Omni Calculator - przychód / 1000 wizyt (szacunek na szacunkach)", "USD / 1000 wizyt",
          15, 20, 30, "estymacja",
-         "ok. 4,2-5 mln USD/rok (Growjo, nieaudytowane) / (14-23 mln wizyt/mies. × 12) (E-POR-02, E-POR2-05, E-VER-C4); globalny, szeroki katalog, wiele odsłon/sesję - nie benchmark dla nowej domeny; różnicy 2-4× wobec bazy nie rozstrzygnięto"])
+         "ok. 4,2 mln (Growjo) - poniżej 5 mln USD/rok (ZoomInfo), nieaudytowane; inny szacunek do 6 mln USD/rok pominięto jako niezweryfikowany; / (14-23 mln wizyt/mies. × 12) (E-POR-02, E-POR2-05, E-VER-C4); globalny, szeroki katalog, wiele odsłon/sesję - nie benchmark dla nowej domeny; różnicy ok. 2,5-5× wobec bazy (5,9 USD) nie rozstrzygnięto"])
 
     for t in TARGETS:
         req = {s: t / rpm[s] * 1000 for s in SCEN}
         add(["required_traffic", f"Sesje/mies. potrzebne dla {t} USD przychodu reklamowego (średnio w roku)", "sesje zarejestrowane / mies.",
              *[int(round(req[s], -3)) for s in SCEN], "wynik", f"{t} / (przychód na 1000 sesji) × 1000"])
-        add(["required_traffic", f"Sesje/mies. potrzebne dla {t} USD w styczniu", "sesje / mies.",
+        add(["required_traffic", f"Sesje/mies. potrzebne dla {t} USD w styczniu", "sesje zarejestrowane / mies.",
              *[int(round(req[s] / SEASONALITY['Jan'], -3)) for s in SCEN], "wynik", "uwzględnia sezonowy dołek RPM"])
-        add(["required_traffic", f"Sesje/dzień dla {t} USD/mies.", "sesje / dzień", *[int(round(req[s] / 30.4, -1)) for s in SCEN], "wynik", "/ 30,4"])
+        add(["required_traffic", f"Sesje/dzień dla {t} USD/mies.", "sesje zarejestrowane / dzień", *[int(round(req[s] / 30.4, -1)) for s in SCEN], "wynik", "/ 30,4"])
         for n in (10, 25, 100):
-            add(["required_traffic", f"Średnio sesji/mies. NA NARZĘDZIE dla {t} USD przy {n} narzędziach z ruchem", "sesje / narzędzie / mies.",
+            add(["required_traffic", f"Średnio sesji/mies. NA NARZĘDZIE dla {t} USD przy {n} narzędziach z ruchem", "sesje zarejestrowane / narzędzie / mies.",
                  *[int(round(req[s] / n, -1)) for s in SCEN], "wynik", "ilustruje, że katalog nie zastępuje ruchu na narzędzie"])
         human = {s: req[s] * p("human_share", s) for s in SCEN}
         ai = {s: human[s] * p("ai_share_of_sessions", s) for s in SCEN}
-        add(["required_traffic", f"W tym sesje ludzi z wyszukiwarek i innych źródeł (nie-AI) dla {t} USD", "sesje / mies.",
+        add(["required_traffic", f"W tym sesje ludzi z wyszukiwarek i innych źródeł (nie-AI) dla {t} USD", "sesje ludzi / mies.",
              *[int(round(human[s] - ai[s], -2)) for s in SCEN], "wynik", "sesje ludzi × (1 - ai_share); w praktyce głównie Google organic"])
         add(["required_traffic", f"W tym sesje ludzi z asystentów AI dla {t} USD", "sesje AI / mies.",
              *[int(round(ai[s], -1)) for s in SCEN], "wynik",
-             "sesje ludzi × ai_share; porównanie: Omni Calculator ok. 4-6 tys. wizyt/mies. z ChatGPT+Claude+Gemini (E-AI-14, E-VER-C4)"])
-        add(["required_traffic", f"W tym sesje botów (niemonetyzowane) dla {t} USD", "sesje / mies.",
+             "sesje ludzi × ai_share; porównanie: Omni Calculator ok. 6 tys. wizyt/mies. z ChatGPT+Claude+Gemini (ChatGPT ok. 4 tys.; szacunek Semrush) (E-AI-14, E-VER-C4)"])
+        add(["required_traffic", f"W tym sesje botów (niemonetyzowane) dla {t} USD", "sesje botów / mies.",
              *[int(round(req[s] - human[s], -2)) for s in SCEN], "wynik", "sesje zarejestrowane × (1 - human_share)"])
 
     for t in TARGETS:
-        add(["sensitivity", f"WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla {t} USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view", "sesje / mies.",
+        add(["sensitivity", f"WRAŻLIWOŚĆ (poza bazą): sesje/mies. dla {t} USD po przejściu do sieci premium (Journey/Mediavine) z odświeżaniem in-view", "sesje zarejestrowane / mies.",
              *[int(round(t / (rpm[s] * PREMIUM_UPLIFT[s]) * 1000, -3)) for s in SCEN], "hipoteza",
              f"mnożnik przychodu na sesję {PREMIUM_UPLIFT}; brak danych dla stron-narzędzi (E-ADS-12, E-ADS-27)"])
     for t in TARGETS:
         add(["sensitivity", f"WRAŻLIWOŚĆ (hipoteza właściciela): sesje AI/mies. przy udziale AI 10%/20%/30% dla {t} USD", "sesje AI / mies.",
              *[int(round(t / rpm[s] * 1000 * p("human_share", s) * OWNER_AI_SHARE[s], -2)) for s in SCEN], "hipoteza",
              "obserwacja właściciela z healthscorer.com, niezweryfikowana (K-01); 10-300× powyżej benchmarku"])
-    add(["sensitivity", "WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (mediana vendorska) we wszystkich scenariuszach", "USD / 1000 sesji",
+    add(["sensitivity", "WRAŻLIWOŚĆ: przychód na 1000 sesji przy page RPM = 2,4 USD (mediana vendorska) we wszystkich scenariuszach", "USD / 1000 sesji zarejestrowanych",
          *[round(rpm[s] * 2.4 / p("page_rpm_us", s), 2) for s in SCEN], "wrażliwość", "E-ADS-11"])
 
     for tools in (5, 15, 25, 50):
@@ -265,26 +277,31 @@ def main():
              *[round(fc[s]) for s in SCEN], "wynik", "domena+VPS+AI+dane+monitoring + roczne godziny eksperta/12"])
         add(["costs", f"Czas właściciela na utrzymanie przy {tools} narzędziach", "h / mies.",
              *[round(owner_maint_hours(s, tools), 1) for s in SCEN], "wynik", "część stała + h/narzędzie × narzędzia"])
-        add(["breakeven", f"Próg rentowności gotówkowej przy {tools} narzędziach", "sesje / mies.",
+        add(["breakeven", f"Próg rentowności gotówkowej przy {tools} narzędziach", "sesje zarejestrowane / mies.",
              *[int(round(fc[s] / rpm[s] * 1000, -2)) for s in SCEN], "wynik", "koszty stałe / przychód na sesję"])
         full = {s: fc[s] + owner_maint_hours(s, tools) * p("owner_hourly_value", s) for s in SCEN}
-        add(["breakeven", f"Próg rentowności z wyceną czasu właściciela przy {tools} narzędziach", "sesje / mies.",
+        add(["breakeven", f"Próg rentowności z wyceną czasu właściciela przy {tools} narzędziach", "sesje zarejestrowane / mies.",
              *[int(round(full[s] / rpm[s] * 1000, -2)) for s in SCEN], "wynik", "(koszty stałe + utrzymanie × stawka) / przychód na sesję"])
-    launch_cash = {s: p("one_time_legal", s) + 5 * build_cost_cash(s) for s in SCEN}
-    launch_hours = {s: p("owner_hours_engine", s) + 5 * p("owner_hours_new_tool", s) for s in SCEN}
+    launch_cash = {s: p("one_time_legal", s) + reno02_cost_cash(s) + 4 * build_cost_cash(s) for s in SCEN}
+    launch_hours = {s: p("owner_hours_engine", s) + p("owner_hours_reno02", s) + 4 * p("owner_hours_new_tool", s) for s in SCEN}
     for tools in (5, 15):
         amort = {s: fixed_cash(s, tools) + launch_cash[s] / 24 for s in SCEN}
-        add(["breakeven", f"Próg rentowności gotówkowej przy {tools} narzędziach z amortyzacją gotówki uruchomienia w 24 mies.", "sesje / mies.",
+        add(["breakeven", f"Próg rentowności gotówkowej przy {tools} narzędziach z amortyzacją gotówki uruchomienia w 24 mies.", "sesje zarejestrowane / mies.",
              *[int(round(amort[s] / rpm[s] * 1000, -2)) for s in SCEN], "wynik", "(koszty stałe + gotówka uruchomienia/24) / przychód na sesję"])
     add(["unit_economics", "Koszt budowy jednego nowego narzędzia: gotówka (ekspert)", "USD", *[round(build_cost_cash(s)) for s in SCEN], "wynik", "expert_hours_new_tool × expert_hourly"])
     add(["unit_economics", "Koszt budowy jednego nowego narzędzia: czas właściciela (wycena)", "USD", *[round(build_cost_owner(s)) for s in SCEN], "wynik", "owner_hours_new_tool × owner_hourly_value"])
     upkeep = {s: p('expert_hours_upkeep_tool_year', s) * p('expert_hourly', s) / 12 for s in SCEN}
-    add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie)", "sesje / narzędzie / mies.",
+    add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu GOTÓWKI budowy w 24 mies. (+utrzymanie eksperckie)", "sesje zarejestrowane / narzędzie / mies.",
          *[int(round((build_cost_cash(s) / 24 + upkeep[s]) / rpm[s] * 1000, -2)) for s in SCEN], "wynik",
          "na tym progu opiera się reguła dodawania narzędzi (architecture-and-validation.md §4.3); porównaj z rozkładem: w bazie najlepsze narzędzie ok. 15 tys. sesji/mies. po 12 mies., mediana narzędzi z ruchem znacznie niżej"])
-    add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.", "sesje / narzędzie / mies.",
+    add(["unit_economics", "Sesje/mies. na narzędzie potrzebne do zwrotu PEŁNEGO kosztu budowy (gotówka + czas) w 24 mies.", "sesje zarejestrowane / narzędzie / mies.",
          *[int(round(((build_cost_cash(s) + build_cost_owner(s)) / 24 + upkeep[s]) / rpm[s] * 1000, -2)) for s in SCEN], "wynik",
          "próg pomocniczy z wyceną czasu właściciela (nie jest regułą dodawania narzędzi)"])
+    rule_usd = {s: build_cost_cash(s) / 24 + upkeep[s] for s in SCEN}
+    add(["unit_economics", "REGUŁA DODAWANIA NARZĘDZI: próg mediany miesięcznego przychodu narzędzi z ruchem (koszt gotówkowy nowego narzędzia / 24 + utrzymanie eksperckie)", "USD / narzędzie / mies.",
+         *[round(rule_usd[s]) for s in SCEN], "wynik", "architecture-and-validation.md §4.3 (propozycja decyzyjna)"])
+    add(["unit_economics", "REGUŁA DODAWANIA NARZĘDZI: ten sam próg w sesjach ludzi na narzędzie (przy przychodzie na 1000 sesji ludzi ze scenariusza)", "sesje ludzi / narzędzie / mies.",
+         *[int(round(rule_usd[s] / human_session_rpm(s) * 1000, -2)) for s in SCEN], "wynik", "próg USD / przychód na 1000 sesji ludzi; w praktyce liczyć z RPM zmierzonego"])
 
     for t in TARGETS:
         op = {s: t - fixed_cash(s, 25) for s in SCEN}
@@ -293,21 +310,33 @@ def main():
         add(["operating_profit", f"Marża operacyjna gotówkowa przy {t} USD i 25 narzędziach", "%", *[round(100 * op[s] / t) for s in SCEN], "wynik", "zysk gotówkowy / przychód"])
         add(["operating_profit", f"Zysk po wycenie czasu właściciela przy {t} USD i 25 narzędziach", "USD / mies.", *[round(op_full[s]) for s in SCEN], "wynik", "j.w. - utrzymanie × stawka właściciela"])
 
-    add(["launch", "Gotówkowy koszt uruchomienia 5 symulatorów (prawo/CMP + eksperci)", "USD", *[int(round(launch_cash[s], -1)) for s in SCEN], "wynik",
+    add(["launch", "Gotówkowy koszt uruchomienia 5 symulatorów (prawo/CMP + eksperci; bez kosztów stałych)", "USD", *[int(round(launch_cash[s], -1)) for s in SCEN], "wynik",
          "jednorazowe; przy finansowaniu etapowym wydatek na produkty 2-5 następuje dopiero po ich bramkach"])
-    add(["launch", "Gotówkowy koszt testu opcji: silnik minimalny + 1 symulator (RENO-02), z 3 mies. kosztów stałych", "USD",
-         *[int(round(p('one_time_legal', s) + build_cost_cash(s) + 3 * fixed_cash(s, 1), -1)) for s in SCEN], "wynik", "prawo/CMP + ekspert RENO-02 + 3 mies. kosztów stałych"])
-    add(["launch", "Czas właściciela na test opcji: silnik + 1 symulator (RENO-02)", "h",
-         *[round(p('owner_hours_engine', s) + p('owner_hours_new_tool', s)) for s in SCEN], "wynik", "owner_hours_engine + owner_hours_new_tool"])
-    add(["launch", "Czas właściciela na uruchomienie silnika + 5 symulatorów", "h", *[round(launch_hours[s]) for s in SCEN], "wynik", "silnik + 5 × narzędzie"])
+    sims = {s: simulate(s) for s in SCEN}
+    pub = {}
+    for s_ in SCEN:
+        run = 0.0
+        for x in sims[s_]:
+            run += x['revenue'] - x['cash_cost']
+            if x['live'] >= 1:
+                pub[s_] = (x['m'], -run)
+                break
+    add(["launch", "Miesiąc publikacji RENO-02 od startu budowy (silnik + RENO-02 przy dostępności owner_build_hours_month)", "mies.",
+         *[pub[s][0] for s in SCEN], "wynik", "z symulacji harmonogramu; przy 15 h/tydz. (ok. 65 h/mies.) w bazie ok. 3,3-3,6 mies."])
+    add(["launch", "Gotówkowy koszt testu opcji do publikacji RENO-02 (prawo/CMP + ekspert RENO-02 + koszty stałe do miesiąca publikacji)", "USD",
+         *[int(round(pub[s][1], -1)) for s in SCEN], "wynik", "skumulowany wynik gotówkowy z symulacji w miesiącu publikacji (przychód 0)"])
+    add(["launch", "Koszty stałe testu po publikacji (1 narzędzie, z utrzymaniem eksperckim)", "USD / mies.",
+         *[round(fixed_cash(s, 1)) for s in SCEN], "wynik", "fixed_cash(1)"])
+    add(["launch", "Czas właściciela na test opcji: silnik + RENO-02 (bez G0 i bez utrzymania po publikacji)", "h",
+         *[round(p('owner_hours_engine', s) + p('owner_hours_reno02', s)) for s in SCEN], "wynik", "owner_hours_engine + owner_hours_reno02; G0 dodaje 15-25 h"])
+    add(["launch", "Czas właściciela na uruchomienie silnika + 5 symulatorów", "h", *[round(launch_hours[s]) for s in SCEN], "wynik", "silnik + RENO-02 + 4 × narzędzie"])
     add(["launch", "Wycena czasu uruchomienia", "USD", *[int(round(launch_hours[s] * p('owner_hourly_value', s), -1)) for s in SCEN], "wynik", "h × stawka właściciela"])
 
-    sims = {s: simulate(s) for s in SCEN}
     for mth in (6, 12, 24, 36):
         r = {s: sims[s][mth - 1] for s in SCEN}
         add(["trajectory", f"ILUSTRACJA: żywe narzędzia w mies. {mth}", "szt.", *[r[s]['live'] for s in SCEN], "ilustracja", "harmonogram ograniczony dostępnością właściciela (owner_build_hours_month)"])
-        add(["trajectory", f"ILUSTRACJA: sesje/mies. w mies. {mth}", "sesje / mies.", *[int(round(r[s]['sessions'], -2)) for s in SCEN], "ilustracja", "Zipf × rampa; NIE prognoza"])
-        add(["trajectory", f"ILUSTRACJA: przychód reklamowy w mies. {mth}", "USD / mies.", *[round(r[s]['revenue']) for s in SCEN], "ilustracja", "sesje × przychód na sesję × sezonowość (mies. 1 = styczeń)"])
+        add(["trajectory", f"ILUSTRACJA: sesje/mies. w mies. {mth}", "sesje zarejestrowane / mies.", *[int(round(r[s]['sessions'], -2)) for s in SCEN], "ilustracja", "Zipf × rampa; NIE prognoza"])
+        add(["trajectory", f"ILUSTRACJA: przychód reklamowy w mies. {mth}", "USD / mies.", *[round(r[s]['revenue']) for s in SCEN], "ilustracja", "sesje × przychód na sesję × sezonowość (mies. 1 = listopad, start budowy po G0)"])
         add(["trajectory", f"ILUSTRACJA: wynik gotówkowy w mies. {mth} (z kosztem ekspertów nowych narzędzi)", "USD / mies.", *[round(r[s]['revenue'] - r[s]['cash_cost']) for s in SCEN], "ilustracja",
              "przychód - koszty stałe - gotówka na ekspertów narzędzi uruchomionych w tym miesiącu"])
     for mth in (12, 24, 36):
@@ -331,8 +360,8 @@ def main():
 
     for r in ADDONS:
         add(r)
-    lead_be = {s: fixed_cash(s, 5) / ((rpm[s] + ADDON_RPM[s]) / 1000) for s in SCEN}
-    add(["addon_separate", "DODATEK: próg rentowności gotówkowej przy 5 narzędziach, gdyby dodać lead-gen", "sesje / mies.",
+    lead_be = {s: fixed_cash(s, 5) / ((rpm[s] + ADDON_RPM[s] * p("human_share", s)) / 1000) for s in SCEN}
+    add(["addon_separate", "DODATEK: próg rentowności gotówkowej przy 5 narzędziach, gdyby dodać lead-gen (konwertują tylko sesje ludzi)", "sesje zarejestrowane / mies.",
          *[int(round(lead_be[s], -2)) for s in SCEN], "hipoteza",
          "poza modelem bazowym z powodu ograniczenia właściciela; liczbowo zmienia ekonomikę, ale wymaga zgód (TCPA) i rodzi konflikt z neutralnością"])
 
